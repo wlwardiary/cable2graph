@@ -1,13 +1,16 @@
-cables.csv to graph to svg
+## cables.csv to graph to svg
 
 the fucking short version
 
-# create fkn list of IDs and edges as plain fkn files
-$ python ref.py cables.csv
+create fkn list of IDs and edges as plain fkn files
 
-# create and fuckulate graph.gml
-$ python c2g.py
+    $ python ref.py cables.csv
 
-# svg fkn a
-$ python gml2svg.py graph.gml > example.svg
+create and fuckulate graph.gml
+    
+    $ python c2g.py
+
+svg fkn a
+
+    $ python gml2svg.py graph.gml > example.svg
 
