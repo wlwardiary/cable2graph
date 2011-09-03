@@ -1,4 +1,4 @@
-## cables.csv to graph to svg
+# cables.csv to graph to svg
 
 the fucking short version
 
@@ -14,6 +14,12 @@ inline svg fkn a
 
     $ python gml2svg.py fkn.gml > fkn.html
 
-## copyfuck
+# note
 
-GPL fkn v3
+* dont run ref.py, git shit already haz all files u need.
+* c2g.py reads calccache and graphcache. u dont have to calc shit again.
+* $EDITOR svg.tmpl haz fancy html.
+
+# copyfuck
+
+GPL fkn a 3
