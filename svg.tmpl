@@ -1,0 +1,71 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+
+<svg width="{{ width }}" height="{{ height }}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate({{ xw }},{{ xh }})">
+    <g id="edges">
+    {% for e in edges %}
+        <line x1="{{e.x1}}" y1="{{e.y1}}" x2="{{e.x2}}" y2="{{e.y2}}" />
+    {% endfor %}
+    </g>
+    <g id="vertices">
+        {% for v in vertices %}
+        <g transform="translate({{ v.x }} {{ v.y }})" class="{{ v.class }}">
+            <circle cx="0" cy="0" r="10" />
+            {% if v.class == 'red' %}
+                <text x="0" y="5">{{ v.label }}</text>
+            {% else %}
+                <text x="0" y="5">
+                    <a xlink:href="{{v.uri}}">{{ v.label }}</a>
+                </text>
+            {% endif %}
+        </g>
+        {% endfor %}
+    </g>
+</g>
+</svg>
+</body>
