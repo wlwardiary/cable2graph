@@ -42,6 +42,8 @@ colors = g.vs.get_attribute_values('color')
 uris = g.vs.get_attribute_values('uri')
 vertex_size = 10
 
+# from igraph.Graph.write_svg
+
 maxs=[layout[0][dim] for dim in range(2)]
 mins=[layout[0][dim] for dim in range(2)]
         
