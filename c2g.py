@@ -79,23 +79,28 @@ else:
     print 'Saving graph cache.'
     pickle.dump( g, open('graphcache','w'))
 
-#g.write_gml('full.gml')
-
-de = ['BERLIN','BONN','DUESSELDORF','DUSSELDORF','FRANKFURT','HAMBURG','LEIPZIG','MUNICH','STUTTGART']
-
-jp = ['TOKYO','TAIPEI','OSAKA','HONGKONG']
-
-sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-print sg.summary()
-sg.write_gml('de.gml')
+print "all fine, read the source"
 exit()
 
-i = 0
-for c in g.clusters():
-    if len(c) > 50:
-        i = i + 1
-        sg = g.subgraph(g.vs.select(c))
-        print sg
-        sg.write_gml('aa%s.gml' % i)
+# write the full big fkn graph
+# g.write_gml('full.gml')
+# exit()
 
+# filter by embassy
+# de = ['BERLIN','BONN','DUESSELDORF','DUSSELDORF','FRANKFURT','HAMBURG','LEIPZIG','MUNICH','STUTTGART']
+# sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
+# print sg.summary()
+# sg.write_gml('de.gml')
+# exit()
+
+# make clusters
+# i = 0
+# for c in g.clusters():
+#     if len(c) > 50:
+#        i = i + 1
+#        sg = g.subgraph(g.vs.select(c))
+#        print sg
+#        sg.write_gml('aa%s.gml' % i)
+#
+# exit()
 

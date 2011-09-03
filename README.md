@@ -6,11 +6,14 @@ create fkn list of IDs and edges as plain fkn files
 
     $ python ref.py cables.csv
 
-create and fuckulate graph.gml
+read and modify c2g.py, then create and fuckulate fkn.gml
     
     $ python c2g.py
 
 inline svg fkn a
 
-    $ python gml2svg.py graph.gml > example.html
+    $ python gml2svg.py fkn.gml > fkn.html
 
+## copyfuck
+
+GPL fkn v3
