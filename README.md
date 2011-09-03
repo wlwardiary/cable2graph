@@ -10,7 +10,7 @@ create and fuckulate graph.gml
     
     $ python c2g.py
 
-svg fkn a
+inline svg fkn a
 
-    $ python gml2svg.py graph.gml > example.svg
+    $ python gml2svg.py graph.gml > example.html
 
