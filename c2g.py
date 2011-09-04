@@ -79,28 +79,29 @@ else:
     print 'Saving graph cache.'
     pickle.dump( g, open('graphcache','w'))
 
-print "all fine, read the source"
-exit()
+#print "all fine, read the source"
+#exit()
 
 # write the full big fkn graph
 # g.write_gml('full.gml')
 # exit()
 
 # filter by embassy
+# derel = ['ABUDHABI','AMMAN','ANKARA','APRIL','ATHENS','BAGHDAD','BEIJING','BEIRUT','BERLIN','BONN','BRUSSELS','BUDAPEST','BUENOSAIRES','DAMASCUS','DUBAI','DUBLIN','DUESSELDORF','DUSSELDORF','FRANKFURT','GENEVA','HAMBURG','HQEUCOMMSGDTG','JERUSALEM','KABUL','KYIV','LEIPZIG','LONDON','MADRID','MANILA','MOSCOW','MUNICH','OSCEUP','OTTAWA','PARIS','PRAGUE','PRETORIA','PRISTINA','REFA','REFTEL','REFTELA','ROME','SANAA','SARAJEVO','SECSTATE','SINGAPORE','SOFIA','STATE','STOCKHOLM','STUTTGART','TASHKENT','TBILISI','TELAVIV','THEHAGUE','TOKYO','UNVIE','USDOC','USEUBRUSSELS','USNATO','USOSCE','VATICAN','VIENNA','WARSAW','WELLINGTON','ZAGREB','ZMAR']
 # de = ['BERLIN','BONN','DUESSELDORF','DUSSELDORF','FRANKFURT','HAMBURG','LEIPZIG','MUNICH','STUTTGART']
-# sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-# print sg.summary()
+
+e = ['ABUDHABI','ADDISABABA','ALEXANDRIA','ALGIERS','AMMAN','ANKARA','ASMARA','BAGHDAD','BEIJING','BEIRUT','BERN','BUCHAREST','CAIRO','DAMASCUS','DOHA','DTG','DUBAI','EFTOCAIRO','FBIS','FBISGMP','GENEVA','IAP','JEDDAH','JERUSALEM','KABUL','KAMPALA','KHARTOUM','KUWAIT','MADRID','MANAMA','PARIS','RABAT','RIYADH','ROME','SECSTATE','SECTION','STATE','TELAVIV','TOSEC','TRIPOLI','UNVIE','UNVIEVIENNA','USMISSIONGENEVA','USUNNEWYORK','VIENNA','ZAUG']
+
+sg = g.subgraph(g.vs.select(_degree_gt=1, place_in=e))
+print sg.summary()
 # sg.write_gml('de.gml')
-# exit()
 
 # make clusters
-# i = 0
-# for c in g.clusters():
-#     if len(c) > 50:
-#        i = i + 1
-#        sg = g.subgraph(g.vs.select(c))
-#        print sg
-#        sg.write_gml('aa%s.gml' % i)
-#
-# exit()
+i = 0
+for c in sg.clusters():
+    if len(c) > 10:
+        i = i + 1
+        ssg = sg.subgraph(sg.vs.select(c))
+        print ssg
+        ssg.write_gml('egypt-rel-%d.gml' % i)
 
