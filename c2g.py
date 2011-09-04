@@ -79,28 +79,18 @@ else:
     print 'Saving graph cache.'
     pickle.dump( g, open('graphcache','w'))
 
-print "all fine, read the source"
-exit()
-
-# write the full big fkn graph
-# g.write_gml('full.gml')
-# exit()
-
 # filter by embassy
-# de = ['BERLIN','BONN','DUESSELDORF','DUSSELDORF','FRANKFURT','HAMBURG','LEIPZIG','MUNICH','STUTTGART']
-# sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-# print sg.summary()
-# sg.write_gml('de.gml')
-# exit()
+me = ['ABUDHABI','ADANA','ADDISABABA','ADEN','ALEXANDRIA','ALGIERS','AMMAN','ANAKARA','ANAKRA','ANDOCTOBER','ANK','ANKARA','ANTANANARIVO','ASHGABAT','ASMARA','ASTANA','ATHENS','BAGHDAD','BAKU','BEIJING','BEIRUT','BERLIN','BERN','BONN','BRASILIA','BRUSSELS','BRUSSELSBE','BUCHAREST','CAIRO','CDRUSAREUR','COGARDTRACENYORKTOWN','COPENHAGEN','DAM','DAMASCUS','DHAHRAN','DJIBOUTI','DMS','DOHA','DTG','DUBAI','EFTOANKARA','EFTOCAIRO','EFTODAMASCUS','EFTOSANAA','FBIS','FBISGMP','FBISIAP','FRANKFURT','GAIN','GENEVA','GMP','HANOI','HELSINKI','IAP','IIR','IRANRPODUBAI','ISLAMABAD','ISTANBUL','IZMIR','JAKARTA','JEDDAH','JERUSALEM','KABUL','KAMPALA','KHARTOUM','KIRKUK','KUWAIT','KYIV','LONDON','LUXEMBOURG','MADRID','MANAMA','MONROVIA','MOSCOW','MOSUL','MUSCAT','NAIROBI','NDJAMENA','NEWDELHI','NICOSIA','NOUAKCHOTT','PARIS','RABAT','REFA','REOKIRKUK','RIYADH','ROME','RUEKJCS','SABOEMAILDATED','SANAA','SECDEF','SECSTATE','SECTION','SECTO','SEPTEMBER','SINGAPORE','SKOPJE','SOFIA','STATE','STOCKHOLM','TASHKENT','TBILISI','TELAVIV','THEHAGUE','THESSALONIKI','TIRANA','TOKYO','TOSEC','TREASURYDTG','TRIPOLI','TUNIS','UNVIE','UNVIEVIENNA','USCUSTOMS','USDAOANKARA','USDAOSANAADTG','USDOC','USEUBRUSSELS','USMISSIONGENEVA','USNATO','USUN','USUNNEWYORK','VATICAN','VIENNA','YEREVAN','ZAUG','ZFEB','ZJUL','ZNOV','ZOCT','ZSEP']
+
+sg = g.subgraph(g.vs.select(_degree_gt=1, place_in=me))
+print sg.summary()
 
 # make clusters
-# i = 0
-# for c in g.clusters():
-#     if len(c) > 50:
-#        i = i + 1
-#        sg = g.subgraph(g.vs.select(c))
-#        print sg
-#        sg.write_gml('aa%s.gml' % i)
-#
-# exit()
+i = 0
+for c in sg.clusters():
+    if len(c) > 5 and len(c) < 2000:
+       i = i + 1
+       ssg = sg.subgraph(g.vs.select(c))
+       print ssg
+       ssg.write_gml('middle-east-%d.gml' % i)
 
