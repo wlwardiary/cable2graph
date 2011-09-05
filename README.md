@@ -1,25 +1,33 @@
 # cables.csv to graph to svg
 
-the fucking short version
+the short version
 
-create fkn list of IDs and edges as plain fkn files
+create list of IDs and edges as plain text files
 
     $ python ref.py cables.csv
 
-read and modify c2g.py, then create and fuckulate fkn.gml
+read and modify c2g.py, then create any.gml
     
     $ python c2g.py
 
-inline svg fkn a
+create html with inline svg
 
-    $ python gml2svg.py fkn.gml > fkn.html
+    $ python gml2svg.py any.gml > any.html
 
 # note
 
-* dont run ref.py, git shit already haz all files u need.
-* c2g.py reads calccache and graphcache. u dont have to calc shit again.
-* $EDITOR svg.tmpl haz fancy html.
+* dont run ref.py, the code already has all the files you need.
+* c2g.py reads calccache and graphcache, so you dont have to calculate
+  the graph weight again. Can take 10-15min if you remove the cache.
+* change svg.tmpl to customize the output
 
-# copyfuck
+# copyleft
 
 GPL fkn a 3
+
+# contact
+
+need help? ask!
+
+https://twitter.com/c2graph
+
