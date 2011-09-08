@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import igraph, math
+import igraph, math, csv
 from sys import argv, exit
 from os import listdir, path
 from jinja2 import Template, Environment, FileSystemLoader
@@ -10,6 +10,44 @@ svg_tmpl = env.get_template('svg.tmpl')
 
 g = igraph.load(argv[1])
 
+# load ReVerb sentences result .tsv
+# http://reverb.cs.washington.edu/
+
+reverb_csv = csv.reader(
+        open(CURDIR + '/middle-east.reverb'), 
+        delimiter='\t', 
+        quotechar = None,
+        lineterminator = '\n')
+
+reverb_map = {}
+for row in reverb_csv:
+    type, reverb_cable_id, num, argument1, relation, argument2, score = row
+    if float(score) > 0.7:
+        if reverb_map.has_key(reverb_cable_id):
+            reverb_map[reverb_cable_id].append({
+                    'a1': argument1, 
+                    'rel': relation,
+                    'a2': argument2,
+                    'score': score
+                    })
+        else:
+            reverb_map[reverb_cable_id] = [{ 
+                    'a1': argument1, 
+                    'rel': relation,
+                    'a2': argument2,
+                    'score': score
+                    }]
+
+sentence = []
+for l in g.vs.get_attribute_values('label'):
+    if l in reverb_map.keys():
+        sentence.append(reverb_map[l])
+    else:
+        sentence.append('')
+
+g.vs['sentence'] = sentence
+
+# add uri to graph
 cmap = {}
 f = open(CURDIR + '/all.map')
 for l in f.readlines():
@@ -28,8 +66,8 @@ g.vs['uri'] = uri
 
 layout = g.layout('fr')
 
-width = 2500
-height = 2000
+width = 1500
+height = 1200
 
 w = '%d' % width
 h = '%d' % height
@@ -40,6 +78,7 @@ xh = '%.4f' % (height/2.0)
 labels = g.vs.get_attribute_values('label')
 colors = g.vs.get_attribute_values('color')
 uris = g.vs.get_attribute_values('uri')
+sentences = g.vs.get_attribute_values('sentence')
 vertex_size = 10
 
 # from igraph.Graph.write_svg
@@ -84,6 +123,7 @@ for vidx in range(g.vcount()):
         'y': '%.4f' % layout[vidx][1],
         'label': str(labels[vidx]),
         'uri': str(uris[vidx]),
+        'sentences': sentences[vidx],
         'class': str(colors[vidx]) 
         } )
 
