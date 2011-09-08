@@ -28,6 +28,20 @@
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
+        #vertices text.sentence { 
+          text-anchor: start;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
         #edges line { 
             fill: none;
             stroke-linejoin: round;
@@ -44,9 +58,8 @@
     </style>
 </head>
 <body>
-
 <svg width="{{ width }}" height="{{ height }}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate({{ xw }},{{ xh }})">
+<g transform="translate({{ xw }},{{ xh }}) scale(0.9)">
     <g id="edges">
     {% for e in edges %}
         <line x1="{{e.x1}}" y1="{{e.y1}}" x2="{{e.x2}}" y2="{{e.y2}}" />
@@ -59,9 +72,16 @@
             {% if v.class == 'red' %}
                 <text x="0" y="5">{{ v.label }}</text>
             {% else %}
-                <text x="0" y="5">
+                <text x="0" y="5" class="label">
                     <a xlink:href="{{v.uri}}">{{ v.label }}</a>
                 </text>
+                {% for s in v.sentences %}
+                <text x="-200" y="{{ loop.index * 20 }}" class="sentence">
+                    <tspan class="a1">{{ s.a1 }}</tspan>
+                    <tspan class="rel">{{ s.rel }}</tspan>
+                    <tspan class="a2">{{ s.a2 }}</tspan>
+                </text>
+                {% endfor %}
             {% endif %}
         </g>
         {% endfor %}
