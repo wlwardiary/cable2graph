@@ -66,8 +66,8 @@ g.vs['uri'] = uri
 
 layout = g.layout('fr')
 
-width = 1500
-height = 1200
+width = len(g.vs) * 20
+height = len(g.vs) * 20
 
 w = '%d' % width
 h = '%d' % height
