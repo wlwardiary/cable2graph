@@ -3,12 +3,12 @@
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.8); 
+          stroke: rgba(255,255,255,0.5); 
           stroke-width: 1; 
-          fill: rgba(255,255,255,0.5); 
+          fill: rgba(127,127,127,0.3); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.5);   
+          fill: rgba(255,0,0,0.3);
         }
 
         #vertices text { 
@@ -16,8 +16,8 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.8); 
-          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.3); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
@@ -28,179 +28,520 @@
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,127,127,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(127,127,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(127,255,127,1);
+        }
+
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.4); 
+            stroke: rgba(127,127,127,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(255,255,255,0.8); 
+            stroke: rgba(127,127,127,0.8); 
         }
 
     </style>
 </head>
 <body>
-
-<svg width="2500" height="2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(1250.0000,1000.0000)">
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(400.0000,300.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-667.9242" y1="-342.5701" x2="-1230.0131" y2="-313.8066" />
+        <line x1="119.7562" y1="179.2880" x2="57.2663" y2="281.4689" />
     
-        <line x1="715.1628" y1="-229.0181" x2="876.3359" y2="183.2221" />
+        <line x1="216.2783" y1="-106.9748" x2="83.8167" y2="-182.4539" />
     
-        <line x1="35.7926" y1="-398.5015" x2="63.4726" y2="-780.4274" />
+        <line x1="212.5901" y1="46.7092" x2="350.6510" y2="86.1521" />
     
-        <line x1="35.7926" y1="-398.5015" x2="705.4602" y2="-231.4387" />
+        <line x1="212.5901" y1="46.7092" x2="216.0384" y2="-96.9777" />
     
-        <line x1="-800.1947" y1="990.0000" x2="-647.1888" y2="671.5248" />
+        <line x1="-390.0000" y1="55.7000" x2="-262.1267" y2="63.0998" />
     
-        <line x1="-349.0945" y1="-990.0000" x2="55.1906" y2="-794.7502" />
+        <line x1="390.0000" y1="194.7596" x2="362.9704" y2="98.5266" />
     
-        <line x1="35.7926" y1="-398.5015" x2="-657.9556" y2="-343.3624" />
+        <line x1="212.5901" y1="46.7092" x2="125.4920" y2="171.0965" />
     
-        <line x1="629.6088" y1="592.3514" x2="874.6699" y2="201.0110" />
+        <line x1="-99.0870" y1="-181.5636" x2="65.1339" y2="-187.0696" />
     
-        <line x1="-1169.8061" y1="464.4661" x2="-652.2190" y2="658.9930" />
+        <line x1="-231.7265" y1="190.7316" x2="-250.5569" y2="73.5509" />
     
-        <line x1="715.1628" y1="-229.0181" x2="1230.4345" y2="-386.0863" />
+        <line x1="216.2783" y1="-106.9748" x2="320.6767" y2="-185.9838" />
     
-        <line x1="629.6088" y1="592.3514" x2="1046.9688" y2="805.0681" />
+        <line x1="-99.0870" y1="-181.5636" x2="-137.2176" y2="-280.6670" />
     
-        <line x1="6.1747" y1="712.0811" x2="-632.8873" y2="663.2726" />
+        <line x1="-204.9592" y1="-70.6638" x2="-248.8296" y2="54.2426" />
     
-        <line x1="629.6088" y1="592.3514" x2="15.9952" y2="710.1951" />
+        <line x1="-99.0870" y1="-181.5636" x2="-198.0540" y2="-77.8969" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-349.0945 -990.0000)" class="inf">
+        <g transform="translate(390.0000 194.7596)" 
+            class="inf" id="08JERUSALEM1340">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/07/08JERUSALEM1340.html">08JERUSALEM1340</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM1340
+                
                 </text>
+                
             
         </g>
         
-        <g transform="translate(35.7926 -398.5015)" class="inf">
+        <g transform="translate(212.5901 46.7092)" 
+            class="inf" id="08JERUSALEM1488">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1488.html">08JERUSALEM1488</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM1488
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the opening</tspan>
+                        <tspan class="rel">will not noticeably impact</tspan>
+                        <tspan class="a2">the area 's economy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">ConGenOffs</tspan>
+                        <tspan class="rel">observed</tspan>
+                        <tspan class="a2">23 private cars</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">IDF soldiers</tspan>
+                        <tspan class="rel">were present at</tspan>
+                        <tspan class="a2">the IDF base</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">two commercial trucks</tspan>
+                        <tspan class="rel">will take advantage of</tspan>
+                        <tspan class="a2">this opening</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">the roadblock</tspan>
+                        <tspan class="rel">does not affect access to</tspan>
+                        <tspan class="a2">the historic commercial center of Nablus</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(64.1954 -790.4013)" class="inf">
+        <g transform="translate(360.2663 88.8992)" 
+            class="inf" id="08JERUSALEM1498">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1498.html">08JERUSALEM1498</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM1498
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Israeli representatives</tspan>
+                        <tspan class="rel">were</tspan>
+                        <tspan class="a2">BG Noam Tibon</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-667.9242 -342.5701)" class="inf">
+        <g transform="translate(119.7562 179.2880)" 
+            class="inf" id="08JERUSALEM1559">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1559.html">08JERUSALEM1559</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM1559
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">remnants of lanes and booths</tspan>
+                        <tspan class="rel">were on</tspan>
+                        <tspan class="a2">the roadside</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">traffic</tspan>
+                        <tspan class="rel">flowed freely to</tspan>
+                        <tspan class="a2">the north</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the checkpoint</tspan>
+                        <tspan class="rel">was removed</tspan>
+                        <tspan class="a2">August 21</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(715.1628 -229.0181)" class="inf">
+        <g transform="translate(216.2783 -106.9748)" 
+            class="inf" id="08JERUSALEM2200">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2200.html">08JERUSALEM2200</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM2200
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The new installation</tspan>
+                        <tspan class="rel">is only a few kilometers south of</tspan>
+                        <tspan class="a2">the Shavei Shomeron checkpoint</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The gates</tspan>
+                        <tspan class="rel">were in</tspan>
+                        <tspan class="a2">an open position</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the checkpoint installation</tspan>
+                        <tspan class="rel">began on</tspan>
+                        <tspan class="a2">December</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-1240.0000 -313.2956)" class="inf">
+        <g transform="translate(52.0490 290.0000)" 
+            class="inf" id="08JERUSALEM565">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM565.html">08JERUSALEM565</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM565
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">PM Salam Fayyad</tspan>
+                        <tspan class="rel">downplayed the impact of</tspan>
+                        <tspan class="a2">the removed obstacles</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(1240.0000 -389.0021)" class="inf">
+        <g transform="translate(328.6506 -192.0185)" 
+            class="inf" id="08TELAVIV2744">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/12/08TELAVIV2744.html">08TELAVIV2744</a>
+                <text x="0" y="5" class="label">
+                
+                    08TELAVIV2744
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Singer</tspan>
+                        <tspan class="rel">said</tspan>
+                        <tspan class="a2">the Huwwara</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(629.6088 592.3514)" class="inf">
+        <g transform="translate(-99.0870 -181.5636)" 
+            class="inf" id="09JERUSALEM1079">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1079.html">09JERUSALEM1079</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM1079
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">these measures</tspan>
+                        <tspan class="rel">have been accompanied by</tspan>
+                        <tspan class="a2">other restrictive actions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">the IDF Central Command</tspan>
+                        <tspan class="rel">had come to</tspan>
+                        <tspan class="a2">an agreed obstacle count of 613</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is a slight reduction from</tspan>
+                        <tspan class="a2">OCHA 's February 2009 total</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">OCHA 's overall obstacle count</tspan>
+                        <tspan class="rel">has remained relatively stable over</tspan>
+                        <tspan class="a2">the past year</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">checkpoint infrastructure</tspan>
+                        <tspan class="rel">has become more entrenched in</tspan>
+                        <tspan class="a2">others</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">the mayor and local businessmen</tspan>
+                        <tspan class="rel">are pressing for</tspan>
+                        <tspan class="a2">removal of key two road gates</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(6.1747 712.0811)" class="inf">
+        <g transform="translate(-204.9592 -70.6638)" 
+            class="inf" id="09JERUSALEM1094">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1094.html">09JERUSALEM1094</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM1094
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the Consul General</tspan>
+                        <tspan class="rel">met</tspan>
+                        <tspan class="a2">Governor Rafih al-Khandaqji and business leaders</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The Consul General 's visit and comments</tspan>
+                        <tspan class="rel">were widely covered in</tspan>
+                        <tspan class="a2">Palestinian media</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Qalqiliya 's nearest commercial checkpoint</tspan>
+                        <tspan class="rel">is in</tspan>
+                        <tspan class="a2">Tulkarem</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(1055.8783 809.6091)" class="inf">
+        <g transform="translate(-140.8086 -290.0000)" 
+            class="inf" id="09JERUSALEM1245">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/07/09JERUSALEM1245.html">09JERUSALEM1245</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM1245
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the Consul General</tspan>
+                        <tspan class="rel">attended the opening-day events of</tspan>
+                        <tspan class="a2">the Nablus Shopping Festival</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Tens of thousands of Palestinians</tspan>
+                        <tspan class="rel">thronged</tspan>
+                        <tspan class="a2">the city center</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">this</tspan>
+                        <tspan class="rel">will be the first of</tspan>
+                        <tspan class="a2">many theaters</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-1169.8061 464.4661)" class="inf">
+        <g transform="translate(-231.7265 190.7316)" 
+            class="inf" id="09JERUSALEM1376">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1376.html">09JERUSALEM1376</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM1376
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">operations</tspan>
+                        <tspan class="rel">are running smoothly on</tspan>
+                        <tspan class="a2">both sides</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Cargo hours</tspan>
+                        <tspan class="rel">were extended only for</tspan>
+                        <tspan class="a2">incoming Jordanian goods</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-800.1947 990.0000)" class="inf">
+        <g transform="translate(-390.0000 55.7000)" 
+            class="inf" id="09JERUSALEM1933">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/10/09JERUSALEM1933.html">09JERUSALEM1933</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM1933
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">3. Members of the Jenin Chamber of Commerce</tspan>
+                        <tspan class="rel">were enthusiastic about</tspan>
+                        <tspan class="a2">the opening</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">we</tspan>
+                        <tspan class="rel">believe</tspan>
+                        <tspan class="a2">you</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(879.9772 192.5356)" class="inf">
+        <g transform="translate(75.1283 -187.4047)" 
+            class="inf" id="09JERUSALEM479">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM479.html">09JERUSALEM479</a>
+                <text x="0" y="5" class="label">
+                
+                    09JERUSALEM479
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">more concrete road barriers</tspan>
+                        <tspan class="rel">had been added to</tspan>
+                        <tspan class="a2">the site</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">'s about</tspan>
+                        <tspan class="a2">the occupation</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The important new development</tspan>
+                        <tspan class="rel">here is the relaxation of</tspan>
+                        <tspan class="a2">the permit requirement</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-642.8583 662.5111)" class="inf">
+        <g transform="translate(-252.1434 63.6775)" 
+            class="inf" id="10JERUSALEM112">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2010/01/10JERUSALEM112.html">10JERUSALEM112</a>
+                <text x="0" y="5" class="label">
+                
+                    10JERUSALEM112
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">These efforts</tspan>
+                        <tspan class="rel">work best with</tspan>
+                        <tspan class="a2">a combination of donor support</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">hours</tspan>
+                        <tspan class="rel">have been extended to</tspan>
+                        <tspan class="a2">6:30 a.m.-7:00</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">will set</tspan>
+                        <tspan class="a2">a precedent</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         

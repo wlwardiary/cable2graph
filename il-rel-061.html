@@ -3,12 +3,12 @@
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.8); 
+          stroke: rgba(255,255,255,0.5); 
           stroke-width: 1; 
-          fill: rgba(255,255,255,0.5); 
+          fill: rgba(127,127,127,0.3); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.5);   
+          fill: rgba(255,0,0,0.3);
         }
 
         #vertices text { 
@@ -16,8 +16,8 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.8); 
-          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.3); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
@@ -28,224 +28,683 @@
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,127,127,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(127,127,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(127,255,127,1);
+        }
+
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.4); 
+            stroke: rgba(127,127,127,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(255,255,255,0.8); 
+            stroke: rgba(127,127,127,0.8); 
         }
 
     </style>
 </head>
 <body>
-
-<svg width="2500" height="2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(1250.0000,1000.0000)">
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(400.0000,300.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-802.0840" y1="387.0732" x2="-812.0840" y2="387.0732" />
+        <line x1="181.2444" y1="-134.7649" x2="171.2444" y2="-134.7649" />
     
-        <line x1="-1239.0396" y1="160.0073" x2="-1215.8439" y2="-218.7261" />
+        <line x1="111.9736" y1="-243.5474" x2="-29.9687" y2="-253.0693" />
     
-        <line x1="-617.4336" y1="893.2835" x2="-258.5886" y2="613.3897" />
+        <line x1="390.0000" y1="21.3950" x2="252.3278" y2="1.4285" />
     
-        <line x1="-1239.0396" y1="160.0073" x2="-1249.0396" y2="160.0073" />
+        <line x1="111.9736" y1="-243.5474" x2="101.9736" y2="-243.5474" />
     
-        <line x1="480.9075" y1="-935.4158" x2="6.6417" y2="-988.8798" />
+        <line x1="-388.5115" y1="98.6350" x2="-389.8677" y2="-3.8940" />
     
-        <line x1="842.8032" y1="714.5631" x2="438.0310" y2="484.3305" />
+        <line x1="235.2640" y1="253.3034" x2="168.4851" y2="157.0092" />
     
-        <line x1="-250.7035" y1="607.2395" x2="419.5109" y2="481.2341" />
+        <line x1="242.4313" y1="-0.0068" x2="167.5055" y2="139.9753" />
     
-        <line x1="-802.0840" y1="387.0732" x2="-259.9905" y2="603.5312" />
+        <line x1="181.2444" y1="-134.7649" x2="238.2971" y2="-9.1122" />
     
-        <line x1="942.1685" y1="397.3932" x2="439.2133" y2="477.8076" />
+        <line x1="107.7606" y1="261.6192" x2="158.4030" y2="157.7799" />
     
-        <line x1="698.6780" y1="133.0006" x2="435.4771" y2="471.4921" />
+        <line x1="16.4072" y1="194.3838" x2="153.2389" y2="151.7656" />
     
-        <line x1="-913.6035" y1="-589.8078" x2="-1208.8218" y2="-236.3821" />
+        <line x1="-194.0686" y1="-202.5513" x2="-49.4365" y2="-250.5867" />
     
-        <line x1="-617.4336" y1="893.2835" x2="-238.7167" y2="987.5838" />
+        <line x1="390.0000" y1="21.3950" x2="371.5351" y2="-61.2873" />
     
-        <line x1="698.6780" y1="133.0006" x2="935.3941" y2="390.0373" />
+        <line x1="16.4072" y1="194.3838" x2="99.7068" y2="255.6916" />
     
-        <line x1="-3.2954" y1="-990.0000" x2="-451.0964" y2="-835.7140" />
+        <line x1="-390.0000" y1="-13.8931" x2="-316.1382" y2="-103.7193" />
     
-        <line x1="-913.6035" y1="-589.8078" x2="-923.6035" y2="-589.8078" />
+        <line x1="-194.0686" y1="-202.5513" x2="-204.0686" y2="-202.5513" />
     
-        <line x1="-250.7035" y1="607.2395" x2="-229.5788" y2="980.0160" />
+        <line x1="242.4313" y1="-0.0068" x2="360.6294" y2="-66.1628" />
     
-        <line x1="842.8032" y1="714.5631" x2="939.1789" y2="406.9358" />
+        <line x1="235.2640" y1="253.3034" x2="117.7394" y2="260.9683" />
     
-        <line x1="-1240.0000" y1="-827.4647" x2="-921.6876" y2="-595.6940" />
+        <line x1="-266.0680" y1="-290.0000" x2="-200.4248" y2="-210.2714" />
     
-        <line x1="-913.6035" y1="-589.8078" x2="-469.3663" y2="-827.7352" />
+        <line x1="-194.0686" y1="-202.5513" x2="-301.9299" y2="-117.6294" />
     
-        <line x1="-802.0840" y1="387.0732" x2="-1230.1662" y2="164.6184" />
+        <line x1="181.2444" y1="-134.7649" x2="117.3449" y2="-235.1124" />
     
-        <line x1="480.9075" y1="-935.4158" x2="889.5277" y2="-744.9985" />
+        <line x1="-388.5115" y1="98.6350" x2="-336.2390" y2="193.1642" />
     
-        <line x1="898.5918" y1="-740.7746" x2="1231.7985" y2="-508.3240" />
+        <line x1="-331.3998" y1="201.9153" x2="-260.8287" y2="282.4779" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(480.9075 -935.4158)" class="inf">
+        <g transform="translate(-388.5115 98.6350)" 
+            class="inf" id="06JERUSALEM2068">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06JERUSALEM2068.html">06JERUSALEM2068</a>
+                <text x="0" y="5" class="label">
+                
+                    06JERUSALEM2068
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the fishing industry</tspan>
+                        <tspan class="rel">could disappear by</tspan>
+                        <tspan class="a2">October 2007</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">35,000 Gazans</tspan>
+                        <tspan class="rel">work in</tspan>
+                        <tspan class="a2">the industry</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(898.5918 -740.7746)" class="inf">
+        <g transform="translate(-331.3998 201.9153)" 
+            class="inf" id="06JERUSALEM2826">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/07/06JERUSALEM2826.html">06JERUSALEM2826</a>
+                <text x="0" y="5" class="label">
+                
+                    06JERUSALEM2826
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">They</tspan>
+                        <tspan class="rel">had purchased this equipment through</tspan>
+                        <tspan class="a2">the ongoing collection of membership dues</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-1240.0000 -827.4647)" class="inf">
+        <g transform="translate(-266.0680 -290.0000)" 
+            class="inf" id="06JERUSALEM4587">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/10/06JERUSALEM4587.html">06JERUSALEM4587</a>
+                <text x="0" y="5" class="label">
+                
+                    06JERUSALEM4587
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Passage</tspan>
+                        <tspan class="rel">is sometimes allowed with</tspan>
+                        <tspan class="a2">the payment of exorbitant unofficial fees</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Frustrated over</tspan>
+                        <tspan class="rel">blocked access to</tspan>
+                        <tspan class="a2">Gaza</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the crossing</tspan>
+                        <tspan class="rel">moves to</tspan>
+                        <tspan class="a2">a location</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">managed to move only</tspan>
+                        <tspan class="a2">25 percent of that amount</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">West Bank-origin goods</tspan>
+                        <tspan class="rel">comprised a mere 20 percent of</tspan>
+                        <tspan class="a2">Gazan imports</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">the Palestinian share</tspan>
+                        <tspan class="rel">dropped to</tspan>
+                        <tspan class="a2">five percent</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">Israeli producers of the same products</tspan>
+                        <tspan class="rel">continue to have access to</tspan>
+                        <tspan class="a2">Gaza</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">many of whom</tspan>
+                        <tspan class="rel">are also contemplating</tspan>
+                        <tspan class="a2">a move</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-913.6035 -589.8078)" class="inf">
+        <g transform="translate(-194.0686 -202.5513)" 
+            class="inf" id="06JERUSALEM5031">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/12/06JERUSALEM5031.html">06JERUSALEM5031</a>
+                <text x="0" y="5" class="label">
+                
+                    06JERUSALEM5031
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is a joint cable with</tspan>
+                        <tspan class="a2">Embassy Tel Aviv.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">the problem</tspan>
+                        <tspan class="rel">is not limited to</tspan>
+                        <tspan class="a2">U.S. products</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">facilitate imports of</tspan>
+                        <tspan class="a2">Coca-Cola</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">is needed is</tspan>
+                        <tspan class="a2">a transparent process</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">also requested information for</tspan>
+                        <tspan class="a2">a "test case</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-802.0840 387.0732)" class="inf">
+        <g transform="translate(181.2444 -134.7649)" 
+            class="inf" id="06JERUSALEM5056">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/12/06JERUSALEM5056.html">06JERUSALEM5056</a>
+                <text x="0" y="5" class="label">
+                
+                    06JERUSALEM5056
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">10 percent</tspan>
+                        <tspan class="rel">have relocated to</tspan>
+                        <tspan class="a2">Jordan or Egypt</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">potential dual-use</tspan>
+                        <tspan class="rel">currently prohibit the importation of</tspan>
+                        <tspan class="a2">80 percent of metal materials</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-3.2954 -990.0000)" class="inf">
+        <g transform="translate(-390.0000 -13.8931)" 
+            class="inf" id="06TELAVIV2120">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06TELAVIV2120.html">06TELAVIV2120</a>
+                <text x="0" y="5" class="label">
+                
+                    06TELAVIV2120
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This cable</tspan>
+                        <tspan class="rel">has been cleared by</tspan>
+                        <tspan class="a2">ConGen Jerusalem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">a private sector mechanism</tspan>
+                        <tspan class="rel">could be placed under</tspan>
+                        <tspan class="a2">an international umbrella</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">as is</tspan>
+                        <tspan class="a2">the case</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">emphasized the need for</tspan>
+                        <tspan class="a2">a transparent system</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Hamas</tspan>
+                        <tspan class="rel">had come to</tspan>
+                        <tspan class="a2">power</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">security</tspan>
+                        <tspan class="rel">would be</tspan>
+                        <tspan class="a2">a problem</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-460.5510 -832.4565)" class="inf">
+        <g transform="translate(-309.7869 -111.4434)" 
+            class="inf" id="06TELAVIV2301">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06TELAVIV2301.html">06TELAVIV2301</a>
+                <text x="0" y="5" class="label">
+                
+                    06TELAVIV2301
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is a joint cable with</tspan>
+                        <tspan class="a2">Consulate General Jerusalem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">corruption</tspan>
+                        <tspan class="rel">extends to</tspan>
+                        <tspan class="a2">Karni management</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">nearly 40 percent of the time</tspan>
+                        <tspan class="rel">has exacerbated the problem of</tspan>
+                        <tspan class="a2">access</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">These companies</tspan>
+                        <tspan class="rel">include</tspan>
+                        <tspan class="a2">Coca Cola</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">two IDF officers</tspan>
+                        <tspan class="rel">have met with</tspan>
+                        <tspan class="a2">Hartmann</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The officials</tspan>
+                        <tspan class="rel">did not address the issue of</tspan>
+                        <tspan class="a2">bribes</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">OSAC</tspan>
+                        <tspan class="rel">is affiliated with</tspan>
+                        <tspan class="a2">the Department</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-617.4336 893.2835)" class="inf">
+        <g transform="translate(390.0000 21.3950)" 
+            class="inf" id="07ANKARA1033">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ANKARA1033.html">07ANKARA1033</a>
+                <text x="0" y="5" class="label">
+                
+                    07ANKARA1033
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">meets with</tspan>
+                        <tspan class="a2">MOD official Amos Gilad</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">also hopes to see</tspan>
+                        <tspan class="a2">Saeb Erekat</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">a member of the PIF board</tspan>
+                        <tspan class="rel">has good relations with</tspan>
+                        <tspan class="a2">Hamas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">interfaith group of businesspeople</tspan>
+                        <tspan class="rel">had previously shown an interest in</tspan>
+                        <tspan class="a2">the project</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">is getting some advice from</tspan>
+                        <tspan class="a2">Israelis</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The USG</tspan>
+                        <tspan class="rel">could consider making</tspan>
+                        <tspan class="a2">similar support</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">the U.S. Chamber 's network</tspan>
+                        <tspan class="rel">should be valuable in reaching out to</tspan>
+                        <tspan class="a2">potential investors</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-1239.0396 160.0073)" class="inf">
+        <g transform="translate(111.9736 -243.5474)" 
+            class="inf" id="07JERUSALEM224">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07JERUSALEM224.html">07JERUSALEM224</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM224
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the Rafah crossing</tspan>
+                        <tspan class="rel">was vital to</tspan>
+                        <tspan class="a2">economic growth</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(842.8032 714.5631)" class="inf">
+        <g transform="translate(235.2640 253.3034)" 
+            class="inf" id="07JERUSALEM2476">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/12/07JERUSALEM2476.html">07JERUSALEM2476</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM2476
+                
                 </text>
+                
             
         </g>
         
-        <g transform="translate(698.6780 133.0006)" class="inf">
+        <g transform="translate(16.4072 194.3838)" 
+            class="inf" id="07JERUSALEM2500">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/12/07JERUSALEM2500.html">07JERUSALEM2500</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM2500
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the Municipality and residents</tspan>
+                        <tspan class="rel">have informally agreed on</tspan>
+                        <tspan class="a2">a compromise</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(942.1685 397.3932)" class="inf">
+        <g transform="translate(107.7606 261.6192)" 
+            class="inf" id="07JERUSALEM2542">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/12/07JERUSALEM2542.html">07JERUSALEM2542</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM2542
+                
                 </text>
+                
             
         </g>
         
-        <g transform="translate(-1215.2326 -228.7074)" class="inf">
+        <g transform="translate(-39.9463 -253.7386)" 
+            class="inf" id="07JERUSALEM529">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/03/07JERUSALEM529.html">07JERUSALEM529</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM529
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The involvement of a Palestinian firm</tspan>
+                        <tspan class="rel">does not surprise</tspan>
+                        <tspan class="a2">Palestinian business leaders</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(1240.0000 -502.6025)" class="inf">
+        <g transform="translate(-254.2394 290.0000)" 
+            class="inf" id="07JERUSALEM716">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/04/07JERUSALEM716.html">07JERUSALEM716</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM716
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the 3,000 registered Gaza fishermen</tspan>
+                        <tspan class="rel">are prohibited from accessing</tspan>
+                        <tspan class="a2">the main sardine schools</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Gaza fishermen</tspan>
+                        <tspan class="rel">caught</tspan>
+                        <tspan class="a2">1,604 tons of fish</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">they</tspan>
+                        <tspan class="rel">have begun searching for</tspan>
+                        <tspan class="a2">alternative forms of employment</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">a number</tspan>
+                        <tspan class="rel">also reported in</tspan>
+                        <tspan class="a2">the April OCHA report</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">The fisherman</tspan>
+                        <tspan class="rel">did not have</tspan>
+                        <tspan class="a2">a GPS unit</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-250.7035 607.2395)" class="inf">
+        <g transform="translate(242.4313 -0.0068)" 
+            class="inf" id="07JERUSALEM717">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/04/07JERUSALEM717.html">07JERUSALEM717</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM717
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The PIFZ</tspan>
+                        <tspan class="rel">remains under</tspan>
+                        <tspan class="a2">the authority of the PA 's Ministry of National Economy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">job creation</tspan>
+                        <tspan class="rel">is obviously a top priority for</tspan>
+                        <tspan class="a2">the PIF.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the PIF</tspan>
+                        <tspan class="rel">could conceivably assume</tspan>
+                        <tspan class="a2">PIEFZA 's role</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-229.0130 990.0000)" class="inf">
+        <g transform="translate(369.3555 -71.0469)" 
+            class="inf" id="07JERUSALEM876">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2007/05/07JERUSALEM876.html">07JERUSALEM876</a>
+                <text x="0" y="5" class="label">
+                
+                    07JERUSALEM876
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">former Palestinian Industrial Estate & Free Zone Authority Director General Naser Jaber</tspan>
+                        <tspan class="rel">is now the local representative for</tspan>
+                        <tspan class="a2">the initiative</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">the movement of goods</tspan>
+                        <tspan class="rel">remained vital to</tspan>
+                        <tspan class="a2">the project 's success</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Workers</tspan>
+                        <tspan class="rel">will make</tspan>
+                        <tspan class="a2">money</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Palestinians</tspan>
+                        <tspan class="rel">will be expected to provide</tspan>
+                        <tspan class="a2">labor and nothing</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(429.3388 479.3864)" class="inf">
+        <g transform="translate(162.7865 148.7918)" 
+            class="inf" id="08JERUSALEM348">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2008/02/08JERUSALEM348.html">08JERUSALEM348</a>
+                <text x="0" y="5" class="label">
+                
+                    08JERUSALEM348
+                
                 </text>
+                
             
         </g>
         

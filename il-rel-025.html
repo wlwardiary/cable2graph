@@ -3,12 +3,12 @@
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.8); 
+          stroke: rgba(255,255,255,0.5); 
           stroke-width: 1; 
-          fill: rgba(255,255,255,0.5); 
+          fill: rgba(127,127,127,0.3); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.5);   
+          fill: rgba(255,0,0,0.3);
         }
 
         #vertices text { 
@@ -16,8 +16,8 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.8); 
-          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.3); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
@@ -28,247 +28,907 @@
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,127,127,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(127,127,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(127,255,127,1);
+        }
+
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.4); 
+            stroke: rgba(127,127,127,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(255,255,255,0.8); 
+            stroke: rgba(127,127,127,0.8); 
         }
 
     </style>
 </head>
 <body>
-
-<svg width="2500" height="2000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(1250.0000,1000.0000)">
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g transform="translate(400.0000,300.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-1240.0000" y1="-92.0117" x2="-901.0798" y2="-462.3259" />
+        <line x1="390.0000" y1="92.3078" x2="274.0484" y2="146.2347" />
     
-        <line x1="-708.0004" y1="-141.4335" x2="-889.3921" y2="-461.0061" />
+        <line x1="204.9743" y1="24.4221" x2="260.6822" y2="141.4229" />
     
-        <line x1="-1215.7091" y1="-917.1454" x2="-900.1621" y2="-477.8248" />
+        <line x1="315.1585" y1="290.0000" x2="268.3647" y2="159.8619" />
     
-        <line x1="-1240.0000" y1="-92.0117" x2="-955.0362" y2="71.4000" />
+        <line x1="390.0000" y1="92.3078" x2="369.6927" y2="33.6182" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-884.6091" y2="-467.3499" />
+        <line x1="160.1278" y1="100.0425" x2="255.9685" y2="146.1188" />
     
-        <line x1="-981.9918" y1="-148.7609" x2="-896.9633" y2="-460.0562" />
+        <line x1="287.9810" y1="63.9491" x2="267.5507" y2="140.7875" />
     
-        <line x1="-1240.0000" y1="-92.0117" x2="-632.4326" y2="34.8079" />
+        <line x1="390.0000" y1="92.3078" x2="292.1583" y2="9.4845" />
     
-        <line x1="-946.3613" y1="76.3746" x2="-895.2769" y2="-459.7479" />
+        <line x1="366.4227" y1="24.1680" x2="271.2436" y2="142.6555" />
     
-        <line x1="-622.6436" y1="36.8512" x2="-889.6019" y2="-460.8903" />
+        <line x1="284.5257" y1="3.0235" x2="266.2953" y2="140.5384" />
     
-        <line x1="915.9439" y1="-534.2092" x2="1230.5801" y2="-422.1039" />
+        <line x1="-390.0000" y1="27.7564" x2="-307.5893" y2="70.0949" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-619.5690" y2="27.3355" />
+        <line x1="160.1278" y1="100.0425" x2="276.6403" y2="9.1734" />
     
-        <line x1="-723.6433" y1="386.7551" x2="-977.6467" y2="-139.7542" />
+        <line x1="288.8267" y1="-89.6031" x2="288.0361" y2="53.9493" />
     
-        <line x1="601.1014" y1="771.4502" x2="895.2458" y2="387.9220" />
+        <line x1="-94.7175" y1="-255.7429" x2="-211.4476" y2="-172.9116" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-972.8869" y2="-152.8961" />
+        <line x1="160.1278" y1="100.0425" x2="278.3572" y2="66.6660" />
     
-        <line x1="601.1014" y1="771.4502" x2="131.7448" y2="985.8451" />
+        <line x1="-94.7175" y1="-255.7429" x2="61.3227" y2="-287.9770" />
     
-        <line x1="-519.1158" y1="-990.0000" x2="-888.4792" y2="-477.8137" />
+        <line x1="102.2956" y1="266.8669" x2="256.8487" y2="156.2711" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-113.9264" y2="-850.6841" />
+        <line x1="160.1278" y1="100.0425" x2="1.7400" y2="200.2918" />
     
-        <line x1="-723.6433" y1="386.7551" x2="-412.4884" y2="873.0433" />
+        <line x1="288.8267" y1="-89.6031" x2="231.3282" y2="-226.3324" />
     
-        <line x1="-1240.0000" y1="-92.0117" x2="-991.7584" y2="-146.6127" />
+        <line x1="390.0000" y1="92.3078" x2="297.6157" y2="66.6273" />
     
-        <line x1="-946.3613" y1="76.3746" x2="-632.5699" y2="38.0631" />
+        <line x1="366.4227" y1="24.1680" x2="294.2082" y2="5.5234" />
     
-        <line x1="1015.2776" y1="-97.0154" x2="918.1595" y2="-524.4577" />
+        <line x1="-293.9296" y1="-46.4935" x2="-382.0877" y2="21.6412" />
     
-        <line x1="-708.0004" y1="-141.4335" x2="-626.9619" y2="27.8316" />
+        <line x1="204.9743" y1="24.4221" x2="274.8690" y2="5.6211" />
     
-        <line x1="-946.3613" y1="76.3746" x2="-980.4287" y2="-138.8838" />
+        <line x1="366.4227" y1="24.1680" x2="296.8997" y2="59.4261" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-701.1387" y2="-148.7079" />
+        <line x1="160.1278" y1="100.0425" x2="199.8733" y2="33.0233" />
     
-        <line x1="-519.1158" y1="-990.0000" x2="-117.2687" y2="-861.5873" />
+        <line x1="102.2956" y1="266.8669" x2="2.0090" y2="210.5372" />
     
-        <line x1="-1240.0000" y1="-92.0117" x2="-717.9575" y2="-140.5085" />
+        <line x1="390.0000" y1="92.3078" x2="214.3623" y2="27.8666" />
     
-        <line x1="901.3315" y1="379.9870" x2="1012.9542" y2="-87.2891" />
+        <line x1="-219.6030" y1="-167.1245" x2="-288.6839" y2="-55.0072" />
     
-        <line x1="1015.2776" y1="-97.0154" x2="1234.2738" y2="-410.5494" />
+        <line x1="-293.9296" y1="-46.4935" x2="-298.3015" y2="64.6724" />
     
-        <line x1="-708.0004" y1="-141.4335" x2="-971.9954" y2="-148.4935" />
+        <line x1="204.9743" y1="24.4221" x2="278.9524" y2="59.6498" />
     
-        <line x1="122.6488" y1="990.0000" x2="-397.3022" y2="883.4737" />
+        <line x1="71.1159" y1="-290.0000" x2="218.0081" y2="-238.8396" />
     
-        <line x1="-723.6433" y1="386.7551" x2="-708.2964" y2="-131.4379" />
+        <line x1="288.8267" y1="-89.6031" x2="210.8986" y2="16.3659" />
     
-        <line x1="-723.6433" y1="386.7551" x2="-940.5313" y2="84.4993" />
+        <line x1="288.8267" y1="-89.6031" x2="360.7881" y2="15.9065" />
     
-        <line x1="-723.6433" y1="386.7551" x2="-625.4169" y2="46.4589" />
+        <line x1="288.8267" y1="-89.6031" x2="284.9895" y2="-6.9657" />
     
-        <line x1="-490.5558" y1="-371.9555" x2="-939.2320" y2="69.3622" />
+        <line x1="160.1278" y1="100.0425" x2="357.0374" y2="27.6199" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-723.6433 386.7551)" class="red">
+        <g transform="translate(288.8267 -89.6031)" 
+            class="red" id="04TELAVIV2901">
             <circle cx="0" cy="0" r="10" />
             
                 <text x="0" y="5">04TELAVIV2901</text>
             
         </g>
         
-        <g transform="translate(-490.5558 -371.9555)" class="red">
+        <g transform="translate(160.1278 100.0425)" 
+            class="red" id="04TELAVIV3085">
             <circle cx="0" cy="0" r="10" />
             
                 <text x="0" y="5">04TELAVIV3085</text>
             
         </g>
         
-        <g transform="translate(-1240.0000 -92.0117)" class="red">
+        <g transform="translate(390.0000 92.3078)" 
+            class="red" id="04TELAVIV3393">
             <circle cx="0" cy="0" r="10" />
             
                 <text x="0" y="5">04TELAVIV3393</text>
             
         </g>
         
-        <g transform="translate(601.1014 771.4502)" class="red">
+        <g transform="translate(-94.7175 -255.7429)" 
+            class="red" id="04TELAVIV5567">
             <circle cx="0" cy="0" r="10" />
             
                 <text x="0" y="5">04TELAVIV5567</text>
             
         </g>
         
-        <g transform="translate(901.3315 379.9870)" class="None">
+        <g transform="translate(-219.6030 -167.1245)" 
+            class="None" id="04TELAVIV6442">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2004/12/04TELAVIV6442.html">04TELAVIV6442</a>
+                <text x="0" y="5" class="label">
+                
+                    04TELAVIV6442
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">MoE 's list</tspan>
+                        <tspan class="rel">follows at</tspan>
+                        <tspan class="a2">end of this message</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The international community and donors</tspan>
+                        <tspan class="rel">should support</tspan>
+                        <tspan class="a2">sustainable development</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(122.6488 990.0000)" class="None">
+        <g transform="translate(71.1159 -290.0000)" 
+            class="None" id="04TELAVIV6550">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2004/12/04TELAVIV6550.html">04TELAVIV6550</a>
+                <text x="0" y="5" class="label">
+                
+                    04TELAVIV6550
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Israel</tspan>
+                        <tspan class="rel">has new legislation on</tspan>
+                        <tspan class="a2">coastal management</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Related international tenders</tspan>
+                        <tspan class="rel">will be made</tspan>
+                        <tspan class="a2">public " soon</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The Knesset Environmental Caucus</tspan>
+                        <tspan class="rel">is now</tspan>
+                        <tspan class="a2">a strong group</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-519.1158 -990.0000)" class="red">
+        <g transform="translate(102.2956 266.8669)" 
+            class="red" id="04TELAVIV874">
             <circle cx="0" cy="0" r="10" />
             
                 <text x="0" y="5">04TELAVIV874</text>
             
         </g>
         
-        <g transform="translate(1015.2776 -97.0154)" class="None">
+        <g transform="translate(-293.9296 -46.4935)" 
+            class="None" id="05TELAVIV1024">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/02/05TELAVIV1024.html">05TELAVIV1024</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV1024
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This message</tspan>
+                        <tspan class="rel">has been cleared with</tspan>
+                        <tspan class="a2">Consulate General Jerusalem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The EEC</tspan>
+                        <tspan class="rel">will meet in</tspan>
+                        <tspan class="a2">Jerusalem May</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The EEC</tspan>
+                        <tspan class="rel">will meet in</tspan>
+                        <tspan class="a2">Jerusalem May 2</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">They</tspan>
+                        <tspan class="rel">will furthermore cooperate on</tspan>
+                        <tspan class="a2">disposal of used tires and construction debris</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(915.9439 -534.2092)" class="None">
+        <g transform="translate(-390.0000 27.7564)" 
+            class="None" id="05TELAVIV2506">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/04/05TELAVIV2506.html">05TELAVIV2506</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV2506
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">environmental projects</tspan>
+                        <tspan class="rel">agreed to within</tspan>
+                        <tspan class="a2">the EEC</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Lawson</tspan>
+                        <tspan class="rel">was accompanied by</tspan>
+                        <tspan class="a2">ESTH Officer</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">some multilateral activities</tspan>
+                        <tspan class="rel">were already returning to</tspan>
+                        <tspan class="a2">the region</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">environmental projects</tspan>
+                        <tspan class="rel">agreed to by</tspan>
+                        <tspan class="a2">the EEC</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-946.3613 76.3746)" class="None">
+        <g transform="translate(366.4227 24.1680)" 
+            class="None" id="05TELAVIV2537">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/04/05TELAVIV2537.html">05TELAVIV2537</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV2537
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Peres staffers</tspan>
+                        <tspan class="rel">indicated the same to</tspan>
+                        <tspan class="a2">Econoff</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Israeli-Arab and NGO communities</tspan>
+                        <tspan class="rel">have raised</tspan>
+                        <tspan class="a2">serious concerns</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The Negev Law</tspan>
+                        <tspan class="rel">passed in</tspan>
+                        <tspan class="a2">1986</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">The Negev law</tspan>
+                        <tspan class="rel">was revoked in</tspan>
+                        <tspan class="a2">2002</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">This new plan</tspan>
+                        <tspan class="rel">was referred to as</tspan>
+                        <tspan class="a2">the " 2020 " plan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">It</tspan>
+                        <tspan class="rel">includes plans for</tspan>
+                        <tspan class="a2">transportation projects</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">Staffer Uri Ben-Porath</tspan>
+                        <tspan class="rel">was not able to provide the details of</tspan>
+                        <tspan class="a2">these programs</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-708.0004 -141.4335)" class="None">
+        <g transform="translate(204.9743 24.4221)" 
+            class="None" id="05TELAVIV2540">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/04/05TELAVIV2540.html">05TELAVIV2540</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV2540
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the plan</tspan>
+                        <tspan class="rel">is primarily geared towards</tspan>
+                        <tspan class="a2">Jewish Israelis</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Such a project</tspan>
+                        <tspan class="rel">holds nothing positive for</tspan>
+                        <tspan class="a2">Israeli Arabs</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">said</tspan>
+                        <tspan class="a2">Mrs. Bishara</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-622.6436 36.8512)" class="None">
+        <g transform="translate(284.5257 3.0235)" 
+            class="None" id="05TELAVIV3151">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/05/05TELAVIV3151.html">05TELAVIV3151</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV3151
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">These projects</tspan>
+                        <tspan class="rel">include the extension of</tspan>
+                        <tspan class="a2">Route 6</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">funding</tspan>
+                        <tspan class="rel">will be sought from</tspan>
+                        <tspan class="a2">the GOI budget</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The development of the Negev</tspan>
+                        <tspan class="rel">would support the economic development of</tspan>
+                        <tspan class="a2">both Israel and Gaza</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">The plan</tspan>
+                        <tspan class="rel">is being handled out of</tspan>
+                        <tspan class="a2">the Prime Minister 's office</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">The international consulting firm Mckinsey</tspan>
+                        <tspan class="rel">is also involved in</tspan>
+                        <tspan class="a2">this planning and integration phase</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The Negev academic community</tspan>
+                        <tspan class="rel">should also get a boost in</tspan>
+                        <tspan class="a2">the number of students</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">the national average</tspan>
+                        <tspan class="rel">will be another indicator of</tspan>
+                        <tspan class="a2">plan success</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">Jews</tspan>
+                        <tspan class="rel">account for</tspan>
+                        <tspan class="a2">75 % of that population</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">Negev income</tspan>
+                        <tspan class="rel">is only two-thirds of</tspan>
+                        <tspan class="a2">the national average</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">This project</tspan>
+                        <tspan class="rel">has received</tspan>
+                        <tspan class="a2">approval</tspan>
+                    </text>
+                    
+                    <text x="-200" y="220" class="sentence">
+                        <tspan class="a1">part of the development plan</tspan>
+                        <tspan class="rel">is in</tspan>
+                        <tspan class="a2">the works</tspan>
+                    </text>
+                    
+                    <text x="-200" y="240" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">has already been selected for</tspan>
+                        <tspan class="a2">transfer</tspan>
+                    </text>
+                    
+                    <text x="-200" y="260" class="sentence">
+                        <tspan class="a1">This air base</tspan>
+                        <tspan class="rel">would bring employment to</tspan>
+                        <tspan class="a2">cities of Arad and Dimona</tspan>
+                    </text>
+                    
+                    <text x="-200" y="280" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">did not address planning for</tspan>
+                        <tspan class="a2">the Galilee</tspan>
+                    </text>
+                    
+                    <text x="-200" y="300" class="sentence">
+                        <tspan class="a1">the GOI</tspan>
+                        <tspan class="rel">will seek funding for</tspan>
+                        <tspan class="a2">the road</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-981.9918 -148.7609)" class="None">
+        <g transform="translate(287.9810 63.9491)" 
+            class="None" id="05TELAVIV3973">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/06/05TELAVIV3973.html">05TELAVIV3973</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV3973
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">focus</tspan>
+                        <tspan class="rel">was primarily on</tspan>
+                        <tspan class="a2">the Negev.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">This focus</tspan>
+                        <tspan class="rel">was centered on</tspan>
+                        <tspan class="a2">population migration</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The 2020 plan</tspan>
+                        <tspan class="rel">takes into</tspan>
+                        <tspan class="a2">account expected population growth</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">This plan</tspan>
+                        <tspan class="rel">could be considered</tspan>
+                        <tspan class="a2">a demographic plan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">National Outline Plan 35</tspan>
+                        <tspan class="rel">is still waiting</tspan>
+                        <tspan class="a2">government approval</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">It</tspan>
+                        <tspan class="rel">calls for developing</tspan>
+                        <tspan class="a2">the Negev</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">Environmental issues</tspan>
+                        <tspan class="rel">are also addressed in</tspan>
+                        <tspan class="a2">this last plan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">The 2005 budget</tspan>
+                        <tspan class="rel">has cut this amount to</tspan>
+                        <tspan class="a2">43 million shekels</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">The GOI</tspan>
+                        <tspan class="rel">has</tspan>
+                        <tspan class="a2">no five , ten</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">an area</tspan>
+                        <tspan class="rel">is able to attract</tspan>
+                        <tspan class="a2">people</tspan>
+                    </text>
+                    
+                    <text x="-200" y="220" class="sentence">
+                        <tspan class="a1">the Galilee development</tspan>
+                        <tspan class="rel">was approved by</tspan>
+                        <tspan class="a2">GOI.</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-1215.7091 -917.1454)" class="None">
+        <g transform="translate(315.1585 290.0000)" 
+            class="None" id="05TELAVIV4066">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/06/05TELAVIV4066.html">05TELAVIV4066</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV4066
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">One of these orders</tspan>
+                        <tspan class="rel">was issued by</tspan>
+                        <tspan class="a2">the Regional Planning</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Al-Dhiyya</tspan>
+                        <tspan class="rel">together serve more than</tspan>
+                        <tspan class="a2">2,050 Bedouin</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">All three mosques</tspan>
+                        <tspan class="rel">were built without</tspan>
+                        <tspan class="a2">permits</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">These two mosques</tspan>
+                        <tspan class="rel">were built without</tspan>
+                        <tspan class="a2">permits</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Econoff</tspan>
+                        <tspan class="rel">spoke to</tspan>
+                        <tspan class="a2">Amir Ritov</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">incorrect documentation</tspan>
+                        <tspan class="rel">did not indicate</tspan>
+                        <tspan class="a2">the structure 's religious nature</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">the committee</tspan>
+                        <tspan class="rel">was required to issue</tspan>
+                        <tspan class="a2">a demolition order</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">the committee</tspan>
+                        <tspan class="rel">was informed of</tspan>
+                        <tspan class="a2">the building 's purpose</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-894.3284 -469.7028)" class="None">
+        <g transform="translate(264.9811 150.4517)" 
+            class="None" id="05TELAVIV4281">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/07/05TELAVIV4281.html">05TELAVIV4281</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV4281
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The Director of the Arab Business Club</tspan>
+                        <tspan class="rel">struck</tspan>
+                        <tspan class="a2">the same tone</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">discrimination</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">said the city of</tspan>
+                        <tspan class="a2">Carmiel</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">has been talking to</tspan>
+                        <tspan class="a2">GOI officials</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">said</tspan>
+                        <tspan class="a2">GOI "benign neglect</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The Bedouin</tspan>
+                        <tspan class="rel">should not be seen as</tspan>
+                        <tspan class="a2">a burden</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">Home demolitions</tspan>
+                        <tspan class="rel">remain</tspan>
+                        <tspan class="a2">a concern</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">creates a barrier between</tspan>
+                        <tspan class="a2">the Bedouin</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-107.7433 -858.5434)" class="None">
+        <g transform="translate(-6.7098 205.6400)" 
+            class="None" id="05TELAVIV5265">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/08/05TELAVIV5265.html">05TELAVIV5265</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV5265
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This message</tspan>
+                        <tspan class="rel">provides an overview of</tspan>
+                        <tspan class="a2">the vital economic statistics of the Israeli-Arab sector</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">an overview of the vital economic statistics of the Israeli-Arab sector</tspan>
+                        <tspan class="rel">comprises approximately 20 percent of</tspan>
+                        <tspan class="a2">Israel 's total population</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Israeli Arabs</tspan>
+                        <tspan class="rel">constitute approximately 20 percent of</tspan>
+                        <tspan class="a2">the Israeli population</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">1.1 million</tspan>
+                        <tspan class="rel">are</tspan>
+                        <tspan class="a2">Muslim</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Muslim</tspan>
+                        <tspan class="rel">predominantly live in</tspan>
+                        <tspan class="a2">the following areas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The Bedouin population</tspan>
+                        <tspan class="rel">is more than</tspan>
+                        <tspan class="a2">150,000</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">The socio-economic condition of the Bedouin</tspan>
+                        <tspan class="rel">is below</tspan>
+                        <tspan class="a2">that of the rest of the Israeli-Arab community</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">Arab-Christian employment</tspan>
+                        <tspan class="rel">is at</tspan>
+                        <tspan class="a2">65.6 percent</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">The 2004 Bank of Israel Report</tspan>
+                        <tspan class="rel">also touches on</tspan>
+                        <tspan class="a2">Israeli-Arab employment</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">one family</tspan>
+                        <tspan class="rel">extends a helping hand to</tspan>
+                        <tspan class="a2">another family</tspan>
+                    </text>
+                    
+                    <text x="-200" y="220" class="sentence">
+                        <tspan class="a1">mosques</tspan>
+                        <tspan class="rel">provide food to</tspan>
+                        <tspan class="a2">needy families</tspan>
+                    </text>
+                    
+                    <text x="-200" y="240" class="sentence">
+                        <tspan class="a1">the Bedouin community 's employment rate</tspan>
+                        <tspan class="rel">stands at</tspan>
+                        <tspan class="a2">36 percent</tspan>
+                    </text>
+                    
+                    <text x="-200" y="260" class="sentence">
+                        <tspan class="a1">11.5 percent of the Israeli Arab sector</tspan>
+                        <tspan class="rel">entered</tspan>
+                        <tspan class="a2">university studies</tspan>
+                    </text>
+                    
+                    <text x="-200" y="280" class="sentence">
+                        <tspan class="a1">Only 9.8 percent of Israeli Arabs</tspan>
+                        <tspan class="rel">are accepted into</tspan>
+                        <tspan class="a2">a university</tspan>
+                    </text>
+                    
+                    <text x="-200" y="300" class="sentence">
+                        <tspan class="a1">4.8 percent</tspan>
+                        <tspan class="rel">received</tspan>
+                        <tspan class="a2">their master 's degree</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(1240.0000 -418.7476)" class="None">
+        <g transform="translate(-298.6945 74.6647)" 
+            class="None" id="05TELAVIV5698">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/09/05TELAVIV5698.html">05TELAVIV5698</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV5698
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">This message</tspan>
+                        <tspan class="rel">was cleared with</tspan>
+                        <tspan class="a2">Consulate General Jerusalem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">his reference</tspan>
+                        <tspan class="rel">is to</tspan>
+                        <tspan class="a2">the International Court of Justice</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Livne</tspan>
+                        <tspan class="rel">share the same views on</tspan>
+                        <tspan class="a2">the EEC and Abu Safiyya</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
-        <g transform="translate(-407.0987 881.4666)" class="None">
+        <g transform="translate(227.4517 -235.5505)" 
+            class="None" id="05TELAVIV6332">
             <circle cx="0" cy="0" r="10" />
             
-                <text x="0" y="5">
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05TELAVIV6332.html">05TELAVIV6332</a>
+                <text x="0" y="5" class="label">
+                
+                    05TELAVIV6332
+                
                 </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">services</tspan>
+                        <tspan class="rel">provides extensive information about</tspan>
+                        <tspan class="a2">Ramat</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">17 industrial plants</tspan>
+                        <tspan class="rel">produce a variety of</tspan>
+                        <tspan class="a2">hazardous wastes</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The issue of Ramat Hovav</tspan>
+                        <tspan class="rel">is a very important one for</tspan>
+                        <tspan class="a2">the GOI</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Israel</tspan>
+                        <tspan class="rel">is looking for</tspan>
+                        <tspan class="a2">both subject matter</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">economic/regulatory approaches</tspan>
+                        <tspan class="rel">could support</tspan>
+                        <tspan class="a2">a sustainable solution</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">An ideal team</tspan>
+                        <tspan class="rel">might include</tspan>
+                        <tspan class="a2">an economics/regulatory expert</tspan>
+                    </text>
+                    
+                    </g>
+                
             
         </g>
         
