@@ -11,6 +11,7 @@ p = re.compile(r'[A-Z]+')
 cable_ids = set()
 missing = set()
 ref = []
+timestamp_map = {}
 
 for i in open('all_ids.list').readlines():
     cable_ids.add(i.strip())
@@ -21,24 +22,31 @@ for y in open('diff_ids.list').readlines():
 for l in open('edges.list').readlines():
     ref.append((l.split(' ')[0].strip(),l.split(' ')[1].strip()))
 
+for j in open('dates.list').readlines():
+    tmp_cable_id = j.split(' ')[0].strip()
+    tmp_ts = j.split(' ')[1].strip()
+    timestamp_map.update({tmp_cable_id: tmp_ts})
+
 cable_ids = sorted(cable_ids)
 ref = sorted(ref)
 
 place = []
 color = []
+timestamp = []
 for c in cable_ids:
     m = re.search(p,c)
     if m is not None:
         place.append(m.group(0))
     else:
-        place.append(None)
+        place.append('')
     if c in missing:
         color.append('red')
     else:
-        color.append(None)
-
-print len(cable_ids)
-print len(ref)
+        color.append('black')
+    if timestamp_map.has_key(c):
+        timestamp.append(timestamp_map[c])
+    else:
+        timestamp.append('')
 
 if path.exists('calccache'):
     print 'Loading calc cache...'
@@ -63,6 +71,29 @@ else:
     print "Saving calc cache..."
     pickle.dump( (edges, weight), open('calccache','w'))
 
+# cal time duration between two verticies
+id_cable_map = dict( [ (i,v) for i,v in enumerate(cable_ids) ] )
+duration = []
+for a,b in edges:
+    acid = id_cable_map[a]
+    bcid = id_cable_map[b]
+    if acid not in missing:
+        ts_a = int(timestamp_map[acid])
+    else:
+        ts_a = None
+
+    if bcid not in missing:
+        ts_b = int(timestamp_map[bcid])
+    else:
+        ts_b = None
+
+    if ts_a is None or ts_b is None:
+        dur = 0
+    elif ts_a > ts_b:
+        dur = ts_a - ts_b
+    elif ts_b > ts_a:
+        dur = ts_b - ts_a
+    duration.append(str(dur))
 
 print "graph"
 if path.exists('graphcache'):
@@ -72,9 +103,11 @@ else:
     # load numeric edges into graph
     g = igraph.Graph(edges)
     g.es['weight'] = weight
+    g.es['duration'] = duration
     g.vs['label'] = cable_ids
     g.vs['place'] = place
     g.vs['color'] = color
+    g.vs['timestamp'] = timestamp
     g.vs['degree'] = g.degree()
     g.vs['constraint'] = g.constraint(weights='weight')
     print 'Saving graph cache.'
@@ -88,11 +121,11 @@ exit()
 # exit()
 
 # filter by embassy
-de = ['BERLIN']
-sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-print sg.summary()
-sg.write_gml('de.gml')
-exit()
+#de = ['BERLIN']
+#sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
+#print sg.summary()
+#sg.write_gml('de.gml')
+#exit()
 
 # make clusters
 
@@ -104,7 +137,7 @@ filterd_clusters = filter(
         lambda c: c[1] > 10 and c[1] < 500, 
         enumerate(cluster_sizes))
 
-print "matched %s clusters" % filterd_clusters
+print "matched %s clusters" % len(filterd_clusters)
 for cluster_index, cluster_size in filterd_clusters:
     # create the subgraph from the cluster index
     sg = g.clusters().subgraph(cluster_index)
