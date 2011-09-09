@@ -1,0 +1,959 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="880" height="880" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(440.0000,440.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-86.0561" y2="-366.8784" />
+    
+        <line x1="146.0384" y1="127.7510" 
+              x2="222.9274" y2="127.8871" />
+    
+        <line x1="146.0384" y1="127.7510" 
+              x2="261.6303" y2="27.5897" />
+    
+        <line x1="146.0384" y1="127.7510" 
+              x2="99.9915" y2="31.3809" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-278.1892" y2="-326.3440" />
+    
+        <line x1="-151.5368" y1="351.4627" 
+              x2="-121.8751" y2="258.8578" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-149.1984" y2="-392.7197" />
+    
+        <line x1="339.0593" y1="-182.9021" 
+              x2="332.5848" y2="-259.0130" />
+    
+        <line x1="212.3912" y1="-382.0785" 
+              x2="270.9394" y2="-338.8044" />
+    
+        <line x1="269.1878" y1="21.0410" 
+              x2="332.5753" y2="-75.6042" />
+    
+        <line x1="-249.4888" y1="223.0174" 
+              x2="-128.6279" y2="247.3600" />
+    
+        <line x1="26.4191" y1="210.1113" 
+              x2="-109.1706" y2="246.7273" />
+    
+        <line x1="-9.6661" y1="-176.1566" 
+              x2="-32.0675" y2="-272.9571" />
+    
+        <line x1="14.6946" y1="-52.8441" 
+              x2="88.3523" y2="15.5534" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-44.3169" y2="-282.3767" />
+    
+        <line x1="331.7372" y1="-268.9770" 
+              x2="285.3488" y2="-325.1499" />
+    
+        <line x1="411.9309" y1="196.9306" 
+              x2="349.6959" y2="247.6469" />
+    
+        <line x1="14.6946" y1="-52.8441" 
+              x2="-7.7280" y2="-166.3462" />
+    
+        <line x1="-386.8131" y1="-70.2595" 
+              x2="-425.2042" y2="-0.0139" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-219.8161" y2="-183.9382" />
+    
+        <line x1="-108.8937" y1="-182.5676" 
+              x2="-19.6453" y2="-176.8013" />
+    
+        <line x1="123.5554" y1="265.2467" 
+              x2="64.2451" y2="342.1654" />
+    
+        <line x1="368.2612" y1="33.0038" 
+              x2="279.1156" y2="22.2398" />
+    
+        <line x1="339.0593" y1="-182.9021" 
+              x2="338.1608" y2="-93.9656" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-293.5498" y2="-256.5617" />
+    
+        <line x1="117.7430" y1="374.0927" 
+              x2="67.4146" y2="353.8208" />
+    
+        <line x1="-167.6636" y1="57.9584" 
+              x2="-87.9207" y2="20.8519" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-219.1686" y2="-374.7719" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-302.2110" y2="-166.0594" />
+    
+        <line x1="-338.3437" y1="257.7218" 
+              x2="-258.8036" y2="226.6555" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-114.9985" y2="-190.4880" />
+    
+        <line x1="26.4191" y1="210.1113" 
+              x2="114.8587" y2="260.3104" />
+    
+        <line x1="146.0384" y1="127.7510" 
+              x2="125.1691" y2="255.3778" />
+    
+        <line x1="212.3912" y1="-382.0785" 
+              x2="158.1925" y2="-423.8917" />
+    
+        <line x1="341.9440" y1="253.9641" 
+              x2="252.0703" y2="290.6808" />
+    
+        <line x1="14.6946" y1="-52.8441" 
+              x2="-70.8261" y2="10.6707" />
+    
+        <line x1="-9.6661" y1="-176.1566" 
+              x2="-74.4693" y2="-229.8005" />
+    
+        <line x1="-182.3850" y1="-277.9166" 
+              x2="-91.4038" y2="-240.0220" />
+    
+        <line x1="123.5554" y1="265.2467" 
+              x2="118.2762" y2="364.1069" />
+    
+        <line x1="146.0384" y1="127.7510" 
+              x2="34.6556" y2="204.4403" />
+    
+        <line x1="262.5585" y1="380.4508" 
+              x2="245.0511" y2="304.2091" />
+    
+        <line x1="-151.5368" y1="351.4627" 
+              x2="-223.6015" y2="379.7071" />
+    
+        <line x1="430.0000" y1="-97.9511" 
+              x2="347.9460" y2="-85.4699" />
+    
+        <line x1="-309.5209" y1="-159.2356" 
+              x2="-380.2551" y2="-77.8089" />
+    
+        <line x1="123.5554" y1="265.2467" 
+              x2="233.1003" y2="292.0833" />
+    
+        <line x1="-108.8937" y1="-182.5676" 
+              x2="-86.6335" y2="-227.2273" />
+    
+        <line x1="-151.5368" y1="351.4627" 
+              x2="-113.1556" y2="421.2381" />
+    
+        <line x1="-249.4888" y1="223.0174" 
+              x2="-321.0240" y2="168.0207" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(368.2612 33.0038)" 
+            class="red degree1" id="06BELMOPAN495">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06BELMOPAN495</text>
+            
+        </g>
+        
+        <g transform="translate(-182.3850 -277.9166)" 
+            class="black degree10" id="07BELMOPAN287">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-04-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BELMOPAN287.html">07BELMOPAN287</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-309.5209 -159.2356)" 
+            class="black degree2" id="07BELMOPAN330">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BELMOPAN330.html">07BELMOPAN330</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-386.8131 -70.2595)" 
+            class="black degree2" id="07BELMOPAN342">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BELMOPAN342.html">07BELMOPAN342</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-430.0000 8.7611)" 
+            class="black degree1" id="07BELMOPAN358">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BELMOPAN358.html">07BELMOPAN358</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-287.1138 -330.8552)" 
+            class="black degree1" id="07BELMOPAN614">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-10-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07BELMOPAN614.html">07BELMOPAN614</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-78.7097 -373.6630)" 
+            class="black degree1" id="08BELMOPAN100">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN100.html">08BELMOPAN100</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-223.5164 -174.6479)" 
+            class="black degree1" id="08BELMOPAN102">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN102.html">08BELMOPAN102</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-303.3702 -254.6752)" 
+            class="black degree1" id="08BELMOPAN103">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN103.html">08BELMOPAN103</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-167.6636 57.9584)" 
+            class="red degree1" id="08BELMOPAN105">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08BELMOPAN105</text>
+            
+        </g>
+        
+        <g transform="translate(-108.8937 -182.5676)" 
+            class="black degree3" id="08BELMOPAN108">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN108.html">08BELMOPAN108</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(14.6946 -52.8441)" 
+            class="black degree3" id="08BELMOPAN109">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN109.html">08BELMOPAN109</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-78.8542 16.6330)" 
+            class="black degree2" id="08BELMOPAN120">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN120.html">08BELMOPAN120</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(146.0384 127.7510)" 
+            class="black degree5" id="08BELMOPAN130">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN130.html">08BELMOPAN130</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(95.6802 22.3580)" 
+            class="black degree2" id="08BELMOPAN131">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN131.html">08BELMOPAN131</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-9.6661 -176.1566)" 
+            class="black degree4" id="08BELMOPAN153">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN153.html">08BELMOPAN153</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-338.3437 257.7218)" 
+            class="black degree1" id="08BELMOPAN163">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN163.html">08BELMOPAN163</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-249.4888 223.0174)" 
+            class="black degree3" id="08BELMOPAN172">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN172.html">08BELMOPAN172</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-151.5368 351.4627)" 
+            class="black degree3" id="08BELMOPAN187">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN187.html">08BELMOPAN187</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-232.9120 383.3561)" 
+            class="black degree1" id="08BELMOPAN188">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BELMOPAN188.html">08BELMOPAN188</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(269.1878 21.0410)" 
+            class="black degree3" id="08BELMOPAN29">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BELMOPAN29.html">08BELMOPAN29</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(26.4191 210.1113)" 
+            class="black degree3" id="08BELMOPAN503">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BELMOPAN503.html">08BELMOPAN503</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-118.8247 249.3344)" 
+            class="black degree3" id="08BELMOPAN506">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BELMOPAN506.html">08BELMOPAN506</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(430.0000 -97.9511)" 
+            class="black degree1" id="08BELMOPAN55">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BELMOPAN55.html">08BELMOPAN55</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(339.0593 -182.9021)" 
+            class="black degree2" id="08BELMOPAN57">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN57.html">08BELMOPAN57</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(331.7372 -268.9770)" 
+            class="black degree2" id="08BELMOPAN63">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN63.html">08BELMOPAN63</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(212.3912 -382.0785)" 
+            class="black degree2" id="08BELMOPAN64">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN64.html">08BELMOPAN64</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(278.9812 -332.8605)" 
+            class="black degree2" id="08BELMOPAN65">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN65.html">08BELMOPAN65</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-328.9519 161.9257)" 
+            class="red degree1" id="08BELMOPAN68">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08BELMOPAN68</text>
+            
+        </g>
+        
+        <g transform="translate(-34.3221 -282.6996)" 
+            class="black degree2" id="08BELMOPAN74">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN74.html">08BELMOPAN74</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(338.0597 -83.9661)" 
+            class="black degree3" id="08BELMOPAN8">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BELMOPAN8.html">08BELMOPAN8</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-82.1725 -236.1771)" 
+            class="black degree3" id="08BELMOPAN93">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN93.html">08BELMOPAN93</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-146.4213 -402.3264)" 
+            class="black degree1" id="08BELMOPAN97">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN97.html">08BELMOPAN97</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-222.7190 -384.1204)" 
+            class="black degree1" id="08BELMOPAN99">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BELMOPAN99.html">08BELMOPAN99</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-108.3359 430.0000)" 
+            class="red degree1" id="08Belmopan172">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08Belmopan172</text>
+            
+        </g>
+        
+        <g transform="translate(150.2749 -430.0000)" 
+            class="red degree1" id="08Belmopan55">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08Belmopan55</text>
+            
+        </g>
+        
+        <g transform="translate(262.5585 380.4508)" 
+            class="red degree1" id="09BELMOPAN130">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09BELMOPAN130</text>
+            
+        </g>
+        
+        <g transform="translate(123.5554 265.2467)" 
+            class="black degree5" id="09BELMOPAN238">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-06-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09BELMOPAN238.html">09BELMOPAN238</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(411.9309 196.9306)" 
+            class="black degree1" id="09BELMOPAN25">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-01-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BELMOPAN25.html">09BELMOPAN25</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(232.9274 127.9048)" 
+            class="black degree1" id="09BELMOPAN407">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BELMOPAN407.html">09BELMOPAN407</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(117.7430 374.0927)" 
+            class="black degree2" id="09BELMOPAN411">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BELMOPAN411.html">09BELMOPAN411</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(341.9440 253.9641)" 
+            class="red degree2" id="09BELMOPAN503">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09BELMOPAN503</text>
+            
+        </g>
+        
+        <g transform="translate(242.8131 294.4628)" 
+            class="black degree3" id="09BELMOPAN57">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-02-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09BELMOPAN57.html">09BELMOPAN57</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(58.1388 350.0846)" 
+            class="red degree2" id="09BELMOPAN96">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09BELMOPAN96</text>
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

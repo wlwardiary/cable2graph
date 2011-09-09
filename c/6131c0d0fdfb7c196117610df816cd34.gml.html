@@ -1,0 +1,618 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-195.6624" y2="-65.8298" />
+    
+        <line x1="-112.6716" y1="290.0000" 
+              x2="-147.5890" y2="170.0660" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="233.4179" y2="-48.3749" />
+    
+        <line x1="-156.6025" y1="-111.0676" 
+              x2="-198.2861" y2="-70.9056" />
+    
+        <line x1="-171.2410" y1="-157.7125" 
+              x2="-159.5968" y2="-120.6088" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-121.8858" y2="-146.3994" />
+    
+        <line x1="-171.2410" y1="-157.7125" 
+              x2="-202.0561" y2="-73.3601" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-166.5111" y2="-29.1092" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-146.6041" y2="-111.2453" />
+    
+        <line x1="-156.6025" y1="-111.0676" 
+              x2="-174.1476" y2="-38.9226" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-161.5158" y2="-155.3841" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-196.2319" y2="-60.1808" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-195.7444" y2="-66.2196" />
+    
+        <line x1="-205.4874" y1="-63.9672" 
+              x2="-182.9136" y2="-36.8870" />
+    
+        <line x1="243.0080" y1="-45.5414" 
+              x2="322.0941" y2="65.1704" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-110.7988" y2="-34.1333" />
+    
+        <line x1="-150.3843" y1="160.4646" 
+              x2="-266.9339" y2="108.5986" />
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-163.4359" y2="-151.4610" />
+    
+        <line x1="-176.5106" y1="-29.2058" 
+              x2="-380.0846" y2="-2.5516" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-148.7555" y2="150.5982" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-166.4947" y2="-112.5325" />
+    
+        <line x1="199.5633" y1="-134.1036" 
+              x2="21.0850" y2="-115.1061" />
+    
+        <line x1="80.5863" y1="51.2646" 
+              x2="-38.0426" y2="109.4471" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-180.6438" y2="-154.3085" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="76.7133" y2="42.0450" />
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-147.0936" y2="-107.9724" />
+    
+        <line x1="-111.9940" y1="-147.8665" 
+              x2="-148.8885" y2="-117.4311" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="23.8824" y2="-280.0293" />
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-107.7029" y2="-138.8340" />
+    
+        <line x1="-176.5106" y1="-29.2058" 
+              x2="-53.7316" y2="106.4367" />
+    
+        <line x1="199.5633" y1="-134.1036" 
+              x2="238.6039" y2="-54.5194" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-167.3987" y2="-33.3255" />
+    
+        <line x1="-205.4874" y1="-63.9672" 
+              x2="-272.2065" y2="95.3094" />
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-113.9212" y2="-37.1683" />
+    
+        <line x1="-47.0209" y1="113.8506" 
+              x2="-141.2684" y2="156.3536" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-167.4990" y2="-148.4390" />
+    
+        <line x1="-171.2410" y1="-157.7125" 
+              x2="-176.1009" y2="-39.1974" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="-102.3511" y2="-145.2181" />
+    
+        <line x1="-111.9940" y1="-147.8665" 
+              x2="-171.7339" y2="-37.9912" />
+    
+        <line x1="11.1411" y1="-114.0477" 
+              x2="134.9357" y2="-238.2134" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-127.3548" y2="-34.3869" />
+    
+        <line x1="243.0080" y1="-45.5414" 
+              x2="380.0264" y2="-55.5094" />
+    
+        <line x1="-111.9940" y1="-147.8665" 
+              x2="-198.0448" y2="-70.6461" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-211.9704" y2="-71.5811" />
+    
+        <line x1="-258.4323" y1="-126.1474" 
+              x2="-182.9652" y2="-36.8437" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-112.5942" y2="-137.8846" />
+    
+        <line x1="-83.1538" y1="-87.1595" 
+              x2="-168.0145" y2="-34.4799" />
+    
+        <line x1="-171.2410" y1="-157.7125" 
+              x2="-121.8587" y2="-149.5059" />
+    
+        <line x1="-119.1627" y1="-28.6520" 
+              x2="-152.4665" y2="-101.9631" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(199.5633 -134.1036)" 
+            class="black degree2" id="06EFTOISLAMABAD17875">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06EFTOISLAMABAD17875.html">06EFTOISLAMABAD17875</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-83.1538 -87.1595)" 
+            class="black degree6" id="06ISLAMABAD14349">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-07-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ISLAMABAD14349.html">06ISLAMABAD14349</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-258.4323 -126.1474)" 
+            class="black degree6" id="06ISLAMABAD16269">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD16269.html">06ISLAMABAD16269</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(11.1411 -114.0477)" 
+            class="black degree11" id="06ISLAMABAD16944">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-28
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD16944.html">06ISLAMABAD16944</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-119.1627 -28.6520)" 
+            class="black degree9" id="06ISLAMABAD16962">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD16962.html">06ISLAMABAD16962</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-171.2410 -157.7125)" 
+            class="black degree8" id="06ISLAMABAD16987">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD16987.html">06ISLAMABAD16987</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-111.9940 -147.8665)" 
+            class="black degree8" id="06ISLAMABAD16994">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD16994.html">06ISLAMABAD16994</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(243.0080 -45.5414)" 
+            class="black degree4" id="06ISLAMABAD17014">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD17014.html">06ISLAMABAD17014</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(24.6477 -290.0000)" 
+            class="black degree1" id="06ISLAMABAD17255">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD17255.html">06ISLAMABAD17255</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -56.2350)" 
+            class="black degree1" id="06ISLAMABAD17256">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD17256.html">06ISLAMABAD17256</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(327.9068 73.3075)" 
+            class="black degree1" id="06ISLAMABAD17257">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ISLAMABAD17257.html">06ISLAMABAD17257</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-156.6025 -111.0676)" 
+            class="black degree8" id="06ISLAMABAD17546">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ISLAMABAD17546.html">06ISLAMABAD17546</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-205.4874 -63.9672)" 
+            class="black degree9" id="06ISLAMABAD17547">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ISLAMABAD17547.html">06ISLAMABAD17547</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-176.5106 -29.2058)" 
+            class="black degree10" id="06ISLAMABAD17548">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ISLAMABAD17548.html">06ISLAMABAD17548</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(80.5863 51.2646)" 
+            class="black degree2" id="06ISLAMABAD17594">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ISLAMABAD17594.html">06ISLAMABAD17594</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-112.6716 290.0000)" 
+            class="red degree1" id="06ISLAMABAD17875">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06ISLAMABAD17875</text>
+            
+        </g>
+        
+        <g transform="translate(-47.0209 113.8506)" 
+            class="black degree3" id="06ISLAMABAD18929">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ISLAMABAD18929.html">06ISLAMABAD18929</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-150.3843 160.4646)" 
+            class="black degree4" id="06ISLAMABAD19193">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-10-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06ISLAMABAD19193.html">06ISLAMABAD19193</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-276.0701 104.5329)" 
+            class="black degree2" id="06ISLAMABAD21904">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ISLAMABAD21904.html">06ISLAMABAD21904</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -1.2534)" 
+            class="black degree1" id="06ISLAMABAD22365">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-12-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ISLAMABAD22365.html">06ISLAMABAD22365</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(141.9962 -245.2950)" 
+            class="black degree1" id="07ISLAMABAD268">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ISLAMABAD268.html">07ISLAMABAD268</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

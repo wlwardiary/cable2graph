@@ -1,0 +1,440 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-44.3022" y1="209.2762" 
+              x2="-103.7973" y2="282.2495" />
+    
+        <line x1="-340.5618" y1="110.4718" 
+              x2="-350.5618" y2="110.4718" />
+    
+        <line x1="243.2675" y1="-118.6452" 
+              x2="233.2675" y2="-118.6452" />
+    
+        <line x1="-139.5546" y1="116.2346" 
+              x2="-247.4053" y2="27.8033" />
+    
+        <line x1="-211.9587" y1="-107.8158" 
+              x2="-81.5351" y2="-158.5575" />
+    
+        <line x1="294.3034" y1="-214.8378" 
+              x2="247.9543" y2="-127.4788" />
+    
+        <line x1="83.4185" y1="-187.2682" 
+              x2="234.0785" y2="-122.5900" />
+    
+        <line x1="390.0000" y1="-99.3693" 
+              x2="253.1823" y2="-117.3427" />
+    
+        <line x1="-211.9587" y1="-107.8158" 
+              x2="-251.9702" y2="11.9778" />
+    
+        <line x1="-390.0000" y1="-17.5191" 
+              x2="-264.7449" y2="18.6859" />
+    
+        <line x1="83.4185" y1="-187.2682" 
+              x2="-62.3430" y2="-163.7745" />
+    
+        <line x1="276.3088" y1="2.1090" 
+              x2="245.9067" y2="-108.9997" />
+    
+        <line x1="-44.3022" y1="209.2762" 
+              x2="74.9401" y2="249.7098" />
+    
+        <line x1="-72.2156" y1="-162.1833" 
+              x2="-82.2156" y2="-162.1833" />
+    
+        <line x1="334.5606" y1="190.7716" 
+              x2="327.9560" y2="110.0825" />
+    
+        <line x1="-284.9062" y1="-199.5030" 
+              x2="-218.1847" y2="-115.6412" />
+    
+        <line x1="276.3088" y1="2.1090" 
+              x2="322.5361" y2="91.2388" />
+    
+        <line x1="-255.1382" y1="21.4628" 
+              x2="-265.1382" y2="21.4628" />
+    
+        <line x1="46.2987" y1="-290.0000" 
+              x2="80.0202" y2="-196.6731" />
+    
+        <line x1="-255.1382" y1="21.4628" 
+              x2="-333.6375" y2="103.2569" />
+    
+        <line x1="-44.3022" y1="209.2762" 
+              x2="-132.4010" y2="123.2222" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(334.5606 190.7716)" 
+            class="black degree1" id="04CARACAS3031">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-09-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04CARACAS3031.html">04CARACAS3031</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(276.3088 2.1090)" 
+            class="black degree2" id="04CARACAS3230">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-10-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04CARACAS3230.html">04CARACAS3230</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(327.1402 100.1159)" 
+            class="black degree2" id="04CARACAS3434">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-11-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04CARACAS3434.html">04CARACAS3434</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -99.3693)" 
+            class="red degree1" id="04CARACAS3874">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04CARACAS3874</text>
+            
+        </g>
+        
+        <g transform="translate(294.3034 -214.8378)" 
+            class="red degree1" id="04CARACAS53">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04CARACAS53</text>
+            
+        </g>
+        
+        <g transform="translate(46.2987 -290.0000)" 
+            class="red degree1" id="05CARACAS3261">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05CARACAS3261</text>
+            
+        </g>
+        
+        <g transform="translate(-284.9062 -199.5030)" 
+            class="red degree1" id="06A:5CARACAS3230">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06A:5CARACAS3230</text>
+            
+        </g>
+        
+        <g transform="translate(83.4185 -187.2682)" 
+            class="black degree3" id="06CARACAS1468">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06CARACAS1468.html">06CARACAS1468</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-44.3022 209.2762)" 
+            class="black degree3" id="06CARACAS2348">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CARACAS2348.html">06CARACAS2348</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-139.5546 116.2346)" 
+            class="black degree2" id="06CARACAS2393">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CARACAS2393.html">06CARACAS2393</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(84.4104 252.9211)" 
+            class="black degree1" id="06CARACAS2449">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-08-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CARACAS2449.html">06CARACAS2449</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-110.1162 290.0000)" 
+            class="black degree1" id="06CARACAS2692">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06CARACAS2692.html">06CARACAS2692</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -17.5191)" 
+            class="red degree1" id="06CARACAS3230">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06CARACAS3230</text>
+            
+        </g>
+        
+        <g transform="translate(-211.9587 -107.8158)" 
+            class="black degree3" id="06CARACAS514">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06CARACAS514.html">06CARACAS514</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-255.1382 21.4628)" 
+            class="black degree6" id="06CARACAS532">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CARACAS532.html">06CARACAS532</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(243.2675 -118.6452)" 
+            class="black degree6" id="06CARACAS78">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06CARACAS78.html">06CARACAS78</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-72.2156 -162.1833)" 
+            class="black degree4" id="06CARACAS839">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CARACAS839.html">06CARACAS839</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-340.5618 110.4718)" 
+            class="black degree3" id="06CARACAS874">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CARACAS874.html">06CARACAS874</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

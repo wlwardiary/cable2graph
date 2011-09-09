@@ -1,0 +1,530 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="390.0000" y1="5.2779" 
+              x2="380.0000" y2="5.2779" />
+    
+        <line x1="280.8595" y1="75.6793" 
+              x2="92.8188" y2="112.3655" />
+    
+        <line x1="71.4700" y1="-5.2841" 
+              x2="82.0437" y2="104.3265" />
+    
+        <line x1="5.8569" y1="68.6304" 
+              x2="74.3977" y2="109.1878" />
+    
+        <line x1="-228.5796" y1="-208.5766" 
+              x2="-380.1292" y2="-183.9728" />
+    
+        <line x1="-96.6416" y1="195.6846" 
+              x2="-114.5510" y2="81.0318" />
+    
+        <line x1="-96.6416" y1="195.6846" 
+              x2="73.8954" y2="118.4077" />
+    
+        <line x1="-228.5796" y1="-208.5766" 
+              x2="-238.5796" y2="-208.5766" />
+    
+        <line x1="-170.9294" y1="-283.8311" 
+              x2="-83.1035" y2="-289.3705" />
+    
+        <line x1="-3.6817" y1="174.0544" 
+              x2="-13.6817" y2="174.0544" />
+    
+        <line x1="192.2782" y1="-112.3192" 
+              x2="78.9549" y2="-11.9156" />
+    
+        <line x1="-128.7209" y1="-187.9931" 
+              x2="-138.7209" y2="-187.9931" />
+    
+        <line x1="-170.9294" y1="-283.8311" 
+              x2="-222.4982" y2="-216.5149" />
+    
+        <line x1="-96.6416" y1="195.6846" 
+              x2="-13.4215" y2="176.3207" />
+    
+        <line x1="83.0039" y1="114.2803" 
+              x2="-106.3210" y2="73.2687" />
+    
+        <line x1="-3.6817" y1="174.0544" 
+              x2="122.3698" y2="219.4132" />
+    
+        <line x1="-73.1233" y1="-290.0000" 
+              x2="-219.7211" y2="-213.2164" />
+    
+        <line x1="5.8569" y1="68.6304" 
+              x2="-2.7806" y2="164.0951" />
+    
+        <line x1="131.7792" y1="222.7991" 
+              x2="121.7792" y2="222.7991" />
+    
+        <line x1="83.0039" y1="114.2803" 
+              x2="127.6796" y2="213.6780" />
+    
+        <line x1="-179.2896" y1="-85.7888" 
+              x2="-119.8296" y2="61.8754" />
+    
+        <line x1="-128.7209" y1="-187.9931" 
+              x2="-218.7855" y2="-206.5577" />
+    
+        <line x1="-179.2896" y1="-85.7888" 
+              x2="-133.1555" y2="-179.0302" />
+    
+        <line x1="-3.6817" y1="174.0544" 
+              x2="-108.7182" y2="77.9038" />
+    
+        <line x1="-96.6416" y1="195.6846" 
+              x2="-191.9347" y2="283.2344" />
+    
+        <line x1="71.4700" y1="-5.2841" 
+              x2="-106.8338" y2="67.3777" />
+    
+        <line x1="-170.9294" y1="-283.8311" 
+              x2="-132.7514" y2="-197.1448" />
+    
+        <line x1="5.8569" y1="68.6304" 
+              x2="-106.0965" y2="70.9449" />
+    
+        <line x1="5.8569" y1="68.6304" 
+              x2="64.8314" y2="2.1944" />
+    
+        <line x1="71.4700" y1="-5.2841" 
+              x2="61.4700" y2="-5.2841" />
+    
+        <line x1="-179.2896" y1="-85.7888" 
+              x2="-224.8543" y2="-199.2964" />
+    
+        <line x1="192.2782" y1="-112.3192" 
+              x2="182.2782" y2="-112.3192" />
+    
+        <line x1="-116.0944" y1="71.1516" 
+              x2="-303.8415" y2="45.9129" />
+    
+        <line x1="280.8595" y1="75.6793" 
+              x2="381.5966" y2="10.6985" />
+    
+        <line x1="-116.0944" y1="71.1516" 
+              x2="-289.1210" y2="133.9022" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(5.8569 68.6304)" 
+            class="black degree4" id="07HANOI1144">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-06-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07HANOI1144.html">07HANOI1144</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-179.2896 -85.7888)" 
+            class="black degree3" id="07HANOI1271">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07HANOI1271.html">07HANOI1271</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-170.9294 -283.8311)" 
+            class="black degree3" id="07HANOI1276">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07HANOI1276.html">07HANOI1276</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(192.2782 -112.3192)" 
+            class="black degree3" id="07HANOI1300">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07HANOI1300.html">07HANOI1300</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-128.7209 -187.9931)" 
+            class="black degree5" id="07HANOI1313">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07HANOI1313.html">07HANOI1313</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(71.4700 -5.2841)" 
+            class="black degree6" id="07HANOI1367">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-08-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07HANOI1367.html">07HANOI1367</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-73.1233 -290.0000)" 
+            class="black degree2" id="07HANOI1462">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-08-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07HANOI1462.html">07HANOI1462</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-228.5796 -208.5766)" 
+            class="black degree7" id="07HANOI1683">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-09-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07HANOI1683.html">07HANOI1683</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-96.6416 195.6846)" 
+            class="black degree4" id="07HANOI1993">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-11-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07HANOI1993.html">07HANOI1993</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(280.8595 75.6793)" 
+            class="red degree2" id="07HANOI636">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07HANOI636</text>
+            
+        </g>
+        
+        <g transform="translate(390.0000 5.2779)" 
+            class="black degree3" id="07HANOI652">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-04-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07HANOI652.html">07HANOI652</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(83.0039 114.2803)" 
+            class="black degree6" id="07HANOI752">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-04-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07HANOI752.html">07HANOI752</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-3.6817 174.0544)" 
+            class="black degree6" id="07HANOI839">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HANOI839.html">07HANOI839</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(131.7792 222.7991)" 
+            class="black degree4" id="07HANOI866">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HANOI866.html">07HANOI866</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-116.0944 71.1516)" 
+            class="black degree8" id="07HANOI872">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HANOI872.html">07HANOI872</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -182.3703)" 
+            class="red degree1" id="07HANOI922">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07HANOI922</text>
+            
+        </g>
+        
+        <g transform="translate(-313.7523 44.5806)" 
+            class="black degree1" id="07HOCHIMINHCITY528">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HOCHIMINHCITY528.html">07HOCHIMINHCITY528</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-298.5219 137.3115)" 
+            class="black degree1" id="07HOCHIMINHCITY542">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-05-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HOCHIMINHCITY542.html">07HOCHIMINHCITY542</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-199.2986 290.0000)" 
+            class="black degree1" id="08HANOI70">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08HANOI70.html">08HANOI70</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

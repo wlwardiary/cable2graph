@@ -1,0 +1,786 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="660" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,330.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="120.9371" y1="-132.3404" 
+              x2="169.8064" y2="-203.7297" />
+    
+        <line x1="390.0000" y1="-10.1172" 
+              x2="380.0000" y2="-10.1172" />
+    
+        <line x1="-83.3777" y1="-139.0195" 
+              x2="-97.8659" y2="-218.9093" />
+    
+        <line x1="92.6862" y1="-320.0000" 
+              x2="170.5589" y2="-288.5006" />
+    
+        <line x1="-204.8995" y1="115.9728" 
+              x2="-277.7552" y2="166.2918" />
+    
+        <line x1="35.2138" y1="306.7349" 
+              x2="25.2138" y2="306.7349" />
+    
+        <line x1="148.8894" y1="55.0993" 
+              x2="273.6426" y2="24.5393" />
+    
+        <line x1="256.2101" y1="188.5147" 
+              x2="301.6682" y2="125.8066" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="141.2063" y2="48.6985" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="114.1267" y2="-125.0179" />
+    
+        <line x1="179.8292" y1="-284.7508" 
+              x2="124.6047" y2="-267.3214" />
+    
+        <line x1="-204.8995" y1="115.9728" 
+              x2="-193.0133" y2="185.6471" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="-75.7143" y2="-132.5951" />
+    
+        <line x1="283.3554" y1="22.1601" 
+              x2="325.8386" y2="-57.5447" />
+    
+        <line x1="-104.2165" y1="36.7090" 
+              x2="-197.0422" y2="109.7871" />
+    
+        <line x1="-336.2126" y1="-129.6983" 
+              x2="-360.0965" y2="-71.1413" />
+    
+        <line x1="-204.8995" y1="115.9728" 
+              x2="-284.4522" y2="93.0659" />
+    
+        <line x1="172.8644" y1="-26.5582" 
+              x2="44.8693" y2="-38.8918" />
+    
+        <line x1="-2.4372" y1="226.1306" 
+              x2="78.2730" y2="238.7548" />
+    
+        <line x1="35.2138" y1="306.7349" 
+              x2="81.9209" y2="248.1208" />
+    
+        <line x1="330.5423" y1="-66.3694" 
+              x2="320.5423" y2="-66.3694" />
+    
+        <line x1="-83.3777" y1="-139.0195" 
+              x2="-178.5051" y2="-171.4951" />
+    
+        <line x1="283.3554" y1="22.1601" 
+              x2="273.3554" y2="22.1601" />
+    
+        <line x1="-336.2126" y1="-129.6983" 
+              x2="-286.3826" y2="-178.2797" />
+    
+        <line x1="283.3554" y1="22.1601" 
+              x2="380.4288" y2="-7.2203" />
+    
+        <line x1="179.8292" y1="-284.7508" 
+              x2="169.8292" y2="-284.7508" />
+    
+        <line x1="256.2101" y1="188.5147" 
+              x2="166.2587" y2="167.4755" />
+    
+        <line x1="-390.0000" y1="1.4354" 
+              x2="-367.6875" y2="-52.6380" />
+    
+        <line x1="172.8644" y1="-26.5582" 
+              x2="274.2054" y2="18.1256" />
+    
+        <line x1="175.4551" y1="-211.9815" 
+              x2="179.2292" y2="-274.7688" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="9.2292" y2="-97.8201" />
+    
+        <line x1="364.9510" y1="76.7388" 
+              x2="291.6674" y2="27.7199" />
+    
+        <line x1="92.6862" y1="-320.0000" 
+              x2="111.3391" y2="-273.5903" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="-0.0408" y2="18.0761" />
+    
+        <line x1="-187.9689" y1="-174.7259" 
+              x2="-269.2884" y2="-184.1137" />
+    
+        <line x1="283.3554" y1="22.1601" 
+              x2="305.0840" y2="108.0158" />
+    
+        <line x1="364.9510" y1="76.7388" 
+              x2="315.6774" y2="111.9014" />
+    
+        <line x1="35.2138" y1="306.7349" 
+              x2="-46.6986" y2="318.5700" />
+    
+        <line x1="156.5215" y1="165.1980" 
+              x2="94.8846" y2="232.9053" />
+    
+        <line x1="115.0683" y1="-264.3116" 
+              x2="105.0683" y2="-264.3116" />
+    
+        <line x1="148.8894" y1="55.0993" 
+              x2="155.8300" y2="155.2220" />
+    
+        <line x1="175.4551" y1="-211.9815" 
+              x2="122.6255" y2="-257.7627" />
+    
+        <line x1="34.9154" y1="-39.8509" 
+              x2="-95.4553" y2="31.8880" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(172.8644 -26.5582)" 
+            class="black degree2" id="06KATHMANDU3013">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3013.html">06KATHMANDU3013</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(34.9154 -39.8509)" 
+            class="black degree7" id="06KATHMANDU3014">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3014.html">06KATHMANDU3014</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-83.3777 -139.0195)" 
+            class="black degree3" id="06KATHMANDU3023">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3023.html">06KATHMANDU3023</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(120.9371 -132.3404)" 
+            class="black degree2" id="06KATHMANDU3024">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3024.html">06KATHMANDU3024</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(5.1780 -106.9628)" 
+            class="black degree1" id="06KATHMANDU3033">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3033.html">06KATHMANDU3033</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-99.6503 -228.7488)" 
+            class="black degree1" id="06KATHMANDU3034">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3034.html">06KATHMANDU3034</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-336.2126 -129.6983)" 
+            class="black degree2" id="06KATHMANDU3049">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3049.html">06KATHMANDU3049</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 1.4354)" 
+            class="black degree1" id="06KATHMANDU3060">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3060.html">06KATHMANDU3060</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-104.2165 36.7090)" 
+            class="black degree2" id="06KATHMANDU3063">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3063.html">06KATHMANDU3063</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-204.8995 115.9728)" 
+            class="black degree4" id="06KATHMANDU3091">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3091.html">06KATHMANDU3091</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-285.9834 171.9747)" 
+            class="black degree1" id="06KATHMANDU3093">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3093.html">06KATHMANDU3093</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-294.0617 90.2989)" 
+            class="black degree1" id="06KATHMANDU3104">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3104.html">06KATHMANDU3104</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-5.2075 26.6380)" 
+            class="black degree1" id="06KATHMANDU3115">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3115.html">06KATHMANDU3115</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-191.3317 195.5047)" 
+            class="black degree1" id="06KATHMANDU3136">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KATHMANDU3136.html">06KATHMANDU3136</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(148.8894 55.0993)" 
+            class="black degree3" id="06KATHMANDU3256">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-12-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KATHMANDU3256.html">06KATHMANDU3256</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(175.4551 -211.9815)" 
+            class="black degree3" id="06NEWDELHI7762">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06NEWDELHI7762.html">06NEWDELHI7762</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(92.6862 -320.0000)" 
+            class="red degree2" id="06NEWDELHI7796">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06NEWDELHI7796</text>
+            
+        </g>
+        
+        <g transform="translate(179.8292 -284.7508)" 
+            class="black degree5" id="06NEWDELHI8003">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-28
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06NEWDELHI8003.html">06NEWDELHI8003</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(115.0683 -264.3116)" 
+            class="black degree5" id="06NEWDELHI8042">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06NEWDELHI8042.html">06NEWDELHI8042</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-363.8732 -61.8819)" 
+            class="red degree2" id="06USUN2155">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06USUN2155</text>
+            
+        </g>
+        
+        <g transform="translate(-187.9689 -174.7259)" 
+            class="black degree2" id="06USUNNEWYORK2155">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2155.html">06USUNNEWYORK2155</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-279.2224 -185.2605)" 
+            class="black degree2" id="06USUNNEWYORK2165">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2165.html">06USUNNEWYORK2165</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(256.2101 188.5147)" 
+            class="black degree2" id="07KATHMANDU122">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU122.html">07KATHMANDU122</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(35.2138 306.7349)" 
+            class="black degree4" id="07KATHMANDU158">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU158.html">07KATHMANDU158</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-2.4372 226.1306)" 
+            class="black degree1" id="07KATHMANDU210">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU210.html">07KATHMANDU210</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(364.9510 76.7388)" 
+            class="red degree2" id="07KATHMANDU22">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07KATHMANDU22</text>
+            
+        </g>
+        
+        <g transform="translate(-56.5958 320.0000)" 
+            class="red degree1" id="07KATHMANDU2374">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07KATHMANDU2374</text>
+            
+        </g>
+        
+        <g transform="translate(283.3554 22.1601)" 
+            class="black degree8" id="07KATHMANDU42">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU42.html">07KATHMANDU42</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -10.1172)" 
+            class="black degree3" id="07KATHMANDU60">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU60.html">07KATHMANDU60</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(330.5423 -66.3694)" 
+            class="black degree3" id="07KATHMANDU61">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU61.html">07KATHMANDU61</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(307.5375 117.7102)" 
+            class="black degree3" id="07KATHMANDU79">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU79.html">07KATHMANDU79</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(156.5215 165.1980)" 
+            class="black degree3" id="07KATHMANDU88">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU88.html">07KATHMANDU88</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(88.1528 240.3001)" 
+            class="black degree3" id="07KATHMANDU92">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-01-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KATHMANDU92.html">07KATHMANDU92</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

@@ -1,0 +1,924 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="960" height="960" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(480.0000,480.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="187.7434" y1="-371.5598" 
+              x2="81.8513" y2="-296.7564" />
+    
+        <line x1="0.9945" y1="327.9555" 
+              x2="134.2466" y2="167.7109" />
+    
+        <line x1="454.9050" y1="149.3141" 
+              x2="341.5316" y2="185.4306" />
+    
+        <line x1="0.4766" y1="-227.3582" 
+              x2="66.1361" y2="-284.4267" />
+    
+        <line x1="251.2872" y1="107.7504" 
+              x2="344.6436" y2="97.8061" />
+    
+        <line x1="274.1094" y1="253.9116" 
+              x2="260.6353" y2="381.3848" />
+    
+        <line x1="18.3768" y1="202.0141" 
+              x2="131.1826" y2="163.2702" />
+    
+        <line x1="-108.9076" y1="-284.8549" 
+              x2="-195.6036" y2="-345.5684" />
+    
+        <line x1="221.1236" y1="4.7582" 
+              x2="145.2425" y2="151.1438" />
+    
+        <line x1="-108.9076" y1="-284.8549" 
+              x2="63.6893" y2="-290.6511" />
+    
+        <line x1="-276.4300" y1="106.4828" 
+              x2="-356.0527" y2="53.9296" />
+    
+        <line x1="120.3923" y1="339.4127" 
+              x2="106.0610" y2="460.0698" />
+    
+        <line x1="159.4874" y1="-240.7622" 
+              x2="82.3139" y2="-285.9351" />
+    
+        <line x1="-102.7750" y1="397.8668" 
+              x2="-7.2990" y2="333.5429" />
+    
+        <line x1="-225.2915" y1="-218.4856" 
+              x2="-313.8628" y2="-135.4352" />
+    
+        <line x1="-470.0000" y1="71.4079" 
+              x2="-374.1699" y2="50.5480" />
+    
+        <line x1="-37.5422" y1="458.7705" 
+              x2="-1.8314" y2="337.5479" />
+    
+        <line x1="342.3135" y1="359.1170" 
+              x2="279.5492" y2="262.3026" />
+    
+        <line x1="251.2872" y1="107.7504" 
+              x2="149.6822" y2="155.7504" />
+    
+        <line x1="10.1777" y1="112.5264" 
+              x2="131.2437" y2="156.6010" />
+    
+        <line x1="221.8530" y1="-302.6222" 
+              x2="83.6530" y2="-291.7696" />
+    
+        <line x1="99.4272" y1="-73.9333" 
+              x2="74.8615" y2="-281.0563" />
+    
+        <line x1="121.6340" y1="266.5938" 
+              x2="138.8846" y2="169.8666" />
+    
+        <line x1="126.1263" y1="-419.4174" 
+              x2="77.4640" y2="-300.2446" />
+    
+        <line x1="295.3089" y1="-100.6565" 
+              x2="226.8788" y2="-3.4197" />
+    
+        <line x1="-32.7683" y1="-395.6831" 
+              x2="-98.9392" y2="-462.8750" />
+    
+        <line x1="-468.7461" y1="-23.0571" 
+              x2="-372.6488" y2="42.7697" />
+    
+        <line x1="99.4272" y1="-73.9333" 
+              x2="138.9055" y2="150.1736" />
+    
+        <line x1="-257.7938" y1="325.0678" 
+              x2="-314.3079" y2="236.7678" />
+    
+        <line x1="86.4277" y1="61.1518" 
+              x2="135.8325" y2="151.2536" />
+    
+        <line x1="274.1094" y1="253.9116" 
+              x2="148.8194" y2="165.7755" />
+    
+        <line x1="51.5978" y1="-400.0359" 
+              x2="71.6987" y2="-300.7877" />
+    
+        <line x1="-339.7102" y1="350.4924" 
+              x2="-321.3154" y2="238.2137" />
+    
+        <line x1="-268.4783" y1="-0.6775" 
+              x2="-355.4971" y2="43.8646" />
+    
+        <line x1="-108.9076" y1="-284.8549" 
+              x2="-216.6047" y2="-223.4394" />
+    
+        <line x1="438.4680" y1="-23.1215" 
+              x2="467.0476" y2="-115.6073" />
+    
+        <line x1="-374.3608" y1="-229.3230" 
+              x2="-325.8280" y2="-137.4375" />
+    
+        <line x1="332.0034" y1="188.4659" 
+              x2="150.5317" y2="161.4922" />
+    
+        <line x1="-32.7683" y1="-395.6831" 
+              x2="66.5541" y2="-297.9987" />
+    
+        <line x1="-394.3972" y1="-57.6306" 
+              x2="-367.1206" y2="38.7986" />
+    
+        <line x1="274.1094" y1="253.9116" 
+              x2="350.0296" y2="105.6478" />
+    
+        <line x1="121.6340" y1="266.5938" 
+              x2="120.5628" y2="329.4142" />
+    
+        <line x1="-321.1575" y1="-128.5951" 
+              x2="-362.0257" y2="38.7067" />
+    
+        <line x1="120.3923" y1="339.4127" 
+              x2="139.5188" y2="169.9588" />
+    
+        <line x1="-319.6986" y1="228.3452" 
+              x2="-361.9876" y2="58.1260" />
+    
+        <line x1="438.4680" y1="-23.1215" 
+              x2="360.3208" y2="88.5537" />
+    
+        <line x1="-423.1219" y1="165.2035" 
+              x2="-368.8912" y2="57.3551" />
+    
+        <line x1="431.0147" y1="253.6015" 
+              x2="340.3577" y2="193.9619" />
+    
+        <line x1="-423.1219" y1="165.2035" 
+              x2="-454.6185" y2="250.2660" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(342.3135 359.1170)" 
+            class="red degree1" id="87ATHENS4694">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87ATHENS4694</text>
+            
+        </g>
+        
+        <g transform="translate(-102.7750 397.8668)" 
+            class="red degree1" id="87LIMA5659">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87LIMA5659</text>
+            
+        </g>
+        
+        <g transform="translate(-37.5422 458.7705)" 
+            class="red degree1" id="87LIMA6577">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87LIMA6577</text>
+            
+        </g>
+        
+        <g transform="translate(295.3089 -100.6565)" 
+            class="red degree1" id="87MANAGUA1949">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87MANAGUA1949</text>
+            
+        </g>
+        
+        <g transform="translate(454.9050 149.3141)" 
+            class="red degree1" id="87STATE311198">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87STATE311198</text>
+            
+        </g>
+        
+        <g transform="translate(431.0147 253.6015)" 
+            class="red degree1" id="87STATE371296">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">87STATE371296</text>
+            
+        </g>
+        
+        <g transform="translate(0.4766 -227.3582)" 
+            class="black degree1" id="88ACCRA8991">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-11-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/11/88ACCRA8991.html">88ACCRA8991</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(438.4680 -23.1215)" 
+            class="black degree2" id="88ADDISABABA1180">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88ADDISABABA1180.html">88ADDISABABA1180</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(121.6340 266.5938)" 
+            class="black degree2" id="88ALGIERS1474">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88ALGIERS1474.html">88ALGIERS1474</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(120.3923 339.4127)" 
+            class="black degree3" id="88ALGIERS1498">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88ALGIERS1498.html">88ALGIERS1498</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(104.8815 470.0000)" 
+            class="red degree1" id="88ALGIERS2184">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88ALGIERS2184</text>
+            
+        </g>
+        
+        <g transform="translate(51.5978 -400.0359)" 
+            class="black degree1" id="88ATHENS19586">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88ATHENS19586.html">88ATHENS19586</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(274.1094 253.9116)" 
+            class="black degree4" id="88ATHENS4106">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88ATHENS4106.html">88ATHENS4106</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(251.2872 107.7504)" 
+            class="black degree2" id="88BEIJING6641">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88BEIJING6641.html">88BEIJING6641</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-108.9076 -284.8549)" 
+            class="black degree3" id="88BOGOTA18301">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88BOGOTA18301.html">88BOGOTA18301</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-225.2915 -218.4856)" 
+            class="black degree2" id="88BOGOTA19003">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-23
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88BOGOTA19003.html">88BOGOTA19003</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-203.7947 -351.3047)" 
+            class="red degree1" id="88BOGOTA5976">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88BOGOTA5976</text>
+            
+        </g>
+        
+        <g transform="translate(187.7434 -371.5598)" 
+            class="black degree1" id="88COLOMBO8559">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88COLOMBO8559.html">88COLOMBO8559</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(18.3768 202.0141)" 
+            class="black degree1" id="88DHAKA2166">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88DHAKA2166.html">88DHAKA2166</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-32.7683 -395.6831)" 
+            class="black degree2" id="88HARARE5924">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-11-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/11/88HARARE5924.html">88HARARE5924</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(99.4272 -73.9333)" 
+            class="black degree2" id="88HAVANA6766">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88HAVANA6766.html">88HAVANA6766</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(0.9945 327.9555)" 
+            class="black degree3" id="88LIMA4116">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88LIMA4116.html">88LIMA4116</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(159.4874 -240.7622)" 
+            class="black degree1" id="88LONDON26262">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88LONDON26262.html">88LONDON26262</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(221.8530 -302.6222)" 
+            class="black degree1" id="88MADRID15938">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88MADRID15938.html">88MADRID15938</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(221.1236 4.7582)" 
+            class="black degree2" id="88MANAGUA2342">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-04-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/04/88MANAGUA2342.html">88MANAGUA2342</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(10.1777 112.5264)" 
+            class="black degree1" id="88NDJAMENA1239">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88NDJAMENA1239.html">88NDJAMENA1239</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(126.1263 -419.4174)" 
+            class="black degree1" id="88RIYADH12430">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-12-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/12/88RIYADH12430.html">88RIYADH12430</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(86.4277 61.1518)" 
+            class="black degree1" id="88SEOUL3039">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88SEOUL3039.html">88SEOUL3039</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(332.0034 188.4659)" 
+            class="black degree3" id="88SEOUL3040">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1988-03-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1988/03/88SEOUL3040.html">88SEOUL3040</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-105.9559 -470.0000)" 
+            class="red degree1" id="88STATE279799">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE279799</text>
+            
+        </g>
+        
+        <g transform="translate(73.6837 -290.9867)" 
+            class="red degree9" id="88STATE357278">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE357278</text>
+            
+        </g>
+        
+        <g transform="translate(470.0000 -125.1615)" 
+            class="red degree1" id="88STATE42318">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE42318</text>
+            
+        </g>
+        
+        <g transform="translate(140.6404 160.0219)" 
+            class="red degree11" id="88STATE42378">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE42378</text>
+            
+        </g>
+        
+        <g transform="translate(259.5842 391.3294)" 
+            class="red degree1" id="88STATE54439">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE54439</text>
+            
+        </g>
+        
+        <g transform="translate(354.5874 96.7469)" 
+            class="red degree3" id="88STATE54781">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">88STATE54781</text>
+            
+        </g>
+        
+        <g transform="translate(-470.0000 71.4079)" 
+            class="black degree1" id="89ANKARA17365">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89ANKARA17365.html">89ANKARA17365</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-374.3608 -229.3230)" 
+            class="red degree1" id="89BOGOTA18301">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">89BOGOTA18301</text>
+            
+        </g>
+        
+        <g transform="translate(-321.1575 -128.5951)" 
+            class="black degree3" id="89BOGOTA19513">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89BOGOTA19513.html">89BOGOTA19513</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-268.4783 -0.6775)" 
+            class="black degree1" id="89ISLAMABAD27305">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89ISLAMABAD27305.html">89ISLAMABAD27305</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-276.4300 106.4828)" 
+            class="black degree1" id="89KAMPALA4953">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89KAMPALA4953.html">89KAMPALA4953</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-339.7102 350.4924)" 
+            class="red degree1" id="89KHARTOUM10671">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">89KHARTOUM10671</text>
+            
+        </g>
+        
+        <g transform="translate(-257.7938 325.0678)" 
+            class="red degree1" id="89KHARTOUM11147">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">89KHARTOUM11147</text>
+            
+        </g>
+        
+        <g transform="translate(-319.6986 228.3452)" 
+            class="black degree3" id="89KHARTOUM12543">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-11-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/11/89KHARTOUM12543.html">89KHARTOUM12543</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-423.1219 165.2035)" 
+            class="black degree2" id="89RABAT12531">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89RABAT12531.html">89RABAT12531</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-394.3972 -57.6306)" 
+            class="black degree1" id="89RIYADH9763">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89RIYADH9763.html">89RIYADH9763</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-468.7461 -23.0571)" 
+            class="black degree1" id="89RIYADH9764">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    1989-12-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/1989/12/89RIYADH9764.html">89RIYADH9764</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-458.0909 259.6437)" 
+            class="red degree1" id="89STATE31797">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">89STATE31797</text>
+            
+        </g>
+        
+        <g transform="translate(-364.3987 48.4210)" 
+            class="red degree8" id="89STATE363024">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">89STATE363024</text>
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

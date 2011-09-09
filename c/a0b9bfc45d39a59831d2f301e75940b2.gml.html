@@ -1,0 +1,613 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="98.7328" y1="-203.0904" 
+              x2="217.3981" y2="-139.9904" />
+    
+        <line x1="-179.2233" y1="-229.8460" 
+              x2="-59.4338" y2="-195.7295" />
+    
+        <line x1="-101.3814" y1="-134.2541" 
+              x2="-56.4137" y2="-185.4755" />
+    
+        <line x1="-292.6869" y1="80.9993" 
+              x2="-194.2965" y2="121.4398" />
+    
+        <line x1="98.7328" y1="-203.0904" 
+              x2="108.3324" y2="-280.0768" />
+    
+        <line x1="60.4955" y1="61.6541" 
+              x2="180.2866" y2="105.1349" />
+    
+        <line x1="301.5054" y1="-193.5078" 
+              x2="380.3916" y2="-170.7586" />
+    
+        <line x1="-31.5316" y1="-64.5415" 
+              x2="-48.4070" y2="-183.0902" />
+    
+        <line x1="-330.2915" y1="-19.3257" 
+              x2="-296.1967" y2="71.6355" />
+    
+        <line x1="189.6865" y1="108.5468" 
+              x2="282.2828" y2="145.0020" />
+    
+        <line x1="-292.6869" y1="80.9993" 
+              x2="-380.3166" y2="58.4072" />
+    
+        <line x1="98.7328" y1="-203.0904" 
+              x2="-39.8393" y2="-193.6687" />
+    
+        <line x1="-101.3814" y1="-134.2541" 
+              x2="-38.6096" y2="-71.6056" />
+    
+        <line x1="-31.5316" y1="-64.5415" 
+              x2="54.6034" y2="53.5743" />
+    
+        <line x1="-141.6699" y1="-47.6640" 
+              x2="-41.4162" y2="-63.0268" />
+    
+        <line x1="291.5877" y1="148.6654" 
+              x2="349.4584" y2="190.1134" />
+    
+        <line x1="118.1709" y1="249.9840" 
+              x2="38.3454" y2="182.8822" />
+    
+        <line x1="-34.6006" y1="289.3841" 
+              x2="-103.3495" y2="216.4228" />
+    
+        <line x1="-110.2073" y1="209.1447" 
+              x2="20.9495" y2="178.7081" />
+    
+        <line x1="226.2274" y1="-135.2954" 
+              x2="230.7109" y2="-59.2932" />
+    
+        <line x1="-152.7442" y1="290.0000" 
+              x2="-114.8632" y2="217.9948" />
+    
+        <line x1="226.2274" y1="-135.2954" 
+              x2="323.2295" y2="-72.6058" />
+    
+        <line x1="226.2274" y1="-135.2954" 
+              x2="293.5948" y2="-187.3905" />
+    
+        <line x1="-49.8163" y1="-192.9904" 
+              x2="-77.8951" y2="-276.8258" />
+    
+        <line x1="-110.2073" y1="209.1447" 
+              x2="-178.3907" y2="132.7041" />
+    
+        <line x1="-292.6869" y1="80.9993" 
+              x2="-247.4549" y2="168.3977" />
+    
+        <line x1="-110.2073" y1="209.1447" 
+              x2="-233.1352" y2="179.6145" />
+    
+        <line x1="30.6906" y1="176.4475" 
+              x2="57.9825" y2="71.3332" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(-141.6699 -47.6640)" 
+            class="red degree1" id="07ASMARA894">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07ASMARA894</text>
+            
+        </g>
+        
+        <g transform="translate(-101.3814 -134.2541)" 
+            class="black degree2" id="08ASMARA371">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-07-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ASMARA371.html">08ASMARA371</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-31.5316 -64.5415)" 
+            class="black degree4" id="08ASMARA412">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-08-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08ASMARA412.html">08ASMARA412</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(98.7328 -203.0904)" 
+            class="red degree3" id="08ASMARA417">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08ASMARA417</text>
+            
+        </g>
+        
+        <g transform="translate(109.5697 -290.0000)" 
+            class="black degree1" id="08ASMARA420">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-08-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08ASMARA420.html">08ASMARA420</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(226.2274 -135.2954)" 
+            class="black degree4" id="08ASMARA429">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-08-28
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08ASMARA429.html">08ASMARA429</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(331.6282 -67.1779)" 
+            class="black degree1" id="08ASMARA441">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-09-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08ASMARA441.html">08ASMARA441</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-179.2233 -229.8460)" 
+            class="red degree1" id="08ASMARA444">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08ASMARA444</text>
+            
+        </g>
+        
+        <g transform="translate(-49.8163 -192.9904)" 
+            class="black degree5" id="08ASMARA509">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08ASMARA509.html">08ASMARA509</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-81.0710 -286.3081)" 
+            class="black degree1" id="08ASMARA546">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-11-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08ASMARA546.html">08ASMARA546</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(118.1709 249.9840)" 
+            class="black degree1" id="08ASMARA591">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08ASMARA591.html">08ASMARA591</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(231.2998 -49.3105)" 
+            class="black degree1" id="08ASMARA598">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08ASMARA598.html">08ASMARA598</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-330.2915 -19.3257)" 
+            class="red degree1" id="09ASMARA184">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09ASMARA184</text>
+            
+        </g>
+        
+        <g transform="translate(-292.6869 80.9993)" 
+            class="black degree4" id="09ASMARA187">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-06-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ASMARA187.html">09ASMARA187</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 55.9107)" 
+            class="black degree1" id="09ASMARA207">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-06-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ASMARA207.html">09ASMARA207</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-152.7442 290.0000)" 
+            class="red degree1" id="09ASMARA229">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09ASMARA229</text>
+            
+        </g>
+        
+        <g transform="translate(-34.6006 289.3841)" 
+            class="red degree1" id="09ASMARA232">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09ASMARA232</text>
+            
+        </g>
+        
+        <g transform="translate(-110.2073 209.1447)" 
+            class="black degree5" id="09ASMARA239">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-07-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09ASMARA239.html">09ASMARA239</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(30.6906 176.4475)" 
+            class="black degree3" id="09ASMARA245">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09ASMARA245.html">09ASMARA245</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-185.0473 125.2415)" 
+            class="black degree2" id="09ASMARA247">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09ASMARA247.html">09ASMARA247</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-242.8586 177.2788)" 
+            class="black degree2" id="09ASMARA249">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09ASMARA249.html">09ASMARA249</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(60.4955 61.6541)" 
+            class="black degree3" id="09ASMARA293">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09ASMARA293.html">09ASMARA293</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(189.6865 108.5468)" 
+            class="black degree2" id="09ASMARA298">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09ASMARA298.html">09ASMARA298</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(291.5877 148.6654)" 
+            class="black degree2" id="09ASMARA397">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ASMARA397.html">09ASMARA397</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(357.5883 195.9362)" 
+            class="black degree1" id="09ASMARA406">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ASMARA406.html">09ASMARA406</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(301.5054 -193.5078)" 
+            class="black degree2" id="09ASMARA437">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-12-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ASMARA437.html">09ASMARA437</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -167.9878)" 
+            class="black degree1" id="09ASMARA446">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-12-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ASMARA446.html">09ASMARA446</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

@@ -1,0 +1,583 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="237.6762" y1="-166.0675" 
+              x2="124.2388" y2="-116.3682" />
+    
+        <line x1="280.6029" y1="131.1220" 
+              x2="354.7037" y2="166.2229" />
+    
+        <line x1="-51.9815" y1="-45.9382" 
+              x2="-244.3537" y2="-73.0451" />
+    
+        <line x1="-337.4204" y1="-121.9774" 
+              x2="-383.7987" y2="-63.3060" />
+    
+        <line x1="-228.4398" y1="-160.8835" 
+              x2="-328.0026" y2="-125.3396" />
+    
+        <line x1="81.5644" y1="259.9810" 
+              x2="183.8344" y2="218.5368" />
+    
+        <line x1="104.2614" y1="-268.1791" 
+              x2="10.5666" y2="-199.3403" />
+    
+        <line x1="-34.1433" y1="220.0618" 
+              x2="72.1111" y2="256.7197" />
+    
+        <line x1="-161.1165" y1="65.7220" 
+              x2="-58.9712" y2="-38.7867" />
+    
+        <line x1="-254.2558" y1="-74.4404" 
+              x2="-380.0963" y2="-56.8457" />
+    
+        <line x1="-322.2150" y1="-183.6032" 
+              x2="-335.0249" y2="-131.6863" />
+    
+        <line x1="67.2960" y1="-16.4023" 
+              x2="-42.2746" y2="-43.5345" />
+    
+        <line x1="-28.6395" y1="-290.0000" 
+              x2="-0.5615" y2="-202.9367" />
+    
+        <line x1="115.0793" y1="-112.3552" 
+              x2="-42.6889" y2="-49.6325" />
+    
+        <line x1="-254.2558" y1="-74.4404" 
+              x2="-231.3014" y2="-151.3017" />
+    
+        <line x1="-254.2558" y1="-74.4404" 
+              x2="-316.9300" y2="-175.1139" />
+    
+        <line x1="-28.2402" y1="96.7897" 
+              x2="-50.3406" y2="-36.0737" />
+    
+        <line x1="-120.0500" y1="290.0000" 
+              x2="-41.8983" y2="226.3753" />
+    
+        <line x1="345.0531" y1="37.1891" 
+              x2="385.1972" y2="-36.1247" />
+    
+        <line x1="-254.2558" y1="-74.4404" 
+              x2="-328.7387" y2="-117.0149" />
+    
+        <line x1="-28.2402" y1="96.7897" 
+              x2="-33.6650" y2="210.0733" />
+    
+        <line x1="193.1023" y1="214.7810" 
+              x2="273.3749" y2="138.0327" />
+    
+        <line x1="280.6029" y1="131.1220" 
+              x2="339.3954" y2="45.4348" />
+    
+        <line x1="-51.9815" y1="-45.9382" 
+              x2="-0.9579" y2="-184.0392" />
+    
+        <line x1="-161.1165" y1="65.7220" 
+              x2="-245.0211" y2="148.4341" />
+    
+        <line x1="-254.2558" y1="-74.4404" 
+              x2="-331.9395" y2="20.6205" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(104.2614 -268.1791)" 
+            class="black degree1" id="08KHARTOUM14">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08KHARTOUM14.html">08KHARTOUM14</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-28.2402 96.7897)" 
+            class="black degree2" id="08KHARTOUM158">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM158.html">08KHARTOUM158</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(237.6762 -166.0675)" 
+            class="black degree1" id="08KHARTOUM184">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM184.html">08KHARTOUM184</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-28.6395 -290.0000)" 
+            class="red degree1" id="08KHARTOUM2031">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08KHARTOUM2031</text>
+            
+        </g>
+        
+        <g transform="translate(67.2960 -16.4023)" 
+            class="black degree1" id="08KHARTOUM219">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM219.html">08KHARTOUM219</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(115.0793 -112.3552)" 
+            class="black degree2" id="08KHARTOUM225">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM225.html">08KHARTOUM225</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-161.1165 65.7220)" 
+            class="black degree2" id="08KHARTOUM246">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM246.html">08KHARTOUM246</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-51.9815 -45.9382)" 
+            class="black degree6" id="08KHARTOUM251">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM251.html">08KHARTOUM251</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-254.2558 -74.4404)" 
+            class="black degree6" id="08KHARTOUM266">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM266.html">08KHARTOUM266</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-228.4398 -160.8835)" 
+            class="black degree2" id="08KHARTOUM269">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM269.html">08KHARTOUM269</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-322.2150 -183.6032)" 
+            class="black degree2" id="08KHARTOUM274">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM274.html">08KHARTOUM274</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-338.2673 28.3638)" 
+            class="black degree1" id="08KHARTOUM279">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KHARTOUM279.html">08KHARTOUM279</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-337.4204 -121.9774)" 
+            class="black degree4" id="08KHARTOUM320">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08KHARTOUM320.html">08KHARTOUM320</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -55.4610)" 
+            class="black degree2" id="08KHARTOUM346">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08KHARTOUM346.html">08KHARTOUM346</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(2.5078 -193.4194)" 
+            class="black degree3" id="08KHARTOUM5">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08KHARTOUM5.html">08KHARTOUM5</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-120.0500 290.0000)" 
+            class="red degree1" id="08NDJAMENA63">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08NDJAMENA63</text>
+            
+        </g>
+        
+        <g transform="translate(-34.1433 220.0618)" 
+            class="black degree3" id="08NDJAMENA64">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08NDJAMENA64.html">08NDJAMENA64</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(81.5644 259.9810)" 
+            class="black degree2" id="08NDJAMENA65">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08NDJAMENA65.html">08NDJAMENA65</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(193.1023 214.7810)" 
+            class="black degree2" id="08NDJAMENA66">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08NDJAMENA66.html">08NDJAMENA66</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(280.6029 131.1220)" 
+            class="black degree3" id="08NDJAMENA67">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08NDJAMENA67.html">08NDJAMENA67</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(345.0531 37.1891)" 
+            class="black degree2" id="08NDJAMENA69">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08NDJAMENA69.html">08NDJAMENA69</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -44.8958)" 
+            class="black degree1" id="08NDJAMENA70">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08NDJAMENA70.html">08NDJAMENA70</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(363.7410 170.5038)" 
+            class="red degree1" id="08STATE10329">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08STATE10329</text>
+            
+        </g>
+        
+        <g transform="translate(-252.1426 155.4544)" 
+            class="black degree1" id="08USUNNEWYORK166">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08USUNNEWYORK166.html">08USUNNEWYORK166</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

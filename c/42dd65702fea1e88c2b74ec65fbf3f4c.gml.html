@@ -1,0 +1,2372 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="1080" height="1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(540.0000,540.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-2.1233" y1="-422.9669" 
+              x2="26.7627" y2="-333.9276" />
+    
+        <line x1="86.1989" y1="138.9060" 
+              x2="25.8066" y2="138.1939" />
+    
+        <line x1="-127.3151" y1="-438.4349" 
+              x2="-157.9358" y2="-290.3224" />
+    
+        <line x1="-388.9776" y1="235.5482" 
+              x2="-398.9776" y2="235.5482" />
+    
+        <line x1="182.5304" y1="83.6868" 
+              x2="52.3244" y2="35.7937" />
+    
+        <line x1="-407.6224" y1="110.6335" 
+              x2="-520.0389" y2="120.5789" />
+    
+        <line x1="29.8486" y1="-324.4157" 
+              x2="-50.9892" y2="-354.3735" />
+    
+        <line x1="-27.1748" y1="-55.7664" 
+              x2="-58.9421" y2="-94.4707" />
+    
+        <line x1="-479.9919" y1="193.4392" 
+              x2="-414.2030" y2="118.1631" />
+    
+        <line x1="-315.8684" y1="-320.2536" 
+              x2="-169.6508" y2="-282.9985" />
+    
+        <line x1="64.4512" y1="-206.5080" 
+              x2="-21.9807" y2="-64.3116" />
+    
+        <line x1="-253.9607" y1="2.3017" 
+              x2="-399.4493" y2="104.8714" />
+    
+        <line x1="-407.6224" y1="110.6335" 
+              x2="-417.6224" y2="110.6335" />
+    
+        <line x1="-384.2124" y1="336.4532" 
+              x2="-352.2407" y2="405.6926" />
+    
+        <line x1="-27.1748" y1="-55.7664" 
+              x2="-176.4692" y2="14.9977" />
+    
+        <line x1="-185.5055" y1="19.2809" 
+              x2="-345.6011" y2="-55.6589" />
+    
+        <line x1="-65.2864" y1="-102.2004" 
+              x2="-245.2129" y2="-2.5435" />
+    
+        <line x1="-62.4359" y1="-274.1047" 
+              x2="-149.9820" y2="-279.8721" />
+    
+        <line x1="-2.1233" y1="-422.9669" 
+              x2="-53.6994" y2="-365.3020" />
+    
+        <line x1="64.4512" y1="-206.5080" 
+              x2="156.2429" y2="-288.5005" />
+    
+        <line x1="45.9228" y1="415.2900" 
+              x2="-56.8132" y2="375.1065" />
+    
+        <line x1="356.6932" y1="-299.6246" 
+              x2="370.1531" y2="-371.7919" />
+    
+        <line x1="29.8486" y1="-324.4157" 
+              x2="61.6353" y2="-216.1033" />
+    
+        <line x1="-479.9761" y1="-75.8312" 
+              x2="-364.5781" y2="-61.1596" />
+    
+        <line x1="-315.8684" y1="-320.2536" 
+              x2="-417.6078" y2="-327.4439" />
+    
+        <line x1="-407.6224" y1="110.6335" 
+              x2="-390.4539" y2="225.6578" />
+    
+        <line x1="270.9745" y1="151.7648" 
+              x2="306.9594" y2="227.3492" />
+    
+        <line x1="-159.9604" y1="-280.5295" 
+              x2="-253.7875" y2="-244.4194" />
+    
+        <line x1="-34.4310" y1="-523.8711" 
+              x2="-119.9551" y2="-445.2047" />
+    
+        <line x1="-384.2124" y1="336.4532" 
+              x2="-388.5059" y2="245.5371" />
+    
+        <line x1="406.3808" y1="-107.6005" 
+              x2="487.4451" y2="-105.1834" />
+    
+        <line x1="-437.6270" y1="-145.8956" 
+              x2="-361.6012" y2="-67.0950" />
+    
+        <line x1="-66.1261" y1="371.4639" 
+              x2="-147.9045" y2="383.0326" />
+    
+        <line x1="-407.6224" y1="110.6335" 
+              x2="-491.5167" y2="50.9314" />
+    
+        <line x1="270.9745" y1="151.7648" 
+              x2="190.4547" y2="89.7863" />
+    
+        <line x1="154.3409" y1="-132.0020" 
+              x2="267.9682" y2="-215.2883" />
+    
+        <line x1="311.2580" y1="236.3782" 
+              x2="373.3916" y2="288.3134" />
+    
+        <line x1="-127.3151" y1="-438.4349" 
+              x2="-12.0478" y2="-424.1931" />
+    
+        <line x1="-66.1261" y1="371.4639" 
+              x2="-138.7190" y2="300.9051" />
+    
+        <line x1="497.4406" y1="-104.8854" 
+              x2="526.0078" y2="-39.2767" />
+    
+        <line x1="-65.2864" y1="-102.2004" 
+              x2="36.6713" y2="24.5496" />
+    
+        <line x1="-127.3151" y1="-438.4349" 
+              x2="-155.1046" y2="-520.5280" />
+    
+        <line x1="42.9391" y1="32.3415" 
+              x2="32.9391" y2="32.3415" />
+    
+        <line x1="42.9391" y1="32.3415" 
+              x2="18.2928" y2="128.3898" />
+    
+        <line x1="453.9314" y1="222.8300" 
+              x2="485.9298" y2="151.4610" />
+    
+        <line x1="276.0336" y1="-221.2001" 
+              x2="349.5235" y2="-292.6536" />
+    
+        <line x1="294.6672" y1="-104.4100" 
+              x2="396.3849" y2="-107.3150" />
+    
+        <line x1="154.3409" y1="-132.0020" 
+              x2="284.8551" y2="-106.3394" />
+    
+        <line x1="-178.7666" y1="167.7319" 
+              x2="-185.0520" y2="29.2706" />
+    
+        <line x1="-65.2864" y1="-102.2004" 
+              x2="-155.2713" y2="-271.6970" />
+    
+        <line x1="15.8073" y1="138.0760" 
+              x2="5.8073" y2="138.0760" />
+    
+        <line x1="29.8486" y1="-324.4157" 
+              x2="-53.6559" y2="-278.8913" />
+    
+        <line x1="-27.1748" y1="-55.7664" 
+              x2="36.7123" y2="24.5167" />
+    
+        <line x1="-127.3151" y1="-438.4349" 
+              x2="-235.3151" y2="-458.7135" />
+    
+        <line x1="45.9228" y1="415.2900" 
+              x2="29.0399" y2="490.4045" />
+    
+        <line x1="26.8470" y1="500.1611" 
+              x2="16.8470" y2="500.1611" />
+    
+        <line x1="-56.9148" y1="530.0000" 
+              x2="17.4269" y2="503.5169" />
+    
+        <line x1="-178.7666" y1="167.7319" 
+              x2="-148.4107" y2="284.2581" />
+    
+        <line x1="-60.3660" y1="-357.8484" 
+              x2="-152.0614" y2="-286.6618" />
+    
+        <line x1="453.9314" y1="222.8300" 
+              x2="388.1826" y2="287.7031" />
+    
+        <line x1="-157.8060" y1="384.4333" 
+              x2="-147.1953" y2="303.8496" />
+    
+        <line x1="45.9228" y1="415.2900" 
+              x2="136.8807" y2="423.3617" />
+    
+        <line x1="86.1989" y1="138.9060" 
+              x2="46.7005" y2="41.6072" />
+    
+        <line x1="381.0643" y1="294.7266" 
+              x2="339.1168" y2="367.0085" />
+    
+        <line x1="-65.2864" y1="-102.2004" 
+              x2="144.4317" y2="-130.6574" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(270.9745 151.7648)" 
+            class="black degree2" id="04ANKARA6797">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-12-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ANKARA6797.html">04ANKARA6797</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the GOT</tspan>
+                        <tspan class="rel">decided to go ahead with</tspan>
+                        <tspan class="a2">the contract transfer tender</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Press reports</tspan>
+                        <tspan class="rel">claimed</tspan>
+                        <tspan class="a2">several international and domestic energy companies</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">7. The tender announcement</tspan>
+                        <tspan class="rel">comes against</tspan>
+                        <tspan class="a2">the backdrop of the December 5-6 visit of President Putin</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">The gas tender announcement</tspan>
+                        <tspan class="rel">constitutes a concrete step in</tspan>
+                        <tspan class="a2">the right direction</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(453.9314 222.8300)" 
+            class="black degree2" id="04ANKARA6802">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-12-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ANKARA6802.html">04ANKARA6802</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Advisor and energy officer</tspan>
+                        <tspan class="rel">met with</tspan>
+                        <tspan class="a2">Turkish Atomic Energy Authority</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">has only</tspan>
+                        <tspan class="a2">one unused HEU fuel rod</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(311.2580 236.3782)" 
+            class="black degree2" id="04ANKARA6867">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-12-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ANKARA6867.html">04ANKARA6867</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">A broad energy MOU</tspan>
+                        <tspan class="rel">was short on</tspan>
+                        <tspan class="a2">clear commitments</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">2. Vladimir Putin</tspan>
+                        <tspan class="rel">visited</tspan>
+                        <tspan class="a2">Ankara December 5-6</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">two-way trade volume</tspan>
+                        <tspan class="rel">is expected to exceed</tspan>
+                        <tspan class="a2">$ 10 billion</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">most of that</tspan>
+                        <tspan class="rel">is accounted for by</tspan>
+                        <tspan class="a2">Russian natural gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Foreign Trade Minister Tuzmen</tspan>
+                        <tspan class="rel">led the Turkish delegation at</tspan>
+                        <tspan class="a2">the JEC</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The offset agreement</tspan>
+                        <tspan class="rel">functioned somewhat until</tspan>
+                        <tspan class="a2">the early 1990s</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">The two</tspan>
+                        <tspan class="rel">signed a joint declaration on</tspan>
+                        <tspan class="a2">economic ties</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(381.0643 294.7266)" 
+            class="black degree3" id="04ANKARA6948">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-12-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ANKARA6948.html">04ANKARA6948</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the plants</tspan>
+                        <tspan class="rel">would meet up to</tspan>
+                        <tspan class="a2">10 % of Turkey 's total energy consumption</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(490.0209 142.3362)" 
+            class="red degree1" id="04STATE250990">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04STATE250990</text>
+            
+        </g>
+        
+        <g transform="translate(-34.4310 -523.8711)" 
+            class="red degree1" id="05ANKARA4000">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05ANKARA4000</text>
+            
+        </g>
+        
+        <g transform="translate(-127.3151 -438.4349)" 
+            class="black degree5" id="05ANKARA5080">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-08-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05ANKARA5080.html">05ANKARA5080</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">market-based competition</tspan>
+                        <tspan class="rel">would spur positive changes in</tspan>
+                        <tspan class="a2">the anti-competitive mentality of Gazprom</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The role of the governments</tspan>
+                        <tspan class="rel">would not be to officially favor</tspan>
+                        <tspan class="a2">any proposal</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Bryza</tspan>
+                        <tspan class="rel">agreed to consider</tspan>
+                        <tspan class="a2">this idea</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Demirbilek</tspan>
+                        <tspan class="rel">welcomed the interest of</tspan>
+                        <tspan class="a2">AES</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">the tender</tspan>
+                        <tspan class="rel">would likely go to</tspan>
+                        <tspan class="a2">an unqualified , "adventurous " bidder</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">These hesitations</tspan>
+                        <tspan class="rel">can probably be overcome through</tspan>
+                        <tspan class="a2">continued engagement and interaction</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">DAS Bryza</tspan>
+                        <tspan class="rel">has not cleared</tspan>
+                        <tspan class="a2">this cable</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-158.3110 -530.0000)" 
+            class="black degree1" id="05ANKARA5168">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-09-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05ANKARA5168.html">05ANKARA5168</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-245.1433 -460.5589)" 
+            class="black degree1" id="05ANKARA5172">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-09-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05ANKARA5172.html">05ANKARA5172</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(334.0975 375.6576)" 
+            class="black degree1" id="05ANKARA5220">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-09-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05ANKARA5220.html">05ANKARA5220</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-2.1233 -422.9669)" 
+            class="black degree3" id="05ANKARA5298">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-09-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05ANKARA5298.html">05ANKARA5298</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">a case</tspan>
+                        <tspan class="rel">could be made for</tspan>
+                        <tspan class="a2">Samsun- Ceyhan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">some companies</tspan>
+                        <tspan class="rel">would not play</tspan>
+                        <tspan class="a2">a helpful role</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">this</tspan>
+                        <tspan class="rel">would obviate</tspan>
+                        <tspan class="a2">the need</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(29.8486 -324.4157)" 
+            class="black degree4" id="05ANKARA6310">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-10-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ANKARA6310.html">05ANKARA6310</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Turkey and Israel</tspan>
+                        <tspan class="rel">announced ambitious plans for</tspan>
+                        <tspan class="a2">energy and water links</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The countries</tspan>
+                        <tspan class="rel">would study the possibility of</tspan>
+                        <tspan class="a2">transmission inter-connectibility</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(64.4512 -206.5080)" 
+            class="black degree3" id="05ANKARA6386">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-10-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ANKARA6386.html">05ANKARA6386</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Guler</tspan>
+                        <tspan class="rel">has never visited</tspan>
+                        <tspan class="a2">the United States</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(163.7008 -295.1622)" 
+            class="black degree1" id="05ANKARA6744">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-11-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ANKARA6744.html">05ANKARA6744</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-60.3660 -357.8484)" 
+            class="black degree3" id="05ANKARA6769">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-11-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ANKARA6769.html">05ANKARA6769</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the purpose of the project</tspan>
+                        <tspan class="rel">is to provide</tspan>
+                        <tspan class="a2">a faster</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">GOT and company officials</tspan>
+                        <tspan class="rel">are all now talking from</tspan>
+                        <tspan class="a2">the same page</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The North-South axis</tspan>
+                        <tspan class="rel">is intended to</tspan>
+                        <tspan class="a2">compliment</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-62.4359 -274.1047)" 
+            class="black degree2" id="05ANKARA7078">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-12-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7078.html">05ANKARA7078</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Russian Gazprom</tspan>
+                        <tspan class="rel">is the main owner/operator of</tspan>
+                        <tspan class="a2">the pipeline</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The Russians</tspan>
+                        <tspan class="rel">were non-committal on</tspan>
+                        <tspan class="a2">the oil pipeline</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">November 28</tspan>
+                        <tspan class="rel">was persistently upbeat on</tspan>
+                        <tspan class="a2">Samsun-Ceyhan prospects</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Front-runners</tspan>
+                        <tspan class="rel">would be</tspan>
+                        <tspan class="a2">Burgos-Alexandropolos or trans-Thrace</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">A number of major oil companies</tspan>
+                        <tspan class="rel">are looking seriously at</tspan>
+                        <tspan class="a2">the project</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(182.5304 83.6868)" 
+            class="black degree2" id="05ANKARA7342">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-12-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7342.html">05ANKARA7342</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">an energy regime</tspan>
+                        <tspan class="rel">will meet</tspan>
+                        <tspan class="a2">investors ' needs</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">This goal</tspan>
+                        <tspan class="rel">was widely viewed as</tspan>
+                        <tspan class="a2">unachievable</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Shell</tspan>
+                        <tspan class="rel">was</tspan>
+                        <tspan class="a2">the highest bidder</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Shell 's bid</tspan>
+                        <tspan class="rel">was followed by</tspan>
+                        <tspan class="a2">Bosphorus Gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Enerco</tspan>
+                        <tspan class="rel">won</tspan>
+                        <tspan class="a2">10 lots</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-27.1748 -55.7664)" 
+            class="black degree4" id="05ANKARA7656">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-12-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7656.html">05ANKARA7656</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">this</tspan>
+                        <tspan class="rel">would be a good time to launch</tspan>
+                        <tspan class="a2">a high-level energy dialogue</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">should work with</tspan>
+                        <tspan class="a2">the companies</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the Samsun-Ceyhan oil pipeline project</tspan>
+                        <tspan class="rel">would provide a new outlet for</tspan>
+                        <tspan class="a2">Russian</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Central Asian oil</tspan>
+                        <tspan class="rel">would bypass</tspan>
+                        <tspan class="a2">the congested Turkish Straits</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Guler</tspan>
+                        <tspan class="rel">had finally understood the need for</tspan>
+                        <tspan class="a2">Straits bypasses</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-178.7666 167.7319)" 
+            class="black degree2" id="05ATHENS3264">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-12-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ATHENS3264.html">05ATHENS3264</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Construction of the 4-6 bcm Greek-Italian portion</tspan>
+                        <tspan class="rel">is scheduled to begin in</tspan>
+                        <tspan class="a2">early 2007</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Greece</tspan>
+                        <tspan class="rel">pushed hard for</tspan>
+                        <tspan class="a2">this treaty</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the viability of two Bosporus bypasses</tspan>
+                        <tspan class="rel">is not out of</tspan>
+                        <tspan class="a2">the question</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">The GoG</tspan>
+                        <tspan class="rel">has been engaged in</tspan>
+                        <tspan class="a2">energy sector reform</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-185.5055 19.2809)" 
+            class="red degree3" id="05BAKU1918">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05BAKU1918</text>
+            
+        </g>
+        
+        <g transform="translate(-65.2864 -102.2004)" 
+            class="black degree5" id="06ANKARA1010">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1010.html">06ANKARA1010</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the Minister</tspan>
+                        <tspan class="rel">acknowledged</tspan>
+                        <tspan class="a2">the problem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Commercial deposits</tspan>
+                        <tspan class="rel">there could improve the commercial viability of</tspan>
+                        <tspan class="a2">a Samsun-Ceyhan pipeline</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(154.3409 -132.0020)" 
+            class="black degree3" id="06ANKARA1527">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-23
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1527.html">06ANKARA1527</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Turkish officials</tspan>
+                        <tspan class="rel">raised a number of</tspan>
+                        <tspan class="a2">energy questions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Nazarbayev</tspan>
+                        <tspan class="rel">may not be</tspan>
+                        <tspan class="a2">a democrat</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Aliyev</tspan>
+                        <tspan class="rel">is very aware of</tspan>
+                        <tspan class="a2">the issue</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">was interested in</tspan>
+                        <tspan class="a2">energy diversification</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">a Gazprom monopoly</tspan>
+                        <tspan class="rel">means a lack of</tspan>
+                        <tspan class="a2">investment</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">a game of chicken</tspan>
+                        <tspan class="rel">could lead to</tspan>
+                        <tspan class="a2">arbitration</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">BTC</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">a western company coalition</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">The consequences of lost transit fees and arbitration</tspan>
+                        <tspan class="rel">could be grave from</tspan>
+                        <tspan class="a2">a financial and investment perspective</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">The handling of the BTC dispute</tspan>
+                        <tspan class="rel">is the immediate case in</tspan>
+                        <tspan class="a2">point</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">Amb Mann</tspan>
+                        <tspan class="rel">has cleared</tspan>
+                        <tspan class="a2">this cable</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(294.6672 -104.4100)" 
+            class="black degree2" id="06ANKARA1705">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1705.html">06ANKARA1705</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The project</tspan>
+                        <tspan class="rel">has achieved</tspan>
+                        <tspan class="a2">good "buy-in</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">the two newly arrived "pigs</tspan>
+                        <tspan class="rel">had preceded</tspan>
+                        <tspan class="a2">the first oil</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">3</tspan>
+                        <tspan class="rel">would be adequate for</tspan>
+                        <tspan class="a2">initial levels of BTC pipeline oil flow</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">The mountain-top station</tspan>
+                        <tspan class="rel">was surrounded by</tspan>
+                        <tspan class="a2">watch-towers</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">the gendarmerie station</tspan>
+                        <tspan class="rel">was not adjacent to</tspan>
+                        <tspan class="a2">the station</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">officials and interlocutors</tspan>
+                        <tspan class="rel">were uniformly positive about</tspan>
+                        <tspan class="a2">BTC</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">BTC</tspan>
+                        <tspan class="rel">contracted to</tspan>
+                        <tspan class="a2">Turkish Palen Company</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">All officials</tspan>
+                        <tspan class="rel">touted</tspan>
+                        <tspan class="a2">Erzurum 's ski center</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">these</tspan>
+                        <tspan class="rel">were remnants of</tspan>
+                        <tspan class="a2">Erzurum 's traditional "ehram " attire</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(406.3808 -107.6005)" 
+            class="black degree2" id="06ANKARA2009">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ANKARA2009.html">06ANKARA2009</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">arbitration</tspan>
+                        <tspan class="rel">would be</tspan>
+                        <tspan class="a2">a contentious , time-consuming</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Guler</tspan>
+                        <tspan class="rel">defended</tspan>
+                        <tspan class="a2">the expertise of BOTAS</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The Foreign Minister</tspan>
+                        <tspan class="rel">expressed appreciation for</tspan>
+                        <tspan class="a2">the comments</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">8. DAS Bryza</tspan>
+                        <tspan class="rel">has cleared</tspan>
+                        <tspan class="a2">this message</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(276.0336 -221.2001)" 
+            class="black degree2" id="06ANKARA2044">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ANKARA2044.html">06ANKARA2044</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Energy Minister Guler</tspan>
+                        <tspan class="rel">expressed fear of</tspan>
+                        <tspan class="a2">upsetting Gazprom</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">generated</tspan>
+                        <tspan class="a2">enormous rents</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Bryza</tspan>
+                        <tspan class="rel">recounted</tspan>
+                        <tspan class="a2">the views of Italian interlocutors</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Gazprom</tspan>
+                        <tspan class="rel">would lose access to</tspan>
+                        <tspan class="a2">cheap Central Asian gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">a more reliable commercial partner</tspan>
+                        <tspan class="rel">was important to</tspan>
+                        <tspan class="a2">the U.S.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">should join</tspan>
+                        <tspan class="a2">the Energy Charter Treaty</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">ENI and Total</tspan>
+                        <tspan class="rel">were Interested in</tspan>
+                        <tspan class="a2">Samsun-Ceyhan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">The U.S.</tspan>
+                        <tspan class="rel">had already offered strong support to</tspan>
+                        <tspan class="a2">Baku-Tbilisi-Ceyhan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">this</tspan>
+                        <tspan class="rel">would ultimately be</tspan>
+                        <tspan class="a2">Turkey 's sovereign decision</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">DAS Bryza</tspan>
+                        <tspan class="rel">has cleared</tspan>
+                        <tspan class="a2">this message</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(356.6932 -299.6246)" 
+            class="black degree2" id="06ANKARA2277">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ANKARA2277.html">06ANKARA2277</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">all parties</tspan>
+                        <tspan class="rel">could lead to</tspan>
+                        <tspan class="a2">the development of a shared "vision statement</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Rende</tspan>
+                        <tspan class="rel">strongly supports the formation of</tspan>
+                        <tspan class="a2">an Italian-Greek-Turkish-Azeri-Georgian working group</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the Georgians</tspan>
+                        <tspan class="rel">continued to press for</tspan>
+                        <tspan class="a2">a "political decision</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">had offered</tspan>
+                        <tspan class="a2">hydropower and electricity exports</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-315.8684 -320.2536)" 
+            class="black degree2" id="06ANKARA2510">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ANKARA2510.html">06ANKARA2510</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Calik</tspan>
+                        <tspan class="rel">built up</tspan>
+                        <tspan class="a2">a highly successful textile business</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Calik</tspan>
+                        <tspan class="rel">has built</tspan>
+                        <tspan class="a2">several natural gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The GOT</tspan>
+                        <tspan class="rel">began talking</tspan>
+                        <tspan class="a2">the Calik group</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Total reps</tspan>
+                        <tspan class="rel">presented their competing vision for</tspan>
+                        <tspan class="a2">Samsun- Ceyhan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Chevron</tspan>
+                        <tspan class="rel">continues to support</tspan>
+                        <tspan class="a2">a Bosphorus bypass</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">the safety of tanker trade</tspan>
+                        <tspan class="rel">remains in</tspan>
+                        <tspan class="a2">the Straits</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">China 's burgeoning markets</tspan>
+                        <tspan class="rel">posed a long-term threat to</tspan>
+                        <tspan class="a2">the world 's long haul tanker fleet</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(371.9866 -381.6223)" 
+            class="black degree1" id="06ANKARA2583">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ANKARA2583.html">06ANKARA2583</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(497.4406 -104.8854)" 
+            class="black degree2" id="06ANKARA2899">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ANKARA2899.html">06ANKARA2899</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The Turks</tspan>
+                        <tspan class="rel">are focusing on</tspan>
+                        <tspan class="a2">high level participation</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">First tanker loading</tspan>
+                        <tspan class="rel">is still targeted for</tspan>
+                        <tspan class="a2">May 27</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(530.0000 -30.1081)" 
+            class="black degree1" id="06ANKARA3100">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ANKARA3100.html">06ANKARA3100</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(86.1989 138.9060)" 
+            class="black degree2" id="06ANKARA319">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06ANKARA319.html">06ANKARA319</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">provides 15 % of</tspan>
+                        <tspan class="a2">Turkey 's gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">the current short-fall</tspan>
+                        <tspan class="rel">is almost 20 % of</tspan>
+                        <tspan class="a2">Turkey 's daily requirement</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(42.9391 32.3415)" 
+            class="black degree7" id="06ANKARA413">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ANKARA413.html">06ANKARA413</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">other issues</tspan>
+                        <tspan class="rel">are key to realizing</tspan>
+                        <tspan class="a2">this east-west gas corridor vision</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">a legal and regulatory framework</tspan>
+                        <tspan class="rel">encourages private sector investment in</tspan>
+                        <tspan class="a2">the energy sector</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">this 1 mm bpd pipeline</tspan>
+                        <tspan class="rel">underscore some of</tspan>
+                        <tspan class="a2">the challenges Turkey</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">will soon harmonize with</tspan>
+                        <tspan class="a2">the European so-called UCTE transmission grid</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">the crisis</tspan>
+                        <tspan class="rel">immediately was escalated to</tspan>
+                        <tspan class="a2">the Prime Minister level</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">Turkey</tspan>
+                        <tspan class="rel">has often changed</tspan>
+                        <tspan class="a2">the rules</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">8. Corruption</tspan>
+                        <tspan class="rel">is part of doing business in</tspan>
+                        <tspan class="a2">Turkey</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">sequential energy corruption probes</tspan>
+                        <tspan class="rel">have rarely proceeded to</tspan>
+                        <tspan class="a2">convictions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">The Blue Stream project</tspan>
+                        <tspan class="rel">is notorious for</tspan>
+                        <tspan class="a2">corruption allegations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">Whose gas</tspan>
+                        <tspan class="rel">will flow to</tspan>
+                        <tspan class="a2">Europe</tspan>
+                    </text>
+                    
+                    <text x="-200" y="220" class="sentence">
+                        <tspan class="a1">The Turkey-Greece inter-connector</tspan>
+                        <tspan class="rel">is under</tspan>
+                        <tspan class="a2">construction</tspan>
+                    </text>
+                    
+                    <text x="-200" y="240" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">is a difficult partner for</tspan>
+                        <tspan class="a2">Turkey</tspan>
+                    </text>
+                    
+                    <text x="-200" y="260" class="sentence">
+                        <tspan class="a1">USG</tspan>
+                        <tspan class="rel">should press for</tspan>
+                        <tspan class="a2">timely completion</tspan>
+                    </text>
+                    
+                    <text x="-200" y="280" class="sentence">
+                        <tspan class="a1">Iraq</tspan>
+                        <tspan class="rel">enjoys</tspan>
+                        <tspan class="a2">significant oil and gas reserves</tspan>
+                    </text>
+                    
+                    <text x="-200" y="300" class="sentence">
+                        <tspan class="a1">Turkey and BOTAS</tspan>
+                        <tspan class="rel">have been frustrated about</tspan>
+                        <tspan class="a2">the long-term closure of the Kirkuk-Ceyhan oil pipeline</tspan>
+                    </text>
+                    
+                    <text x="-200" y="320" class="sentence">
+                        <tspan class="a1">Kazakhstan</tspan>
+                        <tspan class="rel">also has</tspan>
+                        <tspan class="a2">great gas potential</tspan>
+                    </text>
+                    
+                    <text x="-200" y="340" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">represents</tspan>
+                        <tspan class="a2">a small gas quantity</tspan>
+                    </text>
+                    
+                    <text x="-200" y="360" class="sentence">
+                        <tspan class="a1">Turkish officials</tspan>
+                        <tspan class="rel">are hopeful for</tspan>
+                        <tspan class="a2">gas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="380" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">is part of</tspan>
+                        <tspan class="a2">the north-south vision</tspan>
+                    </text>
+                    
+                    <text x="-200" y="400" class="sentence">
+                        <tspan class="a1">Turkey and Russia</tspan>
+                        <tspan class="rel">have talked regularly at</tspan>
+                        <tspan class="a2">high levels</tspan>
+                    </text>
+                    
+                    <text x="-200" y="420" class="sentence">
+                        <tspan class="a1">the idea</tspan>
+                        <tspan class="rel">runs counter to</tspan>
+                        <tspan class="a2">diversification of European sourcing</tspan>
+                    </text>
+                    
+                    <text x="-200" y="440" class="sentence">
+                        <tspan class="a1">Turkey 's investment environment and track record</tspan>
+                        <tspan class="rel">have improved over</tspan>
+                        <tspan class="a2">the last few years</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-159.9604 -280.5295)" 
+            class="black degree6" id="06ANKARA544">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ANKARA544.html">06ANKARA544</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Energy Minister Guler 's February 8-9 visit</tspan>
+                        <tspan class="rel">is an opportunity to discuss these issues with</tspan>
+                        <tspan class="a2">senior Turkish energy officials</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Current volumes of 140-150 million tons</tspan>
+                        <tspan class="rel">primarily come from</tspan>
+                        <tspan class="a2">Russia</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Companies</tspan>
+                        <tspan class="rel">pay in</tspan>
+                        <tspan class="a2">the form of the extra costs of queuing and delays</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">appears to be</tspan>
+                        <tspan class="a2">a carefully vetted position of the GOT.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Minister Guler 's upcoming Washington visit</tspan>
+                        <tspan class="rel">would be an excellent opportunity to review</tspan>
+                        <tspan class="a2">these issues</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-427.5829 -328.1488)" 
+            class="black degree1" id="06ANKARA5624">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ANKARA5624.html">06ANKARA5624</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(15.8073 138.0760)" 
+            class="black degree4" id="06ANKARA65">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06ANKARA65.html">06ANKARA65</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the issue</tspan>
+                        <tspan class="rel">is now in</tspan>
+                        <tspan class="a2">international arbitration</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">has been a reliable source for</tspan>
+                        <tspan class="a2">Turkey</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-253.9607 2.3017)" 
+            class="black degree2" id="06ASHGABAT108">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06ASHGABAT108.html">06ASHGABAT108</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Akil</tspan>
+                        <tspan class="rel">interjected</tspan>
+                        <tspan class="a2">that given Turkmen gas production and export levels</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-479.9919 193.4392)" 
+            class="black degree1" id="06ASHGABAT140">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06ASHGABAT140.html">06ASHGABAT140</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-384.2124 336.4532)" 
+            class="red degree2" id="06ASHGABAT144">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06ASHGABAT144</text>
+            
+        </g>
+        
+        <g transform="translate(-407.6224 110.6335)" 
+            class="black degree7" id="06ASHGABAT151">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06ASHGABAT151.html">06ASHGABAT151</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Niyazov</tspan>
+                        <tspan class="rel">earnestly expounded</tspan>
+                        <tspan class="a2">the basic ABCs of the Trans-Caspian vs Caspian littoral pipeline options</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">was fine by</tspan>
+                        <tspan class="a2">Turkmenistan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">said</tspan>
+                        <tspan class="a2">Niyazov.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">had not encouraged</tspan>
+                        <tspan class="a2">the TCP option</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">Niyazov</tspan>
+                        <tspan class="rel">shrugged</tspan>
+                        <tspan class="a2">the point</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">The latter ,s annual capacity</tspan>
+                        <tspan class="rel">would be</tspan>
+                        <tspan class="a2">some 50 bcm</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">Georgia</tspan>
+                        <tspan class="rel">together will not account for</tspan>
+                        <tspan class="a2">more than half</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">The Russians</tspan>
+                        <tspan class="rel">should be invited to</tspan>
+                        <tspan class="a2">the meeting</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">Turkmenistan</tspan>
+                        <tspan class="rel">will never countenance</tspan>
+                        <tspan class="a2">this</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">not further</tspan>
+                        <tspan class="rel">extend</tspan>
+                        <tspan class="a2">Gazprom 's monopoly</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-348.0485 414.7715)" 
+            class="black degree1" id="06ASHGABAT161">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ASHGABAT161.html">06ASHGABAT161</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-388.9776 235.5482)" 
+            class="black degree4" id="06ASHGABAT177">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ASHGABAT177.html">06ASHGABAT177</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Issuance of the EU Green Book</tspan>
+                        <tspan class="rel">should mark the next stage in</tspan>
+                        <tspan class="a2">this process</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Kubis</tspan>
+                        <tspan class="rel">related in</tspan>
+                        <tspan class="a2">near-amazement</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">Meredov</tspan>
+                        <tspan class="rel">agreed to report to</tspan>
+                        <tspan class="a2">the president</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-530.0000 121.4602)" 
+            class="red degree1" id="06ASHGABAT50">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06ASHGABAT50</text>
+            
+        </g>
+        
+        <g transform="translate(45.9228 415.2900)" 
+            class="black degree3" id="06ATHENS1298">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ATHENS1298.html">06ATHENS1298</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Russian Ambassador</tspan>
+                        <tspan class="rel">commented on</tspan>
+                        <tspan class="a2">the Russian</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Those</tspan>
+                        <tspan class="rel">did take</tspan>
+                        <tspan class="a2">the microphone</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(146.8416 424.2457)" 
+            class="black degree1" id="06ATHENS1319">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ATHENS1319.html">06ATHENS1319</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-66.1261 371.4639)" 
+            class="black degree3" id="06ATHENS342">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ATHENS342.html">06ATHENS342</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">pricing of Russian gas</tspan>
+                        <tspan class="rel">is not</tspan>
+                        <tspan class="a2">a governmental issue</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The Chevron representative</tspan>
+                        <tspan class="rel">had seemed potentially interested in</tspan>
+                        <tspan class="a2">B-A</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-157.8060 384.4333)" 
+            class="black degree2" id="06ATHENS393">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ATHENS393.html">06ATHENS393</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-145.8898 293.9352)" 
+            class="black degree3" id="06ATHENS546">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ATHENS546.html">06ATHENS546</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Stylianides</tspan>
+                        <tspan class="rel">initiated the request for</tspan>
+                        <tspan class="a2">the meeting</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">decisions</tspan>
+                        <tspan class="rel">will affect</tspan>
+                        <tspan class="a2">Greece 's long-term energy independence and security</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">the Greeks " Gazprom</tspan>
+                        <tspan class="rel">controls the whole system of</tspan>
+                        <tspan class="a2">energy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">was in</tspan>
+                        <tspan class="a2">a position</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">helps</tspan>
+                        <tspan class="a2">Turkish independence</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">That</tspan>
+                        <tspan class="rel">would not be in</tspan>
+                        <tspan class="a2">either Greece</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">The Azeris</tspan>
+                        <tspan class="rel">had also invited</tspan>
+                        <tspan class="a2">the Italians</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">only the Greek MFA</tspan>
+                        <tspan class="rel">had any inkling of</tspan>
+                        <tspan class="a2">the energy security consequences of the Gazprom visit</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">Minister Sioufas</tspan>
+                        <tspan class="rel">is too overworked to focus on</tspan>
+                        <tspan class="a2">energy issues</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">the GoG</tspan>
+                        <tspan class="rel">could quite conceivably succumb to</tspan>
+                        <tspan class="a2">the Russian offer</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-437.6270 -145.8956)" 
+            class="black degree1" id="06BAKU152">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06BAKU152.html">06BAKU152</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-479.9761 -75.8312)" 
+            class="red degree1" id="06BAKU197">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06BAKU197</text>
+            
+        </g>
+        
+        <g transform="translate(-354.6579 -59.8983)" 
+            class="black degree3" id="06BAKU249">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06BAKU249.html">06BAKU249</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">These goals</tspan>
+                        <tspan class="rel">also serve</tspan>
+                        <tspan class="a2">U.S. strategic interests</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">Shah Deniz gas</tspan>
+                        <tspan class="rel">will begin flowing to</tspan>
+                        <tspan class="a2">Turkey</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The inter-governmental agreement</tspan>
+                        <tspan class="rel">would facilitate</tspan>
+                        <tspan class="a2">this</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">international companies</tspan>
+                        <tspan class="rel">did not seem worried about</tspan>
+                        <tspan class="a2">the slow progress of the IGA.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">some</tspan>
+                        <tspan class="rel">are beginning to express</tspan>
+                        <tspan class="a2">concern</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">SOCAR</tspan>
+                        <tspan class="rel">,s</tspan>
+                        <tspan class="a2">new President</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">energy politics</tspan>
+                        <tspan class="rel">is the role of</tspan>
+                        <tspan class="a2">Valekh Alasgarov</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">many companies</tspan>
+                        <tspan class="rel">will move on to</tspan>
+                        <tspan class="a2">other countries</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">the domestic core of trained professional Azerbaijanis</tspan>
+                        <tspan class="rel">are leaving for</tspan>
+                        <tspan class="a2">other countries</tspan>
+                    </text>
+                    
+                    <text x="-200" y="200" class="sentence">
+                        <tspan class="a1">Shah Deniz</tspan>
+                        <tspan class="rel">will be meeting primarily the domestic needs of</tspan>
+                        <tspan class="a2">Azerbaijan and Georgia</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-499.6642 45.1333)" 
+            class="red degree1" id="06BRUSSELS301">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06BRUSSELS301</text>
+            
+        </g>
+        
+        <g transform="translate(-263.1202 -240.8277)" 
+            class="black degree1" id="06ISTANBUL223">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ISTANBUL223.html">06ISTANBUL223</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-56.9148 530.0000)" 
+            class="red degree1" id="07ATHENS2137">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07ATHENS2137</text>
+            
+        </g>
+        
+        <g transform="translate(26.8470 500.1611)" 
+            class="black degree4" id="07ATHENS2171">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-11-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ATHENS2171.html">07ATHENS2171</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">GOG efforts</tspan>
+                        <tspan class="rel">are focused on protecting</tspan>
+                        <tspan class="a2">Greek interests</tspan>
+                    </text>
+                    
+                    <text x="-200" y="40" class="sentence">
+                        <tspan class="a1">The Russians</tspan>
+                        <tspan class="rel">have also pushed</tspan>
+                        <tspan class="a2">the Greeks</tspan>
+                    </text>
+                    
+                    <text x="-200" y="60" class="sentence">
+                        <tspan class="a1">The political-diplomatic realm</tspan>
+                        <tspan class="rel">also presents</tspan>
+                        <tspan class="a2">a complex picture</tspan>
+                    </text>
+                    
+                    <text x="-200" y="80" class="sentence">
+                        <tspan class="a1">FM Bakoyannis</tspan>
+                        <tspan class="rel">spoke of</tspan>
+                        <tspan class="a2">Greece 's "vanguard role</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">political favor</tspan>
+                        <tspan class="rel">have not been unreceptive to</tspan>
+                        <tspan class="a2">Russian advances</tspan>
+                    </text>
+                    
+                    <text x="-200" y="120" class="sentence">
+                        <tspan class="a1">8. Other observers</tspan>
+                        <tspan class="rel">take</tspan>
+                        <tspan class="a2">a more nuanced position</tspan>
+                    </text>
+                    
+                    <text x="-200" y="140" class="sentence">
+                        <tspan class="a1">the Greeks</tspan>
+                        <tspan class="rel">often define their interests in</tspan>
+                        <tspan class="a2">regional , not global and strategic , terms</tspan>
+                    </text>
+                    
+                    <text x="-200" y="160" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">has been evident across</tspan>
+                        <tspan class="a2">a range of issues</tspan>
+                    </text>
+                    
+                    <text x="-200" y="180" class="sentence">
+                        <tspan class="a1">Putin</tspan>
+                        <tspan class="rel">has visited twice in</tspan>
+                        <tspan class="a2">the last two years</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

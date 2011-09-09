@@ -1,0 +1,572 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-11.7805" y1="-188.7244" 
+              x2="-133.4214" y2="-241.8265" />
+    
+        <line x1="-11.4143" y1="251.0333" 
+              x2="120.0308" y2="221.5733" />
+    
+        <line x1="-150.0424" y1="-72.4666" 
+              x2="-156.6437" y2="-166.7860" />
+    
+        <line x1="152.7563" y1="108.6524" 
+              x2="159.9600" y2="-41.9791" />
+    
+        <line x1="-150.0424" y1="-72.4666" 
+              x2="-310.0398" y2="-61.9850" />
+    
+        <line x1="-297.5751" y1="13.0970" 
+              x2="-158.6928" y2="-67.4496" />
+    
+        <line x1="129.7887" y1="219.3863" 
+              x2="119.7887" y2="219.3863" />
+    
+        <line x1="151.2063" y1="38.0524" 
+              x2="159.4176" y2="-42.0198" />
+    
+        <line x1="152.7563" y1="108.6524" 
+              x2="131.8196" y2="209.5947" />
+    
+        <line x1="-390.0000" y1="73.4057" 
+              x2="-305.9499" y2="18.5617" />
+    
+        <line x1="-142.5861" y1="-245.8274" 
+              x2="-155.2526" y2="-186.5408" />
+    
+        <line x1="373.0237" y1="18.9159" 
+              x2="169.9243" y2="-48.8045" />
+    
+        <line x1="37.1621" y1="-5.9968" 
+              x2="151.0680" y2="-48.4736" />
+    
+        <line x1="-11.7805" y1="-188.7244" 
+              x2="-147.3755" y2="-177.5806" />
+    
+        <line x1="-20.9447" y1="61.1313" 
+              x2="151.9522" y2="-46.6766" />
+    
+        <line x1="-11.7805" y1="-188.7244" 
+              x2="152.6065" y2="-58.1863" />
+    
+        <line x1="110.9103" y1="290.0000" 
+              x2="127.2060" y2="229.0470" />
+    
+        <line x1="-23.2851" y1="-71.7562" 
+              x2="150.4952" y2="-53.0386" />
+    
+        <line x1="280.2452" y1="59.2567" 
+              x2="167.7664" y2="-45.1640" />
+    
+        <line x1="-303.8018" y1="-127.0826" 
+              x2="-159.4655" y2="-75.8137" />
+    
+        <line x1="376.7149" y1="-103.6736" 
+              x2="170.1636" y2="-54.2929" />
+    
+        <line x1="300.0414" y1="-150.7434" 
+              x2="168.6010" y2="-57.7435" />
+    
+        <line x1="-150.0424" y1="-72.4666" 
+              x2="150.4594" y2="-52.6265" />
+    
+        <line x1="261.2811" y1="-97.9184" 
+              x2="169.5375" y2="-56.1141" />
+    
+        <line x1="227.0511" y1="-199.4591" 
+              x2="164.5538" y2="-61.0813" />
+    
+        <line x1="390.0000" y1="-44.7945" 
+              x2="170.4328" y2="-51.6553" />
+    
+        <line x1="120.3458" y1="-145.2588" 
+              x2="156.4894" y2="-61.1552" />
+    
+        <line x1="263.8964" y1="243.7100" 
+              x2="139.6282" y2="221.1709" />
+    
+        <line x1="288.7820" y1="-284.5560" 
+              x2="232.9230" y2="-207.5536" />
+    
+        <line x1="285.0056" y1="-8.7962" 
+              x2="169.8864" y2="-48.6930" />
+    
+        <line x1="-150.0424" y1="-72.4666" 
+              x2="-33.2849" y2="-71.8122" />
+    
+        <line x1="-11.7805" y1="-188.7244" 
+              x2="-9.8465" y2="-280.0022" />
+    
+        <line x1="-20.9447" y1="61.1313" 
+              x2="-137.8353" y2="129.8296" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(-390.0000 73.4057)" 
+            class="red degree1" id="04TIRANA159">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04TIRANA159</text>
+            
+        </g>
+        
+        <g transform="translate(-303.8018 -127.0826)" 
+            class="red degree1" id="06TIRANA1039">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06TIRANA1039</text>
+            
+        </g>
+        
+        <g transform="translate(-297.5751 13.0970)" 
+            class="black degree2" id="06TIRANA995">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TIRANA995.html">06TIRANA995</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(120.3458 -145.2588)" 
+            class="red degree1" id="07STATE170091">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07STATE170091</text>
+            
+        </g>
+        
+        <g transform="translate(-11.7805 -188.7244)" 
+            class="red degree4" id="07TIRANA1003">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA1003</text>
+            
+        </g>
+        
+        <g transform="translate(390.0000 -44.7945)" 
+            class="red degree1" id="07TIRANA1011">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA1011</text>
+            
+        </g>
+        
+        <g transform="translate(37.1621 -5.9968)" 
+            class="red degree1" id="07TIRANA1033">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA1033</text>
+            
+        </g>
+        
+        <g transform="translate(300.0414 -150.7434)" 
+            class="red degree1" id="07TIRANA1035">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA1035</text>
+            
+        </g>
+        
+        <g transform="translate(373.0237 18.9159)" 
+            class="black degree1" id="07TIRANA1067">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-12-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TIRANA1067.html">07TIRANA1067</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-142.5861 -245.8274)" 
+            class="black degree2" id="07TIRANA1069">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-12-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TIRANA1069.html">07TIRANA1069</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-150.0424 -72.4666)" 
+            class="black degree6" id="07TIRANA1083">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-12-28
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TIRANA1083.html">07TIRANA1083</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-20.9447 61.1313)" 
+            class="black degree2" id="07TIRANA1090">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-12-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TIRANA1090.html">07TIRANA1090</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(152.7563 108.6524)" 
+            class="red degree2" id="07TIRANA463">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA463</text>
+            
+        </g>
+        
+        <g transform="translate(285.0056 -8.7962)" 
+            class="red degree1" id="07TIRANA724">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA724</text>
+            
+        </g>
+        
+        <g transform="translate(288.7820 -284.5560)" 
+            class="red degree1" id="07TIRANA834">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA834</text>
+            
+        </g>
+        
+        <g transform="translate(-23.2851 -71.7562)" 
+            class="red degree2" id="07TIRANA870">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA870</text>
+            
+        </g>
+        
+        <g transform="translate(263.8964 243.7100)" 
+            class="red degree1" id="07TIRANA885">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA885</text>
+            
+        </g>
+        
+        <g transform="translate(-146.4566 134.8965)" 
+            class="red degree1" id="07TIRANA949">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA949</text>
+            
+        </g>
+        
+        <g transform="translate(-320.0185 -61.3313)" 
+            class="red degree1" id="07TIRANA956">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA956</text>
+            
+        </g>
+        
+        <g transform="translate(110.9103 290.0000)" 
+            class="red degree1" id="07TIRANA967">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA967</text>
+            
+        </g>
+        
+        <g transform="translate(-11.4143 251.0333)" 
+            class="red degree1" id="07TIRANA974">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">07TIRANA974</text>
+            
+        </g>
+        
+        <g transform="translate(129.7887 219.3863)" 
+            class="black degree6" id="07TIRANA989">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-11-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07TIRANA989.html">07TIRANA989</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(227.0511 -199.4591)" 
+            class="black degree2" id="07TIRANA997">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2007-11-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07TIRANA997.html">07TIRANA997</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(261.2811 -97.9184)" 
+            class="red degree1" id="08TIRANA1069">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08TIRANA1069</text>
+            
+        </g>
+        
+        <g transform="translate(280.2452 59.2567)" 
+            class="black degree1" id="08TIRANA14">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TIRANA14.html">08TIRANA14</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-9.6347 -290.0000)" 
+            class="black degree1" id="08TIRANA177">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TIRANA177.html">08TIRANA177</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(151.2063 38.0524)" 
+            class="black degree1" id="08TIRANA23">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TIRANA23.html">08TIRANA23</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(376.7149 -103.6736)" 
+            class="black degree1" id="08TIRANA50">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TIRANA50.html">08TIRANA50</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(160.4377 -51.9677)" 
+            class="black degree16" id="08TIRANA56">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TIRANA56.html">08TIRANA56</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-157.3419 -176.7615)" 
+            class="black degree3" id="08TIRANA90">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08TIRANA90.html">08TIRANA90</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

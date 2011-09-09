@@ -1,0 +1,681 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,300.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-375.7103" y1="62.2687" 
+              x2="-140.7046" y2="131.6362" />
+    
+        <line x1="224.1881" y1="-195.1591" 
+              x2="290.5897" y2="-101.5268" />
+    
+        <line x1="224.1881" y1="-195.1591" 
+              x2="121.6117" y2="-200.7660" />
+    
+        <line x1="-337.9563" y1="-259.7004" 
+              x2="-206.5426" y2="-257.4421" />
+    
+        <line x1="-303.2078" y1="-179.6913" 
+              x2="-204.6313" y2="-251.3883" />
+    
+        <line x1="-131.1137" y1="134.4672" 
+              x2="15.7545" y2="127.7589" />
+    
+        <line x1="114.5166" y1="199.8082" 
+              x2="-121.4498" y2="137.0379" />
+    
+        <line x1="-77.5967" y1="290.0000" 
+              x2="-127.8601" y2="143.9231" />
+    
+        <line x1="-143.1478" y1="14.8586" 
+              x2="-132.1148" y2="124.5174" />
+    
+        <line x1="-303.2078" y1="-179.6913" 
+              x2="-333.9727" y2="-250.5281" />
+    
+        <line x1="-332.0650" y1="201.0986" 
+              x2="-140.6055" y2="137.6145" />
+    
+        <line x1="-0.1876" y1="-252.9931" 
+              x2="-186.5465" y2="-257.0525" />
+    
+        <line x1="-131.1137" y1="134.4672" 
+              x2="-264.3539" y2="121.5342" />
+    
+        <line x1="357.9198" y1="-217.2342" 
+              x2="234.0546" y2="-196.7877" />
+    
+        <line x1="-270.3890" y1="255.3120" 
+              x2="-138.6669" y2="141.0208" />
+    
+        <line x1="-250.0923" y1="-50.5818" 
+              x2="-136.5219" y2="126.0558" />
+    
+        <line x1="142.0133" y1="129.5158" 
+              x2="-121.1154" y2="134.2859" />
+    
+        <line x1="-131.1137" y1="134.4672" 
+              x2="-380.0018" y2="139.2193" />
+    
+        <line x1="-276.6939" y1="32.0712" 
+              x2="-139.2931" y2="128.7141" />
+    
+        <line x1="200.4313" y1="-290.0000" 
+              x2="221.7583" y2="-204.8594" />
+    
+        <line x1="-0.1876" y1="-252.9931" 
+              x2="214.5046" y2="-197.6550" />
+    
+        <line x1="-131.1137" y1="134.4672" 
+              x2="-168.6998" y2="247.3389" />
+    
+        <line x1="-35.9615" y1="214.1201" 
+              x2="-123.4458" y2="140.8861" />
+    
+        <line x1="48.2905" y1="259.3703" 
+              x2="-122.9068" y2="140.1809" />
+    
+        <line x1="-28.8713" y1="16.1350" 
+              x2="-124.5758" y2="126.9004" />
+    
+        <line x1="390.0000" y1="-129.9264" 
+              x2="233.4939" y2="-191.4980" />
+    
+        <line x1="-131.1137" y1="134.4672" 
+              x2="66.4941" y2="60.3945" />
+    
+        <line x1="-250.0923" y1="-50.5818" 
+              x2="-299.4032" y2="-170.4434" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(-270.3890 255.3120)" 
+            class="black degree1" id="08ATHENS330">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS330.html">08ATHENS330</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-332.0650 201.0986)" 
+            class="black degree1" id="08ATHENS338">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS338.html">08ATHENS338</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-143.1478 14.8586)" 
+            class="black degree1" id="08ATHENS341">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS341.html">08ATHENS341</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(48.2905 259.3703)" 
+            class="black degree1" id="08ATHENS346">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS346.html">08ATHENS346</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-250.0923 -50.5818)" 
+            class="black degree2" id="08BERLIN296">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BERLIN296.html">08BERLIN296</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(357.9198 -217.2342)" 
+            class="black degree1" id="08BRATISLAVA34">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BRATISLAVA34.html">08BRATISLAVA34</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-303.2078 -179.6913)" 
+            class="black degree3" id="08BRUSSELS214">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BRUSSELS214.html">08BRUSSELS214</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-337.9563 -259.7004)" 
+            class="black degree2" id="08BRUSSELS500">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BRUSSELS500.html">08BRUSSELS500</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(142.0133 129.5158)" 
+            class="black degree1" id="08DUBLIN116">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08DUBLIN116.html">08DUBLIN116</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -129.9264)" 
+            class="black degree1" id="08HELSINKI29">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08HELSINKI29.html">08HELSINKI29</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-35.9615 214.1201)" 
+            class="black degree1" id="08HELSINKI93">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08HELSINKI93.html">08HELSINKI93</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(200.4313 -290.0000)" 
+            class="black degree1" id="08LISBON221">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08LISBON221.html">08LISBON221</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-375.7103 62.2687)" 
+            class="black degree1" id="08LJUBLJANA114">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08LJUBLJANA114.html">08LJUBLJANA114</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-0.1876 -252.9931)" 
+            class="black degree2" id="08LONDON272">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08LONDON272.html">08LONDON272</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-196.5441 -257.2703)" 
+            class="black degree3" id="08LONDON305">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08LONDON305.html">08LONDON305</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-28.8713 16.1350)" 
+            class="black degree1" id="08MADRID278">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08MADRID278.html">08MADRID278</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-77.5967 290.0000)" 
+            class="black degree1" id="08MADRID281">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08MADRID281.html">08MADRID281</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(114.5166 199.8082)" 
+            class="black degree1" id="08MADRID282">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08MADRID282.html">08MADRID282</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-276.6939 32.0712)" 
+            class="black degree1" id="08PRAGUE162">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PRAGUE162.html">08PRAGUE162</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(224.1881 -195.1591)" 
+            class="red degree6" id="08SECSTATE7679">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">08SECSTATE7679</text>
+            
+        </g>
+        
+        <g transform="translate(111.6266 -201.3118)" 
+            class="black degree1" id="08SOFIA64">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-28
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08SOFIA64.html">08SOFIA64</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-131.1137 134.4672)" 
+            class="black degree17" id="08STATE22352">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08STATE22352.html">08STATE22352</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-274.3071 120.5681)" 
+            class="black degree1" id="08STOCKHOLM186">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08STOCKHOLM186.html">08STOCKHOLM186</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(296.3745 -93.3698)" 
+            class="black degree1" id="08STOCKHOLM67">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08STOCKHOLM67.html">08STOCKHOLM67</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 139.4102)" 
+            class="black degree1" id="08THEHAGUE227">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-06
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08THEHAGUE227.html">08THEHAGUE227</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(75.8579 56.8845)" 
+            class="black degree1" id="08VIENNA316">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08VIENNA316.html">08VIENNA316</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(25.7441 127.3026)" 
+            class="black degree1" id="08VILNIUS146">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08VILNIUS146.html">08VILNIUS146</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-171.8592 256.8267)" 
+            class="black degree1" id="08WARSAW309">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08WARSAW309.html">08WARSAW309</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

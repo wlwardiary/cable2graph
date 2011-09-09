@@ -1,0 +1,944 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="840" height="840" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(420.0000,420.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="406.0019" y1="-121.6326" 
+              x2="300.6939" y2="-82.2241" />
+    
+        <line x1="43.4741" y1="-142.1614" 
+              x2="-89.1855" y2="-180.6362" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="183.0217" y2="117.9972" />
+    
+        <line x1="-229.9032" y1="-183.7860" 
+              x2="-199.1973" y2="-281.0479" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="76.3464" y2="-19.8089" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="1.8604" y2="-9.9548" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="147.9955" y2="-36.8410" />
+    
+        <line x1="-39.9815" y1="51.0876" 
+              x2="-63.8218" y2="106.5837" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="-80.8115" y2="168.3497" />
+    
+        <line x1="95.9449" y1="195.8614" 
+              x2="117.7017" y2="242.0661" />
+    
+        <line x1="362.9911" y1="-183.6701" 
+              x2="296.9673" y2="-86.9776" />
+    
+        <line x1="-24.9126" y1="213.0510" 
+              x2="-103.7103" y2="314.5893" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="283.5426" y2="-72.4435" />
+    
+        <line x1="-229.9032" y1="-183.7860" 
+              x2="-315.5714" y2="-86.0521" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="20.0155" y2="121.2692" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="275.8950" y2="138.8320" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="190.1700" y2="184.3301" />
+    
+        <line x1="291.3282" y1="-78.7192" 
+              x2="400.4086" y2="-46.5419" />
+    
+        <line x1="-98.7897" y1="-183.4216" 
+              x2="-219.9032" y2="-183.7583" />
+    
+        <line x1="43.4741" y1="-142.1614" 
+              x2="69.4890" y2="-277.2195" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="241.6378" y2="64.5499" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="-58.0486" y2="113.4233" />
+    
+        <line x1="290.5946" y1="-201.8996" 
+              x2="291.2687" y2="-88.7190" />
+    
+        <line x1="-24.9126" y1="213.0510" 
+              x2="-63.7373" y2="124.9231" />
+    
+        <line x1="138.5963" y1="361.4310" 
+              x2="191.9662" y2="403.7838" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="46.0115" y2="-132.4887" />
+    
+        <line x1="-322.1630" y1="-78.5321" 
+              x2="-400.6450" y2="-48.8892" />
+    
+        <line x1="-322.1630" y1="-78.5321" 
+              x2="-356.2439" y2="8.7988" />
+    
+        <line x1="43.4741" y1="-142.1614" 
+              x2="102.1403" y2="-220.0481" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="195.2109" y2="15.4131" />
+    
+        <line x1="-196.1868" y1="-290.5840" 
+              x2="-142.3705" y2="-357.7407" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="-30.1248" y2="52.7742" />
+    
+        <line x1="71.3805" y1="-287.0390" 
+              x2="121.2400" y2="-362.6342" />
+    
+        <line x1="-229.9032" y1="-183.7860" 
+              x2="-301.1971" y2="-217.4738" />
+    
+        <line x1="285.2943" y1="142.2457" 
+              x2="387.2206" y2="172.4141" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="-18.1860" y2="205.6515" />
+    
+        <line x1="-109.8412" y1="322.4895" 
+              x2="-182.7526" y2="364.1470" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="120.7498" y2="241.1870" />
+    
+        <line x1="11.3410" y1="126.2445" 
+              x2="-57.8554" y2="117.0842" />
+    
+        <line x1="100.4735" y1="75.1222" 
+              x2="96.3198" y2="185.8685" />
+    
+        <line x1="-385.7459" y1="-205.4501" 
+              x2="-320.0135" y2="-219.6365" />
+    
+        <line x1="-136.1171" y1="-365.5442" 
+              x2="-70.7776" y2="-404.8456" />
+    
+        <line x1="121.9618" y1="251.1133" 
+              x2="137.1053" y2="351.5428" />
+    
+        <line x1="-67.7689" y1="115.7718" 
+              x2="-201.8083" y2="117.9629" />
+    
+        <line x1="-89.7045" y1="172.9230" 
+              x2="-209.8935" y2="221.4951" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(100.4735 75.1222)" 
+            class="red degree17" id="03LILONGWE1202">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">03LILONGWE1202</text>
+            
+        </g>
+        
+        <g transform="translate(290.5946 -201.8996)" 
+            class="red degree1" id="03LILONGWE1295">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">03LILONGWE1295</text>
+            
+        </g>
+        
+        <g transform="translate(362.9911 -183.6701)" 
+            class="red degree1" id="03LILONGWE1309">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">03LILONGWE1309</text>
+            
+        </g>
+        
+        <g transform="translate(406.0019 -121.6326)" 
+            class="red degree1" id="03LILONGWE851">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">03LILONGWE851</text>
+            
+        </g>
+        
+        <g transform="translate(95.9449 195.8614)" 
+            class="black degree2" id="04LILONGWE123">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-02-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/02/04LILONGWE123.html">04LILONGWE123</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(73.8832 -29.5008)" 
+            class="black degree1" id="04LILONGWE143">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-02-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/02/04LILONGWE143.html">04LILONGWE143</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(121.9618 251.1133)" 
+            class="black degree3" id="04LILONGWE166">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-02-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/02/04LILONGWE166.html">04LILONGWE166</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(291.3282 -78.7192)" 
+            class="black degree5" id="04LILONGWE240">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-03-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/03/04LILONGWE240.html">04LILONGWE240</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(138.5963 361.4310)" 
+            class="black degree2" id="04LILONGWE245">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-03-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/03/04LILONGWE245.html">04LILONGWE245</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(410.0000 -43.7126)" 
+            class="black degree1" id="04LILONGWE283">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-04-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/04/04LILONGWE283.html">04LILONGWE283</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-89.7045 172.9230)" 
+            class="black degree2" id="04LILONGWE326">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-04-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/04/04LILONGWE326.html">04LILONGWE326</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-219.1650 225.2420)" 
+            class="black degree1" id="04LILONGWE333">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-04-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/04/04LILONGWE333.html">04LILONGWE333</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(191.8960 122.6065)" 
+            class="black degree1" id="04LILONGWE375">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE375.html">04LILONGWE375</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(199.7994 410.0000)" 
+            class="black degree1" id="04LILONGWE376">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE376.html">04LILONGWE376</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-39.9815 51.0876)" 
+            class="black degree2" id="04LILONGWE381">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE381.html">04LILONGWE381</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(151.9026 -46.0461)" 
+            class="black degree1" id="04LILONGWE392">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE392.html">04LILONGWE392</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(11.3410 126.2445)" 
+            class="black degree2" id="04LILONGWE398">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE398.html">04LILONGWE398</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-24.9126 213.0510)" 
+            class="black degree3" id="04LILONGWE404">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE404.html">04LILONGWE404</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-67.7689 115.7718)" 
+            class="black degree5" id="04LILONGWE405">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE405.html">04LILONGWE405</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(196.5169 192.0577)" 
+            class="black degree1" id="04LILONGWE407">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE407.html">04LILONGWE407</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-211.8070 118.1263)" 
+            class="black degree1" id="04LILONGWE410">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE410.html">04LILONGWE410</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(203.6709 10.0812)" 
+            class="black degree1" id="04LILONGWE411">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE411.html">04LILONGWE411</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-5.7112 -16.4871)" 
+            class="black degree1" id="04LILONGWE413">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE413.html">04LILONGWE413</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(251.6099 63.8031)" 
+            class="black degree1" id="04LILONGWE434">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE434.html">04LILONGWE434</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(285.2943 142.2457)" 
+            class="black degree2" id="04LILONGWE438">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE438.html">04LILONGWE438</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(396.8094 175.2523)" 
+            class="black degree1" id="04LILONGWE439">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE439.html">04LILONGWE439</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(43.4741 -142.1614)" 
+            class="black degree4" id="04LILONGWE445">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE445.html">04LILONGWE445</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(71.3805 -287.0390)" 
+            class="black degree2" id="04LILONGWE449">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE449.html">04LILONGWE449</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-109.8412 322.4895)" 
+            class="black degree2" id="04LILONGWE450">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE450.html">04LILONGWE450</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-98.7897 -183.4216)" 
+            class="black degree2" id="04LILONGWE451">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE451.html">04LILONGWE451</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(126.7458 -370.9820)" 
+            class="black degree1" id="04LILONGWE452">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE452.html">04LILONGWE452</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-229.9032 -183.7860)" 
+            class="black degree4" id="04LILONGWE457">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-05-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04LILONGWE457.html">04LILONGWE457</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-191.4354 369.1079)" 
+            class="black degree1" id="04LILONGWE468">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE468.html">04LILONGWE468</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-196.1868 -290.5840)" 
+            class="black degree2" id="04LILONGWE473">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE473.html">04LILONGWE473</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-136.1171 -365.5442)" 
+            class="black degree2" id="04LILONGWE488">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE488.html">04LILONGWE488</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-62.2083 -410.0000)" 
+            class="black degree1" id="04LILONGWE493">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE493.html">04LILONGWE493</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-385.7459 -205.4501)" 
+            class="red degree1" id="04LILONGWE513">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04LILONGWE513</text>
+            
+        </g>
+        
+        <g transform="translate(-322.1630 -78.5321)" 
+            class="black degree3" id="04LILONGWE520">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE520.html">04LILONGWE520</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(108.1568 -228.0357)" 
+            class="black degree1" id="04LILONGWE523">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE523.html">04LILONGWE523</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-310.2385 -221.7461)" 
+            class="black degree2" id="04LILONGWE529">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-06-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04LILONGWE529.html">04LILONGWE529</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-359.8794 18.1145)" 
+            class="black degree1" id="04LILONGWE612">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-07-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/07/04LILONGWE612.html">04LILONGWE612</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-410.0000 -45.3559)" 
+            class="black degree1" id="04LILONGWE677">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2004-07-20
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/07/04LILONGWE677.html">04LILONGWE677</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

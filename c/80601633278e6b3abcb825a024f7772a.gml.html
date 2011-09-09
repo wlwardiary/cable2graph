@@ -1,0 +1,765 @@
+<html>
+<head>
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.8); 
+          stroke-width: 1; 
+          fill: rgba(255,255,255,0.5); 
+        }
+        #vertices .red circle { 
+          fill: rgba(255,0,0,0.5);   
+        }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1.0); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,255,255,0.9);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(255,255,255,0.6);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(255,255,255,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.4); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="800" height="680" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(400.0000,340.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-390.0000" y1="-63.4474" 
+              x2="-308.3669" y2="-32.2819" />
+    
+        <line x1="360.5261" y1="154.2109" 
+              x2="299.0037" y2="109.5713" />
+    
+        <line x1="123.7629" y1="-211.2550" 
+              x2="54.4773" y2="-236.0063" />
+    
+        <line x1="113.5312" y1="-162.9054" 
+              x2="245.2032" y2="-92.1741" />
+    
+        <line x1="192.8229" y1="43.5208" 
+              x2="282.3862" y2="98.4691" />
+    
+        <line x1="166.1497" y1="-90.2939" 
+              x2="119.3991" y2="-154.8079" />
+    
+        <line x1="-221.0339" y1="51.2458" 
+              x2="-292.0423" y2="-21.5565" />
+    
+        <line x1="246.8393" y1="-247.5480" 
+              x2="275.9820" y2="-164.5355" />
+    
+        <line x1="-10.4894" y1="-199.3301" 
+              x2="113.8021" y2="-210.3702" />
+    
+        <line x1="-86.6238" y1="207.5459" 
+              x2="-18.8703" y2="229.5735" />
+    
+        <line x1="-163.1160" y1="130.5367" 
+              x2="-93.6710" y2="200.4510" />
+    
+        <line x1="166.1497" y1="-90.2939" 
+              x2="190.8681" y2="33.7137" />
+    
+        <line x1="-127.1551" y1="-253.8118" 
+              x2="-217.5877" y2="-255.8364" />
+    
+        <line x1="201.0166" y1="-188.0499" 
+              x2="123.1421" y2="-165.6677" />
+    
+        <line x1="-366.3557" y1="122.4546" 
+              x2="-356.7836" y2="57.7333" />
+    
+        <line x1="-216.4530" y1="-71.3890" 
+              x2="-290.1409" y2="-33.3064" />
+    
+        <line x1="51.7912" y1="330.0000" 
+              x2="-32.4458" y2="303.0876" />
+    
+        <line x1="166.1497" y1="-90.2939" 
+              x2="127.0699" y2="-201.8176" />
+    
+        <line x1="-163.1160" y1="130.5367" 
+              x2="-215.1354" y2="59.3210" />
+    
+        <line x1="113.0726" y1="-279.0834" 
+              x2="122.2060" y2="-221.1331" />
+    
+        <line x1="390.0000" y1="-151.0244" 
+              x2="289.2877" y2="-154.7322" />
+    
+        <line x1="26.7461" y1="155.5836" 
+              x2="132.2737" y2="139.9615" />
+    
+        <line x1="192.8229" y1="43.5208" 
+              x2="146.8720" y2="129.6736" />
+    
+        <line x1="166.1497" y1="-90.2939" 
+              x2="270.6171" y2="-150.1299" />
+    
+        <line x1="-86.6238" y1="207.5459" 
+              x2="-173.6179" y2="242.5667" />
+    
+        <line x1="26.7461" y1="155.5836" 
+              x2="-77.5332" y2="203.3793" />
+    
+        <line x1="201.0166" y1="-188.0499" 
+              x2="270.0778" y2="-158.9797" />
+    
+        <line x1="201.0166" y1="-188.0499" 
+              x2="133.3401" y2="-208.3782" />
+    
+        <line x1="-127.1551" y1="-253.8118" 
+              x2="-19.5501" y2="-203.5613" />
+    
+        <line x1="-299.0246" y1="-28.7152" 
+              x2="-349.3963" y2="39.7846" />
+    
+        <line x1="-127.1551" y1="-253.8118" 
+              x2="-143.5824" y2="-320.2920" />
+    
+        <line x1="-41.9715" y1="300.0443" 
+              x2="-82.2765" y2="216.5515" />
+    
+        <line x1="279.2945" y1="-155.1001" 
+              x2="257.5129" y2="-96.8092" />
+    
+        <line x1="-10.4894" y1="-199.3301" 
+              x2="103.9365" y2="-165.7233" />
+    
+        <line x1="113.5312" y1="-162.9054" 
+              x2="51.7311" y2="-231.9207" />
+    
+        <line x1="-299.0246" y1="-28.7152" 
+              x2="-315.9727" y2="-111.3916" />
+    
+        <line x1="246.8393" y1="-247.5480" 
+              x2="133.3545" y2="-214.0834" />
+    
+        <line x1="113.0726" y1="-279.0834" 
+              x2="113.4918" y2="-172.9053" />
+    
+        <line x1="353.3117" y1="-27.8703" 
+              x2="262.5879" y2="-82.2974" />
+    
+        <line x1="142.1659" y1="138.4971" 
+              x2="193.5863" y2="206.4036" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(-366.3557 122.4546)" 
+            class="red degree1" id="04VIENNA347">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">04VIENNA347</text>
+            
+        </g>
+        
+        <g transform="translate(390.0000 -151.0244)" 
+            class="black degree1" id="05ANKARA1307">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ANKARA1307.html">05ANKARA1307</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(113.0726 -279.0834)" 
+            class="black degree2" id="05ANKARA1577">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ANKARA1577.html">05ANKARA1577</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(360.5261 154.2109)" 
+            class="black degree1" id="05ANKARA1627">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ANKARA1627.html">05ANKARA1627</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(26.7461 155.5836)" 
+            class="black degree2" id="05ANKARA1805">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-30
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ANKARA1805.html">05ANKARA1805</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(166.1497 -90.2939)" 
+            class="black degree4" id="05BRATISLAVA209">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05BRATISLAVA209.html">05BRATISLAVA209</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(192.8229 43.5208)" 
+            class="black degree3" id="05BRATISLAVA272">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05BRATISLAVA272.html">05BRATISLAVA272</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(201.0166 -188.0499)" 
+            class="black degree3" id="05DUBLIN323">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05DUBLIN323.html">05DUBLIN323</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -63.4474)" 
+            class="black degree1" id="05DUBLIN50">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05DUBLIN50.html">05DUBLIN50</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-216.4530 -71.3890)" 
+            class="black degree1" id="05MADRID113">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05MADRID113.html">05MADRID113</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(246.8393 -247.5480)" 
+            class="black degree2" id="05MADRID989">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05MADRID989.html">05MADRID989</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(51.7912 330.0000)" 
+            class="red degree1" id="05OTTAWA943">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05OTTAWA943</text>
+            
+        </g>
+        
+        <g transform="translate(-41.9715 300.0443)" 
+            class="black degree2" id="05OTTAWA970">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05OTTAWA970.html">05OTTAWA970</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-127.1551 -253.8118)" 
+            class="black degree3" id="05PARIS1708">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05PARIS1708.html">05PARIS1708</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Sur</tspan>
+                        <tspan class="rel">read through</tspan>
+                        <tspan class="a2">the non-paper</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-10.4894 -199.3301)" 
+            class="black degree3" id="05PARIS2471">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-12
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PARIS2471.html">05PARIS2471</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-163.1160 130.5367)" 
+            class="black degree2" id="05PARIS2601">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PARIS2601.html">05PARIS2601</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Vouland</tspan>
+                        <tspan class="rel">expressed appreciation for</tspan>
+                        <tspan class="a2">U.S. efforts</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-221.0339 51.2458)" 
+            class="black degree2" id="05PARIS285">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05PARIS285.html">05PARIS285</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">The disarmament bureau</tspan>
+                        <tspan class="rel">has</tspan>
+                        <tspan class="a2">an advisory role</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-227.5852 -256.0602)" 
+            class="red degree1" id="05SECSTATE39371">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05SECSTATE39371</text>
+            
+        </g>
+        
+        <g transform="translate(-145.9813 -330.0000)" 
+            class="red degree1" id="05SECSTATE41247">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05SECSTATE41247</text>
+            
+        </g>
+        
+        <g transform="translate(353.3117 -27.8703)" 
+            class="red degree1" id="05STATE35476">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE35476</text>
+            
+        </g>
+        
+        <g transform="translate(279.2945 -155.1001)" 
+            class="red degree5" id="05STATE36488">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE36488</text>
+            
+        </g>
+        
+        <g transform="translate(113.5312 -162.9054)" 
+            class="red degree6" id="05STATE39371">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE39371</text>
+            
+        </g>
+        
+        <g transform="translate(123.7629 -211.2550)" 
+            class="red degree6" id="05STATE41247">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE41247</text>
+            
+        </g>
+        
+        <g transform="translate(-299.0246 -28.7152)" 
+            class="red degree5" id="05STATE4828">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE4828</text>
+            
+        </g>
+        
+        <g transform="translate(290.9099 103.6985)" 
+            class="red degree2" id="05STATE49648">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE49648</text>
+            
+        </g>
+        
+        <g transform="translate(-86.6238 207.5459)" 
+            class="red degree5" id="05STATE55182">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE55182</text>
+            
+        </g>
+        
+        <g transform="translate(142.1659 138.4971)" 
+            class="red degree3" id="05STATE56903">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">05STATE56903</text>
+            
+        </g>
+        
+        <g transform="translate(-317.9809 -121.1879)" 
+            class="black degree1" id="05THEHAGUE167">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-25
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05THEHAGUE167.html">05THEHAGUE167</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-182.8945 246.3011)" 
+            class="black degree1" id="05THEHAGUE865">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05THEHAGUE865.html">05THEHAGUE865</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-9.3603 232.6653)" 
+            class="black degree1" id="05VIENNA1064">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05VIENNA1064.html">05VIENNA1064</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(-355.3205 47.8409)" 
+            class="black degree2" id="05VIENNA132">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05VIENNA132.html">05VIENNA132</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">Austria</tspan>
+                        <tspan class="rel">would also send a representative to</tspan>
+                        <tspan class="a2">the Legal Committee meetings</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(254.0126 -87.4419)" 
+            class="black degree3" id="05VIENNA735">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05VIENNA735.html">05VIENNA735</a>
+                
+                </text>
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="20" class="sentence">
+                        <tspan class="a1">the idea of a Nonproliferation Seminar</tspan>
+                        <tspan class="rel">would be welcome in</tspan>
+                        <tspan class="a2">the Australia Group</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(45.0602 -239.3704)" 
+            class="black degree2" id="05VIENNA875">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-03-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05VIENNA875.html">05VIENNA875</a>
+                
+                </text>
+                
+            
+        </g>
+        
+        <g transform="translate(199.6231 214.3759)" 
+            class="black degree1" id="05WELLINGTON294">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-04-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05WELLINGTON294.html">05WELLINGTON294</a>
+                
+                </text>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>
