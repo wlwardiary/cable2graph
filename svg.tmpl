@@ -78,17 +78,23 @@
                 <text x="0" y="5">{{ v.label }}</text>
             {% else %}
                 <text x="0" y="5" class="label">
+                {% if v.uri %} 
                     <a xlink:href="{{v.uri}}">{{ v.label }}</a>
+                {% else %}
+                    {{ v.label }}
+                {% endif %}
                 </text>
-                <g id="sentences"> 
-                {% for s in v.sentences %}
-                <text x="-200" y="{{ loop.index * 20 }}" class="sentence">
-                    <tspan class="a1">{{ s.a1 }}</tspan>
-                    <tspan class="rel">{{ s.rel }}</tspan>
-                    <tspan class="a2">{{ s.a2 }}</tspan>
-                </text>
-                {% endfor %}
-                </g>
+                {% if v.sentences %}
+                    <g id="sentences"> 
+                    {% for s in v.sentences %}
+                    <text x="-200" y="{{ loop.index * 20 }}" class="sentence">
+                        <tspan class="a1">{{ s.a1 }}</tspan>
+                        <tspan class="rel">{{ s.rel }}</tspan>
+                        <tspan class="a2">{{ s.a2 }}</tspan>
+                    </text>
+                    {% endfor %}
+                    </g>
+                {% endif %}
             {% endif %}
         </g>
         {% endfor %}
