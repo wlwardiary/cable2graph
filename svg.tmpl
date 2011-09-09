@@ -29,7 +29,11 @@
         }
 
         #vertices text.sentence { 
-          text-anchor: start;
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
         } 
 
         #vertices text.sentence tspan.a1 { 
@@ -67,7 +71,8 @@
     </g>
     <g id="vertices">
         {% for v in vertices %}
-        <g transform="translate({{ v.x }} {{ v.y }})" class="{{ v.class }}">
+        <g transform="translate({{ v.x }} {{ v.y }})" 
+            class="{{ v.class }}" id="{{ v.label }}">
             <circle cx="0" cy="0" r="10" />
             {% if v.class == 'red' %}
                 <text x="0" y="5">{{ v.label }}</text>
@@ -75,6 +80,7 @@
                 <text x="0" y="5" class="label">
                     <a xlink:href="{{v.uri}}">{{ v.label }}</a>
                 </text>
+                <g id="sentences"> 
                 {% for s in v.sentences %}
                 <text x="-200" y="{{ loop.index * 20 }}" class="sentence">
                     <tspan class="a1">{{ s.a1 }}</tspan>
@@ -82,6 +88,7 @@
                     <tspan class="a2">{{ s.a2 }}</tspan>
                 </text>
                 {% endfor %}
+                </g>
             {% endif %}
         </g>
         {% endfor %}
