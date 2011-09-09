@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:33 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:30 2011"
 Version 1
 graph
 [
@@ -6,235 +6,267 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05RABAT1636"
-    place "RABAT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05RABAT1636"
+    place "RABAT"
   ]
   node
   [
     id 1
-    color "red"
-    label "05RABAT2311"
-    place "RABAT"
     degree 2
     constraint 0.750625
+    color "red"
+    timestamp ""
+    label "05RABAT2311"
+    place "RABAT"
   ]
   node
   [
     id 2
-    color "red"
-    label "06BRASILIA2021"
-    place "BRASILIA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06BRASILIA2021"
+    place "BRASILIA"
   ]
   node
   [
     id 3
-    color "red"
-    label "06CAPETOWN293"
-    place "CAPETOWN"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06CAPETOWN293"
+    place "CAPETOWN"
   ]
   node
   [
     id 4
-    color "red"
-    label "06MOSCOW9690"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06MOSCOW9690"
+    place "MOSCOW"
   ]
   node
   [
     id 5
-    color "red"
-    label "06PRETORIA1332"
-    place "PRETORIA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06PRETORIA1332"
+    place "PRETORIA"
   ]
   node
   [
     id 6
-    color "red"
-    label "06PRETORIA2751"
-    place "PRETORIA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06PRETORIA2751"
+    place "PRETORIA"
   ]
   node
   [
     id 7
-    color "red"
-    label "06PRETORIA3659"
-    place "PRETORIA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06PRETORIA3659"
+    place "PRETORIA"
   ]
   node
   [
     id 8
-    color "None"
-    label "06PRETORIA4074"
-    place "PRETORIA"
     degree 7
     constraint 0.2
+    color "black"
+    timestamp "1159534500"
+    label "06PRETORIA4074"
+    place "PRETORIA"
   ]
   node
   [
     id 9
-    color "None"
-    label "06RABAT151"
-    place "RABAT"
     degree 4
     constraint 0.610278
+    color "black"
+    timestamp "1138625820"
+    label "06RABAT151"
+    place "RABAT"
   ]
   node
   [
     id 10
-    color "None"
-    label "06RABAT1643"
-    place "RABAT"
     degree 3
     constraint 0.444722
+    color "black"
+    timestamp "1157532960"
+    label "06RABAT1643"
+    place "RABAT"
   ]
   node
   [
     id 11
-    color "None"
-    label "06RABAT1706"
-    place "RABAT"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1158161160"
+    label "06RABAT1706"
+    place "RABAT"
   ]
   node
   [
     id 12
-    color "None"
-    label "06RABAT2205"
-    place "RABAT"
     degree 2
     constraint 0.750625
+    color "black"
+    timestamp "1164988440"
+    label "06RABAT2205"
+    place "RABAT"
   ]
   node
   [
     id 13
-    color "None"
-    label "06RABAT732"
-    place "RABAT"
     degree 5
     constraint 0.445278
+    color "black"
+    timestamp "1145609640"
+    label "06RABAT732"
+    place "RABAT"
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "6983820"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "19378800"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "628200"
     weight 1
   ]
   edge
   [
     source 13
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "18907140"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "11923320"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "26362620"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "0"
     weight 1
   ]
 ]

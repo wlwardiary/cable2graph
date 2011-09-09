@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:08 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:31 2011"
 Version 1
 graph
 [
@@ -6,190 +6,215 @@ graph
   node
   [
     id 0
-    color "None"
-    label "03ABUDHABI5056"
-    place "ABUDHABI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1069574640"
+    label "03ABUDHABI5056"
+    place "ABUDHABI"
   ]
   node
   [
     id 1
-    color "None"
-    label "03AMMAN7422"
-    place "AMMAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1068987120"
+    label "03AMMAN7422"
+    place "AMMAN"
   ]
   node
   [
     id 2
-    color "None"
-    label "03AMMAN7430"
-    place "AMMAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1068992880"
+    label "03AMMAN7430"
+    place "AMMAN"
   ]
   node
   [
     id 3
-    color "None"
-    label "03ANKARA7184"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1069239900"
+    label "03ANKARA7184"
+    place "ANKARA"
   ]
   node
   [
     id 4
-    color "None"
-    label "03KUWAIT5341"
-    place "KUWAIT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1069498440"
+    label "03KUWAIT5341"
+    place "KUWAIT"
   ]
   node
   [
     id 5
-    color "None"
-    label "03SANTODOMINGO6670"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1069271820"
+    label "03SANTODOMINGO6670"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 6
-    color "None"
-    label "03SANTODOMINGO6706"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1069362660"
+    label "03SANTODOMINGO6706"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 7
-    color "None"
-    label "03SANTODOMINGO6707"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1069362780"
+    label "03SANTODOMINGO6707"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 8
-    color "None"
-    label "03SANTODOMINGO7194"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1071074220"
+    label "03SANTODOMINGO7194"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 9
-    color "red"
-    label "03STATE309039"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03STATE309039"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "red"
-    label "03STATE317277"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "03STATE317277"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "03STATE318063"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "03STATE318063"
+    place "STATE"
   ]
   node
   [
     id 12
-    color "red"
-    label "03STATE321136"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03STATE321136"
+    place "STATE"
   ]
   edge
   [
     source 12
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "1711440"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
 ]

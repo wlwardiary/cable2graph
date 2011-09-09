@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:57 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:02:32 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color "None"
-    label "04HANOI634"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1078217820"
+    label "04HANOI634"
+    place "HANOI"
   ]
   node
   [
     id 1
-    color "None"
-    label "04MADRID517"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1076680740"
+    label "04MADRID517"
+    place "MADRID"
   ]
   node
   [
     id 2
-    color "red"
-    label "04STATE28688"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "04STATE28688"
+    place "STATE"
   ]
   node
   [
     id 3
-    color "red"
-    label "04STATE96070"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04STATE96070"
+    place "STATE"
   ]
   node
   [
     id 4
-    color "None"
-    label "04TEGUCIGALPA1197"
-    place "TEGUCIGALPA"
     degree 7
     constraint 0.142857
+    color "black"
+    timestamp "1085429520"
+    label "04TEGUCIGALPA1197"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 5
-    color "red"
-    label "04TEGUCIGALPA1951"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04TEGUCIGALPA1951"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 6
-    color "red"
-    label "04TEGUCIGALPA224"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04TEGUCIGALPA224"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 7
-    color "red"
-    label "04TEGUCIGALPA2880"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04TEGUCIGALPA2880"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 8
-    color "red"
-    label "04TEGUCIGALPA374"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04TEGUCIGALPA374"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 9
-    color "None"
-    label "04TEGUCIGALPA542"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1078756260"
+    label "04TEGUCIGALPA542"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 10
-    color "red"
-    label "04TEGUCIGALPA883"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04TEGUCIGALPA883"
+    place "TEGUCIGALPA"
   ]
   edge
   [
     source 9
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "6673260"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
 ]

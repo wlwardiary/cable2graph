@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:46 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:53 2011"
 Version 1
 graph
 [
@@ -6,187 +6,212 @@ graph
   node
   [
     id 0
-    color "None"
-    label "06HELSINKI1058"
-    place "HELSINKI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1161084600"
+    label "06HELSINKI1058"
+    place "HELSINKI"
   ]
   node
   [
     id 1
-    color "None"
-    label "06HELSINKI1093"
-    place "HELSINKI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1162186800"
+    label "06HELSINKI1093"
+    place "HELSINKI"
   ]
   node
   [
     id 2
-    color "red"
-    label "06RIGA481"
-    place "RIGA"
     degree 4
     constraint 0.40625
+    color "red"
+    timestamp ""
+    label "06RIGA481"
+    place "RIGA"
   ]
   node
   [
     id 3
-    color "None"
-    label "06RIGA519"
-    place "RIGA"
     degree 4
     constraint 0.953125
+    color "black"
+    timestamp "1151904480"
+    label "06RIGA519"
+    place "RIGA"
   ]
   node
   [
     id 4
-    color "None"
-    label "06RIGA566"
-    place "RIGA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1153226280"
+    label "06RIGA566"
+    place "RIGA"
   ]
   node
   [
     id 5
-    color "None"
-    label "06RIGA820"
-    place "RIGA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1160457480"
+    label "06RIGA820"
+    place "RIGA"
   ]
   node
   [
     id 6
-    color "None"
-    label "06RIGA852"
-    place "RIGA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1161151080"
+    label "06RIGA852"
+    place "RIGA"
   ]
   node
   [
     id 7
-    color "None"
-    label "06RIGA870"
-    place "RIGA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1161608940"
+    label "06RIGA870"
+    place "RIGA"
   ]
   node
   [
     id 8
-    color "red"
-    label "06VILNIUS953"
-    place "VILNIUS"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06VILNIUS953"
+    place "VILNIUS"
   ]
   node
   [
     id 9
-    color "None"
-    label "06WARSAW2238"
-    place "WARSAW"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1161341640"
+    label "06WARSAW2238"
+    place "WARSAW"
   ]
   node
   [
     id 10
-    color "None"
-    label "06WARSAW2390"
-    place "WARSAW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1163514960"
+    label "06WARSAW2390"
+    place "WARSAW"
   ]
   node
   [
     id 11
-    color "None"
-    label "07RIGA110"
-    place "RIGA"
     degree 2
     constraint 0.953125
+    color "black"
+    timestamp "1171536120"
+    label "07RIGA110"
+    place "RIGA"
   ]
   edge
   [
     source 1
     target 0
+    duration "1102200"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "19631640"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "524340"
     weight 1
   ]
   edge
   [
     source 11
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "66480"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "2173320"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "693600"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "0"
     weight 1
   ]
 ]

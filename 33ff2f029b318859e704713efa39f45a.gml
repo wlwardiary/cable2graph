@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:34 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:39 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06BUENOSAIRES2749"
-    place "BUENOSAIRES"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "06BUENOSAIRES2749"
+    place "BUENOSAIRES"
   ]
   node
   [
     id 1
-    color "None"
-    label "06BUENOSAIRES2782"
-    place "BUENOSAIRES"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1166545380"
+    label "06BUENOSAIRES2782"
+    place "BUENOSAIRES"
   ]
   node
   [
     id 2
-    color "None"
-    label "06BUENOSAIRES2805"
-    place "BUENOSAIRES"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1166721120"
+    label "06BUENOSAIRES2805"
+    place "BUENOSAIRES"
   ]
   node
   [
     id 3
-    color "None"
-    label "07BERLIN493"
-    place "BERLIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173455700"
+    label "07BERLIN493"
+    place "BERLIN"
   ]
   node
   [
     id 4
-    color "red"
-    label "07BUENOSAIRES46"
-    place "BUENOSAIRES"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07BUENOSAIRES46"
+    place "BUENOSAIRES"
   ]
   node
   [
     id 5
-    color "None"
-    label "07MADRID457"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173455400"
+    label "07MADRID457"
+    place "MADRID"
   ]
   node
   [
     id 6
-    color "None"
-    label "07NEWDELHI1216"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173785940"
+    label "07NEWDELHI1216"
+    place "NEWDELHI"
   ]
   node
   [
     id 7
-    color "None"
-    label "07RABAT458"
-    place "RABAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173691260"
+    label "07RABAT458"
+    place "RABAT"
   ]
   node
   [
     id 8
-    color "None"
-    label "07ROME478"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173623160"
+    label "07ROME478"
+    place "ROME"
   ]
   node
   [
     id 9
-    color "None"
-    label "07SINGAPORE480"
-    place "SINGAPORE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173418380"
+    label "07SINGAPORE480"
+    place "SINGAPORE"
   ]
   node
   [
     id 10
-    color "None"
-    label "07STATE29082"
-    place "STATE"
     degree 9
     constraint 0.111111
+    color "black"
+    timestamp "1173326340"
+    label "07STATE29082"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "None"
-    label "07TELAVIV736"
-    place "TELAVIV"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173356700"
+    label "07TELAVIV736"
+    place "TELAVIV"
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "296820"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "30360"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "364920"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "129360"
     weight 1
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 5
+    duration "129060"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "459600"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "92040"
     weight 1
   ]
 ]

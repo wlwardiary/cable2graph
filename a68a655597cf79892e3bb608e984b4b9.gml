@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:30 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:03 2011"
 Version 1
 graph
 [
@@ -6,292 +6,331 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08BEIJING3175"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1219131600"
+    label "08BEIJING3175"
+    place "BEIJING"
   ]
   node
   [
     id 1
-    color "red"
-    label "08ISLAMABAD210"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08ISLAMABAD210"
+    place "ISLAMABAD"
   ]
   node
   [
     id 2
-    color "None"
-    label "08ISLAMABAD2736"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1218855000"
+    label "08ISLAMABAD2736"
+    place "ISLAMABAD"
   ]
   node
   [
     id 3
-    color "red"
-    label "08ISLAMABAD2741"
-    place "ISLAMABAD"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08ISLAMABAD2741"
+    place "ISLAMABAD"
   ]
   node
   [
     id 4
-    color "red"
-    label "08ISLAMABAD2742"
-    place "ISLAMABAD"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08ISLAMABAD2742"
+    place "ISLAMABAD"
   ]
   node
   [
     id 5
-    color "None"
-    label "08ISLAMABAD2750"
-    place "ISLAMABAD"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1219044360"
+    label "08ISLAMABAD2750"
+    place "ISLAMABAD"
   ]
   node
   [
     id 6
-    color "None"
-    label "08ISLAMABAD2802"
-    place "ISLAMABAD"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1219493520"
+    label "08ISLAMABAD2802"
+    place "ISLAMABAD"
   ]
   node
   [
     id 7
-    color "None"
-    label "08KABUL2233"
-    place "KABUL"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1219311720"
+    label "08KABUL2233"
+    place "KABUL"
   ]
   node
   [
     id 8
-    color "None"
-    label "08LONDON2143"
-    place "LONDON"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1219130520"
+    label "08LONDON2143"
+    place "LONDON"
   ]
   node
   [
     id 9
-    color "None"
-    label "08LONDON2243"
-    place "LONDON"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1220510640"
+    label "08LONDON2243"
+    place "LONDON"
   ]
   node
   [
     id 10
-    color "None"
-    label "08MOSCOW2502"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1219317300"
+    label "08MOSCOW2502"
+    place "MOSCOW"
   ]
   node
   [
     id 11
-    color "red"
-    label "08MOSCOW2575"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08MOSCOW2575"
+    place "MOSCOW"
   ]
   node
   [
     id 12
-    color "None"
-    label "08MOSCOW2584"
-    place "MOSCOW"
     degree 3
     constraint 0.459877
+    color "black"
+    timestamp "1219907340"
+    label "08MOSCOW2584"
+    place "MOSCOW"
   ]
   node
   [
     id 13
-    color "None"
-    label "08MOSCOW2714"
-    place "MOSCOW"
     degree 3
     constraint 0.459877
+    color "black"
+    timestamp "1221041520"
+    label "08MOSCOW2714"
+    place "MOSCOW"
   ]
   node
   [
     id 14
-    color "None"
-    label "08NEWDELHI2246"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1219139760"
+    label "08NEWDELHI2246"
+    place "NEWDELHI"
   ]
   node
   [
     id 15
-    color "None"
-    label "08NEWDELHI2401"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1220672220"
+    label "08NEWDELHI2401"
+    place "NEWDELHI"
   ]
   node
   [
     id 16
-    color "None"
-    label "08NEWDELHI2532"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1221821160"
+    label "08NEWDELHI2532"
+    place "NEWDELHI"
   ]
   node
   [
     id 17
-    color "None"
-    label "08NEWDELHI2722"
-    place "NEWDELHI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1224148320"
+    label "08NEWDELHI2722"
+    place "NEWDELHI"
   ]
   node
   [
     id 18
-    color "red"
-    label "08STATE88734"
-    place "STATE"
     degree 6
     constraint 0.209877
+    color "red"
+    timestamp ""
+    label "08STATE88734"
+    place "STATE"
   ]
   edge
   [
     source 18
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "1724220"
     weight 1
   ]
   edge
   [
     source 18
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 2
+    duration "189360"
     weight 1
   ]
   edge
   [
     source 18
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "86160"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 16
+    duration "2327160"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "1380120"
     weight 1
   ]
   edge
   [
     source 17
     target 14
+    duration "5008560"
     weight 1
   ]
   edge
   [
     source 17
     target 15
+    duration "3476100"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "1134180"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 0
+    duration "0"
     weight 1
   ]
 ]

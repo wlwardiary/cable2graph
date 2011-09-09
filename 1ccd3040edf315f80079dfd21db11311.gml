@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:15 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:40 2011"
 Version 1
 graph
 [
@@ -6,214 +6,243 @@ graph
   node
   [
     id 0
-    color "red"
-    label "03BRUSSELS3428"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03BRUSSELS3428"
+    place "BRUSSELS"
   ]
   node
   [
     id 1
-    color "red"
-    label "03MILAN465"
-    place "MILAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03MILAN465"
+    place "MILAN"
   ]
   node
   [
     id 2
-    color "red"
-    label "03MILAN488"
-    place "MILAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03MILAN488"
+    place "MILAN"
   ]
   node
   [
     id 3
-    color "red"
-    label "03MILAN512"
-    place "MILAN"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03MILAN512"
+    place "MILAN"
   ]
   node
   [
     id 4
-    color "red"
-    label "03MILAN523"
-    place "MILAN"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03MILAN523"
+    place "MILAN"
   ]
   node
   [
     id 5
-    color "red"
-    label "03MILAN539"
-    place "MILAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03MILAN539"
+    place "MILAN"
   ]
   node
   [
     id 6
-    color "None"
-    label "03ROME2331"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1054102020"
+    label "03ROME2331"
+    place "ROME"
   ]
   node
   [
     id 7
-    color "None"
-    label "03ROME3481"
-    place "ROME"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1059658320"
+    label "03ROME3481"
+    place "ROME"
   ]
   node
   [
     id 8
-    color "None"
-    label "03ROME3687"
-    place "ROME"
     degree 10
     constraint 0.125
+    color "black"
+    timestamp "1060848480"
+    label "03ROME3687"
+    place "ROME"
   ]
   node
   [
     id 9
-    color "None"
-    label "03ROME5127"
-    place "ROME"
     degree 7
     constraint 0.2
+    color "black"
+    timestamp "1068708660"
+    label "03ROME5127"
+    place "ROME"
   ]
   node
   [
     id 10
-    color "None"
-    label "03ROME5149"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1068738780"
+    label "03ROME5149"
+    place "ROME"
   ]
   node
   [
     id 11
-    color "red"
-    label "03VATICAN3584"
-    place "VATICAN"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03VATICAN3584"
+    place "VATICAN"
   ]
   node
   [
     id 12
-    color "None"
-    label "03VATICAN4859"
-    place "VATICAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1066896720"
+    label "03VATICAN4859"
+    place "VATICAN"
   ]
   edge
   [
     source 8
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "1190160"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "30120"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "6746460"
     weight 1
   ]
   edge
   [
     source 8
     target 8
+    duration "9694620"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "9050340"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 9
+    duration "1485360"
     weight 1
   ]
 ]

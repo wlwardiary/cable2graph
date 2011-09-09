@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:25 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:57 2011"
 Version 1
 graph
 [
@@ -6,190 +6,216 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08BAGHDAD2271"
-    place "BAGHDAD"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1216653720"
+    label "08BAGHDAD2271"
+    place "BAGHDAD"
   ]
   node
   [
     id 1
-    color "red"
-    label "08BAGHDAD2280"
-    place "BAGHDAD"
     degree 6
     constraint 0.335069
+    color "red"
+    timestamp ""
+    label "08BAGHDAD2280"
+    place "BAGHDAD"
   ]
   node
   [
     id 2
-    color "None"
-    label "08BAGHDAD2300"
-    place "BAGHDAD"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1216870440"
+    label "08BAGHDAD2300"
+    place "BAGHDAD"
   ]
   node
   [
     id 3
-    color "None"
-    label "08BAGHDAD2305"
-    place "BAGHDAD"
     degree 4
     constraint 0.585938
+    color "black"
+    timestamp "1216900500"
+    label "08BAGHDAD2305"
+    place "BAGHDAD"
   ]
   node
   [
     id 4
-    color "red"
-    label "08BAGHDAD2315"
-    place "BAGHDAD"
     degree 3
     constraint 0.458333
+    color "red"
+    timestamp ""
+    label "08BAGHDAD2315"
+    place "BAGHDAD"
   ]
   node
   [
     id 5
-    color "None"
-    label "08BAGHDAD2347"
-    place "BAGHDAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1217218620"
+    label "08BAGHDAD2347"
+    place "BAGHDAD"
   ]
   node
   [
     id 6
-    color "None"
-    label "08BAGHDAD2357"
-    place "BAGHDAD"
     degree 4
     constraint 0.555122
+    color "black"
+    timestamp "1217251140"
+    label "08BAGHDAD2357"
+    place "BAGHDAD"
   ]
   node
   [
     id 7
-    color "None"
-    label "08BAGHDAD2358"
-    place "BAGHDAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1217251140"
+    label "08BAGHDAD2358"
+    place "BAGHDAD"
   ]
   node
   [
     id 8
-    color "None"
-    label "08BAGHDAD2411"
-    place "BAGHDAD"
     degree 2
     constraint 0.730903
+    color "black"
+    timestamp "1217587560"
+    label "08BAGHDAD2411"
+    place "BAGHDAD"
   ]
   node
   [
     id 9
-    color "None"
-    label "08BAGHDAD2422"
-    place "BAGHDAD"
     degree 4
     constraint 0.555122
+    color "black"
+    timestamp "1217830080"
+    label "08BAGHDAD2422"
+    place "BAGHDAD"
   ]
   node
   [
     id 10
-    color "None"
-    label "08BAGHDAD3896"
-    place "BAGHDAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1229245140"
+    label "08BAGHDAD3896"
+    place "BAGHDAD"
   ]
   edge
   [
     source 5
     target 0
+    duration "564900"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "578940"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "350640"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "929580"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "216720"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "687060"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
 ]

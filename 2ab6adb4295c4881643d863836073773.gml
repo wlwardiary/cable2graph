@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:32 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:14 2011"
 Version 1
 graph
 [
@@ -6,226 +6,256 @@ graph
   node
   [
     id 0
-    color "red"
-    label "09BANGKOK10900"
-    place "BANGKOK"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BANGKOK10900"
+    place "BANGKOK"
   ]
   node
   [
     id 1
-    color "None"
-    label "09BANGKOK456"
-    place "BANGKOK"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1235377260"
+    label "09BANGKOK456"
+    place "BANGKOK"
   ]
   node
   [
     id 2
-    color "None"
-    label "09BEIJING656"
-    place "BEIJING"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1236916320"
+    label "09BEIJING656"
+    place "BEIJING"
   ]
   node
   [
     id 3
-    color "None"
-    label "09BOGOTA647"
-    place "BOGOTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1235654580"
+    label "09BOGOTA647"
+    place "BOGOTA"
   ]
   node
   [
     id 4
-    color "None"
-    label "09BRASILIA305"
-    place "BRASILIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1236946440"
+    label "09BRASILIA305"
+    place "BRASILIA"
   ]
   node
   [
     id 5
-    color "None"
-    label "09GRENADA14"
-    place "GRENADA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1236027180"
+    label "09GRENADA14"
+    place "GRENADA"
   ]
   node
   [
     id 6
-    color "None"
-    label "09JAKARTA317"
-    place "JAKARTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1235466300"
+    label "09JAKARTA317"
+    place "JAKARTA"
   ]
   node
   [
     id 7
-    color "None"
-    label "09LISBON118"
-    place "LISBON"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1235576520"
+    label "09LISBON118"
+    place "LISBON"
   ]
   node
   [
     id 8
-    color "None"
-    label "09MOSCOW498"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1235745120"
+    label "09MOSCOW498"
+    place "MOSCOW"
   ]
   node
   [
     id 9
-    color "None"
-    label "09NEWDELHI433"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1236325920"
+    label "09NEWDELHI433"
+    place "NEWDELHI"
   ]
   node
   [
     id 10
-    color "None"
-    label "09PORTOFSPAIN85"
-    place "PORTOFSPAIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1236014520"
+    label "09PORTOFSPAIN85"
+    place "PORTOFSPAIN"
   ]
   node
   [
     id 11
-    color "None"
-    label "09SINGAPORE171"
-    place "SINGAPORE"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1235697060"
+    label "09SINGAPORE171"
+    place "SINGAPORE"
   ]
   node
   [
     id 12
-    color "red"
-    label "09SINGAPORE69110"
-    place "SINGAPORE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SINGAPORE69110"
+    place "SINGAPORE"
   ]
   node
   [
     id 13
-    color "red"
-    label "09STATE16255"
-    place "STATE"
     degree 11
     constraint 0.0909091
+    color "red"
+    timestamp ""
+    label "09STATE16255"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "red"
-    label "09STATE17673"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09STATE17673"
+    place "STATE"
   ]
   edge
   [
     source 13
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "0"
     weight 1
   ]
 ]

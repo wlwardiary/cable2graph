@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:22:17 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:11:06 2011"
 Version 1
 graph
 [
@@ -6,250 +6,283 @@ graph
   node
   [
     id 0
-    color "None"
-    label "90ACCRA7474"
-    place "ACCRA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "659374620"
+    label "90ACCRA7474"
+    place "ACCRA"
   ]
   node
   [
     id 1
-    color "None"
-    label "90ADDISABABA5620"
-    place "ADDISABABA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "658741620"
+    label "90ADDISABABA5620"
+    place "ADDISABABA"
   ]
   node
   [
     id 2
-    color "red"
-    label "90BOGOTA14054"
-    place "BOGOTA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "90BOGOTA14054"
+    place "BOGOTA"
   ]
   node
   [
     id 3
-    color "None"
-    label "90BOGOTA18530"
-    place "BOGOTA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "659140440"
+    label "90BOGOTA18530"
+    place "BOGOTA"
   ]
   node
   [
     id 4
-    color "red"
-    label "90BOGOTA5568"
-    place "BOGOTA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "90BOGOTA5568"
+    place "BOGOTA"
   ]
   node
   [
     id 5
-    color "None"
-    label "90COLOMBO7592"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "658753980"
+    label "90COLOMBO7592"
+    place "COLOMBO"
   ]
   node
   [
     id 6
-    color "None"
-    label "90HAVANA6415"
-    place "HAVANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "656886540"
+    label "90HAVANA6415"
+    place "HAVANA"
   ]
   node
   [
     id 7
-    color "None"
-    label "90ISLAMABAD22570"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "658730700"
+    label "90ISLAMABAD22570"
+    place "ISLAMABAD"
   ]
   node
   [
     id 8
-    color "None"
-    label "90JAKARTA16523"
-    place "JAKARTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "658988940"
+    label "90JAKARTA16523"
+    place "JAKARTA"
   ]
   node
   [
     id 9
-    color "red"
-    label "90KHARTOUM11253"
-    place "KHARTOUM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "90KHARTOUM11253"
+    place "KHARTOUM"
   ]
   node
   [
     id 10
-    color "None"
-    label "90KHARTOUM11358"
-    place "KHARTOUM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "657288480"
+    label "90KHARTOUM11358"
+    place "KHARTOUM"
   ]
   node
   [
     id 11
-    color "red"
-    label "90KHARTOUM7788"
-    place "KHARTOUM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "90KHARTOUM7788"
+    place "KHARTOUM"
   ]
   node
   [
     id 12
-    color "None"
-    label "90KINSHASA16691"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "657986700"
+    label "90KINSHASA16691"
+    place "KINSHASA"
   ]
   node
   [
     id 13
-    color "None"
-    label "90MADRID12668"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "657383100"
+    label "90MADRID12668"
+    place "MADRID"
   ]
   node
   [
     id 14
-    color "None"
-    label "90RIYADH10007"
-    place "RIYADH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "658573320"
+    label "90RIYADH10007"
+    place "RIYADH"
   ]
   node
   [
     id 15
-    color "red"
-    label "90STATE355397"
-    place "STATE"
     degree 12
     constraint 0.0833333
+    color "red"
+    timestamp ""
+    label "90STATE355397"
+    place "STATE"
   ]
   node
   [
     id 16
-    color "None"
-    label "90ULAANBAATAR760"
-    place "ULAANBAATAR"
     degree 1
     constraint 1
+    color "black"
+    timestamp "657689400"
+    label "90ULAANBAATAR760"
+    place "ULAANBAATAR"
   ]
   edge
   [
     source 15
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "0"
     weight 1
   ]
 ]

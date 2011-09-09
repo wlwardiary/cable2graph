@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:26 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:58 2011"
 Version 1
 graph
 [
@@ -6,301 +6,341 @@ graph
   node
   [
     id 0
-    color "red"
-    label "08BAMAKO866"
-    place "BAMAKO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BAMAKO866"
+    place "BAMAKO"
   ]
   node
   [
     id 1
-    color "red"
-    label "08BEIJING4098"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIJING4098"
+    place "BEIJING"
   ]
   node
   [
     id 2
-    color "red"
-    label "08CONAKRY665"
-    place "CONAKRY"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08CONAKRY665"
+    place "CONAKRY"
   ]
   node
   [
     id 3
-    color "None"
-    label "08KINSHASA944"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225279020"
+    label "08KINSHASA944"
+    place "KINSHASA"
   ]
   node
   [
     id 4
-    color "None"
-    label "08KINSHASA945"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1225294980"
+    label "08KINSHASA945"
+    place "KINSHASA"
   ]
   node
   [
     id 5
-    color "None"
-    label "08KINSHASA946"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1225309080"
+    label "08KINSHASA946"
+    place "KINSHASA"
   ]
   node
   [
     id 6
-    color "None"
-    label "08KINSHASA952"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1225367940"
+    label "08KINSHASA952"
+    place "KINSHASA"
   ]
   node
   [
     id 7
-    color "None"
-    label "08KINSHASA960"
-    place "KINSHASA"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1225710000"
+    label "08KINSHASA960"
+    place "KINSHASA"
   ]
   node
   [
     id 8
-    color "None"
-    label "08KINSHASA962"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225726200"
+    label "08KINSHASA962"
+    place "KINSHASA"
   ]
   node
   [
     id 9
-    color "red"
-    label "08KINSHASA968"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08KINSHASA968"
+    place "KINSHASA"
   ]
   node
   [
     id 10
-    color "None"
-    label "08KINSHASA985"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1226054700"
+    label "08KINSHASA985"
+    place "KINSHASA"
   ]
   node
   [
     id 11
-    color "None"
-    label "08KOLKATA300"
-    place "KOLKATA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225366080"
+    label "08KOLKATA300"
+    place "KOLKATA"
   ]
   node
   [
     id 12
-    color "None"
-    label "08NAIROBI2513"
-    place "NAIROBI"
     degree 2
     constraint 0.888889
+    color "black"
+    timestamp "1225335420"
+    label "08NAIROBI2513"
+    place "NAIROBI"
   ]
   node
   [
     id 13
-    color "None"
-    label "08NAIROBI2519"
-    place "NAIROBI"
     degree 3
     constraint 0.558642
+    color "black"
+    timestamp "1225375200"
+    label "08NAIROBI2519"
+    place "NAIROBI"
   ]
   node
   [
     id 14
-    color "None"
-    label "08NAIROBI2527"
-    place "NAIROBI"
     degree 3
     constraint 0.558642
+    color "black"
+    timestamp "1225452600"
+    label "08NAIROBI2527"
+    place "NAIROBI"
   ]
   node
   [
     id 15
-    color "None"
-    label "08NAIROBI2555"
-    place "NAIROBI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225891800"
+    label "08NAIROBI2555"
+    place "NAIROBI"
   ]
   node
   [
     id 16
-    color "red"
-    label "08NOGALES242"
-    place "NOGALES"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08NOGALES242"
+    place "NOGALES"
   ]
   node
   [
     id 17
-    color "None"
-    label "08STATE116029"
-    place "STATE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225395900"
+    label "08STATE116029"
+    place "STATE"
   ]
   node
   [
     id 18
-    color "None"
-    label "08STATE116467"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1225468680"
+    label "08STATE116467"
+    place "STATE"
   ]
   node
   [
     id 19
-    color "None"
-    label "08STATE117478"
-    place "STATE"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1225827720"
+    label "08STATE117478"
+    place "STATE"
   ]
   edge
   [
     source 19
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "342060"
     weight 1
   ]
   edge
   [
     source 19
     target 13
+    duration "452520"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "344700"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 7
+    duration "117720"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "415020"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "39780"
     weight 1
   ]
   edge
   [
     source 17
     target 7
+    duration "314100"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "14100"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "439200"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "77400"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "16200"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "30060"
     weight 1
   ]
   edge
   [
     source 18
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 6
+    duration "100740"
     weight 1
   ]
   edge
   [
     source 18
     target 11
+    duration "102600"
     weight 1
   ]
   edge
   [
     source 14
     target 12
+    duration "117180"
     weight 1
   ]
   edge
   [
     source 19
     target 2
+    duration "0"
     weight 1
   ]
 ]

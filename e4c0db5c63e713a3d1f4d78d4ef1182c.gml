@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:53 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:13 2011"
 Version 1
 graph
 [
@@ -6,172 +6,195 @@ graph
   node
   [
     id 0
-    color "red"
-    label "02HARARE2471"
-    place "HARARE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02HARARE2471"
+    place "HARARE"
   ]
   node
   [
     id 1
-    color "red"
-    label "02HARARE2473"
-    place "HARARE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02HARARE2473"
+    place "HARARE"
   ]
   node
   [
     id 2
-    color "red"
-    label "02HARARE2487"
-    place "HARARE"
     degree 2
     constraint 0.730903
+    color "red"
+    timestamp ""
+    label "02HARARE2487"
+    place "HARARE"
   ]
   node
   [
     id 3
-    color "red"
-    label "02HARARE2495"
-    place "HARARE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02HARARE2495"
+    place "HARARE"
   ]
   node
   [
     id 4
-    color "None"
-    label "02HARARE2529"
-    place "HARARE"
     degree 4
     constraint 0.363281
+    color "black"
+    timestamp "1037366160"
+    label "02HARARE2529"
+    place "HARARE"
   ]
   node
   [
     id 5
-    color "None"
-    label "02HARARE2624"
-    place "HARARE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1037797980"
+    label "02HARARE2624"
+    place "HARARE"
   ]
   node
   [
     id 6
-    color "None"
-    label "02HARARE2625"
-    place "HARARE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1037801940"
+    label "02HARARE2625"
+    place "HARARE"
   ]
   node
   [
     id 7
-    color "None"
-    label "02HARARE2628"
-    place "HARARE"
     degree 4
     constraint 0.463976
+    color "black"
+    timestamp "1037860560"
+    label "02HARARE2628"
+    place "HARARE"
   ]
   node
   [
     id 8
-    color "red"
-    label "02HARARE2676"
-    place "HARARE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02HARARE2676"
+    place "HARARE"
   ]
   node
   [
     id 9
-    color "None"
-    label "02HARARE2689"
-    place "HARARE"
     degree 2
     constraint 0.78125
+    color "black"
+    timestamp "1038222480"
+    label "02HARARE2689"
+    place "HARARE"
   ]
   node
   [
     id 10
-    color "None"
-    label "02HARARE2715"
-    place "HARARE"
     degree 6
     constraint 0.217014
+    color "black"
+    timestamp "1038320520"
+    label "02HARARE2715"
+    place "HARARE"
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "494400"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "459960"
     weight 1
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "361920"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "856320"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "431820"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "435780"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "0"
     weight 1
   ]
 ]

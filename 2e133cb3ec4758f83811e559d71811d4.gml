@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:01 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:19 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color nan
-    label "07BEIJING1130"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1171598340"
+    label "07BEIJING1130"
+    place "BEIJING"
   ]
   node
   [
     id 1
-    color nan
-    label "07BERLIN360"
-    place "BERLIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172158560"
+    label "07BERLIN360"
+    place "BERLIN"
   ]
   node
   [
     id 2
-    color nan
-    label "07BRUSSELS722"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1173175080"
+    label "07BRUSSELS722"
+    place "BRUSSELS"
   ]
   node
   [
     id 3
-    color nan
-    label "07BUCHAREST209"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172465100"
+    label "07BUCHAREST209"
+    place "BUCHAREST"
   ]
   node
   [
     id 4
-    color nan
-    label "07MADRID299"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1171984800"
+    label "07MADRID299"
+    place "MADRID"
   ]
   node
   [
     id 5
-    color nan
-    label "07MOSCOW842"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172671200"
+    label "07MOSCOW842"
+    place "MOSCOW"
   ]
   node
   [
     id 6
-    color nan
-    label "07ROME373"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172239260"
+    label "07ROME373"
+    place "ROME"
   ]
   node
   [
     id 7
-    color nan
-    label "07STATE19366"
-    place "STATE"
     degree 11
     constraint 0.0909091
+    color "black"
+    timestamp "1171577940"
+    label "07STATE19366"
+    place "STATE"
   ]
   node
   [
     id 8
-    color nan
-    label "07TALLINN117"
-    place "TALLINN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172208360"
+    label "07TALLINN117"
+    place "TALLINN"
   ]
   node
   [
     id 9
-    color nan
-    label "07THEHAGUE343"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172241060"
+    label "07THEHAGUE343"
+    place "THEHAGUE"
   ]
   node
   [
     id 10
-    color nan
-    label "07VIENNA477"
-    place "VIENNA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172233140"
+    label "07VIENNA477"
+    place "VIENNA"
   ]
   node
   [
     id 11
-    color nan
-    label "07VILNIUS123"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1172150040"
+    label "07VILNIUS123"
+    place "VILNIUS"
   ]
   edge
   [
     source 7
     target 6
+    duration "661320"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "655200"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "572100"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "580620"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "663120"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "406860"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "1093260"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "630420"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "887160"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "20400"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "1597140"
     weight 1
   ]
 ]

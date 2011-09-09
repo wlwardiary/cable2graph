@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:39 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:04 2011"
 Version 1
 graph
 [
@@ -6,328 +6,374 @@ graph
   node
   [
     id 0
-    color "red"
-    label "07NEWDELHI2924"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07NEWDELHI2924"
+    place "NEWDELHI"
   ]
   node
   [
     id 1
-    color "None"
-    label "07NEWDELHI4592"
-    place "NEWDELHI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1192183860"
+    label "07NEWDELHI4592"
+    place "NEWDELHI"
   ]
   node
   [
     id 2
-    color "red"
-    label "07NEWDELHI5058"
-    place "NEWDELHI"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07NEWDELHI5058"
+    place "NEWDELHI"
   ]
   node
   [
     id 3
-    color "red"
-    label "07NEWDELHI5107"
-    place "NEWDELHI"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07NEWDELHI5107"
+    place "NEWDELHI"
   ]
   node
   [
     id 4
-    color "red"
-    label "07NEWDELHI5333"
-    place "NEWDELHI"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07NEWDELHI5333"
+    place "NEWDELHI"
   ]
   node
   [
     id 5
-    color "red"
-    label "07SECSTATE141892"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE141892"
+    place "SECSTATE"
   ]
   node
   [
     id 6
-    color "red"
-    label "07STATE141892"
-    place "STATE"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07STATE141892"
+    place "STATE"
   ]
   node
   [
     id 7
-    color "red"
-    label "07STATE158831"
-    place "STATE"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07STATE158831"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "07STATE167377"
-    place "STATE"
     degree 3
     constraint 0.502152
+    color "red"
+    timestamp ""
+    label "07STATE167377"
+    place "STATE"
   ]
   node
   [
     id 9
-    color "None"
-    label "08NEWDELHI760"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1205399160"
+    label "08NEWDELHI760"
+    place "NEWDELHI"
   ]
   node
   [
     id 10
-    color "red"
-    label "08SECSTATE23763"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08SECSTATE23763"
+    place "SECSTATE"
   ]
   node
   [
     id 11
-    color "None"
-    label "08STATE23763"
-    place "STATE"
     degree 8
     constraint 0.440468
+    color "black"
+    timestamp "1204898400"
+    label "08STATE23763"
+    place "STATE"
   ]
   node
   [
     id 12
-    color "None"
-    label "08STATE49730"
-    place "STATE"
     degree 8
     constraint 0.440468
+    color "black"
+    timestamp "1210357020"
+    label "08STATE49730"
+    place "STATE"
   ]
   node
   [
     id 13
-    color "None"
-    label "09NEWDELHI1797"
-    place "NEWDELHI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1251370800"
+    label "09NEWDELHI1797"
+    place "NEWDELHI"
   ]
   node
   [
     id 14
-    color "red"
-    label "09STATE53015"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09STATE53015"
+    place "STATE"
   ]
   node
   [
     id 15
-    color "None"
-    label "09STATE53356"
-    place "STATE"
     degree 11
     constraint 0.263688
+    color "black"
+    timestamp "1243340580"
+    label "09STATE53356"
+    place "STATE"
   ]
   node
   [
     id 16
-    color "None"
-    label "09STATE86122"
-    place "STATE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1250620800"
+    label "09STATE86122"
+    place "STATE"
   ]
   edge
   [
     source 15
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "5458620"
     weight 1
   ]
   edge
   [
     source 15
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 11
+    duration "38442180"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 13
+    duration "750000"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "8030220"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 12
+    duration "32983560"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 9
+    duration "37941420"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 1
+    duration "51156720"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:54 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:54 2011"
 Version 1
 graph
 [
@@ -6,205 +6,232 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06AITTAIPEI141"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06AITTAIPEI141"
+    place "AITTAIPEI"
   ]
   node
   [
     id 1
-    color "red"
-    label "06AITTAIPEI171"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06AITTAIPEI171"
+    place "AITTAIPEI"
   ]
   node
   [
     id 2
-    color "None"
-    label "06AITTAIPEI685"
-    place "AITTAIPEI"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1141609020"
+    label "06AITTAIPEI685"
+    place "AITTAIPEI"
   ]
   node
   [
     id 3
-    color "red"
-    label "06STATE21176"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE21176"
+    place "STATE"
   ]
   node
   [
     id 4
-    color "red"
-    label "06STATE30954"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE30954"
+    place "STATE"
   ]
   node
   [
     id 5
-    color "red"
-    label "06STATE8195"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE8195"
+    place "STATE"
   ]
   node
   [
     id 6
-    color "red"
-    label "07AITTAIPEI129"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI129"
+    place "AITTAIPEI"
   ]
   node
   [
     id 7
-    color "red"
-    label "07AITTAIPEI307"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI307"
+    place "AITTAIPEI"
   ]
   node
   [
     id 8
-    color "red"
-    label "07AITTAIPEI422"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI422"
+    place "AITTAIPEI"
   ]
   node
   [
     id 9
-    color "red"
-    label "07SEOUL414"
-    place "SEOUL"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SEOUL414"
+    place "SEOUL"
   ]
   node
   [
     id 10
-    color "red"
-    label "07STATE17021"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07STATE17021"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "07STATE17104"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07STATE17104"
+    place "STATE"
   ]
   node
   [
     id 12
-    color "None"
-    label "07TAIPEI422"
-    place "TAIPEI"
     degree 8
     constraint 0.125
+    color "black"
+    timestamp "1172463000"
+    label "07TAIPEI422"
+    place "TAIPEI"
   ]
   node
   [
     id 13
-    color "red"
-    label "07TOKYO655"
-    place "TOKYO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07TOKYO655"
+    place "TOKYO"
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 2
+    duration "30853980"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
 ]

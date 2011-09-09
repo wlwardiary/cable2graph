@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:05 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:34 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08ADDISABABA1106"
-    place "ADDISABABA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1208851380"
+    label "08ADDISABABA1106"
+    place "ADDISABABA"
   ]
   node
   [
     id 1
-    color "None"
-    label "08AMMAN1107"
-    place "AMMAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1208243040"
+    label "08AMMAN1107"
+    place "AMMAN"
   ]
   node
   [
     id 2
-    color "None"
-    label "08ASTANA701"
-    place "ASTANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1207806540"
+    label "08ASTANA701"
+    place "ASTANA"
   ]
   node
   [
     id 3
-    color "None"
-    label "08BOGOTA1467"
-    place "BOGOTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1208783580"
+    label "08BOGOTA1467"
+    place "BOGOTA"
   ]
   node
   [
     id 4
-    color "None"
-    label "08CONAKRY113"
-    place "CONAKRY"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1208438820"
+    label "08CONAKRY113"
+    place "CONAKRY"
   ]
   node
   [
     id 5
-    color "None"
-    label "08MOSCOW1342"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1210765560"
+    label "08MOSCOW1342"
+    place "MOSCOW"
   ]
   node
   [
     id 6
-    color "None"
-    label "08MUSCAT494"
-    place "MUSCAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1214904780"
+    label "08MUSCAT494"
+    place "MUSCAT"
   ]
   node
   [
     id 7
-    color "None"
-    label "08ROME873"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1215785400"
+    label "08ROME873"
+    place "ROME"
   ]
   node
   [
     id 8
-    color "None"
-    label "08SANSALVADOR926"
-    place "SANSALVADOR"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1218112560"
+    label "08SANSALVADOR926"
+    place "SANSALVADOR"
   ]
   node
   [
     id 9
-    color "red"
-    label "08STATE33263"
-    place "STATE"
     degree 11
     constraint 0.0909091
+    color "red"
+    timestamp ""
+    label "08STATE33263"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "08TUNIS360"
-    place "TUNIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1207821000"
+    label "08TUNIS360"
+    place "TUNIS"
   ]
   node
   [
     id 11
-    color "None"
-    label "08ZAGREB506"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1215523560"
+    label "08ZAGREB506"
+    place "ZAGREB"
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "0"
     weight 1
   ]
 ]

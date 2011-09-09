@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:44 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:18 2011"
 Version 1
 graph
 [
@@ -6,190 +6,215 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08GENEVA180"
-    place "GENEVA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1205166300"
+    label "08GENEVA180"
+    place "GENEVA"
   ]
   node
   [
     id 1
-    color "None"
-    label "08GENEVA455"
-    place "GENEVA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1213619640"
+    label "08GENEVA455"
+    place "GENEVA"
   ]
   node
   [
     id 2
-    color "None"
-    label "08GENEVA495"
-    place "GENEVA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1214836200"
+    label "08GENEVA495"
+    place "GENEVA"
   ]
   node
   [
     id 3
-    color "None"
-    label "08GENEVA504"
-    place "GENEVA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1215011520"
+    label "08GENEVA504"
+    place "GENEVA"
   ]
   node
   [
     id 4
-    color "None"
-    label "08GENEVA515"
-    place "GENEVA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1215423300"
+    label "08GENEVA515"
+    place "GENEVA"
   ]
   node
   [
     id 5
-    color "None"
-    label "08GENEVA766"
-    place "GENEVA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1221046860"
+    label "08GENEVA766"
+    place "GENEVA"
   ]
   node
   [
     id 6
-    color "red"
-    label "08USMISSIONGENEVA108"
-    place "USMISSIONGENEVA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA108"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 7
-    color "red"
-    label "08USMISSIONGENEVA256"
-    place "USMISSIONGENEVA"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA256"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 8
-    color "red"
-    label "08USMISSIONGENEVA30"
-    place "USMISSIONGENEVA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA30"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 9
-    color "red"
-    label "08USMISSIONGENEVA360"
-    place "USMISSIONGENEVA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA360"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 10
-    color "red"
-    label "08USMISSIONGENEVA489"
-    place "USMISSIONGENEVA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA489"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 11
-    color "red"
-    label "08USMISSIONGENEVA495"
-    place "USMISSIONGENEVA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA495"
+    place "USMISSIONGENEVA"
   ]
   node
   [
     id 12
-    color "red"
-    label "08USMISSIONGENEVA515"
-    place "USMISSIONGENEVA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08USMISSIONGENEVA515"
+    place "USMISSIONGENEVA"
   ]
   edge
   [
     source 12
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
 ]

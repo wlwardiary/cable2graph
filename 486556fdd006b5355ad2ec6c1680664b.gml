@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:54 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:43 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05BRUSSELS3534"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1127903340"
+    label "05BRUSSELS3534"
+    place "BRUSSELS"
   ]
   node
   [
     id 1
-    color "None"
-    label "05BRUSSELS3558"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1128002760"
+    label "05BRUSSELS3558"
+    place "BRUSSELS"
   ]
   node
   [
     id 2
-    color "None"
-    label "05DUBLIN1211"
-    place "DUBLIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1128089340"
+    label "05DUBLIN1211"
+    place "DUBLIN"
   ]
   node
   [
     id 3
-    color "None"
-    label "05LJUBLJANA692"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1127975100"
+    label "05LJUBLJANA692"
+    place "LJUBLJANA"
   ]
   node
   [
     id 4
-    color "None"
-    label "05PARIS6741"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1128082500"
+    label "05PARIS6741"
+    place "PARIS"
   ]
   node
   [
     id 5
-    color "None"
-    label "05PRAGUE1407"
-    place "PRAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1128091860"
+    label "05PRAGUE1407"
+    place "PRAGUE"
   ]
   node
   [
     id 6
-    color "red"
-    label "05SECSTATE177048"
-    place "SECSTATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05SECSTATE177048"
+    place "SECSTATE"
   ]
   node
   [
     id 7
-    color "red"
-    label "05STATE177048"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "05STATE177048"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "05THEHAGUE2374"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05THEHAGUE2374"
+    place "THEHAGUE"
   ]
   node
   [
     id 9
-    color "None"
-    label "05THEHAGUE2640"
-    place "THEHAGUE"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1128070920"
+    label "05THEHAGUE2640"
+    place "THEHAGUE"
   ]
   node
   [
     id 10
-    color "None"
-    label "05THEHAGUE2723"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1128696300"
+    label "05THEHAGUE2723"
+    place "THEHAGUE"
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "625380"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "167580"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "99420"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
 ]

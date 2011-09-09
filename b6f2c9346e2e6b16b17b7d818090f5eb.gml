@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:11 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:04 2011"
 Version 1
 graph
 [
@@ -6,190 +6,216 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05KATHMANDU2134"
-    place "KATHMANDU"
     degree 3
     constraint 0.61284
+    color "red"
+    timestamp ""
+    label "05KATHMANDU2134"
+    place "KATHMANDU"
   ]
   node
   [
     id 1
-    color "red"
-    label "05KATHMANDU2257"
-    place "KATHMANDU"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05KATHMANDU2257"
+    place "KATHMANDU"
   ]
   node
   [
     id 2
-    color "None"
-    label "05KATHMANDU2727"
-    place "KATHMANDU"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1133860740"
+    label "05KATHMANDU2727"
+    place "KATHMANDU"
   ]
   node
   [
     id 3
-    color "None"
-    label "05KATHMANDU2781"
-    place "KATHMANDU"
     degree 3
     constraint 0.61284
+    color "black"
+    timestamp "1134379620"
+    label "05KATHMANDU2781"
+    place "KATHMANDU"
   ]
   node
   [
     id 4
-    color "red"
-    label "05KATHMANDU2948"
-    place "KATHMANDU"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05KATHMANDU2948"
+    place "KATHMANDU"
   ]
   node
   [
     id 5
-    color "None"
-    label "05NAIROBI5094"
-    place "NAIROBI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1134112740"
+    label "05NAIROBI5094"
+    place "NAIROBI"
   ]
   node
   [
     id 6
-    color "None"
-    label "05RABAT2468"
-    place "RABAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1134318480"
+    label "05RABAT2468"
+    place "RABAT"
   ]
   node
   [
     id 7
-    color "red"
-    label "05SECSTATE209558"
-    place "SECSTATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "05SECSTATE209558"
+    place "SECSTATE"
   ]
   node
   [
     id 8
-    color "None"
-    label "05TELAVIV6848"
-    place "TELAVIV"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1134050880"
+    label "05TELAVIV6848"
+    place "TELAVIV"
   ]
   node
   [
     id 9
-    color "None"
-    label "06KATHMANDU328"
-    place "KATHMANDU"
     degree 5
     constraint 0.262222
+    color "black"
+    timestamp "1138878240"
+    label "06KATHMANDU328"
+    place "KATHMANDU"
   ]
   node
   [
     id 10
-    color "None"
-    label "06KATHMANDU333"
-    place "KATHMANDU"
     degree 5
     constraint 0.262222
+    color "black"
+    timestamp "1138880580"
+    label "06KATHMANDU333"
+    place "KATHMANDU"
   ]
   edge
   [
     source 10
     target 2
+    duration "5019840"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "4498620"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "4500960"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "5017500"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
 ]

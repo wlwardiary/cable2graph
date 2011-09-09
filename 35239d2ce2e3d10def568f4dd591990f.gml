@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:05 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:57 2011"
 Version 1
 graph
 [
@@ -6,172 +6,195 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05HELSINKI906"
-    place "HELSINKI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1124186760"
+    label "05HELSINKI906"
+    place "HELSINKI"
   ]
   node
   [
     id 1
-    color "None"
-    label "05LJUBLJANA497"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1121402400"
+    label "05LJUBLJANA497"
+    place "LJUBLJANA"
   ]
   node
   [
     id 2
-    color "None"
-    label "05LJUBLJANA600"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1124340480"
+    label "05LJUBLJANA600"
+    place "LJUBLJANA"
   ]
   node
   [
     id 3
-    color "None"
-    label "05MADRID2609"
-    place "MADRID"
     degree 3
     constraint 0.482253
+    color "black"
+    timestamp "1121153640"
+    label "05MADRID2609"
+    place "MADRID"
   ]
   node
   [
     id 4
-    color "None"
-    label "05MADRID3035"
-    place "MADRID"
     degree 3
     constraint 0.655864
+    color "black"
+    timestamp "1124888580"
+    label "05MADRID3035"
+    place "MADRID"
   ]
   node
   [
     id 5
-    color "None"
-    label "05MADRID3040"
-    place "MADRID"
     degree 4
     constraint 0.458333
+    color "black"
+    timestamp "1124951280"
+    label "05MADRID3040"
+    place "MADRID"
   ]
   node
   [
     id 6
-    color "red"
-    label "05SECSTATE124856"
-    place "SECSTATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05SECSTATE124856"
+    place "SECSTATE"
   ]
   node
   [
     id 7
-    color "red"
-    label "05SECSTATE150087"
-    place "SECSTATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "05SECSTATE150087"
+    place "SECSTATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "05SECSTATE153187"
-    place "SECSTATE"
     degree 3
     constraint 0.482253
+    color "red"
+    timestamp ""
+    label "05SECSTATE153187"
+    place "SECSTATE"
   ]
   node
   [
     id 9
-    color "None"
-    label "05VILNIUS857"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1124366580"
+    label "05VILNIUS857"
+    place "VILNIUS"
   ]
   node
   [
     id 10
-    color "None"
-    label "05VILNIUS884"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1125037020"
+    label "05VILNIUS884"
+    place "VILNIUS"
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "62700"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "3797640"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "3734940"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
 ]

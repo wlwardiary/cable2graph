@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:41 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:00:58 2011"
 Version 1
 graph
 [
@@ -6,247 +6,280 @@ graph
   node
   [
     id 0
-    color "None"
-    label "01HANOI2885"
-    place "HANOI"
     degree 4
     constraint 0.363281
+    color "black"
+    timestamp "1004950320"
+    label "01HANOI2885"
+    place "HANOI"
   ]
   node
   [
     id 1
-    color "None"
-    label "01HANOI2914"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1005175500"
+    label "01HANOI2914"
+    place "HANOI"
   ]
   node
   [
     id 2
-    color "None"
-    label "01HANOI2949"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1005629820"
+    label "01HANOI2949"
+    place "HANOI"
   ]
   node
   [
     id 3
-    color "red"
-    label "01HANOI2953"
-    place "HANOI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01HANOI2953"
+    place "HANOI"
   ]
   node
   [
     id 4
-    color "None"
-    label "01HANOI2963"
-    place "HANOI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1005697200"
+    label "01HANOI2963"
+    place "HANOI"
   ]
   node
   [
     id 5
-    color "None"
-    label "01HANOI2964"
-    place "HANOI"
     degree 2
     constraint 0.78125
+    color "black"
+    timestamp "1005697200"
+    label "01HANOI2964"
+    place "HANOI"
   ]
   node
   [
     id 6
-    color "None"
-    label "01HANOI2980"
-    place "HANOI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1005783660"
+    label "01HANOI2980"
+    place "HANOI"
   ]
   node
   [
     id 7
-    color "None"
-    label "01HANOI3019"
-    place "HANOI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1005898740"
+    label "01HANOI3019"
+    place "HANOI"
   ]
   node
   [
     id 8
-    color "None"
-    label "01HANOI3086"
-    place "HANOI"
     degree 6
     constraint 0.363281
+    color "black"
+    timestamp "1006752960"
+    label "01HANOI3086"
+    place "HANOI"
   ]
   node
   [
     id 9
-    color "red"
-    label "01HANOI3201"
-    place "HANOI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01HANOI3201"
+    place "HANOI"
   ]
   node
   [
     id 10
-    color "red"
-    label "01HANOI3282"
-    place "HANOI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01HANOI3282"
+    place "HANOI"
   ]
   node
   [
     id 11
-    color "None"
-    label "01HANOI3302"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1008915960"
+    label "01HANOI3302"
+    place "HANOI"
   ]
   node
   [
     id 12
-    color "None"
-    label "01HANOI3308"
-    place "HANOI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1008921720"
+    label "01HANOI3308"
+    place "HANOI"
   ]
   node
   [
     id 13
-    color "None"
-    label "02HANOI2885"
-    place "HANOI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1038896220"
+    label "02HANOI2885"
+    place "HANOI"
   ]
   node
   [
     id 14
-    color "None"
-    label "02HANOI2975"
-    place "HANOI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1039993020"
+    label "02HANOI2975"
+    place "HANOI"
   ]
   node
   [
     id 15
-    color "None"
-    label "02HANOI3055"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1040632560"
+    label "02HANOI3055"
+    place "HANOI"
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 8
+    duration "3443160"
     weight 1
   ]
   edge
   [
     source 13
     target 4
+    duration "33199020"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "115080"
     weight 1
   ]
   edge
   [
     source 8
     target 0
+    duration "1802640"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "833340"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "1096800"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "1123140"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "608160"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "639540"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "1055760"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "1055760"
     weight 1
   ]
   edge
   [
     source 5
     target 0
+    duration "746880"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "29980260"
     weight 1
   ]
   edge
   [
     source 12
     target 0
+    duration "3971400"
     weight 1
   ]
 ]

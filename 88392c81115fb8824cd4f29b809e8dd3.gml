@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:37 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:23 2011"
 Version 1
 graph
 [
@@ -6,190 +6,215 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05ANKARA3192"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118227200"
+    label "05ANKARA3192"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "05MADRID2133"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1118062440"
+    label "05MADRID2133"
+    place "MADRID"
   ]
   node
   [
     id 2
-    color "None"
-    label "05MADRID2172"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118148360"
+    label "05MADRID2172"
+    place "MADRID"
   ]
   node
   [
     id 3
-    color "None"
-    label "05MUSCAT904"
-    place "MUSCAT"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1118020740"
+    label "05MUSCAT904"
+    place "MUSCAT"
   ]
   node
   [
     id 4
-    color "None"
-    label "05MUSCAT986"
-    place "MUSCAT"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1119173580"
+    label "05MUSCAT986"
+    place "MUSCAT"
   ]
   node
   [
     id 5
-    color "None"
-    label "05MUSCAT997"
-    place "MUSCAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1119407100"
+    label "05MUSCAT997"
+    place "MUSCAT"
   ]
   node
   [
     id 6
-    color "None"
-    label "05OTTAWA1828"
-    place "OTTAWA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118952540"
+    label "05OTTAWA1828"
+    place "OTTAWA"
   ]
   node
   [
     id 7
-    color "None"
-    label "05PRAGUE896"
-    place "PRAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118667840"
+    label "05PRAGUE896"
+    place "PRAGUE"
   ]
   node
   [
     id 8
-    color "None"
-    label "05ROME2051"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118891160"
+    label "05ROME2051"
+    place "ROME"
   ]
   node
   [
     id 9
-    color "red"
-    label "05SECSTATE103222"
-    place "SECSTATE"
     degree 7
     constraint 0.142857
+    color "red"
+    timestamp ""
+    label "05SECSTATE103222"
+    place "SECSTATE"
   ]
   node
   [
     id 10
-    color "red"
-    label "05SECSTATE111894"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05SECSTATE111894"
+    place "SECSTATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "05SECSTATE112917"
-    place "SECSTATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05SECSTATE112917"
+    place "SECSTATE"
   ]
   node
   [
     id 12
-    color "None"
-    label "05VILNIUS599"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118383260"
+    label "05VILNIUS599"
+    place "VILNIUS"
   ]
   edge
   [
     source 12
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "1152840"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "85920"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
 ]

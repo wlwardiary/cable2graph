@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:18 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:40 2011"
 Version 1
 graph
 [
@@ -6,196 +6,222 @@ graph
   node
   [
     id 0
-    color "red"
-    label "07GENEVA975"
-    place "GENEVA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07GENEVA975"
+    place "GENEVA"
   ]
   node
   [
     id 1
-    color "None"
-    label "07MANILA2011"
-    place "MANILA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1182136020"
+    label "07MANILA2011"
+    place "MANILA"
   ]
   node
   [
     id 2
-    color "None"
-    label "07MONTEVIDEO569"
-    place "MONTEVIDEO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1181843400"
+    label "07MONTEVIDEO569"
+    place "MONTEVIDEO"
   ]
   node
   [
     id 3
-    color "None"
-    label "07PARIS2511"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1181634720"
+    label "07PARIS2511"
+    place "PARIS"
   ]
   node
   [
     id 4
-    color "None"
-    label "07PRAGUE509"
-    place "PRAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1178862000"
+    label "07PRAGUE509"
+    place "PRAGUE"
   ]
   node
   [
     id 5
-    color "None"
-    label "07PRAGUE707"
-    place "PRAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1181901120"
+    label "07PRAGUE707"
+    place "PRAGUE"
   ]
   node
   [
     id 6
-    color "None"
-    label "07SEOUL1386"
-    place "SEOUL"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1178694180"
+    label "07SEOUL1386"
+    place "SEOUL"
   ]
   node
   [
     id 7
-    color "None"
-    label "07SEOUL1774"
-    place "SEOUL"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1181540820"
+    label "07SEOUL1774"
+    place "SEOUL"
   ]
   node
   [
     id 8
-    color "None"
-    label "07STATE60672"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1178296560"
+    label "07STATE60672"
+    place "STATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "07STATE80095"
-    place "STATE"
     degree 7
     constraint 0.193878
+    color "red"
+    timestamp ""
+    label "07STATE80095"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "07TOKYO2054"
-    place "TOKYO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1178604000"
+    label "07TOKYO2054"
+    place "TOKYO"
   ]
   node
   [
     id 11
-    color "None"
-    label "07TOKYO2651"
-    place "TOKYO"
     degree 2
     constraint 0.889031
+    color "black"
+    timestamp "1181632260"
+    label "07TOKYO2651"
+    place "TOKYO"
   ]
   node
   [
     id 12
-    color "None"
-    label "07TOKYO2744"
-    place "TOKYO"
     degree 2
     constraint 0.889031
+    color "black"
+    timestamp "1182151320"
+    label "07TOKYO2744"
+    place "TOKYO"
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "2846640"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "519060"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "307440"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "565440"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "397620"
     weight 1
   ]
 ]

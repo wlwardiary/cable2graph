@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:48 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:02:21 2011"
 Version 1
 graph
 [
@@ -6,205 +6,232 @@ graph
   node
   [
     id 0
-    color "None"
-    label "04BRUSSELS3320"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1091686800"
+    label "04BRUSSELS3320"
+    place "BRUSSELS"
   ]
   node
   [
     id 1
-    color "red"
-    label "04BRUSSELS3556"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04BRUSSELS3556"
+    place "BRUSSELS"
   ]
   node
   [
     id 2
-    color "None"
-    label "04BRUSSELS3813"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1094731440"
+    label "04BRUSSELS3813"
+    place "BRUSSELS"
   ]
   node
   [
     id 3
-    color "None"
-    label "04BRUSSELS3897"
-    place "BRUSSELS"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1095161340"
+    label "04BRUSSELS3897"
+    place "BRUSSELS"
   ]
   node
   [
     id 4
-    color "None"
-    label "04BRUSSELS3989"
-    place "BRUSSELS"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1095665880"
+    label "04BRUSSELS3989"
+    place "BRUSSELS"
   ]
   node
   [
     id 5
-    color "None"
-    label "04BRUSSELS4016"
-    place "BRUSSELS"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1095765720"
+    label "04BRUSSELS4016"
+    place "BRUSSELS"
   ]
   node
   [
     id 6
-    color "None"
-    label "04BRUSSELS4055"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1095934740"
+    label "04BRUSSELS4055"
+    place "BRUSSELS"
   ]
   node
   [
     id 7
-    color "None"
-    label "04BRUSSELS4119"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1096282920"
+    label "04BRUSSELS4119"
+    place "BRUSSELS"
   ]
   node
   [
     id 8
-    color "None"
-    label "04BRUSSELS4410"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1097751780"
+    label "04BRUSSELS4410"
+    place "BRUSSELS"
   ]
   node
   [
     id 9
-    color "None"
-    label "04BRUSSELS4602"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1098762060"
+    label "04BRUSSELS4602"
+    place "BRUSSELS"
   ]
   node
   [
     id 10
-    color "red"
-    label "04SECSTATE193217"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04SECSTATE193217"
+    place "SECSTATE"
   ]
   node
   [
     id 11
-    color "None"
-    label "04THEHAGUE2346"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1095337080"
+    label "04THEHAGUE2346"
+    place "THEHAGUE"
   ]
   node
   [
     id 12
-    color "red"
-    label "04USEUBRUSSELS3822"
-    place "USEUBRUSSELS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04USEUBRUSSELS3822"
+    place "USEUBRUSSELS"
   ]
   node
   [
     id 13
-    color "red"
-    label "04USEUBRUSSELS3840"
-    place "USEUBRUSSELS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04USEUBRUSSELS3840"
+    place "USEUBRUSSELS"
   ]
   edge
   [
     source 5
     target 3
+    duration "604380"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "1010280"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "1986060"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "175740"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "99840"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "169020"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "4247940"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "934440"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "517200"
     weight 1
   ]
   edge
   [
     source 12
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "0"
     weight 1
   ]
 ]

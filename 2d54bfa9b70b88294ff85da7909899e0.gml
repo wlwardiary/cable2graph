@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:03 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:54 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05GUATEMALA2273"
-    place "GUATEMALA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1127853360"
+    label "05GUATEMALA2273"
+    place "GUATEMALA"
   ]
   node
   [
     id 1
-    color "red"
-    label "05GUATEMALA2352"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05GUATEMALA2352"
+    place "GUATEMALA"
   ]
   node
   [
     id 2
-    color "red"
-    label "05GUATEMALA2386"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05GUATEMALA2386"
+    place "GUATEMALA"
   ]
   node
   [
     id 3
-    color "None"
-    label "05GUATEMALA2395"
-    place "GUATEMALA"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1129580340"
+    label "05GUATEMALA2395"
+    place "GUATEMALA"
   ]
   node
   [
     id 4
-    color "red"
-    label "05GUATEMALA2402"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05GUATEMALA2402"
+    place "GUATEMALA"
   ]
   node
   [
     id 5
-    color "red"
-    label "05GUATEMALA2418"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05GUATEMALA2418"
+    place "GUATEMALA"
   ]
   node
   [
     id 6
-    color "red"
-    label "05GUATEMALA2428"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05GUATEMALA2428"
+    place "GUATEMALA"
   ]
   node
   [
     id 7
-    color "None"
-    label "05GUATEMALA2504"
-    place "GUATEMALA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1130964000"
+    label "05GUATEMALA2504"
+    place "GUATEMALA"
   ]
   node
   [
     id 8
-    color "None"
-    label "05SANSALVADOR2680"
-    place "SANSALVADOR"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1127845200"
+    label "05SANSALVADOR2680"
+    place "SANSALVADOR"
   ]
   node
   [
     id 9
-    color "red"
-    label "05STATE176485"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "05STATE176485"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "05TEGUCIGALPA1992"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1127854080"
+    label "05TEGUCIGALPA1992"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 11
-    color "None"
-    label "06GUATEMALA429"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1141236300"
+    label "06GUATEMALA429"
+    place "GUATEMALA"
   ]
   edge
   [
     source 3
     target 0
+    duration "1726980"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "11655960"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "1383660"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
 ]

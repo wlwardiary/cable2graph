@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:00 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:22 2011"
 Version 1
 graph
 [
@@ -6,661 +6,750 @@ graph
   node
   [
     id 0
-    color "red"
-    label "02STATE185884"
-    place "STATE"
     degree 2
     constraint 0.717156
+    color "red"
+    timestamp ""
+    label "02STATE185884"
+    place "STATE"
   ]
   node
   [
     id 1
-    color "red"
-    label "02STATE242866"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02STATE242866"
+    place "STATE"
   ]
   node
   [
     id 2
-    color "None"
-    label "02TEGUCIGALPA3318"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1039470420"
+    label "02TEGUCIGALPA3318"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 3
-    color "None"
-    label "03GUATEMALA784"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1048628280"
+    label "03GUATEMALA784"
+    place "GUATEMALA"
   ]
   node
   [
     id 4
-    color "None"
-    label "03GUATEMALA932"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1049809980"
+    label "03GUATEMALA932"
+    place "GUATEMALA"
   ]
   node
   [
     id 5
-    color "None"
-    label "03GUATEMALA937"
-    place "GUATEMALA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1049830980"
+    label "03GUATEMALA937"
+    place "GUATEMALA"
   ]
   node
   [
     id 6
-    color "red"
-    label "03HAVANA1235"
-    place "HAVANA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03HAVANA1235"
+    place "HAVANA"
   ]
   node
   [
     id 7
-    color "red"
-    label "03HAVANA4892"
-    place "HAVANA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03HAVANA4892"
+    place "HAVANA"
   ]
   node
   [
     id 8
-    color "None"
-    label "03OTTAWA1018"
-    place "OTTAWA"
     degree 3
     constraint 0.506173
+    color "black"
+    timestamp "1049888880"
+    label "03OTTAWA1018"
+    place "OTTAWA"
   ]
   node
   [
     id 9
-    color "None"
-    label "03OTTAWA897"
-    place "OTTAWA"
     degree 4
     constraint 0.475765
+    color "black"
+    timestamp "1048780920"
+    label "03OTTAWA897"
+    place "OTTAWA"
   ]
   node
   [
     id 10
-    color "None"
-    label "03OTTAWA964"
-    place "OTTAWA"
     degree 3
     constraint 0.506173
+    color "black"
+    timestamp "1049399280"
+    label "03OTTAWA964"
+    place "OTTAWA"
   ]
   node
   [
     id 11
-    color "red"
-    label "03STATE10182"
-    place "STATE"
     degree 2
     constraint 0.717156
+    color "red"
+    timestamp ""
+    label "03STATE10182"
+    place "STATE"
   ]
   node
   [
     id 12
-    color "red"
-    label "03STATE59891"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03STATE59891"
+    place "STATE"
   ]
   node
   [
     id 13
-    color "None"
-    label "03STATE75175"
-    place "STATE"
     degree 7
     constraint 0.227041
+    color "black"
+    timestamp "1048280940"
+    label "03STATE75175"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "red"
-    label "03STATE82391"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03STATE82391"
+    place "STATE"
   ]
   node
   [
     id 15
-    color "red"
-    label "03STATE86002"
-    place "STATE"
     degree 3
     constraint 0.506173
+    color "red"
+    timestamp ""
+    label "03STATE86002"
+    place "STATE"
   ]
   node
   [
     id 16
-    color "red"
-    label "03STATE88308"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03STATE88308"
+    place "STATE"
   ]
   node
   [
     id 17
-    color "None"
-    label "03TEGUCIGALPA674"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1047995100"
+    label "03TEGUCIGALPA674"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 18
-    color "red"
-    label "03TEGUCIGALPA763"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03TEGUCIGALPA763"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 19
-    color "None"
-    label "03TEGUCIGALPA824"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1049312160"
+    label "03TEGUCIGALPA824"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 20
-    color "None"
-    label "03TEGUCIGALPA826"
-    place "TEGUCIGALPA"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1049317980"
+    label "03TEGUCIGALPA826"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 21
-    color "red"
-    label "03TEGUCIGALPA827"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03TEGUCIGALPA827"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 22
-    color "red"
-    label "03TEGUCIGALPA835"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03TEGUCIGALPA835"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 23
-    color "None"
-    label "03TEGUCIGALPA856"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1049817780"
+    label "03TEGUCIGALPA856"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 24
-    color "None"
-    label "03TEGUCIGALPA862"
-    place "TEGUCIGALPA"
     degree 9
     constraint 0.141975
+    color "black"
+    timestamp "1049836260"
+    label "03TEGUCIGALPA862"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 25
-    color "None"
-    label "03TEGUCIGALPA881"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.871142
+    color "black"
+    timestamp "1050009480"
+    label "03TEGUCIGALPA881"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 26
-    color "None"
-    label "03TEGUCIGALPA981"
-    place "TEGUCIGALPA"
     degree 2
     constraint 0.871142
+    color "black"
+    timestamp "1051297260"
+    label "03TEGUCIGALPA981"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 27
-    color "red"
-    label "03USUNNEWYORK915"
-    place "USUNNEWYORK"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03USUNNEWYORK915"
+    place "USUNNEWYORK"
   ]
   node
   [
     id 28
-    color "red"
-    label "03VATICAN1137"
-    place "VATICAN"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03VATICAN1137"
+    place "VATICAN"
   ]
   node
   [
     id 29
-    color "None"
-    label "03VATICAN1401"
-    place "VATICAN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1049274660"
+    label "03VATICAN1401"
+    place "VATICAN"
   ]
   node
   [
     id 30
-    color "None"
-    label "03VATICAN1406"
-    place "VATICAN"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1049284380"
+    label "03VATICAN1406"
+    place "VATICAN"
   ]
   node
   [
     id 31
-    color "None"
-    label "03VATICAN1508"
-    place "VATICAN"
     degree 4
     constraint 0.5
+    color "black"
+    timestamp "1049859120"
+    label "03VATICAN1508"
+    place "VATICAN"
   ]
   node
   [
     id 32
-    color "None"
-    label "03VATICAN1775"
-    place "VATICAN"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1051538160"
+    label "03VATICAN1775"
+    place "VATICAN"
   ]
   node
   [
     id 33
-    color "None"
-    label "03VATICAN195"
-    place "VATICAN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1042723860"
+    label "03VATICAN195"
+    place "VATICAN"
   ]
   node
   [
     id 34
-    color "red"
-    label "03VATICAN1953"
-    place "VATICAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03VATICAN1953"
+    place "VATICAN"
   ]
   node
   [
     id 35
-    color "None"
-    label "03VATICAN3971"
-    place "VATICAN"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1062510120"
+    label "03VATICAN3971"
+    place "VATICAN"
   ]
   node
   [
     id 36
-    color "None"
-    label "03VATICAN4289"
-    place "VATICAN"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1064225820"
+    label "03VATICAN4289"
+    place "VATICAN"
   ]
   node
   [
     id 37
-    color "None"
-    label "03VATICAN4429"
-    place "VATICAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1064580600"
+    label "03VATICAN4429"
+    place "VATICAN"
   ]
   node
   [
     id 38
-    color "None"
-    label "03VATICAN4956"
-    place "VATICAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1067576400"
+    label "03VATICAN4956"
+    place "VATICAN"
   ]
   node
   [
     id 39
-    color "None"
-    label "03VATICAN5427"
-    place "VATICAN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1070448060"
+    label "03VATICAN5427"
+    place "VATICAN"
   ]
   node
   [
     id 40
-    color "red"
-    label "03Vatican1508"
-    place "V"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03Vatican1508"
+    place "V"
   ]
   node
   [
     id 41
-    color "red"
-    label "03Vatican1953"
-    place "V"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03Vatican1953"
+    place "V"
   ]
   edge
   [
     source 30
     target 13
+    duration "1003440"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "1107960"
     weight 1
   ]
   edge
   [
     source 13
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "499980"
     weight 1
   ]
   edge
   [
     source 24
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 32
     target 28
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 31
+    duration "14366700"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 31
     target 31
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 2
+    duration "9847560"
     weight 1
   ]
   edge
   [
     source 32
     target 29
+    duration "2263500"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 24
     target 20
+    duration "518280"
     weight 1
   ]
   edge
   [
     source 20
     target 13
+    duration "1037040"
     weight 1
   ]
   edge
   [
     source 29
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 38
     target 36
+    duration "3350580"
     weight 1
   ]
   edge
   [
     source 36
     target 34
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "347340"
     weight 1
   ]
   edge
   [
     source 25
     target 24
+    duration "173220"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "489600"
     weight 1
   ]
   edge
   [
     source 24
     target 19
+    duration "524100"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "1118340"
     weight 1
   ]
   edge
   [
     source 27
     target 24
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 24
     target 22
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 24
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 37
     target 32
+    duration "13042440"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 28
+    duration "0"
     weight 1
   ]
   edge
   [
     source 26
     target 24
+    duration "1461000"
     weight 1
   ]
   edge
   [
     source 24
     target 21
+    duration "0"
     weight 1
   ]
   edge
   [
     source 32
     target 30
+    duration "2253780"
     weight 1
   ]
   edge
   [
     source 20
     target 17
+    duration "1322880"
     weight 1
   ]
   edge
   [
     source 33
     target 30
+    duration "6560520"
     weight 1
   ]
   edge
   [
     source 41
     target 35
+    duration "0"
     weight 1
   ]
   edge
   [
     source 33
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 40
     target 35
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 23
     target 18
+    duration "0"
     weight 1
   ]
   edge
   [
     source 23
     target 20
+    duration "499800"
     weight 1
   ]
   edge
   [
     source 36
     target 35
+    duration "1715700"
     weight 1
   ]
   edge
   [
     source 26
     target 25
+    duration "1287780"
     weight 1
   ]
   edge
   [
     source 39
     target 31
+    duration "20588940"
     weight 1
   ]
 ]

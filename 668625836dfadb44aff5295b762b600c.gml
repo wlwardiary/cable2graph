@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:40 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:37 2011"
 Version 1
 graph
 [
@@ -6,172 +6,195 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05TASHKENT602"
-    place "TASHKENT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05TASHKENT602"
+    place "TASHKENT"
   ]
   node
   [
     id 1
-    color "red"
-    label "06KIEV797"
-    place "KIEV"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06KIEV797"
+    place "KIEV"
   ]
   node
   [
     id 2
-    color "None"
-    label "06TASHKENT345"
-    place "TASHKENT"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1139965560"
+    label "06TASHKENT345"
+    place "TASHKENT"
   ]
   node
   [
     id 3
-    color "None"
-    label "06TASHKENT430"
-    place "TASHKENT"
     degree 2
     constraint 0.804444
+    color "black"
+    timestamp "1141294380"
+    label "06TASHKENT430"
+    place "TASHKENT"
   ]
   node
   [
     id 4
-    color "None"
-    label "06TASHKENT520"
-    place "TASHKENT"
     degree 5
     constraint 0.281111
+    color "black"
+    timestamp "1142840460"
+    label "06TASHKENT520"
+    place "TASHKENT"
   ]
   node
   [
     id 5
-    color "None"
-    label "06TASHKENT536"
-    place "TASHKENT"
     degree 3
     constraint 0.521111
+    color "black"
+    timestamp "1143118440"
+    label "06TASHKENT536"
+    place "TASHKENT"
   ]
   node
   [
     id 6
-    color "None"
-    label "06TASHKENT577"
-    place "TASHKENT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1143214200"
+    label "06TASHKENT577"
+    place "TASHKENT"
   ]
   node
   [
     id 7
-    color "red"
-    label "06TASHKENT658"
-    place "TASHKENT"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06TASHKENT658"
+    place "TASHKENT"
   ]
   node
   [
     id 8
-    color "None"
-    label "06TASHKENT693"
-    place "TASHKENT"
     degree 4
     constraint 0.5
+    color "black"
+    timestamp "1144411440"
+    label "06TASHKENT693"
+    place "TASHKENT"
   ]
   node
   [
     id 9
-    color "None"
-    label "06TASHKENT728"
-    place "TASHKENT"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1145012100"
+    label "06TASHKENT728"
+    place "TASHKENT"
   ]
   node
   [
     id 10
-    color "None"
-    label "06TASHKENT800"
-    place "TASHKENT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1145841000"
+    label "06TASHKENT800"
+    place "TASHKENT"
   ]
   edge
   [
     source 8
     target 4
+    duration "1570980"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "277980"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "1824060"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "2874900"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "373740"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "1546080"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "828900"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 8
+    duration "3516120"
     weight 1
   ]
 ]

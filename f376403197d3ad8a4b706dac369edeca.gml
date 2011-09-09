@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:48 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:14 2011"
 Version 1
 graph
 [
@@ -6,172 +6,195 @@ graph
   node
   [
     id 0
-    color "red"
-    label "07SECSTATE158802"
-    place "SECSTATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "07SECSTATE158802"
+    place "SECSTATE"
   ]
   node
   [
     id 1
-    color "None"
-    label "08DARESSALAAM32"
-    place "DARESSALAAM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1200395580"
+    label "08DARESSALAAM32"
+    place "DARESSALAAM"
   ]
   node
   [
     id 2
-    color "None"
-    label "08JEDDAH327"
-    place "JEDDAH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1218367680"
+    label "08JEDDAH327"
+    place "JEDDAH"
   ]
   node
   [
     id 3
-    color "None"
-    label "08JERUSALEM299"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1203083580"
+    label "08JERUSALEM299"
+    place "JERUSALEM"
   ]
   node
   [
     id 4
-    color "red"
-    label "08KUWAIT2"
-    place "KUWAIT"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08KUWAIT2"
+    place "KUWAIT"
   ]
   node
   [
     id 5
-    color "None"
-    label "08KUWAIT62"
-    place "KUWAIT"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1200402120"
+    label "08KUWAIT62"
+    place "KUWAIT"
   ]
   node
   [
     id 6
-    color "None"
-    label "08KUWAIT64"
-    place "KUWAIT"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1200455460"
+    label "08KUWAIT64"
+    place "KUWAIT"
   ]
   node
   [
     id 7
-    color "None"
-    label "08KUWAIT7"
-    place "KUWAIT"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1199332620"
+    label "08KUWAIT7"
+    place "KUWAIT"
   ]
   node
   [
     id 8
-    color "None"
-    label "08MEXICO96"
-    place "MEXICO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1200329220"
+    label "08MEXICO96"
+    place "MEXICO"
   ]
   node
   [
     id 9
-    color "None"
-    label "08RIYADH326"
-    place "RIYADH"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1204030380"
+    label "08RIYADH326"
+    place "RIYADH"
   ]
   node
   [
     id 10
-    color "red"
-    label "08STATE171264"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STATE171264"
+    place "STATE"
   ]
   edge
   [
     source 5
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "1069500"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "14337300"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "1122840"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:22:03 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:50 2011"
 Version 1
 graph
 [
@@ -6,400 +6,455 @@ graph
   node
   [
     id 0
-    color "None"
-    label "09PRISTINA357"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1250752680"
+    label "09PRISTINA357"
+    place "PRISTINA"
   ]
   node
   [
     id 1
-    color "None"
-    label "09PRISTINA412"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1253853780"
+    label "09PRISTINA412"
+    place "PRISTINA"
   ]
   node
   [
     id 2
-    color "None"
-    label "09PRISTINA428"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1254491400"
+    label "09PRISTINA428"
+    place "PRISTINA"
   ]
   node
   [
     id 3
-    color "None"
-    label "09PRISTINA456"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1255943460"
+    label "09PRISTINA456"
+    place "PRISTINA"
   ]
   node
   [
     id 4
-    color "None"
-    label "09PRISTINA463"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1256139060"
+    label "09PRISTINA463"
+    place "PRISTINA"
   ]
   node
   [
     id 5
-    color "None"
-    label "09PRISTINA470"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1256712480"
+    label "09PRISTINA470"
+    place "PRISTINA"
   ]
   node
   [
     id 6
-    color "None"
-    label "09PRISTINA477"
-    place "PRISTINA"
     degree 7
     constraint 0.264875
+    color "black"
+    timestamp "1257166320"
+    label "09PRISTINA477"
+    place "PRISTINA"
   ]
   node
   [
     id 7
-    color "None"
-    label "09PRISTINA492"
-    place "PRISTINA"
     degree 5
     constraint 0.416059
+    color "black"
+    timestamp "1258036560"
+    label "09PRISTINA492"
+    place "PRISTINA"
   ]
   node
   [
     id 8
-    color "None"
-    label "09PRISTINA493"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1258037100"
+    label "09PRISTINA493"
+    place "PRISTINA"
   ]
   node
   [
     id 9
-    color "None"
-    label "09PRISTINA494"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1258037340"
+    label "09PRISTINA494"
+    place "PRISTINA"
   ]
   node
   [
     id 10
-    color "None"
-    label "09PRISTINA495"
-    place "PRISTINA"
     degree 2
     constraint 0.686531
+    color "black"
+    timestamp "1258087620"
+    label "09PRISTINA495"
+    place "PRISTINA"
   ]
   node
   [
     id 11
-    color "None"
-    label "09PRISTINA497"
-    place "PRISTINA"
     degree 5
     constraint 0.229845
+    color "black"
+    timestamp "1258102740"
+    label "09PRISTINA497"
+    place "PRISTINA"
   ]
   node
   [
     id 12
-    color "None"
-    label "09PRISTINA501"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1258316640"
+    label "09PRISTINA501"
+    place "PRISTINA"
   ]
   node
   [
     id 13
-    color "red"
-    label "09PRISTINA502"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09PRISTINA502"
+    place "PRISTINA"
   ]
   node
   [
     id 14
-    color "None"
-    label "09PRISTINA510"
-    place "PRISTINA"
     degree 4
     constraint 0.312656
+    color "black"
+    timestamp "1258518420"
+    label "09PRISTINA510"
+    place "PRISTINA"
   ]
   node
   [
     id 15
-    color "None"
-    label "09PRISTINA518"
-    place "PRISTINA"
     degree 5
     constraint 0.371422
+    color "black"
+    timestamp "1258726560"
+    label "09PRISTINA518"
+    place "PRISTINA"
   ]
   node
   [
     id 16
-    color "None"
-    label "09PRISTINA527"
-    place "PRISTINA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1259151840"
+    label "09PRISTINA527"
+    place "PRISTINA"
   ]
   node
   [
     id 17
-    color "None"
-    label "09PRISTINA533"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1259692140"
+    label "09PRISTINA533"
+    place "PRISTINA"
   ]
   node
   [
     id 18
-    color "None"
-    label "09PRISTINA543"
-    place "PRISTINA"
     degree 5
     constraint 0.426868
+    color "black"
+    timestamp "1260375840"
+    label "09PRISTINA543"
+    place "PRISTINA"
   ]
   node
   [
     id 19
-    color "None"
-    label "09PRISTINA548"
-    place "PRISTINA"
     degree 6
     constraint 0.334447
+    color "black"
+    timestamp "1260804780"
+    label "09PRISTINA548"
+    place "PRISTINA"
   ]
   node
   [
     id 20
-    color "None"
-    label "09PRISTINA582"
-    place "PRISTINA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262190180"
+    label "09PRISTINA582"
+    place "PRISTINA"
   ]
   node
   [
     id 21
-    color "None"
-    label "09STATE124545"
-    place "STATE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1259950440"
+    label "09STATE124545"
+    place "STATE"
   ]
   node
   [
     id 22
-    color "None"
-    label "10PRISTINA55"
-    place "PRISTINA"
     degree 4
     constraint 0.492587
+    color "black"
+    timestamp "1265174340"
+    label "10PRISTINA55"
+    place "PRISTINA"
   ]
   edge
   [
     source 15
     target 14
+    duration "208140"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "921300"
     weight 1
   ]
   edge
   [
     source 18
     target 7
+    duration "2339280"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "3738720"
     weight 1
   ]
   edge
   [
     source 18
     target 15
+    duration "1649280"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "769020"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "870240"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "1963680"
     weight 1
   ]
   edge
   [
     source 20
     target 19
+    duration "1385400"
     weight 1
   ]
   edge
   [
     source 11
     target 6
+    duration "936420"
     weight 1
   ]
   edge
   [
     source 22
     target 19
+    duration "4369560"
     weight 1
   ]
   edge
   [
     source 22
     target 18
+    duration "4798500"
     weight 1
   ]
   edge
   [
     source 17
     target 15
+    duration "965580"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "66180"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "213900"
     weight 1
   ]
   edge
   [
     source 19
     target 6
+    duration "3638460"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "871020"
     weight 1
   ]
   edge
   [
     source 21
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "51060"
     weight 1
   ]
   edge
   [
     source 16
     target 0
+    duration "8399160"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "870780"
     weight 1
   ]
   edge
   [
     source 16
     target 14
+    duration "633420"
     weight 1
   ]
   edge
   [
     source 19
     target 15
+    duration "2078220"
     weight 1
   ]
   edge
   [
     source 19
     target 18
+    duration "428940"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 6
+    duration "3209520"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "637620"
     weight 1
   ]
   edge
   [
     source 22
     target 15
+    duration "6447780"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "573420"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "2159280"
     weight 1
   ]
   edge
   [
     source 19
     target 7
+    duration "2768220"
     weight 1
   ]
   edge
   [
     source 22
     target 14
+    duration "6655920"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:00 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:06:10 2011"
 Version 1
 graph
 [
@@ -6,166 +6,188 @@ graph
   node
   [
     id 0
-    color nan
-    label "06KINSHASA1856"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1166092500"
+    label "06KINSHASA1856"
+    place "KINSHASA"
   ]
   node
   [
     id 1
-    color nan
-    label "06KINSHASA1871"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1166437560"
+    label "06KINSHASA1871"
+    place "KINSHASA"
   ]
   node
   [
     id 2
-    color nan
-    label "06KINSHASA1890"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1166720040"
+    label "06KINSHASA1890"
+    place "KINSHASA"
   ]
   node
   [
     id 3
-    color nan
-    label "06KINSHASA1895"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1166775120"
+    label "06KINSHASA1895"
+    place "KINSHASA"
   ]
   node
   [
     id 4
-    color nan
-    label "06KINSHASA1928"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1167225540"
+    label "06KINSHASA1928"
+    place "KINSHASA"
   ]
   node
   [
     id 5
-    color nan
-    label "06KINSHASA1939"
-    place "KINSHASA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1167382500"
+    label "06KINSHASA1939"
+    place "KINSHASA"
   ]
   node
   [
     id 6
-    color nan
-    label "06KINSHASA357"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1141383540"
+    label "06KINSHASA357"
+    place "KINSHASA"
   ]
   node
   [
     id 7
-    color nan
-    label "06KINSHASA461"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1142598060"
+    label "06KINSHASA461"
+    place "KINSHASA"
   ]
   node
   [
     id 8
-    color nan
-    label "06KINSHASA476"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1143037140"
+    label "06KINSHASA476"
+    place "KINSHASA"
   ]
   node
   [
     id 9
-    color nan
-    label "07KINSHASA60"
-    place "KINSHASA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1169215920"
+    label "07KINSHASA60"
+    place "KINSHASA"
   ]
   node
   [
     id 10
-    color nan
-    label "07KINSHASA81"
-    place "KINSHASA"
     degree 3
     constraint 1
+    color "black"
+    timestamp "1169657520"
+    label "07KINSHASA81"
+    place "KINSHASA"
   ]
   edge
   [
     source 4
     target 3
+    duration "450420"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "1833420"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "25998960"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "439080"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "441600"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "55080"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "627540"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "1214520"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "156960"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "345060"
     weight 1
   ]
   edge
   [
     source 10
     target 10
+    duration "5189520"
     weight 1
   ]
 ]

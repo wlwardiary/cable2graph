@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:37 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:34 2011"
 Version 1
 graph
 [
@@ -6,262 +6,298 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05STATE204250"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "05STATE204250"
+    place "STATE"
   ]
   node
   [
     id 1
-    color "red"
-    label "05TOKYO6357"
-    place "TOKYO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05TOKYO6357"
+    place "TOKYO"
   ]
   node
   [
     id 2
-    color "None"
-    label "05WELLINGTON900"
-    place "WELLINGTON"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1132539360"
+    label "05WELLINGTON900"
+    place "WELLINGTON"
   ]
   node
   [
     id 3
-    color "red"
-    label "06SECSTATE124127"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06SECSTATE124127"
+    place "SECSTATE"
   ]
   node
   [
     id 4
-    color "red"
-    label "06STATE124127"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE124127"
+    place "STATE"
   ]
   node
   [
     id 5
-    color "red"
-    label "06STATE183705"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE183705"
+    place "STATE"
   ]
   node
   [
     id 6
-    color "red"
-    label "06STATE204250"
-    place "STATE"
     degree 3
     constraint 0.41358
+    color "red"
+    timestamp ""
+    label "06STATE204250"
+    place "STATE"
   ]
   node
   [
     id 7
-    color "red"
-    label "06STATE22855"
-    place "STATE"
     degree 3
     constraint 0.578609
+    color "red"
+    timestamp ""
+    label "06STATE22855"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "None"
-    label "06TOKYO1446"
-    place "TOKYO"
     degree 6
     constraint 0.41758
+    color "black"
+    timestamp "1142579940"
+    label "06TOKYO1446"
+    place "TOKYO"
   ]
   node
   [
     id 9
-    color "None"
-    label "06TOKYO4306"
-    place "TOKYO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1154415480"
+    label "06TOKYO4306"
+    place "TOKYO"
   ]
   node
   [
     id 10
-    color "None"
-    label "06TOKYO4559"
-    place "TOKYO"
     degree 7
     constraint 0.209751
+    color "black"
+    timestamp "1155537420"
+    label "06TOKYO4559"
+    place "TOKYO"
   ]
   node
   [
     id 11
-    color "red"
-    label "06TOKYO6357"
-    place "TOKYO"
     degree 2
     constraint 0.680556
+    color "red"
+    timestamp ""
+    label "06TOKYO6357"
+    place "TOKYO"
   ]
   node
   [
     id 12
-    color "None"
-    label "06TOKYO800"
-    place "TOKYO"
     degree 6
     constraint 0.41758
+    color "black"
+    timestamp "1139908320"
+    label "06TOKYO800"
+    place "TOKYO"
   ]
   node
   [
     id 13
-    color "None"
-    label "06WELLINGTON176"
-    place "WELLINGTON"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1141591500"
+    label "06WELLINGTON176"
+    place "WELLINGTON"
   ]
   node
   [
     id 14
-    color "None"
-    label "06WELLINGTON900"
-    place "WELLINGTON"
     degree 3
     constraint 0.41358
+    color "black"
+    timestamp "1163645160"
+    label "06WELLINGTON900"
+    place "WELLINGTON"
   ]
   edge
   [
     source 12
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "15629100"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "12957480"
     weight 1
   ]
   edge
   [
     source 14
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "1121940"
     weight 1
   ]
   edge
   [
     source 13
     target 2
+    duration "9052140"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 12
+    duration "23736840"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "2671620"
     weight 1
   ]
   edge
   [
     source 14
     target 8
+    duration "21065220"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "0"
     weight 1
   ]
 ]

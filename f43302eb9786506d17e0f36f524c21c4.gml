@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:27 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:09 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color nan
-    label "09ASHGABAT541"
-    place "ASHGABAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1240988580"
+    label "09ASHGABAT541"
+    place "ASHGABAT"
   ]
   node
   [
     id 1
-    color nan
-    label "09BANGKOK1095"
-    place "BANGKOK"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241158440"
+    label "09BANGKOK1095"
+    place "BANGKOK"
   ]
   node
   [
     id 2
-    color nan
-    label "09BANGKOK1096"
-    place "BANGKOK"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241159700"
+    label "09BANGKOK1096"
+    place "BANGKOK"
   ]
   node
   [
     id 3
-    color nan
-    label "09BEIJING1162"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241072220"
+    label "09BEIJING1162"
+    place "BEIJING"
   ]
   node
   [
     id 4
-    color nan
-    label "09HANOI408"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1240979760"
+    label "09HANOI408"
+    place "HANOI"
   ]
   node
   [
     id 5
-    color nan
-    label "09KATHMANDU344"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1240989060"
+    label "09KATHMANDU344"
+    place "KATHMANDU"
   ]
   node
   [
     id 6
-    color nan
-    label "09PHNOMPENH274"
-    place "PHNOMPENH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241086140"
+    label "09PHNOMPENH274"
+    place "PHNOMPENH"
   ]
   node
   [
     id 7
-    color nan
-    label "09SEOUL697"
-    place "SEOUL"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241146380"
+    label "09SEOUL697"
+    place "SEOUL"
   ]
   node
   [
     id 8
-    color nan
-    label "09STATE41663"
-    place "STATE"
     degree 10
     constraint 0.1
+    color "black"
+    timestamp "1240605660"
+    label "09STATE41663"
+    place "STATE"
   ]
   node
   [
     id 9
-    color nan
-    label "09TASHKENT615"
-    place "TASHKENT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1241164800"
+    label "09TASHKENT615"
+    place "TASHKENT"
   ]
   node
   [
     id 10
-    color nan
-    label "09VIENTIANE202"
-    place "VIENTIANE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1240981620"
+    label "09VIENTIANE202"
+    place "VIENTIANE"
   ]
   edge
   [
     source 8
     target 1
+    duration "552780"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "374100"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "383400"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "540720"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "559140"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "375960"
     weight 1
   ]
   edge
   [
     source 8
     target 0
+    duration "382920"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "466560"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "480480"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "554040"
     weight 1
   ]
 ]

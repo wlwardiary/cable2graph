@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:30 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:26 2011"
 Version 1
 graph
 [
@@ -6,265 +6,300 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05PARIS3182"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115810640"
+    label "05PARIS3182"
+    place "PARIS"
   ]
   node
   [
     id 1
-    color "None"
-    label "05PARIS3183"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115810820"
+    label "05PARIS3183"
+    place "PARIS"
   ]
   node
   [
     id 2
-    color "None"
-    label "05PARIS3184"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115810820"
+    label "05PARIS3184"
+    place "PARIS"
   ]
   node
   [
     id 3
-    color "None"
-    label "05PARIS3185"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115810820"
+    label "05PARIS3185"
+    place "PARIS"
   ]
   node
   [
     id 4
-    color "None"
-    label "05PARIS3186"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115811060"
+    label "05PARIS3186"
+    place "PARIS"
   ]
   node
   [
     id 5
-    color "None"
-    label "05PARIS3200"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115812260"
+    label "05PARIS3200"
+    place "PARIS"
   ]
   node
   [
     id 6
-    color "None"
-    label "05PARIS4194"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820480"
+    label "05PARIS4194"
+    place "PARIS"
   ]
   node
   [
     id 7
-    color "None"
-    label "05PARIS4195"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820540"
+    label "05PARIS4195"
+    place "PARIS"
   ]
   node
   [
     id 8
-    color "None"
-    label "05PARIS4197"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820600"
+    label "05PARIS4197"
+    place "PARIS"
   ]
   node
   [
     id 9
-    color "None"
-    label "05PARIS4198"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820600"
+    label "05PARIS4198"
+    place "PARIS"
   ]
   node
   [
     id 10
-    color "None"
-    label "05PARIS4199"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820600"
+    label "05PARIS4199"
+    place "PARIS"
   ]
   node
   [
     id 11
-    color "None"
-    label "05PARIS4200"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820600"
+    label "05PARIS4200"
+    place "PARIS"
   ]
   node
   [
     id 12
-    color "None"
-    label "05PARIS4201"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820660"
+    label "05PARIS4201"
+    place "PARIS"
   ]
   node
   [
     id 13
-    color "None"
-    label "05PARIS4202"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820780"
+    label "05PARIS4202"
+    place "PARIS"
   ]
   node
   [
     id 14
-    color "None"
-    label "05PARIS4203"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820780"
+    label "05PARIS4203"
+    place "PARIS"
   ]
   node
   [
     id 15
-    color "None"
-    label "05PARIS4204"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820780"
+    label "05PARIS4204"
+    place "PARIS"
   ]
   node
   [
     id 16
-    color "None"
-    label "05PARIS4205"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118820960"
+    label "05PARIS4205"
+    place "PARIS"
   ]
   node
   [
     id 17
-    color "red"
-    label "05STATE4520"
-    place "STATE"
     degree 17
     constraint 0.0588235
+    color "red"
+    timestamp ""
+    label "05STATE4520"
+    place "STATE"
   ]
   edge
   [
     source 17
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 12
+    duration "0"
     weight 1
   ]
 ]

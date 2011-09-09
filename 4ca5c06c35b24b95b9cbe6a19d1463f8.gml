@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:02 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:06:12 2011"
 Version 1
 graph
 [
@@ -6,214 +6,243 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06LIMA2253"
-    place "LIMA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06LIMA2253"
+    place "LIMA"
   ]
   node
   [
     id 1
-    color "None"
-    label "07CARACAS2034"
-    place "CARACAS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1192715760"
+    label "07CARACAS2034"
+    place "CARACAS"
   ]
   node
   [
     id 2
-    color "None"
-    label "07LIMA1933"
-    place "LIMA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1180704720"
+    label "07LIMA1933"
+    place "LIMA"
   ]
   node
   [
     id 3
-    color "None"
-    label "07LIMA2000"
-    place "LIMA"
     degree 6
     constraint 0.260224
+    color "black"
+    timestamp "1181236860"
+    label "07LIMA2000"
+    place "LIMA"
   ]
   node
   [
     id 4
-    color "None"
-    label "07LIMA2009"
-    place "LIMA"
     degree 2
     constraint 0.730903
+    color "black"
+    timestamp "1181313180"
+    label "07LIMA2009"
+    place "LIMA"
   ]
   node
   [
     id 5
-    color "None"
-    label "07LIMA2126"
-    place "LIMA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1182261420"
+    label "07LIMA2126"
+    place "LIMA"
   ]
   node
   [
     id 6
-    color "red"
-    label "07LIMA2236"
-    place "LIMA"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "07LIMA2236"
+    place "LIMA"
   ]
   node
   [
     id 7
-    color "None"
-    label "07LIMA2323"
-    place "LIMA"
     degree 4
     constraint 0.350694
+    color "black"
+    timestamp "1183757460"
+    label "07LIMA2323"
+    place "LIMA"
   ]
   node
   [
     id 8
-    color "None"
-    label "07LIMA2490"
-    place "LIMA"
     degree 3
     constraint 0.459877
+    color "black"
+    timestamp "1185200760"
+    label "07LIMA2490"
+    place "LIMA"
   ]
   node
   [
     id 9
-    color "None"
-    label "07LIMA3636"
-    place "LIMA"
     degree 3
     constraint 0.459877
+    color "black"
+    timestamp "1195072260"
+    label "07LIMA3636"
+    place "LIMA"
   ]
   node
   [
     id 10
-    color "None"
-    label "08LIMA1707"
-    place "LIMA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1224795360"
+    label "08LIMA1707"
+    place "LIMA"
   ]
   node
   [
     id 11
-    color "red"
-    label "08LIMA460"
-    place "LIMA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LIMA460"
+    place "LIMA"
   ]
   node
   [
     id 12
-    color "red"
-    label "08LIMA997"
-    place "LIMA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LIMA997"
+    place "LIMA"
   ]
   edge
   [
     source 7
     target 5
+    duration "1496040"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "13835400"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "2520600"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 2
+    duration "1556700"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "9871500"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "2444280"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "3963900"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "76320"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "7515000"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "43558500"
     weight 1
   ]
 ]

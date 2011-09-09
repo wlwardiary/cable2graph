@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:32 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:28 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color nan
-    label "05QUITO1054"
-    place "QUITO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115409420"
+    label "05QUITO1054"
+    place "QUITO"
   ]
   node
   [
     id 1
-    color nan
-    label "05QUITO1058"
-    place "QUITO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1115746680"
+    label "05QUITO1058"
+    place "QUITO"
   ]
   node
   [
     id 2
-    color nan
-    label "05QUITO1100"
-    place "QUITO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1115985240"
+    label "05QUITO1100"
+    place "QUITO"
   ]
   node
   [
     id 3
-    color nan
-    label "05QUITO1181"
-    place "QUITO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1116605160"
+    label "05QUITO1181"
+    place "QUITO"
   ]
   node
   [
     id 4
-    color nan
-    label "05QUITO1255"
-    place "QUITO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1117645980"
+    label "05QUITO1255"
+    place "QUITO"
   ]
   node
   [
     id 5
-    color nan
-    label "05QUITO1257"
-    place "QUITO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1117657620"
+    label "05QUITO1257"
+    place "QUITO"
   ]
   node
   [
     id 6
-    color nan
-    label "05QUITO1978"
-    place "QUITO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1124749560"
+    label "05QUITO1978"
+    place "QUITO"
   ]
   node
   [
     id 7
-    color nan
-    label "05QUITO2057"
-    place "QUITO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1125682860"
+    label "05QUITO2057"
+    place "QUITO"
   ]
   node
   [
     id 8
-    color nan
-    label "05QUITO900"
-    place "QUITO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1114439280"
+    label "05QUITO900"
+    place "QUITO"
   ]
   node
   [
     id 9
-    color nan
-    label "05QUITO945"
-    place "QUITO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1114624980"
+    label "05QUITO945"
+    place "QUITO"
   ]
   node
   [
     id 10
-    color nan
-    label "05QUITO947"
-    place "QUITO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1114633020"
+    label "05QUITO947"
+    place "QUITO"
   ]
   edge
   [
     source 9
     target 8
+    duration "185700"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "238560"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "3012960"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "8144400"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "933300"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "8040"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "2165880"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "1113660"
     weight 1
   ]
   edge
   [
     source 8
     target 0
+    duration "970140"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "1052460"
     weight 1
   ]
 ]

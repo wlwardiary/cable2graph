@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:06 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:02:44 2011"
 Version 1
 graph
 [
@@ -6,238 +6,270 @@ graph
   node
   [
     id 0
-    color "red"
-    label "04NDJAMENA2157"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04NDJAMENA2157"
+    place "NDJAMENA"
   ]
   node
   [
     id 1
-    color "None"
-    label "05NDJAMENA1150"
-    place "NDJAMENA"
     degree 2
     constraint 0.855903
+    color "black"
+    timestamp "1121873700"
+    label "05NDJAMENA1150"
+    place "NDJAMENA"
   ]
   node
   [
     id 2
-    color "None"
-    label "05NDJAMENA1151"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1121874240"
+    label "05NDJAMENA1151"
+    place "NDJAMENA"
   ]
   node
   [
     id 3
-    color "None"
-    label "05NDJAMENA1227"
-    place "NDJAMENA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1123413900"
+    label "05NDJAMENA1227"
+    place "NDJAMENA"
   ]
   node
   [
     id 4
-    color "None"
-    label "05NDJAMENA1356"
-    place "NDJAMENA"
     degree 12
     constraint 0.127894
+    color "black"
+    timestamp "1125725580"
+    label "05NDJAMENA1356"
+    place "NDJAMENA"
   ]
   node
   [
     id 5
-    color "None"
-    label "05NDJAMENA402"
-    place "NDJAMENA"
     degree 2
     constraint 0.855903
+    color "black"
+    timestamp "1111037160"
+    label "05NDJAMENA402"
+    place "NDJAMENA"
   ]
   node
   [
     id 6
-    color "None"
-    label "05NDJAMENA454"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1112070180"
+    label "05NDJAMENA454"
+    place "NDJAMENA"
   ]
   node
   [
     id 7
-    color "red"
-    label "05NDJAMENA53"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05NDJAMENA53"
+    place "NDJAMENA"
   ]
   node
   [
     id 8
-    color "red"
-    label "05NDJAMENA550"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05NDJAMENA550"
+    place "NDJAMENA"
   ]
   node
   [
     id 9
-    color "red"
-    label "05NDJAMENA661"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05NDJAMENA661"
+    place "NDJAMENA"
   ]
   node
   [
     id 10
-    color "red"
-    label "05NDJAMENA72"
-    place "NDJAMENA"
     degree 3
     constraint 0.634259
+    color "red"
+    timestamp ""
+    label "05NDJAMENA72"
+    place "NDJAMENA"
   ]
   node
   [
     id 11
-    color "None"
-    label "05NDJAMENA866"
-    place "NDJAMENA"
     degree 3
     constraint 0.439043
+    color "black"
+    timestamp "1117515240"
+    label "05NDJAMENA866"
+    place "NDJAMENA"
   ]
   node
   [
     id 12
-    color "None"
-    label "05NDJAMENA867"
-    place "NDJAMENA"
     degree 2
     constraint 0.737847
+    color "black"
+    timestamp "1117515300"
+    label "05NDJAMENA867"
+    place "NDJAMENA"
   ]
   node
   [
     id 13
-    color "None"
-    label "05NDJAMENA901"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1118159400"
+    label "05NDJAMENA901"
+    place "NDJAMENA"
   ]
   node
   [
     id 14
-    color "red"
-    label "05NDJAMENA910"
-    place "NDJAMENA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05NDJAMENA910"
+    place "NDJAMENA"
   ]
   edge
   [
     source 14
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "5254500"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "8210280"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "13655400"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "3851880"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "3851340"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "8210340"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "2311680"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "14688420"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "10836540"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:32 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:05 2011"
 Version 1
 graph
 [
@@ -6,250 +6,283 @@ graph
   node
   [
     id 0
-    color "red"
-    label "08BEIRUT1702"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1702"
+    place "BEIRUT"
   ]
   node
   [
     id 1
-    color "red"
-    label "08BEIRUT1713"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1713"
+    place "BEIRUT"
   ]
   node
   [
     id 2
-    color "red"
-    label "08BEIRUT1726"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1726"
+    place "BEIRUT"
   ]
   node
   [
     id 3
-    color "red"
-    label "08BEIRUT1727"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1727"
+    place "BEIRUT"
   ]
   node
   [
     id 4
-    color "red"
-    label "08BEIRUT1776"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1776"
+    place "BEIRUT"
   ]
   node
   [
     id 5
-    color "red"
-    label "08BEIRUT1777"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08BEIRUT1777"
+    place "BEIRUT"
   ]
   node
   [
     id 6
-    color "red"
-    label "09BEIRUT115"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT115"
+    place "BEIRUT"
   ]
   node
   [
     id 7
-    color "red"
-    label "09BEIRUT123"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT123"
+    place "BEIRUT"
   ]
   node
   [
     id 8
-    color "None"
-    label "09BEIRUT20"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1231314840"
+    label "09BEIRUT20"
+    place "BEIRUT"
   ]
   node
   [
     id 9
-    color "None"
-    label "09BEIRUT21"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1231316040"
+    label "09BEIRUT21"
+    place "BEIRUT"
   ]
   node
   [
     id 10
-    color "red"
-    label "09BEIRUT26"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT26"
+    place "BEIRUT"
   ]
   node
   [
     id 11
-    color "red"
-    label "09BEIRUT27"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT27"
+    place "BEIRUT"
   ]
   node
   [
     id 12
-    color "None"
-    label "09BEIRUT68"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1232086440"
+    label "09BEIRUT68"
+    place "BEIRUT"
   ]
   node
   [
     id 13
-    color "red"
-    label "09BEIRUT72"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT72"
+    place "BEIRUT"
   ]
   node
   [
     id 14
-    color "red"
-    label "09BEIRUT76"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT76"
+    place "BEIRUT"
   ]
   node
   [
     id 15
-    color "red"
-    label "09BEIRUT85"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09BEIRUT85"
+    place "BEIRUT"
   ]
   node
   [
     id 16
-    color "None"
-    label "09STATE11872"
-    place "STATE"
     degree 16
     constraint 0.0625
+    color "black"
+    timestamp "1234213380"
+    label "09STATE11872"
+    place "STATE"
   ]
   edge
   [
     source 16
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 9
+    duration "2897340"
     weight 1
   ]
   edge
   [
     source 16
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 12
+    duration "2126940"
     weight 1
   ]
   edge
   [
     source 16
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 8
+    duration "2898540"
     weight 1
   ]
   edge
   [
     source 16
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 6
+    duration "0"
     weight 1
   ]
 ]

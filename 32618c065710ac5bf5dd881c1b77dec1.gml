@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:03 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:04 2011"
 Version 1
 graph
 [
@@ -6,220 +6,249 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06AMSTERDAM720"
-    place "AMSTERDAM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06AMSTERDAM720"
+    place "AMSTERDAM"
   ]
   node
   [
     id 1
-    color "None"
-    label "06THEHAGUE257"
-    place "THEHAGUE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1139290020"
+    label "06THEHAGUE257"
+    place "THEHAGUE"
   ]
   node
   [
     id 2
-    color "None"
-    label "06THEHAGUE2587"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1165842000"
+    label "06THEHAGUE2587"
+    place "THEHAGUE"
   ]
   node
   [
     id 3
-    color "red"
-    label "06THEHAGUE2599"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE2599"
+    place "THEHAGUE"
   ]
   node
   [
     id 4
-    color "None"
-    label "06THEHAGUE2651"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1166696220"
+    label "06THEHAGUE2651"
+    place "THEHAGUE"
   ]
   node
   [
     id 5
-    color "red"
-    label "06THEHAGUE2705"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE2705"
+    place "THEHAGUE"
   ]
   node
   [
     id 6
-    color "red"
-    label "06THEHAGUE2870"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE2870"
+    place "THEHAGUE"
   ]
   node
   [
     id 7
-    color "red"
-    label "06THEHAGUE3008"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE3008"
+    place "THEHAGUE"
   ]
   node
   [
     id 8
-    color "red"
-    label "06THEHAGUE303"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE303"
+    place "THEHAGUE"
   ]
   node
   [
     id 9
-    color "red"
-    label "06THEHAGUE3128"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE3128"
+    place "THEHAGUE"
   ]
   node
   [
     id 10
-    color "None"
-    label "06THEHAGUE314"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1139587860"
+    label "06THEHAGUE314"
+    place "THEHAGUE"
   ]
   node
   [
     id 11
-    color "red"
-    label "06THEHAGUE3277"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE3277"
+    place "THEHAGUE"
   ]
   node
   [
     id 12
-    color "red"
-    label "06THEHAGUE3331"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06THEHAGUE3331"
+    place "THEHAGUE"
   ]
   node
   [
     id 13
-    color "None"
-    label "06THEHAGUE357"
-    place "THEHAGUE"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1140100440"
+    label "06THEHAGUE357"
+    place "THEHAGUE"
   ]
   node
   [
     id 14
-    color "None"
-    label "06THEHAGUE374"
-    place "THEHAGUE"
     degree 11
     constraint 0.0909091
+    color "black"
+    timestamp "1140187380"
+    label "06THEHAGUE374"
+    place "THEHAGUE"
   ]
   edge
   [
     source 14
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 1
+    duration "897360"
     weight 1
   ]
   edge
   [
     source 14
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 2
+    duration "25654620"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "512580"
     weight 1
   ]
   edge
   [
     source 13
     target 1
+    duration "810420"
     weight 1
   ]
   edge
   [
     source 14
     target 4
+    duration "26508840"
     weight 1
   ]
   edge
   [
     source 14
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 0
+    duration "0"
     weight 1
   ]
 ]

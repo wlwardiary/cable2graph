@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:24 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:05 2011"
 Version 1
 graph
 [
@@ -6,589 +6,668 @@ graph
   node
   [
     id 0
-    color "None"
-    label "09ANKARA1848"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1262182980"
+    label "09ANKARA1848"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "09BEIJING3419"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1261455240"
+    label "09BEIJING3419"
+    place "BEIJING"
   ]
   node
   [
     id 2
-    color "None"
-    label "09RIYADH1664"
-    place "RIYADH"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1261554060"
+    label "09RIYADH1664"
+    place "RIYADH"
   ]
   node
   [
     id 3
-    color "None"
-    label "09ROME1404"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1261578360"
+    label "09ROME1404"
+    place "ROME"
   ]
   node
   [
     id 4
-    color "red"
-    label "09SECSTATE129597"
-    place "SECSTATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "09SECSTATE129597"
+    place "SECSTATE"
   ]
   node
   [
     id 5
-    color "None"
-    label "09SEOUL1996"
-    place "SEOUL"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1261553100"
+    label "09SEOUL1996"
+    place "SEOUL"
   ]
   node
   [
     id 6
-    color "red"
-    label "09STATE129597"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "09STATE129597"
+    place "STATE"
   ]
   node
   [
     id 7
-    color "red"
-    label "09STATE130340"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09STATE130340"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "None"
-    label "09VIENNA1620"
-    place "VIENNA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262245260"
+    label "09VIENNA1620"
+    place "VIENNA"
   ]
   node
   [
     id 9
-    color "None"
-    label "09ZAGREB768"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262073780"
+    label "09ZAGREB768"
+    place "ZAGREB"
   ]
   node
   [
     id 10
-    color "None"
-    label "10ABUJA135"
-    place "ABUJA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1265217660"
+    label "10ABUJA135"
+    place "ABUJA"
   ]
   node
   [
     id 11
-    color "red"
-    label "10ABUJA20"
-    place "ABUJA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "10ABUJA20"
+    place "ABUJA"
   ]
   node
   [
     id 12
-    color "None"
-    label "10ABUJA38"
-    place "ABUJA"
     degree 3
     constraint 0.693457
+    color "black"
+    timestamp "1263464880"
+    label "10ABUJA38"
+    place "ABUJA"
   ]
   node
   [
     id 13
-    color "None"
-    label "10ABUJA39"
-    place "ABUJA"
     degree 5
     constraint 0.356667
+    color "black"
+    timestamp "1263482100"
+    label "10ABUJA39"
+    place "ABUJA"
   ]
   node
   [
     id 14
-    color "None"
-    label "10ABUJA67"
-    place "ABUJA"
     degree 2
     constraint 0.804444
+    color "black"
+    timestamp "1264080600"
+    label "10ABUJA67"
+    place "ABUJA"
   ]
   node
   [
     id 15
-    color "None"
-    label "10ABUJA69"
-    place "ABUJA"
     degree 3
     constraint 0.468642
+    color "black"
+    timestamp "1264084620"
+    label "10ABUJA69"
+    place "ABUJA"
   ]
   node
   [
     id 16
-    color "red"
-    label "10ALGIERS15"
-    place "ALGIERS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10ALGIERS15"
+    place "ALGIERS"
   ]
   node
   [
     id 17
-    color "None"
-    label "10ALGIERS20"
-    place "ALGIERS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1262795880"
+    label "10ALGIERS20"
+    place "ALGIERS"
   ]
   node
   [
     id 18
-    color "None"
-    label "10ALGIERS39"
-    place "ALGIERS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1263315000"
+    label "10ALGIERS39"
+    place "ALGIERS"
   ]
   node
   [
     id 19
-    color "None"
-    label "10BEIRUT21"
-    place "BEIRUT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262869680"
+    label "10BEIRUT21"
+    place "BEIRUT"
   ]
   node
   [
     id 20
-    color "None"
-    label "10CANBERRA1"
-    place "CANBERRA"
     degree 2
     constraint 0.888889
+    color "black"
+    timestamp "1262560380"
+    label "10CANBERRA1"
+    place "CANBERRA"
   ]
   node
   [
     id 21
-    color "None"
-    label "10CANBERRA12"
-    place "CANBERRA"
     degree 3
     constraint 0.558642
+    color "black"
+    timestamp "1262747700"
+    label "10CANBERRA12"
+    place "CANBERRA"
   ]
   node
   [
     id 22
-    color "None"
-    label "10HAVANA26"
-    place "HAVANA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1263234540"
+    label "10HAVANA26"
+    place "HAVANA"
   ]
   node
   [
     id 23
-    color "None"
-    label "10HAVANA8"
-    place "HAVANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262795220"
+    label "10HAVANA8"
+    place "HAVANA"
   ]
   node
   [
     id 24
-    color "red"
-    label "10ISLAMABAD109"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10ISLAMABAD109"
+    place "ISLAMABAD"
   ]
   node
   [
     id 25
-    color "None"
-    label "10ISLAMABAD191"
-    place "ISLAMABAD"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1264513860"
+    label "10ISLAMABAD191"
+    place "ISLAMABAD"
   ]
   node
   [
     id 26
-    color "red"
-    label "10ISLAMABAD75"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10ISLAMABAD75"
+    place "ISLAMABAD"
   ]
   node
   [
     id 27
-    color "None"
-    label "10MONROVIA93"
-    place "MONROVIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264428300"
+    label "10MONROVIA93"
+    place "MONROVIA"
   ]
   node
   [
     id 28
-    color "red"
-    label "10OTTAWA911"
-    place "OTTAWA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10OTTAWA911"
+    place "OTTAWA"
   ]
   node
   [
     id 29
-    color "None"
-    label "10RIYADH62"
-    place "RIYADH"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1263191220"
+    label "10RIYADH62"
+    place "RIYADH"
   ]
   node
   [
     id 30
-    color "None"
-    label "10RIYADH66"
-    place "RIYADH"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1263219780"
+    label "10RIYADH66"
+    place "RIYADH"
   ]
   node
   [
     id 31
-    color "red"
-    label "10SECSTATE1187"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10SECSTATE1187"
+    place "SECSTATE"
   ]
   node
   [
     id 32
-    color "red"
-    label "10SECSTATE129597"
-    place "SECSTATE"
     degree 3
     constraint 0.558642
+    color "red"
+    timestamp ""
+    label "10SECSTATE129597"
+    place "SECSTATE"
   ]
   node
   [
     id 33
-    color "None"
-    label "10SEOUL3"
-    place "SEOUL"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1262578140"
+    label "10SEOUL3"
+    place "SEOUL"
   ]
   node
   [
     id 34
-    color "red"
-    label "10STATE1098"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10STATE1098"
+    place "STATE"
   ]
   node
   [
     id 35
-    color "None"
-    label "10STATE1187"
-    place "STATE"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1262809200"
+    label "10STATE1187"
+    place "STATE"
   ]
   node
   [
     id 36
-    color "None"
-    label "10STATE2607"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1263253980"
+    label "10STATE2607"
+    place "STATE"
   ]
   node
   [
     id 37
-    color "None"
-    label "10TOKYO200"
-    place "TOKYO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1265060580"
+    label "10TOKYO200"
+    place "TOKYO"
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 12
+    duration "615720"
     weight 1
   ]
   edge
   [
     source 23
     target 22
+    duration "439320"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 29
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 31
     target 30
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 30
     target 25
+    duration "1294080"
     weight 1
   ]
   edge
   [
     source 32
     target 20
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "598500"
     weight 1
   ]
   edge
   [
     source 36
     target 21
+    duration "506280"
     weight 1
   ]
   edge
   [
     source 15
     target 12
+    duration "619740"
     weight 1
   ]
   edge
   [
     source 18
     target 17
+    duration "519120"
     weight 1
   ]
   edge
   [
     source 15
     target 10
+    duration "1133040"
     weight 1
   ]
   edge
   [
     source 27
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 33
     target 32
+    duration "0"
     weight 1
   ]
   edge
   [
     source 26
     target 25
+    duration "0"
     weight 1
   ]
   edge
   [
     source 35
     target 18
+    duration "505800"
     weight 1
   ]
   edge
   [
     source 35
     target 13
+    duration "672900"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "17220"
     weight 1
   ]
   edge
   [
     source 37
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 30
     target 29
+    duration "28560"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 28
+    duration "0"
     weight 1
   ]
   edge
   [
     source 35
     target 19
+    duration "60480"
     weight 1
   ]
   edge
   [
     source 36
     target 0
+    duration "1071000"
     weight 1
   ]
   edge
   [
     source 4
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 29
     target 2
+    duration "1637160"
     weight 1
   ]
   edge
   [
     source 17
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "602520"
     weight 1
   ]
   edge
   [
     source 25
     target 24
+    duration "0"
     weight 1
   ]
   edge
   [
     source 35
     target 22
+    duration "425340"
     weight 1
   ]
   edge
   [
     source 32
     target 21
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 34
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 20
+    duration "187320"
     weight 1
   ]
   edge
   [
     source 36
     target 33
+    duration "675840"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 35
     target 25
+    duration "1704660"
     weight 1
   ]
 ]

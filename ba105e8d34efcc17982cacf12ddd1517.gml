@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:13 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:15 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color "None"
-    label "06ATHENS2152"
-    place "ATHENS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1155820620"
+    label "06ATHENS2152"
+    place "ATHENS"
   ]
   node
   [
     id 1
-    color "None"
-    label "06ATHENS2201"
-    place "ATHENS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1156328220"
+    label "06ATHENS2201"
+    place "ATHENS"
   ]
   node
   [
     id 2
-    color "None"
-    label "06BANGKOK4982"
-    place "BANGKOK"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155701220"
+    label "06BANGKOK4982"
+    place "BANGKOK"
   ]
   node
   [
     id 3
-    color "None"
-    label "06BEIJING16876"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155718860"
+    label "06BEIJING16876"
+    place "BEIJING"
   ]
   node
   [
     id 4
-    color "None"
-    label "06BRUSSELS2800"
-    place "BRUSSELS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155728580"
+    label "06BRUSSELS2800"
+    place "BRUSSELS"
   ]
   node
   [
     id 5
-    color "None"
-    label "06HELSINKI817"
-    place "HELSINKI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155782940"
+    label "06HELSINKI817"
+    place "HELSINKI"
   ]
   node
   [
     id 6
-    color "red"
-    label "06SECSTATE134133"
-    place "SECSTATE"
     degree 8
     constraint 0.125
+    color "red"
+    timestamp ""
+    label "06SECSTATE134133"
+    place "SECSTATE"
   ]
   node
   [
     id 7
-    color "None"
-    label "06SEOUL2778"
-    place "SEOUL"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155711000"
+    label "06SEOUL2778"
+    place "SEOUL"
   ]
   node
   [
     id 8
-    color "None"
-    label "06SOFIA1165"
-    place "SOFIA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1155730500"
+    label "06SOFIA1165"
+    place "SOFIA"
   ]
   node
   [
     id 9
-    color "None"
-    label "06SOFIA1170"
-    place "SOFIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155793440"
+    label "06SOFIA1170"
+    place "SOFIA"
   ]
   node
   [
     id 10
-    color "None"
-    label "06VILNIUS793"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1156419660"
+    label "06VILNIUS793"
+    place "VILNIUS"
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "62940"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "507600"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
 ]

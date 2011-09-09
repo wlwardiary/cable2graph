@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:21 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:16 2011"
 Version 1
 graph
 [
@@ -6,253 +6,287 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05MANAGUA3025"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05MANAGUA3025"
+    place "MANAGUA"
   ]
   node
   [
     id 1
-    color "None"
-    label "06MANAGUA1057"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1147463040"
+    label "06MANAGUA1057"
+    place "MANAGUA"
   ]
   node
   [
     id 2
-    color "None"
-    label "06MANAGUA666"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1143231180"
+    label "06MANAGUA666"
+    place "MANAGUA"
   ]
   node
   [
     id 3
-    color "None"
-    label "06MANAGUA674"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1143231420"
+    label "06MANAGUA674"
+    place "MANAGUA"
   ]
   node
   [
     id 4
-    color "None"
-    label "06MANAGUA709"
-    place "MANAGUA"
     degree 6
     constraint 0.203897
+    color "black"
+    timestamp "1143576540"
+    label "06MANAGUA709"
+    place "MANAGUA"
   ]
   node
   [
     id 5
-    color "None"
-    label "06MANAGUA720"
-    place "MANAGUA"
     degree 3
     constraint 0.435957
+    color "black"
+    timestamp "1143803520"
+    label "06MANAGUA720"
+    place "MANAGUA"
   ]
   node
   [
     id 6
-    color "None"
-    label "06MANAGUA728"
-    place "MANAGUA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1143839280"
+    label "06MANAGUA728"
+    place "MANAGUA"
   ]
   node
   [
     id 7
-    color "None"
-    label "06MANAGUA738"
-    place "MANAGUA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1144092960"
+    label "06MANAGUA738"
+    place "MANAGUA"
   ]
   node
   [
     id 8
-    color "None"
-    label "06MANAGUA745"
-    place "MANAGUA"
     degree 4
     constraint 0.321181
+    color "black"
+    timestamp "1144183680"
+    label "06MANAGUA745"
+    place "MANAGUA"
   ]
   node
   [
     id 9
-    color "None"
-    label "06MANAGUA802"
-    place "MANAGUA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1144692960"
+    label "06MANAGUA802"
+    place "MANAGUA"
   ]
   node
   [
     id 10
-    color "None"
-    label "06MANAGUA807"
-    place "MANAGUA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1144766100"
+    label "06MANAGUA807"
+    place "MANAGUA"
   ]
   node
   [
     id 11
-    color "None"
-    label "06MANAGUA854"
-    place "MANAGUA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1145393280"
+    label "06MANAGUA854"
+    place "MANAGUA"
   ]
   node
   [
     id 12
-    color "None"
-    label "06MANAGUA863"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1145477940"
+    label "06MANAGUA863"
+    place "MANAGUA"
   ]
   node
   [
     id 13
-    color "None"
-    label "06MANAGUA869"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1145548980"
+    label "06MANAGUA869"
+    place "MANAGUA"
   ]
   node
   [
     id 14
-    color "None"
-    label "06MANAGUA931"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1146255120"
+    label "06MANAGUA931"
+    place "MANAGUA"
   ]
   node
   [
     id 15
-    color "None"
-    label "06MANAGUA932"
-    place "MANAGUA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1146255720"
+    label "06MANAGUA932"
+    place "MANAGUA"
   ]
   edge
   [
     source 8
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "380160"
     weight 1
   ]
   edge
   [
     source 15
     target 4
+    duration "2679180"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "1816740"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "1461780"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "856020"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "253680"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "3370080"
     weight 1
   ]
   edge
   [
     source 14
     target 4
+    duration "2678580"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "1300320"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "226980"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "73140"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "345120"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "90720"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "35760"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "607140"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "84660"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "627180"
     weight 1
   ]
 ]

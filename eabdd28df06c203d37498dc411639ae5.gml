@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:50 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:57 2011"
 Version 1
 graph
 [
@@ -6,166 +6,188 @@ graph
   node
   [
     id 0
-    color "None"
-    label "06JAKARTA10895"
-    place "JAKARTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1157085960"
+    label "06JAKARTA10895"
+    place "JAKARTA"
   ]
   node
   [
     id 1
-    color "None"
-    label "06LIMA2156"
-    place "LIMA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1149089220"
+    label "06LIMA2156"
+    place "LIMA"
   ]
   node
   [
     id 2
-    color "None"
-    label "06MANILA2539"
-    place "MANILA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1150441920"
+    label "06MANILA2539"
+    place "MANILA"
   ]
   node
   [
     id 3
-    color "None"
-    label "06MUSCAT903"
-    place "MUSCAT"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1149582960"
+    label "06MUSCAT903"
+    place "MUSCAT"
   ]
   node
   [
     id 4
-    color "None"
-    label "06PRAGUE675"
-    place "PRAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1150463700"
+    label "06PRAGUE675"
+    place "PRAGUE"
   ]
   node
   [
     id 5
-    color "None"
-    label "06SANJOSE1375"
-    place "SANJOSE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1150489080"
+    label "06SANJOSE1375"
+    place "SANJOSE"
   ]
   node
   [
     id 6
-    color "None"
-    label "06SANJOSE1952"
-    place "SANJOSE"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1157058300"
+    label "06SANJOSE1952"
+    place "SANJOSE"
   ]
   node
   [
     id 7
-    color "red"
-    label "06STATE133146"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06STATE133146"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "06STATE64726"
-    place "STATE"
     degree 7
     constraint 0.142857
+    color "red"
+    timestamp ""
+    label "06STATE64726"
+    place "STATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "06STATE82043"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06STATE82043"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "06VILNIUS568"
-    place "VILNIUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1150696020"
+    label "06VILNIUS568"
+    place "VILNIUS"
   ]
   edge
   [
     source 9
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
 ]

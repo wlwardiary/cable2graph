@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:36 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:06:51 2011"
 Version 1
 graph
 [
@@ -6,211 +6,239 @@ graph
   node
   [
     id 0
-    color "None"
-    label "07ACCRA1907"
-    place "ACCRA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189429380"
+    label "07ACCRA1907"
+    place "ACCRA"
   ]
   node
   [
     id 1
-    color "None"
-    label "07ANKARA2297"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189169700"
+    label "07ANKARA2297"
+    place "ANKARA"
   ]
   node
   [
     id 2
-    color "None"
-    label "07ATHENS1799"
-    place "ATHENS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1189169580"
+    label "07ATHENS1799"
+    place "ATHENS"
   ]
   node
   [
     id 3
-    color "None"
-    label "07ATHENS1803"
-    place "ATHENS"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1189408980"
+    label "07ATHENS1803"
+    place "ATHENS"
   ]
   node
   [
     id 4
-    color "None"
-    label "07BERLIN1715"
-    place "BERLIN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1189432200"
+    label "07BERLIN1715"
+    place "BERLIN"
   ]
   node
   [
     id 5
-    color "None"
-    label "07LJUBLJANA585"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189172820"
+    label "07LJUBLJANA585"
+    place "LJUBLJANA"
   ]
   node
   [
     id 6
-    color "None"
-    label "07RIGA665"
-    place "RIGA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1189141860"
+    label "07RIGA665"
+    place "RIGA"
   ]
   node
   [
     id 7
-    color "red"
-    label "07SECSTATE124823"
-    place "SECSTATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "07SECSTATE124823"
+    place "SECSTATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "07STATE1125337"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07STATE1125337"
+    place "STATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "07STATE125337"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "07STATE125337"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "07TALLINN604"
-    place "TALLINN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189744980"
+    label "07TALLINN604"
+    place "TALLINN"
   ]
   node
   [
     id 11
-    color "None"
-    label "07THEHAGUE1650"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189432740"
+    label "07THEHAGUE1650"
+    place "THEHAGUE"
   ]
   node
   [
     id 12
-    color "None"
-    label "07USNATO479"
-    place "USNATO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1189003800"
+    label "07USNATO479"
+    place "USNATO"
   ]
   node
   [
     id 13
-    color "None"
-    label "07WARSAW1930"
-    place "WARSAW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1189595100"
+    label "07WARSAW1930"
+    place "WARSAW"
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "239400"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 3
+    duration "405180"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "428400"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 6
+    duration "138060"
     weight 1
   ]
 ]

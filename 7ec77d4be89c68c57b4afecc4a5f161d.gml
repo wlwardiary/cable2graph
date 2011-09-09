@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:59 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:36 2011"
 Version 1
 graph
 [
@@ -6,271 +6,307 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08MUMBAI246"
-    place "MUMBAI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1212142380"
+    label "08MUMBAI246"
+    place "MUMBAI"
   ]
   node
   [
     id 1
-    color "None"
-    label "08MUMBAI463"
-    place "MUMBAI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1222232820"
+    label "08MUMBAI463"
+    place "MUMBAI"
   ]
   node
   [
     id 2
-    color "red"
-    label "08NEWDELHI1310"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08NEWDELHI1310"
+    place "NEWDELHI"
   ]
   node
   [
     id 3
-    color "None"
-    label "08NEWDELHI1479"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1212145200"
+    label "08NEWDELHI1479"
+    place "NEWDELHI"
   ]
   node
   [
     id 4
-    color "red"
-    label "08NEWDELHI1498"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08NEWDELHI1498"
+    place "NEWDELHI"
   ]
   node
   [
     id 5
-    color "red"
-    label "08NEWDELHI1512"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08NEWDELHI1512"
+    place "NEWDELHI"
   ]
   node
   [
     id 6
-    color "red"
-    label "08NEWDELHI1519"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08NEWDELHI1519"
+    place "NEWDELHI"
   ]
   node
   [
     id 7
-    color "None"
-    label "08NEWDELHI1561"
-    place "NEWDELHI"
     degree 5
     constraint 0.333333
+    color "black"
+    timestamp "1212747420"
+    label "08NEWDELHI1561"
+    place "NEWDELHI"
   ]
   node
   [
     id 8
-    color "red"
-    label "08NEWDELHI1607"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08NEWDELHI1607"
+    place "NEWDELHI"
   ]
   node
   [
     id 9
-    color "None"
-    label "08NEWDELHI2021"
-    place "NEWDELHI"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1216870740"
+    label "08NEWDELHI2021"
+    place "NEWDELHI"
   ]
   node
   [
     id 10
-    color "red"
-    label "08NEWDELHI2386"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08NEWDELHI2386"
+    place "NEWDELHI"
   ]
   node
   [
     id 11
-    color "None"
-    label "08NEWDELHI2828"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1225453140"
+    label "08NEWDELHI2828"
+    place "NEWDELHI"
   ]
   node
   [
     id 12
-    color "red"
-    label "08NEWDELHI2998"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08NEWDELHI2998"
+    place "NEWDELHI"
   ]
   node
   [
     id 13
-    color "red"
-    label "09NEWDELHI226"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09NEWDELHI226"
+    place "NEWDELHI"
   ]
   node
   [
     id 14
-    color "red"
-    label "09NEWDELHI3663"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09NEWDELHI3663"
+    place "NEWDELHI"
   ]
   node
   [
     id 15
-    color "None"
-    label "09NEWDELHI453"
-    place "NEWDELHI"
     degree 7
     constraint 0.142857
+    color "black"
+    timestamp "1236748560"
+    label "09NEWDELHI453"
+    place "NEWDELHI"
   ]
   node
   [
     id 16
-    color "None"
-    label "09NEWDELHI597"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1238152380"
+    label "09NEWDELHI597"
+    place "NEWDELHI"
   ]
   node
   [
     id 17
-    color "None"
-    label "09NEWDELHI617"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1238496840"
+    label "09NEWDELHI617"
+    place "NEWDELHI"
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "602220"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "1403820"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "605040"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 15
+    duration "1748280"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "8582400"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
 ]

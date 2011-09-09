@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:27 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:11 2011"
 Version 1
 graph
 [
@@ -6,256 +6,290 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05AITTAIPEI4423"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05AITTAIPEI4423"
+    place "AITTAIPEI"
   ]
   node
   [
     id 1
-    color "red"
-    label "07AITTAIPEI1253"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI1253"
+    place "AITTAIPEI"
   ]
   node
   [
     id 2
-    color "red"
-    label "07AITTAIPEI1270"
-    place "AITTAIPEI"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI1270"
+    place "AITTAIPEI"
   ]
   node
   [
     id 3
-    color "red"
-    label "07AITTAIPEI1324"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI1324"
+    place "AITTAIPEI"
   ]
   node
   [
     id 4
-    color "red"
-    label "07AITTAIPEI153"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI153"
+    place "AITTAIPEI"
   ]
   node
   [
     id 5
-    color "red"
-    label "07AITTAIPEI1989"
-    place "AITTAIPEI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI1989"
+    place "AITTAIPEI"
   ]
   node
   [
     id 6
-    color "red"
-    label "07AITTAIPEI49"
-    place "AITTAIPEI"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI49"
+    place "AITTAIPEI"
   ]
   node
   [
     id 7
-    color "red"
-    label "07AITTAIPEI63"
-    place "AITTAIPEI"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07AITTAIPEI63"
+    place "AITTAIPEI"
   ]
   node
   [
     id 8
-    color "None"
-    label "07TAIPEI1270"
-    place "TAIPEI"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1181113320"
+    label "07TAIPEI1270"
+    place "TAIPEI"
   ]
   node
   [
     id 9
-    color "None"
-    label "07TAIPEI1324"
-    place "TAIPEI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1181626380"
+    label "07TAIPEI1324"
+    place "TAIPEI"
   ]
   node
   [
     id 10
-    color "None"
-    label "07TAIPEI153"
-    place "TAIPEI"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1169195700"
+    label "07TAIPEI153"
+    place "TAIPEI"
   ]
   node
   [
     id 11
-    color "None"
-    label "07TAIPEI179"
-    place "TAIPEI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1169605500"
+    label "07TAIPEI179"
+    place "TAIPEI"
   ]
   node
   [
     id 12
-    color "None"
-    label "07TAIPEI1989"
-    place "TAIPEI"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1188377580"
+    label "07TAIPEI1989"
+    place "TAIPEI"
   ]
   node
   [
     id 13
-    color "None"
-    label "07TAIPEI206"
-    place "TAIPEI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1169798340"
+    label "07TAIPEI206"
+    place "TAIPEI"
   ]
   node
   [
     id 14
-    color "None"
-    label "07TAIPEI63"
-    place "TAIPEI"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1168389840"
+    label "07TAIPEI63"
+    place "TAIPEI"
   ]
   node
   [
     id 15
-    color "None"
-    label "07TAIPEI726"
-    place "TAIPEI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1175151300"
+    label "07TAIPEI726"
+    place "TAIPEI"
   ]
   node
   [
     id 16
-    color "None"
-    label "07TAIPEI91"
-    place "TAIPEI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1168594620"
+    label "07TAIPEI91"
+    place "TAIPEI"
   ]
   edge
   [
     source 16
     target 11
+    duration "1010880"
     weight 1
   ]
   edge
   [
     source 12
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 14
+    duration "204780"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "513060"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "602640"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "6761460"
     weight 1
   ]
   edge
   [
     source 14
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
 ]

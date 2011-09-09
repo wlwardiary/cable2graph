@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:01 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:38 2011"
 Version 1
 graph
 [
@@ -6,262 +6,298 @@ graph
   node
   [
     id 0
-    color "red"
-    label "08PORTAUPRINCE1023"
-    place "PORTAUPRINCE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08PORTAUPRINCE1023"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 1
-    color "red"
-    label "09PORTAUPRINCE486"
-    place "PORTAUPRINCE"
     degree 3
     constraint 0.607917
+    color "red"
+    timestamp ""
+    label "09PORTAUPRINCE486"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 2
-    color "None"
-    label "09PORTAUPRINCE530"
-    place "PORTAUPRINCE"
     degree 5
     constraint 0.329339
+    color "black"
+    timestamp "1244132520"
+    label "09PORTAUPRINCE530"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 3
-    color "None"
-    label "09PORTAUPRINCE538"
-    place "PORTAUPRINCE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1244222820"
+    label "09PORTAUPRINCE538"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 4
-    color "None"
-    label "09PORTAUPRINCE553"
-    place "PORTAUPRINCE"
     degree 3
     constraint 0.607917
+    color "black"
+    timestamp "1244657700"
+    label "09PORTAUPRINCE553"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 5
-    color "None"
-    label "09PORTAUPRINCE583"
-    place "PORTAUPRINCE"
     degree 5
     constraint 0.329339
+    color "black"
+    timestamp "1245259560"
+    label "09PORTAUPRINCE583"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 6
-    color "None"
-    label "09PORTAUPRINCE591"
-    place "PORTAUPRINCE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1245432060"
+    label "09PORTAUPRINCE591"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 7
-    color "None"
-    label "09PORTAUPRINCE592"
-    place "PORTAUPRINCE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1245432240"
+    label "09PORTAUPRINCE592"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 8
-    color "None"
-    label "09PORTAUPRINCE642"
-    place "PORTAUPRINCE"
     degree 5
     constraint 0.481433
+    color "black"
+    timestamp "1247655720"
+    label "09PORTAUPRINCE642"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 9
-    color "None"
-    label "09PORTAUPRINCE667"
-    place "PORTAUPRINCE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1248436860"
+    label "09PORTAUPRINCE667"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 10
-    color "red"
-    label "09PORTAUPRINCE706"
-    place "PORTAUPRINCE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09PORTAUPRINCE706"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 11
-    color "red"
-    label "09PORTAUPRINCE713"
-    place "PORTAUPRINCE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09PORTAUPRINCE713"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 12
-    color "None"
-    label "09PORTAUPRINCE728"
-    place "PORTAUPRINCE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1250166540"
+    label "09PORTAUPRINCE728"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 13
-    color "red"
-    label "09PORTAUPRINCE733"
-    place "PORTAUPRINCE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09PORTAUPRINCE733"
+    place "PORTAUPRINCE"
   ]
   node
   [
     id 14
-    color "None"
-    label "09PORTAUPRINCE742"
-    place "PORTAUPRINCE"
     degree 8
     constraint 0.248333
+    color "black"
+    timestamp "1250767980"
+    label "09PORTAUPRINCE742"
+    place "PORTAUPRINCE"
   ]
   edge
   [
     source 14
     target 2
+    duration "6635460"
     weight 1
   ]
   edge
   [
     source 14
     target 4
+    duration "6110280"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "90300"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "1299720"
     weight 1
   ]
   edge
   [
     source 14
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "601860"
     weight 1
   ]
   edge
   [
     source 14
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "172500"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "172680"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "1729680"
     weight 1
   ]
   edge
   [
     source 14
     target 8
+    duration "3112260"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "2396160"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "2998020"
     weight 1
   ]
   edge
   [
     source 14
     target 5
+    duration "5508420"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "3523200"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "0"
     weight 1
   ]
 ]

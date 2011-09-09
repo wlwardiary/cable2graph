@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:47 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:13 2011"
 Version 1
 graph
 [
@@ -6,202 +6,229 @@ graph
   node
   [
     id 0
-    color nan
-    label "07SANTODOMINGO2366"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1192809540"
+    label "07SANTODOMINGO2366"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 1
-    color nan
-    label "07SANTODOMINGO2568"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1195219320"
+    label "07SANTODOMINGO2568"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 2
-    color nan
-    label "08SANTODOMINGO180"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1202234100"
+    label "08SANTODOMINGO180"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 3
-    color nan
-    label "08SANTODOMINGO225"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1203085500"
+    label "08SANTODOMINGO225"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 4
-    color nan
-    label "08SANTODOMINGO39"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1199808060"
+    label "08SANTODOMINGO39"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 5
-    color nan
-    label "08SANTODOMINGO418"
-    place "SANTODOMINGO"
     degree 4
     constraint 0.344727
+    color "black"
+    timestamp "1206635940"
+    label "08SANTODOMINGO418"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 6
-    color nan
-    label "08SANTODOMINGO586"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1208880540"
+    label "08SANTODOMINGO586"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 7
-    color nan
-    label "08SANTODOMINGO611"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1209142200"
+    label "08SANTODOMINGO611"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 8
-    color nan
-    label "08SANTODOMINGO668"
-    place "SANTODOMINGO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1209748320"
+    label "08SANTODOMINGO668"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 9
-    color nan
-    label "08SANTODOMINGO699"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.707031
+    color "black"
+    timestamp "1210330380"
+    label "08SANTODOMINGO699"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 10
-    color nan
-    label "08SANTODOMINGO751"
-    place "SANTODOMINGO"
     degree 8
     constraint 0.192383
+    color "black"
+    timestamp "1210858980"
+    label "08SANTODOMINGO751"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 11
-    color nan
-    label "08SANTODOMINGO760"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.878906
+    color "black"
+    timestamp "1210985100"
+    label "08SANTODOMINGO760"
+    place "SANTODOMINGO"
   ]
   node
   [
     id 12
-    color nan
-    label "08SANTODOMINGO768"
-    place "SANTODOMINGO"
     degree 2
     constraint 0.878906
+    color "black"
+    timestamp "1211220660"
+    label "08SANTODOMINGO768"
+    place "SANTODOMINGO"
   ]
   edge
   [
     source 10
     target 0
+    duration "18049440"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "11050920"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "2244600"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "3277440"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "126120"
     weight 1
   ]
   edge
   [
     source 10
     target 5
+    duration "4223040"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "1110660"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "361680"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "528600"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "235560"
     weight 1
   ]
   edge
   [
     source 9
     target 5
+    duration "3694440"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "8624880"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "2409780"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "2506260"
     weight 1
   ]
 ]

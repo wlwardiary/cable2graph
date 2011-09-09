@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:25 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:20 2011"
 Version 1
 graph
 [
@@ -6,214 +6,243 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05MUSCAT1436"
-    place "MUSCAT"
     degree 2
     constraint 0.888889
+    color "red"
+    timestamp ""
+    label "05MUSCAT1436"
+    place "MUSCAT"
   ]
   node
   [
     id 1
-    color "None"
-    label "06MUSCAT293"
-    place "MUSCAT"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1141219740"
+    label "06MUSCAT293"
+    place "MUSCAT"
   ]
   node
   [
     id 2
-    color "None"
-    label "06MUSCAT385"
-    place "MUSCAT"
     degree 3
     constraint 0.73534
+    color "black"
+    timestamp "1142432100"
+    label "06MUSCAT385"
+    place "MUSCAT"
   ]
   node
   [
     id 3
-    color "None"
-    label "06MUSCAT539"
-    place "MUSCAT"
     degree 3
     constraint 0.73534
+    color "black"
+    timestamp "1144220340"
+    label "06MUSCAT539"
+    place "MUSCAT"
   ]
   node
   [
     id 4
-    color "None"
-    label "06MUSCAT881"
-    place "MUSCAT"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1149482220"
+    label "06MUSCAT881"
+    place "MUSCAT"
   ]
   node
   [
     id 5
-    color "None"
-    label "06MUSCAT896"
-    place "MUSCAT"
     degree 4
     constraint 0.473958
+    color "black"
+    timestamp "1149508020"
+    label "06MUSCAT896"
+    place "MUSCAT"
   ]
   node
   [
     id 6
-    color "None"
-    label "06MUSCAT990"
-    place "MUSCAT"
     degree 2
     constraint 0.835069
+    color "black"
+    timestamp "1150714560"
+    label "06MUSCAT990"
+    place "MUSCAT"
   ]
   node
   [
     id 7
-    color "None"
-    label "06MUSCAT993"
-    place "MUSCAT"
     degree 3
     constraint 0.534722
+    color "black"
+    timestamp "1150774740"
+    label "06MUSCAT993"
+    place "MUSCAT"
   ]
   node
   [
     id 8
-    color "None"
-    label "06SANAA221"
-    place "SANAA"
     degree 3
     constraint 0.534722
+    color "black"
+    timestamp "1138794780"
+    label "06SANAA221"
+    place "SANAA"
   ]
   node
   [
     id 9
-    color "None"
-    label "06SANAA23"
-    place "SANAA"
     degree 4
     constraint 0.376736
+    color "black"
+    timestamp "1136617500"
+    label "06SANAA23"
+    place "SANAA"
   ]
   node
   [
     id 10
-    color "red"
-    label "06SANAA2844"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06SANAA2844"
+    place "SANAA"
   ]
   node
   [
     id 11
-    color "red"
-    label "06SANAA3951"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06SANAA3951"
+    place "SANAA"
   ]
   node
   [
     id 12
-    color "None"
-    label "06SANAA954"
-    place "SANAA"
     degree 2
     constraint 0.835069
+    color "black"
+    timestamp "1144570620"
+    label "06SANAA954"
+    place "SANAA"
   ]
   edge
   [
     source 7
     target 5
+    duration "1266720"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "2177280"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "5775840"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "1292520"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "2424960"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "5287680"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "1788240"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "7953120"
     weight 1
   ]
   edge
   [
     source 5
     target 2
+    duration "7075920"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "1206540"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "60180"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "8262480"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:22 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:06:35 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06STATE192623"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE192623"
+    place "STATE"
   ]
   node
   [
     id 1
-    color "red"
-    label "07ABIDJAN99"
-    place "ABIDJAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07ABIDJAN99"
+    place "ABIDJAN"
   ]
   node
   [
     id 2
-    color "red"
-    label "07ACCRA194"
-    place "ACCRA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07ACCRA194"
+    place "ACCRA"
   ]
   node
   [
     id 3
-    color "red"
-    label "07ADDISABABA495"
-    place "ADDISABABA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07ADDISABABA495"
+    place "ADDISABABA"
   ]
   node
   [
     id 4
-    color "red"
-    label "07COTONOU186"
-    place "COTONOU"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07COTONOU186"
+    place "COTONOU"
   ]
   node
   [
     id 5
-    color "red"
-    label "07GABORONE133"
-    place "GABORONE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07GABORONE133"
+    place "GABORONE"
   ]
   node
   [
     id 6
-    color "red"
-    label "07KAMPALA172"
-    place "KAMPALA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07KAMPALA172"
+    place "KAMPALA"
   ]
   node
   [
     id 7
-    color "None"
-    label "07LAGOS239"
-    place "LAGOS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1175256480"
+    label "07LAGOS239"
+    place "LAGOS"
   ]
   node
   [
     id 8
-    color "red"
-    label "07LUSAKA87"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07LUSAKA87"
+    place "LUSAKA"
   ]
   node
   [
     id 9
-    color "None"
-    label "07PANAMA90"
-    place "PANAMA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1169244240"
+    label "07PANAMA90"
+    place "PANAMA"
   ]
   node
   [
     id 10
-    color "None"
-    label "07STATE144739"
-    place "STATE"
     degree 9
     constraint 0.111111
+    color "black"
+    timestamp "1192550400"
+    label "07STATE144739"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "07STATE192919"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07STATE192919"
+    place "STATE"
   ]
   edge
   [
     source 10
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "17293920"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
 ]

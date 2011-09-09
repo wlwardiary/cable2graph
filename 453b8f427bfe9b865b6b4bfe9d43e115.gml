@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:44 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:01 2011"
 Version 1
 graph
 [
@@ -6,616 +6,700 @@ graph
   node
   [
     id 0
-    color "red"
-    label "01LUSAKA3246"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01LUSAKA3246"
+    place "LUSAKA"
   ]
   node
   [
     id 1
-    color "None"
-    label "08LUSAKA1023"
-    place "LUSAKA"
     degree 9
     constraint 0.133488
+    color "black"
+    timestamp "1224506640"
+    label "08LUSAKA1023"
+    place "LUSAKA"
   ]
   node
   [
     id 2
-    color "None"
-    label "08LUSAKA1028"
-    place "LUSAKA"
     degree 3
     constraint 0.402971
+    color "black"
+    timestamp "1224670440"
+    label "08LUSAKA1028"
+    place "LUSAKA"
   ]
   node
   [
     id 3
-    color "None"
-    label "08LUSAKA1030"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1224743220"
+    label "08LUSAKA1030"
+    place "LUSAKA"
   ]
   node
   [
     id 4
-    color "red"
-    label "08LUSAKA1032"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA1032"
+    place "LUSAKA"
   ]
   node
   [
     id 5
-    color "None"
-    label "08LUSAKA1033"
-    place "LUSAKA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1224762540"
+    label "08LUSAKA1033"
+    place "LUSAKA"
   ]
   node
   [
     id 6
-    color "red"
-    label "08LUSAKA1034"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA1034"
+    place "LUSAKA"
   ]
   node
   [
     id 7
-    color "None"
-    label "08LUSAKA1044"
-    place "LUSAKA"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1225205400"
+    label "08LUSAKA1044"
+    place "LUSAKA"
   ]
   node
   [
     id 8
-    color "red"
-    label "08LUSAKA1048"
-    place "LUSAKA"
     degree 2
     constraint 0.680556
+    color "red"
+    timestamp ""
+    label "08LUSAKA1048"
+    place "LUSAKA"
   ]
   node
   [
     id 9
-    color "None"
-    label "08LUSAKA1049"
-    place "LUSAKA"
     degree 2
     constraint 0.680556
+    color "black"
+    timestamp "1225290840"
+    label "08LUSAKA1049"
+    place "LUSAKA"
   ]
   node
   [
     id 10
-    color "red"
-    label "08LUSAKA1050"
-    place "LUSAKA"
     degree 2
     constraint 0.680556
+    color "red"
+    timestamp ""
+    label "08LUSAKA1050"
+    place "LUSAKA"
   ]
   node
   [
     id 11
-    color "red"
-    label "08LUSAKA1051"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA1051"
+    place "LUSAKA"
   ]
   node
   [
     id 12
-    color "None"
-    label "08LUSAKA1052"
-    place "LUSAKA"
     degree 6
     constraint 0.376543
+    color "black"
+    timestamp "1225361280"
+    label "08LUSAKA1052"
+    place "LUSAKA"
   ]
   node
   [
     id 13
-    color "None"
-    label "08LUSAKA1053"
-    place "LUSAKA"
     degree 6
     constraint 0.425926
+    color "black"
+    timestamp "1225372980"
+    label "08LUSAKA1053"
+    place "LUSAKA"
   ]
   node
   [
     id 14
-    color "None"
-    label "08LUSAKA1054"
-    place "LUSAKA"
     degree 2
     constraint 0.680556
+    color "black"
+    timestamp "1225425300"
+    label "08LUSAKA1054"
+    place "LUSAKA"
   ]
   node
   [
     id 15
-    color "None"
-    label "08LUSAKA1057"
-    place "LUSAKA"
     degree 6
     constraint 0.25352
+    color "black"
+    timestamp "1225455000"
+    label "08LUSAKA1057"
+    place "LUSAKA"
   ]
   node
   [
     id 16
-    color "red"
-    label "08LUSAKA1058"
-    place "LUSAKA"
     degree 2
     constraint 0.656684
+    color "red"
+    timestamp ""
+    label "08LUSAKA1058"
+    place "LUSAKA"
   ]
   node
   [
     id 17
-    color "red"
-    label "08LUSAKA1059"
-    place "LUSAKA"
     degree 2
     constraint 0.656684
+    color "red"
+    timestamp ""
+    label "08LUSAKA1059"
+    place "LUSAKA"
   ]
   node
   [
     id 18
-    color "red"
-    label "08LUSAKA1060"
-    place "LUSAKA"
     degree 2
     constraint 0.656684
+    color "red"
+    timestamp ""
+    label "08LUSAKA1060"
+    place "LUSAKA"
   ]
   node
   [
     id 19
-    color "None"
-    label "08LUSAKA1065"
-    place "LUSAKA"
     degree 8
     constraint 0.278212
+    color "black"
+    timestamp "1225786440"
+    label "08LUSAKA1065"
+    place "LUSAKA"
   ]
   node
   [
     id 20
-    color "None"
-    label "08LUSAKA1076"
-    place "LUSAKA"
     degree 6
     constraint 0.425781
+    color "black"
+    timestamp "1225878300"
+    label "08LUSAKA1076"
+    place "LUSAKA"
   ]
   node
   [
     id 21
-    color "None"
-    label "08LUSAKA1094"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1226321520"
+    label "08LUSAKA1094"
+    place "LUSAKA"
   ]
   node
   [
     id 22
-    color "red"
-    label "08LUSAKA45"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA45"
+    place "LUSAKA"
   ]
   node
   [
     id 23
-    color "red"
-    label "08LUSAKA49"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA49"
+    place "LUSAKA"
   ]
   node
   [
     id 24
-    color "red"
-    label "08LUSAKA860"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA860"
+    place "LUSAKA"
   ]
   node
   [
     id 25
-    color "red"
-    label "08LUSAKA879"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA879"
+    place "LUSAKA"
   ]
   node
   [
     id 26
-    color "red"
-    label "08LUSAKA888"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA888"
+    place "LUSAKA"
   ]
   node
   [
     id 27
-    color "red"
-    label "08LUSAKA906"
-    place "LUSAKA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08LUSAKA906"
+    place "LUSAKA"
   ]
   node
   [
     id 28
-    color "None"
-    label "08LUSAKA909"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1221051540"
+    label "08LUSAKA909"
+    place "LUSAKA"
   ]
   node
   [
     id 29
-    color "None"
-    label "08LUSAKA950"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1222413240"
+    label "08LUSAKA950"
+    place "LUSAKA"
   ]
   node
   [
     id 30
-    color "red"
-    label "08LUSAKA970"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08LUSAKA970"
+    place "LUSAKA"
   ]
   node
   [
     id 31
-    color "red"
-    label "08LUSAKA973"
-    place "LUSAKA"
     degree 2
     constraint 0.699267
+    color "red"
+    timestamp ""
+    label "08LUSAKA973"
+    place "LUSAKA"
   ]
   node
   [
     id 32
-    color "None"
-    label "08LUSAKA974"
-    place "LUSAKA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1222859040"
+    label "08LUSAKA974"
+    place "LUSAKA"
   ]
   node
   [
     id 33
-    color "None"
-    label "08LUSAKA980"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1222953420"
+    label "08LUSAKA980"
+    place "LUSAKA"
   ]
   node
   [
     id 34
-    color "None"
-    label "08LUSAKA986"
-    place "LUSAKA"
     degree 4
     constraint 0.342785
+    color "black"
+    timestamp "1223291040"
+    label "08LUSAKA986"
+    place "LUSAKA"
   ]
   node
   [
     id 35
-    color "None"
-    label "09LUSAKA245"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1239106140"
+    label "09LUSAKA245"
+    place "LUSAKA"
   ]
   node
   [
     id 36
-    color "red"
-    label "94LUSAKA751"
-    place "LUSAKA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "94LUSAKA751"
+    place "LUSAKA"
   ]
   edge
   [
     source 15
     target 13
+    duration "82020"
     weight 1
   ]
   edge
   [
     source 20
     target 18
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 12
+    duration "93720"
     weight 1
   ]
   edge
   [
     source 20
     target 19
+    duration "91860"
     weight 1
   ]
   edge
   [
     source 30
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 28
     target 27
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 29
     target 1
+    duration "2093400"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "462180"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 32
     target 1
+    duration "1647600"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "11700"
     weight 1
   ]
   edge
   [
     source 20
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 23
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 31
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 17
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "29700"
     weight 1
   ]
   edge
   [
     source 33
     target 1
+    duration "1553220"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "82140"
     weight 1
   ]
   edge
   [
     source 19
     target 18
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 2
+    duration "1116000"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 36
     target 34
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 15
+    duration "331440"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "52320"
     weight 1
   ]
   edge
   [
     source 34
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 34
     target 1
+    duration "1215600"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "163800"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "70440"
     weight 1
   ]
   edge
   [
     source 20
     target 17
+    duration "0"
     weight 1
   ]
   edge
   [
     source 27
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 22
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 26
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 2
+    duration "1207860"
     weight 1
   ]
   edge
   [
     source 21
     target 19
+    duration "535080"
     weight 1
   ]
   edge
   [
     source 35
     target 19
+    duration "13319700"
     weight 1
   ]
   edge
   [
     source 32
     target 24
+    duration "0"
     weight 1
   ]
   edge
   [
     source 34
     target 31
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "155880"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "442860"
     weight 1
   ]
   edge
   [
     source 20
     target 15
+    duration "423300"
     weight 1
   ]
   edge
   [
     source 32
     target 25
+    duration "0"
     weight 1
   ]
 ]

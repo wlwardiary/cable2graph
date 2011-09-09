@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:28 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:09 2011"
 Version 1
 graph
 [
@@ -6,232 +6,263 @@ graph
   node
   [
     id 0
-    color "None"
-    label "09ASUNCION261"
-    place "ASUNCION"
     degree 3
     constraint 0.768519
+    color "black"
+    timestamp "1241038080"
+    label "09ASUNCION261"
+    place "ASUNCION"
   ]
   node
   [
     id 1
-    color "None"
-    label "09ASUNCION284"
-    place "ASUNCION"
     degree 3
     constraint 0.768519
+    color "black"
+    timestamp "1241548200"
+    label "09ASUNCION284"
+    place "ASUNCION"
   ]
   node
   [
     id 2
-    color "None"
-    label "09ASUNCION293"
-    place "ASUNCION"
     degree 2
     constraint 0.888889
+    color "black"
+    timestamp "1241641980"
+    label "09ASUNCION293"
+    place "ASUNCION"
   ]
   node
   [
     id 3
-    color "red"
-    label "09ASUNCION308"
-    place "ASUNCION"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09ASUNCION308"
+    place "ASUNCION"
   ]
   node
   [
     id 4
-    color "None"
-    label "09ASUNCION338"
-    place "ASUNCION"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1243007280"
+    label "09ASUNCION338"
+    place "ASUNCION"
   ]
   node
   [
     id 5
-    color "None"
-    label "09ASUNCION344"
-    place "ASUNCION"
     degree 3
     constraint 0.506173
+    color "black"
+    timestamp "1243366680"
+    label "09ASUNCION344"
+    place "ASUNCION"
   ]
   node
   [
     id 6
-    color "red"
-    label "09ASUNCION701"
-    place "ASUNCION"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09ASUNCION701"
+    place "ASUNCION"
   ]
   node
   [
     id 7
-    color "None"
-    label "09SAOPAULO228"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1239970680"
+    label "09SAOPAULO228"
+    place "SAOPAULO"
   ]
   node
   [
     id 8
-    color "red"
-    label "09SAOPAULO319"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SAOPAULO319"
+    place "SAOPAULO"
   ]
   node
   [
     id 9
-    color "None"
-    label "09SAOPAULO447"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1248777480"
+    label "09SAOPAULO447"
+    place "SAOPAULO"
   ]
   node
   [
     id 10
-    color "red"
-    label "09SAOPAULO526"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SAOPAULO526"
+    place "SAOPAULO"
   ]
   node
   [
     id 11
-    color "None"
-    label "09SAOPAULO558"
-    place "SAOPAULO"
     degree 9
     constraint 0.111111
+    color "black"
+    timestamp "1253633340"
+    label "09SAOPAULO558"
+    place "SAOPAULO"
   ]
   node
   [
     id 12
-    color "red"
-    label "09SAOPAULO66"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SAOPAULO66"
+    place "SAOPAULO"
   ]
   node
   [
     id 13
-    color "red"
-    label "09SAOPAULO873"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SAOPAULO873"
+    place "SAOPAULO"
   ]
   node
   [
     id 14
-    color "red"
-    label "09SAOPAULO975"
-    place "SAOPAULO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09SAOPAULO975"
+    place "SAOPAULO"
   ]
   edge
   [
     source 5
     target 0
+    duration "2328600"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "10626060"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "603900"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "4855860"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "1818480"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "93780"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "510120"
     weight 1
   ]
   edge
   [
     source 11
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "13662660"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
 ]

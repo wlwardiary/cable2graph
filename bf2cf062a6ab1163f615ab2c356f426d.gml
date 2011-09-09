@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:11 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:41 2011"
 Version 1
 graph
 [
@@ -6,304 +6,345 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08AMSTERDAM35"
-    place "AMSTERDAM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1216386540"
+    label "08AMSTERDAM35"
+    place "AMSTERDAM"
   ]
   node
   [
     id 1
-    color "None"
-    label "08BUDAPEST1076"
-    place "BUDAPEST"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1226311860"
+    label "08BUDAPEST1076"
+    place "BUDAPEST"
   ]
   node
   [
     id 2
-    color "None"
-    label "08DJIBOUTI919"
-    place "DJIBOUTI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1226927220"
+    label "08DJIBOUTI919"
+    place "DJIBOUTI"
   ]
   node
   [
     id 3
-    color "red"
-    label "08STATE118460"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "08STATE118460"
+    place "STATE"
   ]
   node
   [
     id 4
-    color "None"
-    label "08STATE122910"
-    place "STATE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1227120720"
+    label "08STATE122910"
+    place "STATE"
   ]
   node
   [
     id 5
-    color "red"
-    label "08STATE58479"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "08STATE58479"
+    place "STATE"
   ]
   node
   [
     id 6
-    color "red"
-    label "08STATE78375"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "08STATE78375"
+    place "STATE"
   ]
   node
   [
     id 7
-    color "None"
-    label "08STOCKHOLM391"
-    place "STOCKHOLM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1212381900"
+    label "08STOCKHOLM391"
+    place "STOCKHOLM"
   ]
   node
   [
     id 8
-    color "None"
-    label "08STOCKHOLM474"
-    place "STOCKHOLM"
     degree 3
     constraint 0.435957
+    color "black"
+    timestamp "1214799240"
+    label "08STOCKHOLM474"
+    place "STOCKHOLM"
   ]
   node
   [
     id 9
-    color "red"
-    label "08STOCKHOLM516"
-    place "STOCKHOLM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STOCKHOLM516"
+    place "STOCKHOLM"
   ]
   node
   [
     id 10
-    color "red"
-    label "08STOCKHOLM554"
-    place "STOCKHOLM"
     degree 2
     constraint 0.730903
+    color "red"
+    timestamp ""
+    label "08STOCKHOLM554"
+    place "STOCKHOLM"
   ]
   node
   [
     id 11
-    color "None"
-    label "08STOCKHOLM558"
-    place "STOCKHOLM"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1218187620"
+    label "08STOCKHOLM558"
+    place "STOCKHOLM"
   ]
   node
   [
     id 12
-    color "None"
-    label "08STOCKHOLM581"
-    place "STOCKHOLM"
     degree 2
     constraint 0.730903
+    color "black"
+    timestamp "1219236540"
+    label "08STOCKHOLM581"
+    place "STOCKHOLM"
   ]
   node
   [
     id 13
-    color "red"
-    label "08STOCKHOLM645"
-    place "STOCKHOLM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STOCKHOLM645"
+    place "STOCKHOLM"
   ]
   node
   [
     id 14
-    color "None"
-    label "08STOCKHOLM777"
-    place "STOCKHOLM"
     degree 6
     constraint 0.336998
+    color "black"
+    timestamp "1227104340"
+    label "08STOCKHOLM777"
+    place "STOCKHOLM"
   ]
   node
   [
     id 15
-    color "None"
-    label "08TOKYO1711"
-    place "TOKYO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1214167980"
+    label "08TOKYO1711"
+    place "TOKYO"
   ]
   node
   [
     id 16
-    color "None"
-    label "08TOKYO2115"
-    place "TOKYO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1217555100"
+    label "08TOKYO2115"
+    place "TOKYO"
   ]
   node
   [
     id 17
-    color "None"
-    label "08TOKYO2117"
-    place "TOKYO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1217563860"
+    label "08TOKYO2117"
+    place "TOKYO"
   ]
   node
   [
     id 18
-    color "None"
-    label "09STOCKHOLM119"
-    place "STOCKHOLM"
     degree 4
     constraint 0.595486
+    color "black"
+    timestamp "1235130960"
+    label "09STOCKHOLM119"
+    place "STOCKHOLM"
   ]
   edge
   [
     source 15
     target 4
+    duration "12952740"
     weight 1
   ]
   edge
   [
     source 14
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "8916720"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "3387120"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 14
+    duration "8026620"
     weight 1
   ]
   edge
   [
     source 14
     target 8
+    duration "12305100"
     weight 1
   ]
   edge
   [
     source 14
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 15
+    duration "3395880"
     weight 1
   ]
   edge
   [
     source 16
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 12
+    duration "15894420"
     weight 1
   ]
   edge
   [
     source 14
     target 12
+    duration "7867800"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "5805720"
     weight 1
   ]
   edge
   [
     source 17
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 8
+    duration "20331720"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "0"
     weight 1
   ]
 ]

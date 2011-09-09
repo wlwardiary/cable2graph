@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:22:12 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:11:00 2011"
 Version 1
 graph
 [
@@ -6,250 +6,283 @@ graph
   node
   [
     id 0
-    color "None"
-    label "10ASMARA11"
-    place "ASMARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1263530400"
+    label "10ASMARA11"
+    place "ASMARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "10ASMARA12"
-    place "ASMARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1263530940"
+    label "10ASMARA12"
+    place "ASMARA"
   ]
   node
   [
     id 2
-    color "None"
-    label "10DARESSALAAM46"
-    place "DARESSALAAM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264142160"
+    label "10DARESSALAAM46"
+    place "DARESSALAAM"
   ]
   node
   [
     id 3
-    color "None"
-    label "10DJIBOUTI77"
-    place "DJIBOUTI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264339680"
+    label "10DJIBOUTI77"
+    place "DJIBOUTI"
   ]
   node
   [
     id 4
-    color "red"
-    label "10FREETOWN3"
-    place "FREETOWN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10FREETOWN3"
+    place "FREETOWN"
   ]
   node
   [
     id 5
-    color "None"
-    label "10FREETOWN35"
-    place "FREETOWN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1264422960"
+    label "10FREETOWN35"
+    place "FREETOWN"
   ]
   node
   [
     id 6
-    color "None"
-    label "10KIGALI51"
-    place "KIGALI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264167900"
+    label "10KIGALI51"
+    place "KIGALI"
   ]
   node
   [
     id 7
-    color "None"
-    label "10KINSHASA15"
-    place "KINSHASA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264162740"
+    label "10KINSHASA15"
+    place "KINSHASA"
   ]
   node
   [
     id 8
-    color "None"
-    label "10LILONGWE42"
-    place "LILONGWE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264063380"
+    label "10LILONGWE42"
+    place "LILONGWE"
   ]
   node
   [
     id 9
-    color "None"
-    label "10LONDON77"
-    place "LONDON"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1263486720"
+    label "10LONDON77"
+    place "LONDON"
   ]
   node
   [
     id 10
-    color "None"
-    label "10MALABO16"
-    place "MALABO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264175160"
+    label "10MALABO16"
+    place "MALABO"
   ]
   node
   [
     id 11
-    color "None"
-    label "10NAIROBI124"
-    place "NAIROBI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264209840"
+    label "10NAIROBI124"
+    place "NAIROBI"
   ]
   node
   [
     id 12
-    color "None"
-    label "10PARIS49"
-    place "PARIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1263473280"
+    label "10PARIS49"
+    place "PARIS"
   ]
   node
   [
     id 13
-    color "None"
-    label "10STATE3353"
-    place "STATE"
     degree 15
     constraint 0.0666667
+    color "black"
+    timestamp "1263397680"
+    label "10STATE3353"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "None"
-    label "10TRIPOLI82"
-    place "TRIPOLI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264929000"
+    label "10TRIPOLI82"
+    place "TRIPOLI"
   ]
   node
   [
     id 15
-    color "None"
-    label "10TUNIS58"
-    place "TUNIS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264431060"
+    label "10TUNIS58"
+    place "TUNIS"
   ]
   node
   [
     id 16
-    color "None"
-    label "10YAOUNDE52"
-    place "YAOUNDE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1264154160"
+    label "10YAOUNDE52"
+    place "YAOUNDE"
   ]
   edge
   [
     source 13
     target 2
+    duration "744480"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "1531320"
     weight 1
   ]
   edge
   [
     source 13
     target 1
+    duration "133260"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 13
+    duration "756480"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "777480"
     weight 1
   ]
   edge
   [
     source 13
     target 5
+    duration "1025280"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "1033380"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "812160"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "75600"
     weight 1
   ]
   edge
   [
     source 13
     target 0
+    duration "132720"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "765060"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "89040"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "665700"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "770220"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "942000"
     weight 1
   ]
 ]

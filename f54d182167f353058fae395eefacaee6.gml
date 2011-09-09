@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:50 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:39 2011"
 Version 1
 graph
 [
@@ -6,211 +6,240 @@ graph
   node
   [
     id 0
-    color "None"
-    label "05BRASILIA1164"
-    place "BRASILIA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1115055480"
+    label "05BRASILIA1164"
+    place "BRASILIA"
   ]
   node
   [
     id 1
-    color "None"
-    label "05BRASILIA369"
-    place "BRASILIA"
     degree 5
     constraint 0.305278
+    color "black"
+    timestamp "1108397160"
+    label "05BRASILIA369"
+    place "BRASILIA"
   ]
   node
   [
     id 2
-    color "None"
-    label "05BRASILIA437"
-    place "BRASILIA"
     degree 3
     constraint 0.458333
+    color "black"
+    timestamp "1108736880"
+    label "05BRASILIA437"
+    place "BRASILIA"
   ]
   node
   [
     id 3
-    color "None"
-    label "05BRASILIA464"
-    place "BRASILIA"
     degree 3
     constraint 0.444722
+    color "black"
+    timestamp "1109099880"
+    label "05BRASILIA464"
+    place "BRASILIA"
   ]
   node
   [
     id 4
-    color "None"
-    label "05BRASILIA532"
-    place "BRASILIA"
     degree 4
     constraint 0.491285
+    color "black"
+    timestamp "1109692560"
+    label "05BRASILIA532"
+    place "BRASILIA"
   ]
   node
   [
     id 5
-    color "None"
-    label "05BRASILIA581"
-    place "BRASILIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1109879580"
+    label "05BRASILIA581"
+    place "BRASILIA"
   ]
   node
   [
     id 6
-    color "None"
-    label "05BRASILIA606"
-    place "BRASILIA"
     degree 4
     constraint 0.404757
+    color "black"
+    timestamp "1110216180"
+    label "05BRASILIA606"
+    place "BRASILIA"
   ]
   node
   [
     id 7
-    color "None"
-    label "05BRASILIA821"
-    place "BRASILIA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1112031840"
+    label "05BRASILIA821"
+    place "BRASILIA"
   ]
   node
   [
     id 8
-    color "None"
-    label "06BRASILIA1321"
-    place "BRASILIA"
     degree 2
     constraint 0.9225
+    color "black"
+    timestamp "1151685480"
+    label "06BRASILIA1321"
+    place "BRASILIA"
   ]
   node
   [
     id 9
-    color "red"
-    label "06BRASILIA914"
-    place "BRASILIA"
     degree 2
     constraint 0.9225
+    color "red"
+    timestamp ""
+    label "06BRASILIA914"
+    place "BRASILIA"
   ]
   node
   [
     id 10
-    color "red"
-    label "07BRASILIA953"
-    place "BRASILIA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07BRASILIA953"
+    place "BRASILIA"
   ]
   node
   [
     id 11
-    color "None"
-    label "08BRASILIA640"
-    place "BRASILIA"
     degree 5
     constraint 0.3
+    color "black"
+    timestamp "1210597260"
+    label "08BRASILIA640"
+    place "BRASILIA"
   ]
   edge
   [
     source 4
     target 3
+    duration "592680"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "5955600"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "58911780"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "3023640"
     weight 1
   ]
   edge
   [
     source 6
     target 2
+    duration "1479300"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "336600"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "1295400"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "3634680"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "1819020"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "523620"
     weight 1
   ]
   edge
   [
     source 11
     target 2
+    duration "101860380"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "702720"
     weight 1
   ]
   edge
   [
     source 11
     target 1
+    duration "102200100"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "955680"
     weight 1
   ]
 ]

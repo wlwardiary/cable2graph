@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:27 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:50 2011"
 Version 1
 graph
 [
@@ -6,259 +6,294 @@ graph
   node
   [
     id 0
-    color "red"
-    label "07KATHMANDU1036"
-    place "KATHMANDU"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07KATHMANDU1036"
+    place "KATHMANDU"
   ]
   node
   [
     id 1
-    color "None"
-    label "07KATHMANDU1059"
-    place "KATHMANDU"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1180436460"
+    label "07KATHMANDU1059"
+    place "KATHMANDU"
   ]
   node
   [
     id 2
-    color "None"
-    label "07KATHMANDU1069"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1180519860"
+    label "07KATHMANDU1069"
+    place "KATHMANDU"
   ]
   node
   [
     id 3
-    color "red"
-    label "07KATHMANDU1071"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07KATHMANDU1071"
+    place "KATHMANDU"
   ]
   node
   [
     id 4
-    color "None"
-    label "07KATHMANDU1089"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1180693140"
+    label "07KATHMANDU1089"
+    place "KATHMANDU"
   ]
   node
   [
     id 5
-    color "None"
-    label "07KATHMANDU1099"
-    place "KATHMANDU"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1180950180"
+    label "07KATHMANDU1099"
+    place "KATHMANDU"
   ]
   node
   [
     id 6
-    color "None"
-    label "07KATHMANDU1132"
-    place "KATHMANDU"
     degree 4
     constraint 0.5
+    color "black"
+    timestamp "1181210520"
+    label "07KATHMANDU1132"
+    place "KATHMANDU"
   ]
   node
   [
     id 7
-    color "None"
-    label "07KATHMANDU1133"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1181215200"
+    label "07KATHMANDU1133"
+    place "KATHMANDU"
   ]
   node
   [
     id 8
-    color "None"
-    label "07KATHMANDU669"
-    place "KATHMANDU"
     degree 6
     constraint 0.25
+    color "black"
+    timestamp "1175430000"
+    label "07KATHMANDU669"
+    place "KATHMANDU"
   ]
   node
   [
     id 9
-    color "None"
-    label "07KATHMANDU676"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1175514660"
+    label "07KATHMANDU676"
+    place "KATHMANDU"
   ]
   node
   [
     id 10
-    color "None"
-    label "07KATHMANDU678"
-    place "KATHMANDU"
     degree 4
     constraint 0.5
+    color "black"
+    timestamp "1175593020"
+    label "07KATHMANDU678"
+    place "KATHMANDU"
   ]
   node
   [
     id 11
-    color "None"
-    label "07KATHMANDU689"
-    place "KATHMANDU"
     degree 4
     constraint 0.5
+    color "black"
+    timestamp "1175679000"
+    label "07KATHMANDU689"
+    place "KATHMANDU"
   ]
   node
   [
     id 12
-    color "None"
-    label "07KATHMANDU771"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1176718500"
+    label "07KATHMANDU771"
+    place "KATHMANDU"
   ]
   node
   [
     id 13
-    color "None"
-    label "07NEWDELHI1534"
-    place "NEWDELHI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1175257080"
+    label "07NEWDELHI1534"
+    place "NEWDELHI"
   ]
   node
   [
     id 14
-    color "red"
-    label "07NEWDELHI2503"
-    place "NEWDELHI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07NEWDELHI2503"
+    place "NEWDELHI"
   ]
   node
   [
     id 15
-    color "red"
-    label "07SECSTATE39369"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE39369"
+    place "SECSTATE"
   ]
   edge
   [
     source 11
     target 8
+    duration "249000"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 8
+    duration "4249260"
     weight 1
   ]
   edge
   [
     source 10
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "774060"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "84660"
     weight 1
   ]
   edge
   [
     source 14
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 6
+    duration "272280"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "83400"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "335940"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "513720"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "256680"
     weight 1
   ]
   edge
   [
     source 15
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 11
+    duration "280080"
     weight 1
   ]
   edge
   [
     source 11
     target 5
+    duration "5271180"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "1288500"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "163020"
     weight 1
   ]
 ]

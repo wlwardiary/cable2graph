@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:20 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:23 2011"
 Version 1
 graph
 [
@@ -6,280 +6,317 @@ graph
   node
   [
     id 0
-    color "None"
-    label "06BANGKOK4742"
-    place "BANGKOK"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154677500"
+    label "06BANGKOK4742"
+    place "BANGKOK"
   ]
   node
   [
     id 1
-    color "None"
-    label "06BANGKOK4749"
-    place "BANGKOK"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1154681820"
+    label "06BANGKOK4749"
+    place "BANGKOK"
   ]
   node
   [
     id 2
-    color "None"
-    label "06BANGKOK4803"
-    place "BANGKOK"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1155001260"
+    label "06BANGKOK4803"
+    place "BANGKOK"
   ]
   node
   [
     id 3
-    color "None"
-    label "06BANGKOK4848"
-    place "BANGKOK"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1155098640"
+    label "06BANGKOK4848"
+    place "BANGKOK"
   ]
   node
   [
     id 4
-    color "None"
-    label "06DUBLIN903"
-    place "DUBLIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154515260"
+    label "06DUBLIN903"
+    place "DUBLIN"
   ]
   node
   [
     id 5
-    color "None"
-    label "06HANOI2083"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155710160"
+    label "06HANOI2083"
+    place "HANOI"
   ]
   node
   [
     id 6
-    color "red"
-    label "06HELSINKI732"
-    place "HELSINKI"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06HELSINKI732"
+    place "HELSINKI"
   ]
   node
   [
     id 7
-    color "None"
-    label "06LONDON5746"
-    place "LONDON"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1154940840"
+    label "06LONDON5746"
+    place "LONDON"
   ]
   node
   [
     id 8
-    color "None"
-    label "06MADRID1994"
-    place "MADRID"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154936040"
+    label "06MADRID1994"
+    place "MADRID"
   ]
   node
   [
     id 9
-    color "None"
-    label "06NICOSIA1331"
-    place "NICOSIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155005880"
+    label "06NICOSIA1331"
+    place "NICOSIA"
   ]
   node
   [
     id 10
-    color "None"
-    label "06PRAGUE893"
-    place "PRAGUE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1154527080"
+    label "06PRAGUE893"
+    place "PRAGUE"
   ]
   node
   [
     id 11
-    color "None"
-    label "06ROME2195"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154686440"
+    label "06ROME2195"
+    place "ROME"
   ]
   node
   [
     id 12
-    color "None"
-    label "06SOFIA1089"
-    place "SOFIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154931600"
+    label "06SOFIA1089"
+    place "SOFIA"
   ]
   node
   [
     id 13
-    color "red"
-    label "06STATE124139"
-    place "STATE"
     degree 10
     constraint 0.1
+    color "red"
+    timestamp ""
+    label "06STATE124139"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "red"
-    label "06STATE127496"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE127496"
+    place "STATE"
   ]
   node
   [
     id 15
-    color "red"
-    label "06STATE127498"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "06STATE127498"
+    place "STATE"
   ]
   node
   [
     id 16
-    color "None"
-    label "06TALLINN695"
-    place "TALLINN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154590260"
+    label "06TALLINN695"
+    place "TALLINN"
   ]
   node
   [
     id 17
-    color "None"
-    label "06THEHAGUE1701"
-    place "THEHAGUE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154670600"
+    label "06THEHAGUE1701"
+    place "THEHAGUE"
   ]
   node
   [
     id 18
-    color "None"
-    label "06VIENNA2317"
-    place "VIENNA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1154524320"
+    label "06VIENNA2317"
+    place "VIENNA"
   ]
   edge
   [
     source 13
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "97380"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "416820"
     weight 1
   ]
   edge
   [
     source 14
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "323760"
     weight 1
   ]
   edge
   [
     source 13
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
 ]

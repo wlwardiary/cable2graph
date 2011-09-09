@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:58 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:16 2011"
 Version 1
 graph
 [
@@ -6,535 +6,609 @@ graph
   node
   [
     id 0
-    color "None"
-    label "07BAKU1331"
-    place "BAKU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1194344400"
+    label "07BAKU1331"
+    place "BAKU"
   ]
   node
   [
     id 1
-    color "None"
-    label "07BAKU1357"
-    place "BAKU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1194943800"
+    label "07BAKU1357"
+    place "BAKU"
   ]
   node
   [
     id 2
-    color "None"
-    label "07BEIJING6822"
-    place "BEIJING"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1193208540"
+    label "07BEIJING6822"
+    place "BEIJING"
   ]
   node
   [
     id 3
-    color "None"
-    label "07BEIJING6850"
-    place "BEIJING"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1193305620"
+    label "07BEIJING6850"
+    place "BEIJING"
   ]
   node
   [
     id 4
-    color "None"
-    label "07CHISINAU1281"
-    place "CHISINAU"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1193142600"
+    label "07CHISINAU1281"
+    place "CHISINAU"
   ]
   node
   [
     id 5
-    color "None"
-    label "07KYIV2515"
-    place "KYIV"
     degree 7
     constraint 0.387185
+    color "black"
+    timestamp "1191406500"
+    label "07KYIV2515"
+    place "KYIV"
   ]
   node
   [
     id 6
-    color "None"
-    label "07KYIV2673"
-    place "KYIV"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1193137440"
+    label "07KYIV2673"
+    place "KYIV"
   ]
   node
   [
     id 7
-    color "None"
-    label "07KYIV2677"
-    place "KYIV"
     degree 9
     constraint 0.313895
+    color "black"
+    timestamp "1193222040"
+    label "07KYIV2677"
+    place "KYIV"
   ]
   node
   [
     id 8
-    color "None"
-    label "07KYIV2720"
-    place "KYIV"
     degree 6
     constraint 0.381009
+    color "black"
+    timestamp "1193660940"
+    label "07KYIV2720"
+    place "KYIV"
   ]
   node
   [
     id 9
-    color "None"
-    label "07KYIV2794"
-    place "KYIV"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1194527940"
+    label "07KYIV2794"
+    place "KYIV"
   ]
   node
   [
     id 10
-    color "red"
-    label "07LONDON3746"
-    place "LONDON"
     degree 2
     constraint 0.635173
+    color "red"
+    timestamp ""
+    label "07LONDON3746"
+    place "LONDON"
   ]
   node
   [
     id 11
-    color "red"
-    label "07MOSCOW2"
-    place "MOSCOW"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07MOSCOW2"
+    place "MOSCOW"
   ]
   node
   [
     id 12
-    color "None"
-    label "07MOSCOW5190"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1193666100"
+    label "07MOSCOW5190"
+    place "MOSCOW"
   ]
   node
   [
     id 13
-    color "None"
-    label "07MOSCOW5349"
-    place "MOSCOW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1194612060"
+    label "07MOSCOW5349"
+    place "MOSCOW"
   ]
   node
   [
     id 14
-    color "None"
-    label "07OUAGADOUGOU920"
-    place "OUAGADOUGOU"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1193824560"
+    label "07OUAGADOUGOU920"
+    place "OUAGADOUGOU"
   ]
   node
   [
     id 15
-    color "None"
-    label "07PARIS4084"
-    place "PARIS"
     degree 3
     constraint 0.533104
+    color "black"
+    timestamp "1190978760"
+    label "07PARIS4084"
+    place "PARIS"
   ]
   node
   [
     id 16
-    color "None"
-    label "07PARIS4183"
-    place "PARIS"
     degree 2
     constraint 0.635173
+    color "black"
+    timestamp "1191579180"
+    label "07PARIS4183"
+    place "PARIS"
   ]
   node
   [
     id 17
-    color "None"
-    label "07ROME2153"
-    place "ROME"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1192022400"
+    label "07ROME2153"
+    place "ROME"
   ]
   node
   [
     id 18
-    color "None"
-    label "07ROME2235"
-    place "ROME"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1193209920"
+    label "07ROME2235"
+    place "ROME"
   ]
   node
   [
     id 19
-    color "red"
-    label "07SECSTATE136068"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE136068"
+    place "SECSTATE"
   ]
   node
   [
     id 20
-    color "red"
-    label "07STATE136068"
-    place "STATE"
     degree 7
     constraint 0.307758
+    color "red"
+    timestamp ""
+    label "07STATE136068"
+    place "STATE"
   ]
   node
   [
     id 21
-    color "red"
-    label "07STATE146521"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "07STATE146521"
+    place "STATE"
   ]
   node
   [
     id 22
-    color "None"
-    label "07STATE147667"
-    place "STATE"
     degree 8
     constraint 0.155
+    color "black"
+    timestamp "1193153520"
+    label "07STATE147667"
+    place "STATE"
   ]
   node
   [
     id 23
-    color "red"
-    label "07USUNNEWYORK894"
-    place "USUNNEWYORK"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07USUNNEWYORK894"
+    place "USUNNEWYORK"
   ]
   node
   [
     id 24
-    color "red"
-    label "07USUNNEWYORK920"
-    place "USUNNEWYORK"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07USUNNEWYORK920"
+    place "USUNNEWYORK"
   ]
   node
   [
     id 25
-    color "None"
-    label "07USUNNEWYORK927"
-    place "USUNNEWYORK"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1193666100"
+    label "07USUNNEWYORK927"
+    place "USUNNEWYORK"
   ]
   node
   [
     id 26
-    color "None"
-    label "07USUNNEWYORK951"
-    place "USUNNEWYORK"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1193955120"
+    label "07USUNNEWYORK951"
+    place "USUNNEWYORK"
   ]
   node
   [
     id 27
-    color "None"
-    label "08KYIV158"
-    place "KYIV"
     degree 5
     constraint 0.468214
+    color "black"
+    timestamp "1201259160"
+    label "08KYIV158"
+    place "KYIV"
   ]
   node
   [
     id 28
-    color "None"
-    label "08KYIV285"
-    place "KYIV"
     degree 5
     constraint 0.468214
+    color "black"
+    timestamp "1202210100"
+    label "08KYIV285"
+    place "KYIV"
   ]
   node
   [
     id 29
-    color "red"
-    label "08STATE6694"
-    place "STATE"
     degree 2
     constraint 0.72
+    color "red"
+    timestamp ""
+    label "08STATE6694"
+    place "STATE"
   ]
   edge
   [
     source 22
     target 7
+    duration "68520"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "97080"
     weight 1
   ]
   edge
   [
     source 26
     target 14
+    duration "130560"
     weight 1
   ]
   edge
   [
     source 22
     target 13
+    duration "1458540"
     weight 1
   ]
   edge
   [
     source 21
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 28
     target 5
+    duration "10803600"
     weight 1
   ]
   edge
   [
     source 29
     target 28
+    duration "0"
     weight 1
   ]
   edge
   [
     source 27
     target 7
+    duration "8037120"
     weight 1
   ]
   edge
   [
     source 16
     target 7
+    duration "1642860"
     weight 1
   ]
   edge
   [
     source 21
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 5
+    duration "2254440"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "1815540"
     weight 1
   ]
   edge
   [
     source 20
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 27
     target 8
+    duration "7598220"
     weight 1
   ]
   edge
   [
     source 18
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 25
     target 22
+    duration "512580"
     weight 1
   ]
   edge
   [
     source 15
     target 5
+    duration "427740"
     weight 1
   ]
   edge
   [
     source 20
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 28
     target 7
+    duration "8988060"
     weight 1
   ]
   edge
   [
     source 22
     target 12
+    duration "512580"
     weight 1
   ]
   edge
   [
     source 26
     target 23
+    duration "0"
     weight 1
   ]
   edge
   [
     source 28
     target 8
+    duration "8549160"
     weight 1
   ]
   edge
   [
     source 20
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 17
+    duration "0"
     weight 1
   ]
   edge
   [
     source 26
     target 24
+    duration "0"
     weight 1
   ]
   edge
   [
     source 29
     target 27
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 22
     target 8
+    duration "507420"
     weight 1
   ]
   edge
   [
     source 22
     target 2
+    duration "55020"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "1390500"
     weight 1
   ]
   edge
   [
     source 27
     target 5
+    duration "9852660"
     weight 1
   ]
   edge
   [
     source 28
     target 27
+    duration "950940"
     weight 1
   ]
   edge
   [
     source 15
     target 7
+    duration "2243280"
     weight 1
   ]
   edge
   [
     source 18
     target 17
+    duration "1187520"
     weight 1
   ]
   edge
   [
     source 22
     target 18
+    duration "56400"
     weight 1
   ]
   edge
   [
     source 21
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 22
     target 20
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 18
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "438900"
     weight 1
   ]
 ]

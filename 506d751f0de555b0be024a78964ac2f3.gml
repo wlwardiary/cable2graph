@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:40 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:47 2011"
 Version 1
 graph
 [
@@ -6,211 +6,239 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06DAMASCUS3193"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06DAMASCUS3193"
+    place "DAMASCUS"
   ]
   node
   [
     id 1
-    color "red"
-    label "06DAMASCUS5454"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06DAMASCUS5454"
+    place "DAMASCUS"
   ]
   node
   [
     id 2
-    color "red"
-    label "07DAMASCUS1"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS1"
+    place "DAMASCUS"
   ]
   node
   [
     id 3
-    color "red"
-    label "07DAMASCUS12"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS12"
+    place "DAMASCUS"
   ]
   node
   [
     id 4
-    color "None"
-    label "07DAMASCUS2"
-    place "DAMASCUS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1199104500"
+    label "07DAMASCUS2"
+    place "DAMASCUS"
   ]
   node
   [
     id 5
-    color "red"
-    label "07DAMASCUS272"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS272"
+    place "DAMASCUS"
   ]
   node
   [
     id 6
-    color "red"
-    label "07DAMASCUS274"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS274"
+    place "DAMASCUS"
   ]
   node
   [
     id 7
-    color "red"
-    label "07DAMASCUS306"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS306"
+    place "DAMASCUS"
   ]
   node
   [
     id 8
-    color "None"
-    label "07DAMASCUS4"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1199109780"
+    label "07DAMASCUS4"
+    place "DAMASCUS"
   ]
   node
   [
     id 9
-    color "None"
-    label "07DAMASCUS5"
-    place "DAMASCUS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1199110560"
+    label "07DAMASCUS5"
+    place "DAMASCUS"
   ]
   node
   [
     id 10
-    color "red"
-    label "07DAMASCUS617"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07DAMASCUS617"
+    place "DAMASCUS"
   ]
   node
   [
     id 11
-    color "None"
-    label "07DAMASCUS765"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1185449460"
+    label "07DAMASCUS765"
+    place "DAMASCUS"
   ]
   node
   [
     id 12
-    color "None"
-    label "07DAMASCUS773"
-    place "DAMASCUS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1185783300"
+    label "07DAMASCUS773"
+    place "DAMASCUS"
   ]
   node
   [
     id 13
-    color "None"
-    label "07DAMASCUS796"
-    place "DAMASCUS"
     degree 13
     constraint 0.0909091
+    color "black"
+    timestamp "1186461960"
+    label "07DAMASCUS796"
+    place "DAMASCUS"
   ]
   edge
   [
     source 9
     target 4
+    duration "6060"
     weight 1
   ]
   edge
   [
     source 13
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "1012500"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "678660"
     weight 1
   ]
   edge
   [
     source 13
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "5280"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "12648600"
     weight 1
   ]
   edge
   [
     source 13
     target 13
+    duration "3644820"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "0"
     weight 1
   ]
 ]

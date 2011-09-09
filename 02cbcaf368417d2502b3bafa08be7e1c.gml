@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:52 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:02:26 2011"
 Version 1
 graph
 [
@@ -6,370 +6,419 @@ graph
   node
   [
     id 0
-    color "red"
-    label "04COLOMBO1"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04COLOMBO1"
+    place "COLOMBO"
   ]
   node
   [
     id 1
-    color "None"
-    label "04COLOMBO765"
-    place "COLOMBO"
     degree 18
     constraint 0.0555556
+    color "black"
+    timestamp "1084340160"
+    label "04COLOMBO765"
+    place "COLOMBO"
   ]
   node
   [
     id 2
-    color "None"
-    label "04COLOMBO766"
-    place "COLOMBO"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1084340220"
+    label "04COLOMBO766"
+    place "COLOMBO"
   ]
   node
   [
     id 3
-    color "None"
-    label "04COLOMBO806"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084867320"
+    label "04COLOMBO806"
+    place "COLOMBO"
   ]
   node
   [
     id 4
-    color "None"
-    label "04COLOMBO807"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084867560"
+    label "04COLOMBO807"
+    place "COLOMBO"
   ]
   node
   [
     id 5
-    color "None"
-    label "04COLOMBO808"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084867560"
+    label "04COLOMBO808"
+    place "COLOMBO"
   ]
   node
   [
     id 6
-    color "None"
-    label "04COLOMBO810"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084868700"
+    label "04COLOMBO810"
+    place "COLOMBO"
   ]
   node
   [
     id 7
-    color "None"
-    label "04COLOMBO811"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084868700"
+    label "04COLOMBO811"
+    place "COLOMBO"
   ]
   node
   [
     id 8
-    color "None"
-    label "04COLOMBO812"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084868760"
+    label "04COLOMBO812"
+    place "COLOMBO"
   ]
   node
   [
     id 9
-    color "None"
-    label "04COLOMBO814"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084868880"
+    label "04COLOMBO814"
+    place "COLOMBO"
   ]
   node
   [
     id 10
-    color "None"
-    label "04COLOMBO815"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084869300"
+    label "04COLOMBO815"
+    place "COLOMBO"
   ]
   node
   [
     id 11
-    color "None"
-    label "04COLOMBO817"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084871100"
+    label "04COLOMBO817"
+    place "COLOMBO"
   ]
   node
   [
     id 12
-    color "None"
-    label "04COLOMBO822"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1084935900"
+    label "04COLOMBO822"
+    place "COLOMBO"
   ]
   node
   [
     id 13
-    color "None"
-    label "04COLOMBO832"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085025840"
+    label "04COLOMBO832"
+    place "COLOMBO"
   ]
   node
   [
     id 14
-    color "None"
-    label "04COLOMBO833"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085025900"
+    label "04COLOMBO833"
+    place "COLOMBO"
   ]
   node
   [
     id 15
-    color "None"
-    label "04COLOMBO834"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085025900"
+    label "04COLOMBO834"
+    place "COLOMBO"
   ]
   node
   [
     id 16
-    color "None"
-    label "04COLOMBO837"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085036280"
+    label "04COLOMBO837"
+    place "COLOMBO"
   ]
   node
   [
     id 17
-    color "None"
-    label "04COLOMBO839"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085036760"
+    label "04COLOMBO839"
+    place "COLOMBO"
   ]
   node
   [
     id 18
-    color "None"
-    label "04COLOMBO840"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085036820"
+    label "04COLOMBO840"
+    place "COLOMBO"
   ]
   node
   [
     id 19
-    color "None"
-    label "04COLOMBO843"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085043480"
+    label "04COLOMBO843"
+    place "COLOMBO"
   ]
   node
   [
     id 20
-    color "None"
-    label "04COLOMBO850"
-    place "COLOMBO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1085106480"
+    label "04COLOMBO850"
+    place "COLOMBO"
   ]
   node
   [
     id 21
-    color "None"
-    label "04COLOMBO854"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085112240"
+    label "04COLOMBO854"
+    place "COLOMBO"
   ]
   node
   [
     id 22
-    color "None"
-    label "04COLOMBO862"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1085377200"
+    label "04COLOMBO862"
+    place "COLOMBO"
   ]
   node
   [
     id 23
-    color "red"
-    label "04STATE1663"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "04STATE1663"
+    place "STATE"
   ]
   node
   [
     id 24
-    color "red"
-    label "04STATE2210"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "04STATE2210"
+    place "STATE"
   ]
   edge
   [
     source 24
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 2
+    duration "685620"
     weight 1
   ]
   edge
   [
     source 23
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "528600"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "528540"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "527400"
     weight 1
   ]
   edge
   [
     source 19
     target 1
+    duration "703320"
     weight 1
   ]
   edge
   [
     source 16
     target 1
+    duration "696120"
     weight 1
   ]
   edge
   [
     source 21
     target 1
+    duration "772080"
     weight 1
   ]
   edge
   [
     source 20
     target 1
+    duration "766320"
     weight 1
   ]
   edge
   [
     source 12
     target 1
+    duration "595740"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "528720"
     weight 1
   ]
   edge
   [
     source 14
     target 2
+    duration "685680"
     weight 1
   ]
   edge
   [
     source 18
     target 1
+    duration "696660"
     weight 1
   ]
   edge
   [
     source 10
     target 1
+    duration "529140"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "527160"
     weight 1
   ]
   edge
   [
     source 17
     target 1
+    duration "696600"
     weight 1
   ]
   edge
   [
     source 15
     target 2
+    duration "685680"
     weight 1
   ]
   edge
   [
     source 22
     target 1
+    duration "1037040"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "528540"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "527400"
     weight 1
   ]
   edge
   [
     source 24
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 1
+    duration "530940"
     weight 1
   ]
 ]

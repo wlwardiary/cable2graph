@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:46 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:12 2011"
 Version 1
 graph
 [
@@ -6,220 +6,249 @@ graph
   node
   [
     id 0
-    color "red"
-    label "07SANAA1550"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SANAA1550"
+    place "SANAA"
   ]
   node
   [
     id 1
-    color "red"
-    label "07SANAA1577"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SANAA1577"
+    place "SANAA"
   ]
   node
   [
     id 2
-    color "None"
-    label "07SANAA1586"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1187438880"
+    label "07SANAA1586"
+    place "SANAA"
   ]
   node
   [
     id 3
-    color "red"
-    label "07SANAA1625"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SANAA1625"
+    place "SANAA"
   ]
   node
   [
     id 4
-    color "red"
-    label "07SANAA1656"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07SANAA1656"
+    place "SANAA"
   ]
   node
   [
     id 5
-    color "None"
-    label "07SANAA1693"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1189421580"
+    label "07SANAA1693"
+    place "SANAA"
   ]
   node
   [
     id 6
-    color "red"
-    label "07SANAA1831"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07SANAA1831"
+    place "SANAA"
   ]
   node
   [
     id 7
-    color "red"
-    label "07SANAA1856"
-    place "SANAA"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "07SANAA1856"
+    place "SANAA"
   ]
   node
   [
     id 8
-    color "red"
-    label "07SANAA1878"
-    place "SANAA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SANAA1878"
+    place "SANAA"
   ]
   node
   [
     id 9
-    color "None"
-    label "07SANAA1910"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1192605000"
+    label "07SANAA1910"
+    place "SANAA"
   ]
   node
   [
     id 10
-    color "None"
-    label "07SANAA2052"
-    place "SANAA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1194264720"
+    label "07SANAA2052"
+    place "SANAA"
   ]
   node
   [
     id 11
-    color "None"
-    label "07SANAA2168"
-    place "SANAA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1196347260"
+    label "07SANAA2168"
+    place "SANAA"
   ]
   node
   [
     id 12
-    color "None"
-    label "07SANAA2169"
-    place "SANAA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1196347260"
+    label "07SANAA2169"
+    place "SANAA"
   ]
   node
   [
     id 13
-    color "None"
-    label "07SANAA2171"
-    place "SANAA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1196347260"
+    label "07SANAA2171"
+    place "SANAA"
   ]
   node
   [
     id 14
-    color "None"
-    label "07SANAA2180"
-    place "SANAA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1196589600"
+    label "07SANAA2180"
+    place "SANAA"
   ]
   edge
   [
     source 5
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "6825840"
     weight 1
   ]
   edge
   [
     source 10
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "242340"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "3742260"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:10 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:34 2011"
 Version 1
 graph
 [
@@ -6,175 +6,198 @@ graph
   node
   [
     id 0
-    color "None"
-    label "03AMMAN1686"
-    place "AMMAN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1048088880"
+    label "03AMMAN1686"
+    place "AMMAN"
   ]
   node
   [
     id 1
-    color "None"
-    label "03AMMAN1688"
-    place "AMMAN"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1048093860"
+    label "03AMMAN1688"
+    place "AMMAN"
   ]
   node
   [
     id 2
-    color "red"
-    label "03ANKARA1111"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ANKARA1111"
+    place "ANKARA"
   ]
   node
   [
     id 3
-    color "red"
-    label "03ANKARA1384"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ANKARA1384"
+    place "ANKARA"
   ]
   node
   [
     id 4
-    color "red"
-    label "03ANKARA1427"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ANKARA1427"
+    place "ANKARA"
   ]
   node
   [
     id 5
-    color "red"
-    label "03ANKARA1695"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ANKARA1695"
+    place "ANKARA"
   ]
   node
   [
     id 6
-    color "red"
-    label "03ANKARA1696"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ANKARA1696"
+    place "ANKARA"
   ]
   node
   [
     id 7
-    color "None"
-    label "03ANKARA1743"
-    place "ANKARA"
     degree 8
     constraint 0.125
+    color "black"
+    timestamp "1048084260"
+    label "03ANKARA1743"
+    place "ANKARA"
   ]
   node
   [
     id 8
-    color "red"
-    label "03SECSTATE69522"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03SECSTATE69522"
+    place "SECSTATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "03STATE55832"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03STATE55832"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "red"
-    label "03STATE59920"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03STATE59920"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "03STATE71552"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "03STATE71552"
+    place "STATE"
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "4980"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 1
+    duration "0"
     weight 1
   ]
 ]

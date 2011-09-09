@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:15:54 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:44 2011"
 Version 1
 graph
 [
@@ -6,241 +6,274 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05BUCHAREST2177"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05BUCHAREST2177"
+    place "BUCHAREST"
   ]
   node
   [
     id 1
-    color "red"
-    label "05BUCHAREST2185"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05BUCHAREST2185"
+    place "BUCHAREST"
   ]
   node
   [
     id 2
-    color "red"
-    label "05BUCHAREST2205"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05BUCHAREST2205"
+    place "BUCHAREST"
   ]
   node
   [
     id 3
-    color "red"
-    label "05BUCHAREST2239"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05BUCHAREST2239"
+    place "BUCHAREST"
   ]
   node
   [
     id 4
-    color "red"
-    label "06BUCHAREST2302"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06BUCHAREST2302"
+    place "BUCHAREST"
   ]
   node
   [
     id 5
-    color "red"
-    label "06BUCHAREST310"
-    place "BUCHAREST"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06BUCHAREST310"
+    place "BUCHAREST"
   ]
   node
   [
     id 6
-    color "None"
-    label "06BUCHAREST409"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1141916940"
+    label "06BUCHAREST409"
+    place "BUCHAREST"
   ]
   node
   [
     id 7
-    color "red"
-    label "06BUCHAREST523"
-    place "BUCHAREST"
     degree 2
     constraint 0.737847
+    color "red"
+    timestamp ""
+    label "06BUCHAREST523"
+    place "BUCHAREST"
   ]
   node
   [
     id 8
-    color "red"
-    label "06BUCHAREST79"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06BUCHAREST79"
+    place "BUCHAREST"
   ]
   node
   [
     id 9
-    color "None"
-    label "06BUCHAREST811"
-    place "BUCHAREST"
     degree 3
     constraint 0.60108
+    color "black"
+    timestamp "1147787760"
+    label "06BUCHAREST811"
+    place "BUCHAREST"
   ]
   node
   [
     id 10
-    color "None"
-    label "06BUCHAREST834"
-    place "BUCHAREST"
     degree 2
     constraint 0.684028
+    color "black"
+    timestamp "1147964400"
+    label "06BUCHAREST834"
+    place "BUCHAREST"
   ]
   node
   [
     id 11
-    color "None"
-    label "06BUCHAREST843"
-    place "BUCHAREST"
     degree 2
     constraint 0.684028
+    color "black"
+    timestamp "1148273760"
+    label "06BUCHAREST843"
+    place "BUCHAREST"
   ]
   node
   [
     id 12
-    color "None"
-    label "06BUCHAREST847"
-    place "BUCHAREST"
     degree 14
     constraint 0.141734
+    color "black"
+    timestamp "1148306640"
+    label "06BUCHAREST847"
+    place "BUCHAREST"
   ]
   node
   [
     id 13
-    color "None"
-    label "06BUCHAREST869"
-    place "BUCHAREST"
     degree 6
     constraint 0.56033
+    color "black"
+    timestamp "1148565060"
+    label "06BUCHAREST869"
+    place "BUCHAREST"
   ]
   edge
   [
     source 12
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 9
+    duration "518880"
     weight 1
   ]
   edge
   [
     source 13
     target 10
+    duration "600660"
     weight 1
   ]
   edge
   [
     source 12
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 9
+    duration "777300"
     weight 1
   ]
   edge
   [
     source 13
     target 11
+    duration "291300"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "258420"
     weight 1
   ]
   edge
   [
     source 12
     target 10
+    duration "342240"
     weight 1
   ]
   edge
   [
     source 12
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "32880"
     weight 1
   ]
   edge
   [
     source 12
     target 0
+    duration "0"
     weight 1
   ]
 ]

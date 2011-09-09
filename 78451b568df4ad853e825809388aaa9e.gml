@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:15 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:08:45 2011"
 Version 1
 graph
 [
@@ -6,181 +6,205 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08ANKARA1852"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1224768540"
+    label "08ANKARA1852"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "08ATHENS1433"
-    place "ATHENS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1223644140"
+    label "08ATHENS1433"
+    place "ATHENS"
   ]
   node
   [
     id 2
-    color "None"
-    label "08BERLIN1444"
-    place "BERLIN"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1224842880"
+    label "08BERLIN1444"
+    place "BERLIN"
   ]
   node
   [
     id 3
-    color "None"
-    label "08BRUSSELS1649"
-    place "BRUSSELS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1224857100"
+    label "08BRUSSELS1649"
+    place "BRUSSELS"
   ]
   node
   [
     id 4
-    color "None"
-    label "08OSLO568"
-    place "OSLO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1224736260"
+    label "08OSLO568"
+    place "OSLO"
   ]
   node
   [
     id 5
-    color "None"
-    label "08OTTAWA1318"
-    place "OTTAWA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1224008880"
+    label "08OTTAWA1318"
+    place "OTTAWA"
   ]
   node
   [
     id 6
-    color "None"
-    label "08ROME1290"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1224848820"
+    label "08ROME1290"
+    place "ROME"
   ]
   node
   [
     id 7
-    color "red"
-    label "08STATE107247"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "08STATE107247"
+    place "STATE"
   ]
   node
   [
     id 8
-    color "red"
-    label "08STATE111744"
-    place "STATE"
     degree 5
     constraint 0.2
+    color "red"
+    timestamp ""
+    label "08STATE111744"
+    place "STATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "08STATE11744"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STATE11744"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "08THEHAGUE926"
-    place "THEHAGUE"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1225780560"
+    label "08THEHAGUE926"
+    place "THEHAGUE"
   ]
   node
   [
     id 11
-    color "None"
-    label "08WARSAW1195"
-    place "WARSAW"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1223990580"
+    label "08WARSAW1195"
+    place "WARSAW"
   ]
   edge
   [
     source 7
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
 ]

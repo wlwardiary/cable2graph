@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:17:04 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:05:05 2011"
 Version 1
 graph
 [
@@ -6,463 +6,525 @@ graph
   node
   [
     id 0
-    color "None"
-    label "06ANKARA1043"
-    place "ANKARA"
     degree 4
     constraint 0.317744
+    color "black"
+    timestamp "1141291800"
+    label "06ANKARA1043"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "06ANKARA1069"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1141361760"
+    label "06ANKARA1069"
+    place "ANKARA"
   ]
   node
   [
     id 2
-    color "None"
-    label "06ANKARA2120"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1145413740"
+    label "06ANKARA2120"
+    place "ANKARA"
   ]
   node
   [
     id 3
-    color "None"
-    label "06ANKARA4310"
-    place "ANKARA"
     degree 7
     constraint 0.17021
+    color "black"
+    timestamp "1153906740"
+    label "06ANKARA4310"
+    place "ANKARA"
   ]
   node
   [
     id 4
-    color "None"
-    label "06ANKARA4834"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1155906540"
+    label "06ANKARA4834"
+    place "ANKARA"
   ]
   node
   [
     id 5
-    color "None"
-    label "06ANKARA5019"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1157029260"
+    label "06ANKARA5019"
+    place "ANKARA"
   ]
   node
   [
     id 6
-    color "None"
-    label "06ANKARA6491"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1164206460"
+    label "06ANKARA6491"
+    place "ANKARA"
   ]
   node
   [
     id 7
-    color "None"
-    label "06ATHENS1091"
-    place "ATHENS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1146052440"
+    label "06ATHENS1091"
+    place "ATHENS"
   ]
   node
   [
     id 8
-    color "None"
-    label "06ATHENS1946"
-    place "ATHENS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1153832160"
+    label "06ATHENS1946"
+    place "ATHENS"
   ]
   node
   [
     id 9
-    color "None"
-    label "06ATHENS1947"
-    place "ATHENS"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1153879740"
+    label "06ATHENS1947"
+    place "ATHENS"
   ]
   node
   [
     id 10
-    color "None"
-    label "06BUCHAREST1576"
-    place "BUCHAREST"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1160719560"
+    label "06BUCHAREST1576"
+    place "BUCHAREST"
   ]
   node
   [
     id 11
-    color "None"
-    label "06BUCHAREST1637"
-    place "BUCHAREST"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1161690000"
+    label "06BUCHAREST1637"
+    place "BUCHAREST"
   ]
   node
   [
     id 12
-    color "None"
-    label "06BUCHAREST1652"
-    place "BUCHAREST"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1162192140"
+    label "06BUCHAREST1652"
+    place "BUCHAREST"
   ]
   node
   [
     id 13
-    color "None"
-    label "06OSLO1060"
-    place "OSLO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1156494480"
+    label "06OSLO1060"
+    place "OSLO"
   ]
   node
   [
     id 14
-    color "red"
-    label "06OSLO210"
-    place "OSLO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06OSLO210"
+    place "OSLO"
   ]
   node
   [
     id 15
-    color "None"
-    label "06OSLO498"
-    place "OSLO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1145561700"
+    label "06OSLO498"
+    place "OSLO"
   ]
   node
   [
     id 16
-    color "None"
-    label "06OSLO902"
-    place "OSLO"
     degree 2
     constraint 0.835069
+    color "black"
+    timestamp "1153398540"
+    label "06OSLO902"
+    place "OSLO"
   ]
   node
   [
     id 17
-    color "None"
-    label "06OSLO996"
-    place "OSLO"
     degree 3
     constraint 0.534722
+    color "black"
+    timestamp "1155289680"
+    label "06OSLO996"
+    place "OSLO"
   ]
   node
   [
     id 18
-    color "red"
-    label "06SECSTATE116608"
-    place "SECSTATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06SECSTATE116608"
+    place "SECSTATE"
   ]
   node
   [
     id 19
-    color "None"
-    label "06SOFIA1451"
-    place "SOFIA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1161086220"
+    label "06SOFIA1451"
+    place "SOFIA"
   ]
   node
   [
     id 20
-    color "red"
-    label "06STATE110161"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06STATE110161"
+    place "STATE"
   ]
   node
   [
     id 21
-    color "red"
-    label "06STATE116608"
-    place "STATE"
     degree 4
     constraint 0.376736
+    color "red"
+    timestamp ""
+    label "06STATE116608"
+    place "STATE"
   ]
   node
   [
     id 22
-    color "red"
-    label "06STATE139266"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06STATE139266"
+    place "STATE"
   ]
   node
   [
     id 23
-    color "red"
-    label "06STATE158840"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE158840"
+    place "STATE"
   ]
   node
   [
     id 24
-    color "red"
-    label "06STATE27201"
-    place "STATE"
     degree 3
     constraint 0.429847
+    color "red"
+    timestamp ""
+    label "06STATE27201"
+    place "STATE"
   ]
   node
   [
     id 25
-    color "red"
-    label "06STATE58715"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "06STATE58715"
+    place "STATE"
   ]
   node
   [
     id 26
-    color "red"
-    label "06STATE68577"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06STATE68577"
+    place "STATE"
   ]
   node
   [
     id 27
-    color "red"
-    label "06USNATO170"
-    place "USNATO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06USNATO170"
+    place "USNATO"
   ]
   node
   [
     id 28
-    color "red"
-    label "06USNATO569"
-    place "USNATO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06USNATO569"
+    place "USNATO"
   ]
   node
   [
     id 29
-    color "None"
-    label "07OSLO376"
-    place "OSLO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1176798900"
+    label "07OSLO376"
+    place "OSLO"
   ]
   edge
   [
     source 21
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "4121940"
     weight 1
   ]
   edge
   [
     source 19
     target 10
+    duration "366660"
     weight 1
   ]
   edge
   [
     source 29
     target 24
+    duration "0"
     weight 1
   ]
   edge
   [
     source 29
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 17
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 16
+    duration "1891140"
     weight 1
   ]
   edge
   [
     source 21
     target 16
+    duration "0"
     weight 1
   ]
   edge
   [
     source 22
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "69960"
     weight 1
   ]
   edge
   [
     source 25
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 25
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 26
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 28
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "7177200"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "970440"
     weight 1
   ]
   edge
   [
     source 21
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 25
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 13
+    duration "1204800"
     weight 1
   ]
   edge
   [
     source 23
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 24
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 22
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "12614940"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "1999800"
     weight 1
   ]
   edge
   [
     source 27
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 3
+    duration "27000"
     weight 1
   ]
   edge
   [
     source 20
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 25
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 24
     target 0
+    duration "0"
     weight 1
   ]
 ]

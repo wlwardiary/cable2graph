@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:47 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:04 2011"
 Version 1
 graph
 [
@@ -6,295 +6,335 @@ graph
   node
   [
     id 0
-    color "None"
-    label "07ANKARA2647"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1193313900"
+    label "07ANKARA2647"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "07ANKARA2734"
-    place "ANKARA"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1194446880"
+    label "07ANKARA2734"
+    place "ANKARA"
   ]
   node
   [
     id 2
-    color "None"
-    label "07ANKARA2736"
-    place "ANKARA"
     degree 3
     constraint 0.597222
+    color "black"
+    timestamp "1194511500"
+    label "07ANKARA2736"
+    place "ANKARA"
   ]
   node
   [
     id 3
-    color "None"
-    label "07ANKARA2751"
-    place "ANKARA"
     degree 4
     constraint 0.594618
+    color "black"
+    timestamp "1194616560"
+    label "07ANKARA2751"
+    place "ANKARA"
   ]
   node
   [
     id 4
-    color "None"
-    label "07ANKARA2760"
-    place "ANKARA"
     degree 4
     constraint 0.398438
+    color "black"
+    timestamp "1194956220"
+    label "07ANKARA2760"
+    place "ANKARA"
   ]
   node
   [
     id 5
-    color "None"
-    label "07ANKARA2769"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1195048560"
+    label "07ANKARA2769"
+    place "ANKARA"
   ]
   node
   [
     id 6
-    color "None"
-    label "07ANKARA2779"
-    place "ANKARA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1195136820"
+    label "07ANKARA2779"
+    place "ANKARA"
   ]
   node
   [
     id 7
-    color "None"
-    label "07ANKARA2781"
-    place "ANKARA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1195137000"
+    label "07ANKARA2781"
+    place "ANKARA"
   ]
   node
   [
     id 8
-    color "None"
-    label "07ANKARA2835"
-    place "ANKARA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1196166840"
+    label "07ANKARA2835"
+    place "ANKARA"
   ]
   node
   [
     id 9
-    color "None"
-    label "07ANKARA2914"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1197023220"
+    label "07ANKARA2914"
+    place "ANKARA"
   ]
   node
   [
     id 10
-    color "None"
-    label "07ANKARA3014"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1198057380"
+    label "07ANKARA3014"
+    place "ANKARA"
   ]
   node
   [
     id 11
-    color "red"
-    label "07SECSTATE153489"
-    place "SECSTATE"
     degree 3
     constraint 0.625772
+    color "red"
+    timestamp ""
+    label "07SECSTATE153489"
+    place "SECSTATE"
   ]
   node
   [
     id 12
-    color "red"
-    label "07SECSTATE155046"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE155046"
+    place "SECSTATE"
   ]
   node
   [
     id 13
-    color "red"
-    label "09ANKARA1011"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09ANKARA1011"
+    place "ANKARA"
   ]
   node
   [
     id 14
-    color "None"
-    label "09ANKARA1012"
-    place "ANKARA"
     degree 6
     constraint 0.296103
+    color "black"
+    timestamp "1247654160"
+    label "09ANKARA1012"
+    place "ANKARA"
   ]
   node
   [
     id 15
-    color "None"
-    label "09ANKARA1056"
-    place "ANKARA"
     degree 2
     constraint 0.784722
+    color "black"
+    timestamp "1248348480"
+    label "09ANKARA1056"
+    place "ANKARA"
   ]
   node
   [
     id 16
-    color "None"
-    label "09ANKARA1101"
-    place "ANKARA"
     degree 3
     constraint 0.512346
+    color "black"
+    timestamp "1249008300"
+    label "09ANKARA1101"
+    place "ANKARA"
   ]
   node
   [
     id 17
-    color "red"
-    label "09STATE77206"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09STATE77206"
+    place "STATE"
   ]
   edge
   [
     source 10
     target 7
+    duration "2920380"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "1886400"
     weight 1
   ]
   edge
   [
     source 11
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 3
+    duration "53037600"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "689940"
     weight 1
   ]
   edge
   [
     source 14
     target 4
+    duration "52697940"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "339660"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "659820"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "694320"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "601680"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "1132980"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "1030020"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "105060"
     weight 1
   ]
   edge
   [
     source 14
     target 2
+    duration "53142660"
     weight 1
   ]
   edge
   [
     source 11
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 14
+    duration "1354140"
     weight 1
   ]
   edge
   [
     source 14
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "690120"
     weight 1
   ]
   edge
   [
     source 8
     target 4
+    duration "1210620"
     weight 1
   ]
   edge
   [
     source 17
     target 16
+    duration "0"
     weight 1
   ]
 ]

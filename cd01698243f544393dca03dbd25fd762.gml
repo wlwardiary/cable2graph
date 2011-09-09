@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:21:52 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:10:38 2011"
 Version 1
 graph
 [
@@ -6,280 +6,318 @@ graph
   node
   [
     id 0
-    color "None"
-    label "09JERUSALEM1285"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1248786120"
+    label "09JERUSALEM1285"
+    place "JERUSALEM"
   ]
   node
   [
     id 1
-    color "None"
-    label "09JERUSALEM1345"
-    place "JERUSALEM"
     degree 3
     constraint 0.498285
+    color "black"
+    timestamp "1249391460"
+    label "09JERUSALEM1345"
+    place "JERUSALEM"
   ]
   node
   [
     id 2
-    color "None"
-    label "09JERUSALEM1354"
-    place "JERUSALEM"
     degree 2
     constraint 0.753086
+    color "black"
+    timestamp "1249474560"
+    label "09JERUSALEM1354"
+    place "JERUSALEM"
   ]
   node
   [
     id 3
-    color "None"
-    label "09JERUSALEM1359"
-    place "JERUSALEM"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1249559700"
+    label "09JERUSALEM1359"
+    place "JERUSALEM"
   ]
   node
   [
     id 4
-    color "None"
-    label "09JERUSALEM1377"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1249649520"
+    label "09JERUSALEM1377"
+    place "JERUSALEM"
   ]
   node
   [
     id 5
-    color "None"
-    label "09JERUSALEM1394"
-    place "JERUSALEM"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1249998480"
+    label "09JERUSALEM1394"
+    place "JERUSALEM"
   ]
   node
   [
     id 6
-    color "red"
-    label "09JERUSALEM1449"
-    place "JERUSALEM"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09JERUSALEM1449"
+    place "JERUSALEM"
   ]
   node
   [
     id 7
-    color "None"
-    label "09JERUSALEM1450"
-    place "JERUSALEM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1250511120"
+    label "09JERUSALEM1450"
+    place "JERUSALEM"
   ]
   node
   [
     id 8
-    color "None"
-    label "09JERUSALEM1533"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1251378120"
+    label "09JERUSALEM1533"
+    place "JERUSALEM"
   ]
   node
   [
     id 9
-    color "None"
-    label "09JERUSALEM1906"
-    place "JERUSALEM"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1255956540"
+    label "09JERUSALEM1906"
+    place "JERUSALEM"
   ]
   node
   [
     id 10
-    color "red"
-    label "09JERUSALEM2093"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "09JERUSALEM2093"
+    place "JERUSALEM"
   ]
   node
   [
     id 11
-    color "None"
-    label "09JERUSALEM2296"
-    place "JERUSALEM"
     degree 7
     constraint 0.142857
+    color "black"
+    timestamp "1261136100"
+    label "09JERUSALEM2296"
+    place "JERUSALEM"
   ]
   node
   [
     id 12
-    color "None"
-    label "09JERUSALEM2336"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1262085720"
+    label "09JERUSALEM2336"
+    place "JERUSALEM"
   ]
   node
   [
     id 13
-    color "None"
-    label "09STATE99804"
-    place "STATE"
     degree 9
     constraint 0.136145
+    color "black"
+    timestamp "1253821500"
+    label "09STATE99804"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "None"
-    label "09TELAVIV1831"
-    place "TELAVIV"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1250572440"
+    label "09TELAVIV1831"
+    place "TELAVIV"
   ]
   node
   [
     id 15
-    color "None"
-    label "10JERUSALEM139"
-    place "JERUSALEM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1264185960"
+    label "10JERUSALEM139"
+    place "JERUSALEM"
   ]
   node
   [
     id 16
-    color "red"
-    label "10JERUSALEM47"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10JERUSALEM47"
+    place "JERUSALEM"
   ]
   edge
   [
     source 13
     target 1
+    duration "4430040"
     weight 1
   ]
   edge
   [
     source 13
     target 4
+    duration "4171980"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 11
+    duration "3049860"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 11
+    duration "949620"
     weight 1
   ]
   edge
   [
     source 11
     target 5
+    duration "11137620"
     weight 1
   ]
   edge
   [
     source 11
     target 1
+    duration "11744640"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "5445420"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "2443380"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "4261800"
     weight 1
   ]
   edge
   [
     source 15
     target 9
+    duration "8229420"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "83100"
     weight 1
   ]
   edge
   [
     source 13
     target 2
+    duration "4346940"
     weight 1
   ]
   edge
   [
     source 14
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 5
+    duration "3823020"
     weight 1
   ]
   edge
   [
     source 11
     target 3
+    duration "11576400"
     weight 1
   ]
   edge
   [
     source 13
     target 0
+    duration "5035380"
     weight 1
   ]
   edge
   [
     source 11
     target 7
+    duration "10624980"
     weight 1
   ]
   edge
   [
     source 13
     target 7
+    duration "3310380"
     weight 1
   ]
 ]

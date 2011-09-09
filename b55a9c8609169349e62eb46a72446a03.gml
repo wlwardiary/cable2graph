@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:04 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:06:14 2011"
 Version 1
 graph
 [
@@ -6,172 +6,195 @@ graph
   node
   [
     id 0
-    color "red"
-    label "06MADRID1848"
-    place "MADRID"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06MADRID1848"
+    place "MADRID"
   ]
   node
   [
     id 1
-    color "red"
-    label "06MADRID2793"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "06MADRID2793"
+    place "MADRID"
   ]
   node
   [
     id 2
-    color "red"
-    label "07MADRID142"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07MADRID142"
+    place "MADRID"
   ]
   node
   [
     id 3
-    color "red"
-    label "07MADRID1725"
-    place "MADRID"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07MADRID1725"
+    place "MADRID"
   ]
   node
   [
     id 4
-    color "None"
-    label "07MADRID1806"
-    place "MADRID"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1190101320"
+    label "07MADRID1806"
+    place "MADRID"
   ]
   node
   [
     id 5
-    color "None"
-    label "07MADRID1808"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1190112240"
+    label "07MADRID1808"
+    place "MADRID"
   ]
   node
   [
     id 6
-    color "None"
-    label "07MADRID1848"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1190726760"
+    label "07MADRID1848"
+    place "MADRID"
   ]
   node
   [
     id 7
-    color "None"
-    label "07MADRID1950"
-    place "MADRID"
     degree 6
     constraint 0.166667
+    color "black"
+    timestamp "1191936960"
+    label "07MADRID1950"
+    place "MADRID"
   ]
   node
   [
     id 8
-    color "red"
-    label "07SECSTATE128831"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE128831"
+    place "SECSTATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "07SECSTATE133348"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07SECSTATE133348"
+    place "SECSTATE"
   ]
   node
   [
     id 10
-    color "None"
-    label "08MADRID430"
-    place "MADRID"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1208352480"
+    label "08MADRID430"
+    place "MADRID"
   ]
   edge
   [
     source 8
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "18251160"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "16415520"
     weight 1
   ]
   edge
   [
     source 4
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "1210200"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "1824720"
     weight 1
   ]
 ]

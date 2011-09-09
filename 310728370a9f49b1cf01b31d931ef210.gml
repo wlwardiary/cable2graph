@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:51 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:10 2011"
 Version 1
 graph
 [
@@ -6,271 +6,308 @@ graph
   node
   [
     id 0
-    color "red"
-    label "02COLOMBO12"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02COLOMBO12"
+    place "COLOMBO"
   ]
   node
   [
     id 1
-    color "None"
-    label "02COLOMBO1899"
-    place "COLOMBO"
     degree 6
     constraint 0.200494
+    color "black"
+    timestamp "1034240520"
+    label "02COLOMBO1899"
+    place "COLOMBO"
   ]
   node
   [
     id 2
-    color "None"
-    label "02COLOMBO1900"
-    place "COLOMBO"
     degree 5
     constraint 0.2676
+    color "black"
+    timestamp "1034240640"
+    label "02COLOMBO1900"
+    place "COLOMBO"
   ]
   node
   [
     id 3
-    color "None"
-    label "02COLOMBO2091"
-    place "COLOMBO"
     degree 3
     constraint 0.422346
+    color "black"
+    timestamp "1036657200"
+    label "02COLOMBO2091"
+    place "COLOMBO"
   ]
   node
   [
     id 4
-    color "None"
-    label "02COLOMBO2165"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1037870160"
+    label "02COLOMBO2165"
+    place "COLOMBO"
   ]
   node
   [
     id 5
-    color "None"
-    label "02COLOMBO2166"
-    place "COLOMBO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1037870220"
+    label "02COLOMBO2166"
+    place "COLOMBO"
   ]
   node
   [
     id 6
-    color "None"
-    label "02COLOMBO2167"
-    place "COLOMBO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1037870280"
+    label "02COLOMBO2167"
+    place "COLOMBO"
   ]
   node
   [
     id 7
-    color "None"
-    label "02COLOMBO2168"
-    place "COLOMBO"
     degree 2
     constraint 0.72
+    color "black"
+    timestamp "1037870280"
+    label "02COLOMBO2168"
+    place "COLOMBO"
   ]
   node
   [
     id 8
-    color "None"
-    label "02COLOMBO2170"
-    place "COLOMBO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1037870340"
+    label "02COLOMBO2170"
+    place "COLOMBO"
   ]
   node
   [
     id 9
-    color "None"
-    label "02COLOMBO2172"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1037870400"
+    label "02COLOMBO2172"
+    place "COLOMBO"
   ]
   node
   [
     id 10
-    color "None"
-    label "02COLOMBO2179"
-    place "COLOMBO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1037938800"
+    label "02COLOMBO2179"
+    place "COLOMBO"
   ]
   node
   [
     id 11
-    color "None"
-    label "02COLOMBO2188"
-    place "COLOMBO"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1038276720"
+    label "02COLOMBO2188"
+    place "COLOMBO"
   ]
   node
   [
     id 12
-    color "red"
-    label "02STATE126530"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02STATE126530"
+    place "STATE"
   ]
   node
   [
     id 13
-    color "red"
-    label "02STATE127990"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "02STATE127990"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "red"
-    label "02STATE32608"
-    place "STATE"
     degree 5
     constraint 0.2676
+    color "red"
+    timestamp ""
+    label "02STATE32608"
+    place "STATE"
   ]
   node
   [
     id 15
-    color "red"
-    label "02STATE50054"
-    place "STATE"
     degree 5
     constraint 0.245556
+    color "red"
+    timestamp ""
+    label "02STATE50054"
+    place "STATE"
   ]
   edge
   [
     source 11
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "3629640"
     weight 1
   ]
   edge
   [
     source 14
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "3629880"
     weight 1
   ]
   edge
   [
     source 15
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "2416680"
     weight 1
   ]
   edge
   [
     source 13
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "3698160"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "3629700"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "3629700"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "3629640"
     weight 1
   ]
 ]

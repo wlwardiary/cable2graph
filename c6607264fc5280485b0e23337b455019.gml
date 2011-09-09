@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:48 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:24 2011"
 Version 1
 graph
 [
@@ -6,166 +6,188 @@ graph
   node
   [
     id 0
-    color "None"
-    label "08JERUSALEM1682"
-    place "JERUSALEM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1220961600"
+    label "08JERUSALEM1682"
+    place "JERUSALEM"
   ]
   node
   [
     id 1
-    color "red"
-    label "09CAIRO2394"
-    place "CAIRO"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09CAIRO2394"
+    place "CAIRO"
   ]
   node
   [
     id 2
-    color "red"
-    label "09CAIRO491"
-    place "CAIRO"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "09CAIRO491"
+    place "CAIRO"
   ]
   node
   [
     id 3
-    color "None"
-    label "10CAIRO177"
-    place "CAIRO"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1265719560"
+    label "10CAIRO177"
+    place "CAIRO"
   ]
   node
   [
     id 4
-    color "None"
-    label "10CAIRO249"
-    place "CAIRO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1267106580"
+    label "10CAIRO249"
+    place "CAIRO"
   ]
   node
   [
     id 5
-    color "None"
-    label "10CAIRO255"
-    place "CAIRO"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1267360860"
+    label "10CAIRO255"
+    place "CAIRO"
   ]
   node
   [
     id 6
-    color "None"
-    label "10JERUSALEM276"
-    place "JERUSALEM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1265986140"
+    label "10JERUSALEM276"
+    place "JERUSALEM"
   ]
   node
   [
     id 7
-    color "red"
-    label "10TELAVIV2446"
-    place "TELAVIV"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "10TELAVIV2446"
+    place "TELAVIV"
   ]
   node
   [
     id 8
-    color "None"
-    label "10TELAVIV359"
-    place "TELAVIV"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1266492900"
+    label "10TELAVIV359"
+    place "TELAVIV"
   ]
   node
   [
     id 9
-    color "None"
-    label "10TELAVIV413"
-    place "TELAVIV"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1266845040"
+    label "10TELAVIV413"
+    place "TELAVIV"
   ]
   node
   [
     id 10
-    color "None"
-    label "10TELAVIV423"
-    place "TELAVIV"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1266925200"
+    label "10TELAVIV423"
+    place "TELAVIV"
   ]
   edge
   [
     source 5
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "80160"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "1387020"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "858900"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "432300"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "45024540"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "266580"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "0"
     weight 1
   ]
 ]

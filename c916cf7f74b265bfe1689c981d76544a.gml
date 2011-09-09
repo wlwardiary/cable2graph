@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:19:10 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:31 2011"
 Version 1
 graph
 [
@@ -6,256 +6,290 @@ graph
   node
   [
     id 0
-    color "None"
-    label "07CAIRO469"
-    place "CAIRO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1171987440"
+    label "07CAIRO469"
+    place "CAIRO"
   ]
   node
   [
     id 1
-    color "red"
-    label "07KHARTOUM133"
-    place "KHARTOUM"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07KHARTOUM133"
+    place "KHARTOUM"
   ]
   node
   [
     id 2
-    color "None"
-    label "07KHARTOUM166"
-    place "KHARTOUM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1170673140"
+    label "07KHARTOUM166"
+    place "KHARTOUM"
   ]
   node
   [
     id 3
-    color "None"
-    label "07KHARTOUM194"
-    place "KHARTOUM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1171006440"
+    label "07KHARTOUM194"
+    place "KHARTOUM"
   ]
   node
   [
     id 4
-    color "None"
-    label "07KHARTOUM211"
-    place "KHARTOUM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1171348800"
+    label "07KHARTOUM211"
+    place "KHARTOUM"
   ]
   node
   [
     id 5
-    color "None"
-    label "07KHARTOUM248"
-    place "KHARTOUM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1171874040"
+    label "07KHARTOUM248"
+    place "KHARTOUM"
   ]
   node
   [
     id 6
-    color "None"
-    label "07KHARTOUM544"
-    place "KHARTOUM"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1175765280"
+    label "07KHARTOUM544"
+    place "KHARTOUM"
   ]
   node
   [
     id 7
-    color "None"
-    label "07KHARTOUM693"
-    place "KHARTOUM"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1178104140"
+    label "07KHARTOUM693"
+    place "KHARTOUM"
   ]
   node
   [
     id 8
-    color "None"
-    label "07KHARTOUM720"
-    place "KHARTOUM"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1178711280"
+    label "07KHARTOUM720"
+    place "KHARTOUM"
   ]
   node
   [
     id 9
-    color "None"
-    label "07KHARTOUM737"
-    place "KHARTOUM"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1178950980"
+    label "07KHARTOUM737"
+    place "KHARTOUM"
   ]
   node
   [
     id 10
-    color "red"
-    label "07Khartoum157"
-    place "K"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07Khartoum157"
+    place "K"
   ]
   node
   [
     id 11
-    color "red"
-    label "07Khartoum211"
-    place "K"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07Khartoum211"
+    place "K"
   ]
   node
   [
     id 12
-    color "red"
-    label "07Khartoum591"
-    place "K"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "07Khartoum591"
+    place "K"
   ]
   node
   [
     id 13
-    color "red"
-    label "07Khartoum693"
-    place "K"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07Khartoum693"
+    place "K"
   ]
   node
   [
     id 14
-    color "None"
-    label "07OSLO159"
-    place "OSLO"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1171638720"
+    label "07OSLO159"
+    place "OSLO"
   ]
   node
   [
     id 15
-    color "None"
-    label "07ROME331"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1171632000"
+    label "07ROME331"
+    place "ROME"
   ]
   node
   [
     id 16
-    color "red"
-    label "07STATE18712"
-    place "STATE"
     degree 4
     constraint 0.25
+    color "red"
+    timestamp ""
+    label "07STATE18712"
+    place "STATE"
   ]
   edge
   [
     source 11
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "333300"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "4416480"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "3891240"
     weight 1
   ]
   edge
   [
     source 16
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "239700"
     weight 1
   ]
   edge
   [
     source 16
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "7602180"
     weight 1
   ]
   edge
   [
     source 13
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "4758840"
     weight 1
   ]
   edge
   [
     source 16
     target 15
+    duration "0"
     weight 1
   ]
 ]

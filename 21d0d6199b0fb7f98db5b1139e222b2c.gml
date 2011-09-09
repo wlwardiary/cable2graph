@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:40 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:00:56 2011"
 Version 1
 graph
 [
@@ -6,160 +6,181 @@ graph
   node
   [
     id 0
-    color "red"
-    label "01BANJUL829"
-    place "BANJUL"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01BANJUL829"
+    place "BANJUL"
   ]
   node
   [
     id 1
-    color "red"
-    label "01BANJUL832"
-    place "BANJUL"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01BANJUL832"
+    place "BANJUL"
   ]
   node
   [
     id 2
-    color "None"
-    label "01BANJUL854"
-    place "BANJUL"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1003151040"
+    label "01BANJUL854"
+    place "BANJUL"
   ]
   node
   [
     id 3
-    color "red"
-    label "01GABORONE3315"
-    place "GABORONE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01GABORONE3315"
+    place "GABORONE"
   ]
   node
   [
     id 4
-    color "None"
-    label "01GABORONE3435"
-    place "GABORONE"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1003759200"
+    label "01GABORONE3435"
+    place "GABORONE"
   ]
   node
   [
     id 5
-    color "None"
-    label "01HANOI2139"
-    place "HANOI"
     degree 1
     constraint 1
+    color "black"
+    timestamp "999155280"
+    label "01HANOI2139"
+    place "HANOI"
   ]
   node
   [
     id 6
-    color "None"
-    label "01HANOI2658"
-    place "HANOI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1002878760"
+    label "01HANOI2658"
+    place "HANOI"
   ]
   node
   [
     id 7
-    color "None"
-    label "01HANOI2817"
-    place "HANOI"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1004326740"
+    label "01HANOI2817"
+    place "HANOI"
   ]
   node
   [
     id 8
-    color "None"
-    label "01HARARE3009"
-    place "HARARE"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1002687840"
+    label "01HARARE3009"
+    place "HARARE"
   ]
   node
   [
     id 9
-    color "red"
-    label "01STATE175484"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "01STATE175484"
+    place "STATE"
   ]
   node
   [
     id 10
-    color "red"
-    label "01STATE177569"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "01STATE177569"
+    place "STATE"
   ]
   edge
   [
     source 4
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "5171460"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "1447980"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 4
+    duration "0"
     weight 1
   ]
 ]

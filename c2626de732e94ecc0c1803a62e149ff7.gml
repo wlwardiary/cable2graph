@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:13:43 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:00 2011"
 Version 1
 graph
 [
@@ -6,355 +6,403 @@ graph
   node
   [
     id 0
-    color "red"
-    label "01KATHMANDU2202"
-    place "KATHMANDU"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "01KATHMANDU2202"
+    place "KATHMANDU"
   ]
   node
   [
     id 1
-    color "None"
-    label "02AMMAN4261"
-    place "AMMAN"
     degree 3
     constraint 0.656296
+    color "black"
+    timestamp "1028118120"
+    label "02AMMAN4261"
+    place "AMMAN"
   ]
   node
   [
     id 2
-    color "None"
-    label "02AMMAN4395"
-    place "AMMAN"
     degree 3
     constraint 0.656296
+    color "black"
+    timestamp "1028700600"
+    label "02AMMAN4395"
+    place "AMMAN"
   ]
   node
   [
     id 3
-    color "None"
-    label "02AMMAN4519"
-    place "AMMAN"
     degree 2
     constraint 1.00694
+    color "black"
+    timestamp "1029151200"
+    label "02AMMAN4519"
+    place "AMMAN"
   ]
   node
   [
     id 4
-    color "None"
-    label "02AMMAN4975"
-    place "AMMAN"
     degree 3
     constraint 0.611111
+    color "black"
+    timestamp "1031054820"
+    label "02AMMAN4975"
+    place "AMMAN"
   ]
   node
   [
     id 5
-    color "red"
-    label "02AMMAN5014"
-    place "AMMAN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02AMMAN5014"
+    place "AMMAN"
   ]
   node
   [
     id 6
-    color "None"
-    label "02AMMAN5085"
-    place "AMMAN"
     degree 5
     constraint 0.262222
+    color "black"
+    timestamp "1031477880"
+    label "02AMMAN5085"
+    place "AMMAN"
   ]
   node
   [
     id 7
-    color "None"
-    label "02KATHMANDU1349"
-    place "KATHMANDU"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1026370560"
+    label "02KATHMANDU1349"
+    place "KATHMANDU"
   ]
   node
   [
     id 8
-    color "red"
-    label "02SECSTATE169228"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02SECSTATE169228"
+    place "SECSTATE"
   ]
   node
   [
     id 9
-    color "red"
-    label "02SECSTATE170283"
-    place "SECSTATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02SECSTATE170283"
+    place "SECSTATE"
   ]
   node
   [
     id 10
-    color "red"
-    label "02STATE125639"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "02STATE125639"
+    place "STATE"
   ]
   node
   [
     id 11
-    color "red"
-    label "02STATE126082"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02STATE126082"
+    place "STATE"
   ]
   node
   [
     id 12
-    color "red"
-    label "02STATE133355"
-    place "STATE"
     degree 3
     constraint 0.506173
+    color "red"
+    timestamp ""
+    label "02STATE133355"
+    place "STATE"
   ]
   node
   [
     id 13
-    color "red"
-    label "02STATE150004"
-    place "STATE"
     degree 2
     constraint 1.00694
+    color "red"
+    timestamp ""
+    label "02STATE150004"
+    place "STATE"
   ]
   node
   [
     id 14
-    color "red"
-    label "02STATE167230"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "02STATE167230"
+    place "STATE"
   ]
   node
   [
     id 15
-    color "red"
-    label "02STATE169228"
-    place "STATE"
     degree 2
     constraint 0.5
+    color "red"
+    timestamp ""
+    label "02STATE169228"
+    place "STATE"
   ]
   node
   [
     id 16
-    color "red"
-    label "02STATE170283"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02STATE170283"
+    place "STATE"
   ]
   node
   [
     id 17
-    color "red"
-    label "02TEGUCIGALPA2116"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02TEGUCIGALPA2116"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 18
-    color "red"
-    label "02TEGUCIGALPA2140"
-    place "TEGUCIGALPA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "02TEGUCIGALPA2140"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 19
-    color "None"
-    label "02TEGUCIGALPA2516"
-    place "TEGUCIGALPA"
     degree 3
     constraint 0.445816
+    color "black"
+    timestamp "1031352720"
+    label "02TEGUCIGALPA2516"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 20
-    color "None"
-    label "02TEGUCIGALPA2517"
-    place "TEGUCIGALPA"
     degree 3
     constraint 0.445816
+    color "black"
+    timestamp "1031353500"
+    label "02TEGUCIGALPA2517"
+    place "TEGUCIGALPA"
   ]
   node
   [
     id 21
-    color "None"
-    label "02TEGUCIGALPA2523"
-    place "TEGUCIGALPA"
     degree 9
     constraint 0.130316
+    color "black"
+    timestamp "1031663760"
+    label "02TEGUCIGALPA2523"
+    place "TEGUCIGALPA"
   ]
   edge
   [
     source 21
     target 20
+    duration "310260"
     weight 1
   ]
   edge
   [
     source 13
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 19
+    duration "780"
     weight 1
   ]
   edge
   [
     source 21
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "3359760"
     weight 1
   ]
   edge
   [
     source 15
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 18
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "1903620"
     weight 1
   ]
   edge
   [
     source 21
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 17
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 14
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 2
+    duration "2777280"
     weight 1
   ]
   edge
   [
     source 16
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 12
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 21
     target 19
+    duration "311040"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "582480"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
 ]

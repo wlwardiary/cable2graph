@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:18:48 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:07:05 2011"
 Version 1
 graph
 [
@@ -6,322 +6,365 @@ graph
   node
   [
     id 0
-    color "None"
-    label "07ANKARA3047"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1198838340"
+    label "07ANKARA3047"
+    place "ANKARA"
   ]
   node
   [
     id 1
-    color "None"
-    label "07ATHENS2347"
-    place "ATHENS"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1197470520"
+    label "07ATHENS2347"
+    place "ATHENS"
   ]
   node
   [
     id 2
-    color "red"
-    label "07BERLIN2255"
-    place "BERLIN"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "07BERLIN2255"
+    place "BERLIN"
   ]
   node
   [
     id 3
-    color "None"
-    label "07BRATISLAVA659"
-    place "BRATISLAVA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1197525600"
+    label "07BRATISLAVA659"
+    place "BRATISLAVA"
   ]
   node
   [
     id 4
-    color "None"
-    label "07LJUBLJANA762"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1197619620"
+    label "07LJUBLJANA762"
+    place "LJUBLJANA"
   ]
   node
   [
     id 5
-    color "None"
-    label "07LUXEMBOURG491"
-    place "LUXEMBOURG"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1197548280"
+    label "07LUXEMBOURG491"
+    place "LUXEMBOURG"
   ]
   node
   [
     id 6
-    color "red"
-    label "07STATE164503"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "07STATE164503"
+    place "STATE"
   ]
   node
   [
     id 7
-    color "None"
-    label "08ANKARA907"
-    place "ANKARA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1210577400"
+    label "08ANKARA907"
+    place "ANKARA"
   ]
   node
   [
     id 8
-    color "None"
-    label "08BERLIN605"
-    place "BERLIN"
     degree 4
     constraint 0.25
+    color "black"
+    timestamp "1210327440"
+    label "08BERLIN605"
+    place "BERLIN"
   ]
   node
   [
     id 9
-    color "None"
-    label "08BRATISLAVA232"
-    place "BRATISLAVA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1210951140"
+    label "08BRATISLAVA232"
+    place "BRATISLAVA"
   ]
   node
   [
     id 10
-    color "None"
-    label "08LJUBLJANA205"
-    place "LJUBLJANA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1210335180"
+    label "08LJUBLJANA205"
+    place "LJUBLJANA"
   ]
   node
   [
     id 11
-    color "None"
-    label "08LONDON1338"
-    place "LONDON"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1210688880"
+    label "08LONDON1338"
+    place "LONDON"
   ]
   node
   [
     id 12
-    color "red"
-    label "08OTTAWA258"
-    place "OTTAWA"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08OTTAWA258"
+    place "OTTAWA"
   ]
   node
   [
     id 13
-    color "None"
-    label "08OTTAWA372"
-    place "OTTAWA"
     degree 6
     constraint 0.25
+    color "black"
+    timestamp "1205500980"
+    label "08OTTAWA372"
+    place "OTTAWA"
   ]
   node
   [
     id 14
-    color "None"
-    label "08OTTAWA647"
-    place "OTTAWA"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1210602780"
+    label "08OTTAWA647"
+    place "OTTAWA"
   ]
   node
   [
     id 15
-    color "None"
-    label "08ROME604"
-    place "ROME"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1210651260"
+    label "08ROME604"
+    place "ROME"
   ]
   node
   [
     id 16
-    color "red"
-    label "08STATE24735"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STATE24735"
+    place "STATE"
   ]
   node
   [
     id 17
-    color "red"
-    label "08STATE44276"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STATE44276"
+    place "STATE"
   ]
   node
   [
     id 18
-    color "red"
-    label "08STATE45302"
-    place "STATE"
     degree 3
     constraint 0.333333
+    color "red"
+    timestamp ""
+    label "08STATE45302"
+    place "STATE"
   ]
   node
   [
     id 19
-    color "red"
-    label "08STATE48124"
-    place "STATE"
     degree 6
     constraint 0.166667
+    color "red"
+    timestamp ""
+    label "08STATE48124"
+    place "STATE"
   ]
   node
   [
     id 20
-    color "red"
-    label "08STATE48214"
-    place "STATE"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "08STATE48214"
+    place "STATE"
   ]
   edge
   [
     source 14
     target 13
+    duration "5101800"
     weight 1
   ]
   edge
   [
     source 19
     target 10
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 15
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 8
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 12
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 7
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 19
     target 11
+    duration "0"
     weight 1
   ]
   edge
   [
     source 20
     target 14
+    duration "0"
     weight 1
   ]
   edge
   [
     source 18
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 16
     target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 13
     target 13
+    duration "1384560"
     weight 1
   ]
 ]

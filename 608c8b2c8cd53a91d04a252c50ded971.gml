@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:06 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:03:58 2011"
 Version 1
 graph
 [
@@ -6,199 +6,226 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05ISLAMABAD15130"
-    place "ISLAMABAD"
     degree 3
     constraint 0.831111
+    color "red"
+    timestamp ""
+    label "05ISLAMABAD15130"
+    place "ISLAMABAD"
   ]
   node
   [
     id 1
-    color "None"
-    label "05ISLAMABAD15208"
-    place "ISLAMABAD"
     degree 3
     constraint 0.831111
+    color "black"
+    timestamp "1128865080"
+    label "05ISLAMABAD15208"
+    place "ISLAMABAD"
   ]
   node
   [
     id 2
-    color "None"
-    label "05ISLAMABAD15254"
-    place "ISLAMABAD"
     degree 3
     constraint 0.831111
+    color "black"
+    timestamp "1128990300"
+    label "05ISLAMABAD15254"
+    place "ISLAMABAD"
   ]
   node
   [
     id 3
-    color "None"
-    label "05ISLAMABAD15278"
-    place "ISLAMABAD"
     degree 5
     constraint 0.413333
+    color "black"
+    timestamp "1129076400"
+    label "05ISLAMABAD15278"
+    place "ISLAMABAD"
   ]
   node
   [
     id 4
-    color "None"
-    label "05ISLAMABAD15286"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1129101780"
+    label "05ISLAMABAD15286"
+    place "ISLAMABAD"
   ]
   node
   [
     id 5
-    color "None"
-    label "05ISLAMABAD15316"
-    place "ISLAMABAD"
     degree 3
     constraint 0.333333
+    color "black"
+    timestamp "1129125600"
+    label "05ISLAMABAD15316"
+    place "ISLAMABAD"
   ]
   node
   [
     id 6
-    color "None"
-    label "05ISLAMABAD15463"
-    place "ISLAMABAD"
     degree 3
     constraint 0.558642
+    color "black"
+    timestamp "1129276440"
+    label "05ISLAMABAD15463"
+    place "ISLAMABAD"
   ]
   node
   [
     id 7
-    color "None"
-    label "05ISLAMABAD15513"
-    place "ISLAMABAD"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1129292940"
+    label "05ISLAMABAD15513"
+    place "ISLAMABAD"
   ]
   node
   [
     id 8
-    color "None"
-    label "05ISLAMABAD15518"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1129359540"
+    label "05ISLAMABAD15518"
+    place "ISLAMABAD"
   ]
   node
   [
     id 9
-    color "None"
-    label "05ISLAMABAD15736"
-    place "ISLAMABAD"
     degree 2
     constraint 0.888889
+    color "black"
+    timestamp "1129778940"
+    label "05ISLAMABAD15736"
+    place "ISLAMABAD"
   ]
   node
   [
     id 10
-    color "None"
-    label "05ISLAMABAD15769"
-    place "ISLAMABAD"
     degree 3
     constraint 0.558642
+    color "black"
+    timestamp "1129806420"
+    label "05ISLAMABAD15769"
+    place "ISLAMABAD"
   ]
   node
   [
     id 11
-    color "None"
-    label "05ISLAMABAD15856"
-    place "ISLAMABAD"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1129889580"
+    label "05ISLAMABAD15856"
+    place "ISLAMABAD"
   ]
   edge
   [
     source 3
     target 2
+    duration "86100"
     weight 1
   ]
   edge
   [
     source 8
     target 7
+    duration "66600"
     weight 1
   ]
   edge
   [
     source 3
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 6
+    duration "502500"
     weight 1
   ]
   edge
   [
     source 11
     target 10
+    duration "83160"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "125220"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "529980"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "167340"
     weight 1
   ]
   edge
   [
     source 1
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 5
+    duration "150840"
     weight 1
   ]
   edge
   [
     source 2
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "27480"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "49200"
     weight 1
   ]
   edge
   [
     source 4
     target 3
+    duration "25380"
     weight 1
   ]
   edge
   [
     source 3
     target 1
+    duration "211320"
     weight 1
   ]
 ]

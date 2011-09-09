@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:20:47 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:09:22 2011"
 Version 1
 graph
 [
@@ -6,196 +6,223 @@ graph
   node
   [
     id 0
-    color nan
-    label "08JAKARTA1007"
-    place "JAKARTA"
     degree 3
     constraint 1
+    color "black"
+    timestamp "1211425860"
+    label "08JAKARTA1007"
+    place "JAKARTA"
   ]
   node
   [
     id 1
-    color nan
-    label "08JAKARTA1008"
-    place "JAKARTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1211426760"
+    label "08JAKARTA1008"
+    place "JAKARTA"
   ]
   node
   [
     id 2
-    color nan
-    label "08JAKARTA1023"
-    place "JAKARTA"
     degree 5
     constraint 0.253611
+    color "black"
+    timestamp "1211528340"
+    label "08JAKARTA1023"
+    place "JAKARTA"
   ]
   node
   [
     id 3
-    color nan
-    label "08JAKARTA1033"
-    place "JAKARTA"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1211875560"
+    label "08JAKARTA1033"
+    place "JAKARTA"
   ]
   node
   [
     id 4
-    color nan
-    label "08JAKARTA1082"
-    place "JAKARTA"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1212479280"
+    label "08JAKARTA1082"
+    place "JAKARTA"
   ]
   node
   [
     id 5
-    color nan
-    label "08JAKARTA1307"
-    place "JAKARTA"
     degree 5
     constraint 0.333333
+    color "black"
+    timestamp "1215463980"
+    label "08JAKARTA1307"
+    place "JAKARTA"
   ]
   node
   [
     id 6
-    color nan
-    label "08JAKARTA871"
-    place "JAKARTA"
     degree 2
     constraint 0.835069
+    color "black"
+    timestamp "1209547020"
+    label "08JAKARTA871"
+    place "JAKARTA"
   ]
   node
   [
     id 7
-    color nan
-    label "08JAKARTA901"
-    place "JAKARTA"
     degree 3
     constraint 1
+    color "black"
+    timestamp "1210144140"
+    label "08JAKARTA901"
+    place "JAKARTA"
   ]
   node
   [
     id 8
-    color nan
-    label "08JAKARTA928"
-    place "JAKARTA"
     degree 3
     constraint 0.720679
+    color "black"
+    timestamp "1210569480"
+    label "08JAKARTA928"
+    place "JAKARTA"
   ]
   node
   [
     id 9
-    color nan
-    label "08JAKARTA943"
-    place "JAKARTA"
     degree 3
     constraint 0.608457
+    color "black"
+    timestamp "1210653060"
+    label "08JAKARTA943"
+    place "JAKARTA"
   ]
   node
   [
     id 10
-    color nan
-    label "08JAKARTA972"
-    place "JAKARTA"
     degree 4
     constraint 0.579236
+    color "black"
+    timestamp "1210834320"
+    label "08JAKARTA972"
+    place "JAKARTA"
   ]
   edge
   [
     source 0
     target 0
+    duration "3194040"
     weight 1
   ]
   edge
   [
     source 7
     target 7
+    duration "5785980"
     weight 1
   ]
   edge
   [
     source 10
     target 2
+    duration "694020"
     weight 1
   ]
   edge
   [
     source 2
     target 1
+    duration "101580"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "3588420"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "1384200"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "264840"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "875280"
     weight 1
   ]
   edge
   [
     source 10
     target 6
+    duration "1287300"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "83580"
     weight 1
   ]
   edge
   [
     source 5
     target 5
+    duration "1240920"
     weight 1
   ]
   edge
   [
     source 8
     target 6
+    duration "1022460"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "181260"
     weight 1
   ]
   edge
   [
     source 3
     target 2
+    duration "347220"
     weight 1
   ]
   edge
   [
     source 5
     target 4
+    duration "2984700"
     weight 1
   ]
   edge
   [
     source 5
     target 0
+    duration "4038120"
     weight 1
   ]
 ]

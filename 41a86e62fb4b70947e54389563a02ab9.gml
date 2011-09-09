@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:16:08 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:04:00 2011"
 Version 1
 graph
 [
@@ -6,166 +6,188 @@ graph
   node
   [
     id 0
-    color "red"
-    label "05JEDDAH140"
-    place "JEDDAH"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "05JEDDAH140"
+    place "JEDDAH"
   ]
   node
   [
     id 1
-    color "None"
-    label "06JEDDAH449"
-    place "JEDDAH"
     degree 5
     constraint 0.2
+    color "black"
+    timestamp "1152065040"
+    label "06JEDDAH449"
+    place "JEDDAH"
   ]
   node
   [
     id 2
-    color "None"
-    label "06JEDDAH450"
-    place "JEDDAH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1152065040"
+    label "06JEDDAH450"
+    place "JEDDAH"
   ]
   node
   [
     id 3
-    color "red"
-    label "06RIYADH4334"
-    place "RIYADH"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "06RIYADH4334"
+    place "RIYADH"
   ]
   node
   [
     id 4
-    color "None"
-    label "06RIYADH5042"
-    place "RIYADH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1151150580"
+    label "06RIYADH5042"
+    place "RIYADH"
   ]
   node
   [
     id 5
-    color "None"
-    label "06RIYADH5079"
-    place "RIYADH"
     degree 2
     constraint 0.5
+    color "black"
+    timestamp "1151202960"
+    label "06RIYADH5079"
+    place "RIYADH"
   ]
   node
   [
     id 6
-    color "None"
-    label "06RIYADH5322"
-    place "RIYADH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1152095280"
+    label "06RIYADH5322"
+    place "RIYADH"
   ]
   node
   [
     id 7
-    color "None"
-    label "06RIYADH5546"
-    place "RIYADH"
     degree 1
     constraint 1
+    color "black"
+    timestamp "1152679320"
+    label "06RIYADH5546"
+    place "RIYADH"
   ]
   node
   [
     id 8
-    color "None"
-    label "06RIYADH5547"
-    place "RIYADH"
     degree 2
     constraint 0.9225
+    color "black"
+    timestamp "1152685380"
+    label "06RIYADH5547"
+    place "RIYADH"
   ]
   node
   [
     id 9
-    color "None"
-    label "06RIYADH5548"
-    place "RIYADH"
     degree 5
     constraint 0.3
+    color "black"
+    timestamp "1152687900"
+    label "06RIYADH5548"
+    place "RIYADH"
   ]
   node
   [
     id 10
-    color "red"
-    label "06STATE114028"
-    place "STATE"
     degree 2
     constraint 0.9225
+    color "red"
+    timestamp ""
+    label "06STATE114028"
+    place "STATE"
   ]
   edge
   [
     source 10
     target 9
+    duration "0"
     weight 1
   ]
   edge
   [
     source 5
     target 1
+    duration "862080"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "30240"
     weight 1
   ]
   edge
   [
     source 9
     target 2
+    duration "622860"
     weight 1
   ]
   edge
   [
     source 9
     target 1
+    duration "622860"
     weight 1
   ]
   edge
   [
     source 10
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "614280"
     weight 1
   ]
   edge
   [
     source 5
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "2520"
     weight 1
   ]
   edge
   [
     source 4
     target 1
+    duration "914460"
     weight 1
   ]
   edge
   [
     source 9
     target 0
+    duration "0"
     weight 1
   ]
 ]

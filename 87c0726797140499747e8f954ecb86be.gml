@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 02:14:30 2011"
+Creator "igraph version 0.5.4 Fri Sep  9 20:01:59 2011"
 Version 1
 graph
 [
@@ -6,166 +6,188 @@ graph
   node
   [
     id 0
-    color "red"
-    label "03ZAGREB2174"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2174"
+    place "ZAGREB"
   ]
   node
   [
     id 1
-    color "red"
-    label "03ZAGREB2199"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2199"
+    place "ZAGREB"
   ]
   node
   [
     id 2
-    color "red"
-    label "03ZAGREB2237"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2237"
+    place "ZAGREB"
   ]
   node
   [
     id 3
-    color "red"
-    label "03ZAGREB2248"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2248"
+    place "ZAGREB"
   ]
   node
   [
     id 4
-    color "red"
-    label "03ZAGREB2283"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2283"
+    place "ZAGREB"
   ]
   node
   [
     id 5
-    color "red"
-    label "03ZAGREB2343"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2343"
+    place "ZAGREB"
   ]
   node
   [
     id 6
-    color "red"
-    label "03ZAGREB2362"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2362"
+    place "ZAGREB"
   ]
   node
   [
     id 7
-    color "None"
-    label "03ZAGREB2642"
-    place "ZAGREB"
     degree 9
     constraint 0.136145
+    color "black"
+    timestamp "1071672540"
+    label "03ZAGREB2642"
+    place "ZAGREB"
   ]
   node
   [
     id 8
-    color "red"
-    label "03ZAGREB2671"
-    place "ZAGREB"
     degree 1
     constraint 1
+    color "red"
+    timestamp ""
+    label "03ZAGREB2671"
+    place "ZAGREB"
   ]
   node
   [
     id 9
-    color "None"
-    label "04ZAGREB149"
-    place "ZAGREB"
     degree 3
     constraint 0.498285
+    color "black"
+    timestamp "1075128840"
+    label "04ZAGREB149"
+    place "ZAGREB"
   ]
   node
   [
     id 10
-    color "None"
-    label "04ZAGREB181"
-    place "ZAGREB"
     degree 2
     constraint 0.753086
+    color "black"
+    timestamp "1075454820"
+    label "04ZAGREB181"
+    place "ZAGREB"
   ]
   edge
   [
     source 7
     target 4
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 7
     target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 7
+    duration "3456300"
     weight 1
   ]
   edge
   [
     source 7
     target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 9
+    duration "325980"
     weight 1
   ]
   edge
   [
     source 7
     target 2
+    duration "0"
     weight 1
   ]
   edge
   [
     source 9
     target 8
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
+    duration "3782280"
     weight 1
   ]
 ]
