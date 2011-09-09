@@ -12,7 +12,7 @@ read and modify the filter in c2g.py, then create any.gml
 
 create html with inline svg
 
-    $ python gml2svg.py any.gml > any.html
+    $ python g2svg.py -g any.gml
 
 # note
 
@@ -20,6 +20,7 @@ create html with inline svg
 * c2g.py reads calccache and graphcache, so you dont have to calculate
   the graph weight again. Can take 10-15min if you remove the cache.
 * change svg.tmpl to customize the output
+* g2svg.py -h for more options
 
 # example filter for c2g.py
 
