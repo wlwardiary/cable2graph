@@ -4,6 +4,7 @@ import cPickle as pickle
 from sys import argv, exit
 from os import listdir, path
 import re
+from hashlib import md5
 
 p = re.compile(r'[A-Z]+')
 
@@ -87,20 +88,33 @@ exit()
 # exit()
 
 # filter by embassy
-# de = ['BERLIN','BONN','DUESSELDORF','DUSSELDORF','FRANKFURT','HAMBURG','LEIPZIG','MUNICH','STUTTGART']
-# sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-# print sg.summary()
-# sg.write_gml('de.gml')
-# exit()
+de = ['BERLIN']
+sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
+print sg.summary()
+sg.write_gml('de.gml')
+exit()
 
 # make clusters
-# i = 0
-# for c in g.clusters():
-#     if len(c) > 50:
-#        i = i + 1
-#        sg = g.subgraph(g.vs.select(c))
-#        print sg
-#        sg.write_gml('aa%s.gml' % i)
-#
-# exit()
+
+# this is faster then calling len(cluster) in the for loop
+cluster_sizes = g.clusters().sizes()
+
+# also adds the cluster index
+filterd_clusters = filter(
+        lambda c: c[1] > 10 and c[1] < 500, 
+        enumerate(cluster_sizes))
+
+print "matched %s clusters" % filterd_clusters
+for cluster_index, cluster_size in filterd_clusters:
+    # create the subgraph from the cluster index
+    sg = g.clusters().subgraph(cluster_index)
+
+    # create a uniq id for the graph
+    # concat all sorted(!) label names and hash it
+    idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
+    filename = md5(idconcat).hexdigest()
+
+    sg.write_gml('%s.gml' % filename)
+    print filename, cluster_size
+    del sg, filename, idconcat
 
