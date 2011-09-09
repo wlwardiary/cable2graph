@@ -10,6 +10,25 @@
         #vertices .red circle { 
           fill: rgba(255,0,0,0.5);   
         }
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
 
         #vertices text { 
           text-anchor: middle; 
@@ -63,20 +82,35 @@
 </head>
 <body>
 <svg width="{{ width }}" height="{{ height }}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
 <g transform="translate({{ xw }},{{ xh }}) scale(0.9)">
     <g id="edges">
     {% for e in edges %}
-        <line x1="{{e.x1}}" y1="{{e.y1}}" x2="{{e.x2}}" y2="{{e.y2}}" />
+        <line x1="{{e.x1}}" y1="{{e.y1}}" 
+              x2="{{e.x2}}" y2="{{e.y2}}" />
     {% endfor %}
     </g>
     <g id="vertices">
         {% for v in vertices %}
         <g transform="translate({{ v.x }} {{ v.y }})" 
-            class="{{ v.class }}" id="{{ v.label }}">
-            <circle cx="0" cy="0" r="10" />
+            class="{{ v.class }} degree{{ v.degree }}" id="{{ v.label }}">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             {% if v.class == 'red' %}
                 <text x="0" y="5">{{ v.label }}</text>
             {% else %}
+                {% if v.timestamp %} 
+                <text x="0" y="-16" class="date">
+                    {{ v.timestamp|formatts }}
+                </text>
+                {% endif %}
                 <text x="0" y="5" class="label">
                 {% if v.uri %} 
                     <a xlink:href="{{v.uri}}">{{ v.label }}</a>

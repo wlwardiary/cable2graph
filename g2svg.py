@@ -4,6 +4,7 @@ from sys import argv, exit
 from os import listdir, path
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
+from datetime import datetime
 
 parser = OptionParser()
 parser.add_option("-t", "--tmpl", dest="template",
@@ -42,8 +43,13 @@ if len(graph_files) < 1:
     print "No source .gml files"
     exit(1)
 
+def format_timestamp(ts, format = '%Y-%m-%d'):
+    d = datetime.fromtimestamp(float(ts))
+    return d.strftime(format)
+
 CURDIR = path.dirname(path.abspath(__file__))
 env = Environment(loader=FileSystemLoader(CURDIR))
+env.filters['formatts'] = format_timestamp
 svg_tmpl = env.get_template(options.template)
 
 # load optional ReVerb sentences result .tsv
@@ -136,6 +142,8 @@ for gml in graph_files:
 
     labels = g.vs.get_attribute_values('label')
     colors = g.vs.get_attribute_values('color')
+    degrees = g.vs.get_attribute_values('degree')
+    timestamps = g.vs.get_attribute_values('timestamp')
 
     if options.uri:
         uris = g.vs.get_attribute_values('uri')
@@ -184,6 +192,8 @@ for gml in graph_files:
             'x': '%.4f' % layout[vidx][0], 
             'y': '%.4f' % layout[vidx][1],
             'label': str(labels[vidx]),
+            'degree': str(int(degrees[vidx])),
+            'timestamp': str(timestamps[vidx]),
             'class': str(colors[vidx]) 
         }
         # optional
