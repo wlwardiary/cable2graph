@@ -1,27 +1,49 @@
 <html>
 <head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.5); 
+          stroke: rgba(255,255,255,0.3); 
           stroke-width: 1; 
-          fill: rgba(127,127,127,0.3); 
+          fill: rgba(63,63,63,0.25); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.3);
+          fill: rgba(63,0,0,0.25);
         }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
 
         #vertices text { 
           text-anchor: middle; 
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.3); 
+          fill: rgba(255,255,255,0.5); 
           text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1.0); 
+          fill: rgba(255,255,255,1); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
@@ -36,159 +58,212 @@
             visibility: visible;
         } 
 
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
         #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,127,127,1);
+            fill: rgba(255,63,63,1);
         }
         #vertices text.sentence tspan.rel { 
-            fill: rgba(127,127,255,1);
+            fill: rgba(63,63,255,1);
         }
         #vertices text.sentence tspan.a2 { 
-            fill: rgba(127,255,127,1);
+            fill: rgba(63,255,63,1);
         }
 
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(127,127,127,0.25); 
+            stroke: rgba(255,255,255,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(127,127,127,0.8); 
+            stroke: rgba(255,255,255,0.8); 
         }
 
     </style>
 </head>
 <body>
-<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(400.0000,300.0000) scale(0.9)">
+<svg width="1200" height="900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-390.0000" y1="-262.5975" x2="-318.3464" y2="-192.4645" />
+        <line x1="20.0672" y1="-290.0000" 
+              x2="-41.1612" y2="-216.9708" />
     
-        <line x1="-380.8397" y1="-61.2555" x2="-316.0902" y2="-176.7470" />
+        <line x1="-210.8356" y1="-178.3810" 
+              x2="-57.4112" y2="-207.4464" />
     
-        <line x1="7.4143" y1="186.7772" x2="99.0826" y2="258.4734" />
+        <line x1="-245.8348" y1="172.3203" 
+              x2="-380.0257" y2="162.6820" />
     
-        <line x1="231.0578" y1="-134.4704" x2="273.3070" y2="-242.5625" />
+        <line x1="250.3360" y1="118.7580" 
+              x2="350.4212" y2="184.1385" />
     
-        <line x1="390.0000" y1="66.4374" x2="359.0355" y2="-40.6174" />
+        <line x1="379.8723" y1="-92.0786" 
+              x2="342.2039" y2="1.3316" />
     
-        <line x1="51.4553" y1="-84.4512" x2="-43.3886" y2="50.1318" />
+        <line x1="71.1419" y1="177.5618" 
+              x2="-94.9503" y2="116.8785" />
     
-        <line x1="276.9474" y1="-251.8763" x2="352.7268" y2="-172.7598" />
+        <line x1="358.7932" y1="189.6075" 
+              x2="386.7419" y2="108.5067" />
     
-        <line x1="-49.1491" y1="58.3059" x2="3.3847" y2="177.6250" />
+        <line x1="-104.3431" y1="113.4468" 
+              x2="-236.6022" y2="168.4787" />
     
-        <line x1="231.0578" y1="-134.4704" x2="61.0886" y2="-87.1341" />
+        <line x1="250.3360" y1="118.7580" 
+              x2="80.6434" y2="174.4438" />
     
-        <line x1="106.9595" y1="264.6341" x2="-11.1625" y2="288.0551" />
+        <line x1="-390.0000" y1="161.9656" 
+              x2="-332.4690" y2="235.6589" />
     
-        <line x1="231.0578" y1="-134.4704" x2="349.9236" y2="-163.1895" />
+        <line x1="250.3360" y1="118.7580" 
+              x2="380.0981" y2="100.4495" />
     
-        <line x1="51.4553" y1="-84.4512" x2="19.3125" y2="-205.2146" />
+        <line x1="71.1419" y1="177.5618" 
+              x2="70.3502" y2="280.0003" />
     
-        <line x1="356.2570" y1="-50.2237" x2="359.3503" y2="-155.5424" />
+        <line x1="338.4639" y1="10.6060" 
+              x2="384.9655" y2="90.4121" />
     
-        <line x1="-224.8525" y1="102.0882" x2="-359.5348" y2="62.8322" />
+        <line x1="-208.9383" y1="6.0391" 
+              x2="-286.1913" y2="-82.9299" />
     
-        <line x1="7.4143" y1="186.7772" x2="-18.3200" y2="280.3579" />
+        <line x1="-245.8348" y1="172.3203" 
+              x2="-318.8266" y2="236.9142" />
     
-        <line x1="231.0578" y1="-134.4704" x2="347.9605" y2="-55.8064" />
+        <line x1="250.3360" y1="118.7580" 
+              x2="332.1470" y2="18.3582" />
     
-        <line x1="-380.8397" y1="-61.2555" x2="-370.0958" y2="50.0802" />
+        <line x1="-210.8356" y1="-178.3810" 
+              x2="-285.9302" y2="-97.7965" />
     
-        <line x1="-208.8399" y1="-290.0000" x2="-304.2034" y2="-192.6145" />
+        <line x1="108.1501" y1="-185.0166" 
+              x2="-37.7054" y2="-207.7666" />
     
-        <line x1="-49.1491" y1="58.3059" x2="-215.1492" y2="99.6703" />
+        <line x1="-104.3431" y1="113.4468" 
+              x2="-201.9617" y2="13.2033" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(390.0000 66.4374)" 
-            class="None" id="06JERUSALEM1383">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(379.8723 -92.0786)" 
+            class="black degree2" id="06JERUSALEM1383">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06JERUSALEM1383.html">06JERUSALEM1383</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">BANKS IN WEST BANK/GAZA TOLD THAT ISRAELI BANKS</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(-390.0000 -262.5975)" 
-            class="red" id="06STATE30949">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(20.0672 -290.0000)" 
+            class="red degree2" id="06STATE30949">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">06STATE30949</text>
             
         </g>
         
-        <g transform="translate(-208.8399 -290.0000)" 
-            class="None" id="06TELAVIV1066">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(108.1501 -185.0166)" 
+            class="black degree2" id="06TELAVIV1066">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-17
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/03/06TELAVIV1066.html">06TELAVIV1066</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GIDEON EZRA DISCUSSES AMONA COMMITTEE,</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">the GOI and EPA</tspan>
                         <tspan class="rel">are cooperating on</tspan>
                         <tspan class="a2">an air pollution study</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">Ezra</tspan>
                         <tspan class="rel">also asked for</tspan>
                         <tspan class="a2">the release of Jonathan Pollard</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">those</tspan>
                         <tspan class="rel">fought against</tspan>
                         <tspan class="a2">the security forces</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="100" class="sentence">
                         <tspan class="a1">policemen</tspan>
                         <tspan class="rel">are losing</tspan>
                         <tspan class="a2">their "pride</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="120" class="sentence">
                         <tspan class="a1">your concern</tspan>
                         <tspan class="rel">is the eastern border of</tspan>
                         <tspan class="a2">Ma'ale Adumim</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="140" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">will be good for</tspan>
                         <tspan class="a2">them</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="160" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">would be difficult to explain to</tspan>
                         <tspan class="a2">Israelis</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="180" class="sentence">
                         <tspan class="a1">whaling</tspan>
                         <tspan class="rel">is not a problem in</tspan>
                         <tspan class="a2">Israel</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="200" class="sentence">
                         <tspan class="a1">The Ambassador</tspan>
                         <tspan class="rel">delivered</tspan>
                         <tspan class="a2">demarche points</tspan>
@@ -199,63 +274,73 @@
             
         </g>
         
-        <g transform="translate(231.0578 -134.4704)" 
-            class="red" id="06TELAVIV1368">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(250.3360 118.7580)" 
+            class="red degree5" id="06TELAVIV1368">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">06TELAVIV1368</text>
             
         </g>
         
-        <g transform="translate(51.4553 -84.4512)" 
-            class="None" id="06TELAVIV1392">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(71.1419 177.5618)" 
+            class="black degree3" id="06TELAVIV1392">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-06
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1392.html">06TELAVIV1392</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA STILL HAS RESERVATIONS ON CUSTOMS PROTOCOL;</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">the MFA</tspan>
                         <tspan class="rel">has a handle on</tspan>
                         <tspan class="a2">the situation</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">a separate border service</tspan>
                         <tspan class="rel">would not be under</tspan>
                         <tspan class="a2">the PM.</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">USAID and MOD/IDF officials</tspan>
                         <tspan class="rel">are discussing</tspan>
                         <tspan class="a2">options</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="100" class="sentence">
                         <tspan class="a1">Most of this</tspan>
                         <tspan class="rel">will be used to purchase</tspan>
                         <tspan class="a2">scanning equipment</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="120" class="sentence">
                         <tspan class="a1">3.</tspan>
                         <tspan class="rel">was previously negotiated with</tspan>
                         <tspan class="a2">the PA</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="140" class="sentence">
                         <tspan class="a1">a document</tspan>
                         <tspan class="rel">so empowers</tspan>
                         <tspan class="a2">him</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="160" class="sentence">
                         <tspan class="a1">Prosor</tspan>
                         <tspan class="rel">promised to look into</tspan>
                         <tspan class="a2">the matter</tspan>
@@ -266,34 +351,50 @@
             
         </g>
         
-        <g transform="translate(-49.1491 58.3059)" 
-            class="None" id="06TELAVIV1395">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-104.3431 113.4468)" 
+            class="black degree3" id="06TELAVIV1395">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-07
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1395.html">06TELAVIV1395</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: GOI HEALTH MINISTRY OPPOSES COMPOSITION OF</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">the GOI</tspan>
                         <tspan class="rel">will approve changes to</tspan>
                         <tspan class="a2">MDA statutes</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">MOJ officials</tspan>
                         <tspan class="rel">support</tspan>
                         <tspan class="a2">these demands</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">PRCS</tspan>
                         <tspan class="rel">qualifies for</tspan>
                         <tspan class="a2">recognition</tspan>
+                    </text>
+                    
+                    <text x="-200" y="100" class="sentence">
+                        <tspan class="a1">PRCS</tspan>
+                        <tspan class="rel">demands seriously on</tspan>
+                        <tspan class="a2">this issue</tspan>
                     </text>
                     
                     </g>
@@ -301,61 +402,71 @@
             
         </g>
         
-        <g transform="translate(16.7404 -214.8781)" 
-            class="None" id="06TELAVIV1437">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(70.2729 290.0000)" 
+            class="black degree2" id="06TELAVIV1437">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-10
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1437.html">06TELAVIV1437</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI BRIEFING ON STATUS OF CROSSINGS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">Baruch Spiegel</tspan>
                         <tspan class="rel">briefed</tspan>
                         <tspan class="a2">the Ambassador</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">the PA customs officials</tspan>
                         <tspan class="rel">destroy</tspan>
                         <tspan class="a2">it</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">they</tspan>
                         <tspan class="rel">would pay taxes on</tspan>
                         <tspan class="a2">these items</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="100" class="sentence">
                         <tspan class="a1">MFA Director General Ron Prosor</tspan>
                         <tspan class="rel">has mentioned the idea to</tspan>
                         <tspan class="a2">FM Livni</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="120" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">can be handled on</tspan>
                         <tspan class="a2">the ground</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="140" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">would represent</tspan>
                         <tspan class="a2">a breakthrough</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="160" class="sentence">
                         <tspan class="a1">the U.S.</tspan>
                         <tspan class="rel">is willing to work on</tspan>
                         <tspan class="a2">financing of the project</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="180" class="sentence">
                         <tspan class="a1">The new government</tspan>
                         <tspan class="rel">will deal with</tspan>
                         <tspan class="a2">this issue</tspan>
@@ -366,40 +477,60 @@
             
         </g>
         
-        <g transform="translate(-224.8525 102.0882)" 
-            class="None" id="06TELAVIV1584">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-208.9383 6.0391)" 
+            class="black degree2" id="06TELAVIV1584">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-21
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1584.html">06TELAVIV1584</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: ISRAELI FM LIVNI PLEDGES ASSISTANCE ON</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(-380.8397 -61.2555)" 
-            class="red" id="06TELAVIV1585">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-210.8356 -178.3810)" 
+            class="red degree2" id="06TELAVIV1585">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">06TELAVIV1585</text>
             
         </g>
         
-        <g transform="translate(-369.1353 60.0339)" 
-            class="None" id="06TELAVIV1586">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-292.7477 -90.4806)" 
+            class="black degree2" id="06TELAVIV1586">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-21
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1586.html">06TELAVIV1586</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">FM LIVNI DISCUSSES RELATIONS WITH PALESTINIANS AND</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">The Ambassador</tspan>
                         <tspan class="rel">explained the importance of</tspan>
                         <tspan class="a2">the customs protocol</tspan>
@@ -410,43 +541,53 @@
             
         </g>
         
-        <g transform="translate(7.4143 186.7772)" 
-            class="None" id="06TELAVIV1619">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-245.8348 172.3203)" 
+            class="black degree3" id="06TELAVIV1619">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-25
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1619.html">06TELAVIV1619</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: FM LIVNI "CRACKED HEADS TOGETHER" TO</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">This autonomy</tspan>
                         <tspan class="rel">must be reflected in</tspan>
                         <tspan class="a2">the composition of the MDA executive committee</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">the IFRC-ICRC</tspan>
                         <tspan class="rel">does not specify exact terms for</tspan>
                         <tspan class="a2">such autonomy</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">a review procedure</tspan>
                         <tspan class="rel">does not undermine</tspan>
                         <tspan class="a2">MDA 's autonomy</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="100" class="sentence">
                         <tspan class="a1">MDA officials</tspan>
                         <tspan class="rel">must now consider</tspan>
                         <tspan class="a2">this compromise arrangement</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="120" class="sentence">
                         <tspan class="a1">The minister of health</tspan>
                         <tspan class="rel">has not yet approved</tspan>
                         <tspan class="a2">this amendment</tspan>
@@ -457,44 +598,64 @@
             
         </g>
         
-        <g transform="translate(-311.1999 -185.4697)" 
-            class="None" id="06TELAVIV1645">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-47.5859 -209.3078)" 
+            class="black degree3" id="06TELAVIV1645">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-26
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1645.html">06TELAVIV1645</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL LOOKING TO JOIN WHALING COMMISSION BY JUNE</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(106.9595 264.6341)" 
-            class="None" id="06TELAVIV1685">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-390.0000 161.9656)" 
+            class="black degree3" id="06TELAVIV1685">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-28
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1685.html">06TELAVIV1685</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON MDA EFFORTS TO CHANGE ITS STATUTES AND</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">a majority of whose members</tspan>
                         <tspan class="rel">will now be drawn from</tspan>
                         <tspan class="a2">MDA volunteers</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">No one</tspan>
                         <tspan class="rel">will vote for</tspan>
                         <tspan class="a2">us</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">the Red Cross Movement</tspan>
                         <tspan class="rel">agree to</tspan>
                         <tspan class="a2">the GOI proposal</tspan>
@@ -505,31 +666,41 @@
             
         </g>
         
-        <g transform="translate(276.9474 -251.8763)" 
-            class="None" id="06TELAVIV1978">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(358.7932 189.6075)" 
+            class="black degree2" id="06TELAVIV1978">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-19
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1978.html">06TELAVIV1978</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI PLAN FOR CONTINUED SHEKEL CHECK CLEARING</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">an Israeli</tspan>
                         <tspan class="rel">is a customer of</tspan>
                         <tspan class="a2">Mizrahi Bank</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">The package</tspan>
                         <tspan class="rel">will be finalized</tspan>
                         <tspan class="a2">the week of May 22</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">Zaken</tspan>
                         <tspan class="rel">will also contact</tspan>
                         <tspan class="a2">Treasury</tspan>
@@ -540,85 +711,95 @@
             
         </g>
         
-        <g transform="translate(356.2570 -50.2237)" 
-            class="None" id="06TELAVIV1982">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(338.4639 10.6060)" 
+            class="black degree3" id="06TELAVIV1982">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-19
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1982.html">06TELAVIV1982</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CENTRAL BANK GOVERNOR CONVEYS ISRAELI BANKING</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">This</tspan>
                         <tspan class="rel">will have a severe impact on</tspan>
                         <tspan class="a2">the Palestinian economy</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">the Palestinian economy</tspan>
                         <tspan class="rel">is highly dependent on</tspan>
                         <tspan class="a2">Israel</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">shekel-clearing</tspan>
                         <tspan class="rel">is very important for</tspan>
                         <tspan class="a2">the PA economy</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="100" class="sentence">
                         <tspan class="a1">Israeli banks</tspan>
                         <tspan class="rel">are leery of</tspan>
                         <tspan class="a2">any connection</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="120" class="sentence">
                         <tspan class="a1">Bank Hapoalim</tspan>
                         <tspan class="rel">is very nervous about</tspan>
                         <tspan class="a2">the issue</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="140" class="sentence">
                         <tspan class="a1">life</tspan>
                         <tspan class="rel">would become very difficult in</tspan>
                         <tspan class="a2">the PA.</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="160" class="sentence">
                         <tspan class="a1">The PA</tspan>
                         <tspan class="rel">is ruled by</tspan>
                         <tspan class="a2">a terrorist organization</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="180" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">has</tspan>
                         <tspan class="a2">no developed legal structure</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="200" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">might become</tspan>
                         <tspan class="a2">an effective organization</tspan>
                     </text>
                     
-                    <text x="-200" y="200" class="sentence">
+                    <text x="-200" y="220" class="sentence">
                         <tspan class="a1">Levey</tspan>
                         <tspan class="rel">downplayed</tspan>
                         <tspan class="a2">the idea</tspan>
                     </text>
                     
-                    <text x="-200" y="220" class="sentence">
+                    <text x="-200" y="240" class="sentence">
                         <tspan class="a1">Fischer</tspan>
                         <tspan class="rel">was easily put to</tspan>
                         <tspan class="a2">the test</tspan>
                     </text>
                     
-                    <text x="-200" y="240" class="sentence">
+                    <text x="-200" y="260" class="sentence">
                         <tspan class="a1">one</tspan>
                         <tspan class="rel">does business with</tspan>
                         <tspan class="a2">Hamas-related entities</tspan>
@@ -629,44 +810,64 @@
             
         </g>
         
-        <g transform="translate(-20.9715 290.0000)" 
-            class="None" id="06TELAVIV2025">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-326.3154 243.5413)" 
+            class="black degree3" id="06TELAVIV2025">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-24
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV2025.html">06TELAVIV2025</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: MFA FRUSTRATED WITH MDA REFORM EFFORT, BUT</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(359.6439 -165.5381)" 
-            class="None" id="06TELAVIV2345">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(390.0000 99.0524)" 
+            class="black degree3" id="06TELAVIV2345">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-06-15
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/06/06TELAVIV2345.html">06TELAVIV2345</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEADLINE FOR ENDING ISRAELI-PALESTINIAN BANKING</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="40" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">should come in</tspan>
                         <tspan class="a2">a few days</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="60" class="sentence">
                         <tspan class="a1">they</tspan>
                         <tspan class="rel">will likely agree to</tspan>
                         <tspan class="a2">the extension</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="80" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">will lose</tspan>
                         <tspan class="a2">a significant nearby market</tspan>
