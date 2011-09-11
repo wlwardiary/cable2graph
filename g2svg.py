@@ -26,6 +26,9 @@ parser.add_option("-d", "--dest", dest="destdir",
 parser.add_option("-r", "--reverb", dest="reverb",
     help="Load sentences from a ReVerb result .tsv FILE", metavar="FILE")
 
+parser.add_option("-s", "--subjects", dest="subjects",
+    help="Load map of label -> subject", metavar="FILE")
+
 parser.add_option("-u", "--uri", dest="uri",
     help="Load map of label -> uri from FILE", metavar="FILE")
 (options, args) = parser.parse_args()
@@ -90,6 +93,15 @@ if options.uri:
         k,v = l.strip().split()
         cmap[k.strip()] = v.strip()
 
+
+# load optional subject map
+if options.subjects:
+    smap = {}
+    f = open(options.subjects)
+    for l in f.readlines():
+        k,v = l.strip().split(' ',1)
+        smap[k.strip()] = v.strip()
+
 for gml in graph_files:
     destfile = "%s/%s.html" % (options.destdir, path.basename(gml))
     if path.exists(destfile):
@@ -110,7 +122,7 @@ for gml in graph_files:
 
         g.vs['sentence'] = sentence
 
-    # appy uris to graph
+    # apply uris to graph
     if options.uri:
         uri = []
         for l in g.vs.get_attribute_values('label'):
@@ -121,6 +133,17 @@ for gml in graph_files:
                 uri.append('')
 
         g.vs['uri'] = uri
+
+    # apply subjects to graph
+    if options.subjects:
+        subjects = []
+        for l in g.vs.get_attribute_values('label'):
+            if l in smap:
+                subjects.append(smap[l])
+            else:
+                subjects.append('(no subject)')
+
+        g.vs['subjects'] = subjects
 
     # create x,y positions
     layout = g.layout('fr')
@@ -134,11 +157,11 @@ for gml in graph_files:
     if height < 600: 
         height = 600
 
-    w = '%d' % width
-    h = '%d' % height
+    w = '%d' % (width+400)
+    h = '%d' % (height+300)
 
-    xw = '%.4f' % (width/2.0)
-    xh = '%.4f' % (height/2.0)
+    xw = '%.4f' % ((width+400)/2.0)
+    xh = '%.4f' % ((height+300)/2.0)
 
     labels = g.vs.get_attribute_values('label')
     colors = g.vs.get_attribute_values('color')
@@ -147,6 +170,8 @@ for gml in graph_files:
 
     if options.uri:
         uris = g.vs.get_attribute_values('uri')
+    if options.subjects:
+        subjects = g.vs.get_attribute_values('subjects')
     if options.reverb:
         sentences = g.vs.get_attribute_values('sentence')
 
@@ -199,6 +224,8 @@ for gml in graph_files:
         # optional
         if options.uri:
             tmpd.update({'uri': str(uris[vidx])})
+        if options.subjects:
+            tmpd.update({'subject': str(subjects[vidx])})
 
         if options.reverb:
             tmpd.update({'sentences': sentences[vidx]})
