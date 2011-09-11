@@ -123,7 +123,7 @@ for gml in graph_files:
         g.vs['uri'] = uri
 
     # create x,y positions
-    layout = g.layout('fr')
+    layout = g.layout_fruchterman_reingold(weights='weight', maxiter=3000)
 
     # calc graph size based on number of vertices
     width = len(g.vs) * 20
