@@ -1,27 +1,49 @@
 <html>
 <head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.5); 
+          stroke: rgba(255,255,255,0.3); 
           stroke-width: 1; 
-          fill: rgba(127,127,127,0.3); 
+          fill: rgba(63,63,63,0.25); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.3);
+          fill: rgba(63,0,0,0.25);
         }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
 
         #vertices text { 
           text-anchor: middle; 
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.3); 
+          fill: rgba(255,255,255,0.5); 
           text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1.0); 
+          fill: rgba(255,255,255,1); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
@@ -36,224 +58,325 @@
             visibility: visible;
         } 
 
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
         #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,127,127,1);
+            fill: rgba(255,63,63,1);
         }
         #vertices text.sentence tspan.rel { 
-            fill: rgba(127,127,255,1);
+            fill: rgba(63,63,255,1);
         }
         #vertices text.sentence tspan.a2 { 
-            fill: rgba(127,255,127,1);
+            fill: rgba(63,255,63,1);
         }
 
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(127,127,127,0.25); 
+            stroke: rgba(255,255,255,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(127,127,127,0.8); 
+            stroke: rgba(255,255,255,0.8); 
         }
 
     </style>
 </head>
 <body>
-<svg width="800" height="600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(400.0000,300.0000) scale(0.9)">
+<svg width="1200" height="900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-70.2938" y1="-21.2904" x2="-179.8954" y2="135.3973" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="23.6715" y2="-273.4986" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-247.2674" y2="89.2104" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="-63.0481" y2="-21.0818" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="29.3119" y2="71.7990" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="-24.1797" y2="-159.1268" />
     
-        <line x1="-87.2105" y1="19.0755" x2="164.2529" y2="-38.7893" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="172.4371" y2="-21.1440" />
     
-        <line x1="-236.0383" y1="-30.6619" x2="-96.6949" y2="15.9059" />
+        <line x1="-149.0457" y1="-157.7223" 
+              x2="97.4952" y2="-137.0926" />
     
-        <line x1="-296.1776" y1="23.5965" x2="-26.9960" y2="52.7069" />
+        <line x1="245.1905" y1="-179.7015" 
+              x2="8.0930" y2="-129.1142" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="223.2979" y2="15.4104" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="109.5327" y2="-277.3465" />
     
-        <line x1="114.7980" y1="172.5530" x2="14.4974" y2="16.1038" />
+        <line x1="-97.3449" y1="-290.0000" 
+              x2="43.8078" y2="-145.3211" />
     
-        <line x1="189.9544" y1="-290.0000" x2="380.0004" y2="-288.3924" />
+        <line x1="21.7042" y1="251.1369" 
+              x2="-121.1696" y2="287.5315" />
     
-        <line x1="154.2954" y1="-123.2216" x2="381.8092" y2="-282.5711" />
+        <line x1="-26.1560" y1="66.5112" 
+              x2="-126.6177" y2="280.9445" />
     
-        <line x1="-87.2105" y1="19.0755" x2="193.0876" y2="81.4108" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="-137.3536" y2="-70.9436" />
     
-        <line x1="-236.0383" y1="-30.6619" x2="-80.2779" y2="-21.8549" />
+        <line x1="-149.0457" y1="-157.7223" 
+              x2="84.1533" y2="-89.7953" />
     
-        <line x1="-87.2105" y1="19.0755" x2="106.8355" y2="166.5034" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="-89.3475" y2="-283.9966" />
     
-        <line x1="202.8491" y1="83.5817" x2="46.6134" y2="78.9250" />
+        <line x1="-147.0156" y1="-68.3658" 
+              x2="-40.3689" y2="-157.9139" />
     
-        <line x1="20.3545" y1="-125.7793" x2="9.9405" y2="-2.2793" />
+        <line x1="73.4789" y1="42.8447" 
+              x2="52.0348" y2="-128.2410" />
     
-        <line x1="114.7980" y1="172.5530" x2="43.0153" y2="86.3129" />
+        <line x1="-97.3449" y1="-290.0000" 
+              x2="-37.2848" y2="-173.2369" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-22.8387" y2="45.6251" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="7.5349" y2="-123.1599" />
     
-        <line x1="-72.4804" y1="163.2867" x2="4.4568" y2="16.5419" />
+        <line x1="185.8797" y1="-249.0142" 
+              x2="58.5216" y2="-144.5068" />
     
-        <line x1="-236.0383" y1="-30.6619" x2="27.3358" y2="74.9065" />
+        <line x1="-149.0457" y1="-157.7223" 
+              x2="-42.6945" y2="-163.7760" />
     
-        <line x1="-87.2105" y1="19.0755" x2="223.2210" y2="16.7264" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="110.1669" y2="-277.3141" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-72.3620" y2="153.2874" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="180.9367" y2="-240.3213" />
     
-        <line x1="114.7980" y1="172.5530" x2="121.8738" y2="253.6521" />
+        <line x1="-97.3449" y1="-290.0000" 
+              x2="-239.1014" y2="-284.5057" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-73.4966" y2="153.3385" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="180.1700" y2="-240.8045" />
     
-        <line x1="-87.2105" y1="19.0755" x2="14.3927" y2="-117.7507" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="75.3429" y2="33.0200" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-286.1800" y2="23.3802" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="235.6536" y2="-176.6934" />
     
-        <line x1="173.9982" y1="-41.0319" x2="-8.0963" y2="49.3366" />
+        <line x1="177.3526" y1="-12.4356" 
+              x2="6.7357" y2="-121.6368" />
     
-        <line x1="-296.1776" y1="23.5965" x2="26.7518" y2="76.9956" />
+        <line x1="245.1905" y1="-179.7015" 
+              x2="-22.7259" y2="-164.8961" />
     
-        <line x1="233.2207" y1="16.6508" x2="-7.1622" y2="52.3145" />
+        <line x1="110.3588" y1="-287.3123" 
+              x2="4.0425" y2="-135.2236" />
     
-        <line x1="154.2954" y1="-123.2216" x2="16.5273" y2="0.9891" />
+        <line x1="-26.1560" y1="66.5112" 
+              x2="47.2721" y2="-128.8030" />
     
-        <line x1="202.8491" y1="83.5817" x2="-7.1445" y2="55.1249" />
+        <line x1="-147.0156" y1="-68.3658" 
+              x2="-10.9599" y2="-123.2845" />
     
-        <line x1="-87.2105" y1="19.0755" x2="27.6059" y2="74.2930" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="-22.9055" y2="-162.3797" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="145.1894" y2="-119.0888" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="-20.0001" y2="58.6305" />
     
-        <line x1="-72.4804" y1="163.2867" x2="-21.5700" y2="62.7042" />
+        <line x1="185.8797" y1="-249.0142" 
+              x2="6.6962" y2="-132.4796" />
     
-        <line x1="122.7430" y1="263.6143" x2="-11.5094" y2="62.1042" />
+        <line x1="-249.0939" y1="-284.1184" 
+              x2="-10.1289" y2="-132.3878" />
     
-        <line x1="233.2207" y1="16.6508" x2="19.0923" y2="8.0850" />
+        <line x1="110.3588" y1="-287.3123" 
+              x2="54.5000" y2="-147.4501" />
     
-        <line x1="114.7980" y1="172.5530" x2="-9.6239" y2="60.4749" />
+        <line x1="-97.3449" y1="-290.0000" 
+              x2="-6.7489" y2="-135.6517" />
     
-        <line x1="-185.6272" y1="143.5915" x2="-25.8795" y2="58.4840" />
+        <line x1="20.1539" y1="-282.8594" 
+              x2="-0.2989" y2="-136.9308" />
     
-        <line x1="-72.4804" y1="163.2867" x2="28.7175" y2="84.7577" />
+        <line x1="185.8797" y1="-249.0142" 
+              x2="-23.3858" y2="-167.9563" />
     
-        <line x1="36.6179" y1="78.6270" x2="118.5223" y2="254.5487" />
+        <line x1="-32.7107" y1="-164.3443" 
+              x2="-240.3448" y2="-279.2756" />
     
-        <line x1="-255.7497" y1="94.5067" x2="-26.9115" y2="55.4639" />
+        <line x1="-72.2667" y1="-17.2065" 
+              x2="-7.0934" y2="-118.6151" />
     
-        <line x1="20.3545" y1="-125.7793" x2="-15.0144" y2="43.9922" />
+        <line x1="73.4789" y1="42.8447" 
+              x2="2.3596" y2="-117.8828" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-380.6415" y2="-91.4207" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="380.0524" y2="-108.2451" />
     
-        <line x1="-236.0383" y1="-30.6619" x2="-0.7796" y2="6.1398" />
+        <line x1="-149.0457" y1="-157.7223" 
+              x2="40.8386" y2="-139.1374" />
     
-        <line x1="233.2207" y1="16.6508" x2="46.1552" y2="75.6205" />
+        <line x1="110.3588" y1="-287.3123" 
+              x2="-25.1269" y2="-170.8625" />
     
-        <line x1="-185.6272" y1="143.5915" x2="0.9000" y2="13.4085" />
+        <line x1="20.1539" y1="-282.8594" 
+              x2="48.7196" y2="-147.9464" />
     
-        <line x1="-87.2105" y1="19.0755" x2="145.6797" y2="-118.1452" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="-20.6536" y2="58.1611" />
     
-        <line x1="-236.0383" y1="-30.6619" x2="-26.3843" y2="50.1841" />
+        <line x1="-149.0457" y1="-157.7223" 
+              x2="-11.4767" y2="-129.0668" />
     
-        <line x1="173.9982" y1="-41.0319" x2="44.1585" y2="72.0591" />
+        <line x1="177.3526" y1="-12.4356" 
+              x2="-24.6075" y2="-158.4844" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="13.8014" y2="-118.2257" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="75.0217" y2="32.9644" />
     
-        <line x1="-296.1776" y1="23.5965" x2="-0.8862" y2="8.2058" />
+        <line x1="245.1905" y1="-179.7015" 
+              x2="60.5703" y2="-140.2529" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="193.5135" y2="79.9974" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="-137.0454" y2="-69.1374" />
     
-        <line x1="-176.6710" y1="-100.3144" x2="0.4551" y2="2.6593" />
+        <line x1="254.2212" y1="-94.7123" 
+              x2="60.5705" y2="-136.0745" />
     
-        <line x1="-176.6710" y1="-100.3144" x2="-380.0032" y2="-95.1964" />
+        <line x1="254.2212" y1="-94.7123" 
+              x2="380.0422" y2="-106.3053" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-179.4264" y2="135.7462" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="25.2706" y2="-274.2677" />
     
-        <line x1="-185.6272" y1="143.5915" x2="27.0195" y2="81.4327" />
+        <line x1="20.1539" y1="-282.8594" 
+              x2="-28.6370" y2="-173.4770" />
     
-        <line x1="-255.7497" y1="94.5067" x2="-0.4022" y2="10.8003" />
+        <line x1="-72.2667" y1="-17.2065" 
+              x2="43.6594" y2="-131.1534" />
     
-        <line x1="154.2954" y1="-123.2216" x2="-10.0986" y2="46.5972" />
+        <line x1="-26.1560" y1="66.5112" 
+              x2="-2.9412" y2="-117.1066" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-170.6745" y2="-92.3118" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="244.5993" y2="-97.4361" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-380.2553" y2="-92.6998" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="380.0232" y2="-106.5417" />
     
-        <line x1="36.6179" y1="78.6270" x2="296.9244" y2="283.8096" />
+        <line x1="-32.7107" y1="-164.3443" 
+              x2="-380.2567" y2="-244.6542" />
     
-        <line x1="122.7430" y1="263.6143" x2="294.8813" y2="288.5655" />
+        <line x1="-249.0939" y1="-284.1184" 
+              x2="-380.3315" y2="-249.4590" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="164.0307" y2="-40.2264" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="169.8897" y2="-19.0918" />
     
-        <line x1="154.2954" y1="-123.2216" x2="187.8636" y2="-280.2210" />
+        <line x1="-26.1560" y1="66.5112" 
+              x2="19.1949" y2="241.4568" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-286.3694" y2="21.6474" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="236.6616" y2="-174.4805" />
     
-        <line x1="173.9982" y1="-41.0319" x2="18.6905" y2="4.8520" />
+        <line x1="177.3526" y1="-12.4356" 
+              x2="57.8855" y2="-131.1157" />
     
-        <line x1="-176.6710" y1="-100.3144" x2="-24.2483" y2="46.8365" />
+        <line x1="254.2212" y1="-94.7123" 
+              x2="8.2344" y2="-125.7748" />
     
-        <line x1="-255.7497" y1="94.5067" x2="26.6326" y2="79.1694" />
+        <line x1="-72.2667" y1="-17.2065" 
+              x2="-35.3068" y2="-154.6872" />
     
-        <line x1="-296.1776" y1="23.5965" x2="-383.7939" y2="-87.1036" />
+        <line x1="245.1905" y1="-179.7015" 
+              x2="381.0576" y2="-111.6986" />
     
-        <line x1="-70.2938" y1="-21.2904" x2="-0.2937" y2="4.2569" />
+        <line x1="93.7543" y1="-86.9987" 
+              x2="57.2217" y2="-130.5052" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-74.1590" y2="-12.0675" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="96.4348" y2="-96.6327" />
     
-        <line x1="20.3545" y1="-125.7793" x2="35.8247" y2="68.6585" />
+        <line x1="73.4789" y1="42.8447" 
+              x2="-28.1496" y2="-155.4451" />
     
-        <line x1="-87.2105" y1="19.0755" x2="-246.6222" y2="90.4216" />
+        <line x1="107.4604" y1="-136.2588" 
+              x2="-63.9298" y2="-22.7289" />
     
-        <line x1="202.8491" y1="83.5817" x2="18.4114" y2="11.3327" />
+        <line x1="-147.0156" y1="-68.3658" 
+              x2="41.3609" y2="-134.8358" />
     
-        <line x1="9.1003" y1="7.6853" x2="-12.1191" y2="45.0845" />
+        <line x1="50.7911" y1="-138.1633" 
+              x2="8.0953" y2="-129.1034" />
     
-        <line x1="20.3545" y1="-125.7793" x2="182.7703" y2="-283.0438" />
+        <line x1="73.4789" y1="42.8447" 
+              x2="24.1165" y2="241.4322" />
     
-        <line x1="154.2954" y1="-123.2216" x2="41.6544" y2="69.9880" />
+        <line x1="-26.1560" y1="66.5112" 
+              x2="-32.4268" y2="-154.3483" />
     
-        <line x1="-176.6710" y1="-100.3144" x2="28.9569" y2="72.1998" />
+        <line x1="254.2212" y1="-94.7123" 
+              x2="-22.9927" y2="-161.9860" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-236.0383 -30.6619)" 
-            class="None" id="09GENEVA1054">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-149.0457 -157.7223)" 
+            class="black degree5" id="09GENEVA1054">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-23
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09GENEVA1054.html">09GENEVA1054</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CONSULTATION ON PA ON BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The agenda</tspan>
                         <tspan class="rel">closes on</tspan>
                         <tspan class="a2">December 4</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">this issue</tspan>
                         <tspan class="rel">as is the right of</tspan>
                         <tspan class="a2">any WTO Member</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">they</tspan>
                         <tspan class="rel">would have the company of</tspan>
                         <tspan class="a2">the EC</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">will speak with</tspan>
                         <tspan class="a2">the Israeli 's tomorrow</tspan>
@@ -264,73 +387,83 @@
             
         </g>
         
-        <g transform="translate(-87.2105 19.0755)" 
-            class="None" id="09GENEVA783">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(107.4604 -136.2588)" 
+            class="black degree15" id="09GENEVA783">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-09-25
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/09/09GENEVA783.html">09GENEVA783</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA INTEREST IN WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">2. The Palestinian delegation</tspan>
                         <tspan class="rel">was led by</tspan>
                         <tspan class="a2">Ambassador Ibrahim Khraishi</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">included</tspan>
                         <tspan class="a2">Saeb Bamya</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Ambassador Khraishi</tspan>
                         <tspan class="rel">said the Palestinian Minister of</tspan>
                         <tspan class="a2">Economy</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">the Palestinian Minister of Economy</tspan>
                         <tspan class="rel">has the lead on</tspan>
                         <tspan class="a2">the WTO observership</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">met with</tspan>
                         <tspan class="a2">the WTO Director General</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">Palestine</tspan>
                         <tspan class="rel">is serious about</tspan>
                         <tspan class="a2">its state-building efforts</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">Palestine</tspan>
                         <tspan class="rel">does not want to have</tspan>
                         <tspan class="a2">another United Nations-style political "front</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">took months of</tspan>
                         <tspan class="a2">hard work</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
                         <tspan class="a1">we</tspan>
                         <tspan class="rel">speak of</tspan>
                         <tspan class="a2">legal issues</tspan>
                     </text>
                     
-                    <text x="-200" y="200" class="sentence">
+                    <text x="-200" y="230" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">asked for</tspan>
                         <tspan class="a2">U.S. support</tspan>
@@ -341,19 +474,29 @@
             
         </g>
         
-        <g transform="translate(114.7980 172.5530)" 
-            class="None" id="09GENEVA814">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-97.3449 -290.0000)" 
+            class="black degree5" id="09GENEVA814">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-01
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA814.html">09GENEVA814</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MORE ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">need to talk to</tspan>
                         <tspan class="a2">lots of other delegations</tspan>
@@ -364,19 +507,29 @@
             
         </g>
         
-        <g transform="translate(-176.6710 -100.3144)" 
-            class="None" id="09GENEVA832">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(254.2212 -94.7123)" 
+            class="black degree5" id="09GENEVA832">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-02
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA832.html">09GENEVA832</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GC CHAIR ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">might be done as</tspan>
                         <tspan class="a2">an agenda item</tspan>
@@ -387,19 +540,29 @@
             
         </g>
         
-        <g transform="translate(-70.2938 -21.2904)" 
-            class="None" id="09GENEVA839">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(93.7543 -86.9987)" 
+            class="black degree15" id="09GENEVA839">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-07
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA839.html">09GENEVA839</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Khraishi</tspan>
                         <tspan class="rel">was low key in</tspan>
                         <tspan class="a2">his response</tspan>
@@ -410,19 +573,29 @@
             
         </g>
         
-        <g transform="translate(-296.1776 23.5965)" 
-            class="None" id="09GENEVA845">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(245.1905 -179.7015)" 
+            class="black degree6" id="09GENEVA845">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-07
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA845.html">09GENEVA845</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI AND GC CHAIR ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Tomorrow 's meeting</tspan>
                         <tspan class="rel">is for</tspan>
                         <tspan class="a2">WTO Members</tspan>
@@ -433,31 +606,41 @@
             
         </g>
         
-        <g transform="translate(233.2207 16.6508)" 
-            class="None" id="09GENEVA862">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(110.3588 -287.3123)" 
+            class="black degree5" id="09GENEVA862">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-09
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA862.html">09GENEVA862</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CONSULTATION ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">had consulted with</tspan>
                         <tspan class="a2">a number of countries</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the issue</tspan>
                         <tspan class="rel">is ready for</tspan>
                         <tspan class="a2">conclusion</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">would place this issue on</tspan>
                         <tspan class="a2">the November GC agenda</tspan>
@@ -468,67 +651,77 @@
             
         </g>
         
-        <g transform="translate(-390.0000 -94.9448)" 
-            class="None" id="09GENEVA864">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(390.0000 -107.2228)" 
+            class="black degree5" id="09GENEVA864">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-09
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA864.html">09GENEVA864</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOLDSTONE REPORT BACKLASH - SPECIAL SESSION AND MORE</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Khraishi</tspan>
                         <tspan class="rel">said</tspan>
                         <tspan class="a2">those events</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">2.</tspan>
                         <tspan class="rel">operates by</tspan>
                         <tspan class="a2">regional groups</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Development Board Presidents</tspan>
                         <tspan class="rel">have passed on</tspan>
                         <tspan class="a2">the request</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">the Charge and EconCouns</tspan>
                         <tspan class="rel">met with</tspan>
                         <tspan class="a2">Ambassador Ibrahim Khraishi</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">Israel</tspan>
                         <tspan class="rel">will postpone action on</tspan>
                         <tspan class="a2">its Group B membership bid</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">The Swedish Presidency</tspan>
                         <tspan class="rel">is to discuss the matter with</tspan>
                         <tspan class="a2">the Palestinians</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">We</tspan>
                         <tspan class="rel">expressed our concern to</tspan>
                         <tspan class="a2">the Secretariat</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">the session</tspan>
                         <tspan class="rel">will take place despite</tspan>
                         <tspan class="a2">our objections</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
                         <tspan class="a1">any step</tspan>
                         <tspan class="rel">might be construed as</tspan>
                         <tspan class="a2">a concession</tspan>
@@ -539,25 +732,35 @@
             
         </g>
         
-        <g transform="translate(-72.4804 163.2867)" 
-            class="None" id="09GENEVA898">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(185.8797 -249.0142)" 
+            class="black degree5" id="09GENEVA898">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-21
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA898.html">09GENEVA898</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the issue</tspan>
                         <tspan class="rel">go away for</tspan>
                         <tspan class="a2">an extended time</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">go away for</tspan>
                         <tspan class="a2">the November 17 General Council meeting</tspan>
@@ -568,61 +771,71 @@
             
         </g>
         
-        <g transform="translate(173.9982 -41.0319)" 
-            class="None" id="09GENEVA902">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(177.3526 -12.4356)" 
+            class="black degree5" id="09GENEVA902">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-22
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA902.html">09GENEVA902</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MEETING ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">1.Matus</tspan>
                         <tspan class="rel">held an informal consultation with</tspan>
                         <tspan class="a2">a small group of countries</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">most delegations</tspan>
                         <tspan class="rel">expressed support for</tspan>
                         <tspan class="a2">the PA 's request</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">the meeting</tspan>
                         <tspan class="rel">was attended by</tspan>
                         <tspan class="a2">Brazil</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">the EC 's approach</tspan>
                         <tspan class="rel">would kill any chance of</tspan>
                         <tspan class="a2">it</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">urged</tspan>
                         <tspan class="a2">a cautious approach</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">are waiting for</tspan>
                         <tspan class="a2">legal analysis</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">The Chinese DCM</tspan>
                         <tspan class="rel">expressed support for</tspan>
                         <tspan class="a2">the PA</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">we</tspan>
                         <tspan class="rel">should aim to secure</tspan>
                         <tspan class="a2">MC observer status</tspan>
@@ -633,32 +846,52 @@
             
         </g>
         
-        <g transform="translate(-255.7497 94.5067)" 
-            class="None" id="09GENEVA913">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-72.2667 -17.2065)" 
+            class="black degree5" id="09GENEVA913">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-27
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09GENEVA913.html">09GENEVA913</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELIS ON PA BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(20.3545 -125.7793)" 
-            class="None" id="09GENEVA950">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(73.4789 42.8447)" 
+            class="black degree6" id="09GENEVA950">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09GENEVA950.html">09GENEVA950</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CONVERSATION WITH PA ON BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">see this as</tspan>
                         <tspan class="a2">a second class status</tspan>
@@ -669,19 +902,29 @@
             
         </g>
         
-        <g transform="translate(154.2954 -123.2216)" 
-            class="None" id="09GENEVA961">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-26.1560 66.5112)" 
+            class="black degree8" id="09GENEVA961">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09GENEVA961.html">09GENEVA961</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CONVERSATIONS ON PA ON BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">they</tspan>
                         <tspan class="rel">want for</tspan>
                         <tspan class="a2">the MC.</tspan>
@@ -692,37 +935,47 @@
             
         </g>
         
-        <g transform="translate(-185.6272 143.5915)" 
-            class="None" id="09GENEVA967">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(20.1539 -282.8594)" 
+            class="black degree5" id="09GENEVA967">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-05
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09GENEVA967.html">09GENEVA967</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL ON PA ON BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">1.Charge</tspan>
                         <tspan class="rel">was just approached by</tspan>
                         <tspan class="a2">the Israelis</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">2. Matus</tspan>
                         <tspan class="rel">advised</tspan>
                         <tspan class="a2">the Israeli 's of the nomenclature issue</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">have not had</tspan>
                         <tspan class="a2">an immediate allergic reaction</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">That</tspan>
                         <tspan class="rel">raises delicate issues for</tspan>
                         <tspan class="a2">Israel</tspan>
@@ -733,32 +986,52 @@
             
         </g>
         
-        <g transform="translate(202.8491 83.5817)" 
-            class="None" id="09GENEVA972">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-147.0156 -68.3658)" 
+            class="black degree5" id="09GENEVA972">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-05
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09GENEVA972.html">09GENEVA972</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL ON PA ON BID FOR WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(36.6179 78.6270)" 
-            class="None" id="09JERUSALEM1607">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-32.7107 -164.3443)" 
+            class="black degree16" id="09JERUSALEM1607">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-09-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/09/09JERUSALEM1607.html">09JERUSALEM1607</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA SEEKS US SUPPORT FOR WTO OBSERVERSHIP</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">This</tspan>
                         <tspan class="rel">is</tspan>
                         <tspan class="a2">an action request</tspan>
@@ -769,49 +1042,59 @@
             
         </g>
         
-        <g transform="translate(122.7430 263.6143)" 
-            class="None" id="09JERUSALEM1764">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-249.0939 -284.1184)" 
+            class="black degree4" id="09JERUSALEM1764">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-02
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09JERUSALEM1764.html">09JERUSALEM1764</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA PRESSES ON WTO OBSERVER STATUS, BUT OPENS THE DOOR FOR SHORT-TERM COMPROMISE</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">must vote no on</tspan>
                         <tspan class="a2">a PA request</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the PA</tspan>
                         <tspan class="rel">has a legitimate case for</tspan>
                         <tspan class="a2">full observer status</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">PA officials</tspan>
                         <tspan class="rel">provided a written response to</tspan>
                         <tspan class="a2">USG concerns</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">territories</tspan>
                         <tspan class="rel">are not</tspan>
                         <tspan class="a2">states</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">The PA</tspan>
                         <tspan class="rel">is</tspan>
                         <tspan class="a2">no different</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">stressed the importance of</tspan>
                         <tspan class="a2">the "promise of accession</tspan>
@@ -822,40 +1105,60 @@
             
         </g>
         
-        <g transform="translate(189.9544 -290.0000)" 
-            class="None" id="09JERUSALEM1993">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(21.7042 251.1369)" 
+            class="black degree3" id="09JERUSALEM1993">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09JERUSALEM1993.html">09JERUSALEM1993</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA FORMALLY REQUESTS OBSERVER STATUS AT WTO MINISTERIAL, BILATERAL CONSULTATIONS WITH USTR</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(9.1003 7.6853)" 
-            class="red" id="09SECSTATE99831">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(50.7911 -138.1633)" 
+            class="red degree14" id="09SECSTATE99831">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">09SECSTATE99831</text>
             
         </g>
         
-        <g transform="translate(304.7779 290.0000)" 
-            class="None" id="09STATE99831">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-390.0000 -246.9056)" 
+            class="black degree2" id="09STATE99831">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-09-25
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/09/09STATE99831.html">09STATE99831</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA INTEREST IN WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">we</tspan>
                         <tspan class="rel">look forward to working with</tspan>
                         <tspan class="a2">the PA</tspan>
@@ -866,25 +1169,35 @@
             
         </g>
         
-        <g transform="translate(-17.0539 53.7820)" 
-            class="None" id="09TELAVIV2166">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-1.6868 -127.0276)" 
+            class="black degree15" id="09TELAVIV2166">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-01
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09TELAVIV2166.html">09TELAVIV2166</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI HARDENS LINE ON PA WTO OBSERVER STATUS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Ravia</tspan>
                         <tspan class="rel">said</tspan>
                         <tspan class="a2">the current GOI position</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">The USG</tspan>
                         <tspan class="rel">is now reviewing the technical question of whether</tspan>
                         <tspan class="a2">the PA</tspan>
@@ -895,79 +1208,95 @@
             
         </g>
         
-        <g transform="translate(390.0000 -288.3079)" 
-            class="None" id="10JERUSALEM357">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-130.8602 290.0000)" 
+            class="black degree3" id="10JERUSALEM357">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2010-02-26
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2010/02/10JERUSALEM357.html">10JERUSALEM357</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN AUTHORITY REQUEST FOR WTO OBSERVER STATUS:  USTR MEETINGS WITH PALESTINIAN OFFICIALS AND PRIVATE SECTOR</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Post</tspan>
                         <tspan class="rel">discussed potential areas for</tspan>
                         <tspan class="a2">assistance</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">implementation of reforms</tspan>
                         <tspan class="rel">conformed to</tspan>
                         <tspan class="a2">international standards</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">we</tspan>
                         <tspan class="rel">are ready for</tspan>
                         <tspan class="a2">accession</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">we</tspan>
                         <tspan class="rel">could wait on</tspan>
                         <tspan class="a2">observer status</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">called the road to</tspan>
                         <tspan class="a2">WTO observership</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">The PA</tspan>
                         <tspan class="rel">was prepared to discuss</tspan>
                         <tspan class="a2">this issue</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">you</tspan>
                         <tspan class="rel">are pushing on</tspan>
                         <tspan class="a2">an open door</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">a functioning economy</tspan>
                         <tspan class="rel">does not depend on</tspan>
                         <tspan class="a2">donor assistance</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">The team</tspan>
+                        <tspan class="rel">included</tspan>
+                        <tspan class="a2">Hatem Yousef</tspan>
+                    </text>
+                    
+                    <text x="-200" y="230" class="sentence">
                         <tspan class="a1">a copy of which</tspan>
                         <tspan class="rel">is available on</tspan>
                         <tspan class="a2">the unclassified website www.intelink .gov/communities/state/palecon</tspan>
                     </text>
                     
-                    <text x="-200" y="200" class="sentence">
+                    <text x="-200" y="250" class="sentence">
                         <tspan class="a1">a WTO resource center</tspan>
                         <tspan class="rel">acts as</tspan>
                         <tspan class="a2">a technical advisory team</tspan>
                     </text>
                     
-                    <text x="-200" y="220" class="sentence">
+                    <text x="-200" y="270" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">has</tspan>
                         <tspan class="a2">significant trade regime functionality</tspan>

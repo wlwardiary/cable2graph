@@ -1,0 +1,2067 @@
+<html>
+<head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.3); 
+          stroke-width: 1; 
+          fill: rgba(63,63,63,0.25); 
+        }
+        #vertices .red circle { 
+          fill: rgba(63,0,0,0.25);
+        }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.5); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,63,63,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(63,63,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(63,255,63,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.25); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="1240" height="1140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(620.0000,570.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-96.8089" y1="-104.9934" 
+              x2="-172.8368" y2="-156.9296" />
+    
+        <line x1="410.0000" y1="-64.8340" 
+              x2="337.3312" y2="-56.0916" />
+    
+        <line x1="77.7021" y1="-64.5441" 
+              x2="0.7860" y2="-30.7718" />
+    
+        <line x1="150.8963" y1="-261.7432" 
+              x2="168.7386" y2="-340.2953" />
+    
+        <line x1="-130.7884" y1="369.5864" 
+              x2="-60.4973" y2="364.3852" />
+    
+        <line x1="-10.6387" y1="-330.7133" 
+              x2="-68.6403" y2="-378.9172" />
+    
+        <line x1="-182.8949" y1="-259.9543" 
+              x2="-181.2789" y2="-172.5686" />
+    
+        <line x1="118.5012" y1="-18.5855" 
+              x2="84.3409" y2="-57.0657" />
+    
+        <line x1="118.5012" y1="-18.5855" 
+              x2="186.8141" y2="20.7742" />
+    
+        <line x1="88.3060" y1="410.0000" 
+              x2="158.9951" y2="408.9150" />
+    
+        <line x1="118.5012" y1="-18.5855" 
+              x2="120.0837" y2="32.3151" />
+    
+        <line x1="141.7681" y1="-153.5209" 
+              x2="120.2004" y2="-28.4401" />
+    
+        <line x1="-410.0000" y1="23.1965" 
+              x2="-337.6729" y2="4.6956" />
+    
+        <line x1="-254.0522" y1="-84.8518" 
+              x2="-321.5123" y2="-5.4052" />
+    
+        <line x1="-354.0048" y1="-199.0665" 
+              x2="-323.0061" y2="-267.9522" />
+    
+        <line x1="-262.5661" y1="51.3884" 
+              x2="-319.9911" y2="8.2258" />
+    
+        <line x1="120.3945" y1="42.3102" 
+              x2="185.7131" y2="27.9182" />
+    
+        <line x1="-331.1351" y1="129.8453" 
+              x2="-350.6064" y2="203.5696" />
+    
+        <line x1="235.4549" y1="192.2436" 
+              x2="175.1564" y2="115.3031" />
+    
+        <line x1="266.2676" y1="-136.7269" 
+              x2="347.5986" y2="-111.6359" />
+    
+        <line x1="118.5012" y1="-18.5855" 
+              x2="165.2690" y2="98.1495" />
+    
+        <line x1="370.3337" y1="2.8979" 
+              x2="358.3272" y2="-98.7570" />
+    
+        <line x1="-254.0522" y1="-84.8518" 
+              x2="-187.9383" y2="-155.2795" />
+    
+        <line x1="-364.6788" y1="-102.3306" 
+              x2="-355.1015" y2="-189.1269" />
+    
+        <line x1="70.9031" y1="-256.1396" 
+              x2="-3.2594" y2="-323.9646" />
+    
+        <line x1="-50.5245" y1="363.6473" 
+              x2="29.4487" y2="348.2842" />
+    
+        <line x1="170.9536" y1="-350.0469" 
+              x2="125.9485" y2="-402.4158" />
+    
+        <line x1="266.2676" y1="-136.7269" 
+              x2="321.4177" y2="-62.9083" />
+    
+        <line x1="266.2676" y1="-136.7269" 
+              x2="151.6783" y2="-152.1841" />
+    
+        <line x1="127.6858" y1="300.6804" 
+              x2="48.1520" y2="341.8047" />
+    
+        <line x1="141.7681" y1="-153.5209" 
+              x2="76.5855" y2="-247.9110" />
+    
+        <line x1="141.7681" y1="-153.5209" 
+              x2="83.5453" y2="-72.6593" />
+    
+        <line x1="-8.3703" y1="-26.7515" 
+              x2="-58.9217" y2="67.8244" />
+    
+        <line x1="218.9725" y1="274.1260" 
+              x2="233.4816" y2="202.0470" />
+    
+        <line x1="-353.1599" y1="213.2380" 
+              x2="-300.3247" y2="212.6048" />
+    
+        <line x1="120.3945" y1="42.3102" 
+              x2="163.0075" y2="99.4176" />
+    
+        <line x1="-8.3703" y1="-26.7515" 
+              x2="-89.3192" y2="-98.3673" />
+    
+        <line x1="-130.7884" y1="369.5864" 
+              x2="-193.1777" y2="360.5163" />
+    
+        <line x1="370.3337" y1="2.8979" 
+              x2="333.3658" y2="-46.8696" />
+    
+        <line x1="-331.1351" y1="129.8453" 
+              x2="-294.7533" y2="203.5186" />
+    
+        <line x1="88.3060" y1="410.0000" 
+              x2="45.3750" y2="354.3172" />
+    
+        <line x1="118.5012" y1="-18.5855" 
+              x2="1.6091" y2="-26.1092" />
+    
+        <line x1="141.7681" y1="-153.5209" 
+              x2="150.0558" y2="-251.7786" />
+    
+        <line x1="150.8963" y1="-261.7432" 
+              x2="80.8787" y2="-256.8384" />
+    
+        <line x1="120.3945" y1="42.3102" 
+              x2="81.4123" y2="-55.2579" />
+    
+        <line x1="120.3945" y1="42.3102" 
+              x2="110.3945" y2="42.3102" />
+    
+        <line x1="410.0000" y1="-64.8340" 
+              x2="364.8496" y2="-102.3020" />
+    
+        <line x1="-364.6788" y1="-102.3306" 
+              x2="-331.2966" y2="-7.2182" />
+    
+        <line x1="-63.6356" y1="76.6436" 
+              x2="-92.7683" y2="153.6406" />
+    
+        <line x1="127.6858" y1="300.6804" 
+              x2="209.3705" y2="276.9191" />
+    
+        <line x1="-331.1351" y1="129.8453" 
+              x2="-328.2316" y2="12.2144" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(410.0000 -64.8340)" 
+            class="black degree3" id="05MUSCAT1304">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-08-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05MUSCAT1304.html">05MUSCAT1304</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SULTAN SENDS ENVOY TO NEW IRANIAN PRESIDENT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">also met with</tspan>
+                        <tspan class="a2">former presidents Khatami and Rafsanjani</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(370.3337 2.8979)" 
+            class="black degree2" id="05MUSCAT1876">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-12-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05MUSCAT1876.html">05MUSCAT1876</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMANI INSIGHTS INTO IRAN AND IRAQ FOR NEA DAS GRAY</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Sayyid Badr</tspan>
+                        <tspan class="rel">expressed optimism over</tspan>
+                        <tspan class="a2">Iraq</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">DAS Gray</tspan>
+                        <tspan class="rel">was accompanied by</tspan>
+                        <tspan class="a2">the Ambassador and P/E Chief</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Rawas</tspan>
+                        <tspan class="rel">later did</tspan>
+                        <tspan class="a2">Sayyid Badr</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Conservatives</tspan>
+                        <tspan class="rel">remain dogmatically tied to</tspan>
+                        <tspan class="a2">the concept of "velayat e-faqih</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">The journalistic redlines</tspan>
+                        <tspan class="rel">has led to</tspan>
+                        <tspan class="a2">an "acceptable " but not quite "vigorous " amount of public debate</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">They</tspan>
+                        <tspan class="rel">are deeply resentful of</tspan>
+                        <tspan class="a2">the Basij militia</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">never perceived an Iranian threat to</tspan>
+                        <tspan class="a2">Oman</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">three key factors</tspan>
+                        <tspan class="rel">would influence</tspan>
+                        <tspan class="a2">any rapprochement</tspan>
+                    </text>
+                    
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">they</tspan>
+                        <tspan class="rel">is bent on</tspan>
+                        <tspan class="a2">humiliating Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="230" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">must keep pressure on</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="250" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">poses a strategic danger to</tspan>
+                        <tspan class="a2">the region</tspan>
+                    </text>
+                    
+                    <text x="-200" y="270" class="sentence">
+                        <tspan class="a1">Iraqi FM Zebari</tspan>
+                        <tspan class="rel">had recently visited</tspan>
+                        <tspan class="a2">Muscat</tspan>
+                    </text>
+                    
+                    <text x="-200" y="290" class="sentence">
+                        <tspan class="a1">DAS Gray</tspan>
+                        <tspan class="rel">cleared</tspan>
+                        <tspan class="a2">this cable</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(266.2676 -136.7269)" 
+            class="black degree5" id="05MUSCAT2">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2005-01-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05MUSCAT2.html">05MUSCAT2</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN FM ON IRAN, IRAQ, GCC AND PALESTINE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Such</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">Riyadh 's tactic</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Saud</tspan>
+                        <tspan class="rel">does n't work in</tspan>
+                        <tspan class="a2">Saudi Arabia</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(88.3060 410.0000)" 
+            class="black degree2" id="06ANKARA1570">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1570.html">06ANKARA1570</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PM ERDOGAN TO ATTEND ARAB LEAGUE SUMMIT, DELIVER RELIEF SUPPLIES TO DARFUR</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Erdogan</tspan>
+                        <tspan class="rel">will address</tspan>
+                        <tspan class="a2">the summit</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">had been in</tspan>
+                        <tspan class="a2">Sudan</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(168.9939 408.7616)" 
+            class="black degree2" id="06ANKARA1957">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ANKARA1957.html">06ANKARA1957</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY/SUDAN: PM ERDOGAN TO ARAB LEAGUE SUMMIT AND TURKISH AID TO DARFUR</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">This MOU</tspan>
+                        <tspan class="rel">will be reviewed shortly</tspan>
+                        <tspan class="a2">the Turkish Grand National Assembly</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Onal</tspan>
+                        <tspan class="rel">acknowledged</tspan>
+                        <tspan class="a2">the AL 's limitations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Economic issues</tspan>
+                        <tspan class="rel">were reportedly at</tspan>
+                        <tspan class="a2">the forefront</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Turkish Airlines</tspan>
+                        <tspan class="rel">inaugurated flights to</tspan>
+                        <tspan class="a2">Addis Ababa</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">The GOT</tspan>
+                        <tspan class="rel">is looking to open</tspan>
+                        <tspan class="a2">TIKA offices</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">see the bilateral portion of</tspan>
+                        <tspan class="a2">this visit</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-262.5661 51.3884)" 
+            class="black degree2" id="06BEIJING9758">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BEIJING9758.html">06BEIJING9758</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PRC/IRAQ: RESPONSE TO SEEKING PUBLIC SUPPORT FOR IRAQI GOVERNMENT FORMATION COMPLETION</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the statement</tspan>
+                        <tspan class="rel">will be posted on</tspan>
+                        <tspan class="a2">the MFA 's website</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Foreign Minister Li Zhaoxing</tspan>
+                        <tspan class="rel">will send congratulatory letters to</tspan>
+                        <tspan class="a2">their respective Iraqi counterparts</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">The next regularly scheduled press conference</tspan>
+                        <tspan class="rel">is on</tspan>
+                        <tspan class="a2">May 23</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-410.0000 23.1965)" 
+            class="black degree2" id="06CAIRO3029">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06CAIRO3029.html">06CAIRO3029</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAQ:  EGYPT AND ARAB LEAGUE WELCOME FORMATION OF NEW GOVERNMENT</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(-331.1351 129.8453)" 
+            class="black degree3" id="06KUWAIT1818">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-21
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KUWAIT1818.html">06KUWAIT1818</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SUPPORT FOR IRAQI GOVERNMENT FORMATION:  KUWAIT ONE OF THE FIRST COUNTRIES TO CONGRATULATE NEW GOVERNMENT</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(-353.1599 213.2380)" 
+            class="black degree2" id="06KUWAIT1862">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-23
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KUWAIT1862.html">06KUWAIT1862</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">KUWAITI FM CONGRATULATES NEW IRAQI GOVERNMENT; INVITES IRAQI COUNTERPART TO KUWAIT</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(-290.3255 212.4849)" 
+            class="black degree3" id="06KUWAIT2563">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-06-27
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06KUWAIT2563.html">06KUWAIT2563</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">KUWAIT DEMARCHE DELIVERED:  APPROACHING GULF ARAB STATES ON INVITATION TO IRAQI PM MALIKI</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Al-Jarallah</tspan>
+                        <tspan class="rel">questioned whether</tspan>
+                        <tspan class="a2">PM Maliki</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">they</tspan>
+                        <tspan class="rel">were always welcome in</tspan>
+                        <tspan class="a2">Kuwait</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(357.1542 -108.6880)" 
+            class="black degree3" id="06MUSCAT126">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06MUSCAT126.html">06MUSCAT126</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN FM IN IRAN: CARROTS, NOT STICKS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Omani FM Yusuf bin Alawi</tspan>
+                        <tspan class="rel">began an official visit to</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">bilateral trade relations</tspan>
+                        <tspan class="rel">raise the specter of</tspan>
+                        <tspan class="a2">ILSA concerns</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">also spoke of</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Bin Alawi 's visit</tspan>
+                        <tspan class="rel">comes in</tspan>
+                        <tspan class="a2">the wake of several months of active Omani-Iranian diplomacy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">has the right to</tspan>
+                        <tspan class="a2">avail of peaceful nuclear energy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">FM Bin Alawi</tspan>
+                        <tspan class="rel">made similar comments on</tspan>
+                        <tspan class="a2">January 25</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">the visit</tspan>
+                        <tspan class="rel">included a call on</tspan>
+                        <tspan class="a2">the Sultan 's special Iran envoy Abdulaziz</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">confrontation</tspan>
+                        <tspan class="rel">is not in</tspan>
+                        <tspan class="a2">the interest of any of the parties</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(327.4028 -54.8972)" 
+            class="black degree3" id="06MUSCAT130">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-01-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06MUSCAT130.html">06MUSCAT130</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN FM IN IRAN: CARROTS, NOT STICKS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Omani FM Yusuf bin Alawi</tspan>
+                        <tspan class="rel">began an official visit to</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">also spoke of</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">has the right to</tspan>
+                        <tspan class="a2">avail of peaceful nuclear energy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">FM Bin Alawi</tspan>
+                        <tspan class="rel">made similar comments on</tspan>
+                        <tspan class="a2">January 25</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">the visit</tspan>
+                        <tspan class="rel">included a call on</tspan>
+                        <tspan class="a2">the Sultan 's special Iran envoy Abdulaziz</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">confrontation</tspan>
+                        <tspan class="rel">is not in</tspan>
+                        <tspan class="a2">the interest of any of the parties</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">will pursue</tspan>
+                        <tspan class="a2">the earliest readout</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(141.7681 -153.5209)" 
+            class="black degree5" id="06MUSCAT134">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-01
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06MUSCAT134.html">06MUSCAT134</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">YBA POSES QUESTION RE IRAN</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(150.8963 -261.7432)" 
+            class="black degree3" id="06MUSCAT162">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-08
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06MUSCAT162.html">06MUSCAT162</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA ARAB CHIEF ON IRAN, PALESTINE, SYRIA</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">convenes in</tspan>
+                        <tspan class="a2">March</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">was unsound to rely exclusively on</tspan>
+                        <tspan class="a2">a single supply source</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is assigned</tspan>
+                        <tspan class="a2">a specific quota</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">It</tspan>
+                        <tspan class="rel">certainly would not bring</tspan>
+                        <tspan class="a2">Hariri</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">his generously frank views</tspan>
+                        <tspan class="rel">are broadly consistent with</tspan>
+                        <tspan class="a2">MFA and even public sentiments</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">still shares the same goals as</tspan>
+                        <tspan class="a2">the USG.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">enjoyed visiting both of</tspan>
+                        <tspan class="a2">his sons</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">they</tspan>
+                        <tspan class="rel">attended college in</tspan>
+                        <tspan class="a2">the U.S.</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(70.9031 -256.1396)" 
+            class="black degree3" id="06MUSCAT231">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06MUSCAT231.html">06MUSCAT231</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN FM RETURNING TO IRAN</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Ambassador al-Raisi</tspan>
+                        <tspan class="rel">did not provide details on</tspan>
+                        <tspan class="a2">the purpose of the trip</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(170.9536 -350.0469)" 
+            class="black degree2" id="06MUSCAT386">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MUSCAT386.html">06MUSCAT386</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">INSTRUCTIONS ON HAMAS MEETINGS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">The Deputy Chief of the MFA Undersecretary 's office</tspan>
+                        <tspan class="rel">confirmed on</tspan>
+                        <tspan class="a2">March 15</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is not a major financial donor to</tspan>
+                        <tspan class="a2">the Palestinian Authority</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(127.6858 300.6804)" 
+            class="black degree2" id="06MUSCAT443">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MUSCAT443.html">06MUSCAT443</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN DEPUTY PM PREPARED TO RECEIVE HAMAS OFFICIAL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is in</tspan>
+                        <tspan class="a2">the Palestinians ' best interest</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">2. The Minister</tspan>
+                        <tspan class="rel">did not know the exact date of</tspan>
+                        <tspan class="a2">Meshaal 's visit</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Meshaal</tspan>
+                        <tspan class="rel">will be received by</tspan>
+                        <tspan class="a2">Sayyid Fahd bin Mahmud Al Said</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(218.9725 274.1260)" 
+            class="black degree2" id="06MUSCAT527">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT527.html">06MUSCAT527</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">HAMAS OFFICIAL VISITS OMAN</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the FM</tspan>
+                        <tspan class="rel">made no mention of</tspan>
+                        <tspan class="a2">the impending arrival of Meshaal</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Meshaal</tspan>
+                        <tspan class="rel">was received by</tspan>
+                        <tspan class="a2">Deputy Prime Minister Sayyid Fahd bin Mahmud al-Said</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(235.4549 192.2436)" 
+            class="black degree2" id="06MUSCAT554">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-05
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT554.html">06MUSCAT554</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">BIN ALAWI CONVOKES U.S., EU AMBASSADORS TO REVIEW MESHAAL VISIT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">have never before met with</tspan>
+                        <tspan class="a2">Hamas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is still assessing</tspan>
+                        <tspan class="a2">Hamas</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">The meeting</tspan>
+                        <tspan class="rel">lasted approximately</tspan>
+                        <tspan class="a2">one hour</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">The PLO</tspan>
+                        <tspan class="rel">had embraced</tspan>
+                        <tspan class="a2">the Oslo process</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">the PLO</tspan>
+                        <tspan class="rel">voiced no objections to</tspan>
+                        <tspan class="a2">this</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">too long and Hamas</tspan>
+                        <tspan class="rel">must join</tspan>
+                        <tspan class="a2">the PLO</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">Meshaal</tspan>
+                        <tspan class="rel">reportedly raised the question of</tspan>
+                        <tspan class="a2">U.S. assistance</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">All of Oman ,s assistance</tspan>
+                        <tspan class="rel">is channeled through</tspan>
+                        <tspan class="a2">the Arab League</tspan>
+                    </text>
+                    
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">all previous commitments</tspan>
+                        <tspan class="rel">made to</tspan>
+                        <tspan class="a2">Israel</tspan>
+                    </text>
+                    
+                    <text x="-200" y="230" class="sentence">
+                        <tspan class="a1">the PLO</tspan>
+                        <tspan class="rel">is the proper mechanism for</tspan>
+                        <tspan class="a2">Hamas ' acceptance of the Quartet 's conditions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="250" class="sentence">
+                        <tspan class="a1">a good working relationship</tspan>
+                        <tspan class="rel">probably predated</tspan>
+                        <tspan class="a2">the Palestinian elections</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(118.5012 -18.5855)" 
+            class="black degree6" id="06MUSCAT590">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT590.html">06MUSCAT590</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAN: FM SHARES NUCLEAR CONCERNS, QUESTIONS U.S. APPROACH</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the tack</tspan>
+                        <tspan class="rel">has led to</tspan>
+                        <tspan class="a2">other recent conflicts</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">The FM</tspan>
+                        <tspan class="rel">was joined by</tspan>
+                        <tspan class="a2">Ambassador Mohammed Taher Aideed</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">shared details of</tspan>
+                        <tspan class="a2">the Sultan</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">have enough crises in</tspan>
+                        <tspan class="a2">the region</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">we</tspan>
+                        <tspan class="rel">still need to find</tspan>
+                        <tspan class="a2">a compromise solution</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">All U.S. wars</tspan>
+                        <tspan class="rel">start out</tspan>
+                        <tspan class="a2">that way</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">will proceed full-speed with</tspan>
+                        <tspan class="a2">its weapons program</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">International pressure</tspan>
+                        <tspan class="rel">has demonstrably slowed</tspan>
+                        <tspan class="a2">Iran 's program</tspan>
+                    </text>
+                    
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">All of these things</tspan>
+                        <tspan class="rel">would send a serious signal to</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(120.3945 42.3102)" 
+            class="black degree7" id="06MUSCAT603">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT603.html">06MUSCAT603</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA REAFFIRMS PSI INTEREST, TAKING IRAN SERIOUSLY</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">likewise underscored</tspan>
+                        <tspan class="a2">the Sultanate 's clear understanding of Iran 's nuclear program</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is making thorough analysis of</tspan>
+                        <tspan class="a2">all aspects of the Iran crisis</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">the Sultanate</tspan>
+                        <tspan class="rel">has not yet reached firm conclusions on</tspan>
+                        <tspan class="a2">Tehran 's ultimate intentions</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(168.9880 107.4323)" 
+            class="black degree4" id="06MUSCAT618">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT618.html">06MUSCAT618</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SCENESETTER FOR VISIT OF FM YUSUF BIN ALAWI</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Bin Alawi</tspan>
+                        <tspan class="rel">should hear this in</tspan>
+                        <tspan class="a2">Washington</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is not</tspan>
+                        <tspan class="a2">a major financial donor</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">the Omani government</tspan>
+                        <tspan class="rel">continues to take</tspan>
+                        <tspan class="a2">a moderate , responsible line</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">a long line of others</tspan>
+                        <tspan class="rel">are impatient with</tspan>
+                        <tspan class="a2">Iraqi sectarianism</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">democratic liberties</tspan>
+                        <tspan class="rel">can lead to</tspan>
+                        <tspan class="a2">conservative or Islamist retrenchment</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">FM Bin Alawi</tspan>
+                        <tspan class="rel">is not deeply engaged in</tspan>
+                        <tspan class="a2">our mil-to-mil relations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">has not yet signed on to</tspan>
+                        <tspan class="a2">NATO 's Istanbul Cooperative Initiative</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">is a quiet supporter of</tspan>
+                        <tspan class="a2">the Proliferation Security Initiative</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(195.4788 25.7665)" 
+            class="black degree2" id="06MUSCAT622">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT622.html">06MUSCAT622</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">FM UPDATE ON IRAN, PSI ATTENDANCE, AND U.S. VISIT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the Minister</tspan>
+                        <tspan class="rel">is now also requesting a meeting with</tspan>
+                        <tspan class="a2">Secretary of Defense Rumsfeld</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">will never advocate for</tspan>
+                        <tspan class="a2">armed conflict</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">would have some sort of</tspan>
+                        <tspan class="a2">observer</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Oman</tspan>
+                        <tspan class="rel">will consider issuing</tspan>
+                        <tspan class="a2">a public statement</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(77.7021 -64.5441)" 
+            class="black degree4" id="06MUSCAT649">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT649.html">06MUSCAT649</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAN: OMANI PUBLIC STATEMENTS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">a neighboring country</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">should find a peaceful solution to</tspan>
+                        <tspan class="a2">the crisis</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Sayyid Badr 's press statement</tspan>
+                        <tspan class="rel">was</tspan>
+                        <tspan class="a2">a rare event</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-8.3703 -26.7515)" 
+            class="black degree6" id="06MUSCAT671">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MUSCAT671.html">06MUSCAT671</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA UNDER SECRETARY ON IRAN, HAMAS, IRAQ</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">hailed progress in</tspan>
+                        <tspan class="a2">the formation of a new Iraqi government</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">assured</tspan>
+                        <tspan class="a2">the Under Secretary</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">has been able to maintain</tspan>
+                        <tspan class="a2">a useful dialog</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">"any government</tspan>
+                        <tspan class="rel">is better than</tspan>
+                        <tspan class="a2">none</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">It</tspan>
+                        <tspan class="rel">has been</tspan>
+                        <tspan class="a2">a "painful " waiting period</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-63.6356 76.6436)" 
+            class="black degree4" id="06MUSCAT706">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT706.html">06MUSCAT706</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SAYYID BADR PREVIEWS GCC HEADS OF STATE CONSULTATIVE MEETING</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">listen to</tspan>
+                        <tspan class="a2">a lot of their 'crap '</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">does not anticipate</tspan>
+                        <tspan class="a2">public " signals</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-96.8089 -104.9934)" 
+            class="black degree2" id="06MUSCAT734">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT734.html">06MUSCAT734</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMANI FM ON IRAN DISCUSSIONS, GCC SUMMIT, FTA, AND ISRAEL BOYCOTT</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(-182.8949 -259.9543)" 
+            class="black degree2" id="06MUSCAT792">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-17
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT792.html">06MUSCAT792</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MILITARY LAUNCHES CAMPAIGN AGAINST SOMALI INFILTRATORS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Oman 's top service chiefs</tspan>
+                        <tspan class="rel">have taken personal charge of</tspan>
+                        <tspan class="a2">the operations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Sources</tspan>
+                        <tspan class="rel">have reported an increase in</tspan>
+                        <tspan class="a2">the number of recently reported thefts</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Sources</tspan>
+                        <tspan class="rel">have varied widely as to</tspan>
+                        <tspan class="a2">the exact number of African infiltrators</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">The Royal Army of Oman Border Security Command</tspan>
+                        <tspan class="rel">is leading</tspan>
+                        <tspan class="a2">the current military operations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">The Royal Air Force of Oman</tspan>
+                        <tspan class="rel">is providing</tspan>
+                        <tspan class="a2">air support</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">the RAO and RAFO commanders</tspan>
+                        <tspan class="rel">are personally on</tspan>
+                        <tspan class="a2">the scene directing actions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">The Sultan 's Special Forces</tspan>
+                        <tspan class="rel">is also conducting</tspan>
+                        <tspan class="a2">operations</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">RAFO Commander Air Vice Marshall Yahya al-Jumaah</tspan>
+                        <tspan class="rel">has described</tspan>
+                        <tspan class="a2">the mission objective</tspan>
+                    </text>
+                    
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">the situation</tspan>
+                        <tspan class="rel">calls for</tspan>
+                        <tspan class="a2">it</tspan>
+                    </text>
+                    
+                    <text x="-200" y="230" class="sentence">
+                        <tspan class="a1">Omani military officials</tspan>
+                        <tspan class="rel">have not been reluctant to take</tspan>
+                        <tspan class="a2">a hard approach</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-254.0522 -84.8518)" 
+            class="black degree2" id="06MUSCAT809">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-23
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT809.html">06MUSCAT809</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN WELCOMES NEW IRAQI GOVERNMENT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the Sultanate</tspan>
+                        <tspan class="rel">welcomes the formation of</tspan>
+                        <tspan class="a2">the Iraqi government</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-181.0940 -162.5703)" 
+            class="black degree3" id="06MUSCAT841">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-29
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT841.html">06MUSCAT841</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMANI FOREIGN MINISTER:  TIME NOT RIGHT FOR GCC MISSION TO TEHRAN</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">GCC foreign ministers</tspan>
+                        <tspan class="rel">meet early next month for</tspan>
+                        <tspan class="a2">their regular session</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">the Iranians</tspan>
+                        <tspan class="rel">would likely attempt to address</tspan>
+                        <tspan class="a2">individual GCC state issues</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">'s a concern of</tspan>
+                        <tspan class="a2">the entire international community</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">the Ambassador 's recounting of reports</tspan>
+                        <tspan class="rel">have come to</tspan>
+                        <tspan class="a2">the Embassy 's attention</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">He</tspan>
+                        <tspan class="rel">disclaimed</tspan>
+                        <tspan class="a2">reports of armed resistance</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">'re working on</tspan>
+                        <tspan class="a2">that</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-130.7884 369.5864)" 
+            class="black degree2" id="06RABAT331">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06RABAT331.html">06RABAT331</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MOROCCO ON PALESTINIAN ASSISTANCE, MEETINGS WITH HAMAS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">some day</tspan>
+                        <tspan class="rel">come to</tspan>
+                        <tspan class="a2">power</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">The Palestinians</tspan>
+                        <tspan class="rel">have now made</tspan>
+                        <tspan class="a2">their choice</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-50.5245 363.6473)" 
+            class="black degree2" id="06RABAT519">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-03-23
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06RABAT519.html">06RABAT519</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ARAB LEAGUE SUMMIT: MOROCCAN RESPONSE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">a compromise</tspan>
+                        <tspan class="rel">serves the interests of</tspan>
+                        <tspan class="a2">the Palestinian people</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-364.6788 -102.3306)" 
+            class="black degree2" id="06ROME1552">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-22
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ROME1552.html">06ROME1552</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ITALIANS WELCOME FORMATION OF IRAQI GOVERNMENT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">The GOI</tspan>
+                        <tspan class="rel">welcomed the formation of</tspan>
+                        <tspan class="a2">the new Iraqi Government</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Prime Minister Prodi</tspan>
+                        <tspan class="rel">was critical of</tspan>
+                        <tspan class="a2">the war</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">These statements</tspan>
+                        <tspan class="rel">were widely covered in</tspan>
+                        <tspan class="a2">the Italian press</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">the Italian MFA</tspan>
+                        <tspan class="rel">expressed satisfaction with</tspan>
+                        <tspan class="a2">the formation of the new Iraqi Government</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">Italy</tspan>
+                        <tspan class="rel">will support Iraq in</tspan>
+                        <tspan class="a2">this</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-354.0048 -199.0665)" 
+            class="black degree2" id="06ROME1726">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-06-09
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ROME1726.html">06ROME1726</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ITALIAN VIEWS ON JUNE GAERC</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the GOI</tspan>
+                        <tspan class="rel">may ultimately take</tspan>
+                        <tspan class="a2">a different stance</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(119.4308 -410.0000)" 
+            class="red degree5" id="06SECSTATE37552">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06SECSTATE37552</text>
+            
+        </g>
+        
+        <g transform="translate(-10.6387 -330.7133)" 
+            class="red degree20" id="06STATE19516">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE19516</text>
+            
+        </g>
+        
+        <g transform="translate(-203.0737 359.0776)" 
+            class="red degree17" id="06STATE21256">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE21256</text>
+            
+        </g>
+        
+        <g transform="translate(39.2692 346.3977)" 
+            class="red degree13" id="06STATE45370">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE45370</text>
+            
+        </g>
+        
+        <g transform="translate(-96.3071 162.9935)" 
+            class="red degree2" id="06STATE68574">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE68574</text>
+            
+        </g>
+        
+        <g transform="translate(-327.9849 2.2175)" 
+            class="red degree30" id="06STATE81632">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE81632</text>
+            
+        </g>
+        
+        <g transform="translate(-318.9024 -277.0714)" 
+            class="red degree8" id="06STATE91167">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE91167</text>
+            
+        </g>
+        
+        <g transform="translate(-76.3311 -385.3088)" 
+            class="black degree2" id="06TELAVIV683">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-15
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06TELAVIV683.html">06TELAVIV683</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI MOD DG TOREN FORCEFULLY OBJECTS TO U.S. POSITION ON ELTA RADARS ON RUSSIAN MIGS DESTINED FOR INDIA</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">is a friend of</tspan>
+                        <tspan class="a2">Israel</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">We</tspan>
+                        <tspan class="rel">must be able to continue to work with</tspan>
+                        <tspan class="a2">Russian platforms</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Russia</tspan>
+                        <tspan class="rel">is not</tspan>
+                        <tspan class="a2">the enemy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">other U.S. allies</tspan>
+                        <tspan class="rel">are selling sensitive equipment to</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">Israeli officials</tspan>
+                        <tspan class="rel">also relayed this to</tspan>
+                        <tspan class="a2">Boeing</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">Israel defense contractors</tspan>
+                        <tspan class="rel">are currently obtaining all the necessary licenses from</tspan>
+                        <tspan class="a2">the Israeli Government</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>
