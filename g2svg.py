@@ -99,7 +99,7 @@ if options.subjects:
     smap = {}
     f = open(options.subjects)
     for l in f.readlines():
-        k,v = l.strip().split(' ',1)
+        k,v = l.split(' ',1)
         smap[k.strip()] = v.strip()
 
 for gml in graph_files:
