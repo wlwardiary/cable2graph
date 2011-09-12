@@ -7,9 +7,15 @@ if len(sys.argv) == 3:
     limit = int(sys.argv[2])
 
 source = sys.argv[1]
+
+# remove page break from body to avoid problems 
+# when subject is spaning multiple pages
+
+re_page = re.compile(r'^(\ {1,30}(CONFIDENTIAL|UNCLASSIFIED)\s+){1,3}^PAGE\s+[0-9]{2}.*\n', re.M)
+
 re_ref = re.compile(r'^REF: (.*)$', re.M)
 re_cable_id = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
-
+re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
 
 csv.field_size_limit(131072*2)
 
@@ -27,6 +33,7 @@ ref_cnt = {}
 diff_cnt = {}
 edges = []
 dates = {}
+subjects = {}
 
 for row in content:
     count = count + 1
@@ -50,6 +57,19 @@ for row in content:
                 ref_cnt[r] = ref_cnt[r] + 1
             else:
                 ref_cnt[r] = 1
+
+
+    # remove page break
+    body_filterd, page_match_count = re.subn(re_page,'',body)
+
+    subject_match = re.search(re_subject, body_filterd)
+    if subject_match is not None:
+        subject = subject_match.group(2).replace('\n','').strip()
+    else:
+        print cable
+        subject = ''
+
+    subjects.update({cable:subject})
 
 
 #    re_referrer = re.search(re_ref, body)
@@ -85,6 +105,7 @@ rcf = file('ref_cnt.list','w')
 dcf = file('diff_cnt.list','w')
 ef = file('edges.list','w')
 datef = file('dates.list','w')
+subf = file('subjects.list','w')
 
 for i in sorted(cable_ids):
     cf.write('%s\n' % i)
@@ -114,3 +135,6 @@ for k,v in sorted(dates.iteritems()):
     datef.write('%s %s\n' % (k,v))
 datef.close()
 
+for k,v in sorted(subjects.iteritems()):
+    subf.write('%s %s\n' % (k,v))
+subf.close()
