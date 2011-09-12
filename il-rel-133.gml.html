@@ -1,0 +1,546 @@
+<html>
+<head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.3); 
+          stroke-width: 1; 
+          fill: rgba(63,63,63,0.25); 
+        }
+        #vertices .red circle { 
+          fill: rgba(63,0,0,0.25);
+        }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.5); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,63,63,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(63,63,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(63,255,63,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.25); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="1200" height="900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(600.0000,450.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="102.0777" y1="-51.7028" 
+              x2="-21.2189" y2="-157.4148" />
+    
+        <line x1="-155.4885" y1="-290.0000" 
+              x2="-35.8984" y2="-170.9779" />
+    
+        <line x1="-158.3692" y1="-141.5636" 
+              x2="-38.6649" y2="-162.2230" />
+    
+        <line x1="-155.4885" y1="-290.0000" 
+              x2="-158.1752" y2="-151.5617" />
+    
+        <line x1="102.0777" y1="-51.7028" 
+              x2="380.0625" y2="-20.4724" />
+    
+        <line x1="-122.7139" y1="138.1006" 
+              x2="-191.4857" y2="-5.6761" />
+    
+        <line x1="-390.0000" y1="-179.6238" 
+              x2="-164.5365" y2="-285.7415" />
+    
+        <line x1="-390.0000" y1="-179.6238" 
+              x2="-203.4229" y2="-21.1704" />
+    
+        <line x1="69.7142" y1="97.8466" 
+              x2="99.9626" y2="-41.9291" />
+    
+        <line x1="-122.7139" y1="138.1006" 
+              x2="-232.7122" y2="282.0542" />
+    
+        <line x1="-195.8007" y1="-14.6972" 
+              x2="-161.1991" y2="-131.9723" />
+    
+        <line x1="127.5045" y1="-274.5889" 
+              x2="-145.5033" y2="-289.4562" />
+    
+        <line x1="127.5045" y1="-274.5889" 
+              x2="103.2111" y2="-61.6384" />
+    
+        <line x1="69.7142" y1="97.8466" 
+              x2="-186.5937" y2="-10.7946" />
+    
+        <line x1="-122.7139" y1="138.1006" 
+              x2="94.4370" y2="-45.2514" />
+    
+        <line x1="-195.8007" y1="-14.6972" 
+              x2="-36.2671" y2="-157.2604" />
+    
+        <line x1="102.0777" y1="-51.7028" 
+              x2="-148.9161" y2="-138.3020" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(127.5045 -274.5889)" 
+            class="black degree2" id="09BEIJING794">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-26
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09BEIJING794.html">09BEIJING794</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SOUTH KOREA INVITES CHINA TO GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM WORKSHOP IN SEOUL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">PolOff</tspan>
+                        <tspan class="rel">joined</tspan>
+                        <tspan class="a2">Lee Heon</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">an active member of the GICNT</tspan>
+                        <tspan class="rel">had attended</tspan>
+                        <tspan class="a2">all previous GICNT plenary meetings</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(69.7142 97.8466)" 
+            class="black degree2" id="09BERLIN317">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09BERLIN317.html">09BERLIN317</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GERMAY NOT CERTAIN OF PARTICIPATION IN SEOUL GLOBAL INITIATIVE CONFERENCE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Econoff</tspan>
+                        <tspan class="rel">met with</tspan>
+                        <tspan class="a2">German MFA Assistant Desk Officer Marc Hinrichsen</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Germany 's participation</tspan>
+                        <tspan class="rel">would be at</tspan>
+                        <tspan class="a2">the expert level</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">2.</tspan>
+                        <tspan class="rel">discussed in</tspan>
+                        <tspan class="a2">Ref A</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">would also participate in</tspan>
+                        <tspan class="a2">the EPG.</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-122.7139 138.1006)" 
+            class="black degree3" id="09KYIV498">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KYIV498.html">09KYIV498</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UKRAINE TO PARTICIPATE IN GICNT IN SEOUL DESPITE LIMITED FUNDS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Korean Embassy</tspan>
+                        <tspan class="rel">Not Instructed</tspan>
+                        <tspan class="a2">----------------------------- 4</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 -179.6238)" 
+            class="black degree2" id="09NEWDELHI508">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-18
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09NEWDELHI508.html">09NEWDELHI508</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">INDIA PLANNING TO ATTEND GLOBAL INITIATIVE WORKSHOP AND EXERCISE PLANNING GROUP, AWAITING CONFIRMATION</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">The Embassy of the Russian Federation</tspan>
+                        <tspan class="rel">has not actively joined in</tspan>
+                        <tspan class="a2">the demarche</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(102.0777 -51.7028)" 
+            class="red degree16" id="09STATE18574">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09STATE18574</text>
+            
+        </g>
+        
+        <g transform="translate(-155.4885 -290.0000)" 
+            class="red degree20" id="09STATE21325">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09STATE21325</text>
+            
+        </g>
+        
+        <g transform="translate(-195.8007 -14.6972)" 
+            class="red degree22" id="09STATE22354">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">09STATE22354</text>
+            
+        </g>
+        
+        <g transform="translate(-238.7838 290.0000)" 
+            class="black degree17" id="09STATE9099">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-02-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE9099.html">09STATE9099</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM, MODEL GUIDELINES DOCUMENT (MGD) FOLLOW-ON WORKSHOP, APRIL 20-22, 2009</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">This</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">an action request</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">The MGD</tspan>
+                        <tspan class="rel">will explain the basic elements of</tspan>
+                        <tspan class="a2">a nuclear detection architecture</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">DNDO</tspan>
+                        <tspan class="rel">led to</tspan>
+                        <tspan class="a2">the development of the MGD ,s first draft</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">the USG</tspan>
+                        <tspan class="rel">will conduct a follow-on workshop for</tspan>
+                        <tspan class="a2">policy</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">Logistical information</tspan>
+                        <tspan class="rel">will be posted on</tspan>
+                        <tspan class="a2">the Global Initiative Information Portal</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">The updated draft</tspan>
+                        <tspan class="rel">will be posted on</tspan>
+                        <tspan class="a2">the GIIP</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">The GIIP</tspan>
+                        <tspan class="rel">serves as</tspan>
+                        <tspan class="a2">the central online repository</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">The resort website</tspan>
+                        <tspan class="rel">is</tspan>
+                        <tspan class="a2">http ://www.edelweisslodgeandresort.com/</tspan>
+                    </text>
+                    
+                    <text x="-200" y="210" class="sentence">
+                        <tspan class="a1">Price</tspan>
+                        <tspan class="rel">includes cost of</tspan>
+                        <tspan class="a2">room</tspan>
+                    </text>
+                    
+                    <text x="-200" y="230" class="sentence">
+                        <tspan class="a1">Administrative Circular</tspan>
+                        <tspan class="rel">posted on</tspan>
+                        <tspan class="a2">the GIIP.</tspan>
+                    </text>
+                    
+                    <text x="-200" y="250" class="sentence">
+                        <tspan class="a1">DNDO</tspan>
+                        <tspan class="rel">hosted an international workshop in</tspan>
+                        <tspan class="a2">Washington</tspan>
+                    </text>
+                    
+                    <text x="-200" y="270" class="sentence">
+                        <tspan class="a1">GICNT participants</tspan>
+                        <tspan class="rel">expressed their support for</tspan>
+                        <tspan class="a2">a proposed draft outline</tspan>
+                    </text>
+                    
+                    <text x="-200" y="290" class="sentence">
+                        <tspan class="a1">The USG</tspan>
+                        <tspan class="rel">completed a first draft of</tspan>
+                        <tspan class="a2">the Model Guidelines Document</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-158.3692 -141.5636)" 
+            class="black degree4" id="09TELAVIV698">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TELAVIV698.html">09TELAVIV698</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">RESPONSE TO GICNT WORKSHOP AND EXERCISE PLANNING DEMARCHE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the workshop</tspan>
+                        <tspan class="rel">would most likely focus on</tspan>
+                        <tspan class="a2">legal and forensics aspects of nuclear terrorism</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-28.8106 -163.9237)" 
+            class="black degree4" id="09TELAVIV753">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TELAVIV753.html">09TELAVIV753</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI WILL NOT ATTEND GICNT WORKSHOP AND EXERCISE PLANNING MEETINGS IN SEOUL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the meetings</tspan>
+                        <tspan class="rel">fall on</tspan>
+                        <tspan class="a2">the last days of the Passover holiday</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -19.3560)" 
+            class="black degree2" id="09TOKYO543">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TOKYO543.html">09TOKYO543</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOJ COMMENTS ON GLOBAL INITIATIVE DEMARCHE AND UPCOMING MEETINGS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">no MOFA officer</tspan>
+                        <tspan class="rel">will fill in for</tspan>
+                        <tspan class="a2">Aosa</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>

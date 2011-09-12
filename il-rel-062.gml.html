@@ -1,27 +1,49 @@
 <html>
 <head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
     <style type="text/css">
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.5); 
+          stroke: rgba(255,255,255,0.3); 
           stroke-width: 1; 
-          fill: rgba(127,127,127,0.3); 
+          fill: rgba(63,63,63,0.25); 
         }
         #vertices .red circle { 
-          fill: rgba(255,0,0,0.3);
+          fill: rgba(63,0,0,0.25);
         }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
 
         #vertices text { 
           text-anchor: middle; 
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.3); 
+          fill: rgba(255,255,255,0.5); 
           text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1.0); 
+          fill: rgba(255,255,255,1); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
@@ -36,237 +58,354 @@
             visibility: visible;
         } 
 
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
         #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,127,127,1);
+            fill: rgba(255,63,63,1);
         }
         #vertices text.sentence tspan.rel { 
-            fill: rgba(127,127,255,1);
+            fill: rgba(63,63,255,1);
         }
         #vertices text.sentence tspan.a2 { 
-            fill: rgba(127,255,127,1);
+            fill: rgba(63,255,63,1);
         }
 
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(127,127,127,0.25); 
+            stroke: rgba(255,255,255,0.25); 
             z-index: -1; 
         }
         
         #edges line:hover { 
             stroke-width: 10; 
-            stroke: rgba(127,127,127,0.8); 
+            stroke: rgba(255,255,255,0.8); 
         }
 
     </style>
 </head>
 <body>
-<svg width="1020" height="1020" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g transform="translate(510.0000,510.0000) scale(0.9)">
+<svg width="1420" height="1320" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(710.0000,660.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-488.4720" y1="18.1696" x2="-409.3425" y2="27.3328" />
+        <line x1="-306.9994" y1="20.6106" 
+              x2="-377.6874" y2="11.5400" />
     
-        <line x1="-488.4720" y1="18.1696" x2="-369.5146" y2="42.5047" />
+        <line x1="-306.9994" y1="20.6106" 
+              x2="-398.3228" y2="-19.4399" />
     
-        <line x1="-469.1353" y1="-200.5112" x2="-469.0264" y2="-240.8240" />
+        <line x1="-361.7273" y1="-274.1767" 
+              x2="-387.5693" y2="-236.7527" />
     
-        <line x1="-434.3910" y1="68.9923" x2="-369.2198" y2="47.6244" />
+        <line x1="-354.1813" y1="62.7152" 
+              x2="-402.2205" y2="-14.9516" />
     
-        <line x1="-473.5157" y1="-93.1623" x2="-487.1406" y2="8.2587" />
+        <line x1="-256.3730" y1="-76.2572" 
+              x2="-302.3675" y2="11.7480" />
     
-        <line x1="-426.2562" y1="-287.7853" x2="-360.8518" y2="-137.5634" />
+        <line x1="-355.6108" y1="-200.9969" 
+              x2="-296.7360" y2="-142.9918" />
     
-        <line x1="364.1286" y1="-36.2069" x2="431.5939" y2="47.5469" />
+        <line x1="158.6190" y1="330.4848" 
+              x2="216.8019" y2="404.9121" />
     
-        <line x1="-339.0499" y1="125.9640" x2="-425.8068" y2="74.1218" />
+        <line x1="-437.8458" y1="95.2328" 
+              x2="-363.5021" y2="66.3378" />
     
-        <line x1="287.0447" y1="-303.4167" x2="231.6900" y2="-386.0060" />
+        <line x1="-71.5337" y1="364.0664" 
+              x2="-150.7402" y2="389.7199" />
     
-        <line x1="-356.8599" y1="-128.3947" x2="-430.7350" y2="59.6845" />
+        <line x1="-289.6126" y1="-135.9735" 
+              x2="-351.0907" y2="53.2048" />
     
-        <line x1="-6.5049" y1="401.7894" x2="43.2822" y2="362.9178" />
+        <line x1="243.9281" y1="-336.9814" 
+              x2="277.1230" y2="-282.6886" />
     
-        <line x1="81.8274" y1="-111.8211" x2="72.8037" y2="72.9112" />
+        <line x1="24.1694" y1="96.4321" 
+              x2="166.8677" y2="-25.9144" />
     
-        <line x1="-247.7956" y1="-263.8839" x2="-350.5894" y2="-136.1845" />
+        <line x1="-171.1447" y1="-272.7676" 
+              x2="-283.0660" y2="-143.5328" />
     
-        <line x1="-426.2562" y1="-287.7853" x2="-402.9277" y2="-209.9317" />
+        <line x1="-355.6108" y1="-200.9969" 
+              x2="-292.6424" y2="-214.8528" />
     
-        <line x1="-385.3087" y1="-259.0296" x2="-459.0471" y2="-251.7997" />
+        <line x1="-311.1866" y1="-279.0971" 
+              x2="-384.7382" y2="-233.7703" />
     
-        <line x1="-395.0196" y1="163.5416" x2="-362.5609" y2="54.0962" />
+        <line x1="-500.0000" y1="17.7754" 
+              x2="-416.6148" y2="-19.3856" />
     
-        <line x1="218.2852" y1="304.5110" x2="192.7258" y2="177.6507" />
+        <line x1="362.4500" y1="-73.7229" 
+              x2="295.3297" y2="56.8195" />
     
-        <line x1="-25.3591" y1="-144.8890" x2="-115.6389" y2="-103.2764" />
+        <line x1="-44.2755" y1="46.1463" 
+              x2="-93.4024" y2="-26.9403" />
     
-        <line x1="-356.8599" y1="-128.3947" x2="-462.2450" y2="-243.4498" />
+        <line x1="-289.6126" y1="-135.9735" 
+              x2="-385.7926" y2="-221.8631" />
     
-        <line x1="-284.3739" y1="-161.2442" x2="-390.5840" y2="-197.1499" />
+        <line x1="-186.6567" y1="-185.6727" 
+              x2="-273.3674" y2="-213.9058" />
     
-        <line x1="81.8274" y1="-111.8211" x2="-15.8035" y2="-141.9410" />
+        <line x1="24.1694" y1="96.4321" 
+              x2="-36.2167" y2="52.0670" />
     
-        <line x1="71.7513" y1="-65.4178" x2="72.2777" y2="72.8993" />
+        <line x1="276.3950" y1="9.9885" 
+              x2="183.6922" y2="-28.5820" />
     
-        <line x1="-469.1353" y1="-200.5112" x2="-410.0573" y2="-200.3755" />
+        <line x1="-361.7273" y1="-274.1767" 
+              x2="-290.9718" y2="-222.8720" />
     
-        <line x1="-385.3087" y1="-259.0296" x2="-358.9878" y2="-138.1657" />
+        <line x1="-311.1866" y1="-279.0971" 
+              x2="-291.1031" y2="-145.8618" />
     
-        <line x1="81.8274" y1="-111.8211" x2="-114.7395" y2="-99.7056" />
+        <line x1="24.1694" y1="96.4321" 
+              x2="-92.1502" y2="-27.9362" />
     
-        <line x1="72.3158" y1="82.8993" x2="2.3985" y2="258.0442" />
+        <line x1="174.4594" y1="-32.4234" 
+              x2="192.3565" y2="-213.6284" />
     
-        <line x1="-316.4998" y1="-267.8157" x2="-257.7792" y2="-264.4553" />
+        <line x1="-237.5460" y1="-292.0586" 
+              x2="-180.7477" y2="-275.5574" />
     
-        <line x1="183.7257" y1="25.3763" x2="237.1374" y2="-77.0255" />
+        <line x1="211.0903" y1="122.0184" 
+              x2="112.3305" y2="208.9444" />
     
-        <line x1="-434.3910" y1="68.9923" x2="-405.9448" y2="36.0517" />
+        <line x1="-354.1813" y1="62.7152" 
+              x2="-382.2317" y2="18.7003" />
     
-        <line x1="-6.5049" y1="401.7894" x2="-13.9537" y2="490.0354" />
+        <line x1="243.9281" y1="-336.9814" 
+              x2="260.4124" y2="-420.8614" />
     
-        <line x1="226.1225" y1="-394.3128" x2="208.4737" y2="-490.1653" />
+        <line x1="-160.2537" y1="392.8012" 
+              x2="-208.3372" y2="474.6339" />
     
-        <line x1="81.8274" y1="-111.8211" x2="192.8954" y2="-245.0564" />
+        <line x1="24.1694" y1="96.4321" 
+              x2="-61.8948" y2="256.8983" />
     
-        <line x1="-395.0196" y1="163.5416" x2="-399.0841" y2="38.4779" />
+        <line x1="-500.0000" y1="17.7754" 
+              x2="-397.5838" y2="10.9337" />
     
-        <line x1="-359.7175" y1="44.5089" x2="-390.1362" y2="32.2271" />
+        <line x1="-407.4808" y1="-23.4562" 
+              x2="-392.6834" y2="1.6520" />
     
-        <line x1="-284.3739" y1="-161.2442" x2="-347.7516" y2="-132.5224" />
+        <line x1="-186.6567" y1="-185.6727" 
+              x2="-280.6069" y2="-140.3208" />
     
-        <line x1="241.7620" y1="-85.8919" x2="354.8632" y2="-39.9689" />
+        <line x1="104.8241" y1="215.5514" 
+              x2="154.3799" y2="321.4278" />
     
-        <line x1="183.7257" y1="25.3763" x2="190.2582" y2="157.8598" />
+        <line x1="211.0903" y1="122.0184" 
+              x2="282.5908" y2="71.4845" />
     
-        <line x1="-316.4998" y1="-267.8157" x2="-354.0793" y2="-138.0003" />
+        <line x1="-237.5460" y1="-292.0586" 
+              x2="-286.4482" y2="-145.4597" />
     
-        <line x1="-426.2562" y1="-287.7853" x2="-461.4353" y2="-257.3649" />
+        <line x1="-355.6108" y1="-200.9969" 
+              x2="-385.1796" y2="-222.6209" />
     
-        <line x1="437.8670" y1="55.3346" x2="493.3325" y2="117.3326" />
+        <line x1="222.9608" y1="412.7904" 
+              x2="149.8429" y2="486.8351" />
     
-        <line x1="71.7513" y1="-65.4178" x2="13.0613" y2="-271.4448" />
+        <line x1="276.3950" y1="9.9885" 
+              x2="401.9683" y2="34.5993" />
     
-        <line x1="303.4391" y1="214.5886" x2="384.4475" y2="173.7353" />
+        <line x1="334.3897" y1="209.8667" 
+              x2="316.1676" y2="320.1522" />
     
-        <line x1="-124.7206" y1="-99.0904" x2="-119.2237" y2="10.2379" />
+        <line x1="-98.9810" y1="-35.2397" 
+              x2="-20.2163" y2="-114.7362" />
     
-        <line x1="-67.1730" y1="-403.9221" x2="-12.7197" y2="-412.9545" />
+        <line x1="500.0000" y1="15.8729" 
+              x2="487.5232" y2="86.4891" />
     
-        <line x1="-339.0499" y1="125.9640" x2="-394.1445" y2="36.9853" />
+        <line x1="-437.8458" y1="95.2328" 
+              x2="-392.6958" y2="18.8750" />
     
-        <line x1="-124.7206" y1="-99.0904" x2="-346.9387" y2="-127.1423" />
+        <line x1="-98.9810" y1="-35.2397" 
+              x2="-280.7711" y2="-131.3015" />
     
-        <line x1="226.1225" y1="-394.3128" x2="318.1888" y2="-423.1132" />
+        <line x1="-160.2537" y1="392.8012" 
+              x2="-264.1976" y2="393.1425" />
     
-        <line x1="-6.5049" y1="401.7894" x2="-1.6951" y2="277.3240" />
+        <line x1="243.9281" y1="-336.9814" 
+              x2="197.4134" y2="-232.7124" />
     
-        <line x1="-339.0499" y1="125.9640" x2="-357.2582" y2="54.2018" />
+        <line x1="-437.8458" y1="95.2328" 
+              x2="-409.9593" y2="-13.7682" />
     
-        <line x1="241.7620" y1="-85.8919" x2="289.2232" y2="-194.5607" />
+        <line x1="104.8241" y1="215.5514" 
+              x2="19.5066" y2="300.4089" />
     
-        <line x1="-287.3962" y1="440.5738" x2="-214.5052" y2="411.8697" />
+        <line x1="4.7160" y1="-500.0000" 
+              x2="61.0763" y2="-445.6450" />
     
-        <line x1="498.9150" y1="-31.9244" x2="443.5995" y2="47.1408" />
+        <line x1="261.9041" y1="488.9268" 
+              x2="227.5146" y2="421.6934" />
     
-        <line x1="-426.2562" y1="-287.7853" x2="-464.7256" y2="-209.4864" />
+        <line x1="-355.6108" y1="-200.9969" 
+              x2="-360.8944" y2="-264.2115" />
     
-        <line x1="-205.2007" y1="408.2056" x2="-127.0017" y2="346.3813" />
+        <line x1="68.2743" y1="-438.7031" 
+              x2="116.7189" y2="-350.2332" />
     
-        <line x1="-488.4720" y1="18.1696" x2="-441.6782" y2="62.1442" />
+        <line x1="-306.9994" y1="20.6106" 
+              x2="-346.7202" y2="56.0570" />
     
-        <line x1="226.1225" y1="-394.3128" x2="146.6740" y2="-475.6618" />
+        <line x1="-160.2537" y1="392.8012" 
+              x2="-144.1445" y2="490.1342" />
     
-        <line x1="51.1644" y1="356.7638" x2="3.7516" y2="275.9565" />
+        <line x1="282.3394" y1="-274.1569" 
+              x2="202.0336" y2="-228.5207" />
     
-        <line x1="-469.1353" y1="-200.5112" x2="-365.2738" y2="-133.7990" />
+        <line x1="-361.7273" y1="-274.1767" 
+              x2="-294.2387" y2="-144.8391" />
     
-        <line x1="-67.1730" y1="-403.9221" x2="4.9867" y2="-289.5202" />
+        <line x1="500.0000" y1="15.8729" 
+              x2="421.5184" y2="34.2434" />
     
-        <line x1="218.2852" y1="304.5110" x2="238.3426" y2="394.0541" />
+        <line x1="362.4500" y1="-73.7229" 
+              x2="413.8722" y2="-160.6061" />
     
-        <line x1="-356.8599" y1="-128.3947" x2="-359.5523" y2="34.5103" />
+        <line x1="-289.6126" y1="-135.9735" 
+              x2="-400.2475" y2="-30.3612" />
     
-        <line x1="303.4391" y1="214.5886" x2="199.9877" y2="171.6790" />
+        <line x1="334.3897" y1="209.8667" 
+              x2="293.6541" y2="75.2840" />
     
-        <line x1="226.1225" y1="-394.3128" x2="201.1601" y2="-262.5627" />
+        <line x1="-160.2537" y1="392.8012" 
+              x2="-72.5527" y2="273.7618" />
     
-        <line x1="287.0447" y1="-303.4167" x2="292.6068" y2="-213.7056" />
+        <line x1="-71.5337" y1="364.0664" 
+              x2="4.1252" y2="313.0514" />
     
-        <line x1="-356.8599" y1="-128.3947" x2="-396.7912" y2="18.8318" />
+        <line x1="-289.6126" y1="-135.9735" 
+              x2="-382.0394" y2="1.9598" />
     
-        <line x1="-473.5157" y1="-93.1623" x2="-405.7103" y2="-192.1037" />
+        <line x1="-256.3730" y1="-76.2572" 
+              x2="-281.0256" y2="-207.1745" />
     
-        <line x1="287.0447" y1="-303.4167" x2="207.9580" y2="-257.7389" />
+        <line x1="-71.5337" y1="364.0664" 
+              x2="-67.1201" y2="275.6984" />
     
-        <line x1="-473.5157" y1="-93.1623" x2="-366.4329" y2="-125.5035" />
+        <line x1="-256.3730" y1="-76.2572" 
+              x2="-284.7490" y2="-127.2359" />
     
-        <line x1="-316.4998" y1="-267.8157" x2="-392.2767" y2="-206.6345" />
+        <line x1="-237.5460" y1="-292.0586" 
+              x2="-277.7063" y2="-225.5618" />
     
-        <line x1="71.7513" y1="-65.4178" x2="175.9583" y2="19.0781" />
+        <line x1="276.3950" y1="9.9885" 
+              x2="216.1264" y2="113.3791" />
     
-        <line x1="-469.1353" y1="-200.5112" x2="-393.5084" y2="-253.3055" />
+        <line x1="-361.7273" y1="-274.1767" 
+              x2="-321.1396" y2="-278.1281" />
     
-        <line x1="-119.1571" y1="340.1795" x2="-9.8151" y2="272.5895" />
+        <line x1="121.5218" y1="-341.4621" 
+              x2="188.1366" y2="-232.1199" />
     
-        <line x1="139.6870" y1="-482.8160" x2="196.9766" y2="-497.5148" />
+        <line x1="-142.5116" y1="500.0000" 
+              x2="-203.6710" y2="485.5544" />
     
-        <line x1="-500.0000" y1="198.8727" x2="-438.8998" y2="77.9181" />
+        <line x1="-377.9629" y1="207.8584" 
+              x2="-355.7983" y2="72.5836" />
     
-        <line x1="-400.0573" y1="-200.3525" x2="-460.9305" y2="-244.9169" />
+        <line x1="-282.8761" y1="-217.0018" 
+              x2="-383.3055" y2="-227.4857" />
     
-        <line x1="-2.8545" y1="-414.5909" x2="9.3397" y2="-291.0138" />
+        <line x1="485.7833" y1="96.3365" 
+              x2="419.5588" y2="42.8087" />
     
-        <line x1="-316.4998" y1="-267.8157" x2="-375.3893" y2="-260.2962" />
+        <line x1="-237.5460" y1="-292.0586" 
+              x2="-301.3380" y2="-280.8305" />
     
-        <line x1="190.7507" y1="167.8477" x2="80.4417" y2="88.7276" />
+        <line x1="290.7571" y1="65.7129" 
+              x2="182.1020" y2="-25.9743" />
     
-        <line x1="293.2256" y1="-203.7248" x2="208.1641" y2="-248.1113" />
+        <line x1="12.4164" y1="307.4608" 
+              x2="-57.7791" y2="270.3816" />
     
-        <line x1="-426.2562" y1="-287.7853" x2="-393.4923" y2="-264.7766" />
+        <line x1="-355.6108" y1="-200.9969" 
+              x2="-316.1309" y2="-270.4048" />
     
-        <line x1="-385.3087" y1="-259.0296" x2="-397.6196" y2="-210.0509" />
+        <line x1="-311.1866" y1="-279.0971" 
+              x2="-287.0245" y2="-226.1008" />
     
-        <line x1="393.3763" y1="169.2324" x2="434.2285" y2="64.6491" />
+        <line x1="314.5374" y1="330.0184" 
+              x2="230.3795" y2="406.0850" />
     
-        <line x1="81.8274" y1="-111.8211" x2="231.8909" y2="-87.4922" />
+        <line x1="24.1694" y1="96.4321" 
+              x2="99.2174" y2="207.2710" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-67.1730 -403.9221)" 
-            class="None" id="06JERUSALEM4239">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(500.0000 15.8729)" 
+            class="black degree3" id="06JERUSALEM4239">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-09-20
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/09/06JERUSALEM4239.html">06JERUSALEM4239</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">KUWAITI COMPANY GRANTED SECOND PALESTINIAN MOBILE PHONE LICENSE</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(-2.8545 -414.5909)" 
-            class="None" id="06JERUSALEM4713">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(485.7833 96.3365)" 
+            class="black degree2" id="06JERUSALEM4713">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2006-11-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2006/11/06JERUSALEM4713.html">06JERUSALEM4713</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">COMPANY SHORT-LISTED FOR RADIO TRUNKING BID IN WEST BANK/GAZA WANTS TO USE MOTOROLA EQUIPMENT; OFAC LICENSE MAY BE REQUIRED</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">a transaction</tspan>
                         <tspan class="rel">could put significant resources into</tspan>
                         <tspan class="a2">the Treasury of the Hamas-led PA government</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">This cable</tspan>
                         <tspan class="rel">was cleared by</tspan>
                         <tspan class="a2">FCS Tel Aviv.</tspan>
@@ -277,56 +416,76 @@
             
         </g>
         
-        <g transform="translate(71.7513 -65.4178)" 
-            class="None" id="07JERUSALEM1453">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(276.3950 9.9885)" 
+            class="black degree3" id="07JERUSALEM1453">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-13
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2007/07/07JERUSALEM1453.html">07JERUSALEM1453</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON PALESTINIAN MOBILE TELECOM TENDER - GOI FREQUENCY ALLOCATION WOULD BRING USD 355 M TO PA TREASURY</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(218.2852 304.5110)" 
-            class="None" id="07JERUSALEM1575">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(362.4500 -73.7229)" 
+            class="black degree2" id="07JERUSALEM1575">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2007-07-30
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2007/07/07JERUSALEM1575.html">07JERUSALEM1575</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OPIC-BACKED LOAN GUARANTEE PROGRAM LAUNCHED</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">similar project</tspan>
                         <tspan class="rel">launches on</tspan>
                         <tspan class="a2">a weekly basis</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Prime Minister Fayyad</tspan>
                         <tspan class="rel">also witnessed</tspan>
                         <tspan class="a2">the signing</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The U.S. NGO CHF International</tspan>
                         <tspan class="rel">will manage</tspan>
                         <tspan class="a2">the program</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">the USD 160 million</tspan>
                         <tspan class="rel">will be able to</tspan>
                         <tspan class="a2">leverage</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">The remaining 30 percent</tspan>
                         <tspan class="rel">will be covered by</tspan>
                         <tspan class="a2">the lending bank</tspan>
@@ -337,25 +496,35 @@
             
         </g>
         
-        <g transform="translate(183.7257 25.3763)" 
-            class="None" id="07JERUSALEM1921">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(211.0903 122.0184)" 
+            class="black degree3" id="07JERUSALEM1921">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2007-09-12
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2007/09/07JERUSALEM1921.html">07JERUSALEM1921</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">POST ADVOCATES FOR MOTOROLA IN ADVANCE OF SPECTRUM ALLOCATION FOR SECOND MOBILE PHONE NETWORK</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Econoff and FCS specialist</tspan>
                         <tspan class="rel">called on</tspan>
                         <tspan class="a2">Allan Richardson</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">its West Bank network</tspan>
                         <tspan class="rel">remains competitive for</tspan>
                         <tspan class="a2">the USD 100 million Gaza construction tender</tspan>
@@ -366,19 +535,29 @@
             
         </g>
         
-        <g transform="translate(10.3217 -281.0621)" 
-            class="None" id="07JERUSALEM504">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(411.7816 36.5226)" 
+            class="black degree3" id="07JERUSALEM504">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2007-03-15
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2007/03/07JERUSALEM504.html">07JERUSALEM504</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON PALESTINIAN TELECOMMUNICATIONS TENDERS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Israeli mobile operators</tspan>
                         <tspan class="rel">provide unlicensed cellular services in</tspan>
                         <tspan class="a2">the WB/G.</tspan>
@@ -389,40 +568,60 @@
             
         </g>
         
-        <g transform="translate(-426.2562 -287.7853)" 
-            class="red" id="07TELAVIV3201">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-355.6108 -200.9969)" 
+            class="red degree5" id="07TELAVIV3201">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">07TELAVIV3201</text>
             
         </g>
         
-        <g transform="translate(81.8274 -111.8211)" 
-            class="None" id="08JERUSALEM1372">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(24.1694 96.4321)" 
+            class="black degree5" id="08JERUSALEM1372">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-07-29
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/07/08JERUSALEM1372.html">08JERUSALEM1372</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA'S WAIT IS OVER: MOBILE TELECOM PROVIDER HAS SPECTRUM, LOOKS TO BEGIN OPERATIONS</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(-25.3591 -144.8890)" 
-            class="None" id="08JERUSALEM1449">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-44.2755 46.1463)" 
+            class="black degree2" id="08JERUSALEM1449">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-08-07
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1449.html">08JERUSALEM1449</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA BARELY MAKES JULY SALARIES THANKS TO THE UAE AND A LOAN</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The PA</tspan>
                         <tspan class="rel">was able to make</tspan>
                         <tspan class="a2">its</tspan>
@@ -433,19 +632,29 @@
             
         </g>
         
-        <g transform="translate(-6.5049 401.7894)" 
-            class="None" id="08JERUSALEM169">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(243.9281 -336.9814)" 
+            class="black degree4" id="08JERUSALEM169">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-01-31
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/01/08JERUSALEM169.html">08JERUSALEM169</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UNIONS STRIKE IN REACTION TO PM FAYYAD'S REQUIREMENT THAT WEST BANKERS PAY THEIR UTILITY BILLS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The General Union of Palestinian Teachers</tspan>
                         <tspan class="rel">has also been involved in</tspan>
                         <tspan class="a2">the strikes</tspan>
@@ -456,25 +665,35 @@
             
         </g>
         
-        <g transform="translate(241.7620 -85.8919)" 
-            class="None" id="08JERUSALEM1795">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(104.8241 215.5514)" 
+            class="black degree4" id="08JERUSALEM1795">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-09-25
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/09/08JERUSALEM1795.html">08JERUSALEM1795</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON WATANIYA MOBILE LAUNCH IN THE WEST BANK</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The company 's launch</tspan>
                         <tspan class="rel">is scheduled for</tspan>
                         <tspan class="a2">February/March 2009</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">has been working for</tspan>
                         <tspan class="a2">the GOI 's facilitation of that process</tspan>
@@ -485,19 +704,29 @@
             
         </g>
         
-        <g transform="translate(364.1286 -36.2069)" 
-            class="None" id="08JERUSALEM1832">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(158.6190 330.4848)" 
+            class="black degree2" id="08JERUSALEM1832">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/10/08JERUSALEM1832.html">08JERUSALEM1832</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN TELECOM: PA WANTS WIMAX FREQUENCY</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">said</tspan>
                         <tspan class="a2">Deeb.</tspan>
@@ -508,44 +737,64 @@
             
         </g>
         
-        <g transform="translate(-124.7206 -99.0904)" 
-            class="None" id="08JERUSALEM1840">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-98.9810 -35.2397)" 
+            class="black degree4" id="08JERUSALEM1840">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/10/08JERUSALEM1840.html">08JERUSALEM1840</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA PAYS SEPTEMBER SALARIES EARLY; GAZA CASH REMAINS LOW</tspan></text>
+                    </g>
+                
+                
             
         </g>
         
-        <g transform="translate(-118.7216 20.2253)" 
-            class="None" id="08JERUSALEM1886">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-13.1780 -121.8399)" 
+            class="black degree2" id="08JERUSALEM1886">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-16
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/10/08JERUSALEM1886.html">08JERUSALEM1886</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">HAMAS FIRMLY ENTRENCHED IN GAZA; SMUGGLING AND UNEMPLOYMENT NOW THE ECONOMIC NORMS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Hamas</tspan>
                         <tspan class="rel">is increasing</tspan>
                         <tspan class="a2">its employment rolls</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">basic household goods</tspan>
                         <tspan class="rel">are widely available in</tspan>
                         <tspan class="a2">Gaza</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Hamas</tspan>
                         <tspan class="rel">travel freely to</tspan>
                         <tspan class="a2">Egypt</tspan>
@@ -556,55 +805,65 @@
             
         </g>
         
-        <g transform="translate(303.4391 214.5886)" 
-            class="None" id="08JERUSALEM1943">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(334.3897 209.8667)" 
+            class="black degree2" id="08JERUSALEM1943">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-23
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/10/08JERUSALEM1943.html">08JERUSALEM1943</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OPIC'S PLAN FOR AFFORDABLE MORTGAGES IN THE WEST BANK</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">. VP Robert Drumheller</tspan>
                         <tspan class="rel">reports solid progress on</tspan>
                         <tspan class="a2">the affordable mortgage finance initiative</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">OPIC 's partners</tspan>
                         <tspan class="rel">include</tspan>
                         <tspan class="a2">the International Finance Corporation</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The participating organizations</tspan>
                         <tspan class="rel">will create</tspan>
                         <tspan class="a2">the Affordable Mortgage and Loan Corporation</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">AMAL</tspan>
                         <tspan class="rel">will generate</tspan>
                         <tspan class="a2">the loans</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">Rawabi</tspan>
                         <tspan class="rel">will offer</tspan>
                         <tspan class="a2">5,000 housing units</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">OPIC</tspan>
                         <tspan class="rel">is currently focused on</tspan>
                         <tspan class="a2">two issues</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">OPIC</tspan>
                         <tspan class="rel">has cleared</tspan>
                         <tspan class="a2">this message</tspan>
@@ -615,19 +874,29 @@
             
         </g>
         
-        <g transform="translate(-500.0000 198.8727)" 
-            class="None" id="08JERUSALEM2274">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-377.9629 207.8584)" 
+            class="black degree3" id="08JERUSALEM2274">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-19
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2274.html">08JERUSALEM2274</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">NEW "HAMAS BANK" TO OPEN IN GAZA DECEMBER 28</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">al-Rafati</tspan>
                         <tspan class="rel">has lectured on</tspan>
                         <tspan class="a2">economics</tspan>
@@ -638,67 +907,77 @@
             
         </g>
         
-        <g transform="translate(190.7507 167.8477)" 
-            class="None" id="08JERUSALEM350">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(290.7571 65.7129)" 
+            class="black degree6" id="08JERUSALEM350">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-02-26
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/02/08JERUSALEM350.html">08JERUSALEM350</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ABU MAZEN'S ECONOMIC ADVISOR ON OPIC, TELECOM, HOUSING AND GAS PROJECTS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">'s</tspan>
                         <tspan class="a2">success</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Six banks</tspan>
                         <tspan class="rel">have been approved to participate in</tspan>
                         <tspan class="a2">the program</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The Consul General and Mustafa</tspan>
                         <tspan class="rel">discussed ways of</tspan>
                         <tspan class="a2">better publicizing the program 's benefits</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">The Palestinians</tspan>
                         <tspan class="rel">require release of</tspan>
                         <tspan class="a2">both 900 MHz</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">revenue</tspan>
                         <tspan class="rel">flows to</tspan>
                         <tspan class="a2">the PA</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">The average cost of a unit</tspan>
                         <tspan class="rel">is targeted at</tspan>
                         <tspan class="a2">USD 50-60,000</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">a new mortgage facility</tspan>
                         <tspan class="rel">will provide</tspan>
                         <tspan class="a2">affordable long-term housing loans</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">IFC</tspan>
                         <tspan class="rel">may take a stake in</tspan>
                         <tspan class="a2">the venture</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
                         <tspan class="a1">A private bank</tspan>
                         <tspan class="rel">has also expressed</tspan>
                         <tspan class="a2">interest</tspan>
@@ -709,31 +988,41 @@
             
         </g>
         
-        <g transform="translate(-14.7948 500.0000)" 
-            class="None" id="08JERUSALEM468">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(262.3407 -430.6737)" 
+            class="black degree2" id="08JERUSALEM468">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-14
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/03/08JERUSALEM468.html">08JERUSALEM468</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA REPORTS CLEARANCE REVENUES CONTINUE TO BE HELD FOR TWO MONTHS BUT TIMING OF TRANSFERS MORE PREDICTABLE</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">is owed for</tspan>
                         <tspan class="a2">periods</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Transfers of these funds</tspan>
                         <tspan class="rel">have been irregular in</tspan>
                         <tspan class="a2">the past</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">the previous month</tspan>
                         <tspan class="rel">would have been added to</tspan>
                         <tspan class="a2">the current transfer</tspan>
@@ -744,43 +1033,53 @@
             
         </g>
         
-        <g transform="translate(240.5284 403.8123)" 
-            class="None" id="08JERUSALEM490">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(418.9655 -169.2118)" 
+            class="black degree3" id="08JERUSALEM490">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-20
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/03/08JERUSALEM490.html">08JERUSALEM490</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OPIC'S PROPOSED HOUSING MORTGAGE FACILITY A CRITICAL ELEMENT IN ADVANCING U.S. OBJECTIVES</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">We</tspan>
                         <tspan class="rel">agree with</tspan>
                         <tspan class="a2">OPIC</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">long-term mortgage financing</tspan>
                         <tspan class="rel">is generally not available to</tspan>
                         <tspan class="a2">Palestinians</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The PIF</tspan>
                         <tspan class="rel">is also involved in</tspan>
                         <tspan class="a2">the Gaza Marine Gas project</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">PIF assets</tspan>
                         <tspan class="rel">have been attached in</tspan>
                         <tspan class="a2">judgments</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">virtually no USG support</tspan>
                         <tspan class="rel">will be available for</tspan>
                         <tspan class="a2">large scale private sector activities</tspan>
@@ -791,19 +1090,29 @@
             
         </g>
         
-        <g transform="translate(51.1644 356.7638)" 
-            class="None" id="08JERUSALEM511">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(282.3394 -274.1569)" 
+            class="black degree2" id="08JERUSALEM511">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-25
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/03/08JERUSALEM511.html">08JERUSALEM511</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA HOLDING THE BUDGET LINE, BUT DECLINE IN DOLLAR INCREASES FISCAL GAP</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The IMF</tspan>
                         <tspan class="rel">has not yet changed</tspan>
                         <tspan class="a2">the framework 's basic assumptions</tspan>
@@ -814,19 +1123,29 @@
             
         </g>
         
-        <g transform="translate(72.3158 82.8993)" 
-            class="None" id="08JERUSALEM586">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(174.4594 -32.4234)" 
+            class="black degree4" id="08JERUSALEM586">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM586.html">08JERUSALEM586</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SECOND PALESTINIAN MOBILE PHONE PROVIDER STILL WAITING FOR SPECTRUM</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Its receipt of 1800 band frequency</tspan>
                         <tspan class="rel">would be delayed to</tspan>
                         <tspan class="a2">a later date</tspan>
@@ -837,19 +1156,29 @@
             
         </g>
         
-        <g transform="translate(-287.3962 440.5738)" 
-            class="None" id="08JERUSALEM615">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(4.7160 -500.0000)" 
+            class="black degree2" id="08JERUSALEM615">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-08
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM615.html">08JERUSALEM615</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA EMPLOYS REGULATIONS AND THE COURTS AGAINST PUBLIC SECTOR STRIKERS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Fatah-led public employee unions</tspan>
                         <tspan class="rel">staged a strike on</tspan>
                         <tspan class="a2">April 7</tspan>
@@ -860,37 +1189,47 @@
             
         </g>
         
-        <g transform="translate(-205.2007 408.2056)" 
-            class="None" id="08JERUSALEM628">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(68.2743 -438.7031)" 
+            class="black degree3" id="08JERUSALEM628">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-10
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM628.html">08JERUSALEM628</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA STRIKES CONTINUE DESPITE COURT ORDER</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">A number of PLC members</tspan>
                         <tspan class="rel">spoke in</tspan>
                         <tspan class="a2">support of the employees ' demands</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">other PA offices</tspan>
                         <tspan class="rel">open only part of</tspan>
                         <tspan class="a2">the day</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Speakers</tspan>
                         <tspan class="rel">included prominent members of</tspan>
                         <tspan class="a2">the Palestine Legislative Council</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">The court ruling</tspan>
                         <tspan class="rel">was a victory for</tspan>
                         <tspan class="a2">the government</tspan>
@@ -901,31 +1240,41 @@
             
         </g>
         
-        <g transform="translate(-119.1571 340.1795)" 
-            class="None" id="08JERUSALEM657">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(121.5218 -341.4621)" 
+            class="black degree2" id="08JERUSALEM657">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-16
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM657.html">08JERUSALEM657</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA STRIKE ENDS; FAYYAD PLEASED WITH OUTCOME</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">months of labor disputes</tspan>
                         <tspan class="rel">had resulted in</tspan>
                         <tspan class="a2">intermittent public sector strikes</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">PA employees</tspan>
                         <tspan class="rel">were back to work on</tspan>
                         <tspan class="a2">April 14</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">the PA</tspan>
                         <tspan class="rel">did not agree to</tspan>
                         <tspan class="a2">a COLA</tspan>
@@ -936,31 +1285,41 @@
             
         </g>
         
-        <g transform="translate(-1.3090 267.3315)" 
-            class="None" id="08JERUSALEM725">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(193.3394 -223.5799)" 
+            class="black degree4" id="08JERUSALEM725">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-04-29
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM725.html">08JERUSALEM725</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PA FISCAL UPDATE: WESTERN DONORS CARRYING THE LOAD, BUT PROBLEMS AHEAD</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The USD-denominated gap</tspan>
                         <tspan class="rel">has increased since</tspan>
                         <tspan class="a2">Paris</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">up</tspan>
                         <tspan class="rel">is expected to be on</tspan>
                         <tspan class="a2">the order of USD 600 million</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">PA municipalities</tspan>
                         <tspan class="rel">pay their bills directly to</tspan>
                         <tspan class="a2">the Israel Electric Company</tspan>
@@ -971,55 +1330,65 @@
             
         </g>
         
-        <g transform="translate(498.9150 -31.9244)" 
-            class="None" id="08JERUSALEM916">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(261.9041 488.9268)" 
+            class="black degree2" id="08JERUSALEM916">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-05-30
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/05/08JERUSALEM916.html">08JERUSALEM916</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEPUTY SECRETARY KIMMITT'S MEETINGS WITH PALESTINIAN PRESIDENT ABBAS AND PM FAYYAD</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Isaacson and Asali</tspan>
                         <tspan class="rel">are also members of</tspan>
                         <tspan class="a2">Secretary Rice 's U.S-Palestinian Public-Private Partnership</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the conference</tspan>
                         <tspan class="rel">was clearly off to</tspan>
                         <tspan class="a2">a successful start</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">is important for</tspan>
                         <tspan class="a2">the PA</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">strict enforcement of anti-money laundering laws</tspan>
                         <tspan class="rel">are on</tspan>
                         <tspan class="a2">the books</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">Fayyad</tspan>
                         <tspan class="rel">expressed his strong satisfaction with</tspan>
                         <tspan class="a2">the progress of the conference</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">Asali</tspan>
                         <tspan class="rel">stressed the importance of</tspan>
                         <tspan class="a2">the tourism industry</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">Deputy Secretary Kimmitt</tspan>
                         <tspan class="rel">has cleared</tspan>
                         <tspan class="a2">this message</tspan>
@@ -1030,25 +1399,35 @@
             
         </g>
         
-        <g transform="translate(-473.5157 -93.1623)" 
-            class="None" id="08STATE122043">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-256.3730 -76.2572)" 
+            class="black degree4" id="08STATE122043">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-11-18
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/11/08STATE122043.html">08STATE122043</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEMARCHE REQUEST: SEEKING HALT TO TERMINATION OF CORRESPONDENT BANKING SERVICES</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">letters of guarantee</tspan>
                         <tspan class="rel">will have wide-ranging negative effects in</tspan>
                         <tspan class="a2">Gaza</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Palestinians</tspan>
                         <tspan class="rel">will lose one of</tspan>
                         <tspan class="a2">the critical institutions</tspan>
@@ -1059,31 +1438,41 @@
             
         </g>
         
-        <g transform="translate(-469.1353 -200.5112)" 
-            class="None" id="08TELAVIV1075">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-361.7273 -274.1767)" 
+            class="black degree5" id="08TELAVIV1075">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-05-22
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/05/08TELAVIV1075.html">08TELAVIV1075</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI STILL UNCERTAIN THAT POSTAL BANK WILL MANAGE ISRAELI-PALESTINIAN CORRESPONDENT RELATIONSHIP</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">several new security conditions</tspan>
                         <tspan class="rel">have been placed on</tspan>
                         <tspan class="a2">Palestinian banks</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">spoke positively about</tspan>
                         <tspan class="a2">the parties</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">9.This cable</tspan>
                         <tspan class="rel">has been cleared by</tspan>
                         <tspan class="a2">Treasury/OFAC.</tspan>
@@ -1094,43 +1483,53 @@
             
         </g>
         
-        <g transform="translate(-316.4998 -267.8157)" 
-            class="None" id="08TELAVIV1508">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-237.5460 -292.0586)" 
+            class="black degree4" id="08TELAVIV1508">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-07-11
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/07/08TELAVIV1508.html">08TELAVIV1508</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI BANK DETERMINED TO CUT GAZA BANKING TIES</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the bank</tspan>
                         <tspan class="rel">profited little from</tspan>
                         <tspan class="a2">its Palestinian correspondence and money transferring business</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">was</tspan>
                         <tspan class="a2">a straight risk-reward business decision</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">did not go into</tspan>
                         <tspan class="a2">detail</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">the major hurdle</tspan>
                         <tspan class="rel">now is the impending departure of</tspan>
                         <tspan class="a2">the IPB Chairman</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">exceptional situations</tspan>
                         <tspan class="rel">might warrant</tspan>
                         <tspan class="a2">one-time extraordinary actions</tspan>
@@ -1141,43 +1540,53 @@
             
         </g>
         
-        <g transform="translate(-247.7956 -263.8839)" 
-            class="None" id="08TELAVIV1742">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-171.1447 -272.7676)" 
+            class="black degree3" id="08TELAVIV1742">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-08-08
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/08/08TELAVIV1742.html">08TELAVIV1742</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">TERRORISM FINANCE: GOI SAYS NOW IS THE TIME TO ACT AGAINST THE CENTRAL BANK OF IRAN AND INCREASES ITS FINANCIAL ISOLATION OF GAZA</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the CBI</tspan>
                         <tspan class="rel">were not an option for</tspan>
                         <tspan class="a2">political or other reasons</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">The PA</tspan>
                         <tspan class="rel">was now focused on</tspan>
                         <tspan class="a2">building organizations</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">assured</tspan>
                         <tspan class="a2">Yehuda Shaffer</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">Levi</tspan>
                         <tspan class="rel">expressed strong interest in</tspan>
                         <tspan class="a2">the program</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">This cable</tspan>
                         <tspan class="rel">has been cleared by</tspan>
                         <tspan class="a2">Treasury DAS Daniel L. Glaser</tspan>
@@ -1188,33 +1597,43 @@
             
         </g>
         
-        <g transform="translate(-284.3739 -161.2442)" 
-            class="red" id="08TELAVIV2144">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-186.6567 -185.6727)" 
+            class="red degree2" id="08TELAVIV2144">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
                 <text x="0" y="5">08TELAVIV2144</text>
             
         </g>
         
-        <g transform="translate(-385.3087 -259.0296)" 
-            class="None" id="08TELAVIV2291">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-311.1866 -279.0971)" 
+            class="black degree6" id="08TELAVIV2291">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-10-07
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/10/08TELAVIV2291.html">08TELAVIV2291</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI-PALESTINIAN CORRESPONDENT BANKING RELATIONSHIP AT A CROSSROADS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">they</tspan>
                         <tspan class="rel">had met internally on</tspan>
                         <tspan class="a2">the matter</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Zaken</tspan>
                         <tspan class="rel">expressed great displeasure with</tspan>
                         <tspan class="a2">Hapoalim 's timing</tspan>
@@ -1225,25 +1644,35 @@
             
         </g>
         
-        <g transform="translate(-356.8599 -128.3947)" 
-            class="None" id="08TELAVIV2447">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-289.6126 -135.9735)" 
+            class="black degree12" id="08TELAVIV2447">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-11-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/11/08TELAVIV2447.html">08TELAVIV2447</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">CASHLESS IN GAZA?</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the request</tspan>
                         <tspan class="rel">is usually submitted to</tspan>
                         <tspan class="a2">the BOI.</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the NSC</tspan>
                         <tspan class="rel">considers</tspan>
                         <tspan class="a2">several factors</tspan>
@@ -1254,25 +1683,35 @@
             
         </g>
         
-        <g transform="translate(-400.0573 -200.3525)" 
-            class="None" id="08TELAVIV2452">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-282.8761 -217.0018)" 
+            class="black degree8" id="08TELAVIV2452">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-11-03
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/11/08TELAVIV2452.html">08TELAVIV2452</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">NOBODY REALLY WANTS TO BE BANKING CORRESPONDENT TO THE PALESTINIANS: RELATIONSHIP REMAINS IN THE BALANCE</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the BOI</tspan>
                         <tspan class="rel">finally does turn its attention to</tspan>
                         <tspan class="a2">the matter</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">The outcome of this current game of chicken</tspan>
                         <tspan class="rel">may put</tspan>
                         <tspan class="a2">Bank Discount</tspan>
@@ -1283,49 +1722,65 @@
             
         </g>
         
-        <g transform="translate(-488.4720 18.1696)" 
-            class="None" id="08TELAVIV2603">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-306.9994 20.6106)" 
+            class="black degree4" id="08TELAVIV2603">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-11-24
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/11/08TELAVIV2603.html">08TELAVIV2603</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GAZA CASH CRISIS: CBG FISCHER CALLS FOR USG ASSISTANCE</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Econcouns</tspan>
                         <tspan class="rel">pressed</tspan>
                         <tspan class="a2">Bank of Israel Governor</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the procedural complexities</tspan>
                         <tspan class="rel">have resulted from</tspan>
                         <tspan class="a2">the dissolution of the Knesset</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">the latter of which</tspan>
                         <tspan class="rel">oversees</tspan>
                         <tspan class="a2">Postal Bank</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">understands the concerns of</tspan>
+                        <tspan class="a2">the Israeli commercial banks</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">the move</tspan>
                         <tspan class="rel">would be untenable for</tspan>
                         <tspan class="a2">political reasons</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">Shalit 's situation</tspan>
                         <tspan class="rel">is followed closely by</tspan>
                         <tspan class="a2">the Israeli public</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">the latter of which</tspan>
                         <tspan class="rel">is responsible for overseeing</tspan>
                         <tspan class="a2">the Postal Bank</tspan>
@@ -1336,25 +1791,35 @@
             
         </g>
         
-        <g transform="translate(-339.0499 125.9640)" 
-            class="None" id="08TELAVIV2713">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-437.8458 95.2328)" 
+            class="black degree3" id="08TELAVIV2713">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/12/08TELAVIV2713.html">08TELAVIV2713</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI CALLS GAZA CASH CRISIS A HAMAS PLOY</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The exact amount</tspan>
                         <tspan class="rel">is still under</tspan>
                         <tspan class="a2">discussion</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">We</tspan>
                         <tspan class="rel">will take</tspan>
                         <tspan class="a2">him</tspan>
@@ -1365,25 +1830,35 @@
             
         </g>
         
-        <g transform="translate(-434.3910 68.9923)" 
-            class="None" id="08TELAVIV2859">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-354.1813 62.7152)" 
+            class="black degree6" id="08TELAVIV2859">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-12-19
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/12/08TELAVIV2859.html">08TELAVIV2859</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL'S NSC SUPPORTS MINIMUM MONTHLY CASH FOR GAZA; WANTS USG HELP TO SELL THE IDEA</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">had the support of</tspan>
                         <tspan class="a2">the Bank of Israel</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">negative consequences</tspan>
                         <tspan class="rel">far outweighed</tspan>
                         <tspan class="a2">the positive ones</tspan>
@@ -1394,43 +1869,53 @@
             
         </g>
         
-        <g transform="translate(-468.9994 -250.8240)" 
-            class="None" id="08TELAVIV624">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-393.2515 -228.5239)" 
+            class="black degree6" id="08TELAVIV624">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2008-03-18
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2008/03/08TELAVIV624.html">08TELAVIV624</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI-PALESTINIAN CORRESPONDENT RELATIONSHIP IN STABLE BUT CRITICAL CONDITION</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">neither bank</tspan>
                         <tspan class="rel">has carried through on</tspan>
                         <tspan class="a2">its threats</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the situation</tspan>
                         <tspan class="rel">has not changed in</tspan>
                         <tspan class="a2">recent months</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">these measures</tspan>
                         <tspan class="rel">have helped eliminate some of</tspan>
                         <tspan class="a2">the "grey area</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">Radai</tspan>
                         <tspan class="rel">expressed extreme frustration with</tspan>
                         <tspan class="a2">the BOI 's delays</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">their illicit goals</tspan>
                         <tspan class="rel">does not constitute an act of</tspan>
                         <tspan class="a2">international terrorism</tspan>
@@ -1441,43 +1926,53 @@
             
         </g>
         
-        <g transform="translate(393.3763 169.2324)" 
-            class="None" id="09JERUSALEM1282">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(314.5374 330.0184)" 
+            class="black degree2" id="09JERUSALEM1282">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-07-27
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/07/09JERUSALEM1282.html">09JERUSALEM1282</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WEST BANK HOUSING PROJECTS: FINANCING ON TRACK, BUT HURDLES REMAIN</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">a formal decision</tspan>
                         <tspan class="rel">must be taken by</tspan>
                         <tspan class="a2">the Israeli Cabinet</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">would not hold up</tspan>
                         <tspan class="a2">the project</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The Palestinian Investment Fund</tspan>
                         <tspan class="rel">held a formal groundbreaking ceremony for</tspan>
                         <tspan class="a2">its 2,000-unit project</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">They</tspan>
                         <tspan class="rel">expressed unease about</tspan>
                         <tspan class="a2">the terms of the proposed mortgages</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">OPIC VP Robert Drumheller</tspan>
                         <tspan class="rel">has cleared</tspan>
                         <tspan class="a2">this cable</tspan>
@@ -1488,25 +1983,35 @@
             
         </g>
         
-        <g transform="translate(287.0447 -303.4167)" 
-            class="None" id="09JERUSALEM1323">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-71.5337 364.0664)" 
+            class="black degree3" id="09JERUSALEM1323">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-07-31
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/07/09JERUSALEM1323.html">09JERUSALEM1323</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA LAUNCH IN JEOPARDY</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">a source of 900 spectrum</tspan>
                         <tspan class="rel">would replace</tspan>
                         <tspan class="a2">the temporary strip</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Wataniya 's network</tspan>
                         <tspan class="rel">was designed based on</tspan>
                         <tspan class="a2">this allocation</tspan>
@@ -1517,43 +2022,53 @@
             
         </g>
         
-        <g transform="translate(437.8670 55.3346)" 
-            class="None" id="09JERUSALEM1463">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(222.9608 412.7904)" 
+            class="black degree4" id="09JERUSALEM1463">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-18
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1463.html">09JERUSALEM1463</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">TRADE DEVELOPMENT AGENCY EXPLORES POTENTIAL FOR STUDIES ON INFRASTRUCTURE PROJECTS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">new projects</tspan>
                         <tspan class="rel">would promote</tspan>
                         <tspan class="a2">economic development</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">the Israeli company</tspan>
                         <tspan class="rel">is the sole distributor for</tspan>
                         <tspan class="a2">the West Bank 's fuel</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">MENA</tspan>
                         <tspan class="rel">is also developing proposals for</tspan>
                         <tspan class="a2">geothermal heating</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">might be a better fit for</tspan>
                         <tspan class="a2">TDA.</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">7. TDA 's Carl Kress</tspan>
                         <tspan class="rel">cleared</tspan>
                         <tspan class="a2">this message</tspan>
@@ -1564,19 +2079,29 @@
             
         </g>
         
-        <g transform="translate(226.1225 -394.3128)" 
-            class="None" id="09JERUSALEM1497">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-160.2537 392.8012)" 
+            class="black degree5" id="09JERUSALEM1497">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-24
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1497.html">09JERUSALEM1497</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA BOARD SETS SEPT 15 DEADLINE FOR SPECTRUM ALLOCATION</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The IFC</tspan>
                         <tspan class="rel">may also seek repayment of</tspan>
                         <tspan class="a2">the USD 44 million</tspan>
@@ -1587,55 +2112,65 @@
             
         </g>
         
-        <g transform="translate(327.7327 -426.0988)" 
-            class="None" id="09JERUSALEM1498">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-274.1976 393.1753)" 
+            class="black degree2" id="09JERUSALEM1498">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-08-24
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1498.html">09JERUSALEM1498</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SAUDI SUPPORT PROVIDES BRIEF RESPITE FROM PA BUDGET WOES</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">could have dire financial implications for</tspan>
                         <tspan class="a2">the PA.</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">He</tspan>
                         <tspan class="rel">was particularly concerned about</tspan>
                         <tspan class="a2">January/February 2010</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The Ministry of Finance</tspan>
                         <tspan class="rel">sent a letter in</tspan>
                         <tspan class="a2">response</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">optimistic Qatar</tspan>
                         <tspan class="rel">would contribute to</tspan>
                         <tspan class="a2">the PA</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">a well-functioning PA</tspan>
                         <tspan class="rel">can become a Palestinian State in</tspan>
                         <tspan class="a2">two years</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">the PA</tspan>
                         <tspan class="rel">has reached an advanced state of</tspan>
                         <tspan class="a2">fiscal reform</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">This</tspan>
                         <tspan class="rel">could have dire financial implications for</tspan>
                         <tspan class="a2">the PA</tspan>
@@ -1646,19 +2181,29 @@
             
         </g>
         
-        <g transform="translate(139.6870 -482.8160)" 
-            class="None" id="09JERUSALEM1888">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-142.5116 500.0000)" 
+            class="black degree2" id="09JERUSALEM1888">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-10-16
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/10/09JERUSALEM1888.html">09JERUSALEM1888</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA QUIETLY BEGINS OPERATIONS, AIMS TO CREATE "FACTS ON THE GROUND"</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the launch of operations</tspan>
                         <tspan class="rel">will rebound negatively on</tspan>
                         <tspan class="a2">him</tspan>
@@ -1669,25 +2214,35 @@
             
         </g>
         
-        <g transform="translate(500.0000 124.7854)" 
-            class="None" id="09JERUSALEM2072">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(142.8165 493.9505)" 
+            class="black degree2" id="09JERUSALEM2072">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-11-18
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/11/09JERUSALEM2072.html">09JERUSALEM2072</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">TRADE DEVELOPMENT AGENCY FOCUSES ON INFORMATION TECHNOLOGY, ENERGY SECTOR PROJECTS</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the Palestinian Energy and Natural Resources Authority</tspan>
                         <tspan class="rel">noted the absence of</tspan>
                         <tspan class="a2">U.S. commercial involvement</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">5</tspan>
                         <tspan class="rel">is reviewing the proposal for</tspan>
                         <tspan class="a2">TDA-funded technical assistance</tspan>
@@ -1698,37 +2253,47 @@
             
         </g>
         
-        <g transform="translate(206.6629 -500.0000)" 
-            class="None" id="09JERUSALEM2197">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-213.4032 483.2557)" 
+            class="black degree4" id="09JERUSALEM2197">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-12-04
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/12/09JERUSALEM2197.html">09JERUSALEM2197</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA PALESTINE: ONE MONTH POST-LAUNCH</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Wataniya</tspan>
                         <tspan class="rel">reaches 70 % of</tspan>
                         <tspan class="a2">capacity</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Wataniya</tspan>
                         <tspan class="rel">has already outgrown</tspan>
                         <tspan class="a2">its three floors of office space</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Wataniya subscribers</tspan>
                         <tspan class="rel">are spread throughout</tspan>
                         <tspan class="a2">Ramallah</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">Richardson</tspan>
                         <tspan class="rel">emphasized the importance of</tspan>
                         <tspan class="a2">the Gaza market</tspan>
@@ -1739,49 +2304,59 @@
             
         </g>
         
-        <g transform="translate(-395.0196 163.5416)" 
-            class="None" id="09JERUSALEM259">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-500.0000 17.7754)" 
+            class="black degree3" id="09JERUSALEM259">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-02-06
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/02/09JERUSALEM259.html">09JERUSALEM259</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">THE PA 2009 BUDGET, GAZA RECONSTRUCTION, AND CASH</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">The PM</tspan>
                         <tspan class="rel">also announced a two-week delay of</tspan>
                         <tspan class="a2">salary payments</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">The overall deficit</tspan>
                         <tspan class="rel">is estimated at</tspan>
                         <tspan class="a2">USD 1.65b</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">The budget</tspan>
                         <tspan class="rel">estimates</tspan>
                         <tspan class="a2">a reduction of external financing</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">The transport</tspan>
                         <tspan class="rel">was delayed on</tspan>
                         <tspan class="a2">February 6</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">PMA Governor al-Wazir</tspan>
                         <tspan class="rel">said</tspan>
                         <tspan class="a2">that</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">the court</tspan>
                         <tspan class="rel">had not yet issued</tspan>
                         <tspan class="a2">a decision</tspan>
@@ -1792,19 +2367,29 @@
             
         </g>
         
-        <g transform="translate(293.2256 -203.7248)" 
-            class="None" id="09JERUSALEM386">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(12.4164 307.4608)" 
+            class="black degree3" id="09JERUSALEM386">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-06
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM386.html">09JERUSALEM386</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">WATANIYA MOBILE PHONE LAUNCH DELAYED INDEFINITELY</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">It</tspan>
                         <tspan class="rel">also deprives</tspan>
                         <tspan class="a2">the PA of a much needed revenue stream</tspan>
@@ -1815,67 +2400,77 @@
             
         </g>
         
-        <g transform="translate(199.2985 -252.7375)" 
-            class="None" id="09JERUSALEM618">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-66.6213 265.7109)" 
+            class="black degree5" id="09JERUSALEM618">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-04-06
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/04/09JERUSALEM618.html">09JERUSALEM618</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">FAYYAD INTERVENES IN TELCOM ISSUES</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">PA Prime Minister Salam Fayyad</tspan>
                         <tspan class="rel">has intervened in</tspan>
                         <tspan class="a2">a series of telecommunications issues</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">Abu Mazen 's own economic adviser</tspan>
                         <tspan class="rel">is both the Chair of</tspan>
                         <tspan class="a2">the PIF</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">PalTel</tspan>
                         <tspan class="rel">requires the approval of</tspan>
                         <tspan class="a2">the President 's office</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">it</tspan>
                         <tspan class="rel">would cost</tspan>
                         <tspan class="a2">PalTel</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">he</tspan>
                         <tspan class="rel">is also negotiating with</tspan>
                         <tspan class="a2">PalTel</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">Wataniya</tspan>
                         <tspan class="rel">would be at</tspan>
                         <tspan class="a2">a competitive disadvantage</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">the Zain deal</tspan>
                         <tspan class="rel">is on</tspan>
                         <tspan class="a2">hold</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">Fayyad</tspan>
                         <tspan class="rel">is deeply skeptical of</tspan>
                         <tspan class="a2">both</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
                         <tspan class="a1">Fayyad</tspan>
                         <tspan class="rel">also suspects some on</tspan>
                         <tspan class="a2">the Israeli side</tspan>
@@ -1886,25 +2481,35 @@
             
         </g>
         
-        <g transform="translate(-359.7175 44.5089)" 
-            class="None" id="09TELAVIV471">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-407.4808 -23.4562)" 
+            class="black degree6" id="09TELAVIV471">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-02-27
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/02/09TELAVIV471.html">09TELAVIV471</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI WILLING TO PASS THE BUCK BUT NOT THE SHEKEL</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">Israeli security services</tspan>
                         <tspan class="rel">were scheduled to meet on</tspan>
                         <tspan class="a2">Sunday</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">This lower figure</tspan>
                         <tspan class="rel">has consistently been the one approved by</tspan>
                         <tspan class="a2">the PMO.</tspan>
@@ -1915,73 +2520,83 @@
             
         </g>
         
-        <g transform="translate(-399.4089 28.4831)" 
-            class="None" id="09TELAVIV600">
-            <circle cx="0" cy="0" r="10" />
+        <g transform="translate(-387.6061 10.2672)" 
+            class="black degree6" id="09TELAVIV600">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
+                 
+                <text x="0" y="-16" class="date">
+                    2009-03-11
+                </text>
+                
                 <text x="0" y="5" class="label">
                  
                     <a xlink:href="http://wikileaks.org/cable/2009/03/09TELAVIV600.html">09TELAVIV600</a>
                 
                 </text>
                 
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI PROPOSES INTERNATIONAL MECHANISM FOR FUNDS TO GAZA</tspan></text>
+                    </g>
+                
+                
                     <g id="sentences"> 
                     
-                    <text x="-200" y="20" class="sentence">
+                    <text x="-200" y="50" class="sentence">
                         <tspan class="a1">the money</tspan>
                         <tspan class="rel">is not misdirected to</tspan>
                         <tspan class="a2">destabilizing elements</tspan>
                     </text>
                     
-                    <text x="-200" y="40" class="sentence">
+                    <text x="-200" y="70" class="sentence">
                         <tspan class="a1">The coordination</tspan>
                         <tspan class="rel">will be made between</tspan>
                         <tspan class="a2">the Palestinian Monetary Authority</tspan>
                     </text>
                     
-                    <text x="-200" y="60" class="sentence">
+                    <text x="-200" y="90" class="sentence">
                         <tspan class="a1">Future cash transfers</tspan>
                         <tspan class="rel">will be based on</tspan>
                         <tspan class="a2">these reports</tspan>
                     </text>
                     
-                    <text x="-200" y="80" class="sentence">
+                    <text x="-200" y="110" class="sentence">
                         <tspan class="a1">A supervision mechanism</tspan>
                         <tspan class="rel">will be established including</tspan>
                         <tspan class="a2">a Directorate</tspan>
                     </text>
                     
-                    <text x="-200" y="100" class="sentence">
+                    <text x="-200" y="130" class="sentence">
                         <tspan class="a1">2. The Directorate</tspan>
                         <tspan class="rel">will comprise members from</tspan>
                         <tspan class="a2">the PA , UN , Egypt , Israel , Norway</tspan>
                     </text>
                     
-                    <text x="-200" y="120" class="sentence">
+                    <text x="-200" y="150" class="sentence">
                         <tspan class="a1">Implementation</tspan>
                         <tspan class="rel">will be headed by</tspan>
                         <tspan class="a2">the World Bank/EU</tspan>
                     </text>
                     
-                    <text x="-200" y="140" class="sentence">
+                    <text x="-200" y="170" class="sentence">
                         <tspan class="a1">The Implementation Team</tspan>
                         <tspan class="rel">will submit a monthly report to</tspan>
                         <tspan class="a2">the directorate</tspan>
                     </text>
                     
-                    <text x="-200" y="160" class="sentence">
+                    <text x="-200" y="190" class="sentence">
                         <tspan class="a1">This authority</tspan>
                         <tspan class="rel">will remain in</tspan>
                         <tspan class="a2">the hands of Israel</tspan>
                     </text>
                     
-                    <text x="-200" y="180" class="sentence">
+                    <text x="-200" y="210" class="sentence">
                         <tspan class="a1">Inspection</tspan>
                         <tspan class="rel">will be performed according to</tspan>
                         <tspan class="a2">international standards</tspan>
                     </text>
                     
-                    <text x="-200" y="200" class="sentence">
+                    <text x="-200" y="230" class="sentence">
                         <tspan class="a1">The mechanism</tspan>
                         <tspan class="rel">is unlimited by</tspan>
                         <tspan class="a2">time</tspan>

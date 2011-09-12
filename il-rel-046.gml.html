@@ -1,0 +1,931 @@
+<html>
+<head>
+    <!-- This template provides more readability of overlay text (subject and reverb)
+         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <style type="text/css">
+        svg { background-color: rgb(55,55,55); }
+        #vertices circle { 
+          stroke: rgba(255,255,255,0.3); 
+          stroke-width: 1; 
+          fill: rgba(63,63,63,0.25); 
+        }
+        #vertices .red circle { 
+          fill: rgba(63,0,0,0.25);
+        }
+
+        #vertices .degree2 circle { stroke-width: 1.2; } 
+        #vertices .degree3 circle { stroke-width: 1.4; } 
+        #vertices .degree4 circle { stroke-width: 1.6; } 
+        #vertices .degree5 circle { stroke-width: 1.8; } 
+        #vertices .degree6 circle { stroke-width: 2.0; } 
+        #vertices .degree7 circle { stroke-width: 2.2; } 
+        #vertices .degree8 circle { stroke-width: 2.4; } 
+        #vertices .degree9 circle { stroke-width: 2.6; } 
+        #vertices .degree10 circle { stroke-width: 2.8; } 
+        #vertices .degree11 circle { stroke-width: 3.0; } 
+        #vertices .degree12 circle { stroke-width: 3.2; } 
+        #vertices .degree13 circle { stroke-width: 3.4; } 
+        #vertices .degree14 circle { stroke-width: 3.6; } 
+        #vertices .degree15 circle { stroke-width: 3.8; } 
+        #vertices .degree16 circle { stroke-width: 4.0; } 
+        #vertices .degree17 circle { stroke-width: 4.2; } 
+        #vertices .degree18 circle { stroke-width: 4.4; } 
+        #vertices .degree19 circle { stroke-width: 4.6; } 
+        #vertices .degree20 circle { stroke-width: 4.8; } 
+
+        #vertices text { 
+          text-anchor: middle; 
+          font-size: 1em; 
+          font-weight: normal; 
+          font-family: sans-serif;
+          fill: rgba(255,255,255,0.5); 
+          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+        }
+        #vertices text:hover {
+          font-size: 1.4em;
+          fill: rgba(255,255,255,1); 
+          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
+        }
+        #vertices .red text:hover {
+          text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
+        }
+
+        #vertices text.sentence { 
+            text-anchor: start;
+            visibility: hidden;
+        } 
+        #vertices g:hover text.sentence { 
+            visibility: visible;
+        } 
+
+        #vertices text.sentence tspan.subject { 
+            font-size: 1.1em;
+            fill: rgba(255,255,63,1);
+        }
+
+        #vertices text.sentence tspan.a1 { 
+            fill: rgba(255,63,63,1);
+        }
+        #vertices text.sentence tspan.rel { 
+            fill: rgba(63,63,255,1);
+        }
+        #vertices text.sentence tspan.a2 { 
+            fill: rgba(63,255,63,1);
+        }
+
+        #edges line { 
+            fill: none;
+            stroke-linejoin: round;
+            stroke-width: 5; 
+            stroke: rgba(255,255,255,0.25); 
+            z-index: -1; 
+        }
+        
+        #edges line:hover { 
+            stroke-width: 10; 
+            stroke: rgba(255,255,255,0.8); 
+        }
+
+    </style>
+</head>
+<body>
+<svg width="1200" height="900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<filter id="dropshadow" height="130%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+    <feOffset dx="3" dy="3" result="offsetblur"/> 
+    <feMerge> 
+      <feMergeNode/>
+      <feMergeNode in="SourceGraphic"/>
+   </feMerge>
+</filter>
+
+<g transform="translate(600.0000,450.0000) scale(0.9)">
+    <g id="edges">
+    
+        <line x1="-390.0000" y1="40.5012" 
+              x2="-326.5889" y2="91.0044" />
+    
+        <line x1="-288.9686" y1="-146.1674" 
+              x2="-229.9662" y2="-210.0802" />
+    
+        <line x1="-117.8726" y1="-260.3499" 
+              x2="-213.9226" y2="-221.2022" />
+    
+        <line x1="44.7896" y1="199.6852" 
+              x2="37.2525" y2="280.0437" />
+    
+        <line x1="-145.3395" y1="62.3025" 
+              x2="-238.5181" y2="67.6840" />
+    
+        <line x1="-319.5043" y1="162.4277" 
+              x2="-254.5219" y2="76.2452" />
+    
+        <line x1="274.5190" y1="60.9302" 
+              x2="360.5522" y2="76.3769" />
+    
+        <line x1="190.6290" y1="110.4259" 
+              x2="356.6800" y2="143.4571" />
+    
+        <line x1="-11.6600" y1="-290.0000" 
+              x2="-21.6600" y2="-290.0000" />
+    
+        <line x1="-390.0000" y1="40.5012" 
+              x2="-258.3144" y2="66.3355" />
+    
+        <line x1="161.9356" y1="-182.4414" 
+              x2="268.1977" y2="-131.4242" />
+    
+        <line x1="313.9986" y1="-210.0286" 
+              x2="381.5475" y2="-167.3240" />
+    
+        <line x1="-120.7805" y1="169.4282" 
+              x2="-240.6626" y2="74.4697" />
+    
+        <line x1="-281.4913" y1="-53.2527" 
+              x2="-251.1215" y2="58.6099" />
+    
+        <line x1="284.6154" y1="171.4647" 
+              x2="199.0156" y2="115.8725" />
+    
+        <line x1="-145.3395" y1="62.3025" 
+              x2="14.6129" y2="66.0870" />
+    
+        <line x1="-319.5043" y1="162.4277" 
+              x2="-318.8798" y2="107.2338" />
+    
+        <line x1="44.7896" y1="199.6852" 
+              x2="182.0997" y2="115.6462" />
+    
+        <line x1="284.6154" y1="171.4647" 
+              x2="363.6275" y2="85.5064" />
+    
+        <line x1="277.2125" y1="-127.0961" 
+              x2="380.4465" y2="-159.0255" />
+    
+        <line x1="277.2125" y1="-127.0961" 
+              x2="309.9439" y2="-200.8875" />
+    
+        <line x1="284.0695" y1="-8.6640" 
+              x2="363.3435" y2="71.0533" />
+    
+        <line x1="-281.4913" y1="-53.2527" 
+              x2="-288.1665" y2="-136.1996" />
+    
+        <line x1="370.3948" y1="78.1441" 
+              x2="367.0677" y2="135.4250" />
+    
+        <line x1="-145.3395" y1="62.3025" 
+              x2="-308.9636" y2="95.2598" />
+    
+        <line x1="24.6101" y1="66.3236" 
+              x2="180.9642" y2="107.8585" />
+    
+        <line x1="-120.7805" y1="169.4282" 
+              x2="34.9525" y2="197.8875" />
+    
+        <line x1="284.0695" y1="-8.6640" 
+              x2="196.8019" y2="102.5585" />
+    
+        <line x1="-11.6600" y1="-290.0000" 
+              x2="-108.2408" y2="-263.0387" />
+    
+        <line x1="284.0695" y1="-8.6640" 
+              x2="277.7905" y2="-117.1128" />
+    
+        <line x1="274.5190" y1="60.9302" 
+              x2="199.2417" y2="105.3444" />
+    
+    </g>
+    <g id="vertices">
+        
+        <g transform="translate(-120.7805 169.4282)" 
+            class="black degree2" id="06AMMAN2504">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06AMMAN2504.html">06AMMAN2504</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">JORDAN TO RUN FOR UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(44.7896 199.6852)" 
+            class="black degree3" id="06AMMAN3229">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06AMMAN3229.html">06AMMAN3229</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">JORDAN REJECTS IRANIAN CANDIDACY FOR HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the Iranians</tspan>
+                        <tspan class="rel">had bothered to ask for</tspan>
+                        <tspan class="a2">Jordan 's vote</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(161.9356 -182.4414)" 
+            class="black degree2" id="06ANKARA648">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-14
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06ANKARA648.html">06ANKARA648</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY NON-COMMITTAL TO DEMARCHE ON DEFEATING VENEZUELA'S BID FOR UNSC NON-PERMANENT SEAT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Ms. Dinc</tspan>
+                        <tspan class="rel">expressed appreciation for</tspan>
+                        <tspan class="a2">our information</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-319.5043 162.4277)" 
+            class="black degree2" id="06BAKU606">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-19
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAKU606.html">06BAKU606</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">AZERBAIJAN SEEKS ELECTION TO UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">The text of the dipnote</tspan>
+                        <tspan class="rel">follows in</tspan>
+                        <tspan class="a2">paragraph</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Azerbaijan</tspan>
+                        <tspan class="rel">is a party to</tspan>
+                        <tspan class="a2">all major international human rights instruments</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(284.6154 171.4647)" 
+            class="black degree2" id="06BOGOTA3935">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BOGOTA3935.html">06BOGOTA3935</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">COLOMBIA WILL NOT SUPPORT IRAN'S BID FOR HUMAN RIGHTS COUNCIL SEAT</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Iran</tspan>
+                        <tspan class="rel">should not be elected to</tspan>
+                        <tspan class="a2">the HRC.</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(284.0695 -8.6640)" 
+            class="black degree3" id="06CAIRO2648">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-07
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06CAIRO2648.html">06CAIRO2648</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">PM A/S HILLEN DISCUSSES FMF, SINAI SECURITY, IRAN, AND DARFUR WITH FOREIGN AND DEFENSE MINISTERS</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">he</tspan>
+                        <tspan class="rel">be of</tspan>
+                        <tspan class="a2">European origin</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">the U.S.</tspan>
+                        <tspan class="rel">is presently focused on</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">Egypt</tspan>
+                        <tspan class="rel">does not want to lose</tspan>
+                        <tspan class="a2">the MFO</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Egypt</tspan>
+                        <tspan class="rel">does not want to further weaken</tspan>
+                        <tspan class="a2">Abbas</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-390.0000 40.5012)" 
+            class="black degree2" id="06JAKARTA4756">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06JAKARTA4756.html">06JAKARTA4756</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">INDONESIA ENTHUSIASTIC ON U.S. HUMAN RIGHTS PLEDGE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">we</tspan>
+                        <tspan class="rel">explained our position on</tspan>
+                        <tspan class="a2">this matter</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-11.6600 -290.0000)" 
+            class="black degree4" id="06MOSCOW5760">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-31
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MOSCOW5760.html">06MOSCOW5760</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA HUMAN RIGHTS OFFICIALS ON THE NGO LAW, RELIGIOUS FREEDOM, AND UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Barks-Ruggles</tspan>
+                        <tspan class="rel">also emphasized the importance of</tspan>
+                        <tspan class="a2">religious freedom issues</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">had taken a multi-agency approach to</tspan>
+                        <tspan class="a2">the problem</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">others</tspan>
+                        <tspan class="rel">had been raising for</tspan>
+                        <tspan class="a2">ten years</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">Lebedev</tspan>
+                        <tspan class="rel">welcomed the idea of</tspan>
+                        <tspan class="a2">a more regularized dialogue</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">DAS Barks-Ruggles</tspan>
+                        <tspan class="rel">has cleared</tspan>
+                        <tspan class="a2">this cable</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-117.8726 -260.3499)" 
+            class="black degree2" id="06MOSCOW6306">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-06-13
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06MOSCOW6306.html">06MOSCOW6306</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA ON HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(274.5190 60.9302)" 
+            class="black degree3" id="06MUSCAT701">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-03
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MUSCAT701.html">06MUSCAT701</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">OMAN "SUPPORTS" IRAN CANDIDACY TO UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Tehran</tspan>
+                        <tspan class="rel">runs for</tspan>
+                        <tspan class="a2">a seat</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-281.4913 -53.2527)" 
+            class="black degree2" id="06PARIS2358">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-11
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06PARIS2358.html">06PARIS2358</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">FRENCH MFA URGES CLOSE CONSULTATION ON HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">members</tspan>
+                        <tspan class="rel">would be elected for</tspan>
+                        <tspan class="a2">full three-year terms</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">she</tspan>
+                        <tspan class="rel">explained to</tspan>
+                        <tspan class="a2">Poloff</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">terms</tspan>
+                        <tspan class="rel">would run for</tspan>
+                        <tspan class="a2">three years</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">FM Douste-Blazy</tspan>
+                        <tspan class="rel">was now particularly exercised about</tspan>
+                        <tspan class="a2">Iran</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">France</tspan>
+                        <tspan class="rel">had lost patience with</tspan>
+                        <tspan class="a2">Zimbabwe</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">this year</tspan>
+                        <tspan class="rel">marks the 30th anniversary of</tspan>
+                        <tspan class="a2">the launching of the so-called " Dirty War</tspan>
+                    </text>
+                    
+                    <text x="-200" y="170" class="sentence">
+                        <tspan class="a1">The draft</tspan>
+                        <tspan class="rel">would also be presented at</tspan>
+                        <tspan class="a2">the General Assembly</tspan>
+                    </text>
+                    
+                    <text x="-200" y="190" class="sentence">
+                        <tspan class="a1">Le Fraper</tspan>
+                        <tspan class="rel">otherwise discounted</tspan>
+                        <tspan class="a2">the impact of USG non-participation</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-288.9686 -146.1674)" 
+            class="black degree2" id="06PARIS4128">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-06-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PARIS4128.html">06PARIS4128</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">FRANCE WANTS HRC ACTION ON ENFORCED DISAPPEARANCES CONVENTION</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">she</tspan>
+                        <tspan class="rel">termed a key deliverable for</tspan>
+                        <tspan class="a2">the French Government</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(-145.3395 62.3025)" 
+            class="black degree3" id="06ROME1222">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-04-24
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ROME1222.html">06ROME1222</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ITALY SHARES U.S. VIEWS ON UN HUMAN RIGHTS COUNCIL VOTE</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">Poloff</tspan>
+                        <tspan class="rel">followed up</tspan>
+                        <tspan class="a2">April 11</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">center-left Italian government</tspan>
+                        <tspan class="rel">would be supportive of</tspan>
+                        <tspan class="a2">the same standards</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(24.6101 66.3236)" 
+            class="black degree2" id="06ROME1325">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-04
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ROME1325.html">06ROME1325</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ITALY WILL NOT VOTE FOR IRAN ON UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+        <g transform="translate(277.2125 -127.0961)" 
+            class="red degree42" id="06STATE20173">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE20173</text>
+            
+        </g>
+        
+        <g transform="translate(-248.5014 68.2606)" 
+            class="red degree24" id="06STATE55461">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE55461</text>
+            
+        </g>
+        
+        <g transform="translate(-318.7667 97.2344)" 
+            class="red degree18" id="06STATE57036">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE57036</text>
+            
+        </g>
+        
+        <g transform="translate(190.6290 110.4259)" 
+            class="red degree31" id="06STATE66050">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE66050</text>
+            
+        </g>
+        
+        <g transform="translate(370.3948 78.1441)" 
+            class="red degree14" id="06STATE68575">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE68575</text>
+            
+        </g>
+        
+        <g transform="translate(36.3187 290.0000)" 
+            class="red degree9" id="06STATE72724">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE72724</text>
+            
+        </g>
+        
+        <g transform="translate(-223.1830 -217.4279)" 
+            class="red degree17" id="06STATE94561">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                <text x="0" y="5">06STATE94561</text>
+            
+        </g>
+        
+        <g transform="translate(313.9986 -210.0286)" 
+            class="black degree2" id="06STOCKHOLM189">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-10
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06STOCKHOLM189.html">06STOCKHOLM189</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SWEDEN: DEMARCHE ON DEFEATING VENEZUELA IN THE 2006 ELECTION FOR A SEAT ON THE UNSC</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">the GoS</tspan>
+                        <tspan class="rel">may come out on</tspan>
+                        <tspan class="a2">the issue</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">Sweden</tspan>
+                        <tspan class="rel">was following closely developments in</tspan>
+                        <tspan class="a2">Venezuela</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">it</tspan>
+                        <tspan class="rel">also had a history with</tspan>
+                        <tspan class="a2">Venezuela</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">factor</tspan>
+                        <tspan class="rel">could come into</tspan>
+                        <tspan class="a2">play</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">the GoS</tspan>
+                        <tspan class="rel">would come out on</tspan>
+                        <tspan class="a2">the issue</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(390.0000 -161.9803)" 
+            class="black degree2" id="06STOCKHOLM214">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-02-16
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06STOCKHOLM214.html">06STOCKHOLM214</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">SWEDEN'S 2005 REPORTS ON HUMAN RIGHTS IN VENEZUELA AND GUATEMALA</tspan></text>
+                    </g>
+                
+                
+                    <g id="sentences"> 
+                    
+                    <text x="-200" y="50" class="sentence">
+                        <tspan class="a1">we</tspan>
+                        <tspan class="rel">also attach a copy of</tspan>
+                        <tspan class="a2">the Guatemala report</tspan>
+                    </text>
+                    
+                    <text x="-200" y="70" class="sentence">
+                        <tspan class="a1">active military personnel</tspan>
+                        <tspan class="rel">are placed in</tspan>
+                        <tspan class="a2">high government positions</tspan>
+                    </text>
+                    
+                    <text x="-200" y="90" class="sentence">
+                        <tspan class="a1">the aforementioned political polarization</tspan>
+                        <tspan class="rel">may well cause a further deterioration of</tspan>
+                        <tspan class="a2">the situation</tspan>
+                    </text>
+                    
+                    <text x="-200" y="110" class="sentence">
+                        <tspan class="a1">the National Endowment</tspan>
+                        <tspan class="rel">have been the subject of</tspan>
+                        <tspan class="a2">legal proceedings</tspan>
+                    </text>
+                    
+                    <text x="-200" y="130" class="sentence">
+                        <tspan class="a1">An increasing number of human rights crimes</tspan>
+                        <tspan class="rel">have been conducted by</tspan>
+                        <tspan class="a2">unclear alliances of civil servants</tspan>
+                    </text>
+                    
+                    <text x="-200" y="150" class="sentence">
+                        <tspan class="a1">the part of the peace agreement</tspan>
+                        <tspan class="rel">has been implemented</tspan>
+                        <tspan class="a2">the least</tspan>
+                    </text>
+                    
+                    </g>
+                
+            
+        </g>
+        
+        <g transform="translate(366.4878 145.4081)" 
+            class="black degree3" id="06TELAVIV1720">
+            <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
+            
+                 
+                <text x="0" y="-16" class="date">
+                    2006-05-02
+                </text>
+                
+                <text x="0" y="5" class="label">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1720.html">06TELAVIV1720</a>
+                
+                </text>
+                
+                    <g id="subject"> 
+                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL OPPOSES IRANIAN CANDIDACY FOR UN HUMAN RIGHTS COUNCIL</tspan></text>
+                    </g>
+                
+                
+            
+        </g>
+        
+    </g>
+</g>
+</svg>
+</body>
