@@ -51,7 +51,7 @@ for row in content:
     cable_ids.add(cable)
     for r in referrer.split('|'):
         if len(r.strip()) > 0:
-            edges.append((cable,r))
+            edges.append((cable.upper(),r.upper()))
             ref_ids.add(r)
             if ref_cnt.has_key(r):
                 ref_cnt[r] = ref_cnt[r] + 1
