@@ -1,6 +1,8 @@
 <html>
 <head>
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
           stroke: rgba(255,255,255,0.8); 
@@ -45,29 +47,6 @@
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
-        }
-
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,255,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,255,255,0.9);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(255,255,255,0.6);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(255,255,255,1);
         }
 
         #edges line { 
@@ -118,31 +97,44 @@
                 {% endif %}
                 <text x="0" y="5" class="label">
                 {% if v.uri %} 
-                    <a xlink:href="{{v.uri}}">{{ v.label }}</a>
+                    <a id="{{ v.label }}" xlink:href="{{v.uri}}">{{ v.label }}</a>
                 {% else %}
-                    {{ v.label }}
+                   <span id="{{ v.label }}">{{ v.label }}</span>
                 {% endif %}
                 </text>
-                {% if v.subject %}
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">{{ v.subject }}</tspan></text>
-                    </g>
-                {% endif %}
-                {% if v.sentences %}
-                    <g id="sentences"> 
-                    {% for s in v.sentences %}
-                    <text x="-200" y="{{ 30 + loop.index * 20 }}" class="sentence">
-                        <tspan class="a1">{{ s.a1 }}</tspan>
-                        <tspan class="rel">{{ s.rel }}</tspan>
-                        <tspan class="a2">{{ s.a2 }}</tspan>
-                    </text>
-                    {% endfor %}
-                    </g>
-                {% endif %}
             {% endif %}
         </g>
         {% endfor %}
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+{% for v in vertices %}
+    {% if v.class != 'red' %}
+        $('#{{v.label}}').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                {% if v.subject %}
+                    tip+='<h3/>{{v.subject|e}}</h3>';
+                {% endif %}
+                {% if v.sentences %}
+                    tip+='<ul>';
+                    {% for s in v.sentences %}
+                        {% if loop.index <= 5 %} {# kludge #}
+                            tip+='<li><span class="a1">{{s.a1|e}}</span> <span class="rel">{{s.rel|e}}</span> <span class="a2">{{s.a2|e}}</span></li>';
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    {% endif %}
+{% endfor %}
+});
+</script>
 </body>
