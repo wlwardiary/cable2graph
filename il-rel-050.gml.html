@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,82 +78,82 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-189.7731" y1="-43.1391" 
-              x2="-280.8362" y2="50.5093" />
+        <line x1="-226.5361" y1="-40.5870" 
+              x2="-274.2719" y2="-161.3744" />
     
-        <line x1="332.7179" y1="161.1679" 
-              x2="385.4314" y2="58.5320" />
+        <line x1="329.2984" y1="-104.0267" 
+              x2="385.6810" y2="13.7157" />
     
-        <line x1="9.1656" y1="-251.3587" 
-              x2="-106.6946" y2="-190.0183" />
+        <line x1="-127.4032" y1="228.4771" 
+              x2="-210.6861" y2="130.4676" />
     
-        <line x1="-132.4599" y1="222.8095" 
-              x2="-141.6708" y2="108.0467" />
+        <line x1="-57.2819" y1="-283.6829" 
+              x2="-116.4046" y2="-173.2564" />
     
-        <line x1="-307.1935" y1="173.2851" 
-              x2="-289.4615" y2="67.5409" />
+        <line x1="-390.0000" y1="-170.8984" 
+              x2="-287.9473" y2="-170.6945" />
     
-        <line x1="256.1990" y1="200.2401" 
-              x2="185.0762" y2="177.4223" />
+        <line x1="167.0375" y1="-107.4652" 
+              x2="224.1656" y2="-129.3734" />
     
-        <line x1="280.8536" y1="-25.2974" 
-              x2="234.7878" y2="-103.8235" />
+        <line x1="286.8156" y1="116.5687" 
+              x2="149.2320" y2="163.7706" />
     
-        <line x1="256.1990" y1="200.2401" 
-              x2="233.0623" y2="74.3252" />
+        <line x1="167.0375" y1="-107.4652" 
+              x2="141.6699" y2="-8.2422" />
     
-        <line x1="231.2550" y1="64.4898" 
-              x2="180.0758" y2="165.4480" />
+        <line x1="139.1929" y1="1.4462" 
+              x2="227.7586" y2="-124.7683" />
     
-        <line x1="96.9591" y1="290.0000" 
-              x2="169.9328" y2="182.6379" />
+        <line x1="218.3060" y1="-273.4732" 
+              x2="232.4274" y2="-142.8961" />
     
-        <line x1="256.1990" y1="200.2401" 
-              x2="323.8118" y2="165.7156" />
+        <line x1="167.0375" y1="-107.4652" 
+              x2="319.3006" y2="-104.2385" />
     
-        <line x1="-189.7731" y1="-43.1391" 
-              x2="-120.1604" y2="-176.4747" />
+        <line x1="-226.5361" y1="-40.5870" 
+              x2="-217.7341" y2="112.8636" />
     
-        <line x1="229.7279" y1="-112.4489" 
-              x2="141.7378" y2="-215.3248" />
+        <line x1="139.7732" y1="167.0158" 
+              x2="12.8807" y2="237.5515" />
     
-        <line x1="175.5542" y1="174.3674" 
-              x2="145.3016" y2="61.9371" />
+        <line x1="233.5026" y1="-132.9540" 
+              x2="272.4168" y2="-9.0255" />
     
-        <line x1="-149.7669" y1="-290.0000" 
-              x2="-118.6413" y2="-194.8437" />
+        <line x1="-295.2102" y1="214.1000" 
+              x2="-223.6613" y2="130.4467" />
     
-        <line x1="-390.0000" y1="25.1308" 
-              x2="-297.3361" y2="54.6439" />
+        <line x1="-247.2507" y1="-290.0000" 
+              x2="-275.4560" y2="-180.3591" />
     
-        <line x1="-189.7731" y1="-43.1391" 
-              x2="-267.3568" y2="-121.1532" />
+        <line x1="-226.5361" y1="-40.5870" 
+              x2="-334.9074" y2="11.1899" />
     
-        <line x1="231.2550" y1="64.4898" 
-              x2="229.8142" y2="-102.4492" />
+        <line x1="139.1929" y1="1.4462" 
+              x2="139.7382" y2="157.0158" />
     
-        <line x1="175.5542" y1="174.3674" 
-              x2="322.7530" y2="162.0048" />
+        <line x1="233.5026" y1="-132.9540" 
+              x2="319.7253" y2="-106.9174" />
     
-        <line x1="-142.4709" y1="98.0787" 
-              x2="-186.5969" y2="-33.6569" />
+        <line x1="-121.1247" y1="-164.4405" 
+              x2="-220.0548" y2="-48.2022" />
     
-        <line x1="229.7279" y1="-112.4489" 
-              x2="292.6671" y2="-208.1518" />
+        <line x1="139.7732" y1="167.0158" 
+              x2="157.5291" y2="280.1210" />
     
-        <line x1="280.8536" y1="-25.2974" 
-              x2="151.4226" y2="47.3842" />
+        <line x1="286.8156" y1="116.5687" 
+              x2="276.3905" y2="10.4672" />
     
-        <line x1="390.0000" y1="49.6366" 
-              x2="289.0977" y2="-19.6375" />
+        <line x1="390.0000" y1="22.7349" 
+              x2="294.2139" y2="109.8408" />
     
-        <line x1="9.1656" y1="-251.3587" 
-              x2="125.4830" y2="-225.1244" />
+        <line x1="-127.4032" y1="228.4771" 
+              x2="-5.8041" y2="241.3567" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(96.9591 290.0000)" 
+        <g transform="translate(218.3060 -273.4732)" 
             class="black degree2" id="06ANKARA3433">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -188,19 +164,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ANKARA3433.html">06ANKARA3433</a>
+                    <a id="06ANKARA3433" xlink:href="http://wikileaks.org/cable/2006/06/06ANKARA3433.html">06ANKARA3433</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH POLICE PASS WEAPONS SERIAL NUMBERS</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(256.1990 200.2401)" 
+        <g transform="translate(167.0375 -107.4652)" 
             class="black degree3" id="06ANKARA6720">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -211,47 +181,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ANKARA6720.html">06ANKARA6720</a>
+                    <a id="06ANKARA6720" xlink:href="http://wikileaks.org/cable/2006/12/06ANKARA6720.html">06ANKARA6720</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">FROM GLOCKS TO ROCKET LAUNCHERS: TURKISH SECURITY FORCES SEIZE ADDITIONAL US-ORIGIN WEAPONS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">an action request</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">These weapons</tspan>
-                        <tspan class="rel">add to</tspan>
-                        <tspan class="a2">the 663 Glock pistols</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the new list of recovered items</tspan>
-                        <tspan class="rel">includes</tspan>
-                        <tspan class="a2">rocket and grenade launchers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The complete list of items</tspan>
-                        <tspan class="rel">will be forwarded on</tspan>
-                        <tspan class="a2">NIPRNET</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-132.4599 222.8095)" 
+        <g transform="translate(-57.2819 -283.6829)" 
             class="black degree2" id="07ANKARA115">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -262,131 +198,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA115.html">07ANKARA115</a>
+                    <a id="07ANKARA115" xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA115.html">07ANKARA115</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">U/S BURNS' MEETING WITH PRIME MINISTER ERDOGAN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Erdogan</tspan>
-                        <tspan class="rel">also spoke appreciatively about</tspan>
-                        <tspan class="a2">the President 's new Iraq strategy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The discussion</tspan>
-                        <tspan class="rel">also touched briefly on</tspan>
-                        <tspan class="a2">Afghanistan and Turkish-Greek relations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Burns</tspan>
-                        <tspan class="rel">was accompanied by</tspan>
-                        <tspan class="a2">Ambassador</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Erdogan</tspan>
-                        <tspan class="rel">was joined by</tspan>
-                        <tspan class="a2">MPs Saban Disli</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">no such resolution</tspan>
-                        <tspan class="rel">passes in</tspan>
-                        <tspan class="a2">the US.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Other countries</tspan>
-                        <tspan class="rel">could join</tspan>
-                        <tspan class="a2">it</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The Administration</tspan>
-                        <tspan class="rel">will strongly oppose</tspan>
-                        <tspan class="a2">any Armenia resolution</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">had been doing</tspan>
-                        <tspan class="a2">its part</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">most of which</tspan>
-                        <tspan class="rel">will go to strengthening</tspan>
-                        <tspan class="a2">Afghani military and police and reconstruction</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">People</tspan>
-                        <tspan class="rel">expect</tspan>
-                        <tspan class="a2">results</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">understand</tspan>
-                        <tspan class="a2">Turkey 's frustration</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">the action</tspan>
-                        <tspan class="rel">sent an important message to</tspan>
-                        <tspan class="a2">the PKK.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Erdogan</tspan>
-                        <tspan class="rel">spoke positively of</tspan>
-                        <tspan class="a2">the President 's new Iraq strategy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">has repercussions for</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">would play</tspan>
-                        <tspan class="a2">a helpful role</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">had visited</tspan>
-                        <tspan class="a2">Athens several times</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">PM Karamanlis</tspan>
-                        <tspan class="rel">had paid</tspan>
-                        <tspan class="a2">no official visit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">12.This cable</tspan>
-                        <tspan class="rel">has been cleared by</tspan>
-                        <tspan class="a2">U/S Burns</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-390.0000 25.1308)" 
+        <g transform="translate(-247.2507 -290.0000)" 
             class="black degree2" id="07ANKARA132">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -397,119 +215,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA132.html">07ANKARA132</a>
+                    <a id="07ANKARA132" xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA132.html">07ANKARA132</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">U/S BURNS MEETING WITH TURKISH MFA U/S APAKAN -- IRAQ, IRAN, AND SYRIA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">U/S Burns</tspan>
-                        <tspan class="rel">was accompanied by</tspan>
-                        <tspan class="a2">the Ambassador</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Apakan</tspan>
-                        <tspan class="rel">is the issue of</tspan>
-                        <tspan class="a2">Iraq 's territorial integrity</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">should be guaranteed by</tspan>
-                        <tspan class="a2">Iraq 's neighbors</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">FM Gul</tspan>
-                        <tspan class="rel">had conveyed this to</tspan>
-                        <tspan class="a2">parliament</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">these connections</tspan>
-                        <tspan class="rel">will help ensure the success of</tspan>
-                        <tspan class="a2">Turkey 's Iraq agenda</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Apakan</tspan>
-                        <tspan class="rel">told</tspan>
-                        <tspan class="a2">Burns</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Turkey 's view</tspan>
-                        <tspan class="rel">is not</tspan>
-                        <tspan class="a2">an irridentist one</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The referendum</tspan>
-                        <tspan class="rel">would unleash</tspan>
-                        <tspan class="a2">further ethnic turmoil</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Postponement</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">the best option</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Iran</tspan>
-                        <tspan class="rel">does not accept</tspan>
-                        <tspan class="a2">the " common sense " approach</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Quiet diplomacy</tspan>
-                        <tspan class="rel">is more effective than</tspan>
-                        <tspan class="a2">public statements</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">The Shi'a base of the revolution</tspan>
-                        <tspan class="rel">has "lost</tspan>
-                        <tspan class="a2">its shine</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Apakan</tspan>
-                        <tspan class="rel">welcomed the efforts of</tspan>
-                        <tspan class="a2">General Ralston</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">the threat</tspan>
-                        <tspan class="rel">is to</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">The U.S.</tspan>
-                        <tspan class="rel">is carefully considering concrete actions against</tspan>
-                        <tspan class="a2">the PKK</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">This cable</tspan>
-                        <tspan class="rel">has been cleared by</tspan>
-                        <tspan class="a2">U/S Burns</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-307.1935 173.2851)" 
+        <g transform="translate(-390.0000 -170.8984)" 
             class="black degree2" id="07ANKARA136">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -520,131 +232,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA136.html">07ANKARA136</a>
+                    <a id="07ANKARA136" xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA136.html">07ANKARA136</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">U/S BURNS' MEETING WITH TURKISH FM GUL</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">expressed support for</tspan>
-                        <tspan class="a2">President Bush 's new Iraq strategy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">PM Erdogan</tspan>
-                        <tspan class="rel">had made</tspan>
-                        <tspan class="a2">a statement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">visits Washington in</tspan>
-                        <tspan class="a2">February</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">the deteriorating security situation</tspan>
-                        <tspan class="rel">had overshadowed</tspan>
-                        <tspan class="a2">this</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">expressed support for</tspan>
-                        <tspan class="a2">President Bush 's new Iraq strategy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Kirkuk</tspan>
-                        <tspan class="rel">is a smaller version of</tspan>
-                        <tspan class="a2">Iraq</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">can do much more in</tspan>
-                        <tspan class="a2">northern Iraq</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">visits in</tspan>
-                        <tspan class="a2">10-12 days</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">could not use</tspan>
-                        <tspan class="a2">such weapons</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">has unlimited room for</tspan>
-                        <tspan class="a2">maneuver</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">was an important offer by</tspan>
-                        <tspan class="a2">the U.S.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Some Europeans</tspan>
-                        <tspan class="rel">fear</tspan>
-                        <tspan class="a2">a Russian veto</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">have very similar views of</tspan>
-                        <tspan class="a2">Kosovo</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">was also important to</tspan>
-                        <tspan class="a2">the USG</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">a foundations law</tspan>
-                        <tspan class="rel">provided for</tspan>
-                        <tspan class="a2">restitution of many Greek Orthodox properties</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Greece</tspan>
-                        <tspan class="rel">would do more on</tspan>
-                        <tspan class="a2">western Thrace</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">Gul</tspan>
-                        <tspan class="rel">was accompanied by</tspan>
-                        <tspan class="a2">Deputy U/S Akgunay</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">U/S Burns</tspan>
-                        <tspan class="rel">has approved</tspan>
-                        <tspan class="a2">this cable</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(231.2550 64.4898)" 
+        <g transform="translate(139.1929 1.4462)" 
             class="black degree3" id="07ANKARA1464">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -655,41 +249,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ANKARA1464.html">07ANKARA1464</a>
+                    <a id="07ANKARA1464" xlink:href="http://wikileaks.org/cable/2007/06/07ANKARA1464.html">07ANKARA1464</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH MILITARY RAISES CONCERNS WITH US WEAPONS SALES TO IRAQ AND LACK OF ADEQUATE IRAQI SAFEGUARDS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">an action request</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Large-scale black market sales</tspan>
-                        <tspan class="rel">have apparently supplied</tspan>
-                        <tspan class="a2">the PKK</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Glock pistols</tspan>
-                        <tspan class="rel">have also been</tspan>
-                        <tspan class="a2">an exceedingly difficult problem</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-142.4709 98.0787)" 
+        <g transform="translate(-121.1247 -164.4405)" 
             class="black degree2" id="07ANKARA150">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -700,19 +266,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA150.html">07ANKARA150</a>
+                    <a id="07ANKARA150" xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA150.html">07ANKARA150</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY OFERS TO HOST MIDDLE EAST PEACE PROCESS SUMMIT/TRILAT</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(175.5542 174.3674)" 
+        <g transform="translate(233.5026 -132.9540)" 
             class="black degree5" id="07ANKARA1866">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -723,59 +283,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ANKARA1866.html">07ANKARA1866</a>
+                    <a id="07ANKARA1866" xlink:href="http://wikileaks.org/cable/2007/07/07ANKARA1866.html">07ANKARA1866</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SCENESETTER FOR THE VISIT OF DOD GENERAL COUNSEL HAYNES TO ANKARA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">you</tspan>
-                        <tspan class="rel">provide a broad overview of</tspan>
-                        <tspan class="a2">the facts</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Such weapons</tspan>
-                        <tspan class="rel">have been used in</tspan>
-                        <tspan class="a2">high profile murders</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">have denied</tspan>
-                        <tspan class="a2">the allegation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">the PKK 's arm</tspan>
-                        <tspan class="rel">operates against</tspan>
-                        <tspan class="a2">Iran</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">have also denied contact with</tspan>
-                        <tspan class="a2">PJAK.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the U.S.</tspan>
-                        <tspan class="rel">deliberately gives weapons to</tspan>
-                        <tspan class="a2">the PKK</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(332.7179 161.1679)" 
+        <g transform="translate(329.2984 -104.0267)" 
             class="black degree3" id="07ANKARA1948">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -786,65 +300,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ANKARA1948.html">07ANKARA1948</a>
+                    <a id="07ANKARA1948" xlink:href="http://wikileaks.org/cable/2007/07/07ANKARA1948.html">07ANKARA1948</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY/IRAQ: DOD GENERAL COUNSEL HAYNES BRIEFS TURKISH OFFICIALS ON IRAQ ARMS INVESTIGATION</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Ambassador</tspan>
-                        <tspan class="rel">rejected</tspan>
-                        <tspan class="a2">these allegations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">accountability procedures</tspan>
-                        <tspan class="rel">are already in</tspan>
-                        <tspan class="a2">place</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the KDP</tspan>
-                        <tspan class="rel">have a hand in</tspan>
-                        <tspan class="a2">this trade</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">would like details of</tspan>
-                        <tspan class="a2">our new procedures</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">The IG 's effort</tspan>
-                        <tspan class="rel">will address</tspan>
-                        <tspan class="a2">accountability practices</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">8. D/CHOD GEN Saygun</tspan>
-                        <tspan class="rel">expressed appreciation for</tspan>
-                        <tspan class="a2">the information</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Both sides</tspan>
-                        <tspan class="rel">pledged to continue</tspan>
-                        <tspan class="a2">close cooperation</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(390.0000 49.6366)" 
+        <g transform="translate(390.0000 22.7349)" 
             class="black degree2" id="07ANKARA2035">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -855,19 +317,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2035.html">07ANKARA2035</a>
+                    <a id="07ANKARA2035" xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2035.html">07ANKARA2035</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH GENERAL STAFF PROVIDES LIST OF SERIAL NUMBERS OF M-16 RIFLES SEIZED FROM PKK</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-149.7669 -290.0000)" 
+        <g transform="translate(-295.2102 214.1000)" 
             class="black degree2" id="07ANKARA2193">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -878,47 +334,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2193.html">07ANKARA2193</a>
+                    <a id="07ANKARA2193" xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2193.html">07ANKARA2193</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY SHOCKED BY ADL REVERSAL</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This controversy</tspan>
-                        <tspan class="rel">brings to</tspan>
-                        <tspan class="a2">the surface</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The result</tspan>
-                        <tspan class="rel">was</tspan>
-                        <tspan class="a2">a second statement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">mainstream commentators</tspan>
-                        <tspan class="rel">demonstrated</tspan>
-                        <tspan class="a2">considerable introspection</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Other papers</tspan>
-                        <tspan class="rel">criticize</tspan>
-                        <tspan class="a2">Turkish foreign policy</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-189.7731 -43.1391)" 
+        <g transform="translate(-226.5361 -40.5870)" 
             class="black degree5" id="07ANKARA222">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -929,143 +351,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ANKARA222.html">07ANKARA222</a>
+                    <a id="07ANKARA222" xlink:href="http://wikileaks.org/cable/2007/02/07ANKARA222.html">07ANKARA222</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH-ISRAELI RELATIONS: VOLATILE BUT RESILIENT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Two parties</tspan>
-                        <tspan class="rel">have known each other for</tspan>
-                        <tspan class="a2">years</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the warm bilateral ties</tspan>
-                        <tspan class="rel">developed in</tspan>
-                        <tspan class="a2">the 1990s</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the vast majority of Turks</tspan>
-                        <tspan class="rel">still viewed</tspan>
-                        <tspan class="a2">Israeli actions vis-a-vis Palestinians</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The bilateral relationship</tspan>
-                        <tspan class="rel">improved dramatically in</tspan>
-                        <tspan class="a2">the 1990s</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">7. of Recep Tayip Erdogan</tspan>
-                        <tspan class="rel">had a further impact on</tspan>
-                        <tspan class="a2">the Turkish-Israeli relationship</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">The AKP</tspan>
-                        <tspan class="rel">believed</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">the AKP</tspan>
-                        <tspan class="rel">is ideologically opposed to</tspan>
-                        <tspan class="a2">Israel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Recent history</tspan>
-                        <tspan class="rel">supports</tspan>
-                        <tspan class="a2">that conclusion</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">The relationship</tspan>
-                        <tspan class="rel">was tested in</tspan>
-                        <tspan class="a2">2004</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">then-Israeli Minister of Industry and Trade Ehud Olmert</tspan>
-                        <tspan class="rel">was visiting Turkey for</tspan>
-                        <tspan class="a2">a meeting of the Turkey-Israel Joint Economic Council</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">PM Erdogan</tspan>
-                        <tspan class="rel">visited Israel in</tspan>
-                        <tspan class="a2">May 2005</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">new Israeli FM Livni</tspan>
-                        <tspan class="rel">was visiting Turkey on</tspan>
-                        <tspan class="a2">her first official overseas trip</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">cannot impact</tspan>
-                        <tspan class="a2">the basis</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">the bilateral trade balance</tspan>
-                        <tspan class="rel">was generally tilted in</tspan>
-                        <tspan class="a2">favor of Israel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">the balance</tspan>
-                        <tspan class="rel">has turned dramatically in</tspan>
-                        <tspan class="a2">Turkey 's favor</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Turkish officials</tspan>
-                        <tspan class="rel">remain committed to</tspan>
-                        <tspan class="a2">the project</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">'s</tspan>
-                        <tspan class="a2">our responsibility</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">the pragmatic relationship</tspan>
-                        <tspan class="rel">is on</tspan>
-                        <tspan class="a2">track</tspan>
-                    </text>
-                    
-                    <text x="-200" y="410" class="sentence">
-                        <tspan class="a1">Turkish-Israeli ties</tspan>
-                        <tspan class="rel">require a degree of</tspan>
-                        <tspan class="a2">compromise</tspan>
-                    </text>
-                    
-                    <text x="-200" y="430" class="sentence">
-                        <tspan class="a1">the GOT</tspan>
-                        <tspan class="rel">expressed concern about</tspan>
-                        <tspan class="a2">the decision</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(280.8536 -25.2974)" 
+        <g transform="translate(286.8156 116.5687)" 
             class="black degree3" id="07ANKARA2247">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1076,19 +368,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2247.html">07ANKARA2247</a>
+                    <a id="07ANKARA2247" xlink:href="http://wikileaks.org/cable/2007/08/07ANKARA2247.html">07ANKARA2247</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA UNDERSECRETARY APAKAN INQUIRY ABOUT M-16S SEIZED FROM PKK</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(9.1656 -251.3587)" 
+        <g transform="translate(-127.4032 228.4771)" 
             class="red degree2" id="07ANKARA2340">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1096,7 +382,7 @@
             
         </g>
         
-        <g transform="translate(-274.4083 -128.2438)" 
+        <g transform="translate(-343.9305 15.5009)" 
             class="black degree2" id="07ANKARA246">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1107,41 +393,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ANKARA246.html">07ANKARA246</a>
+                    <a id="07ANKARA246" xlink:href="http://wikileaks.org/cable/2007/02/07ANKARA246.html">07ANKARA246</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY: SARG FM MUALLEM'S VISIT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Muallem</tspan>
-                        <tspan class="rel">met with</tspan>
-                        <tspan class="a2">his counterpart</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the government</tspan>
-                        <tspan class="rel">takes on</tspan>
-                        <tspan class="a2">a clearly national vice religious character</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Fatah and Hamas</tspan>
-                        <tspan class="rel">reach an understanding on</tspan>
-                        <tspan class="a2">a Palestinian government of national unity</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(142.7033 52.2805)" 
+        <g transform="translate(275.4126 0.5152)" 
             class="black degree3" id="07ANKARA2469">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1152,59 +410,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/10/07ANKARA2469.html">07ANKARA2469</a>
+                    <a id="07ANKARA2469" xlink:href="http://wikileaks.org/cable/2007/10/07ANKARA2469.html">07ANKARA2469</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY/IRAQ: DEFENSE AND STATE INSPECTORS GENERAL BRIEF TURKISH OFFICIALS ON EFFORT TO STRENGTHEN CONTROLS OVER U.S. WEAPONS IN IRAQ AND AFGHANISTAN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">any communication barriers</tspan>
-                        <tspan class="rel">may exist among</tspan>
-                        <tspan class="a2">various USG agencies</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">was alert to</tspan>
-                        <tspan class="a2">that possibility</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">A number of these weapons</tspan>
-                        <tspan class="rel">have been found recently during</tspan>
-                        <tspan class="a2">Turkish police operations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">expressed deep appreciation for</tspan>
-                        <tspan class="a2">the visit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">would take</tspan>
-                        <tspan class="a2">time</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">This cable</tspan>
-                        <tspan class="rel">has been cleared by</tspan>
-                        <tspan class="a2">Inspectors General Kicklighter</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-115.5324 -185.3393)" 
+        <g transform="translate(-217.1614 122.8472)" 
             class="black degree3" id="07ANKARA2584">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1215,95 +427,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/10/07ANKARA2584.html">07ANKARA2584</a>
+                    <a id="07ANKARA2584" xlink:href="http://wikileaks.org/cable/2007/10/07ANKARA2584.html">07ANKARA2584</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY: REENGAGING ISRAEL</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">bilateral relations</tspan>
-                        <tspan class="rel">seemed to be on</tspan>
-                        <tspan class="a2">the mend</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Olmert</tspan>
-                        <tspan class="rel">underscored the continued strength of</tspan>
-                        <tspan class="a2">the bilateral relationship</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">left off in</tspan>
-                        <tspan class="a2">April</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">A FM Livni visit</tspan>
-                        <tspan class="rel">may be in</tspan>
-                        <tspan class="a2">the works</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">The relationship</tspan>
-                        <tspan class="rel">is not out of</tspan>
-                        <tspan class="a2">the woods</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">a positive opinion of Israel</tspan>
-                        <tspan class="rel">has dropped to</tspan>
-                        <tspan class="a2">five percent</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Peres</tspan>
-                        <tspan class="rel">personally called</tspan>
-                        <tspan class="a2">ADL National Director Abraham Foxman</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">a second statement</tspan>
-                        <tspan class="rel">argued against</tspan>
-                        <tspan class="a2">a congressional resolution</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">the GOT</tspan>
-                        <tspan class="rel">showed</tspan>
-                        <tspan class="a2">great restraint</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">any actions</tspan>
-                        <tspan class="rel">would escalate</tspan>
-                        <tspan class="a2">tensions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">the GOI</tspan>
-                        <tspan class="rel">has raised the price of</tspan>
-                        <tspan class="a2">bad behavior</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">This pragmatism</tspan>
-                        <tspan class="rel">represents</tspan>
-                        <tspan class="a2">a maturation of the bilateral relationship</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(229.7279 -112.4489)" 
+        <g transform="translate(139.7732 167.0158)" 
             class="black degree7" id="07ANKARA2695">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1314,29 +444,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ANKARA2695.html">07ANKARA2695</a>
+                    <a id="07ANKARA2695" xlink:href="http://wikileaks.org/cable/2007/11/07ANKARA2695.html">07ANKARA2695</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEALING WITH TURKISH SUSPICIONS REGARDING US ARMS SHIPMENTS TO IRAQ</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">must be prepared to address</tspan>
-                        <tspan class="a2">reasonable Turkish concerns</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(135.2379 -222.9243)" 
+        <g transform="translate(4.1403 242.4100)" 
             class="black degree3" id="07ANKARA2747">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1347,29 +461,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ANKARA2747.html">07ANKARA2747</a>
+                    <a id="07ANKARA2747" xlink:href="http://wikileaks.org/cable/2007/11/07ANKARA2747.html">07ANKARA2747</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY WILL CONSIDER REQUEST TO INSPECT FLIGHTS BETWEEN IRAN AND SYRIA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">GOT regulations</tspan>
-                        <tspan class="rel">require a 10-day advance notice for</tspan>
-                        <tspan class="a2">overflight requests</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(298.1618 -216.5069)" 
+        <g transform="translate(159.0800 290.0000)" 
             class="red degree2" id="07STATE108929">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1377,7 +475,7 @@
             
         </g>
         
-        <g transform="translate(-287.8077 57.6786)" 
+        <g transform="translate(-277.9474 -170.6745)" 
             class="black degree3" id="07TELAVIV319">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1388,35 +486,712 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/01/07TELAVIV319.html">07TELAVIV319</a>
+                    <a id="07TELAVIV319" xlink:href="http://wikileaks.org/cable/2007/01/07TELAVIV319.html">07TELAVIV319</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH AMBASSADOR ON HAMAS, SYRIA, IRAQI KURDS, EREZ, AND A PIPELINE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">also urged</tspan>
-                        <tspan class="a2">postponement of the Kirkuk referendum</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Tan</tspan>
-                        <tspan class="rel">reiterated concerns about</tspan>
-                        <tspan class="a2">the upcoming Kirkuk referendum</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#06ANKARA3433').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH POLICE PASS WEAPONS SERIAL NUMBERS</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06ANKARA6720').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>FROM GLOCKS TO ROCKET LAUNCHERS: TURKISH SECURITY FORCES SEIZE ADDITIONAL US-ORIGIN WEAPONS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is</span> <span class="a2">an action request</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">These weapons</span> <span class="rel">add to</span> <span class="a2">the 663 Glock pistols</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the new list of recovered items</span> <span class="rel">includes</span> <span class="a2">rocket and grenade launchers</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The complete list of items</span> <span class="rel">will be forwarded on</span> <span class="a2">NIPRNET</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA115').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>U/S BURNS&#39; MEETING WITH PRIME MINISTER ERDOGAN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Erdogan</span> <span class="rel">also spoke appreciatively about</span> <span class="a2">the President &#39;s new Iraq strategy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The discussion</span> <span class="rel">also touched briefly on</span> <span class="a2">Afghanistan and Turkish-Greek relations</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Burns</span> <span class="rel">was accompanied by</span> <span class="a2">Ambassador</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Erdogan</span> <span class="rel">was joined by</span> <span class="a2">MPs Saban Disli</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">no such resolution</span> <span class="rel">passes in</span> <span class="a2">the US.</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA132').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>U/S BURNS MEETING WITH TURKISH MFA U/S APAKAN -- IRAQ, IRAN, AND SYRIA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">U/S Burns</span> <span class="rel">was accompanied by</span> <span class="a2">the Ambassador</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Apakan</span> <span class="rel">is the issue of</span> <span class="a2">Iraq &#39;s territorial integrity</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">It</span> <span class="rel">should be guaranteed by</span> <span class="a2">Iraq &#39;s neighbors</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">FM Gul</span> <span class="rel">had conveyed this to</span> <span class="a2">parliament</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">these connections</span> <span class="rel">will help ensure the success of</span> <span class="a2">Turkey &#39;s Iraq agenda</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA136').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>U/S BURNS&#39; MEETING WITH TURKISH FM GUL</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">expressed support for</span> <span class="a2">President Bush &#39;s new Iraq strategy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">PM Erdogan</span> <span class="rel">had made</span> <span class="a2">a statement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">visits Washington in</span> <span class="a2">February</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the deteriorating security situation</span> <span class="rel">had overshadowed</span> <span class="a2">this</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">expressed support for</span> <span class="a2">President Bush &#39;s new Iraq strategy</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA1464').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH MILITARY RAISES CONCERNS WITH US WEAPONS SALES TO IRAQ AND LACK OF ADEQUATE IRAQI SAFEGUARDS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is</span> <span class="a2">an action request</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Large-scale black market sales</span> <span class="rel">have apparently supplied</span> <span class="a2">the PKK</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Glock pistols</span> <span class="rel">have also been</span> <span class="a2">an exceedingly difficult problem</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA150').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY OFERS TO HOST MIDDLE EAST PEACE PROCESS SUMMIT/TRILAT</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA1866').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SCENESETTER FOR THE VISIT OF DOD GENERAL COUNSEL HAYNES TO ANKARA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">you</span> <span class="rel">provide a broad overview of</span> <span class="a2">the facts</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Such weapons</span> <span class="rel">have been used in</span> <span class="a2">high profile murders</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">We</span> <span class="rel">have denied</span> <span class="a2">the allegation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the PKK &#39;s arm</span> <span class="rel">operates against</span> <span class="a2">Iran</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">We</span> <span class="rel">have also denied contact with</span> <span class="a2">PJAK.</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA1948').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY/IRAQ: DOD GENERAL COUNSEL HAYNES BRIEFS TURKISH OFFICIALS ON IRAQ ARMS INVESTIGATION</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Ambassador</span> <span class="rel">rejected</span> <span class="a2">these allegations</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">accountability procedures</span> <span class="rel">are already in</span> <span class="a2">place</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the KDP</span> <span class="rel">have a hand in</span> <span class="a2">this trade</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Turkey</span> <span class="rel">would like details of</span> <span class="a2">our new procedures</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The IG &#39;s effort</span> <span class="rel">will address</span> <span class="a2">accountability practices</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2035').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH GENERAL STAFF PROVIDES LIST OF SERIAL NUMBERS OF M-16 RIFLES SEIZED FROM PKK</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2193').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY SHOCKED BY ADL REVERSAL</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This controversy</span> <span class="rel">brings to</span> <span class="a2">the surface</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The result</span> <span class="rel">was</span> <span class="a2">a second statement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">mainstream commentators</span> <span class="rel">demonstrated</span> <span class="a2">considerable introspection</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Other papers</span> <span class="rel">criticize</span> <span class="a2">Turkish foreign policy</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA222').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH-ISRAELI RELATIONS: VOLATILE BUT RESILIENT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Two parties</span> <span class="rel">have known each other for</span> <span class="a2">years</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the warm bilateral ties</span> <span class="rel">developed in</span> <span class="a2">the 1990s</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the vast majority of Turks</span> <span class="rel">still viewed</span> <span class="a2">Israeli actions vis-a-vis Palestinians</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The bilateral relationship</span> <span class="rel">improved dramatically in</span> <span class="a2">the 1990s</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">7. of Recep Tayip Erdogan</span> <span class="rel">had a further impact on</span> <span class="a2">the Turkish-Israeli relationship</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2247').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>MFA UNDERSECRETARY APAKAN INQUIRY ABOUT M-16S SEIZED FROM PKK</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#07ANKARA246').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY: SARG FM MUALLEM&#39;S VISIT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Muallem</span> <span class="rel">met with</span> <span class="a2">his counterpart</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the government</span> <span class="rel">takes on</span> <span class="a2">a clearly national vice religious character</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Fatah and Hamas</span> <span class="rel">reach an understanding on</span> <span class="a2">a Palestinian government of national unity</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2469').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY/IRAQ: DEFENSE AND STATE INSPECTORS GENERAL BRIEF TURKISH OFFICIALS ON EFFORT TO STRENGTHEN CONTROLS OVER U.S. WEAPONS IN IRAQ AND AFGHANISTAN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">any communication barriers</span> <span class="rel">may exist among</span> <span class="a2">various USG agencies</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">was alert to</span> <span class="a2">that possibility</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">A number of these weapons</span> <span class="rel">have been found recently during</span> <span class="a2">Turkish police operations</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">expressed deep appreciation for</span> <span class="a2">the visit</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">would take</span> <span class="a2">time</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2584').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY: REENGAGING ISRAEL</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">bilateral relations</span> <span class="rel">seemed to be on</span> <span class="a2">the mend</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Olmert</span> <span class="rel">underscored the continued strength of</span> <span class="a2">the bilateral relationship</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">left off in</span> <span class="a2">April</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">A FM Livni visit</span> <span class="rel">may be in</span> <span class="a2">the works</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The relationship</span> <span class="rel">is not out of</span> <span class="a2">the woods</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2695').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>DEALING WITH TURKISH SUSPICIONS REGARDING US ARMS SHIPMENTS TO IRAQ</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">we</span> <span class="rel">must be prepared to address</span> <span class="a2">reasonable Turkish concerns</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07ANKARA2747').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY WILL CONSIDER REQUEST TO INSPECT FLIGHTS BETWEEN IRAN AND SYRIA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">GOT regulations</span> <span class="rel">require a 10-day advance notice for</span> <span class="a2">overflight requests</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#07TELAVIV319').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH AMBASSADOR ON HAMAS, SYRIA, IRAQI KURDS, EREZ, AND A PIPELINE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">also urged</span> <span class="a2">postponement of the Kirkuk referendum</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Tan</span> <span class="rel">reiterated concerns about</span> <span class="a2">the upcoming Kirkuk referendum</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>

@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,49 +78,49 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="290.8638" y1="187.1280" 
-              x2="274.5527" y2="280.1503" />
+        <line x1="-338.8843" y1="150.9008" 
+              x2="-339.6251" y2="245.2324" />
     
-        <line x1="-12.0294" y1="176.9941" 
-              x2="-159.8424" y2="122.9188" />
+        <line x1="-254.3543" y1="-56.4446" 
+              x2="-146.9490" y2="-149.7386" />
     
-        <line x1="173.2706" y1="109.3837" 
-              x2="290.7152" y2="11.1098" />
+        <line x1="-204.5933" y1="87.7418" 
+              x2="-82.8807" y2="190.9335" />
     
-        <line x1="173.2706" y1="109.3837" 
-              x2="-2.6352" y2="173.5664" />
+        <line x1="-204.5933" y1="87.7418" 
+              x2="-251.0920" y2="-46.9918" />
     
-        <line x1="131.5210" y1="-229.7636" 
-              x2="-16.5190" y2="-197.9275" />
+        <line x1="273.6699" y1="147.0741" 
+              x2="257.9694" y2="33.8720" />
     
-        <line x1="390.0000" y1="-84.6473" 
-              x2="305.5439" y2="-2.2892" />
+        <line x1="23.7491" y1="290.0000" 
+              x2="-67.9499" y2="204.2313" />
     
-        <line x1="173.2706" y1="109.3837" 
-              x2="282.5220" y2="181.6130" />
+        <line x1="-204.5933" y1="87.7418" 
+              x2="-329.8351" y2="146.6448" />
     
-        <line x1="-249.5873" y1="4.3009" 
-              x2="-174.9552" y2="111.2817" />
+        <line x1="33.6803" y1="-180.7353" 
+              x2="-129.4976" y2="-157.6944" />
     
-        <line x1="-84.8183" y1="-290.0000" 
-              x2="-31.5736" y2="-204.3186" />
+        <line x1="390.0000" y1="-6.8416" 
+              x2="266.3391" y2="21.7166" />
     
-        <line x1="-12.0294" y1="176.9941" 
-              x2="-78.0470" y2="280.4007" />
+        <line x1="-254.3543" y1="-56.4446" 
+              x2="-380.8905" y2="-113.7460" />
     
-        <line x1="-249.5873" y1="4.3009" 
-              x2="-380.2329" y2="32.9989" />
+        <line x1="33.6803" y1="-180.7353" 
+              x2="41.2737" y2="-280.0291" />
     
-        <line x1="-167.3975" y1="-113.3728" 
-              x2="-34.9294" y2="-190.7798" />
+        <line x1="170.7887" y1="-94.5497" 
+              x2="250.7312" y2="15.8669" />
     
-        <line x1="-249.5873" y1="4.3009" 
-              x2="-173.1236" y2="-105.1745" />
+        <line x1="33.6803" y1="-180.7353" 
+              x2="162.3225" y2="-99.8716" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(390.0000 -84.6473)" 
+        <g transform="translate(23.7491 290.0000)" 
             class="black degree2" id="08JERUSALEM1340">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -155,19 +131,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/07/08JERUSALEM1340.html">08JERUSALEM1340</a>
+                    <a id="08JERUSALEM1340" xlink:href="http://wikileaks.org/cable/2008/07/08JERUSALEM1340.html">08JERUSALEM1340</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI ARAB VISITS TO JENIN HAVE MINIMAL ECONOMIC IMPACT</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(173.2706 109.3837)" 
+        <g transform="translate(-204.5933 87.7418)" 
             class="black degree4" id="08JERUSALEM1488">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -178,53 +148,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1488.html">08JERUSALEM1488</a>
+                    <a id="08JERUSALEM1488" xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1488.html">08JERUSALEM1488</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SHAVEI SHOMRON OPENED, IMPROVING SOME, BUT NOT ALL MOVEMENT IN THE NORTHERN WEST BANK</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the opening</tspan>
-                        <tspan class="rel">will not noticeably impact</tspan>
-                        <tspan class="a2">the area 's economy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">ConGenOffs</tspan>
-                        <tspan class="rel">observed</tspan>
-                        <tspan class="a2">23 private cars</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">IDF soldiers</tspan>
-                        <tspan class="rel">were present at</tspan>
-                        <tspan class="a2">the IDF base</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">two commercial trucks</tspan>
-                        <tspan class="rel">will take advantage of</tspan>
-                        <tspan class="a2">this opening</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the roadblock</tspan>
-                        <tspan class="rel">does not affect access to</tspan>
-                        <tspan class="a2">the historic commercial center of Nablus</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(298.3844 4.6924)" 
+        <g transform="translate(-75.2532 197.4004)" 
             class="black degree3" id="08JERUSALEM1498">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -235,29 +165,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1498.html">08JERUSALEM1498</a>
+                    <a id="08JERUSALEM1498" xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1498.html">08JERUSALEM1498</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">"POSITIVE BUT INCOMPLETE" ISRAELI-PALESTINIAN SECURITY COORDINATION MEETING IN JENIN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Israeli representatives</tspan>
-                        <tspan class="rel">were</tspan>
-                        <tspan class="a2">BG Noam Tibon</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(290.8638 187.1280)" 
+        <g transform="translate(-338.8843 150.9008)" 
             class="black degree3" id="08JERUSALEM1559">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -268,41 +182,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1559.html">08JERUSALEM1559</a>
+                    <a id="08JERUSALEM1559" xlink:href="http://wikileaks.org/cable/2008/08/08JERUSALEM1559.html">08JERUSALEM1559</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">BIR NABALA CHECKPOINT REMOVED; IMPROVES TRAVEL BETWEEN NEARBY VILLAGES AND RAMALLAH</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">remnants of lanes and booths</tspan>
-                        <tspan class="rel">were on</tspan>
-                        <tspan class="a2">the roadside</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">traffic</tspan>
-                        <tspan class="rel">flowed freely to</tspan>
-                        <tspan class="a2">the north</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the checkpoint</tspan>
-                        <tspan class="rel">was removed</tspan>
-                        <tspan class="a2">August 21</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-12.0294 176.9941)" 
+        <g transform="translate(-254.3543 -56.4446)" 
             class="black degree3" id="08JERUSALEM2200">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -313,41 +199,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2200.html">08JERUSALEM2200</a>
+                    <a id="08JERUSALEM2200" xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2200.html">08JERUSALEM2200</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI PREPARES NEW CHECKPOINT IN NORTHERN WEST BANK</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The new installation</tspan>
-                        <tspan class="rel">is only a few kilometers south of</tspan>
-                        <tspan class="a2">the Shavei Shomeron checkpoint</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The gates</tspan>
-                        <tspan class="rel">were in</tspan>
-                        <tspan class="a2">an open position</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the checkpoint installation</tspan>
-                        <tspan class="rel">began on</tspan>
-                        <tspan class="a2">December</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(272.8255 290.0000)" 
+        <g transform="translate(-339.7036 255.2321)" 
             class="black degree2" id="08JERUSALEM565">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -358,29 +216,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM565.html">08JERUSALEM565</a>
+                    <a id="08JERUSALEM565" xlink:href="http://wikileaks.org/cable/2008/04/08JERUSALEM565.html">08JERUSALEM565</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">REMOVAL OF 47 ROADBLOCKS; PALESTINIANS DISMISS CHANGES AS UNIMPORTANT OR ILLUSORY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">PM Salam Fayyad</tspan>
-                        <tspan class="rel">downplayed the impact of</tspan>
-                        <tspan class="a2">the removed obstacles</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-83.4281 288.8295)" 
+        <g transform="translate(-390.0000 -117.8712)" 
             class="black degree2" id="08TELAVIV2744">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -391,29 +233,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2008/12/08TELAVIV2744.html">08TELAVIV2744</a>
+                    <a id="08TELAVIV2744" xlink:href="http://wikileaks.org/cable/2008/12/08TELAVIV2744.html">08TELAVIV2744</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI RELAXES RESTRICTIONS AROUND NABLUS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Singer</tspan>
-                        <tspan class="rel">said</tspan>
-                        <tspan class="a2">the Huwwara</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-249.5873 4.3009)" 
+        <g transform="translate(33.6803 -180.7353)" 
             class="black degree6" id="09JERUSALEM1079">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -424,59 +250,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1079.html">09JERUSALEM1079</a>
+                    <a id="09JERUSALEM1079" xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1079.html">09JERUSALEM1079</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IDF EASES ACCESS AND MOVEMENT IN THE WEST BANK, BUT MANY OBSTACLES REMAIN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">these measures</tspan>
-                        <tspan class="rel">have been accompanied by</tspan>
-                        <tspan class="a2">other restrictive actions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the IDF Central Command</tspan>
-                        <tspan class="rel">had come to</tspan>
-                        <tspan class="a2">an agreed obstacle count of 613</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is a slight reduction from</tspan>
-                        <tspan class="a2">OCHA 's February 2009 total</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">OCHA 's overall obstacle count</tspan>
-                        <tspan class="rel">has remained relatively stable over</tspan>
-                        <tspan class="a2">the past year</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">checkpoint infrastructure</tspan>
-                        <tspan class="rel">has become more entrenched in</tspan>
-                        <tspan class="a2">others</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the mayor and local businessmen</tspan>
-                        <tspan class="rel">are pressing for</tspan>
-                        <tspan class="a2">removal of key two road gates</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-167.3975 -113.3728)" 
+        <g transform="translate(170.7887 -94.5497)" 
             class="black degree2" id="09JERUSALEM1094">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -487,41 +267,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1094.html">09JERUSALEM1094</a>
+                    <a id="09JERUSALEM1094" xlink:href="http://wikileaks.org/cable/2009/06/09JERUSALEM1094.html">09JERUSALEM1094</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">CONSUL GENERAL VISITS QALQILIYA; EXPRESSES SUPPORT FOR PA AND LOCAL BUSINESSES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Consul General</tspan>
-                        <tspan class="rel">met</tspan>
-                        <tspan class="a2">Governor Rafih al-Khandaqji and business leaders</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The Consul General 's visit and comments</tspan>
-                        <tspan class="rel">were widely covered in</tspan>
-                        <tspan class="a2">Palestinian media</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Qalqiliya 's nearest commercial checkpoint</tspan>
-                        <tspan class="rel">is in</tspan>
-                        <tspan class="a2">Tulkarem</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-390.0000 35.1444)" 
+        <g transform="translate(42.0362 -290.0000)" 
             class="black degree2" id="09JERUSALEM1245">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -532,41 +284,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/07/09JERUSALEM1245.html">09JERUSALEM1245</a>
+                    <a id="09JERUSALEM1245" xlink:href="http://wikileaks.org/cable/2009/07/09JERUSALEM1245.html">09JERUSALEM1245</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SHOPPING FESTIVAL OPENING DAY REFLECTS ECONOMIC RESURGENCE IN NABLUS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Consul General</tspan>
-                        <tspan class="rel">attended the opening-day events of</tspan>
-                        <tspan class="a2">the Nablus Shopping Festival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Tens of thousands of Palestinians</tspan>
-                        <tspan class="rel">thronged</tspan>
-                        <tspan class="a2">the city center</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">this</tspan>
-                        <tspan class="rel">will be the first of</tspan>
-                        <tspan class="a2">many theaters</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-84.8183 -290.0000)" 
+        <g transform="translate(390.0000 -6.8416)" 
             class="black degree2" id="09JERUSALEM1376">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -577,35 +301,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1376.html">09JERUSALEM1376</a>
+                    <a id="09JERUSALEM1376" xlink:href="http://wikileaks.org/cable/2009/08/09JERUSALEM1376.html">09JERUSALEM1376</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EXTENDED HOURS FOR PASSENGERS, INCOMING CARGO AT ALLENBY BRIDGE CROSSING</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">operations</tspan>
-                        <tspan class="rel">are running smoothly on</tspan>
-                        <tspan class="a2">both sides</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Cargo hours</tspan>
-                        <tspan class="rel">were extended only for</tspan>
-                        <tspan class="a2">incoming Jordanian goods</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(131.5210 -229.7636)" 
+        <g transform="translate(273.6699 147.0741)" 
             class="black degree2" id="09JERUSALEM1933">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -616,35 +318,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/10/09JERUSALEM1933.html">09JERUSALEM1933</a>
+                    <a id="09JERUSALEM1933" xlink:href="http://wikileaks.org/cable/2009/10/09JERUSALEM1933.html">09JERUSALEM1933</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">CAUTIOUS OPTIMISM IN JENIN AS JALAMEH CROSSING OPENS TO ARAB-ISRAELI VEHICLES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">3. Members of the Jenin Chamber of Commerce</tspan>
-                        <tspan class="rel">were enthusiastic about</tspan>
-                        <tspan class="a2">the opening</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">believe</tspan>
-                        <tspan class="a2">you</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-169.2337 119.4831)" 
+        <g transform="translate(-139.3994 -156.2963)" 
             class="black degree3" id="09JERUSALEM479">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -655,41 +335,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM479.html">09JERUSALEM479</a>
+                    <a id="09JERUSALEM479" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM479.html">09JERUSALEM479</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IDF REPLACES BEIT IBA CHECKPOINT, PALESTINIANS NOTE A SMALL BUT WELCOME CHANGE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">more concrete road barriers</tspan>
-                        <tspan class="rel">had been added to</tspan>
-                        <tspan class="a2">the site</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">'s about</tspan>
-                        <tspan class="a2">the occupation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The important new development</tspan>
-                        <tspan class="rel">here is the relaxation of</tspan>
-                        <tspan class="a2">the permit requirement</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-26.2954 -195.8251)" 
+        <g transform="translate(256.5956 23.9668)" 
             class="black degree3" id="10JERUSALEM112">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -700,41 +352,411 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2010/01/10JERUSALEM112.html">10JERUSALEM112</a>
+                    <a id="10JERUSALEM112" xlink:href="http://wikileaks.org/cable/2010/01/10JERUSALEM112.html">10JERUSALEM112</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WEST BANK CROSSINGS REMAIN FOCUS OF FRUSTRATION; INCREMENTAL PROGRESS CONTINUES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">These efforts</tspan>
-                        <tspan class="rel">work best with</tspan>
-                        <tspan class="a2">a combination of donor support</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">hours</tspan>
-                        <tspan class="rel">have been extended to</tspan>
-                        <tspan class="a2">6:30 a.m.-7:00</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">will set</tspan>
-                        <tspan class="a2">a precedent</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#08JERUSALEM1340').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ISRAELI ARAB VISITS TO JENIN HAVE MINIMAL ECONOMIC IMPACT</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08JERUSALEM1488').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SHAVEI SHOMRON OPENED, IMPROVING SOME, BUT NOT ALL MOVEMENT IN THE NORTHERN WEST BANK</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the opening</span> <span class="rel">will not noticeably impact</span> <span class="a2">the area &#39;s economy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">ConGenOffs</span> <span class="rel">observed</span> <span class="a2">23 private cars</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">IDF soldiers</span> <span class="rel">were present at</span> <span class="a2">the IDF base</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">two commercial trucks</span> <span class="rel">will take advantage of</span> <span class="a2">this opening</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the roadblock</span> <span class="rel">does not affect access to</span> <span class="a2">the historic commercial center of Nablus</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08JERUSALEM1498').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>&#34;POSITIVE BUT INCOMPLETE&#34; ISRAELI-PALESTINIAN SECURITY COORDINATION MEETING IN JENIN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Israeli representatives</span> <span class="rel">were</span> <span class="a2">BG Noam Tibon</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08JERUSALEM1559').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>BIR NABALA CHECKPOINT REMOVED; IMPROVES TRAVEL BETWEEN NEARBY VILLAGES AND RAMALLAH</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">remnants of lanes and booths</span> <span class="rel">were on</span> <span class="a2">the roadside</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">traffic</span> <span class="rel">flowed freely to</span> <span class="a2">the north</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the checkpoint</span> <span class="rel">was removed</span> <span class="a2">August 21</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08JERUSALEM2200').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GOI PREPARES NEW CHECKPOINT IN NORTHERN WEST BANK</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The new installation</span> <span class="rel">is only a few kilometers south of</span> <span class="a2">the Shavei Shomeron checkpoint</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The gates</span> <span class="rel">were in</span> <span class="a2">an open position</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the checkpoint installation</span> <span class="rel">began on</span> <span class="a2">December</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08JERUSALEM565').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>REMOVAL OF 47 ROADBLOCKS; PALESTINIANS DISMISS CHANGES AS UNIMPORTANT OR ILLUSORY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">PM Salam Fayyad</span> <span class="rel">downplayed the impact of</span> <span class="a2">the removed obstacles</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#08TELAVIV2744').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GOI RELAXES RESTRICTIONS AROUND NABLUS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Singer</span> <span class="rel">said</span> <span class="a2">the Huwwara</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM1079').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IDF EASES ACCESS AND MOVEMENT IN THE WEST BANK, BUT MANY OBSTACLES REMAIN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">these measures</span> <span class="rel">have been accompanied by</span> <span class="a2">other restrictive actions</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the IDF Central Command</span> <span class="rel">had come to</span> <span class="a2">an agreed obstacle count of 613</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is a slight reduction from</span> <span class="a2">OCHA &#39;s February 2009 total</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">OCHA &#39;s overall obstacle count</span> <span class="rel">has remained relatively stable over</span> <span class="a2">the past year</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">checkpoint infrastructure</span> <span class="rel">has become more entrenched in</span> <span class="a2">others</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM1094').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>CONSUL GENERAL VISITS QALQILIYA; EXPRESSES SUPPORT FOR PA AND LOCAL BUSINESSES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Consul General</span> <span class="rel">met</span> <span class="a2">Governor Rafih al-Khandaqji and business leaders</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Consul General &#39;s visit and comments</span> <span class="rel">were widely covered in</span> <span class="a2">Palestinian media</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Qalqiliya &#39;s nearest commercial checkpoint</span> <span class="rel">is in</span> <span class="a2">Tulkarem</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM1245').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SHOPPING FESTIVAL OPENING DAY REFLECTS ECONOMIC RESURGENCE IN NABLUS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Consul General</span> <span class="rel">attended the opening-day events of</span> <span class="a2">the Nablus Shopping Festival</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Tens of thousands of Palestinians</span> <span class="rel">thronged</span> <span class="a2">the city center</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">this</span> <span class="rel">will be the first of</span> <span class="a2">many theaters</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM1376').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EXTENDED HOURS FOR PASSENGERS, INCOMING CARGO AT ALLENBY BRIDGE CROSSING</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">operations</span> <span class="rel">are running smoothly on</span> <span class="a2">both sides</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Cargo hours</span> <span class="rel">were extended only for</span> <span class="a2">incoming Jordanian goods</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM1933').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>CAUTIOUS OPTIMISM IN JENIN AS JALAMEH CROSSING OPENS TO ARAB-ISRAELI VEHICLES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">3. Members of the Jenin Chamber of Commerce</span> <span class="rel">were enthusiastic about</span> <span class="a2">the opening</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">we</span> <span class="rel">believe</span> <span class="a2">you</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM479').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IDF REPLACES BEIT IBA CHECKPOINT, PALESTINIANS NOTE A SMALL BUT WELCOME CHANGE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">more concrete road barriers</span> <span class="rel">had been added to</span> <span class="a2">the site</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">&#39;s about</span> <span class="a2">the occupation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The important new development</span> <span class="rel">here is the relaxation of</span> <span class="a2">the permit requirement</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#10JERUSALEM112').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WEST BANK CROSSINGS REMAIN FOCUS OF FRUSTRATION; INCREMENTAL PROGRESS CONTINUES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">These efforts</span> <span class="rel">work best with</span> <span class="a2">a combination of donor support</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">hours</span> <span class="rel">have been extended to</span> <span class="a2">6:30 a.m.-7:00</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">will set</span> <span class="a2">a precedent</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>

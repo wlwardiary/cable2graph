@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,139 +78,139 @@
 <g transform="translate(600.0000,510.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-269.1178" y1="-228.3305" 
-              x2="-201.6374" y2="-301.3379" />
+        <line x1="185.2804" y1="243.7335" 
+              x2="173.7907" y2="317.9701" />
     
-        <line x1="-269.1178" y1="-228.3305" 
-              x2="-299.5771" y2="-288.1065" />
+        <line x1="185.2804" y1="243.7335" 
+              x2="261.1643" y2="259.5333" />
     
-        <line x1="-114.4008" y1="-92.2179" 
-              x2="-189.9299" y2="-158.9786" />
+        <line x1="-30.4926" y1="257.9909" 
+              x2="68.1778" y2="254.7789" />
     
-        <line x1="113.9456" y1="-175.5935" 
-              x2="101.3296" y2="-17.3233" />
+        <line x1="-220.3367" y1="-223.2355" 
+              x2="-239.0042" y2="-116.8729" />
     
-        <line x1="113.7461" y1="-350.0000" 
-              x2="90.1959" y2="-287.8748" />
+        <line x1="-123.7934" y1="-350.0000" 
+              x2="-195.5203" y2="-315.6027" />
     
-        <line x1="47.3072" y1="156.9154" 
-              x2="97.4526" y2="2.1581" />
+        <line x1="-259.2700" y1="6.5856" 
+              x2="-242.3432" y2="-97.1539" />
     
-        <line x1="125.7667" y1="98.1579" 
-              x2="208.4712" y2="177.2605" />
+        <line x1="-124.7950" y1="-11.2756" 
+              x2="-73.6613" y2="38.2385" />
     
-        <line x1="-48.7660" y1="253.6883" 
-              x2="40.2618" y2="164.0121" />
+        <line x1="-312.7946" y1="131.8727" 
+              x2="-263.1987" y2="15.7816" />
     
-        <line x1="390.0000" y1="37.8417" 
-              x2="299.5579" y2="39.7491" />
+        <line x1="123.8394" y1="-145.9897" 
+              x2="32.0421" y2="-125.5845" />
     
-        <line x1="376.1405" y1="-34.1412" 
-              x2="368.1520" y2="-118.0639" />
+        <line x1="108.7025" y1="-209.2305" 
+              x2="109.9911" y2="-283.4856" />
     
-        <line x1="304.0132" y1="-73.1435" 
-              x2="359.6540" y2="-121.4621" />
+        <line x1="36.5106" y1="-239.1905" 
+              x2="102.1152" y2="-287.5505" />
     
-        <line x1="-114.4008" y1="-92.2179" 
-              x2="-186.0152" y2="-38.4739" />
+        <line x1="-30.4926" y1="257.9909" 
+              x2="-97.6549" y2="312.9240" />
     
-        <line x1="-390.0000" y1="-54.1701" 
-              x2="-388.4189" y2="29.3494" />
+        <line x1="301.1336" y1="94.9839" 
+              x2="312.9716" y2="22.6622" />
     
-        <line x1="215.6979" y1="184.1725" 
-              x2="153.9371" y2="180.9640" />
+        <line x1="-66.4773" y1="45.1949" 
+              x2="-150.7879" y2="54.3170" />
     
-        <line x1="390.0000" y1="37.8417" 
-              x2="378.0312" y2="-24.3215" />
+        <line x1="123.8394" y1="-145.9897" 
+              x2="111.0303" y2="-199.5052" />
     
-        <line x1="47.3072" y1="156.9154" 
-              x2="134.2344" y2="178.0796" />
+        <line x1="-259.2700" y1="6.5856" 
+              x2="-169.6909" y2="50.9543" />
     
-        <line x1="125.7667" y1="98.1579" 
-              x2="141.7928" y2="170.6808" />
+        <line x1="-124.7950" y1="-11.2756" 
+              x2="-155.9851" y2="46.5900" />
     
-        <line x1="2.6677" y1="113.7999" 
-              x2="40.1144" y2="149.9682" />
+        <line x1="-195.5813" y1="-48.4068" 
+              x2="-251.7011" y2="0.0502" />
     
-        <line x1="-114.4008" y1="-92.2179" 
-              x2="-84.7158" y2="-179.3067" />
+        <line x1="-30.4926" y1="257.9909" 
+              x2="-16.4994" y2="340.1420" />
     
-        <line x1="125.7667" y1="98.1579" 
-              x2="102.8608" y2="2.3708" />
+        <line x1="-124.7950" y1="-11.2756" 
+              x2="-233.0223" y2="-100.6557" />
     
-        <line x1="-390.0000" y1="-54.1701" 
-              x2="-355.8352" y2="-137.5108" />
+        <line x1="301.1336" y1="94.9839" 
+              x2="250.9135" y2="154.4998" />
     
-        <line x1="-48.7660" y1="253.6883" 
-              x2="-105.5639" y2="318.0853" />
+        <line x1="-312.7946" y1="131.8727" 
+              x2="-317.1161" y2="217.1659" />
     
-        <line x1="-13.0277" y1="2.6461" 
-              x2="117.5288" y2="92.4890" />
+        <line x1="-68.9626" y1="137.9596" 
+              x2="-121.2910" y2="-1.9096" />
     
-        <line x1="-112.1786" y1="325.5850" 
-              x2="-179.7689" y2="346.9819" />
+        <line x1="-317.6221" y1="227.1531" 
+              x2="-285.8348" y2="290.1824" />
     
-        <line x1="94.3083" y1="237.8795" 
-              x2="123.5702" y2="107.9137" />
+        <line x1="-275.2247" y1="47.9841" 
+              x2="-134.0991" y2="-7.6103" />
     
-        <line x1="-269.1178" y1="-228.3305" 
-              x2="-204.9485" y2="-172.1862" />
+        <line x1="185.2804" y1="243.7335" 
+              x2="88.1228" y2="253.4577" />
     
-        <line x1="113.7461" y1="-350.0000" 
-              x2="150.3070" y2="-285.3980" />
+        <line x1="-123.7934" y1="-350.0000" 
+              x2="-145.5572" y2="-291.2124" />
     
-        <line x1="-356.3700" y1="128.6853" 
-              x2="-384.8706" y2="48.7666" />
+        <line x1="316.5121" y1="-79.0673" 
+              x2="314.7965" y2="2.7957" />
     
-        <line x1="289.5601" y1="39.9600" 
-              x2="341.8126" y2="124.4810" />
+        <line x1="22.2803" y1="-123.4146" 
+              x2="85.6036" y2="-59.9009" />
     
-        <line x1="155.2324" y1="-276.6951" 
-              x2="117.7262" y2="-184.8513" />
+        <line x1="-149.0290" y1="-281.8344" 
+              x2="-212.6108" y2="-229.5845" />
     
-        <line x1="105.3676" y1="340.7150" 
-              x2="95.3776" y2="247.8222" />
+        <line x1="-390.0000" y1="45.2225" 
+              x2="-285.2219" y2="47.7436" />
     
-        <line x1="-13.0277" y1="2.6461" 
-              x2="-107.0992" y2="-85.3851" />
+        <line x1="-68.9626" y1="137.9596" 
+              x2="-33.5446" y2="248.4680" />
     
-        <line x1="289.5601" y1="39.9600" 
-              x2="368.5432" y2="-27.6389" />
+        <line x1="22.2803" y1="-123.4146" 
+              x2="101.6066" y2="-202.1844" />
     
-        <line x1="289.5601" y1="39.9600" 
-              x2="302.7456" y2="-63.2241" />
+        <line x1="22.2803" y1="-123.4146" 
+              x2="35.2907" y2="-229.2652" />
     
-        <line x1="-356.3700" y1="128.6853" 
-              x2="-373.9495" y2="196.5224" />
+        <line x1="316.5121" y1="-79.0673" 
+              x2="307.6464" y2="-156.0536" />
     
-        <line x1="100.5350" y1="-7.3549" 
-              x2="137.7914" y2="-78.7828" />
+        <line x1="-240.7328" y1="-107.0234" 
+              x2="-332.9350" y2="-141.3094" />
     
-        <line x1="94.3083" y1="237.8795" 
-              x2="52.3277" y2="165.5638" />
+        <line x1="-275.2247" y1="47.9841" 
+              x2="-262.8662" y2="15.9166" />
     
-        <line x1="2.6677" y1="113.7999" 
-              x2="115.8464" y2="99.4185" />
+        <line x1="-195.5813" y1="-48.4068" 
+              x2="-133.6506" y2="-15.9208" />
     
-        <line x1="-356.3700" y1="128.6853" 
-              x2="-289.9366" y2="171.6959" />
+        <line x1="316.5121" y1="-79.0673" 
+              x2="380.0007" y2="-78.3097" />
     
-        <line x1="289.5601" y1="39.9600" 
-              x2="135.1895" y2="94.8098" />
+        <line x1="22.2803" y1="-123.4146" 
+              x2="-116.8428" y2="-17.3388" />
     
-        <line x1="-269.1178" y1="-228.3305" 
-              x2="-344.9130" y2="-153.7759" />
+        <line x1="185.2804" y1="243.7335" 
+              x2="238.5928" y2="170.2371" />
     
-        <line x1="113.9456" y1="-175.5935" 
-              x2="89.2144" y2="-268.8581" />
+        <line x1="-220.3367" y1="-223.2355" 
+              x2="-206.3034" y2="-301.4359" />
     
-        <line x1="155.2324" y1="-276.6951" 
-              x2="96.6478" y2="-278.2575" />
+        <line x1="-149.0290" y1="-281.8344" 
+              x2="-195.7030" y2="-306.5926" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(105.3676 340.7150)" 
+        <g transform="translate(-390.0000 45.2225)" 
             class="black degree2" id="06ANKARA6017">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -245,19 +221,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/10/06ANKARA6017.html">06ANKARA6017</a>
+                    <a id="06ANKARA6017" xlink:href="http://wikileaks.org/cable/2006/10/06ANKARA6017.html">06ANKARA6017</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY REQUESTS U.S. SUPPORT FOR INTERNATIONAL LAW COMMISSION CANDIDATE</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(94.3083 237.8795)" 
+        <g transform="translate(-275.2247 47.9841)" 
             class="black degree3" id="06ANKARA6275">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -268,29 +238,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ANKARA6275.html">06ANKARA6275</a>
+                    <a id="06ANKARA6275" xlink:href="http://wikileaks.org/cable/2006/11/06ANKARA6275.html">06ANKARA6275</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">INTERNATIONAL LAW COMMISSION ELECTION</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">can respond to</tspan>
-                        <tspan class="a2">the Turkish request</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(390.0000 37.8417)" 
+        <g transform="translate(123.8394 -145.9897)" 
             class="black degree2" id="06CAIRO5526">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -301,29 +255,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/09/06CAIRO5526.html">06CAIRO5526</a>
+                    <a id="06CAIRO5526" xlink:href="http://wikileaks.org/cable/2006/09/06CAIRO5526.html">06CAIRO5526</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EGYPT:  UPDATE ON USG CANDIDATES FOR UNITED NATIONS ELECTIONS;  NO DEFINITIVE RESPONSE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Tag-Eldin</tspan>
-                        <tspan class="rel">had no definitive response on</tspan>
-                        <tspan class="a2">any of the three reftel demarches</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(289.5601 39.9600)" 
+        <g transform="translate(22.2803 -123.4146)" 
             class="black degree5" id="06CAIRO5831">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -334,19 +272,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/09/06CAIRO5831.html">06CAIRO5831</a>
+                    <a id="06CAIRO5831" xlink:href="http://wikileaks.org/cable/2006/09/06CAIRO5831.html">06CAIRO5831</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EGYPT:  STILL NO ANSWER ON US CANDIDATE FOR THE IMSO</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(2.6677 113.7999)" 
+        <g transform="translate(-195.5813 -48.4068)" 
             class="black degree2" id="06KUWAIT4423">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -357,19 +289,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06KUWAIT4423.html">06KUWAIT4423</a>
+                    <a id="06KUWAIT4423" xlink:href="http://wikileaks.org/cable/2006/11/06KUWAIT4423.html">06KUWAIT4423</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEMARCHE DELIVERED: INTERNATIONAL LAW COMMISSION ELECTION</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-48.7660 253.6883)" 
+        <g transform="translate(-312.7946 131.8727)" 
             class="black degree2" id="06MADRID2814">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -380,29 +306,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MADRID2814.html">06MADRID2814</a>
+                    <a id="06MADRID2814" xlink:href="http://wikileaks.org/cable/2006/11/06MADRID2814.html">06MADRID2814</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SPAIN: INTERNATIONAL LAW COMMISSION ELECTION</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Post</tspan>
-                        <tspan class="rel">will follow up prior to</tspan>
-                        <tspan class="a2">the November 16 election</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-112.1786 325.5850)" 
+        <g transform="translate(-317.6221 227.1531)" 
             class="black degree3" id="06MADRID2900">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -413,19 +323,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MADRID2900.html">06MADRID2900</a>
+                    <a id="06MADRID2900" xlink:href="http://wikileaks.org/cable/2006/11/06MADRID2900.html">06MADRID2900</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SPAIN NONCOMMITTAL ON INTERNATIONAL LAW COMMISSION</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-390.0000 -54.1701)" 
+        <g transform="translate(301.1336 94.9839)" 
             class="black degree4" id="06NEWDELHI7723">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -436,29 +340,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06NEWDELHI7723.html">06NEWDELHI7723</a>
+                    <a id="06NEWDELHI7723" xlink:href="http://wikileaks.org/cable/2006/11/06NEWDELHI7723.html">06NEWDELHI7723</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI NOT IN FAVOR OF COUNTRY SPECIFIC RESOLUTIONS AT UN - DEMARCHE DELIVERED</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">PolCouns</tspan>
-                        <tspan class="rel">reminded</tspan>
-                        <tspan class="a2">Puri of the Millennium Development Goals</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-13.0277 2.6461)" 
+        <g transform="translate(-68.9626 137.9596)" 
             class="black degree2" id="06RABAT1588">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -469,19 +357,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/08/06RABAT1588.html">06RABAT1588</a>
+                    <a id="06RABAT1588" xlink:href="http://wikileaks.org/cable/2006/08/06RABAT1588.html">06RABAT1588</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">INTERNATIONAL LAW COMMISSION ELECTION</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-114.4008 -92.2179)" 
+        <g transform="translate(-30.4926 257.9909)" 
             class="black degree4" id="06RABAT2122">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -492,19 +374,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06RABAT2122.html">06RABAT2122</a>
+                    <a id="06RABAT2122" xlink:href="http://wikileaks.org/cable/2006/11/06RABAT2122.html">06RABAT2122</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">MOROCCO: INTERNATIONAL LAW COMMISSION ELECTION</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-269.1178 -228.3305)" 
+        <g transform="translate(185.2804 243.7335)" 
             class="black degree5" id="06RIYADH8788">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -515,29 +391,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06RIYADH8788.html">06RIYADH8788</a>
+                    <a id="06RIYADH8788" xlink:href="http://wikileaks.org/cable/2006/11/06RIYADH8788.html">06RIYADH8788</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">FOLLOW-UP ON DEMARCHES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Post</tspan>
-                        <tspan class="rel">will follow up as</tspan>
-                        <tspan class="a2">appropriate</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-356.3700 128.6853)" 
+        <g transform="translate(316.5121 -79.0673)" 
             class="black degree4" id="06RIYADH8860">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -548,35 +408,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06RIYADH8860.html">06RIYADH8860</a>
+                    <a id="06RIYADH8860" xlink:href="http://wikileaks.org/cable/2006/11/06RIYADH8860.html">06RIYADH8860</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SAUDI MFA DEMARCHED ON UNGA RESOLUTIONS, CPC DESIGNATION, AFGHAN HAJJ FLIGHTS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The SAG</tspan>
-                        <tspan class="rel">is still undecided on</tspan>
-                        <tspan class="a2">the Iran resolution</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">3. Al-Rassij</tspan>
-                        <tspan class="rel">was previously part of</tspan>
-                        <tspan class="a2">the Saudi Mission</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-194.0134 -32.4715)" 
+        <g transform="translate(-105.3955 319.2551)" 
             class="red degree4" id="06SECSTATE137429">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -584,7 +422,7 @@
             
         </g>
         
-        <g transform="translate(-194.8497 -308.6814)" 
+        <g transform="translate(172.2611 327.8525)" 
             class="red degree4" id="06SECSTATE178055">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -592,7 +430,7 @@
             
         </g>
         
-        <g transform="translate(-197.4225 -165.6014)" 
+        <g transform="translate(78.1725 254.4535)" 
             class="red degree5" id="06SECSTATE180503">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -600,7 +438,7 @@
             
         </g>
         
-        <g transform="translate(-304.1172 -297.0165)" 
+        <g transform="translate(270.9543 261.5717)" 
             class="red degree7" id="06SECSTATE182099">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -608,7 +446,7 @@
             
         </g>
         
-        <g transform="translate(-352.0422 -146.7635)" 
+        <g transform="translate(244.4645 162.1425)" 
             class="red degree10" id="06SECSTATE182267">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -616,7 +454,7 @@
             
         </g>
         
-        <g transform="translate(-388.2296 39.3476)" 
+        <g transform="translate(314.5870 12.7935)" 
             class="red degree6" id="06SECSTATE184178">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -624,7 +462,7 @@
             
         </g>
         
-        <g transform="translate(-376.4581 206.2026)" 
+        <g transform="translate(306.5024 -165.9880)" 
             class="red degree2" id="06SECSTATE185925">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -632,7 +470,7 @@
             
         </g>
         
-        <g transform="translate(-81.4895 -188.7720)" 
+        <g transform="translate(-14.8202 350.0000)" 
             class="red degree4" id="06SECSTATE186285">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -640,7 +478,7 @@
             
         </g>
         
-        <g transform="translate(-281.5423 177.1305)" 
+        <g transform="translate(390.0000 -78.1904)" 
             class="red degree8" id="06SECSTATE187018">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -648,7 +486,7 @@
             
         </g>
         
-        <g transform="translate(125.7667 98.1579)" 
+        <g transform="translate(-124.7950 -11.2756)" 
             class="red degree36" id="06STATE137429">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -656,7 +494,7 @@
             
         </g>
         
-        <g transform="translate(376.1405 -34.1412)" 
+        <g transform="translate(108.7025 -209.2305)" 
             class="red degree12" id="06STATE140757">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -664,7 +502,7 @@
             
         </g>
         
-        <g transform="translate(304.0132 -73.1435)" 
+        <g transform="translate(36.5106 -239.1905)" 
             class="red degree4" id="06STATE150486">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -672,7 +510,7 @@
             
         </g>
         
-        <g transform="translate(47.3072 156.9154)" 
+        <g transform="translate(-259.2700 6.5856)" 
             class="red degree18" id="06STATE180503">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -680,7 +518,7 @@
             
         </g>
         
-        <g transform="translate(-189.3025 350.0000)" 
+        <g transform="translate(-281.3318 299.1111)" 
             class="red degree16" id="06STATE186285">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -688,7 +526,7 @@
             
         </g>
         
-        <g transform="translate(113.7461 -350.0000)" 
+        <g transform="translate(-123.7934 -350.0000)" 
             class="red degree2" id="06STATE76209">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -696,7 +534,7 @@
             
         </g>
         
-        <g transform="translate(347.0710 132.9868)" 
+        <g transform="translate(92.6640 -52.8192)" 
             class="red degree15" id="06STATE85758">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -704,7 +542,7 @@
             
         </g>
         
-        <g transform="translate(367.2044 -128.0189)" 
+        <g transform="translate(110.1646 -293.4840)" 
             class="black degree2" id="06TELAVIV3703">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -715,19 +553,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TELAVIV3703.html">06TELAVIV3703</a>
+                    <a id="06TELAVIV3703" xlink:href="http://wikileaks.org/cable/2006/09/06TELAVIV3703.html">06TELAVIV3703</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL WILL SUPPORT U.S. CANDIDATE FOR IMSO DIRECTOR</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(215.6979 184.1725)" 
+        <g transform="translate(-66.4773 45.1949)" 
             class="black degree2" id="06TOKYO4826">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -738,19 +570,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TOKYO4826.html">06TOKYO4826</a>
+                    <a id="06TOKYO4826" xlink:href="http://wikileaks.org/cable/2006/08/06TOKYO4826.html">06TOKYO4826</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">JAPAN EXPECTS RECIPROCAL SUPPORT IN ILC ELECTIONS</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(143.9505 180.4452)" 
+        <g transform="translate(-160.7299 55.3927)" 
             class="black degree3" id="06TOKYO6329">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -761,19 +587,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TOKYO6329.html">06TOKYO6329</a>
+                    <a id="06TOKYO6329" xlink:href="http://wikileaks.org/cable/2006/11/06TOKYO6329.html">06TOKYO6329</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ILC ELECTION: JAPAN POSITION UNCHANGED</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(155.2324 -276.6951)" 
+        <g transform="translate(-149.0290 -281.8344)" 
             class="black degree3" id="06USUNNEWYORK1040">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -784,65 +604,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK1040.html">06USUNNEWYORK1040</a>
+                    <a id="06USUNNEWYORK1040" xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK1040.html">06USUNNEWYORK1040</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTER-TERRORISM STRATEGY - WHERE ARE THE MODERATE ARABS?</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">this latter group</tspan>
-                        <tspan class="rel">was led by</tspan>
-                        <tspan class="a2">Saudi Arabia</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">only Morocco and Tunisia</tspan>
-                        <tspan class="rel">took</tspan>
-                        <tspan class="a2">a more moderate stance</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">must cover all of</tspan>
-                        <tspan class="a2">these elements</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">denounced</tspan>
-                        <tspan class="a2">the concept of State terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">examination of conditions</tspan>
-                        <tspan class="rel">conducive to</tspan>
-                        <tspan class="a2">terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">8. The next round of discussions</tspan>
-                        <tspan class="rel">will take place in</tspan>
-                        <tspan class="a2">June</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">the Co-Chairman</tspan>
-                        <tspan class="rel">will prepare on</tspan>
-                        <tspan class="a2">the basis of the informal discussions</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(113.9456 -175.5935)" 
+        <g transform="translate(-220.3367 -223.2355)" 
             class="black degree12" id="06USUNNEWYORK1154">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -853,71 +621,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06USUNNEWYORK1154.html">06USUNNEWYORK1154</a>
+                    <a id="06USUNNEWYORK1154" xlink:href="http://wikileaks.org/cable/2006/06/06USUNNEWYORK1154.html">06USUNNEWYORK1154</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PAKISTAN AND THE U.S.: BILATERAL TIES NOT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">ranked</tspan>
-                        <tspan class="a2">it</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">This point</tspan>
-                        <tspan class="rel">was certainly not lost on</tspan>
-                        <tspan class="a2">Deputy SYG Mark Malloch Brown</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Pakistan</tspan>
-                        <tspan class="rel">also joined</tspan>
-                        <tspan class="a2">Egypt</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Akram</tspan>
-                        <tspan class="rel">feigned</tspan>
-                        <tspan class="a2">impartiality</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Pakistan</tspan>
-                        <tspan class="rel">joined</tspan>
-                        <tspan class="a2">Egypt</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the body</tspan>
-                        <tspan class="rel">contradictory to</tspan>
-                        <tspan class="a2">the spirit of the</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">has joined</tspan>
-                        <tspan class="a2">Egypt</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Pakistan</tspan>
-                        <tspan class="rel">led</tspan>
-                        <tspan class="a2">Syria and Iran</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(100.5350 -7.3549)" 
+        <g transform="translate(-240.7328 -107.0234)" 
             class="black degree5" id="06USUNNEWYORK2111">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -928,29 +638,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2111.html">06USUNNEWYORK2111</a>
+                    <a id="06USUNNEWYORK2111" xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2111.html">06USUNNEWYORK2111</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SEEKING SUPPORT FOR U.S. CANDIDATE FOR THE INTERNATIONAL LAW COMMISSION - STATUS REPORT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">USUN</tspan>
-                        <tspan class="rel">HAS CONTACTED</tspan>
-                        <tspan class="a2">APPROXIMATELY 110</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(142.4161 -87.6492)" 
+        <g transform="translate(-342.3079 -144.7948)" 
             class="black degree2" id="06USUNNEWYORK2169">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -961,71 +655,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2169.html">06USUNNEWYORK2169</a>
+                    <a id="06USUNNEWYORK2169" xlink:href="http://wikileaks.org/cable/2006/11/06USUNNEWYORK2169.html">06USUNNEWYORK2169</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">U.S. CANDIDATE NOT ELECTED TO THE INTERNATIONAL LAW COMMISSION (ILC)</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The remaining two</tspan>
-                        <tspan class="rel">went to</tspan>
-                        <tspan class="a2">a Canadian and Swiss</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the General Assembly</tspan>
-                        <tspan class="rel">elected</tspan>
-                        <tspan class="a2">all 34 members of the International Law Commission</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">was not among</tspan>
-                        <tspan class="a2">the top eight</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">3. USUN</tspan>
-                        <tspan class="rel">lobbied actively for</tspan>
-                        <tspan class="a2">Matheson</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the rest</tspan>
-                        <tspan class="rel">gave only verbal indications of</tspan>
-                        <tspan class="a2">support</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Other political factors</tspan>
-                        <tspan class="rel">may also have had an effect in shaping</tspan>
-                        <tspan class="a2">the result</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">the French candidate</tspan>
-                        <tspan class="rel">was not elected to</tspan>
-                        <tspan class="a2">the Joint Inspection Unit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">the U.S.</tspan>
-                        <tspan class="rel">supported</tspan>
-                        <tspan class="a2">five of the six successful candidates</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(86.6513 -278.5241)" 
+        <g transform="translate(-204.5371 -311.2786)" 
             class="black degree3" id="06USUNNEWYORK977">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1036,125 +672,537 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK977.html">06USUNNEWYORK977</a>
+                    <a id="06USUNNEWYORK977" xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK977.html">06USUNNEWYORK977</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GENERAL ASSEMBLY COMMENTS ON SYG'S COUNTERTERRORISM STRATEGY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">. May 11 and 12 , 36 delegations</tspan>
-                        <tspan class="rel">commented on</tspan>
-                        <tspan class="a2">the Secretary-General 's</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Most delegations</tspan>
-                        <tspan class="rel">expressed general support for</tspan>
-                        <tspan class="a2">the report</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Wolff</tspan>
-                        <tspan class="rel">delivered</tspan>
-                        <tspan class="a2">the U.S. statement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">states</tspan>
-                        <tspan class="rel">do not fulfill</tspan>
-                        <tspan class="a2">their counterterrorism obligations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">each other , and Canada</tspan>
-                        <tspan class="rel">called the defense of</tspan>
-                        <tspan class="a2">human rights</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Mexico</tspan>
-                        <tspan class="rel">called for</tspan>
-                        <tspan class="a2">international " cooperation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">conditions</tspan>
-                        <tspan class="rel">conducive to</tspan>
-                        <tspan class="a2">terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The EU and Canada</tspan>
-                        <tspan class="rel">emphasized the need to promote</tspan>
-                        <tspan class="a2">good governance</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Pakistan</tspan>
-                        <tspan class="rel">provided one of</tspan>
-                        <tspan class="a2">the longer interventions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Canada</tspan>
-                        <tspan class="rel">noted the importance of</tspan>
-                        <tspan class="a2">resolution 1540</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">the international community</tspan>
-                        <tspan class="rel">must consider all potential forms of</tspan>
-                        <tspan class="a2">terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Argentina</tspan>
-                        <tspan class="rel">called for</tspan>
-                        <tspan class="a2">an examination of terrorists ' use of the Internet</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">the Holy See</tspan>
-                        <tspan class="rel">expressed support for</tspan>
-                        <tspan class="a2">resolution 1624</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">the report</tspan>
-                        <tspan class="rel">covered all of</tspan>
-                        <tspan class="a2">the UN 's counterterrorism activities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">The report</tspan>
-                        <tspan class="rel">should have incorporated elements of</tspan>
-                        <tspan class="a2">the G-8</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Delegations</tspan>
-                        <tspan class="rel">also commented on</tspan>
-                        <tspan class="a2">next steps</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">the strategy</tspan>
-                        <tspan class="rel">could seek to address</tspan>
-                        <tspan class="a2">extremism</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#06ANKARA6017').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY REQUESTS U.S. SUPPORT FOR INTERNATIONAL LAW COMMISSION CANDIDATE</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06ANKARA6275').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>INTERNATIONAL LAW COMMISSION ELECTION</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">we</span> <span class="rel">can respond to</span> <span class="a2">the Turkish request</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06CAIRO5526').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EGYPT:  UPDATE ON USG CANDIDATES FOR UNITED NATIONS ELECTIONS;  NO DEFINITIVE RESPONSE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Tag-Eldin</span> <span class="rel">had no definitive response on</span> <span class="a2">any of the three reftel demarches</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06CAIRO5831').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EGYPT:  STILL NO ANSWER ON US CANDIDATE FOR THE IMSO</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06KUWAIT4423').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>DEMARCHE DELIVERED: INTERNATIONAL LAW COMMISSION ELECTION</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06MADRID2814').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SPAIN: INTERNATIONAL LAW COMMISSION ELECTION</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Post</span> <span class="rel">will follow up prior to</span> <span class="a2">the November 16 election</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06MADRID2900').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SPAIN NONCOMMITTAL ON INTERNATIONAL LAW COMMISSION</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06NEWDELHI7723').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GOI NOT IN FAVOR OF COUNTRY SPECIFIC RESOLUTIONS AT UN - DEMARCHE DELIVERED</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">PolCouns</span> <span class="rel">reminded</span> <span class="a2">Puri of the Millennium Development Goals</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06RABAT1588').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>INTERNATIONAL LAW COMMISSION ELECTION</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06RABAT2122').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>MOROCCO: INTERNATIONAL LAW COMMISSION ELECTION</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06RIYADH8788').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>FOLLOW-UP ON DEMARCHES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Post</span> <span class="rel">will follow up as</span> <span class="a2">appropriate</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06RIYADH8860').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SAUDI MFA DEMARCHED ON UNGA RESOLUTIONS, CPC DESIGNATION, AFGHAN HAJJ FLIGHTS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The SAG</span> <span class="rel">is still undecided on</span> <span class="a2">the Iran resolution</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Al-Rassij</span> <span class="rel">was previously part of</span> <span class="a2">the Saudi Mission</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        $('#06TELAVIV3703').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ISRAEL WILL SUPPORT U.S. CANDIDATE FOR IMSO DIRECTOR</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TOKYO4826').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>JAPAN EXPECTS RECIPROCAL SUPPORT IN ILC ELECTIONS</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TOKYO6329').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ILC ELECTION: JAPAN POSITION UNCHANGED</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06USUNNEWYORK1040').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTER-TERRORISM STRATEGY - WHERE ARE THE MODERATE ARABS?</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">this latter group</span> <span class="rel">was led by</span> <span class="a2">Saudi Arabia</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">only Morocco and Tunisia</span> <span class="rel">took</span> <span class="a2">a more moderate stance</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">must cover all of</span> <span class="a2">these elements</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">They</span> <span class="rel">denounced</span> <span class="a2">the concept of State terrorism</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">examination of conditions</span> <span class="rel">conducive to</span> <span class="a2">terrorism</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06USUNNEWYORK1154').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PAKISTAN AND THE U.S.: BILATERAL TIES NOT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">ranked</span> <span class="a2">it</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This point</span> <span class="rel">was certainly not lost on</span> <span class="a2">Deputy SYG Mark Malloch Brown</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Pakistan</span> <span class="rel">also joined</span> <span class="a2">Egypt</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Akram</span> <span class="rel">feigned</span> <span class="a2">impartiality</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Pakistan</span> <span class="rel">joined</span> <span class="a2">Egypt</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06USUNNEWYORK2111').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SEEKING SUPPORT FOR U.S. CANDIDATE FOR THE INTERNATIONAL LAW COMMISSION - STATUS REPORT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">USUN</span> <span class="rel">HAS CONTACTED</span> <span class="a2">APPROXIMATELY 110</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06USUNNEWYORK2169').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>U.S. CANDIDATE NOT ELECTED TO THE INTERNATIONAL LAW COMMISSION (ILC)</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The remaining two</span> <span class="rel">went to</span> <span class="a2">a Canadian and Swiss</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the General Assembly</span> <span class="rel">elected</span> <span class="a2">all 34 members of the International Law Commission</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">was not among</span> <span class="a2">the top eight</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. USUN</span> <span class="rel">lobbied actively for</span> <span class="a2">Matheson</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the rest</span> <span class="rel">gave only verbal indications of</span> <span class="a2">support</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06USUNNEWYORK977').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GENERAL ASSEMBLY COMMENTS ON SYG&#39;S COUNTERTERRORISM STRATEGY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">. May 11 and 12 , 36 delegations</span> <span class="rel">commented on</span> <span class="a2">the Secretary-General &#39;s</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Most delegations</span> <span class="rel">expressed general support for</span> <span class="a2">the report</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Wolff</span> <span class="rel">delivered</span> <span class="a2">the U.S. statement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">states</span> <span class="rel">do not fulfill</span> <span class="a2">their counterterrorism obligations</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">each other , and Canada</span> <span class="rel">called the defense of</span> <span class="a2">human rights</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>

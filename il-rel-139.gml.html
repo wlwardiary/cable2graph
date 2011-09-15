@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,61 +78,61 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="142.3553" y1="14.1372" 
-              x2="307.9640" y2="14.2612" />
+        <line x1="158.2515" y1="-44.6461" 
+              x2="356.3054" y2="-44.0129" />
     
-        <line x1="317.9640" y1="14.2687" 
-              x2="383.4097" y2="88.9585" />
+        <line x1="366.3054" y1="-43.9810" 
+              x2="278.9426" y2="25.4501" />
     
-        <line x1="317.9640" y1="14.2687" 
-              x2="292.0772" y2="156.3373" />
+        <line x1="366.3054" y1="-43.9810" 
+              x2="388.0720" y2="66.7971" />
     
-        <line x1="119.9336" y1="158.5650" 
-              x2="140.8212" y2="24.0189" />
+        <line x1="179.0577" y1="118.0624" 
+              x2="159.5199" y2="-34.7268" />
     
-        <line x1="-97.5474" y1="-127.1361" 
-              x2="133.7384" y2="9.0629" />
+        <line x1="-100.8855" y1="-144.3452" 
+              x2="148.9184" y2="-48.2368" />
     
-        <line x1="119.9336" y1="158.5650" 
-              x2="380.2542" y2="98.7201" />
+        <line x1="179.0577" y1="118.0624" 
+              x2="263.8220" y2="38.5151" />
     
-        <line x1="142.3553" y1="14.1372" 
-              x2="283.3110" y2="159.0081" />
+        <line x1="158.2515" y1="-44.6461" 
+              x2="381.1395" y2="71.9735" />
     
-        <line x1="-97.5474" y1="-127.1361" 
-              x2="-367.2507" y2="-117.4876" />
+        <line x1="-100.8855" y1="-144.3452" 
+              x2="-343.7035" y2="-96.8130" />
     
-        <line x1="-97.5474" y1="-127.1361" 
-              x2="-124.9159" y2="-280.1562" />
+        <line x1="-100.8855" y1="-144.3452" 
+              x2="-176.7049" y2="-281.2519" />
     
-        <line x1="-390.0000" y1="290.0000" 
-              x2="-157.1873" y2="273.9103" />
+        <line x1="-260.2389" y1="290.0000" 
+              x2="-48.2129" y2="254.0700" />
     
-        <line x1="142.3553" y1="14.1372" 
-              x2="380.5108" y2="93.3245" />
+        <line x1="158.2515" y1="-44.6461" 
+              x2="262.8301" y2="26.0704" />
     
-        <line x1="119.9336" y1="158.5650" 
-              x2="280.2945" y2="165.7291" />
+        <line x1="179.0577" y1="118.0624" 
+              x2="380.1877" y2="78.5378" />
     
-        <line x1="-377.2443" y1="-117.1301" 
-              x2="-365.0139" y2="-251.7060" />
+        <line x1="-353.5172" y1="-94.8919" 
+              x2="-387.4025" y2="-220.8664" />
     
-        <line x1="390.0000" y1="96.4797" 
-              x2="298.4809" y2="160.4465" />
+        <line x1="271.1139" y1="31.6719" 
+              x2="380.6459" y2="73.0738" />
     
-        <line x1="-126.6765" y1="-290.0000" 
-              x2="-354.1793" y2="-262.8499" />
+        <line x1="-181.5496" y1="-290.0000" 
+              x2="-380.3838" y2="-233.2669" />
     
-        <line x1="119.9336" y1="158.5650" 
-              x2="-138.0217" y2="269.2768" />
+        <line x1="179.0577" y1="118.0624" 
+              x2="-29.8464" y2="247.1428" />
     
-        <line x1="119.9336" y1="158.5650" 
-              x2="309.8820" y2="20.1577" />
+        <line x1="179.0577" y1="118.0624" 
+              x2="358.7438" y2="-37.4371" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-97.5474 -127.1361)" 
+        <g transform="translate(-100.8855 -144.3452)" 
             class="black degree3" id="09DOHA177">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -167,29 +143,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09DOHA177.html">09DOHA177</a>
+                    <a id="09DOHA177" xlink:href="http://wikileaks.org/cable/2009/03/09DOHA177.html">09DOHA177</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA STATE MINISTER DESCRIBES UPCOMING ARAB LEAGUE SUMMIT AGENDA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Al-Mahmoud</tspan>
-                        <tspan class="rel">told</tspan>
-                        <tspan class="a2">Ambassador</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-126.6765 -290.0000)" 
+        <g transform="translate(-181.5496 -290.0000)" 
             class="black degree2" id="09DOHA193">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -200,53 +160,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09DOHA193.html">09DOHA193</a>
+                    <a id="09DOHA193" xlink:href="http://wikileaks.org/cable/2009/03/09DOHA193.html">09DOHA193</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ARAB LEAGUE SUMMIT: QATAR DESCRIBES PRE-SUMMIT POLITICS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Qatar</tspan>
-                        <tspan class="rel">agreed to discuss</tspan>
-                        <tspan class="a2">the accusations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the Summit</tspan>
-                        <tspan class="rel">would still be under</tspan>
-                        <tspan class="a2">Qatar 's presidency</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Mish'al</tspan>
-                        <tspan class="rel">should not be invited to</tspan>
-                        <tspan class="a2">the Summit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">One</tspan>
-                        <tspan class="rel">was to include</tspan>
-                        <tspan class="a2">Saudi Arabia</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the Amir</tspan>
-                        <tspan class="rel">went to</tspan>
-                        <tspan class="a2">Iran</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-390.0000 290.0000)" 
+        <g transform="translate(-260.2389 290.0000)" 
             class="black degree2" id="09JERUSALEM201">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -257,113 +177,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/01/09JERUSALEM201.html">09JERUSALEM201</a>
+                    <a id="09JERUSALEM201" xlink:href="http://wikileaks.org/cable/2009/01/09JERUSALEM201.html">09JERUSALEM201</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WEST BANKERS RELEASE PETITION CALLING FOR RECONCILIATION, UNITY GOVERNMENT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">ConGen translation of the petition</tspan>
-                        <tspan class="rel">follows at</tspan>
-                        <tspan class="a2">para 5</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the new government</tspan>
-                        <tspan class="rel">should prepare for</tspan>
-                        <tspan class="a2">national elections</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">encourages</tspan>
-                        <tspan class="a2">reform of the PLO</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">its leaders</tspan>
-                        <tspan class="rel">lack a strategic vision for</tspan>
-                        <tspan class="a2">internal Palestinian politics</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">the last chance</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">The Palestinian people</tspan>
-                        <tspan class="rel">face</tspan>
-                        <tspan class="a2">these days dangerous conditions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">national unity</tspan>
-                        <tspan class="rel">can enable the Palestinian people to achieve</tspan>
-                        <tspan class="a2">their national goals</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">their national rights</tspan>
-                        <tspan class="rel">include right of</tspan>
-                        <tspan class="a2">return</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">the compass</tspan>
-                        <tspan class="rel">must lead</tspan>
-                        <tspan class="a2">the path and work of the national forces</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">one geographic entity</tspan>
-                        <tspan class="rel">is under</tspan>
-                        <tspan class="a2">the Israeli occupation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">4- The political and geographic split</tspan>
-                        <tspan class="rel">is catastrophic to</tspan>
-                        <tspan class="a2">the Palestinian cause</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">decisions or decrees</tspan>
-                        <tspan class="rel">can lead to</tspan>
-                        <tspan class="a2">further split and division</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">the Palestinian national rights</tspan>
-                        <tspan class="rel">adheres to</tspan>
-                        <tspan class="a2">international law</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">bilateral negotiations</tspan>
-                        <tspan class="rel">have moved on</tspan>
-                        <tspan class="a2">the basis of Annapolis track</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">the halt of settlement activities</tspan>
-                        <tspan class="rel">can end</tspan>
-                        <tspan class="a2">the aggression and siege</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(119.9336 158.5650)" 
+        <g transform="translate(179.0577 118.0624)" 
             class="black degree5" id="09JERUSALEM465">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -374,71 +194,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM465.html">09JERUSALEM465</a>
+                    <a id="09JERUSALEM465" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM465.html">09JERUSALEM465</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN RECONCILIATION: SIGNIFICANT GAPS EVIDENT IN INITIAL ROUND</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">significant gaps</tspan>
-                        <tspan class="rel">became evident on</tspan>
-                        <tspan class="a2">key issues</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">their areas of agreement and discord and talks</tspan>
-                        <tspan class="rel">are now in</tspan>
-                        <tspan class="a2">recess</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">an Egyptian-chaired oversight committee</tspan>
-                        <tspan class="rel">will meet to address</tspan>
-                        <tspan class="a2">areas of disagreement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Talks</tspan>
-                        <tspan class="rel">are in</tspan>
-                        <tspan class="a2">recess</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Readouts</tspan>
-                        <tspan class="rel">below are from</tspan>
-                        <tspan class="a2">Fatah sources</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Hamas</tspan>
-                        <tspan class="rel">initially demanded</tspan>
-                        <tspan class="a2">the dissolution of the Preventive Security Organization</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Hamas</tspan>
-                        <tspan class="rel">insists on</tspan>
-                        <tspan class="a2">sequencing</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Hamas</tspan>
-                        <tspan class="rel">need not be simultaneous on</tspan>
-                        <tspan class="a2">all issues</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(142.3553 14.1372)" 
+        <g transform="translate(158.2515 -44.6461)" 
             class="black degree5" id="09JERUSALEM476">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -449,59 +211,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM476.html">09JERUSALEM476</a>
+                    <a id="09JERUSALEM476" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM476.html">09JERUSALEM476</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN RECONCILIATION: CORE ISSUES REMAIN UNRESOLVED</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Major issues</tspan>
-                        <tspan class="rel">remain unresolved on</tspan>
-                        <tspan class="a2">security</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">2.</tspan>
-                        <tspan class="rel">reconvened after</tspan>
-                        <tspan class="a2">a one-day recess</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Work</tspan>
-                        <tspan class="rel">continued through</tspan>
-                        <tspan class="a2">March 16</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">the PLO Reform Committee</tspan>
-                        <tspan class="rel">submitted its findings to</tspan>
-                        <tspan class="a2">the Steering Committee</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Fatah</tspan>
-                        <tspan class="rel">rejects</tspan>
-                        <tspan class="a2">this</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">may refer the issues to</tspan>
-                        <tspan class="a2">faction leaders</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-147.2111 273.2208)" 
+        <g transform="translate(-38.3534 252.3992)" 
             class="black degree3" id="09JERUSALEM490">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -512,19 +228,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM490.html">09JERUSALEM490</a>
+                    <a id="09JERUSALEM490" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM490.html">09JERUSALEM490</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IDF ARRESTS HAMAS POLITICAL FIGURES IN THE WEST BANK</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(317.9640 14.2687)" 
+        <g transform="translate(366.3054 -43.9810)" 
             class="black degree4" id="09JERUSALEM528">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -535,29 +245,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM528.html">09JERUSALEM528</a>
+                    <a id="09JERUSALEM528" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM528.html">09JERUSALEM528</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN RECONCILIATION: EGYPT INVITING FACTIONS TO RECONVENE APRIL 1</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Fatah delegation</tspan>
-                        <tspan class="rel">will be</tspan>
-                        <tspan class="a2">Ahmad Abdel Rahman</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(390.0000 96.4797)" 
+        <g transform="translate(271.1139 31.6719)" 
             class="black degree4" id="09JERUSALEM575">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -568,35 +262,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM575.html">09JERUSALEM575</a>
+                    <a id="09JERUSALEM575" xlink:href="http://wikileaks.org/cable/2009/03/09JERUSALEM575.html">09JERUSALEM575</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN RECONCILIATION: FATAH NEGOTIATORS PESSIMISTIC AS HAMAS DIGS IN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the next Prime Minister</tspan>
-                        <tspan class="rel">would be based in</tspan>
-                        <tspan class="a2">Gaza</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the PLO 's prior commitments</tspan>
-                        <tspan class="rel">would harm</tspan>
-                        <tspan class="a2">the Palestinian cause</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(290.2845 166.1754)" 
+        <g transform="translate(390.0000 76.6095)" 
             class="black degree6" id="09JERUSALEM602">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -607,19 +279,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/04/09JERUSALEM602.html">09JERUSALEM602</a>
+                    <a id="09JERUSALEM602" xlink:href="http://wikileaks.org/cable/2009/04/09JERUSALEM602.html">09JERUSALEM602</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN RECONCILIATION: FATAH-HAMAS TALKS PROCEEDING WITHOUT MINOR FACTIONS</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-377.2443 -117.1301)" 
+        <g transform="translate(-353.5172 -94.8919)" 
             class="black degree2" id="09KHARTOUM408">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -630,41 +296,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KHARTOUM408.html">09KHARTOUM408</a>
+                    <a id="09KHARTOUM408" xlink:href="http://wikileaks.org/cable/2009/03/09KHARTOUM408.html">09KHARTOUM408</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PRESIDENT BASHIR RETHINKING ATTENDANCE AT ARAB LEAGUE SUMMIT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">pro-government press</tspan>
-                        <tspan class="rel">recently has been filled with</tspan>
-                        <tspan class="a2">commentary</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Pro-regime media</tspan>
-                        <tspan class="rel">have joined</tspan>
-                        <tspan class="a2">the echo chamber</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">3. Sudanese businessmen</tspan>
-                        <tspan class="rel">close to</tspan>
-                        <tspan class="a2">the regime</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-364.1089 -261.6649)" 
+        <g transform="translate(-390.0000 -230.5232)" 
             class="black degree3" id="09STATE28317">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -675,59 +313,370 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2009/03/09STATE28317.html">09STATE28317</a>
+                    <a id="09STATE28317" xlink:href="http://wikileaks.org/cable/2009/03/09STATE28317.html">09STATE28317</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SUDAN ) DEMARCHE ON DEALING WITH SUDANESE PRESIDENT BASHIR DURING HIS VISIT TO CAIRO</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">an action request</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">2.</tspan>
-                        <tspan class="rel">recently issued</tspan>
-                        <tspan class="a2">an arrest warrant</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">almost all of whom</tspan>
-                        <tspan class="rel">are</tspan>
-                        <tspan class="a2">Muslim</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">positive actions</tspan>
-                        <tspan class="rel">will bring peace to</tspan>
-                        <tspan class="a2">the sub region</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Egypt</tspan>
-                        <tspan class="rel">now joins the ranks of</tspan>
-                        <tspan class="a2">Eritrea</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">hope to avoid</tspan>
-                        <tspan class="a2">this outcome</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#09DOHA177').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>MFA STATE MINISTER DESCRIBES UPCOMING ARAB LEAGUE SUMMIT AGENDA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Al-Mahmoud</span> <span class="rel">told</span> <span class="a2">Ambassador</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09DOHA193').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ARAB LEAGUE SUMMIT: QATAR DESCRIBES PRE-SUMMIT POLITICS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Qatar</span> <span class="rel">agreed to discuss</span> <span class="a2">the accusations</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Summit</span> <span class="rel">would still be under</span> <span class="a2">Qatar &#39;s presidency</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Mish&#39;al</span> <span class="rel">should not be invited to</span> <span class="a2">the Summit</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">One</span> <span class="rel">was to include</span> <span class="a2">Saudi Arabia</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Amir</span> <span class="rel">went to</span> <span class="a2">Iran</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM201').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WEST BANKERS RELEASE PETITION CALLING FOR RECONCILIATION, UNITY GOVERNMENT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">ConGen translation of the petition</span> <span class="rel">follows at</span> <span class="a2">para 5</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the new government</span> <span class="rel">should prepare for</span> <span class="a2">national elections</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">It</span> <span class="rel">encourages</span> <span class="a2">reform of the PLO</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">its leaders</span> <span class="rel">lack a strategic vision for</span> <span class="a2">internal Palestinian politics</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is</span> <span class="a2">the last chance</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM465').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN RECONCILIATION: SIGNIFICANT GAPS EVIDENT IN INITIAL ROUND</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">significant gaps</span> <span class="rel">became evident on</span> <span class="a2">key issues</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">their areas of agreement and discord and talks</span> <span class="rel">are now in</span> <span class="a2">recess</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">an Egyptian-chaired oversight committee</span> <span class="rel">will meet to address</span> <span class="a2">areas of disagreement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Talks</span> <span class="rel">are in</span> <span class="a2">recess</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Readouts</span> <span class="rel">below are from</span> <span class="a2">Fatah sources</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM476').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN RECONCILIATION: CORE ISSUES REMAIN UNRESOLVED</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Major issues</span> <span class="rel">remain unresolved on</span> <span class="a2">security</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">2.</span> <span class="rel">reconvened after</span> <span class="a2">a one-day recess</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Work</span> <span class="rel">continued through</span> <span class="a2">March 16</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the PLO Reform Committee</span> <span class="rel">submitted its findings to</span> <span class="a2">the Steering Committee</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Fatah</span> <span class="rel">rejects</span> <span class="a2">this</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM490').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IDF ARRESTS HAMAS POLITICAL FIGURES IN THE WEST BANK</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM528').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN RECONCILIATION: EGYPT INVITING FACTIONS TO RECONVENE APRIL 1</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Fatah delegation</span> <span class="rel">will be</span> <span class="a2">Ahmad Abdel Rahman</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM575').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN RECONCILIATION: FATAH NEGOTIATORS PESSIMISTIC AS HAMAS DIGS IN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the next Prime Minister</span> <span class="rel">would be based in</span> <span class="a2">Gaza</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the PLO &#39;s prior commitments</span> <span class="rel">would harm</span> <span class="a2">the Palestinian cause</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09JERUSALEM602').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN RECONCILIATION: FATAH-HAMAS TALKS PROCEEDING WITHOUT MINOR FACTIONS</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09KHARTOUM408').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PRESIDENT BASHIR RETHINKING ATTENDANCE AT ARAB LEAGUE SUMMIT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">pro-government press</span> <span class="rel">recently has been filled with</span> <span class="a2">commentary</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Pro-regime media</span> <span class="rel">have joined</span> <span class="a2">the echo chamber</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Sudanese businessmen</span> <span class="rel">close to</span> <span class="a2">the regime</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#09STATE28317').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SUDAN ) DEMARCHE ON DEALING WITH SUDANESE PRESIDENT BASHIR DURING HIS VISIT TO CAIRO</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is</span> <span class="a2">an action request</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">2.</span> <span class="rel">recently issued</span> <span class="a2">an arrest warrant</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">almost all of whom</span> <span class="rel">are</span> <span class="a2">Muslim</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">positive actions</span> <span class="rel">will bring peace to</span> <span class="a2">the sub region</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Egypt</span> <span class="rel">now joins the ranks of</span> <span class="a2">Eritrea</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>
