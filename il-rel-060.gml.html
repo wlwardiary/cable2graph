@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,67 +78,67 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-390.0000" y1="213.1357" 
-              x2="-281.8715" y2="187.2644" />
+        <line x1="257.3500" y1="108.4107" 
+              x2="268.7120" y2="-5.9432" />
     
-        <line x1="-161.6777" y1="274.8701" 
-              x2="-264.3910" y2="191.2509" />
+        <line x1="236.3707" y1="-144.6361" 
+              x2="267.1944" y2="-25.5750" />
     
-        <line x1="266.6306" y1="104.5959" 
-              x2="327.6433" y2="186.7693" />
+        <line x1="-258.3617" y1="-193.7750" 
+              x2="-297.1966" y2="-280.8668" />
     
-        <line x1="-26.0711" y1="-180.6067" 
-              x2="7.9152" y2="-280.5326" />
+        <line x1="-111.6095" y1="179.4137" 
+              x2="21.4597" y2="240.9439" />
     
-        <line x1="-333.2388" y1="-147.2308" 
-              x2="-203.0829" y2="-176.2494" />
+        <line x1="-362.5782" y1="256.5277" 
+              x2="-226.6958" y2="265.8469" />
     
-        <line x1="121.9710" y1="-94.9890" 
-              x2="127.4987" y2="44.9779" />
+        <line x1="-201.8058" y1="37.1316" 
+              x2="-143.9720" y2="-100.1611" />
     
-        <line x1="11.1352" y1="-290.0000" 
-              x2="-101.2424" y2="-263.1285" />
+        <line x1="30.5364" y1="245.1408" 
+              x2="-69.7574" y2="286.2105" />
     
-        <line x1="127.8933" y1="54.9701" 
-              x2="257.2148" y2="101.2279" />
+        <line x1="-140.0899" y1="-109.3768" 
+              x2="-250.2217" y2="-187.9663" />
     
-        <line x1="-26.0711" y1="-180.6067" 
-              x2="113.3145" y2="-99.9953" />
+        <line x1="-111.6095" y1="179.4137" 
+              x2="-196.4517" y2="45.5775" />
     
-        <line x1="333.6046" y1="194.7982" 
-              x2="384.8122" y2="110.4113" />
+        <line x1="-301.2691" y1="-290.0000" 
+              x2="-382.4525" y2="-219.4361" />
     
-        <line x1="-26.0711" y1="-180.6067" 
-              x2="-103.6988" y2="-253.9359" />
+        <line x1="-111.6095" y1="179.4137" 
+              x2="-81.8390" y2="280.4081" />
     
-        <line x1="121.9710" y1="-94.9890" 
-              x2="245.3747" y2="-156.4716" />
+        <line x1="-201.8058" y1="37.1316" 
+              x2="-359.0204" y2="38.0702" />
     
-        <line x1="-193.3225" y1="-178.4255" 
-              x2="-118.0383" y2="-253.7308" />
+        <line x1="-216.7192" y1="266.5311" 
+              x2="-88.8694" y2="288.3200" />
     
-        <line x1="58.0953" y1="186.0092" 
-              x2="-14.7731" y2="282.0340" />
+        <line x1="-7.7302" y1="-204.8502" 
+              x2="127.2565" y2="-232.9852" />
     
-        <line x1="266.6306" y1="104.5959" 
-              x2="380.0025" y2="102.0837" />
+        <line x1="-258.3617" y1="-193.7750" 
+              x2="-380.1036" y2="-211.4400" />
     
-        <line x1="-26.0711" y1="-180.6067" 
-              x2="-183.3234" y2="-178.5559" />
+        <line x1="-111.6095" y1="179.4137" 
+              x2="-209.0200" y2="260.1498" />
     
-        <line x1="-161.6777" y1="274.8701" 
-              x2="-30.7610" y2="288.9320" />
+        <line x1="236.3707" y1="-144.6361" 
+              x2="144.4420" y2="-228.2950" />
     
-        <line x1="-335.4788" y1="76.6879" 
-              x2="-277.1959" y2="176.3062" />
+        <line x1="390.0000" y1="13.9134" 
+              x2="279.4072" y2="-13.4891" />
     
-        <line x1="127.8933" y1="54.9701" 
-              x2="62.7965" y2="177.1832" />
+        <line x1="-140.0899" y1="-109.3768" 
+              x2="-15.8404" y2="-199.0001" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-333.2388 -147.2308)" 
+        <g transform="translate(-362.5782 256.5277)" 
             class="black degree2" id="06JERUSALEM1383">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -173,19 +149,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06JERUSALEM1383.html">06JERUSALEM1383</a>
+                    <a id="06JERUSALEM1383" xlink:href="http://wikileaks.org/cable/2006/04/06JERUSALEM1383.html">06JERUSALEM1383</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">BANKS IN WEST BANK/GAZA TOLD THAT ISRAELI BANKS WILL CEASE WORKING WITH THEM</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-390.0000 213.1357)" 
+        <g transform="translate(257.3500 108.4107)" 
             class="red degree2" id="06STATE30949">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -193,7 +163,7 @@
             
         </g>
         
-        <g transform="translate(-335.4788 76.6879)" 
+        <g transform="translate(390.0000 13.9134)" 
             class="black degree2" id="06TELAVIV1066">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -204,77 +174,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06TELAVIV1066.html">06TELAVIV1066</a>
+                    <a id="06TELAVIV1066" xlink:href="http://wikileaks.org/cable/2006/03/06TELAVIV1066.html">06TELAVIV1066</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GIDEON EZRA DISCUSSES AMONA COMMITTEE, POST-ELECTION DISENGAGEMENT, E-1, AND ENVIRONMENT WITH AMBASSADOR</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the GOI and EPA</tspan>
-                        <tspan class="rel">are cooperating on</tspan>
-                        <tspan class="a2">an air pollution study</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Ezra</tspan>
-                        <tspan class="rel">also asked for</tspan>
-                        <tspan class="a2">the release of Jonathan Pollard</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">those</tspan>
-                        <tspan class="rel">fought against</tspan>
-                        <tspan class="a2">the security forces</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">policemen</tspan>
-                        <tspan class="rel">are losing</tspan>
-                        <tspan class="a2">their "pride</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">your concern</tspan>
-                        <tspan class="rel">is the eastern border of</tspan>
-                        <tspan class="a2">Ma'ale Adumim</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">will be good for</tspan>
-                        <tspan class="a2">them</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">would be difficult to explain to</tspan>
-                        <tspan class="a2">Israelis</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">whaling</tspan>
-                        <tspan class="rel">is not a problem in</tspan>
-                        <tspan class="a2">Israel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">The Ambassador</tspan>
-                        <tspan class="rel">delivered</tspan>
-                        <tspan class="a2">demarche points</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-26.0711 -180.6067)" 
+        <g transform="translate(-111.6095 179.4137)" 
             class="red degree5" id="06TELAVIV1368">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -282,7 +188,7 @@
             
         </g>
         
-        <g transform="translate(121.9710 -94.9890)" 
+        <g transform="translate(-201.8058 37.1316)" 
             class="black degree3" id="06TELAVIV1392">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -293,65 +199,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1392.html">06TELAVIV1392</a>
+                    <a id="06TELAVIV1392" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1392.html">06TELAVIV1392</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">MFA STILL HAS RESERVATIONS ON CUSTOMS PROTOCOL; WILL WEIGH IN ON BANK HAPOALIM THREAT TO SEVER TIES WITH PALESTINIAN BANKS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the MFA</tspan>
-                        <tspan class="rel">has a handle on</tspan>
-                        <tspan class="a2">the situation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">a separate border service</tspan>
-                        <tspan class="rel">would not be under</tspan>
-                        <tspan class="a2">the PM.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">USAID and MOD/IDF officials</tspan>
-                        <tspan class="rel">are discussing</tspan>
-                        <tspan class="a2">options</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Most of this</tspan>
-                        <tspan class="rel">will be used to purchase</tspan>
-                        <tspan class="a2">scanning equipment</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">3.</tspan>
-                        <tspan class="rel">was previously negotiated with</tspan>
-                        <tspan class="a2">the PA</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">a document</tspan>
-                        <tspan class="rel">so empowers</tspan>
-                        <tspan class="a2">him</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Prosor</tspan>
-                        <tspan class="rel">promised to look into</tspan>
-                        <tspan class="a2">the matter</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(127.8933 54.9701)" 
+        <g transform="translate(-140.0899 -109.3768)" 
             class="black degree3" id="06TELAVIV1395">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -362,47 +216,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1395.html">06TELAVIV1395</a>
+                    <a id="06TELAVIV1395" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1395.html">06TELAVIV1395</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: GOI HEALTH MINISTRY OPPOSES COMPOSITION OF MDA EXECUTIVE COMMITTEE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the GOI</tspan>
-                        <tspan class="rel">will approve changes to</tspan>
-                        <tspan class="a2">MDA statutes</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">MOJ officials</tspan>
-                        <tspan class="rel">support</tspan>
-                        <tspan class="a2">these demands</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">PRCS</tspan>
-                        <tspan class="rel">qualifies for</tspan>
-                        <tspan class="a2">recognition</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">PRCS</tspan>
-                        <tspan class="rel">demands seriously on</tspan>
-                        <tspan class="a2">this issue</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(254.3253 -160.9310)" 
+        <g transform="translate(-369.0203 38.1299)" 
             class="black degree2" id="06TELAVIV1437">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -413,71 +233,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1437.html">06TELAVIV1437</a>
+                    <a id="06TELAVIV1437" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1437.html">06TELAVIV1437</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">GOI BRIEFING ON STATUS OF CROSSINGS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Baruch Spiegel</tspan>
-                        <tspan class="rel">briefed</tspan>
-                        <tspan class="a2">the Ambassador</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the PA customs officials</tspan>
-                        <tspan class="rel">destroy</tspan>
-                        <tspan class="a2">it</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">would pay taxes on</tspan>
-                        <tspan class="a2">these items</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">MFA Director General Ron Prosor</tspan>
-                        <tspan class="rel">has mentioned the idea to</tspan>
-                        <tspan class="a2">FM Livni</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">can be handled on</tspan>
-                        <tspan class="a2">the ground</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">would represent</tspan>
-                        <tspan class="a2">a breakthrough</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">the U.S.</tspan>
-                        <tspan class="rel">is willing to work on</tspan>
-                        <tspan class="a2">financing of the project</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The new government</tspan>
-                        <tspan class="rel">will deal with</tspan>
-                        <tspan class="a2">this issue</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(58.0953 186.0092)" 
+        <g transform="translate(-7.7302 -204.8502)" 
             class="black degree2" id="06TELAVIV1584">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -488,19 +250,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1584.html">06TELAVIV1584</a>
+                    <a id="06TELAVIV1584" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1584.html">06TELAVIV1584</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: ISRAELI FM LIVNI PLEDGES ASSISTANCE ON MAGEN DAVID ADOM</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-161.6777 274.8701)" 
+        <g transform="translate(236.3707 -144.6361)" 
             class="red degree2" id="06TELAVIV1585">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -508,7 +264,7 @@
             
         </g>
         
-        <g transform="translate(-20.8182 290.0000)" 
+        <g transform="translate(137.0461 -235.0256)" 
             class="black degree2" id="06TELAVIV1586">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -519,29 +275,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1586.html">06TELAVIV1586</a>
+                    <a id="06TELAVIV1586" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1586.html">06TELAVIV1586</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">FM LIVNI DISCUSSES RELATIONS WITH PALESTINIANS AND AMA ISSUES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The Ambassador</tspan>
-                        <tspan class="rel">explained the importance of</tspan>
-                        <tspan class="a2">the customs protocol</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(266.6306 104.5959)" 
+        <g transform="translate(-258.3617 -193.7750)" 
             class="black degree3" id="06TELAVIV1619">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -552,53 +292,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1619.html">06TELAVIV1619</a>
+                    <a id="06TELAVIV1619" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1619.html">06TELAVIV1619</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: FM LIVNI "CRACKED HEADS TOGETHER" TO CHANGE MDA STATUTES</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This autonomy</tspan>
-                        <tspan class="rel">must be reflected in</tspan>
-                        <tspan class="a2">the composition of the MDA executive committee</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the IFRC-ICRC</tspan>
-                        <tspan class="rel">does not specify exact terms for</tspan>
-                        <tspan class="a2">such autonomy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">a review procedure</tspan>
-                        <tspan class="rel">does not undermine</tspan>
-                        <tspan class="a2">MDA 's autonomy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">MDA officials</tspan>
-                        <tspan class="rel">must now consider</tspan>
-                        <tspan class="a2">this compromise arrangement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">The minister of health</tspan>
-                        <tspan class="rel">has not yet approved</tspan>
-                        <tspan class="a2">this amendment</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-272.1460 184.9375)" 
+        <g transform="translate(269.7007 -15.8942)" 
             class="black degree3" id="06TELAVIV1645">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -609,19 +309,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1645.html">06TELAVIV1645</a>
+                    <a id="06TELAVIV1645" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1645.html">06TELAVIV1645</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAEL LOOKING TO JOIN WHALING COMMISSION BY JUNE</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(333.6046 194.7982)" 
+        <g transform="translate(-301.2691 -290.0000)" 
             class="black degree3" id="06TELAVIV1685">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -632,41 +326,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1685.html">06TELAVIV1685</a>
+                    <a id="06TELAVIV1685" xlink:href="http://wikileaks.org/cable/2006/04/06TELAVIV1685.html">06TELAVIV1685</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON MDA EFFORTS TO CHANGE ITS STATUTES AND IMPLEMENT ITS MOU WITH THE PRCS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">a majority of whose members</tspan>
-                        <tspan class="rel">will now be drawn from</tspan>
-                        <tspan class="a2">MDA volunteers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">No one</tspan>
-                        <tspan class="rel">will vote for</tspan>
-                        <tspan class="a2">us</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the Red Cross Movement</tspan>
-                        <tspan class="rel">agree to</tspan>
-                        <tspan class="a2">the GOI proposal</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(11.1352 -290.0000)" 
+        <g transform="translate(30.5364 245.1408)" 
             class="black degree2" id="06TELAVIV1978">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -677,41 +343,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1978.html">06TELAVIV1978</a>
+                    <a id="06TELAVIV1978" xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1978.html">06TELAVIV1978</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ISRAELI PLAN FOR CONTINUED SHEKEL CHECK CLEARING FOR PALESTINIAN BANKS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">an Israeli</tspan>
-                        <tspan class="rel">is a customer of</tspan>
-                        <tspan class="a2">Mizrahi Bank</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The package</tspan>
-                        <tspan class="rel">will be finalized</tspan>
-                        <tspan class="a2">the week of May 22</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Zaken</tspan>
-                        <tspan class="rel">will also contact</tspan>
-                        <tspan class="a2">Treasury</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-193.3225 -178.4255)" 
+        <g transform="translate(-216.7192 266.5311)" 
             class="black degree3" id="06TELAVIV1982">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -722,95 +360,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1982.html">06TELAVIV1982</a>
+                    <a id="06TELAVIV1982" xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV1982.html">06TELAVIV1982</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">CENTRAL BANK GOVERNOR CONVEYS ISRAELI BANKING FEARS TO TREASURY U/S LEVEY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">will have a severe impact on</tspan>
-                        <tspan class="a2">the Palestinian economy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the Palestinian economy</tspan>
-                        <tspan class="rel">is highly dependent on</tspan>
-                        <tspan class="a2">Israel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">shekel-clearing</tspan>
-                        <tspan class="rel">is very important for</tspan>
-                        <tspan class="a2">the PA economy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Israeli banks</tspan>
-                        <tspan class="rel">are leery of</tspan>
-                        <tspan class="a2">any connection</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Bank Hapoalim</tspan>
-                        <tspan class="rel">is very nervous about</tspan>
-                        <tspan class="a2">the issue</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">life</tspan>
-                        <tspan class="rel">would become very difficult in</tspan>
-                        <tspan class="a2">the PA.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The PA</tspan>
-                        <tspan class="rel">is ruled by</tspan>
-                        <tspan class="a2">a terrorist organization</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">has</tspan>
-                        <tspan class="a2">no developed legal structure</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">might become</tspan>
-                        <tspan class="a2">an effective organization</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Levey</tspan>
-                        <tspan class="rel">downplayed</tspan>
-                        <tspan class="a2">the idea</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Fischer</tspan>
-                        <tspan class="rel">was easily put to</tspan>
-                        <tspan class="a2">the test</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">one</tspan>
-                        <tspan class="rel">does business with</tspan>
-                        <tspan class="a2">Hamas-related entities</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(390.0000 101.8622)" 
+        <g transform="translate(-390.0000 -212.8760)" 
             class="black degree3" id="06TELAVIV2025">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -821,19 +377,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV2025.html">06TELAVIV2025</a>
+                    <a id="06TELAVIV2025" xlink:href="http://wikileaks.org/cable/2006/05/06TELAVIV2025.html">06TELAVIV2025</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EMBLEM: MFA FRUSTRATED WITH MDA REFORM EFFORT, BUT GOI STILL PLACING ROADBLOCKS</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-110.9682 -260.8029)" 
+        <g transform="translate(-79.0115 290.0000)" 
             class="black degree3" id="06TELAVIV2345">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -844,41 +394,454 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06TELAVIV2345.html">06TELAVIV2345</a>
+                    <a id="06TELAVIV2345" xlink:href="http://wikileaks.org/cable/2006/06/06TELAVIV2345.html">06TELAVIV2345</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">DEADLINE FOR ENDING ISRAELI-PALESTINIAN BANKING RELATIONSHIPS MAY EXTEND TO AUGUST 15</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">should come in</tspan>
-                        <tspan class="a2">a few days</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">will likely agree to</tspan>
-                        <tspan class="a2">the extension</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">will lose</tspan>
-                        <tspan class="a2">a significant nearby market</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#06JERUSALEM1383').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>BANKS IN WEST BANK/GAZA TOLD THAT ISRAELI BANKS WILL CEASE WORKING WITH THEM</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#06TELAVIV1066').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GIDEON EZRA DISCUSSES AMONA COMMITTEE, POST-ELECTION DISENGAGEMENT, E-1, AND ENVIRONMENT WITH AMBASSADOR</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the GOI and EPA</span> <span class="rel">are cooperating on</span> <span class="a2">an air pollution study</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Ezra</span> <span class="rel">also asked for</span> <span class="a2">the release of Jonathan Pollard</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">those</span> <span class="rel">fought against</span> <span class="a2">the security forces</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">policemen</span> <span class="rel">are losing</span> <span class="a2">their &#34;pride</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">your concern</span> <span class="rel">is the eastern border of</span> <span class="a2">Ma&#39;ale Adumim</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#06TELAVIV1392').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>MFA STILL HAS RESERVATIONS ON CUSTOMS PROTOCOL; WILL WEIGH IN ON BANK HAPOALIM THREAT TO SEVER TIES WITH PALESTINIAN BANKS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the MFA</span> <span class="rel">has a handle on</span> <span class="a2">the situation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">a separate border service</span> <span class="rel">would not be under</span> <span class="a2">the PM.</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">USAID and MOD/IDF officials</span> <span class="rel">are discussing</span> <span class="a2">options</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Most of this</span> <span class="rel">will be used to purchase</span> <span class="a2">scanning equipment</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3.</span> <span class="rel">was previously negotiated with</span> <span class="a2">the PA</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1395').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EMBLEM: GOI HEALTH MINISTRY OPPOSES COMPOSITION OF MDA EXECUTIVE COMMITTEE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the GOI</span> <span class="rel">will approve changes to</span> <span class="a2">MDA statutes</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">MOJ officials</span> <span class="rel">support</span> <span class="a2">these demands</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">PRCS</span> <span class="rel">qualifies for</span> <span class="a2">recognition</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">PRCS</span> <span class="rel">demands seriously on</span> <span class="a2">this issue</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1437').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>GOI BRIEFING ON STATUS OF CROSSINGS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Baruch Spiegel</span> <span class="rel">briefed</span> <span class="a2">the Ambassador</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the PA customs officials</span> <span class="rel">destroy</span> <span class="a2">it</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">would pay taxes on</span> <span class="a2">these items</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">MFA Director General Ron Prosor</span> <span class="rel">has mentioned the idea to</span> <span class="a2">FM Livni</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">can be handled on</span> <span class="a2">the ground</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1584').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EMBLEM: ISRAELI FM LIVNI PLEDGES ASSISTANCE ON MAGEN DAVID ADOM</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#06TELAVIV1586').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>FM LIVNI DISCUSSES RELATIONS WITH PALESTINIANS AND AMA ISSUES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The Ambassador</span> <span class="rel">explained the importance of</span> <span class="a2">the customs protocol</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1619').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EMBLEM: FM LIVNI &#34;CRACKED HEADS TOGETHER&#34; TO CHANGE MDA STATUTES</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This autonomy</span> <span class="rel">must be reflected in</span> <span class="a2">the composition of the MDA executive committee</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the IFRC-ICRC</span> <span class="rel">does not specify exact terms for</span> <span class="a2">such autonomy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">a review procedure</span> <span class="rel">does not undermine</span> <span class="a2">MDA &#39;s autonomy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">MDA officials</span> <span class="rel">must now consider</span> <span class="a2">this compromise arrangement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The minister of health</span> <span class="rel">has not yet approved</span> <span class="a2">this amendment</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1645').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ISRAEL LOOKING TO JOIN WHALING COMMISSION BY JUNE</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1685').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>UPDATE ON MDA EFFORTS TO CHANGE ITS STATUTES AND IMPLEMENT ITS MOU WITH THE PRCS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">a majority of whose members</span> <span class="rel">will now be drawn from</span> <span class="a2">MDA volunteers</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">No one</span> <span class="rel">will vote for</span> <span class="a2">us</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Red Cross Movement</span> <span class="rel">agree to</span> <span class="a2">the GOI proposal</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1978').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ISRAELI PLAN FOR CONTINUED SHEKEL CHECK CLEARING FOR PALESTINIAN BANKS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">an Israeli</span> <span class="rel">is a customer of</span> <span class="a2">Mizrahi Bank</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The package</span> <span class="rel">will be finalized</span> <span class="a2">the week of May 22</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Zaken</span> <span class="rel">will also contact</span> <span class="a2">Treasury</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV1982').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>CENTRAL BANK GOVERNOR CONVEYS ISRAELI BANKING FEARS TO TREASURY U/S LEVEY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">will have a severe impact on</span> <span class="a2">the Palestinian economy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Palestinian economy</span> <span class="rel">is highly dependent on</span> <span class="a2">Israel</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">shekel-clearing</span> <span class="rel">is very important for</span> <span class="a2">the PA economy</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Israeli banks</span> <span class="rel">are leery of</span> <span class="a2">any connection</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Bank Hapoalim</span> <span class="rel">is very nervous about</span> <span class="a2">the issue</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV2025').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EMBLEM: MFA FRUSTRATED WITH MDA REFORM EFFORT, BUT GOI STILL PLACING ROADBLOCKS</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06TELAVIV2345').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>DEADLINE FOR ENDING ISRAELI-PALESTINIAN BANKING RELATIONSHIPS MAY EXTEND TO AUGUST 15</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">It</span> <span class="rel">should come in</span> <span class="a2">a few days</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">will likely agree to</span> <span class="a2">the extension</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">They</span> <span class="rel">will lose</span> <span class="a2">a significant nearby market</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>

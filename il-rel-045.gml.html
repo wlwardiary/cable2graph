@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,100 +78,100 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="167.0212" y1="-93.5103" 
-              x2="-15.9966" y2="-121.3835" />
+        <line x1="157.6518" y1="117.6516" 
+              x2="192.4888" y2="-16.2053" />
     
-        <line x1="167.0212" y1="-93.5103" 
-              x2="131.1778" y2="-36.3898" />
+        <line x1="157.6518" y1="117.6516" 
+              x2="311.4014" y2="98.5760" />
     
-        <line x1="195.7050" y1="4.5954" 
-              x2="264.3908" y2="-49.2625" />
+        <line x1="258.6010" y1="133.5264" 
+              x2="256.9550" y2="179.4602" />
     
-        <line x1="167.0212" y1="-93.5103" 
-              x2="262.8566" y2="-58.8353" />
+        <line x1="157.6518" y1="117.6516" 
+              x2="248.5034" y2="183.5805" />
     
-        <line x1="195.7050" y1="4.5954" 
-              x2="169.8275" y2="-83.9121" />
+        <line x1="258.6010" y1="133.5264" 
+              x2="167.5304" y2="119.2050" />
     
-        <line x1="167.0212" y1="-93.5103" 
-              x2="282.8470" y2="-136.5480" />
+        <line x1="157.6518" y1="117.6516" 
+              x2="108.5487" y2="189.6954" />
     
-        <line x1="-183.3397" y1="194.8670" 
-              x2="-249.9659" y2="247.9049" />
+        <line x1="-252.1608" y1="-148.1815" 
+              x2="-153.2744" y2="-122.0122" />
     
-        <line x1="-192.0873" y1="-149.6999" 
-              x2="-278.8127" y2="-201.8862" />
+        <line x1="259.5251" y1="-143.1528" 
+              x2="380.0371" y2="-132.7395" />
     
-        <line x1="272.2600" y1="-55.4330" 
-              x2="289.9244" y2="-130.2983" />
+        <line x1="256.5969" y1="189.4538" 
+              x2="112.9014" y2="197.4061" />
     
-        <line x1="135.1376" y1="-210.4026" 
-              x2="91.2153" y2="-281.4928" />
+        <line x1="-26.2848" y1="172.5083" 
+              x2="-121.6081" y2="240.4752" />
     
-        <line x1="53.3842" y1="290.0000" 
-              x2="-34.4996" y2="234.2817" />
+        <line x1="-390.0000" y1="34.4856" 
+              x2="-319.0165" y2="-36.3025" />
     
-        <line x1="-199.9442" y1="-238.7026" 
-              x2="-277.9785" y2="-210.4468" />
+        <line x1="355.4939" y1="-202.6373" 
+              x2="385.6168" y2="-140.8669" />
     
-        <line x1="390.0000" y1="11.5335" 
-              x2="280.9524" y2="-50.4890" />
+        <line x1="269.7373" y1="290.0000" 
+              x2="257.8928" y2="199.3695" />
     
-        <line x1="-308.6655" y1="-84.5919" 
-              x2="-382.3437" y2="-22.6884" />
+        <line x1="170.4178" y1="-234.0328" 
+              x2="72.0639" y2="-285.0436" />
     
-        <line x1="-192.0873" y1="-149.6999" 
-              x2="-299.9348" y2="-89.4679" />
+        <line x1="259.5251" y1="-143.1528" 
+              x2="177.4189" y2="-226.8924" />
     
-        <line x1="284.5166" y1="15.7358" 
-              x2="380.0079" y2="11.9316" />
+        <line x1="193.3850" y1="229.7822" 
+              x2="261.8855" y2="283.8074" />
     
-        <line x1="272.2600" y1="-55.4330" 
-              x2="135.6905" y2="-29.7664" />
+        <line x1="256.5969" y1="189.4538" 
+              x2="315.5757" y2="105.5266" />
     
-        <line x1="-183.3397" y1="194.8670" 
-              x2="-282.4827" y2="137.7257" />
+        <line x1="-252.1608" y1="-148.1815" 
+              x2="-190.5801" y2="-235.3280" />
     
-        <line x1="-199.9442" y1="-238.7026" 
-              x2="-192.9666" y2="-159.6612" />
+        <line x1="355.4939" y1="-202.6373" 
+              x2="268.0248" y2="-148.4211" />
     
-        <line x1="284.5166" y1="15.7358" 
-              x2="205.6273" y2="5.8401" />
+        <line x1="193.3850" y1="229.7822" 
+              x2="252.9919" y2="141.8052" />
     
-        <line x1="53.3842" y1="290.0000" 
-              x2="157.4000" y2="261.4954" />
+        <line x1="-390.0000" y1="34.4856" 
+              x2="-346.3350" y2="111.2188" />
     
-        <line x1="-25.8826" y1="-122.8891" 
-              x2="-182.2149" y2="-148.1074" />
+        <line x1="195.0075" y1="-25.8829" 
+              x2="254.7048" y2="-134.3912" />
     
-        <line x1="-42.9452" y1="228.9272" 
-              x2="-173.6216" y2="197.2247" />
+        <line x1="-311.9357" y1="-43.3638" 
+              x2="-257.1146" y2="-139.4948" />
     
-        <line x1="195.7050" y1="4.5954" 
-              x2="134.9283" y2="-23.6988" />
+        <line x1="258.6010" y1="133.5264" 
+              x2="312.6631" y2="102.3414" />
     
-        <line x1="82.8727" y1="205.2208" 
-              x2="158.6108" y2="253.4788" />
+        <line x1="-267.8927" y1="52.7267" 
+              x2="-334.0083" y2="113.1632" />
     
-        <line x1="-378.6122" y1="69.0974" 
-              x2="-299.2330" y2="126.8490" />
+        <line x1="-65.8485" y1="-290.0000" 
+              x2="-175.4956" y2="-247.1357" />
     
-        <line x1="167.0212" y1="-93.5103" 
-              x2="137.7691" y2="-200.7551" />
+        <line x1="157.6518" y1="117.6516" 
+              x2="-16.7019" y2="169.6504" />
     
-        <line x1="284.5166" y1="15.7358" 
-              x2="174.3447" y2="-86.7010" />
+        <line x1="193.3850" y1="229.7822" 
+              x2="160.6881" y2="127.1795" />
     
-        <line x1="-390.0000" y1="-16.2557" 
-              x2="-379.9347" y2="59.1852" />
+        <line x1="63.1868" y1="-289.6477" 
+              x2="-55.8486" y2="-289.9727" />
     
-        <line x1="82.8727" y1="205.2208" 
-              x2="-33.1181" y2="227.0756" />
+        <line x1="-267.8927" y1="52.7267" 
+              x2="-307.7690" y2="-34.2732" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(284.5166 15.7358)" 
+        <g transform="translate(193.3850 229.7822)" 
             class="black degree3" id="06AMMAN2046">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -206,47 +182,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06AMMAN2046.html">06AMMAN2046</a>
+                    <a id="06AMMAN2046" xlink:href="http://wikileaks.org/cable/2006/03/06AMMAN2046.html">06AMMAN2046</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIANS STRANDED AT JORDAN-IRAQ BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Palestinians</tspan>
-                        <tspan class="rel">moved toward</tspan>
-                        <tspan class="a2">the Iraqi border post</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Iraqi border authorities</tspan>
-                        <tspan class="rel">reportedly transported</tspan>
-                        <tspan class="a2">some members of the group</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">UNHCR</tspan>
-                        <tspan class="rel">does not conduct regular cross-border operations on</tspan>
-                        <tspan class="a2">the Iraq-Jordan border</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The callers</tspan>
-                        <tspan class="rel">did not identify</tspan>
-                        <tspan class="a2">their alleged attackers</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(195.7050 4.5954)" 
+        <g transform="translate(258.6010 133.5264)" 
             class="black degree4" id="06AMMAN2061">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -257,29 +199,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06AMMAN2061.html">06AMMAN2061</a>
+                    <a id="06AMMAN2061" xlink:href="http://wikileaks.org/cable/2006/03/06AMMAN2061.html">06AMMAN2061</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN REFUGEES AT JORDAN-IRAQ BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">refugee flows</tspan>
-                        <tspan class="rel">is radioactive in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-199.9442 -238.7026)" 
+        <g transform="translate(355.4939 -202.6373)" 
             class="black degree2" id="06AMMAN3036">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -290,35 +216,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06AMMAN3036.html">06AMMAN3036</a>
+                    <a id="06AMMAN3036" xlink:href="http://wikileaks.org/cable/2006/04/06AMMAN3036.html">06AMMAN3036</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SYRIA OFFERS TO ADMIT (SMALL) NUMBERS OF PALESTINIANS FLEEING IRAQ</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">. Embassy Damascus</tspan>
-                        <tspan class="rel">has cleared</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Zahar 's announcement</tspan>
-                        <tspan class="rel">has already encouraged additional migration of</tspan>
-                        <tspan class="a2">Baghdad Palestinians</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(82.8727 205.2208)" 
+        <g transform="translate(-267.8927 52.7267)" 
             class="red degree4" id="06ANKARA4163">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -326,7 +230,7 @@
             
         </g>
         
-        <g transform="translate(53.3842 290.0000)" 
+        <g transform="translate(-390.0000 34.4856)" 
             class="black degree2" id="06ANKARA4355">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -337,101 +241,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ANKARA4355.html">06ANKARA4355</a>
+                    <a id="06ANKARA4355" xlink:href="http://wikileaks.org/cable/2006/07/06ANKARA4355.html">06ANKARA4355</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">SCENESETTER FOR PKK TRILATERAL MEETINGS: THE TURKISH WISH-LIST</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Iraqis</tspan>
-                        <tspan class="rel">follow through on</tspan>
-                        <tspan class="a2">their commitments</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">A successful senior-level trilateral meeting</tspan>
-                        <tspan class="rel">will consolidate</tspan>
-                        <tspan class="a2">these gains</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">have bought</tspan>
-                        <tspan class="a2">some time</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">another serious incident of PKK violence</tspan>
-                        <tspan class="rel">will raise the specter of</tspan>
-                        <tspan class="a2">unilateral Turkish action</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">A key player</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">Barzani</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Barzani</tspan>
-                        <tspan class="rel">has generally taken a negative stance toward</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">suc a demonstration</tspan>
-                        <tspan class="rel">will significantly reduce public pressure for</tspan>
-                        <tspan class="a2">a CBO</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">PKK terrorists</tspan>
-                        <tspan class="rel">are already in</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">violence</tspan>
-                        <tspan class="rel">would continue for</tspan>
-                        <tspan class="a2">some time</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">have continued to press for</tspan>
-                        <tspan class="a2">other action</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">the U.S.</tspan>
-                        <tspan class="rel">cannot defeat</tspan>
-                        <tspan class="a2">the PKK</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">this</tspan>
-                        <tspan class="rel">would be politically very difficult for</tspan>
-                        <tspan class="a2">the KRG.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">should also silence</tspan>
-                        <tspan class="a2">the saber-rattling</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(167.0212 -93.5103)" 
+        <g transform="translate(157.6518 117.6516)" 
             class="black degree7" id="06BAGHDAD1153">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -442,71 +258,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1153.html">06BAGHDAD1153</a>
+                    <a id="06BAGHDAD1153" xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1153.html">06BAGHDAD1153</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">UPDATE ON PALESTINIANS ON JORDAN-IRAQ BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">an action request</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">An updated UNHCR contingency plan</tspan>
-                        <tspan class="rel">would be</tspan>
-                        <tspan class="a2">a welcome development</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">PLO/DORA</tspan>
-                        <tspan class="rel">does not yet have the text of</tspan>
-                        <tspan class="a2">the Abbas statement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The new plan</tspan>
-                        <tspan class="rel">will be designed by</tspan>
-                        <tspan class="a2">UNHCR Geneva</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">An updated UNHCR contingency plan</tspan>
-                        <tspan class="rel">would be</tspan>
-                        <tspan class="a2">a welcome development</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">The mission</tspan>
-                        <tspan class="rel">will be</tspan>
-                        <tspan class="a2">a two-person team</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">this</tspan>
-                        <tspan class="rel">would fall to</tspan>
-                        <tspan class="a2">Iraqi security forces</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Baghdad</tspan>
-                        <tspan class="rel">might offer a more secure environment for</tspan>
-                        <tspan class="a2">Palestinians</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(135.1376 -210.4026)" 
+        <g transform="translate(-26.2848 172.5083)" 
             class="black degree2" id="06BAGHDAD1171">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -517,19 +275,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1171.html">06BAGHDAD1171</a>
+                    <a id="06BAGHDAD1171" xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1171.html">06BAGHDAD1171</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">REQUEST FOR EXCEPTION TO GUIDANCE ON PLO CONTACT</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-25.8826 -122.8891)" 
+        <g transform="translate(195.0075 -25.8829)" 
             class="black degree3" id="06BAGHDAD1325">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -540,95 +292,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1325.html">06BAGHDAD1325</a>
+                    <a id="06BAGHDAD1325" xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1325.html">06BAGHDAD1325</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">BAGHDAD PLO REPRESENTATIVE ON SITUATION OF PALESTINIANS IN IRAQ</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Septel</tspan>
-                        <tspan class="rel">will address</tspan>
-                        <tspan class="a2">the BPC 's new requirements</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">have gone to</tspan>
-                        <tspan class="a2">that border</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">should return to</tspan>
-                        <tspan class="a2">Iraq</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">was prepared to go on</tspan>
-                        <tspan class="a2">TV</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the ISF</tspan>
-                        <tspan class="rel">has responded to</tspan>
-                        <tspan class="a2">an incident</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">have been accompanied by</tspan>
-                        <tspan class="a2">US forces</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The BPC</tspan>
-                        <tspan class="rel">held a meeting on</tspan>
-                        <tspan class="a2">Tuesday March 28th , 2006</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The DACs</tspan>
-                        <tspan class="rel">can require</tspan>
-                        <tspan class="a2">additional documents</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">A copy of these documents</tspan>
-                        <tspan class="rel">should be sent to</tspan>
-                        <tspan class="a2">the Information Office</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">The Information Office</tspan>
-                        <tspan class="rel">will issue an official letter for</tspan>
-                        <tspan class="a2">the Palestinian</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">the Palestinian a residence permit</tspan>
-                        <tspan class="rel">addressed to</tspan>
-                        <tspan class="a2">the Residency Office</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">two other copies</tspan>
-                        <tspan class="rel">will be given to</tspan>
-                        <tspan class="a2">the DAC.</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-192.0873 -149.6999)" 
+        <g transform="translate(259.5251 -143.1528)" 
             class="black degree4" id="06BAGHDAD1433">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -639,77 +309,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BAGHDAD1433.html">06BAGHDAD1433</a>
+                    <a id="06BAGHDAD1433" xlink:href="http://wikileaks.org/cable/2006/05/06BAGHDAD1433.html">06BAGHDAD1433</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN HUMAN RIGHTS REPS ON PALESTINIANS  IN IRAQ, AT JORDAN BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">promised to send</tspan>
-                        <tspan class="a2">RefCoord lists of detained</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">complained about</tspan>
-                        <tspan class="a2">tough new residency requirements</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">a resettlement country</tspan>
-                        <tspan class="rel">would take</tspan>
-                        <tspan class="a2">them</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">the PHRA</tspan>
-                        <tspan class="rel">had not yet sent</tspan>
-                        <tspan class="a2">the promised lists</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">RefCoord</tspan>
-                        <tspan class="rel">promised to look into</tspan>
-                        <tspan class="a2">this</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">go to</tspan>
-                        <tspan class="a2">Syria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The PHRA representatives</tspan>
-                        <tspan class="rel">were not present</tspan>
-                        <tspan class="a2">themselves</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The PHRA</tspan>
-                        <tspan class="rel">had no further information on</tspan>
-                        <tspan class="a2">the fate of Majeed</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">The PHRA</tspan>
-                        <tspan class="rel">had never heard of</tspan>
-                        <tspan class="a2">the group</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-308.6655 -84.5919)" 
+        <g transform="translate(170.4178 -234.0328)" 
             class="black degree2" id="06BAGHDAD1659">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -720,65 +326,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BAGHDAD1659.html">06BAGHDAD1659</a>
+                    <a id="06BAGHDAD1659" xlink:href="http://wikileaks.org/cable/2006/05/06BAGHDAD1659.html">06BAGHDAD1659</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">120 MORE PALESTINIANS AT AL WALID BORDER POINT HOPING TO GET INTO SYRIA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Syria</tspan>
-                        <tspan class="rel">has so far refused to admit</tspan>
-                        <tspan class="a2">them</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">earlier</tspan>
-                        <tspan class="rel">proceeded directly to</tspan>
-                        <tspan class="a2">El Hol</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">An additional family of six</tspan>
-                        <tspan class="rel">had arrived in</tspan>
-                        <tspan class="a2">Trebil May 8</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The additional 46</tspan>
-                        <tspan class="rel">were admitted</tspan>
-                        <tspan class="a2">May 10</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Syria</tspan>
-                        <tspan class="rel">has so far refused entry to</tspan>
-                        <tspan class="a2">the new arrivals</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">could face another humanitarian problem at</tspan>
-                        <tspan class="a2">the Syrian border</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">RefCoord</tspan>
-                        <tspan class="rel">is working with</tspan>
-                        <tspan class="a2">UNHCR</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-390.0000 -16.2557)" 
+        <g transform="translate(63.1868 -289.6477)" 
             class="black degree2" id="06BAGHDAD2286">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -789,29 +343,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BAGHDAD2286.html">06BAGHDAD2286</a>
+                    <a id="06BAGHDAD2286" xlink:href="http://wikileaks.org/cable/2006/06/06BAGHDAD2286.html">06BAGHDAD2286</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ATTACK ON BAGHDAD PALESTINIANS KILLS FOUR</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">2. MNF-I forces</tspan>
-                        <tspan class="rel">arrived soon after</tspan>
-                        <tspan class="a2">Qusous ' call</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-378.6122 69.0974)" 
+        <g transform="translate(-65.8485 -290.0000)" 
             class="black degree2" id="06BAGHDAD2377">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -822,53 +360,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2377.html">06BAGHDAD2377</a>
+                    <a id="06BAGHDAD2377" xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2377.html">06BAGHDAD2377</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">UNHCR IRAQ HEAD OF DELEGATION ENGAGES GOI OFFICIALS ON MAKHMOUR, PALESTINIANS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">did not offer</tspan>
-                        <tspan class="a2">specifics</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The ministers</tspan>
-                        <tspan class="rel">also made reference to</tspan>
-                        <tspan class="a2">insurgent activities and terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">De Riedmatten</tspan>
-                        <tspan class="rel">got</tspan>
-                        <tspan class="a2">mixed signals</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">a representative group of 25 Palestinians</tspan>
-                        <tspan class="rel">are having</tspan>
-                        <tspan class="a2">residency permit problems</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">will discuss substantive matters as well as</tspan>
-                        <tspan class="a2">MODM capacity building</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-42.9452 228.9272)" 
+        <g transform="translate(-311.9357 -43.3638)" 
             class="black degree3" id="06BAGHDAD2628">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -879,53 +377,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2628.html">06BAGHDAD2628</a>
+                    <a id="06BAGHDAD2628" xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2628.html">06BAGHDAD2628</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">KURDS WANT TO RESOLVE THE PKK PROBLEM</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">understood the seriousness of</tspan>
-                        <tspan class="a2">the situation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">will send a strong message to</tspan>
-                        <tspan class="a2">the PKK.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Their message</tspan>
-                        <tspan class="rel">are friends of</tspan>
-                        <tspan class="a2">the Turks</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">was not technically in</tspan>
-                        <tspan class="a2">Kurdistan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">should go talk to</tspan>
-                        <tspan class="a2">them</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(167.0444 258.8524)" 
+        <g transform="translate(-341.3892 119.9102)" 
             class="black degree2" id="06BAGHDAD2655">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -936,47 +394,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2655.html">06BAGHDAD2655</a>
+                    <a id="06BAGHDAD2655" xlink:href="http://wikileaks.org/cable/2006/07/06BAGHDAD2655.html">06BAGHDAD2655</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAQIS AND KURDS INITIATE ACTION AGAINST PKK</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The PUK/KDP delegation</tspan>
-                        <tspan class="rel">was ready to travel to</tspan>
-                        <tspan class="a2">Ankara</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">These</tspan>
-                        <tspan class="rel">are positive steps on</tspan>
-                        <tspan class="a2">paper</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Turkey</tspan>
-                        <tspan class="rel">will not negotiate with</tspan>
-                        <tspan class="a2">the PKK.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">a point</tspan>
-                        <tspan class="rel">means the governments of</tspan>
-                        <tspan class="a2">Turkey</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-183.3397 194.8670)" 
+        <g transform="translate(-252.1608 -148.1815)" 
             class="black degree3" id="06BAGHDAD2768">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -987,53 +411,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD2768.html">06BAGHDAD2768</a>
+                    <a id="06BAGHDAD2768" xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD2768.html">06BAGHDAD2768</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAQI GOVERNMENT OFFICIALS REPORT SOME MOVEMENT ON RESOLVING PKK ISSUE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">he</tspan>
-                        <tspan class="rel">had ordered</tspan>
-                        <tspan class="a2">the Minister of the Interior</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The KRG</tspan>
-                        <tspan class="rel">would close similar offices in</tspan>
-                        <tspan class="a2">Irbil</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">wanted to hear from</tspan>
-                        <tspan class="a2">their jailed leader Ocalan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Hashimi</tspan>
-                        <tspan class="rel">was fully briefed on</tspan>
-                        <tspan class="a2">the situation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">did not commit to</tspan>
-                        <tspan class="a2">a specific use of force</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-257.7896 254.1330)" 
+        <g transform="translate(-143.6072 -119.4538)" 
             class="black degree2" id="06BAGHDAD2844">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1044,41 +428,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD2844.html">06BAGHDAD2844</a>
+                    <a id="06BAGHDAD2844" xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD2844.html">06BAGHDAD2844</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TALABANI DISCUSSES PKK, BAGHDAD SECURITY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Ambassador</tspan>
-                        <tspan class="rel">focused on</tspan>
-                        <tspan class="a2">the PKK</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">jailed PKK leader Abdullah Ocalan</tspan>
-                        <tspan class="rel">had agreed to</tspan>
-                        <tspan class="a2">a ceasefire</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">He</tspan>
-                        <tspan class="rel">also sought</tspan>
-                        <tspan class="a2">President Masud Barzani</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-291.1467 132.7322)" 
+        <g transform="translate(-184.8092 -243.4947)" 
             class="black degree2" id="06BAGHDAD3036">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1089,35 +445,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD3036.html">06BAGHDAD3036</a>
+                    <a id="06BAGHDAD3036" xlink:href="http://wikileaks.org/cable/2006/08/06BAGHDAD3036.html">06BAGHDAD3036</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">KRG TELLS UNCHR THEY OPPOSE MAKHMOUR INTEGRATION IN KURDISTAN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">more than 200,000 IDPs</tspan>
-                        <tspan class="rel">had migrated to</tspan>
-                        <tspan class="a2">Kurdistan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The KRG</tspan>
-                        <tspan class="rel">currently provides administrative services to</tspan>
-                        <tspan class="a2">the camp</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(390.0000 11.5335)" 
+        <g transform="translate(269.7373 290.0000)" 
             class="red degree2" id="06BAGHDAD785">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1125,7 +459,7 @@
             
         </g>
         
-        <g transform="translate(272.2600 -55.4330)" 
+        <g transform="translate(256.5969 189.4538)" 
             class="black degree7" id="06BAGHDAD918">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1136,53 +470,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD918.html">06BAGHDAD918</a>
+                    <a id="06BAGHDAD918" xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD918.html">06BAGHDAD918</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">89 BAGHDAD PALESTINIANS FLEE TO JORDAN BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">GOJ</tspan>
-                        <tspan class="rel">refused entry to</tspan>
-                        <tspan class="a2">the Palestinians</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The MoI officials</tspan>
-                        <tspan class="rel">were unaware of</tspan>
-                        <tspan class="a2">the refugees ' flight</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">we</tspan>
-                        <tspan class="rel">are wary of</tspan>
-                        <tspan class="a2">CPT 's role</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">We</tspan>
-                        <tspan class="rel">do not yet have a sense of</tspan>
-                        <tspan class="a2">the numbers of a possible mass exodus</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Post</tspan>
-                        <tspan class="rel">will urge</tspan>
-                        <tspan class="a2">the Palestinian community</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(125.8626 -27.9193)" 
+        <g transform="translate(321.3253 97.3448)" 
             class="black degree4" id="06BAGHDAD979">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1193,71 +487,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD979.html">06BAGHDAD979</a>
+                    <a id="06BAGHDAD979" xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD979.html">06BAGHDAD979</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">BAGHDAD PALESTINIANS RETURN TO IRAQ, BUT MORE BUSES MAY BE LEAVING TO THE BORDER SOON</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The Palestinians</tspan>
-                        <tspan class="rel">are now located in</tspan>
-                        <tspan class="a2">Trebil</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Post</tspan>
-                        <tspan class="rel">has also alerted</tspan>
-                        <tspan class="a2">the Iraq Security Forces</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The families</tspan>
-                        <tspan class="rel">are reportedly safe in</tspan>
-                        <tspan class="a2">an MoI barracks shelter</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">many Palestinians</tspan>
-                        <tspan class="rel">had left</tspan>
-                        <tspan class="a2">their jobs</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Multi-National Division Baghdad</tspan>
-                        <tspan class="rel">took note of</tspan>
-                        <tspan class="a2">these security concerns</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">PolOff</tspan>
-                        <tspan class="rel">asked</tspan>
-                        <tspan class="a2">the Palestinian Charge</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The Charge</tspan>
-                        <tspan class="rel">seemed amenable to</tspan>
-                        <tspan class="a2">that request</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Post</tspan>
-                        <tspan class="rel">will continue to monitor</tspan>
-                        <tspan class="a2">this situation</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-287.3810 -207.0421)" 
+        <g transform="translate(390.0000 -131.8787)" 
             class="black degree2" id="06DAMASCUS1853">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1268,35 +504,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DAMASCUS1853.html">06DAMASCUS1853</a>
+                    <a id="06DAMASCUS1853" xlink:href="http://wikileaks.org/cable/2006/04/06DAMASCUS1853.html">06DAMASCUS1853</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">PALESTINIAN FM VISITS DAMASCUS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Zahar</tspan>
-                        <tspan class="rel">also attended a rally at</tspan>
-                        <tspan class="a2">the Palestinian Yarmouk refugee camp</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Zahar</tspan>
-                        <tspan class="rel">also attended a rally at</tspan>
-                        <tspan class="a2">the Palestinian Yarmouk refugee camp</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(292.2208 -140.0311)" 
+        <g transform="translate(102.9167 197.9587)" 
             class="black degree2" id="06JERUSALEM1145">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1307,35 +521,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/03/06JERUSALEM1145.html">06JERUSALEM1145</a>
+                    <a id="06JERUSALEM1145" xlink:href="http://wikileaks.org/cable/2006/03/06JERUSALEM1145.html">06JERUSALEM1145</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">RAISING ISSUE OF 89 PALESTINIANS ON THE JORDAN-IRAQ BORDER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Con Gen Pol specialist</tspan>
-                        <tspan class="rel">contacted</tspan>
-                        <tspan class="a2">Azzam Ahmad</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">the presence of US troops</tspan>
-                        <tspan class="rel">has prevented</tspan>
-                        <tspan class="a2">reprisals</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(85.9592 -290.0000)" 
+        <g transform="translate(-129.7504 246.2807)" 
             class="red degree3" id="06STATE50417">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1346,4 +538,712 @@
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#06AMMAN2046').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIANS STRANDED AT JORDAN-IRAQ BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Palestinians</span> <span class="rel">moved toward</span> <span class="a2">the Iraqi border post</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Iraqi border authorities</span> <span class="rel">reportedly transported</span> <span class="a2">some members of the group</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">UNHCR</span> <span class="rel">does not conduct regular cross-border operations on</span> <span class="a2">the Iraq-Jordan border</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The callers</span> <span class="rel">did not identify</span> <span class="a2">their alleged attackers</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06AMMAN2061').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN REFUGEES AT JORDAN-IRAQ BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">refugee flows</span> <span class="rel">is radioactive in</span> <span class="a2">Jordan</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06AMMAN3036').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SYRIA OFFERS TO ADMIT (SMALL) NUMBERS OF PALESTINIANS FLEEING IRAQ</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">. Embassy Damascus</span> <span class="rel">has cleared</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Zahar &#39;s announcement</span> <span class="rel">has already encouraged additional migration of</span> <span class="a2">Baghdad Palestinians</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#06ANKARA4355').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>SCENESETTER FOR PKK TRILATERAL MEETINGS: THE TURKISH WISH-LIST</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Iraqis</span> <span class="rel">follow through on</span> <span class="a2">their commitments</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">A successful senior-level trilateral meeting</span> <span class="rel">will consolidate</span> <span class="a2">these gains</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">We</span> <span class="rel">have bought</span> <span class="a2">some time</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">another serious incident of PKK violence</span> <span class="rel">will raise the specter of</span> <span class="a2">unilateral Turkish action</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">A key player</span> <span class="rel">is</span> <span class="a2">Barzani</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD1153').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>UPDATE ON PALESTINIANS ON JORDAN-IRAQ BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is</span> <span class="a2">an action request</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">An updated UNHCR contingency plan</span> <span class="rel">would be</span> <span class="a2">a welcome development</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">PLO/DORA</span> <span class="rel">does not yet have the text of</span> <span class="a2">the Abbas statement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The new plan</span> <span class="rel">will be designed by</span> <span class="a2">UNHCR Geneva</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">An updated UNHCR contingency plan</span> <span class="rel">would be</span> <span class="a2">a welcome development</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD1171').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>REQUEST FOR EXCEPTION TO GUIDANCE ON PLO CONTACT</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD1325').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>BAGHDAD PLO REPRESENTATIVE ON SITUATION OF PALESTINIANS IN IRAQ</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Septel</span> <span class="rel">will address</span> <span class="a2">the BPC &#39;s new requirements</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">have gone to</span> <span class="a2">that border</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">should return to</span> <span class="a2">Iraq</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">was prepared to go on</span> <span class="a2">TV</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the ISF</span> <span class="rel">has responded to</span> <span class="a2">an incident</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD1433').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN HUMAN RIGHTS REPS ON PALESTINIANS  IN IRAQ, AT JORDAN BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">They</span> <span class="rel">promised to send</span> <span class="a2">RefCoord lists of detained</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">They</span> <span class="rel">complained about</span> <span class="a2">tough new residency requirements</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">a resettlement country</span> <span class="rel">would take</span> <span class="a2">them</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the PHRA</span> <span class="rel">had not yet sent</span> <span class="a2">the promised lists</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">RefCoord</span> <span class="rel">promised to look into</span> <span class="a2">this</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD1659').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>120 MORE PALESTINIANS AT AL WALID BORDER POINT HOPING TO GET INTO SYRIA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Syria</span> <span class="rel">has so far refused to admit</span> <span class="a2">them</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">earlier</span> <span class="rel">proceeded directly to</span> <span class="a2">El Hol</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">An additional family of six</span> <span class="rel">had arrived in</span> <span class="a2">Trebil May 8</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The additional 46</span> <span class="rel">were admitted</span> <span class="a2">May 10</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Syria</span> <span class="rel">has so far refused entry to</span> <span class="a2">the new arrivals</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2286').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ATTACK ON BAGHDAD PALESTINIANS KILLS FOUR</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">2. MNF-I forces</span> <span class="rel">arrived soon after</span> <span class="a2">Qusous &#39; call</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2377').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>UNHCR IRAQ HEAD OF DELEGATION ENGAGES GOI OFFICIALS ON MAKHMOUR, PALESTINIANS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">did not offer</span> <span class="a2">specifics</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The ministers</span> <span class="rel">also made reference to</span> <span class="a2">insurgent activities and terrorism</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">De Riedmatten</span> <span class="rel">got</span> <span class="a2">mixed signals</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">a representative group of 25 Palestinians</span> <span class="rel">are having</span> <span class="a2">residency permit problems</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">They</span> <span class="rel">will discuss substantive matters as well as</span> <span class="a2">MODM capacity building</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2628').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>KURDS WANT TO RESOLVE THE PKK PROBLEM</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">understood the seriousness of</span> <span class="a2">the situation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">will send a strong message to</span> <span class="a2">the PKK.</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Their message</span> <span class="rel">are friends of</span> <span class="a2">the Turks</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">it</span> <span class="rel">was not technically in</span> <span class="a2">Kurdistan</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">we</span> <span class="rel">should go talk to</span> <span class="a2">them</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2655').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IRAQIS AND KURDS INITIATE ACTION AGAINST PKK</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The PUK/KDP delegation</span> <span class="rel">was ready to travel to</span> <span class="a2">Ankara</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">These</span> <span class="rel">are positive steps on</span> <span class="a2">paper</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Turkey</span> <span class="rel">will not negotiate with</span> <span class="a2">the PKK.</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">a point</span> <span class="rel">means the governments of</span> <span class="a2">Turkey</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2768').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IRAQI GOVERNMENT OFFICIALS REPORT SOME MOVEMENT ON RESOLVING PKK ISSUE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">he</span> <span class="rel">had ordered</span> <span class="a2">the Minister of the Interior</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The KRG</span> <span class="rel">would close similar offices in</span> <span class="a2">Irbil</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">they</span> <span class="rel">wanted to hear from</span> <span class="a2">their jailed leader Ocalan</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Hashimi</span> <span class="rel">was fully briefed on</span> <span class="a2">the situation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">did not commit to</span> <span class="a2">a specific use of force</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD2844').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TALABANI DISCUSSES PKK, BAGHDAD SECURITY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Ambassador</span> <span class="rel">focused on</span> <span class="a2">the PKK</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">jailed PKK leader Abdullah Ocalan</span> <span class="rel">had agreed to</span> <span class="a2">a ceasefire</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">He</span> <span class="rel">also sought</span> <span class="a2">President Masud Barzani</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD3036').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>KRG TELLS UNCHR THEY OPPOSE MAKHMOUR INTEGRATION IN KURDISTAN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">more than 200,000 IDPs</span> <span class="rel">had migrated to</span> <span class="a2">Kurdistan</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The KRG</span> <span class="rel">currently provides administrative services to</span> <span class="a2">the camp</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+        $('#06BAGHDAD918').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>89 BAGHDAD PALESTINIANS FLEE TO JORDAN BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">GOJ</span> <span class="rel">refused entry to</span> <span class="a2">the Palestinians</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The MoI officials</span> <span class="rel">were unaware of</span> <span class="a2">the refugees &#39; flight</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">we</span> <span class="rel">are wary of</span> <span class="a2">CPT &#39;s role</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">We</span> <span class="rel">do not yet have a sense of</span> <span class="a2">the numbers of a possible mass exodus</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Post</span> <span class="rel">will urge</span> <span class="a2">the Palestinian community</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06BAGHDAD979').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>BAGHDAD PALESTINIANS RETURN TO IRAQ, BUT MORE BUSES MAY BE LEAVING TO THE BORDER SOON</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The Palestinians</span> <span class="rel">are now located in</span> <span class="a2">Trebil</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Post</span> <span class="rel">has also alerted</span> <span class="a2">the Iraq Security Forces</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The families</span> <span class="rel">are reportedly safe in</span> <span class="a2">an MoI barracks shelter</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">many Palestinians</span> <span class="rel">had left</span> <span class="a2">their jobs</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Multi-National Division Baghdad</span> <span class="rel">took note of</span> <span class="a2">these security concerns</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06DAMASCUS1853').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>PALESTINIAN FM VISITS DAMASCUS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Zahar</span> <span class="rel">also attended a rally at</span> <span class="a2">the Palestinian Yarmouk refugee camp</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Zahar</span> <span class="rel">also attended a rally at</span> <span class="a2">the Palestinian Yarmouk refugee camp</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06JERUSALEM1145').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>RAISING ISSUE OF 89 PALESTINIANS ON THE JORDAN-IRAQ BORDER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Con Gen Pol specialist</span> <span class="rel">contacted</span> <span class="a2">Azzam Ahmad</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the presence of US troops</span> <span class="rel">has prevented</span> <span class="a2">reprisals</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+});
+</script>
 </body>

@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,58 +78,58 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="-390.0000" y1="135.2050" 
-              x2="-312.9292" y2="237.8212" />
+        <line x1="390.0000" y1="46.7834" 
+              x2="341.9574" y2="163.6608" />
     
-        <line x1="-74.2744" y1="-178.4670" 
-              x2="61.4041" y2="-15.1727" />
+        <line x1="-10.3162" y1="-55.5919" 
+              x2="-173.9691" y2="88.7211" />
     
-        <line x1="-62.0897" y1="169.8340" 
-              x2="-163.7925" y2="282.5748" />
+        <line x1="40.5336" y1="174.4662" 
+              x2="195.6018" y2="242.3894" />
     
-        <line x1="190.5466" y1="-153.9483" 
-              x2="74.2181" y2="-15.1455" />
+        <line x1="-390.0000" y1="85.6513" 
+              x2="-191.4587" y2="94.8712" />
     
-        <line x1="76.3650" y1="-203.6627" 
-              x2="68.2313" y2="-17.4717" />
+        <line x1="-326.6926" y1="-28.8914" 
+              x2="-189.0685" y2="88.8347" />
     
-        <line x1="192.2629" y1="136.4467" 
-              x2="74.3360" y2="0.0826" />
+        <line x1="-338.0645" y1="211.2502" 
+              x2="-189.5070" y2="101.2847" />
     
-        <line x1="-315.1909" y1="-274.9123" 
-              x2="-325.1909" y2="-274.9123" />
+        <line x1="190.8842" y1="-290.0000" 
+              x2="180.8842" y2="-290.0000" />
     
-        <line x1="-98.8946" y1="-11.6924" 
-              x2="57.7980" y2="-7.7338" />
+        <line x1="-221.1707" y1="290.0000" 
+              x2="-183.4678" y2="105.1334" />
     
-        <line x1="-62.0897" y1="169.8340" 
-              x2="61.8855" y2="0.5860" />
+        <line x1="40.5336" y1="174.4662" 
+              x2="-172.0500" y2="98.6926" />
     
-        <line x1="-74.2744" y1="-178.4670" 
-              x2="-179.8570" y2="-282.9655" />
+        <line x1="-10.3162" y1="-55.5919" 
+              x2="102.1146" y2="-178.8188" />
     
-        <line x1="192.2629" y1="136.4467" 
-              x2="182.2629" y2="136.4467" />
+        <line x1="-338.0645" y1="211.2502" 
+              x2="-348.0645" y2="211.2502" />
     
-        <line x1="257.2086" y1="-7.1487" 
-              x2="380.1387" y2="13.5441" />
+        <line x1="-207.0569" y1="-124.4004" 
+              x2="-226.6873" y2="-269.2051" />
     
-        <line x1="-170.4907" y1="290.0000" 
-              x2="-297.4102" y2="248.8981" />
+        <line x1="204.7617" y1="246.4016" 
+              x2="329.3969" y2="177.7354" />
     
-        <line x1="257.2086" y1="-7.1487" 
-              x2="77.7948" y2="-7.4637" />
+        <line x1="-207.0569" y1="-124.4004" 
+              x2="-182.6261" y2="85.4022" />
     
-        <line x1="85.0383" y1="191.1722" 
-              x2="68.6596" y2="2.4813" />
+        <line x1="-88.1859" y1="262.2759" 
+              x2="-176.5915" y2="104.0647" />
     
-        <line x1="-315.1909" y1="-274.9123" 
-              x2="-196.8959" y2="-288.8314" />
+        <line x1="190.8842" y1="-290.0000" 
+              x2="115.0551" y2="-194.0517" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(76.3650 -203.6627)" 
+        <g transform="translate(-326.6926 -28.8914)" 
             class="black degree2" id="07AMMAN3336">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -164,125 +140,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/08/07AMMAN3336.html">07AMMAN3336</a>
+                    <a id="07AMMAN3336" xlink:href="http://wikileaks.org/cable/2007/08/07AMMAN3336.html">07AMMAN3336</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WELCOME UNDER SECRETARY LEVEY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The travelers</tspan>
-                        <tspan class="rel">should carefully review</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Ms. Brown</tspan>
-                        <tspan class="rel">can also be reached at</tspan>
-                        <tspan class="a2">BrownNE2@state</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The Embassy 's after-hours telephone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">+962-6-590-6500</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">3. Valid visas</tspan>
-                        <tspan class="rel">are required for</tspan>
-                        <tspan class="a2">entry</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">obtain their visas prior to</tspan>
-                        <tspan class="a2">arrival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Money</tspan>
-                        <tspan class="rel">can be exchanged at</tspan>
-                        <tspan class="a2">Queen Alia airport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">the quality of health care facilities</tspan>
-                        <tspan class="rel">is not up to</tspan>
-                        <tspan class="a2">the U.S. or European standards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Immunizations</tspan>
-                        <tspan class="rel">should be current for</tspan>
-                        <tspan class="a2">Tetanus and Diphtheria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">All local hospitals</tspan>
-                        <tspan class="rel">take</tspan>
-                        <tspan class="a2">major credit cards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">tapes</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">all mission facilities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">palm pilots</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">controlled access areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">magnetic media</tspan>
-                        <tspan class="rel">may be directed to</tspan>
-                        <tspan class="a2">the RSO and IMO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">The threat of terrorism</tspan>
-                        <tspan class="rel">remains high in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">Terrorists</tspan>
-                        <tspan class="rel">often do not distinguish between</tspan>
-                        <tspan class="a2">U.S. government personnel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Anti-American and anti-Western sentiment</tspan>
-                        <tspan class="rel">exists in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">are advised to avoid</tspan>
-                        <tspan class="a2">any demonstrations or large gatherings of people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">Demonstrations</tspan>
-                        <tspan class="rel">often take place at</tspan>
-                        <tspan class="a2">universities</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(190.5466 -153.9483)" 
+        <g transform="translate(-390.0000 85.6513)" 
             class="black degree2" id="07AMMAN5049">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -293,167 +157,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/12/07AMMAN5049.html">07AMMAN5049</a>
+                    <a id="07AMMAN5049" xlink:href="http://wikileaks.org/cable/2007/12/07AMMAN5049.html">07AMMAN5049</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WELCOME CODEL PRICE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">All visitors</tspan>
-                        <tspan class="rel">should carefully review</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">2. application</tspan>
-                        <tspan class="rel">was deployed for</tspan>
-                        <tspan class="a2">all U.S. Government travelers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The Embassy 's after-hours telephone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">962-6-590-6500</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">breakfast</tspan>
-                        <tspan class="rel">is included in</tspan>
-                        <tspan class="a2">the room rate</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">obtain their visas prior to</tspan>
-                        <tspan class="a2">arrival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Money</tspan>
-                        <tspan class="rel">can be exchanged at</tspan>
-                        <tspan class="a2">Queen Alia airport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">This charge</tspan>
-                        <tspan class="rel">is for</tspan>
-                        <tspan class="a2">the following ICASS services</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">are encouraged to avoid</tspan>
-                        <tspan class="a2">live poultry</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Visitors</tspan>
-                        <tspan class="rel">should use</tspan>
-                        <tspan class="a2">hand sanitizer and wash hands</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">the quality of health care facilities</tspan>
-                        <tspan class="rel">is not up to</tspan>
-                        <tspan class="a2">the U.S. or European standards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Immunizations</tspan>
-                        <tspan class="rel">should be current for</tspan>
-                        <tspan class="a2">Tetanus and Diphtheria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">All local hospitals</tspan>
-                        <tspan class="rel">take</tspan>
-                        <tspan class="a2">major credit cards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">tapes</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">all mission facilities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">palm pilots</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">controlled access areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">magnetic media</tspan>
-                        <tspan class="rel">may be directed to</tspan>
-                        <tspan class="a2">the RSO and IMO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">The threat of terrorism</tspan>
-                        <tspan class="rel">remains high in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">three men</tspan>
-                        <tspan class="rel">were reportedly plotting to attack</tspan>
-                        <tspan class="a2">the U.S. Embassy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">17 men</tspan>
-                        <tspan class="rel">had planned to assassinate</tspan>
-                        <tspan class="a2">GOJ officials</tspan>
-                    </text>
-                    
-                    <text x="-200" y="410" class="sentence">
-                        <tspan class="a1">Terrorists</tspan>
-                        <tspan class="rel">often do not distinguish between</tspan>
-                        <tspan class="a2">U.S. government personnel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="430" class="sentence">
-                        <tspan class="a1">U.S. Government personnel</tspan>
-                        <tspan class="rel">overseas have been advised to take</tspan>
-                        <tspan class="a2">the same precautions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="450" class="sentence">
-                        <tspan class="a1">Anti-American and anti-Western sentiment</tspan>
-                        <tspan class="rel">exists in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="470" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">are advised to avoid</tspan>
-                        <tspan class="a2">any demonstrations or large gatherings of people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="490" class="sentence">
-                        <tspan class="a1">Demonstrations</tspan>
-                        <tspan class="rel">often take place at</tspan>
-                        <tspan class="a2">universities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="510" class="sentence">
-                        <tspan class="a1">Yellow taxis</tspan>
-                        <tspan class="rel">are widely used throughout</tspan>
-                        <tspan class="a2">the country</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(257.2086 -7.1487)" 
+        <g transform="translate(-207.0569 -124.4004)" 
             class="black degree2" id="07AMMAN5060">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -464,155 +174,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/12/07AMMAN5060.html">07AMMAN5060</a>
+                    <a id="07AMMAN5060" xlink:href="http://wikileaks.org/cable/2007/12/07AMMAN5060.html">07AMMAN5060</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WELCOME CODEL WOLF</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The travelers</tspan>
-                        <tspan class="rel">should carefully review</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The Embassy 's after-hours telephone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">+962-6-590-6500</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">obtain their visas prior to</tspan>
-                        <tspan class="a2">arrival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Money</tspan>
-                        <tspan class="rel">can be exchanged at</tspan>
-                        <tspan class="a2">Queen Alia airport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">This charge</tspan>
-                        <tspan class="rel">is for</tspan>
-                        <tspan class="a2">the following ICASS services</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">are encouraged to avoid</tspan>
-                        <tspan class="a2">live poultry</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Visitors</tspan>
-                        <tspan class="rel">should use</tspan>
-                        <tspan class="a2">hand sanitizer and wash hands</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">the quality of health care facilities</tspan>
-                        <tspan class="rel">is not up to</tspan>
-                        <tspan class="a2">the U.S. or European standards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Immunizations</tspan>
-                        <tspan class="rel">should be current for</tspan>
-                        <tspan class="a2">Tetanus and Diphtheria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">All local hospitals</tspan>
-                        <tspan class="rel">take</tspan>
-                        <tspan class="a2">major credit cards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">tapes</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">all mission facilities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">palm pilots</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">controlled access areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">magnetic media</tspan>
-                        <tspan class="rel">may be directed to</tspan>
-                        <tspan class="a2">the RSO and IMO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">The threat of terrorism</tspan>
-                        <tspan class="rel">remains high in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">three men</tspan>
-                        <tspan class="rel">were reportedly plotting to attack</tspan>
-                        <tspan class="a2">the U.S. Embassy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">17 men</tspan>
-                        <tspan class="rel">had planned to assassinate</tspan>
-                        <tspan class="a2">GOJ officials</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">Terrorists</tspan>
-                        <tspan class="rel">often do not distinguish between</tspan>
-                        <tspan class="a2">U.S. government personnel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">U.S. Government personnel</tspan>
-                        <tspan class="rel">overseas have been advised to take</tspan>
-                        <tspan class="a2">the same precautions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="410" class="sentence">
-                        <tspan class="a1">Anti-American and anti-Western sentiment</tspan>
-                        <tspan class="rel">exists in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="430" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">are advised to avoid</tspan>
-                        <tspan class="a2">any demonstrations or large gatherings of people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="450" class="sentence">
-                        <tspan class="a1">Demonstrations</tspan>
-                        <tspan class="rel">often take place at</tspan>
-                        <tspan class="a2">universities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="470" class="sentence">
-                        <tspan class="a1">Yellow taxis</tspan>
-                        <tspan class="rel">are widely used throughout</tspan>
-                        <tspan class="a2">the country</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-62.0897 169.8340)" 
+        <g transform="translate(40.5336 174.4662)" 
             class="black degree2" id="07AMMAN662">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -623,119 +191,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07AMMAN662.html">07AMMAN662</a>
+                    <a id="07AMMAN662" xlink:href="http://wikileaks.org/cable/2007/02/07AMMAN662.html">07AMMAN662</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">WELCOME CODEL KYL</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">All visitors</tspan>
-                        <tspan class="rel">should carefully review</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The Embassy 's after-hours telephone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">962-6-590-6500</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">3. Hotel reservations</tspan>
-                        <tspan class="rel">have been made at</tspan>
-                        <tspan class="a2">the Intercontinental Hotel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">obtain their visas prior to</tspan>
-                        <tspan class="a2">arrival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Money</tspan>
-                        <tspan class="rel">can be exchanged at</tspan>
-                        <tspan class="a2">Queen Alia airport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the quality of health care facilities</tspan>
-                        <tspan class="rel">is not up to</tspan>
-                        <tspan class="a2">the U.S. or European standards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Immunizations</tspan>
-                        <tspan class="rel">should be current for</tspan>
-                        <tspan class="a2">Tetanus and Diphtheria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">All local hospitals</tspan>
-                        <tspan class="rel">take</tspan>
-                        <tspan class="a2">major credit cards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">tapes</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">all mission facilities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">palm pilots</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">controlled access areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">magnetic media</tspan>
-                        <tspan class="rel">may be directed to</tspan>
-                        <tspan class="a2">the RSO and IMO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">The threat of terrorism</tspan>
-                        <tspan class="rel">remains high in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Terrorists</tspan>
-                        <tspan class="rel">often do not distinguish between</tspan>
-                        <tspan class="a2">U.S. government personnel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">Anti-American and anti-Western sentiment</tspan>
-                        <tspan class="rel">exists in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">are advised to avoid</tspan>
-                        <tspan class="a2">any demonstrations or large gatherings of people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Demonstrations</tspan>
-                        <tspan class="rel">often take place at</tspan>
-                        <tspan class="a2">universities</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(85.0383 191.1722)" 
+        <g transform="translate(-88.1859 262.2759)" 
             class="black degree2" id="07AMMAN728">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -746,113 +208,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07AMMAN728.html">07AMMAN728</a>
+                    <a id="07AMMAN728" xlink:href="http://wikileaks.org/cable/2007/02/07AMMAN728.html">07AMMAN728</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTRY CLEARANCE FOR ASSISTANT SECRETARY PATTERSON AND DARBY</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">All visitors</tspan>
-                        <tspan class="rel">should carefully review</tspan>
-                        <tspan class="a2">this message</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The Embassy 's after-hours telephone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">962-6-590-6500</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">3. Hotel reservations</tspan>
-                        <tspan class="rel">have been made at</tspan>
-                        <tspan class="a2">the Hotel Sheraton</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">visitors</tspan>
-                        <tspan class="rel">obtain their visas prior to</tspan>
-                        <tspan class="a2">arrival</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Money</tspan>
-                        <tspan class="rel">can be exchanged at</tspan>
-                        <tspan class="a2">Queen Alia airport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the quality of health care facilities</tspan>
-                        <tspan class="rel">is not up to</tspan>
-                        <tspan class="a2">the U.S. or European standards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Immunizations</tspan>
-                        <tspan class="rel">should be current for</tspan>
-                        <tspan class="a2">Tetanus and Diphtheria</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">All local hospitals</tspan>
-                        <tspan class="rel">take</tspan>
-                        <tspan class="a2">major credit cards</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">tapes</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">all mission facilities</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">palm pilots</tspan>
-                        <tspan class="rel">are prohibited in</tspan>
-                        <tspan class="a2">controlled access areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">The threat of terrorism</tspan>
-                        <tspan class="rel">remains high in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Terrorists</tspan>
-                        <tspan class="rel">often do not distinguish between</tspan>
-                        <tspan class="a2">U.S. government personnel</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Anti-American and anti-Western sentiment</tspan>
-                        <tspan class="rel">exists in</tspan>
-                        <tspan class="a2">Jordan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">are advised to avoid</tspan>
-                        <tspan class="a2">any demonstrations or large gatherings of people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Demonstrations</tspan>
-                        <tspan class="rel">often take place at</tspan>
-                        <tspan class="a2">universities</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-315.1909 -274.9123)" 
+        <g transform="translate(190.8842 -290.0000)" 
             class="black degree3" id="07KUWAIT1451">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -863,119 +225,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/09/07KUWAIT1451.html">07KUWAIT1451</a>
+                    <a id="07KUWAIT1451" xlink:href="http://wikileaks.org/cable/2007/09/07KUWAIT1451.html">07KUWAIT1451</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">KUWAIT COUNTRY CLEARANCE GRANTED FOR MR. BRADLEY BOWMAN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The hotel phone number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">575-0155</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The number of the assigned phone</tspan>
-                        <tspan class="rel">will be</tspan>
-                        <tspan class="a2">724-8653</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The fee</tspan>
-                        <tspan class="rel">may be paid either in</tspan>
-                        <tspan class="a2">KD or USD.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">an extension</tspan>
-                        <tspan class="rel">should be requested</tspan>
-                        <tspan class="a2">2 weeks</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Kuwait</tspan>
-                        <tspan class="rel">is still clearing</tspan>
-                        <tspan class="a2">mines and munitions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Visitors</tspan>
-                        <tspan class="rel">must remain on</tspan>
-                        <tspan class="a2">major paved roads</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Office hours</tspan>
-                        <tspan class="rel">are 8:00 a.m. to</tspan>
-                        <tspan class="a2">4:30 p.m.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">The mission duty officer</tspan>
-                        <tspan class="rel">can be reached through</tspan>
-                        <tspan class="a2">the embassy switchboard</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">The embassy pouch address</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">6200 Kuwait Place</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Light winter clothing</tspan>
-                        <tspan class="rel">is suitable for</tspan>
-                        <tspan class="a2">Kuwait</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">one Kuwaiti Dinar</tspan>
-                        <tspan class="rel">is equivalent to approximately</tspan>
-                        <tspan class="a2">USD 3.50</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">The cable</tspan>
-                        <tspan class="rel">should include</tspan>
-                        <tspan class="a2">the visitor 's Social Security Number</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Compromises of sensitive personal data</tspan>
-                        <tspan class="rel">can result in</tspan>
-                        <tspan class="a2">significant personal and financial hardship</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">is strictly forbidden to</tspan>
-                        <tspan class="a2">photograph public buildings</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">all other costs</tspan>
-                        <tspan class="rel">are directly attributable to</tspan>
-                        <tspan class="a2">the visit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">This cable</tspan>
-                        <tspan class="rel">was last updated on</tspan>
-                        <tspan class="a2">October 30 , 2006</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(192.2629 136.4467)" 
+        <g transform="translate(-338.0645 211.2502)" 
             class="black degree5" id="07MOSCOW1209">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -986,107 +242,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/03/07MOSCOW1209.html">07MOSCOW1209</a>
+                    <a id="07MOSCOW1209" xlink:href="http://wikileaks.org/cable/2007/03/07MOSCOW1209.html">07MOSCOW1209</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTRY CLEARANCE GRANTED FOR EAP ADVISOR BALBINA HWANG AND PRM PROGRAM OFFICER MELISSA PIOTTI TRAVEL TO VLADIVOSTOK APRIL 6-9</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">a visa</tspan>
-                        <tspan class="rel">is valid for</tspan>
-                        <tspan class="a2">the entire month of June</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The registration authority</tspan>
-                        <tspan class="rel">is given to</tspan>
-                        <tspan class="a2">hotels</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is in</tspan>
-                        <tspan class="a2">addition</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">NO airport visas</tspan>
-                        <tspan class="rel">are issued at</tspan>
-                        <tspan class="a2">the port of entry</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">7. TDY travelers</tspan>
-                        <tspan class="rel">must complete</tspan>
-                        <tspan class="a2">the migration card</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">they</tspan>
-                        <tspan class="rel">must produce</tspan>
-                        <tspan class="a2">a passport</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The types of crime</tspan>
-                        <tspan class="rel">reported range from</tspan>
-                        <tspan class="a2">petty theft</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">the capture of electronic ATM and credit card data</tspan>
-                        <tspan class="rel">also has risen in</tspan>
-                        <tspan class="a2">recent months</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">FSI</tspan>
-                        <tspan class="rel">will conduct</tspan>
-                        <tspan class="a2">the approved minimum four-day training class</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">A shorter security refresher course</tspan>
-                        <tspan class="rel">must be taken</tspan>
-                        <tspan class="a2">every five years</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Agencies</tspan>
-                        <tspan class="rel">may choose to provide</tspan>
-                        <tspan class="a2">their own equivalent security training</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Official visitors</tspan>
-                        <tspan class="rel">may also obtain</tspan>
-                        <tspan class="a2">U.S. dollars</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Official travelers</tspan>
-                        <tspan class="rel">are also encouraged to request</tspan>
-                        <tspan class="a2">up-to</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">This information</tspan>
-                        <tspan class="rel">is available on</tspan>
-                        <tspan class="a2">the DOS OPENNET 's Embassy Moscow</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-74.2744 -178.4670)" 
+        <g transform="translate(-10.3162 -55.5919)" 
             class="black degree3" id="07RIYADH2044">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1097,131 +259,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/10/07RIYADH2044.html">07RIYADH2044</a>
+                    <a id="07RIYADH2044" xlink:href="http://wikileaks.org/cable/2007/10/07RIYADH2044.html">07RIYADH2044</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTRY CLEARANCE APPROVAL FOR CONGRESSIONAL STAFF MEMBER BRADLEY BOWMAN</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">All transportation</tspan>
-                        <tspan class="rel">must be performed in</tspan>
-                        <tspan class="a2">U.S. Mission armored vehicles</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">TDY visitors</tspan>
-                        <tspan class="rel">may only stay in</tspan>
-                        <tspan class="a2">RSO-approved lodging</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">3. Mission Control Officer</tspan>
-                        <tspan class="rel">will be</tspan>
-                        <tspan class="a2">Laura Sheehan</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">The confirmation number</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">159790</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Credit card or cash</tspan>
-                        <tspan class="rel">is acceptable at</tspan>
-                        <tspan class="a2">local hotels</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">will work in</tspan>
-                        <tspan class="a2">Saudi Arabia</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">any other costs</tspan>
-                        <tspan class="rel">can be directly attributed to</tspan>
-                        <tspan class="a2">the visit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">expediting services</tspan>
-                        <tspan class="rel">be requested for</tspan>
-                        <tspan class="a2">departure</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Requests</tspan>
-                        <tspan class="rel">should be sent to</tspan>
-                        <tspan class="a2">Charge D'Affaires Michael Gfoeller</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Travel</tspan>
-                        <tspan class="rel">is performed only in</tspan>
-                        <tspan class="a2">Embassy vehicles</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">should report any unusual occurrences to</tspan>
-                        <tspan class="a2">the Embassy or Consulate General</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">The Embassy</tspan>
-                        <tspan class="rel">approves the use of</tspan>
-                        <tspan class="a2">computers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">Computers , laptops and digital cameras</tspan>
-                        <tspan class="rel">must stay outside of</tspan>
-                        <tspan class="a2">CAA areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">Prior notification of the use of cameras</tspan>
-                        <tspan class="rel">must be approved by</tspan>
-                        <tspan class="a2">the RSO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">The original</tspan>
-                        <tspan class="rel">should be kept in</tspan>
-                        <tspan class="a2">a safe place</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Strict Islamic law</tspan>
-                        <tspan class="rel">is the foundation of</tspan>
-                        <tspan class="a2">the Kingdom 's customs and practices</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">Individuals</tspan>
-                        <tspan class="rel">are arrested for</tspan>
-                        <tspan class="a2">possession of these drugs</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is also the position of</tspan>
-                        <tspan class="a2">the U.S. Embassy</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-98.8946 -11.6924)" 
+        <g transform="translate(-221.1707 290.0000)" 
             class="black degree3" id="07RIYADH428">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1232,119 +276,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/03/07RIYADH428.html">07RIYADH428</a>
+                    <a id="07RIYADH428" xlink:href="http://wikileaks.org/cable/2007/03/07RIYADH428.html">07RIYADH428</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTRY CLEARANCE FOR SANDIA LABS BYRON GARDNER</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">3. Mission Control Officer</tspan>
-                        <tspan class="rel">will be</tspan>
-                        <tspan class="a2">Energy Attache Shannon Ross</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Her e-mail</tspan>
-                        <tspan class="rel">is</tspan>
-                        <tspan class="a2">rosssm2@state</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Credit card or cash</tspan>
-                        <tspan class="rel">is acceptable at</tspan>
-                        <tspan class="a2">local hotels</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">cash</tspan>
-                        <tspan class="rel">is best for</tspan>
-                        <tspan class="a2">other lodging</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">any other costs</tspan>
-                        <tspan class="rel">can be directly attributed to</tspan>
-                        <tspan class="a2">the visit</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Requests</tspan>
-                        <tspan class="rel">should be sent to</tspan>
-                        <tspan class="a2">Ambassador James Oberwetter</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Travel</tspan>
-                        <tspan class="rel">is performed only in</tspan>
-                        <tspan class="a2">Embassy vehicles</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Travelers</tspan>
-                        <tspan class="rel">should report any unusual occurrences to</tspan>
-                        <tspan class="a2">the Embassy or Consulate General</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">terrorist groups</tspan>
-                        <tspan class="rel">continue to target</tspan>
-                        <tspan class="a2">housing compounds</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">The Embassy</tspan>
-                        <tspan class="rel">approves the use of</tspan>
-                        <tspan class="a2">computers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">Computers , laptops and digital cameras</tspan>
-                        <tspan class="rel">must stay outside of</tspan>
-                        <tspan class="a2">CAA areas</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Prior notification of the use of cameras</tspan>
-                        <tspan class="rel">must be approved by</tspan>
-                        <tspan class="a2">the RSO.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">The original</tspan>
-                        <tspan class="rel">should be kept in</tspan>
-                        <tspan class="a2">a safe place</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">Strict Islamic law</tspan>
-                        <tspan class="rel">is the foundation of</tspan>
-                        <tspan class="a2">the Kingdom 's customs and practices</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Individuals</tspan>
-                        <tspan class="rel">are arrested for</tspan>
-                        <tspan class="a2">possession of these drugs</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">is also the position of</tspan>
-                        <tspan class="a2">the U.S. Embassy</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-186.9645 -290.0000)" 
+        <g transform="translate(108.8546 -186.2061)" 
             class="red degree2" id="07STATE131712">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1352,7 +290,7 @@
             
         </g>
         
-        <g transform="translate(390.0000 15.2041)" 
+        <g transform="translate(-228.0307 -279.1144)" 
             class="red degree2" id="07STATE170660">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1360,7 +298,7 @@
             
         </g>
         
-        <g transform="translate(-170.4907 290.0000)" 
+        <g transform="translate(204.7617 246.4016)" 
             class="red degree2" id="07STATE17137">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1368,7 +306,7 @@
             
         </g>
         
-        <g transform="translate(67.7948 -7.4813)" 
+        <g transform="translate(-181.4695 95.3351)" 
             class="red degree13" id="07STATE66580">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1376,7 +314,7 @@
             
         </g>
         
-        <g transform="translate(-390.0000 135.2050)" 
+        <g transform="translate(390.0000 46.7834)" 
             class="red degree2" id="07STATE9666">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1384,7 +322,7 @@
             
         </g>
         
-        <g transform="translate(-306.9238 245.8172)" 
+        <g transform="translate(338.1555 172.9099)" 
             class="black degree2" id="07TELAVIV513">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -1395,83 +333,646 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2007/02/07TELAVIV513.html">07TELAVIV513</a>
+                    <a id="07TELAVIV513" xlink:href="http://wikileaks.org/cable/2007/02/07TELAVIV513.html">07TELAVIV513</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">COUNTRY CLEARANCE FOR FEBRUARY 18-20 VISIT OF CODEL KYL TO ISRAEL</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the Occupied Territories</tspan>
-                        <tspan class="rel">should be sent to</tspan>
-                        <tspan class="a2">both Embassy Tel Aviv</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">travelers</tspan>
-                        <tspan class="rel">are strongly urged to avoid</tspan>
-                        <tspan class="a2">areas of public gathering or assembly</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Discos and nightclubs</tspan>
-                        <tspan class="rel">are</tspan>
-                        <tspan class="a2">off-limits</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Each such transit</tspan>
-                        <tspan class="rel">requires prior notification to</tspan>
-                        <tspan class="a2">the Consulate General 's security office</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the Consul General</tspan>
-                        <tspan class="rel">may grant rare exceptions to</tspan>
-                        <tspan class="a2">this prohibition</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the Tayelit or Haas Promenade</tspan>
-                        <tspan class="rel">located in</tspan>
-                        <tspan class="a2">Armon Hanatziv</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Overflights of these areas</tspan>
-                        <tspan class="rel">have been permitted in</tspan>
-                        <tspan class="a2">certain circumstances</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">Administration officials</tspan>
-                        <tspan class="rel">may travel to</tspan>
-                        <tspan class="a2">the West Bank</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">That information</tspan>
-                        <tspan class="rel">is necessary for</tspan>
-                        <tspan class="a2">Embassy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Israel</tspan>
-                        <tspan class="rel">requires visas for</tspan>
-                        <tspan class="a2">holders of diplomatic and official passports</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+        $('#07AMMAN3336').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WELCOME UNDER SECRETARY LEVEY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The travelers</span> <span class="rel">should carefully review</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Ms. Brown</span> <span class="rel">can also be reached at</span> <span class="a2">BrownNE2@state</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Embassy &#39;s after-hours telephone number</span> <span class="rel">is</span> <span class="a2">+962-6-590-6500</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Valid visas</span> <span class="rel">are required for</span> <span class="a2">entry</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">visitors</span> <span class="rel">obtain their visas prior to</span> <span class="a2">arrival</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07AMMAN5049').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WELCOME CODEL PRICE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">All visitors</span> <span class="rel">should carefully review</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">2. application</span> <span class="rel">was deployed for</span> <span class="a2">all U.S. Government travelers</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Embassy &#39;s after-hours telephone number</span> <span class="rel">is</span> <span class="a2">962-6-590-6500</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">breakfast</span> <span class="rel">is included in</span> <span class="a2">the room rate</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">visitors</span> <span class="rel">obtain their visas prior to</span> <span class="a2">arrival</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07AMMAN5060').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WELCOME CODEL WOLF</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The travelers</span> <span class="rel">should carefully review</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Embassy &#39;s after-hours telephone number</span> <span class="rel">is</span> <span class="a2">+962-6-590-6500</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">visitors</span> <span class="rel">obtain their visas prior to</span> <span class="a2">arrival</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Money</span> <span class="rel">can be exchanged at</span> <span class="a2">Queen Alia airport</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This charge</span> <span class="rel">is for</span> <span class="a2">the following ICASS services</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07AMMAN662').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>WELCOME CODEL KYL</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">All visitors</span> <span class="rel">should carefully review</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Embassy &#39;s after-hours telephone number</span> <span class="rel">is</span> <span class="a2">962-6-590-6500</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Hotel reservations</span> <span class="rel">have been made at</span> <span class="a2">the Intercontinental Hotel</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">visitors</span> <span class="rel">obtain their visas prior to</span> <span class="a2">arrival</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Money</span> <span class="rel">can be exchanged at</span> <span class="a2">Queen Alia airport</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07AMMAN728').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTRY CLEARANCE FOR ASSISTANT SECRETARY PATTERSON AND DARBY</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">All visitors</span> <span class="rel">should carefully review</span> <span class="a2">this message</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The Embassy &#39;s after-hours telephone number</span> <span class="rel">is</span> <span class="a2">962-6-590-6500</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Hotel reservations</span> <span class="rel">have been made at</span> <span class="a2">the Hotel Sheraton</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">visitors</span> <span class="rel">obtain their visas prior to</span> <span class="a2">arrival</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Money</span> <span class="rel">can be exchanged at</span> <span class="a2">Queen Alia airport</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07KUWAIT1451').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>KUWAIT COUNTRY CLEARANCE GRANTED FOR MR. BRADLEY BOWMAN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The hotel phone number</span> <span class="rel">is</span> <span class="a2">575-0155</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The number of the assigned phone</span> <span class="rel">will be</span> <span class="a2">724-8653</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The fee</span> <span class="rel">may be paid either in</span> <span class="a2">KD or USD.</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">an extension</span> <span class="rel">should be requested</span> <span class="a2">2 weeks</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Kuwait</span> <span class="rel">is still clearing</span> <span class="a2">mines and munitions</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07MOSCOW1209').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTRY CLEARANCE GRANTED FOR EAP ADVISOR BALBINA HWANG AND PRM PROGRAM OFFICER MELISSA PIOTTI TRAVEL TO VLADIVOSTOK APRIL 6-9</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">a visa</span> <span class="rel">is valid for</span> <span class="a2">the entire month of June</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The registration authority</span> <span class="rel">is given to</span> <span class="a2">hotels</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">This</span> <span class="rel">is in</span> <span class="a2">addition</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">NO airport visas</span> <span class="rel">are issued at</span> <span class="a2">the port of entry</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">7. TDY travelers</span> <span class="rel">must complete</span> <span class="a2">the migration card</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07RIYADH2044').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTRY CLEARANCE APPROVAL FOR CONGRESSIONAL STAFF MEMBER BRADLEY BOWMAN</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">All transportation</span> <span class="rel">must be performed in</span> <span class="a2">U.S. Mission armored vehicles</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">TDY visitors</span> <span class="rel">may only stay in</span> <span class="a2">RSO-approved lodging</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Mission Control Officer</span> <span class="rel">will be</span> <span class="a2">Laura Sheehan</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The confirmation number</span> <span class="rel">is</span> <span class="a2">159790</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Credit card or cash</span> <span class="rel">is acceptable at</span> <span class="a2">local hotels</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#07RIYADH428').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTRY CLEARANCE FOR SANDIA LABS BYRON GARDNER</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">3. Mission Control Officer</span> <span class="rel">will be</span> <span class="a2">Energy Attache Shannon Ross</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Her e-mail</span> <span class="rel">is</span> <span class="a2">rosssm2@state</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Credit card or cash</span> <span class="rel">is acceptable at</span> <span class="a2">local hotels</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">cash</span> <span class="rel">is best for</span> <span class="a2">other lodging</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">any other costs</span> <span class="rel">can be directly attributed to</span> <span class="a2">the visit</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        $('#07TELAVIV513').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>COUNTRY CLEARANCE FOR FEBRUARY 18-20 VISIT OF CODEL KYL TO ISRAEL</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the Occupied Territories</span> <span class="rel">should be sent to</span> <span class="a2">both Embassy Tel Aviv</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">travelers</span> <span class="rel">are strongly urged to avoid</span> <span class="a2">areas of public gathering or assembly</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Discos and nightclubs</span> <span class="rel">are</span> <span class="a2">off-limits</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Each such transit</span> <span class="rel">requires prior notification to</span> <span class="a2">the Consulate General &#39;s security office</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Consul General</span> <span class="rel">may grant rare exceptions to</span> <span class="a2">this prohibition</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+});
+</script>
 </body>

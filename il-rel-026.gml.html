@@ -1,18 +1,17 @@
 <html>
 <head>
-    <!-- This template provides more readability of overlay text (subject and reverb)
-         Graph is more transparent, overlays are color and opaque (for contrast) -->
+    <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
-          stroke: rgba(255,255,255,0.3); 
+          stroke: rgba(255,255,255,0.8); 
           stroke-width: 1; 
-          fill: rgba(63,63,63,0.25); 
+          fill: rgba(255,255,255,0.5); 
         }
         #vertices .red circle { 
-          fill: rgba(63,0,0,0.25);
+          fill: rgba(255,0,0,0.5);   
         }
-
         #vertices .degree2 circle { stroke-width: 1.2; } 
         #vertices .degree3 circle { stroke-width: 1.4; } 
         #vertices .degree4 circle { stroke-width: 1.6; } 
@@ -38,46 +37,23 @@
           font-size: 1em; 
           font-weight: normal; 
           font-family: sans-serif;
-          fill: rgba(255,255,255,0.5); 
-          text-shadow: rgba(0, 0, 0, 0.25) 2px 2px 2px ;
+          fill: rgba(255,255,255,0.8); 
+          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
         #vertices text:hover {
           font-size: 1.4em;
-          fill: rgba(255,255,255,1); 
+          fill: rgba(255,255,255,1.0); 
           text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
         }
         #vertices .red text:hover {
           text-shadow: rgba(255, 0, 0, 1) 2px 2px 10px ;
         }
 
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,63,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,63,63,1);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(63,63,255,1);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(63,255,63,1);
-        }
-
         #edges line { 
             fill: none;
             stroke-linejoin: round;
             stroke-width: 5; 
-            stroke: rgba(255,255,255,0.25); 
+            stroke: rgba(255,255,255,0.4); 
             z-index: -1; 
         }
         
@@ -102,67 +78,67 @@
 <g transform="translate(600.0000,450.0000) scale(0.9)">
     <g id="edges">
     
-        <line x1="219.9744" y1="34.6829" 
-              x2="315.3889" y2="49.2752" />
+        <line x1="211.9612" y1="229.6884" 
+              x2="83.6452" y2="223.5257" />
     
-        <line x1="-165.0220" y1="141.6064" 
-              x2="-23.6788" y2="49.1385" />
+        <line x1="122.3701" y1="-138.1763" 
+              x2="43.1307" y2="-13.4515" />
     
-        <line x1="-130.5545" y1="-226.2509" 
-              x2="13.9769" y2="-242.7899" />
+        <line x1="-314.1964" y1="68.7979" 
+              x2="-321.9159" y2="-40.4007" />
     
-        <line x1="164.3610" y1="146.7552" 
-              x2="-6.6368" y2="48.6407" />
+        <line x1="206.4445" y1="109.9364" 
+              x2="46.0319" y2="0.6206" />
     
-        <line x1="-42.7448" y1="-140.1787" 
-              x2="-59.3852" y2="-280.0700" />
+        <line x1="-196.7390" y1="3.6351" 
+              x2="-380.0096" y2="11.6504" />
     
-        <line x1="-42.7448" y1="-140.1787" 
-              x2="-123.4131" y2="-219.2508" />
+        <line x1="-196.7390" y1="3.6351" 
+              x2="-305.4520" y2="63.9467" />
     
-        <line x1="164.3610" y1="146.7552" 
-              x2="96.4450" y2="281.0759" />
+        <line x1="206.4445" y1="109.9364" 
+              x2="380.1237" y2="137.5130" />
     
-        <line x1="-165.0220" y1="141.6064" 
-              x2="-301.2968" y2="138.0749" />
+        <line x1="122.3701" y1="-138.1763" 
+              x2="88.3759" y2="-239.0983" />
     
-        <line x1="-246.5166" y1="245.2337" 
-              x2="-171.2037" y2="149.4669" />
+        <line x1="234.1974" y1="-219.7522" 
+              x2="130.4490" y2="-144.0697" />
     
-        <line x1="-60.5663" y1="-290.0000" 
-              x2="15.1329" y2="-248.7148" />
+        <line x1="-390.0000" y1="12.0874" 
+              x2="-329.9546" y2="-43.5773" />
     
-        <line x1="164.3610" y1="146.7552" 
-              x2="316.6854" y2="55.9092" />
+        <line x1="206.4445" y1="109.9364" 
+              x2="81.2693" y2="216.5615" />
     
-        <line x1="-246.5166" y1="245.2337" 
-              x2="-306.1294" y2="146.3793" />
+        <line x1="234.1974" y1="-219.7522" 
+              x2="95.0018" y2="-246.6760" />
     
-        <line x1="219.9744" y1="34.6829" 
-              x2="168.8060" y2="137.7974" />
+        <line x1="211.9612" y1="229.6884" 
+              x2="206.9047" y2="119.9259" />
     
-        <line x1="164.3610" y1="146.7552" 
-              x2="253.9195" y2="255.4552" />
+        <line x1="206.4445" y1="109.9364" 
+              x2="349.1801" y2="23.9956" />
     
-        <line x1="-42.7448" y1="-140.1787" 
-              x2="18.5067" y2="-235.5136" />
+        <line x1="-196.7390" y1="3.6351" 
+              x2="-313.4313" y2="-46.4328" />
     
-        <line x1="-311.2934" y1="137.8159" 
-              x2="-384.1384" y2="37.1294" />
+        <line x1="85.1838" y1="-248.5751" 
+              x2="-58.2964" y2="-287.3887" />
     
-        <line x1="-130.5545" y1="-226.2509" 
-              x2="-67.9593" y2="-283.2661" />
+        <line x1="-314.1964" y1="68.7979" 
+              x2="-381.9928" y2="18.0777" />
     
-        <line x1="-42.7448" y1="-140.1787" 
-              x2="-16.7864" y2="33.7735" />
+        <line x1="-196.7390" y1="3.6351" 
+              x2="27.7751" y2="-4.6424" />
     
-        <line x1="325.2739" y1="50.7870" 
-              x2="385.3685" y2="-64.2101" />
+        <line x1="73.6567" y1="223.0459" 
+              x2="-61.8343" y2="285.7974" />
     
     </g>
     <g id="vertices">
         
-        <g transform="translate(-246.5166 245.2337)" 
+        <g transform="translate(234.1974 -219.7522)" 
             class="red degree2" id="05AMMAN8780">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -170,7 +146,7 @@
             
         </g>
         
-        <g transform="translate(-165.0220 141.6064)" 
+        <g transform="translate(122.3701 -138.1763)" 
             class="black degree3" id="05AMMAN8935">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -181,29 +157,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05AMMAN8935.html">05AMMAN8935</a>
+                    <a id="05AMMAN8935" xlink:href="http://wikileaks.org/cable/2005/11/05AMMAN8935.html">05AMMAN8935</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">JORDAN: UN THIRD COMMITTEE DEMARCHE DELIVERED</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">This message</tspan>
-                        <tspan class="rel">replaces</tspan>
-                        <tspan class="a2">Amman 8911</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(219.9744 34.6829)" 
+        <g transform="translate(211.9612 229.6884)" 
             class="black degree2" id="05ANKARA6625">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -214,19 +174,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ANKARA6625.html">05ANKARA6625</a>
+                    <a id="05ANKARA6625" xlink:href="http://wikileaks.org/cable/2005/11/05ANKARA6625.html">05ANKARA6625</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKEY:  DEMARCHE ON UN THIRD COMMITTEE RESOLUTIONS</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(164.3610 146.7552)" 
+        <g transform="translate(206.4445 109.9364)" 
             class="black degree5" id="05ANKARA7223">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -237,19 +191,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7223.html">05ANKARA7223</a>
+                    <a id="05ANKARA7223" xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7223.html">05ANKARA7223</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">TURKISH RESPONSE TO UNGA THIRD COMMITTEE THANK YOU AND PLENARY REMINDER DEMARCHE</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-42.7448 -140.1787)" 
+        <g transform="translate(-196.7390 3.6351)" 
             class="black degree4" id="05CAIRO8618">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -260,59 +208,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8618.html">05CAIRO8618</a>
+                    <a id="05CAIRO8618" xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8618.html">05CAIRO8618</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">EGYPT-DEMARCHE ON PREPARATIONS FOR ARAB LEAGUE IRAQ RECONCILIATION CONFERENCE</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">the conference</tspan>
-                        <tspan class="rel">will focus on</tspan>
-                        <tspan class="a2">reconciliation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">all outsiders</tspan>
-                        <tspan class="rel">would participate in</tspan>
-                        <tspan class="a2">the opening ceremonies</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">The session</tspan>
-                        <tspan class="rel">would start by</tspan>
-                        <tspan class="a2">1100 a.m.</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">the Iraqi Minister of Transportation</tspan>
-                        <tspan class="rel">will represent</tspan>
-                        <tspan class="a2">Moqtadr Al Sadr</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the participants</tspan>
-                        <tspan class="rel">will discuss the importance of</tspan>
-                        <tspan class="a2">political participation</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">This</tspan>
-                        <tspan class="rel">would be a red line for</tspan>
-                        <tspan class="a2">us</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-130.5545 -226.2509)" 
+        <g transform="translate(-314.1964 68.7979)" 
             class="black degree3" id="05CAIRO8704">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -323,53 +225,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8704.html">05CAIRO8704</a>
+                    <a id="05CAIRO8704" xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8704.html">05CAIRO8704</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">NEA A/S WELCH AND ARAB LEAGUE SYG DISCUSS GAZA, IRAQ CONFERENCE, SYRIA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">NEA A/S Welch</tspan>
-                        <tspan class="rel">underlined the significance of</tspan>
-                        <tspan class="a2">the November 15 Agreement</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">3. Moussa</tspan>
-                        <tspan class="rel">stressed to</tspan>
-                        <tspan class="a2">NEA A/S Welch</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">the League</tspan>
-                        <tspan class="rel">could have a calming influence on</tspan>
-                        <tspan class="a2">the groups</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">everyone</tspan>
-                        <tspan class="rel">should focus on getting</tspan>
-                        <tspan class="a2">the truth</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">7. A/S Welch</tspan>
-                        <tspan class="rel">did not have an opportunity to clear</tspan>
-                        <tspan class="a2">this cable</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-60.5663 -290.0000)" 
+        <g transform="translate(-390.0000 12.0874)" 
             class="black degree4" id="05CAIRO8785">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -380,167 +242,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8785.html">05CAIRO8785</a>
+                    <a id="05CAIRO8785" xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8785.html">05CAIRO8785</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">IRAQ: FIRST TWO DAYS OF AL MEETING MOSTLY POSITIVE; "TIMELINE" ON DRAFT AGENDA</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">The Egyptians</tspan>
-                        <tspan class="rel">have welcomed</tspan>
-                        <tspan class="a2">the Iraqi Government</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">Moussa</tspan>
-                        <tspan class="rel">set out</tspan>
-                        <tspan class="a2">the goals of a free , strong , sovereign , peaceful , democratic , modernized and prosperous Iraq</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">Iraqis</tspan>
-                        <tspan class="rel">regain full control of</tspan>
-                        <tspan class="a2">their country</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">Iraq 's neighbors</tspan>
-                        <tspan class="rel">need to contribute to</tspan>
-                        <tspan class="a2">unity , accord</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">Iraqi leaders</tspan>
-                        <tspan class="rel">must transcend</tspan>
-                        <tspan class="a2">community divisions</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">Mubarak</tspan>
-                        <tspan class="rel">left immediately after</tspan>
-                        <tspan class="a2">his speech</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">Iraq</tspan>
-                        <tspan class="rel">needs to build</tspan>
-                        <tspan class="a2">a multiparty democracy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">this</tspan>
-                        <tspan class="rel">is a reference to</tspan>
-                        <tspan class="a2">UNSCR 1483</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">Accord</tspan>
-                        <tspan class="rel">needs to be based on</tspan>
-                        <tspan class="a2">democracy</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">Iraq</tspan>
-                        <tspan class="rel">is a key part of</tspan>
-                        <tspan class="a2">the Arab community</tspan>
-                    </text>
-                    
-                    <text x="-200" y="250" class="sentence">
-                        <tspan class="a1">All Arabs</tspan>
-                        <tspan class="rel">have resisted</tspan>
-                        <tspan class="a2">actual occupations</tspan>
-                    </text>
-                    
-                    <text x="-200" y="270" class="sentence">
-                        <tspan class="a1">Iraqis</tspan>
-                        <tspan class="rel">are determined to maintain</tspan>
-                        <tspan class="a2">their unity</tspan>
-                    </text>
-                    
-                    <text x="-200" y="290" class="sentence">
-                        <tspan class="a1">7. Hammoudi</tspan>
-                        <tspan class="rel">focused on</tspan>
-                        <tspan class="a2">Iraq 's constitution</tspan>
-                    </text>
-                    
-                    <text x="-200" y="310" class="sentence">
-                        <tspan class="a1">independence</tspan>
-                        <tspan class="rel">is a top priority for</tspan>
-                        <tspan class="a2">all Iraqis</tspan>
-                    </text>
-                    
-                    <text x="-200" y="330" class="sentence">
-                        <tspan class="a1">Federalism</tspan>
-                        <tspan class="rel">will be protection against</tspan>
-                        <tspan class="a2">return of the dictatorships of Iraq 's past</tspan>
-                    </text>
-                    
-                    <text x="-200" y="350" class="sentence">
-                        <tspan class="a1">Terrorism</tspan>
-                        <tspan class="rel">is prolonging</tspan>
-                        <tspan class="a2">the difficulties of the Iraqi people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="370" class="sentence">
-                        <tspan class="a1">All parties</tspan>
-                        <tspan class="rel">need to respect</tspan>
-                        <tspan class="a2">human rights</tspan>
-                    </text>
-                    
-                    <text x="-200" y="390" class="sentence">
-                        <tspan class="a1">The MUC</tspan>
-                        <tspan class="rel">condemns</tspan>
-                        <tspan class="a2">terrorism</tspan>
-                    </text>
-                    
-                    <text x="-200" y="410" class="sentence">
-                        <tspan class="a1">Al-Dari and SCIRI 's Sheik Jalal El-Din Ali Al-Sagheer</tspan>
-                        <tspan class="rel">reportedly had an impassioned debate on</tspan>
-                        <tspan class="a2">the political process</tspan>
-                    </text>
-                    
-                    <text x="-200" y="430" class="sentence">
-                        <tspan class="a1">the group</tspan>
-                        <tspan class="rel">rejected</tspan>
-                        <tspan class="a2">that proposal</tspan>
-                    </text>
-                    
-                    <text x="-200" y="450" class="sentence">
-                        <tspan class="a1">a meeting statement and plenary</tspan>
-                        <tspan class="rel">will meet on</tspan>
-                        <tspan class="a2">November 21</tspan>
-                    </text>
-                    
-                    <text x="-200" y="470" class="sentence">
-                        <tspan class="a1">it</tspan>
-                        <tspan class="rel">represents</tspan>
-                        <tspan class="a2">progress</tspan>
-                    </text>
-                    
-                    <text x="-200" y="490" class="sentence">
-                        <tspan class="a1">It</tspan>
-                        <tspan class="rel">seems unclear to</tspan>
-                        <tspan class="a2">some attendees</tspan>
-                    </text>
-                    
-                    <text x="-200" y="510" class="sentence">
-                        <tspan class="a1">the Baghdad conference</tspan>
-                        <tspan class="rel">will relate to</tspan>
-                        <tspan class="a2">the Iraqi government and future Council of Representatives</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(23.9121 -243.9267)" 
+        <g transform="translate(-322.6211 -50.3758)" 
             class="black degree3" id="05CAIRO8812">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -551,83 +259,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8812.html">05CAIRO8812</a>
+                    <a id="05CAIRO8812" xlink:href="http://wikileaks.org/cable/2005/11/05CAIRO8812.html">05CAIRO8812</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">ARAB LEAGUE IRAQ NATIONAL ACCORD CONFERENCE STATEMENT</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Mr. Ashraf Qazi</tspan>
-                        <tspan class="rel">opened</tspan>
-                        <tspan class="a2">the meeting</tspan>
-                    </text>
-                    
-                    <text x="-200" y="70" class="sentence">
-                        <tspan class="a1">The inaugural session</tspan>
-                        <tspan class="rel">was attended by</tspan>
-                        <tspan class="a2">Arab Foreign Ministers</tspan>
-                    </text>
-                    
-                    <text x="-200" y="90" class="sentence">
-                        <tspan class="a1">foreign ambassadors of countries</tspan>
-                        <tspan class="rel">have Memoranda of Understanding with</tspan>
-                        <tspan class="a2">the Arab League</tspan>
-                    </text>
-                    
-                    <text x="-200" y="110" class="sentence">
-                        <tspan class="a1">terrorism</tspan>
-                        <tspan class="rel">does not represent</tspan>
-                        <tspan class="a2">legitimate resistance</tspan>
-                    </text>
-                    
-                    <text x="-200" y="130" class="sentence">
-                        <tspan class="a1">the Islamic values</tspan>
-                        <tspan class="rel">call for</tspan>
-                        <tspan class="a2">brotherhood , tolerance ,a nd enhancement of national unity</tspan>
-                    </text>
-                    
-                    <text x="-200" y="150" class="sentence">
-                        <tspan class="a1">the borders</tspan>
-                        <tspan class="rel">guarantee the security of</tspan>
-                        <tspan class="a2">citizens and country</tspan>
-                    </text>
-                    
-                    <text x="-200" y="170" class="sentence">
-                        <tspan class="a1">The participants</tspan>
-                        <tspan class="rel">supported the struggle of</tspan>
-                        <tspan class="a2">the Palestinian 's people</tspan>
-                    </text>
-                    
-                    <text x="-200" y="190" class="sentence">
-                        <tspan class="a1">They</tspan>
-                        <tspan class="rel">also appreciated</tspan>
-                        <tspan class="a2">the speech of His Excellency President Muhammed Hosni Mubarak</tspan>
-                    </text>
-                    
-                    <text x="-200" y="210" class="sentence">
-                        <tspan class="a1">The Arab League</tspan>
-                        <tspan class="rel">expressed its gratitude for</tspan>
-                        <tspan class="a2">the efforts of Hoshyar Zebari</tspan>
-                    </text>
-                    
-                    <text x="-200" y="230" class="sentence">
-                        <tspan class="a1">their intent</tspan>
-                        <tspan class="rel">was to condemn</tspan>
-                        <tspan class="a2">terrorism</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(325.2739 50.7870)" 
+        <g transform="translate(73.6567 223.0459)" 
             class="red degree17" id="05STATE204646">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -635,7 +273,7 @@
             
         </g>
         
-        <g transform="translate(-15.3105 43.6639)" 
+        <g transform="translate(37.7683 -5.0108)" 
             class="red degree12" id="05STATE207928">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -643,7 +281,7 @@
             
         </g>
         
-        <g transform="translate(91.9328 290.0000)" 
+        <g transform="translate(390.0000 139.0811)" 
             class="red degree4" id="05STATE211043">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -651,7 +289,7 @@
             
         </g>
         
-        <g transform="translate(260.2783 263.1731)" 
+        <g transform="translate(357.7471 18.8374)" 
             class="red degree6" id="05STATE221401">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -659,7 +297,7 @@
             
         </g>
         
-        <g transform="translate(390.0000 -73.0729)" 
+        <g transform="translate(-70.9084 290.0000)" 
             class="black degree2" id="05TELAVIV6442">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -670,19 +308,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2005/11/05TELAVIV6442.html">05TELAVIV6442</a>
+                    <a id="05TELAVIV6442" xlink:href="http://wikileaks.org/cable/2005/11/05TELAVIV6442.html">05TELAVIV6442</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">UN THIRD COMMITTEE: ISRAEL EXPLAINS PROBLEM WITH UZBEKISTAN RESOLUTION</tspan></text>
-                    </g>
-                
-                
             
         </g>
         
-        <g transform="translate(-311.2934 137.8159)" 
+        <g transform="translate(85.1838 -248.5751)" 
             class="black degree3" id="06AMMAN8966">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -693,29 +325,13 @@
                 
                 <text x="0" y="5" class="label">
                  
-                    <a xlink:href="http://wikileaks.org/cable/2006/12/06AMMAN8966.html">06AMMAN8966</a>
+                    <a id="06AMMAN8966" xlink:href="http://wikileaks.org/cable/2006/12/06AMMAN8966.html">06AMMAN8966</a>
                 
                 </text>
-                
-                    <g id="subject"> 
-                      <text x="-200" y="20" class="sentence"><tspan class="subject">JORDAN TO ABSTAIN AT UNGA VOTE ON THIRD COMMITTEE RESOLUTIONS</tspan></text>
-                    </g>
-                
-                
-                    <g id="sentences"> 
-                    
-                    <text x="-200" y="50" class="sentence">
-                        <tspan class="a1">Takhayneh</tspan>
-                        <tspan class="rel">was acting on</tspan>
-                        <tspan class="a2">behalf of Azzam Almeddin</tspan>
-                    </text>
-                    
-                    </g>
-                
             
         </g>
         
-        <g transform="translate(-390.0000 29.0275)" 
+        <g transform="translate(-67.9494 -290.0000)" 
             class="red degree5" id="06STATE199234">
             <circle cx="0" cy="0" r="10" style="filter:url(#dropshadow)" />
             
@@ -726,4 +342,314 @@
     </g>
 </g>
 </svg>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.tooltip.pack.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+
+    
+
+    
+        $('#05AMMAN8935').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>JORDAN: UN THIRD COMMITTEE DEMARCHE DELIVERED</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">This message</span> <span class="rel">replaces</span> <span class="a2">Amman 8911</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05ANKARA6625').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKEY:  DEMARCHE ON UN THIRD COMMITTEE RESOLUTIONS</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05ANKARA7223').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>TURKISH RESPONSE TO UNGA THIRD COMMITTEE THANK YOU AND PLENARY REMINDER DEMARCHE</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05CAIRO8618').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>EGYPT-DEMARCHE ON PREPARATIONS FOR ARAB LEAGUE IRAQ RECONCILIATION CONFERENCE</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">the conference</span> <span class="rel">will focus on</span> <span class="a2">reconciliation</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">all outsiders</span> <span class="rel">would participate in</span> <span class="a2">the opening ceremonies</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The session</span> <span class="rel">would start by</span> <span class="a2">1100 a.m.</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Iraqi Minister of Transportation</span> <span class="rel">will represent</span> <span class="a2">Moqtadr Al Sadr</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the participants</span> <span class="rel">will discuss the importance of</span> <span class="a2">political participation</span></li>';
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05CAIRO8704').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>NEA A/S WELCH AND ARAB LEAGUE SYG DISCUSS GAZA, IRAQ CONFERENCE, SYRIA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">NEA A/S Welch</span> <span class="rel">underlined the significance of</span> <span class="a2">the November 15 Agreement</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">3. Moussa</span> <span class="rel">stressed to</span> <span class="a2">NEA A/S Welch</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the League</span> <span class="rel">could have a calming influence on</span> <span class="a2">the groups</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">everyone</span> <span class="rel">should focus on getting</span> <span class="a2">the truth</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">7. A/S Welch</span> <span class="rel">did not have an opportunity to clear</span> <span class="a2">this cable</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05CAIRO8785').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>IRAQ: FIRST TWO DAYS OF AL MEETING MOSTLY POSITIVE; &#34;TIMELINE&#34; ON DRAFT AGENDA</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">The Egyptians</span> <span class="rel">have welcomed</span> <span class="a2">the Iraqi Government</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Moussa</span> <span class="rel">set out</span> <span class="a2">the goals of a free , strong , sovereign , peaceful , democratic , modernized and prosperous Iraq</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Iraqis</span> <span class="rel">regain full control of</span> <span class="a2">their country</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Iraq &#39;s neighbors</span> <span class="rel">need to contribute to</span> <span class="a2">unity , accord</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">Iraqi leaders</span> <span class="rel">must transcend</span> <span class="a2">community divisions</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#05CAIRO8812').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>ARAB LEAGUE IRAQ NATIONAL ACCORD CONFERENCE STATEMENT</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Mr. Ashraf Qazi</span> <span class="rel">opened</span> <span class="a2">the meeting</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">The inaugural session</span> <span class="rel">was attended by</span> <span class="a2">Arab Foreign Ministers</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">foreign ambassadors of countries</span> <span class="rel">have Memoranda of Understanding with</span> <span class="a2">the Arab League</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">terrorism</span> <span class="rel">does not represent</span> <span class="a2">legitimate resistance</span></li>';
+                        
+                    
+                         
+                            tip+='<li><span class="a1">the Islamic values</span> <span class="rel">call for</span> <span class="a2">brotherhood , tolerance ,a nd enhancement of national unity</span></li>';
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        $('#05TELAVIV6442').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>UN THIRD COMMITTEE: ISRAEL EXPLAINS PROBLEM WITH UZBEKISTAN RESOLUTION</h3>';
+                
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+        $('#06AMMAN8966').tooltip({ 
+            bodyHandler: function() { 
+                var tip='<div class="tool-tip">';
+                
+                    tip+='<h3/>JORDAN TO ABSTAIN AT UNGA VOTE ON THIRD COMMITTEE RESOLUTIONS</h3>';
+                
+                
+                    tip+='<ul>';
+                    
+                         
+                            tip+='<li><span class="a1">Takhayneh</span> <span class="rel">was acting on</span> <span class="a2">behalf of Azzam Almeddin</span></li>';
+                        
+                    
+                
+                tip+='</div>';
+                return tip;
+        }, 
+        showURL: false 
+});
+    
+
+    
+
+});
+</script>
 </body>
