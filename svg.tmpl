@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" href="jquery.tooltip.css">
     <style type="text/css">
+        .tool-tip { min-width:500px } /* kludge */
         svg { background-color: rgb(55,55,55); }
         #vertices circle { 
           stroke: rgba(255,255,255,0.8); 
@@ -115,16 +116,19 @@ $(function() {
     {% if v.class != 'red' %}
         $('#{{v.label}}').tooltip({ 
             bodyHandler: function() { 
-                var tip='';
+                var tip='<div class="tool-tip">';
                 {% if v.subject %}
                     tip+='<h3/>{{v.subject|e}}</h3>';
                 {% endif %}
                 {% if v.sentences %}
                     tip+='<ul>';
                     {% for s in v.sentences %}
-                        tip+='<li><span class="a1">{{s.a1|e}}</span> <span class="rel">{{s.rel|e}}</span> <span class="a2">{{s.a2|e}}</span></li>';
+                        {% if loop.index <= 5 %} {# kludge #}
+                            tip+='<li><span class="a1">{{s.a1|e}}</span> <span class="rel">{{s.rel|e}}</span> <span class="a2">{{s.a2|e}}</span></li>';
+                        {% endif %}
                     {% endfor %}
                 {% endif %}
+                tip+='</div>';
                 return tip;
         }, 
         showURL: false 
