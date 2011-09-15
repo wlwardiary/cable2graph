@@ -20,17 +20,19 @@ parser.add_option("-l", "--load-from", dest="gmllist",
 
 parser.add_option("-d", "--dest", dest="destdir",
     default=".",
-    help="Destination DIR. Default current dir:", 
+    help="Destination DIR. Default: current dir", 
     metavar="DIR")
 
 parser.add_option("-r", "--reverb", dest="reverb",
-    help="Load sentences from a ReVerb result .tsv FILE", metavar="FILE")
+    help="Load sentences from a ReVerb result tsv FILE (e.g. mycables.reverb)", metavar="FILE")
 
 parser.add_option("-s", "--subjects", dest="subjects",
-    help="Load map of label -> subject", metavar="FILE")
+    default="subjects.list",
+    help="Load map of label -> subject. Default: subjects.list", metavar="FILE")
 
 parser.add_option("-u", "--uri", dest="uri",
-    help="Load map of label -> uri from FILE", metavar="FILE")
+    default="all.map",
+    help="Load map of label -> uri from FILE. Default: all.map", metavar="FILE")
 (options, args) = parser.parse_args()
 
 graph_files = set()

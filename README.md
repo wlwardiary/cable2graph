@@ -2,25 +2,26 @@
 
 the short version
 
-create list of IDs and edges as plain text files
+_[optional]_ create list of IDs and edges as plain text files:
 
-    $ python ref.py cables.csv (optional)
+    $ python ref.py cables.csv
 
-read and modify the filter in c2g.py, then create any.gml
+Edit and modify the filter in `c2g.py` (see example below), and run it to create [say] `any.gml`:
     
     $ python c2g.py
 
-create html with inline svg
+create html with inline svg:
 
-    $ python g2svg.py -g any.gml
+    $ pthon g2svg.py -g any.gml
 
 # note
 
-* dont run ref.py, the code comes with all generated files
+* You _don't_ need to run `ref.py`, the code comes with all generated files.
 * c2g.py reads calccache and graphcache, so you dont have to calculate
   the graph weight again. Can take 10-15min if you remove the cache.
-* change svg.tmpl to customize the output
-* g2svg.py -h for more options
+* You can customize svg.tmpl (example: `svg-jquery-tooltip.tmpl`), and run `g2svg.py` with `-t yourtemplate.svg`.
+* You can use [ReVerb](http://reverb.cs.washington.edu/) to extract sentences from the relevant cables (example: `il-relative.reverb`) and use `-r yourstuff.reverb`. To generate input files for ReVerb: `python c2txt.py cables.csv ID1 ID2 ...`.
+* `python g2svg.py -h` for more options.
 
 # example filter for c2g.py
 
