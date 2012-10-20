@@ -6,12 +6,17 @@ from os import listdir, path
 import re
 from hashlib import md5
 
-p = re.compile(r'[A-Z]+')
 
 cable_ids = set()
 missing = set()
+embassy = set()
 ref = []
 timestamp_map = {}
+
+for i in open('embassy.list').readlines():
+    embassy.add(i.strip().upper())
+
+place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 
 for i in open('all_ids.list').readlines():
     cable_ids.add(i.strip())
@@ -34,9 +39,9 @@ place = []
 color = []
 timestamp = []
 for c in cable_ids:
-    m = re.search(p,c)
+    m = re.search(place_rgx,c)
     if m is not None:
-        place.append(m.group(0))
+        place.append(m.group(1).upper())
     else:
         place.append('')
     if c in missing:
