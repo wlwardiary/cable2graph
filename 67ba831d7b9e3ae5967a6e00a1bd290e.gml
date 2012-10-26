@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:07:59 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:18 2012"
 Version 1
 graph
 [
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.534722
+    constraint 0.534722222222222
     color "black"
     timestamp "1206509520"
     label "08LUANDA231"
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 2
-    constraint 0.835069
+    constraint 0.835069444444444
     color "black"
     timestamp "1206948900"
     label "08LUANDA249"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 4
-    constraint 0.376736
+    constraint 0.376736111111111
     color "black"
     timestamp "1210927440"
     label "08LUANDA386"
@@ -125,43 +125,15 @@ graph
   ]
   edge
   [
-    source 8
-    target 6
-    duration "3978540"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 2
+    source 5
+    target 0
     duration "0"
     weight 1
   ]
   edge
   [
-    source 8
-    target 5
-    duration "4417920"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "2690040"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 4
+    source 9
+    target 0
     duration "0"
     weight 1
   ]
@@ -175,7 +147,21 @@ graph
   edge
   [
     source 11
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
     target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 4
     duration "0"
     weight 1
   ]
@@ -188,15 +174,29 @@ graph
   ]
   edge
   [
-    source 5
-    target 0
-    duration "0"
+    source 8
+    target 5
+    duration "4417920"
     weight 1
   ]
   edge
   [
-    source 9
-    target 0
+    source 8
+    target 6
+    duration "3978540"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 7
+    duration "2690040"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 7
     duration "0"
     weight 1
   ]

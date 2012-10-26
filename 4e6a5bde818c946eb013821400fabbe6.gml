@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:02:35 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:05 2012"
 Version 1
 graph
 [
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1129804620"
     label "05ANKARA6337"
@@ -165,44 +165,9 @@ graph
   ]
   edge
   [
-    source 15
-    target 15
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "80940"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 11
-    duration "12863340"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 3
-    duration "6753600"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 2
-    duration "3219900"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
-    duration "3087720"
+    source 1
+    target 0
+    duration "22471920"
     weight 1
   ]
   edge
@@ -221,9 +186,23 @@ graph
   ]
   edge
   [
-    source 1
-    target 0
-    duration "22471920"
+    source 9
+    target 2
+    duration "3219900"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 3
+    duration "6753600"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "80940"
     weight 1
   ]
   edge
@@ -235,37 +214,9 @@ graph
   ]
   edge
   [
-    source 11
-    target 8
-    duration "21759780"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "519900"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 14
-    duration "68188560"
-    weight 1
-  ]
-  edge
-  [
     source 8
-    target 7
-    duration "3132300"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 11
-    duration "570840"
+    target 6
+    duration "4249080"
     weight 1
   ]
   edge
@@ -278,8 +229,57 @@ graph
   edge
   [
     source 8
-    target 6
-    duration "4249080"
+    target 7
+    duration "3132300"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "21759780"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 11
+    duration "570840"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "519900"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
+    duration "12863340"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 13
+    duration "3087720"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 14
+    duration "68188560"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 15
+    duration "0"
     weight 1
   ]
 ]

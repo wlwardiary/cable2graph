@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:28 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:52 2012"
 Version 1
 graph
 [
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1116605160"
     label "05QUITO1181"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1114439280"
     label "05QUITO900"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1114633020"
     label "05QUITO947"
@@ -115,9 +115,9 @@ graph
   ]
   edge
   [
-    source 9
-    target 8
-    duration "185700"
+    source 8
+    target 0
+    duration "970140"
     weight 1
   ]
   edge
@@ -130,8 +130,15 @@ graph
   edge
   [
     source 10
-    target 4
-    duration "3012960"
+    target 1
+    duration "1113660"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 3
+    duration "1052460"
     weight 1
   ]
   edge
@@ -139,20 +146,6 @@ graph
     source 6
     target 3
     duration "8144400"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "933300"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "8040"
     weight 1
   ]
   edge
@@ -165,22 +158,29 @@ graph
   edge
   [
     source 10
-    target 1
-    duration "1113660"
+    target 4
+    duration "3012960"
     weight 1
   ]
   edge
   [
-    source 8
-    target 0
-    duration "970140"
+    source 7
+    target 6
+    duration "933300"
     weight 1
   ]
   edge
   [
-    source 5
-    target 3
-    duration "1052460"
+    source 9
+    target 8
+    duration "185700"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "8040"
     weight 1
   ]
 ]

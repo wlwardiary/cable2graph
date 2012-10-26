@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:32 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:43 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 3
-    constraint 0.645062
+    constraint 0.645061728395062
     color "black"
     timestamp "1145011680"
     label "06SEOUL1246"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "black"
     timestamp "1145345280"
     label "06SEOUL1271"
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 2
-    constraint 0.656684
+    constraint 0.656684027777778
     color "black"
     timestamp "1145518740"
     label "06SEOUL1314"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 4
-    constraint 0.452569
+    constraint 0.452569444444444
     color "black"
     timestamp "1145866740"
     label "06SEOUL1349"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 5
-    constraint 0.339444
+    constraint 0.339444444444444
     color "black"
     timestamp "1146207060"
     label "06SEOUL1433"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 3
-    constraint 0.645062
+    constraint 0.645061728395062
     color "black"
     timestamp "1145263860"
     label "06TOKYO2072"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 6
-    constraint 0.366078
+    constraint 0.366078317901235
     color "black"
     timestamp "1145344860"
     label "06TOKYO2098"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 3
-    constraint 0.618441
+    constraint 0.618441358024691
     color "black"
     timestamp "1145508300"
     label "06TOKYO2154"
@@ -147,7 +147,7 @@ graph
   [
     id 14
     degree 4
-    constraint 0.566298
+    constraint 0.566297743055556
     color "black"
     timestamp "1145509800"
     label "06TOKYO2159"
@@ -157,7 +157,7 @@ graph
   [
     id 15
     degree 8
-    constraint 0.254232
+    constraint 0.254231770833333
     color "black"
     timestamp "1145863080"
     label "06TOKYO2221"
@@ -177,7 +177,7 @@ graph
   [
     id 17
     degree 2
-    constraint 0.707031
+    constraint 0.70703125
     color "black"
     timestamp "1154671740"
     label "06TOKYO4395"
@@ -187,7 +187,7 @@ graph
   [
     id 18
     degree 3
-    constraint 0.444722
+    constraint 0.444722222222222
     color "black"
     timestamp "1176793860"
     label "07SEOUL1119"
@@ -205,51 +205,9 @@ graph
   ]
   edge
   [
-    source 11
-    target 1
-    duration "81420"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 7
-    duration "3405180"
-    weight 1
-  ]
-  edge
-  [
-    source 12
+    source 1
     target 0
-    duration "333180"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 14
-    duration "9161940"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 2
-    duration "344340"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 15
-    duration "5706960"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "80940"
+    duration "333600"
     weight 1
   ]
   edge
@@ -261,37 +219,37 @@ graph
   ]
   edge
   [
+    source 12
+    target 0
+    duration "333180"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 1
+    duration "81420"
+    weight 1
+  ]
+  edge
+  [
     source 15
-    target 14
-    duration "353280"
+    target 1
+    duration "517800"
     weight 1
   ]
   edge
   [
     source 12
-    target 11
-    duration "81000"
+    target 2
+    duration "173880"
     weight 1
   ]
   edge
   [
-    source 19
-    target 18
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
-    duration "1500"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 15
-    duration "8808660"
+    source 15
+    target 2
+    duration "344340"
     weight 1
   ]
   edge
@@ -310,44 +268,9 @@ graph
   ]
   edge
   [
-    source 12
-    target 2
-    duration "173880"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 1
-    duration "517800"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "5099820"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 13
-    duration "354780"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "333600"
-    weight 1
-  ]
-  edge
-  [
-    source 18
-    target 7
-    duration "30586800"
+    source 6
+    target 5
+    duration "80940"
     weight 1
   ]
   edge
@@ -359,16 +282,37 @@ graph
   ]
   edge
   [
-    source 15
-    target 10
-    duration "3749160"
+    source 18
+    target 5
+    duration "30927120"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "259380"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 7
+    duration "5099820"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 7
+    duration "3405180"
     weight 1
   ]
   edge
   [
     source 18
-    target 5
-    duration "30927120"
+    target 7
+    duration "30586800"
     weight 1
   ]
   edge
@@ -380,16 +324,23 @@ graph
   ]
   edge
   [
-    source 13
-    target 12
-    duration "163440"
+    source 15
+    target 10
+    duration "3749160"
     weight 1
   ]
   edge
   [
-    source 7
-    target 6
-    duration "259380"
+    source 12
+    target 11
+    duration "81000"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
+    duration "163440"
     weight 1
   ]
   edge
@@ -404,6 +355,55 @@ graph
     source 15
     target 12
     duration "518220"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 13
+    duration "1500"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 13
+    duration "354780"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 14
+    duration "353280"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 14
+    duration "9161940"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 15
+    duration "5706960"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 15
+    duration "8808660"
+    weight 1
+  ]
+  edge
+  [
+    source 19
+    target 18
+    duration "0"
     weight 1
   ]
 ]

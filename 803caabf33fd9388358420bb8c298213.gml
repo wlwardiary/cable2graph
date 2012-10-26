@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:58 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:39 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 2
-    constraint 0.888889
+    constraint 0.888888888888889
     color "red"
     timestamp ""
     label "06JAKARTA1645"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 6
-    constraint 0.209877
+    constraint 0.209876543209877
     color "black"
     timestamp "1142843340"
     label "06JAKARTA3563"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 5
-    constraint 0.703704
+    constraint 0.703703703703704
     color "black"
     timestamp "1144312980"
     label "06JAKARTA4465"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 5
-    constraint 0.703704
+    constraint 0.703703703703704
     color "black"
     timestamp "1146476820"
     label "06JAKARTA5486"
@@ -115,43 +115,22 @@ graph
   ]
   edge
   [
-    source 9
-    target 8
-    duration "2163840"
+    source 7
+    target 0
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 9
-    target 9
-    duration "1830240"
+    source 7
+    target 1
+    duration "0"
     weight 1
   ]
   edge
   [
     source 3
     target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "1469640"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 7
-    duration "3633480"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 5
     duration "0"
     weight 1
   ]
@@ -165,7 +144,21 @@ graph
   edge
   [
     source 8
-    target 8
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
     duration "0"
     weight 1
   ]
@@ -185,30 +178,37 @@ graph
   ]
   edge
   [
-    source 7
-    target 0
-    duration "0"
+    source 8
+    target 7
+    duration "1469640"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 7
+    duration "3633480"
     weight 1
   ]
   edge
   [
     source 8
-    target 4
+    target 8
     duration "0"
     weight 1
   ]
   edge
   [
     source 9
-    target 4
-    duration "0"
+    target 8
+    duration "2163840"
     weight 1
   ]
   edge
   [
-    source 7
-    target 1
-    duration "0"
+    source 9
+    target 9
+    duration "1830240"
     weight 1
   ]
   edge

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:21 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:38 2012"
 Version 1
 graph
 [
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "red"
     timestamp ""
     label "08STATE101569"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 2
-    constraint 0.835069
+    constraint 0.835069444444444
     color "red"
     timestamp ""
     label "08STOCKHOLM450"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 4
-    constraint 0.605903
+    constraint 0.605902777777778
     color "black"
     timestamp "1216272240"
     label "08STOCKHOLM510"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.482253
+    constraint 0.482253086419753
     color "black"
     timestamp "1222432440"
     label "08STOCKHOLM648"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 3
-    constraint 0.720679
+    constraint 0.720679012345679
     color "black"
     timestamp "1224586080"
     label "08STOCKHOLM704"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 3
-    constraint 0.655864
+    constraint 0.655864197530864
     color "black"
     timestamp "1226071920"
     label "08STOCKHOLM748"
@@ -165,90 +165,6 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
-    duration "6160200"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "9799680"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 3
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 10
-    duration "3639480"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "1485840"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 5
-    duration "27123420"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 5
     target 0
     duration "0"
@@ -270,9 +186,79 @@ graph
   ]
   edge
   [
+    source 7
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 5
+    duration "27123420"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
     source 14
     target 7
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "6160200"
     weight 1
   ]
   edge
@@ -284,9 +270,23 @@ graph
   ]
   edge
   [
-    source 7
-    target 6
-    duration "0"
+    source 12
+    target 9
+    duration "9799680"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "3639480"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "1485840"
     weight 1
   ]
 ]

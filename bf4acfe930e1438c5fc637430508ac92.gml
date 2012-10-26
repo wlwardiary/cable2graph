@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:33 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:41 2012"
 Version 1
 graph
 [
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.458333
+    constraint 0.458333333333333
     color "black"
     timestamp "1056977460"
     label "03SANAA1559"
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 4
-    constraint 0.333767
+    constraint 0.333767361111111
     color "black"
     timestamp "1043324820"
     label "03SANAA166"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 4
-    constraint 0.333767
+    constraint 0.333767361111111
     color "black"
     timestamp "1260170280"
     label "09SANAA2170"
@@ -135,37 +135,9 @@ graph
   ]
   edge
   [
-    source 7
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 10
-    duration "151727220"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 5
-    duration "203192820"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "13652640"
+    source 1
+    target 0
+    duration "718740"
     weight 1
   ]
   edge
@@ -184,8 +156,8 @@ graph
   ]
   edge
   [
-    source 8
-    target 6
+    source 9
+    target 2
     duration "0"
     weight 1
   ]
@@ -205,9 +177,37 @@ graph
   ]
   edge
   [
-    source 1
-    target 0
-    duration "718740"
+    source 6
+    target 5
+    duration "13652640"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 5
+    duration "203192820"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 6
+    duration "0"
     weight 1
   ]
   edge
@@ -220,15 +220,15 @@ graph
   edge
   [
     source 12
-    target 11
-    duration "76710720"
+    target 10
+    duration "151727220"
     weight 1
   ]
   edge
   [
-    source 9
-    target 5
-    duration "0"
+    source 12
+    target 11
+    duration "76710720"
     weight 1
   ]
 ]

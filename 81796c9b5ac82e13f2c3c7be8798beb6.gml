@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:42 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:25 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1257384660"
     label "09KOLONIA138"
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.611111
+    constraint 0.611111111111111
     color "black"
     timestamp "1236317220"
     label "09KOLONIA28"
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1238135100"
     label "09KOLONIA38"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1240176600"
     label "09KOLONIA53"
@@ -115,16 +115,16 @@ graph
   ]
   edge
   [
-    source 9
-    target 3
-    duration "0"
+    source 2
+    target 0
+    duration "21067440"
     weight 1
   ]
   edge
   [
-    source 7
-    target 3
-    duration "3447780"
+    source 6
+    target 0
+    duration "19249560"
     weight 1
   ]
   edge
@@ -136,30 +136,9 @@ graph
   ]
   edge
   [
-    source 10
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "107460"
-    weight 1
-  ]
-  edge
-  [
     source 7
     target 1
     duration "6038940"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 2
-    duration "1817880"
     weight 1
   ]
   edge
@@ -172,8 +151,29 @@ graph
   edge
   [
     source 6
-    target 0
-    duration "19249560"
+    target 2
+    duration "1817880"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "107460"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 3
+    duration "3447780"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 3
+    duration "0"
     weight 1
   ]
   edge
@@ -185,9 +185,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 0
-    duration "21067440"
+    source 10
+    target 8
+    duration "0"
     weight 1
   ]
 ]

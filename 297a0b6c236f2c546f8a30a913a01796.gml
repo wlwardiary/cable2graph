@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:08:21 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:27 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1196423580"
     label "07TBILISI2999"
@@ -127,11 +127,46 @@ graph
   [
     id 12
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1198065000"
     label "07TBILISI3137"
     place "TBILISI"
+  ]
+  edge
+  [
+    source 2
+    target 0
+    duration "510060"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "426600"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "176760"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 2
+    duration "349500"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "170220"
+    weight 1
   ]
   edge
   [
@@ -149,30 +184,9 @@ graph
   ]
   edge
   [
-    source 5
-    target 2
-    duration "349500"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
+    source 8
+    target 7
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "170220"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 10
-    duration "171180"
     weight 1
   ]
   edge
@@ -184,20 +198,6 @@ graph
   ]
   edge
   [
-    source 3
-    target 2
-    duration "176760"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 10
     target 9
     duration "259800"
@@ -205,16 +205,16 @@ graph
   ]
   edge
   [
-    source 2
-    target 1
-    duration "426600"
+    source 12
+    target 10
+    duration "171180"
     weight 1
   ]
   edge
   [
-    source 2
-    target 0
-    duration "510060"
+    source 12
+    target 11
+    duration "0"
     weight 1
   ]
 ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:11:00 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:32 2012"
 Version 1
 graph
 [
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 15
-    constraint 0.0666667
+    constraint 0.0666666666666667
     color "black"
     timestamp "1263397680"
     label "10STATE3353"
@@ -176,15 +176,8 @@ graph
   edge
   [
     source 13
-    target 2
-    duration "744480"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
-    duration "1531320"
+    target 0
+    duration "132720"
     weight 1
   ]
   edge
@@ -196,23 +189,23 @@ graph
   ]
   edge
   [
-    source 5
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 13
-    duration "756480"
+    source 13
+    target 2
+    duration "744480"
     weight 1
   ]
   edge
   [
     source 13
-    target 10
-    duration "777480"
+    target 3
+    duration "942000"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "0"
     weight 1
   ]
   edge
@@ -224,9 +217,37 @@ graph
   ]
   edge
   [
-    source 15
-    target 13
-    duration "1033380"
+    source 13
+    target 6
+    duration "770220"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 7
+    duration "765060"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 8
+    duration "665700"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 9
+    duration "89040"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 10
+    duration "777480"
     weight 1
   ]
   edge
@@ -245,44 +266,23 @@ graph
   ]
   edge
   [
-    source 13
-    target 0
-    duration "132720"
+    source 14
+    target 13
+    duration "1531320"
     weight 1
   ]
   edge
   [
-    source 13
-    target 7
-    duration "765060"
+    source 15
+    target 13
+    duration "1033380"
     weight 1
   ]
   edge
   [
-    source 13
-    target 9
-    duration "89040"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 8
-    duration "665700"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 6
-    duration "770220"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 3
-    duration "942000"
+    source 16
+    target 13
+    duration "756480"
     weight 1
   ]
 ]

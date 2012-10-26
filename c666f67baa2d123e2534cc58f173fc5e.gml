@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:31 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:40 2012"
 Version 1
 graph
 [
@@ -135,8 +135,36 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
+    source 8
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 2
     duration "0"
     weight 1
   ]
@@ -150,7 +178,7 @@ graph
   edge
   [
     source 9
-    target 0
+    target 4
     duration "0"
     weight 1
   ]
@@ -164,7 +192,14 @@ graph
   edge
   [
     source 9
-    target 2
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
     duration "0"
     weight 1
   ]
@@ -177,44 +212,9 @@ graph
   ]
   edge
   [
-    source 9
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 12
     target 11
     duration "1480440"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 1
-    duration "0"
     weight 1
   ]
 ]

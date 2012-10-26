@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:23 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:39 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 8
-    constraint 0.166667
+    constraint 0.166666666666667
     color "black"
     timestamp "1150360680"
     label "06PHNOMPENH1124"
@@ -115,41 +115,6 @@ graph
   ]
   edge
   [
-    source 7
-    target 1
-    duration "2763540"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "1527240"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 2
-    duration "3889620"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "47940"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 2
-    duration "1823400"
-    weight 1
-  ]
-  edge
-  [
     source 2
     target 0
     duration "0"
@@ -157,30 +122,16 @@ graph
   ]
   edge
   [
-    source 10
+    source 7
+    target 1
+    duration "2763540"
+    weight 1
+  ]
+  edge
+  [
+    source 2
     target 2
-    duration "31158000"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 2
-    duration "7513920"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "2650200"
+    duration "349320"
     weight 1
   ]
   edge
@@ -192,9 +143,58 @@ graph
   ]
   edge
   [
-    source 2
+    source 5
     target 2
-    duration "349320"
+    duration "7513920"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 2
+    duration "3889620"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 2
+    duration "1823400"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 2
+    duration "31158000"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "47940"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "1527240"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "2650200"
     weight 1
   ]
   edge

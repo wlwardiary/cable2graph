@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:52 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:37 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1129794120"
     label "05DUSHANBE1702"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1131530220"
     label "05DUSHANBE1793"
@@ -115,34 +115,6 @@ graph
   ]
   edge
   [
-    source 4
-    target 3
-    duration "527100"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 2
     target 0
     duration "0"
@@ -164,8 +136,43 @@ graph
   ]
   edge
   [
+    source 4
+    target 3
+    duration "527100"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 3
+    duration "1306800"
+    weight 1
+  ]
+  edge
+  [
     source 10
     target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 6
     duration "0"
     weight 1
   ]
@@ -174,13 +181,6 @@ graph
     source 9
     target 8
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 3
-    duration "1306800"
     weight 1
   ]
 ]

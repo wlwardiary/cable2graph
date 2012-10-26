@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:07:57 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:17 2012"
 Version 1
 graph
 [
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1197267960"
     label "07KYIV2985"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1197538620"
     label "07KYIV3058"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "black"
     timestamp "1198843080"
     label "07KYIV3165"
@@ -185,16 +185,9 @@ graph
   ]
   edge
   [
-    source 16
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 11
-    target 2
-    duration "9092640"
+    target 0
+    duration "0"
     weight 1
   ]
   edge
@@ -207,15 +200,8 @@ graph
   edge
   [
     source 11
-    target 7
-    duration "2761800"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 6
-    duration "0"
+    target 2
+    duration "9092640"
     weight 1
   ]
   edge
@@ -227,16 +213,30 @@ graph
   ]
   edge
   [
-    source 11
-    target 0
+    source 5
+    target 4
     duration "0"
     weight 1
   ]
   edge
   [
-    source 17
-    target 15
-    duration "4937880"
+    source 9
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 4
+    duration "0"
     weight 1
   ]
   edge
@@ -249,15 +249,22 @@ graph
   edge
   [
     source 11
-    target 8
-    duration "1575120"
+    target 6
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 9
-    target 4
-    duration "0"
+    source 11
+    target 7
+    duration "2761800"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "1575120"
     weight 1
   ]
   edge
@@ -276,16 +283,9 @@ graph
   ]
   edge
   [
-    source 15
-    target 14
-    duration "442020"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 14
-    duration "15355020"
+    source 10
+    target 9
+    duration "441240"
     weight 1
   ]
   edge
@@ -297,23 +297,23 @@ graph
   ]
   edge
   [
-    source 12
-    target 4
-    duration "0"
+    source 14
+    target 14
+    duration "15355020"
     weight 1
   ]
   edge
   [
-    source 5
-    target 4
-    duration "0"
+    source 15
+    target 14
+    duration "442020"
     weight 1
   ]
   edge
   [
-    source 10
-    target 9
-    duration "441240"
+    source 17
+    target 15
+    duration "4937880"
     weight 1
   ]
 ]

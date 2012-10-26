@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:14 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:14 2012"
 Version 1
 graph
 [
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1251725820"
     label "09STATE90555"
@@ -302,85 +302,15 @@ graph
   ]
   edge
   [
-    source 17
-    target 13
-    duration "12971160"
-    weight 1
-  ]
-  edge
-  [
-    source 27
-    target 13
-    duration "6672300"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 7
+    source 21
+    target 1
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 13
-    duration "7275720"
-    weight 1
-  ]
-  edge
-  [
-    source 18
-    target 13
-    duration "13834260"
     weight 1
   ]
   edge
   [
     source 18
     target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 22
-    target 13
-    duration "1487640"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 13
-    duration "10211460"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 12
-    duration "9241260"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 11
-    duration "8740920"
-    weight 1
-  ]
-  edge
-  [
-    source 23
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 21
-    target 1
     duration "0"
     weight 1
   ]
@@ -393,57 +323,8 @@ graph
   ]
   edge
   [
-    source 21
-    target 13
-    duration "25659540"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 13
-    duration "4514400"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 19
-    target 10
-    duration "18795120"
-    weight 1
-  ]
-  edge
-  [
-    source 25
-    target 13
-    duration "3563940"
-    weight 1
-  ]
-  edge
-  [
     source 23
-    target 13
-    duration "2072820"
-    weight 1
-  ]
-  edge
-  [
-    source 20
-    target 10
-    duration "2101020"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
+    target 4
     duration "0"
     weight 1
   ]
@@ -456,15 +337,29 @@ graph
   ]
   edge
   [
-    source 14
-    target 13
-    duration "10203780"
+    source 27
+    target 6
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 27
-    target 6
+    source 28
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 9
     duration "0"
     weight 1
   ]
@@ -477,9 +372,44 @@ graph
   ]
   edge
   [
-    source 24
+    source 19
+    target 10
+    duration "18795120"
+    weight 1
+  ]
+  edge
+  [
+    source 20
+    target 10
+    duration "2101020"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
+    duration "8740920"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
+    duration "9241260"
+    weight 1
+  ]
+  edge
+  [
+    source 14
     target 13
-    duration "2516160"
+    duration "10203780"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 13
+    duration "10211460"
     weight 1
   ]
   edge
@@ -487,6 +417,76 @@ graph
     source 16
     target 13
     duration "10988280"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 13
+    duration "12971160"
+    weight 1
+  ]
+  edge
+  [
+    source 18
+    target 13
+    duration "13834260"
+    weight 1
+  ]
+  edge
+  [
+    source 21
+    target 13
+    duration "25659540"
+    weight 1
+  ]
+  edge
+  [
+    source 22
+    target 13
+    duration "1487640"
+    weight 1
+  ]
+  edge
+  [
+    source 23
+    target 13
+    duration "2072820"
+    weight 1
+  ]
+  edge
+  [
+    source 24
+    target 13
+    duration "2516160"
+    weight 1
+  ]
+  edge
+  [
+    source 25
+    target 13
+    duration "3563940"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 13
+    duration "4514400"
+    weight 1
+  ]
+  edge
+  [
+    source 27
+    target 13
+    duration "6672300"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 13
+    duration "7275720"
     weight 1
   ]
 ]

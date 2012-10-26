@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:16 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:22 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 2
-    constraint 0.730903
+    constraint 0.730902777777778
     color "black"
     timestamp "1110815340"
     label "05AMMAN2131"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 4
-    constraint 0.350694
+    constraint 0.350694444444444
     color "black"
     timestamp "1110986100"
     label "05AMMAN2218"
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 6
-    constraint 0.217014
+    constraint 0.217013888888889
     color "black"
     timestamp "1111402680"
     label "05AMMAN2297"
@@ -125,6 +125,34 @@ graph
   ]
   edge
   [
+    source 1
+    target 0
+    duration "170760"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 0
+    duration "587340"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "416580"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
     source 8
     target 1
     duration "0"
@@ -139,51 +167,9 @@ graph
   ]
   edge
   [
-    source 10
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 4
     target 2
     duration "590400"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "170760"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 0
-    duration "587340"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 3
-    duration "998520"
     weight 1
   ]
   edge
@@ -195,6 +181,20 @@ graph
   ]
   edge
   [
+    source 10
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 3
+    duration "998520"
+    weight 1
+  ]
+  edge
+  [
     source 6
     target 5
     duration "694440"
@@ -202,9 +202,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 1
-    duration "416580"
+    source 11
+    target 6
+    duration "0"
     weight 1
   ]
 ]

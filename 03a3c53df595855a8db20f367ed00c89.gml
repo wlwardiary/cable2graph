@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:02:45 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:09 2012"
 Version 1
 graph
 [
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 4
-    constraint 0.307726
+    constraint 0.307725694444444
     color "black"
     timestamp "1106602680"
     label "05OTTAWA228"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 6
-    constraint 0.197917
+    constraint 0.197916666666667
     color "black"
     timestamp "1107881760"
     label "05OTTAWA382"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 4
-    constraint 0.307726
+    constraint 0.307725694444444
     color "black"
     timestamp "1107972300"
     label "05OTTAWA402"
@@ -156,15 +156,22 @@ graph
   edge
   [
     source 11
-    target 6
+    target 0
     duration "0"
     weight 1
   ]
   edge
   [
-    source 13
-    target 10
-    duration "0"
+    source 2
+    target 1
+    duration "76740"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 2
+    duration "2304660"
     weight 1
   ]
   edge
@@ -183,50 +190,22 @@ graph
   ]
   edge
   [
-    source 10
-    target 2
-    duration "2304660"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "90540"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "1369620"
+    source 11
+    target 5
+    duration "0"
     weight 1
   ]
   edge
   [
     source 11
-    target 9
-    duration "1279080"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 1
-    duration "76740"
+    target 6
+    duration "0"
     weight 1
   ]
   edge
   [
     source 10
     target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 12
     duration "0"
     weight 1
   ]
@@ -239,23 +218,44 @@ graph
   ]
   edge
   [
-    source 11
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 10
     target 9
     duration "132360"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 9
+    duration "1279080"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 9
+    duration "1369620"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "90540"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 12
+    duration "0"
     weight 1
   ]
 ]

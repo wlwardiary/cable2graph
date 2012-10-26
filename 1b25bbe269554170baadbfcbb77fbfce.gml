@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:02:57 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:14 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "04VIENNA273"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1112680260"
     label "05VIENNA1097"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1121248380"
     label "05VIENNA2349"
@@ -115,6 +115,62 @@ graph
   ]
   edge
   [
+    source 3
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 1
+    duration "617580"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 1
+    duration "8568120"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 1
+    duration "7570920"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "609720"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 3
+    duration "3530100"
+    weight 1
+  ]
+  edge
+  [
     source 5
     target 4
     duration "1634040"
@@ -132,62 +188,6 @@ graph
     source 7
     target 6
     duration "6300300"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 1
-    duration "8568120"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "609720"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 1
-    duration "7570920"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 1
-    duration "617580"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 3
-    duration "3530100"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 0
-    duration "0"
     weight 1
   ]
   edge

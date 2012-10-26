@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:05:36 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:20 2012"
 Version 1
 graph
 [
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 3
-    constraint 0.495556
+    constraint 0.495555555555556
     color "red"
     timestamp ""
     label "06STATE209622"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 2
-    constraint 0.746944
+    constraint 0.746944444444444
     color "black"
     timestamp "1141224420"
     label "06WARSAW347"
@@ -117,53 +117,11 @@ graph
   [
     id 11
     degree 10
-    constraint 0.120278
+    constraint 0.120277777777778
     color "black"
     timestamp "1143808980"
     label "06WARSAW597"
     place "WARSAW"
-  ]
-  edge
-  [
-    source 11
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 4
-    duration "2584560"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 3
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 10
-    duration "0"
-    weight 1
   ]
   edge
   [
@@ -174,15 +132,8 @@ graph
   ]
   edge
   [
-    source 11
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 7
+    source 4
+    target 1
     duration "0"
     weight 1
   ]
@@ -203,7 +154,56 @@ graph
   edge
   [
     source 11
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 4
+    duration "2584560"
+    weight 1
+  ]
+  edge
+  [
+    source 11
     target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 9
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
     duration "0"
     weight 1
   ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:18 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:47 2012"
 Version 1
 graph
 [
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1130913600"
     label "05MINSK1352"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1132637520"
     label "05MINSK1405"
@@ -155,44 +155,9 @@ graph
   ]
   edge
   [
-    source 12
-    target 12
-    duration "2335020"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "153900"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 8
+    source 3
+    target 0
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 2
-    duration "4585680"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 2
-    duration "53078400"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 12
-    duration "449220"
     weight 1
   ]
   edge
@@ -204,6 +169,27 @@ graph
   ]
   edge
   [
+    source 6
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 2
+    duration "2083500"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 2
+    duration "4585680"
+    weight 1
+  ]
+  edge
+  [
     source 9
     target 2
     duration "4604280"
@@ -211,9 +197,23 @@ graph
   ]
   edge
   [
-    source 11
-    target 7
-    duration "0"
+    source 12
+    target 2
+    duration "45895740"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 2
+    duration "53078400"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "153900"
     weight 1
   ]
   edge
@@ -232,30 +232,30 @@ graph
   ]
   edge
   [
-    source 4
-    target 2
-    duration "2083500"
+    source 11
+    target 7
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 3
-    target 0
+    source 10
+    target 8
     duration "0"
     weight 1
   ]
   edge
   [
     source 12
-    target 2
-    duration "45895740"
+    target 12
+    duration "2335020"
     weight 1
   ]
   edge
   [
-    source 6
-    target 1
-    duration "0"
+    source 13
+    target 12
+    duration "449220"
     weight 1
   ]
 ]

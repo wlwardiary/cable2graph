@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:02:29 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:03 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.501736
+    constraint 0.501736111111111
     color "black"
     timestamp "1108972560"
     label "05DJIBOUTI180"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 2
-    constraint 0.760851
+    constraint 0.760850694444444
     color "black"
     timestamp "1110100560"
     label "05DJIBOUTI235"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 8
-    constraint 0.156684
+    constraint 0.156684027777778
     color "black"
     timestamp "1112525760"
     label "05DJIBOUTI309"
@@ -116,43 +116,8 @@ graph
   edge
   [
     source 7
-    target 5
-    duration "373740"
-    weight 1
-  ]
-  edge
-  [
-    source 7
     target 0
     duration "11324400"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 6
-    duration "517740"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "254640"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 2
-    duration "3553200"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "332340"
     weight 1
   ]
   edge
@@ -164,6 +129,13 @@ graph
   ]
   edge
   [
+    source 3
+    target 2
+    duration "332340"
+    weight 1
+  ]
+  edge
+  [
     source 4
     target 2
     duration "1128000"
@@ -171,9 +143,9 @@ graph
   ]
   edge
   [
-    source 8
-    target 7
-    duration "7258740"
+    source 7
+    target 2
+    duration "3553200"
     weight 1
   ]
   edge
@@ -181,6 +153,34 @@ graph
     source 7
     target 4
     duration "2425200"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
+    duration "373740"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "254640"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 6
+    duration "517740"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 7
+    duration "7258740"
     weight 1
   ]
   edge

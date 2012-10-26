@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:35 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:44 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 9
-    constraint 0.141975
+    constraint 0.141975308641975
     color "black"
     timestamp "1167846960"
     label "07NAIROBI23"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 2
-    constraint 0.871142
+    constraint 0.871141975308642
     color "black"
     timestamp "1167730200"
     label "07NAIROBI5405"
@@ -117,11 +117,32 @@ graph
   [
     id 11
     degree 2
-    constraint 0.871142
+    constraint 0.871141975308642
     color "black"
     timestamp "1167755580"
     label "07NAIROBI5408"
     place "NAIROBI"
+  ]
+  edge
+  [
+    source 10
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "27660"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "0"
+    weight 1
   ]
   edge
   [
@@ -132,9 +153,23 @@ graph
   ]
   edge
   [
+    source 5
+    target 2
+    duration "117240"
+    weight 1
+  ]
+  edge
+  [
     source 7
     target 2
     duration "117120"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 2
+    duration "116760"
     weight 1
   ]
   edge
@@ -153,9 +188,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 1
-    duration "27660"
+    source 11
+    target 2
+    duration "91380"
     weight 1
   ]
   edge
@@ -170,41 +205,6 @@ graph
     source 11
     target 8
     duration "25380"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 2
-    duration "117240"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 2
-    duration "116760"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 2
-    duration "91380"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "0"
     weight 1
   ]
 ]

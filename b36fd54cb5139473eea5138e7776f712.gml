@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:31 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:21 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1247025840"
     label "09DAMASCUS474"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1247559360"
     label "09DAMASCUS492"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1258461660"
     label "09DAMASCUS797"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.611111
+    constraint 0.611111111111111
     color "black"
     timestamp "1258632540"
     label "09DAMASCUS806"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 5
-    constraint 0.281111
+    constraint 0.281111111111111
     color "black"
     timestamp "1265204700"
     label "10DAMASCUS103"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.521111
+    constraint 0.521111111111111
     color "black"
     timestamp "1263214380"
     label "10DAMASCUS28"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 2
-    constraint 0.804444
+    constraint 0.804444444444444
     color "black"
     timestamp "1263297420"
     label "10DAMASCUS33"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "red"
     timestamp ""
     label "10DAMASCUS37"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1263954480"
     label "10DAMASCUS68"
@@ -147,7 +147,7 @@ graph
   [
     id 14
     degree 3
-    constraint 0.611111
+    constraint 0.611111111111111
     color "black"
     timestamp "1264921740"
     label "10DAMASCUS89"
@@ -172,37 +172,16 @@ graph
   ]
   edge
   [
-    source 12
-    target 10
-    duration "0"
+    source 5
+    target 0
+    duration "11606700"
     weight 1
   ]
   edge
   [
-    source 11
-    target 8
-    duration "584280"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "2580"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 11
-    duration "523560"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 7
-    duration "1907280"
+    source 5
+    target 1
+    duration "11073180"
     weight 1
   ]
   edge
@@ -210,13 +189,6 @@ graph
     source 4
     target 2
     duration "778440"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "1990320"
     weight 1
   ]
   edge
@@ -235,30 +207,30 @@ graph
   ]
   edge
   [
-    source 5
-    target 0
-    duration "11606700"
+    source 6
+    target 5
+    duration "6569580"
     weight 1
   ]
   edge
   [
-    source 14
-    target 10
-    duration "0"
+    source 7
+    target 6
+    duration "2580"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 7
+    duration "1990320"
     weight 1
   ]
   edge
   [
     source 9
-    target 8
-    duration "83040"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
-    duration "599520"
+    target 7
+    duration "1907280"
     weight 1
   ]
   edge
@@ -270,6 +242,41 @@ graph
   ]
   edge
   [
+    source 9
+    target 8
+    duration "83040"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "584280"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
+    duration "523560"
+    weight 1
+  ]
+  edge
+  [
     source 14
     target 12
     duration "967260"
@@ -277,16 +284,9 @@ graph
   ]
   edge
   [
-    source 5
-    target 1
-    duration "11073180"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "6569580"
+    source 14
+    target 13
+    duration "599520"
     weight 1
   ]
 ]

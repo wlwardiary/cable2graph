@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:38 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:56 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1131456180"
     label "05TELAVIV6385"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1131629700"
     label "05TELAVIV6460"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1141039320"
     label "06TELAVIV808"
@@ -145,23 +145,9 @@ graph
   ]
   edge
   [
-    source 5
-    target 4
-    duration "173520"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 1
-    duration "345000"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "585420"
+    source 13
+    target 0
+    duration "12371040"
     weight 1
   ]
   edge
@@ -173,9 +159,16 @@ graph
   ]
   edge
   [
-    source 8
-    target 3
-    duration "1451520"
+    source 3
+    target 1
+    duration "345000"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 1
+    duration "681420"
     weight 1
   ]
   edge
@@ -194,9 +187,16 @@ graph
   ]
   edge
   [
-    source 11
-    target 10
-    duration "522900"
+    source 8
+    target 3
+    duration "1451520"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "173520"
     weight 1
   ]
   edge
@@ -208,16 +208,9 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
-    duration "91020"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 1
-    duration "681420"
+    source 6
+    target 5
+    duration "585420"
     weight 1
   ]
   edge
@@ -229,9 +222,16 @@ graph
   ]
   edge
   [
-    source 13
-    target 0
-    duration "12371040"
+    source 10
+    target 9
+    duration "91020"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
+    duration "522900"
     weight 1
   ]
   edge

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:05:58 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:29 2012"
 Version 1
 graph
 [
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 5
-    constraint 0.408089
+    constraint 0.408088888888889
     color "black"
     timestamp "1145444400"
     label "06JEDDAH308"
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 3
-    constraint 0.581235
+    constraint 0.581234567901235
     color "black"
     timestamp "1146473580"
     label "06JEDDAH333"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 6
-    constraint 0.228642
+    constraint 0.228641975308642
     color "black"
     timestamp "1147585980"
     label "06JEDDAH352"
@@ -155,20 +155,6 @@ graph
   ]
   edge
   [
-    source 6
-    target 0
-    duration "7432620"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 1
-    duration "1029180"
-    weight 1
-  ]
-  edge
-  [
     source 1
     target 0
     duration "2074740"
@@ -177,8 +163,8 @@ graph
   edge
   [
     source 3
-    target 2
-    duration "84360"
+    target 0
+    duration "3103920"
     weight 1
   ]
   edge
@@ -190,15 +176,71 @@ graph
   ]
   edge
   [
-    source 10
+    source 5
+    target 0
+    duration "4216320"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 0
+    duration "7432620"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "944820"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 1
+    duration "1029180"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 1
+    duration "2141580"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 1
+    duration "21095760"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "84360"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 2
+    duration "1196760"
+    weight 1
+  ]
+  edge
+  [
+    source 8
     target 5
     duration "0"
     weight 1
   ]
   edge
   [
-    source 14
-    target 11
+    source 10
+    target 5
     duration "0"
     weight 1
   ]
@@ -212,49 +254,28 @@ graph
   edge
   [
     source 14
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 1
-    duration "944820"
-    weight 1
-  ]
-  edge
-  [
-    source 14
     target 9
     duration "0"
     weight 1
   ]
   edge
   [
-    source 5
-    target 1
-    duration "2141580"
+    source 14
+    target 10
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 5
-    target 0
-    duration "4216320"
+    source 14
+    target 11
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 3
-    target 0
-    duration "3103920"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 5
+    source 14
+    target 12
     duration "0"
     weight 1
   ]
@@ -262,27 +283,6 @@ graph
   [
     source 14
     target 13
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 2
-    duration "1196760"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 1
-    duration "21095760"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 10
     duration "0"
     weight 1
   ]

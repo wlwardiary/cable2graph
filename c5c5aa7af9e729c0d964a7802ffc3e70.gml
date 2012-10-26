@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:25 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:18 2012"
 Version 1
 graph
 [
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 9
-    constraint 0.111111
+    constraint 0.111111111111111
     color "red"
     timestamp ""
     label "09SECSTATE97566"
@@ -125,13 +125,6 @@ graph
   ]
   edge
   [
-    source 6
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 5
     target 0
     duration "0"
@@ -146,36 +139,8 @@ graph
   ]
   edge
   [
-    source 7
-    target 6
-    duration "254280"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 5
     target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 5
     duration "0"
     weight 1
   ]
@@ -191,6 +156,41 @@ graph
     source 5
     target 4
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "254280"
     weight 1
   ]
   edge

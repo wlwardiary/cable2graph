@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:29 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:20 2012"
 Version 1
 graph
 [
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 5
-    constraint 0.344722
+    constraint 0.344722222222222
     color "black"
     timestamp "1242195720"
     label "09CANBERRA454"
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.660278
+    constraint 0.660277777777778
     color "black"
     timestamp "1242708000"
     label "09CANBERRA474"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 2
-    constraint 0.804444
+    constraint 0.804444444444444
     color "black"
     timestamp "1244094300"
     label "09CANBERRA526"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 4
-    constraint 0.326111
+    constraint 0.326111111111111
     color "black"
     timestamp "1244165580"
     label "09CANBERRA529"
@@ -115,16 +115,16 @@ graph
   ]
   edge
   [
-    source 10
-    target 1
-    duration "8029020"
+    source 1
+    target 0
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 7
-    target 5
-    duration "1829880"
+    source 2
+    target 1
+    duration "512280"
     weight 1
   ]
   edge
@@ -143,16 +143,16 @@ graph
   ]
   edge
   [
-    source 7
-    target 6
-    duration "1812300"
+    source 10
+    target 1
+    duration "8029020"
     weight 1
   ]
   edge
   [
-    source 8
-    target 5
-    duration "4072020"
+    source 4
+    target 2
+    duration "1386300"
     weight 1
   ]
   edge
@@ -164,20 +164,6 @@ graph
   ]
   edge
   [
-    source 2
-    target 1
-    duration "512280"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 6
     target 3
     duration "89940"
@@ -185,9 +171,23 @@ graph
   ]
   edge
   [
-    source 4
-    target 2
-    duration "1386300"
+    source 7
+    target 5
+    duration "1829880"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 5
+    duration "4072020"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "1812300"
     weight 1
   ]
   edge

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:41 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:44 2012"
 Version 1
 graph
 [
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 11
-    constraint 0.0909091
+    constraint 0.0909090909090909
     color "red"
     timestamp ""
     label "03COLOMBO676"
@@ -156,7 +156,7 @@ graph
   edge
   [
     source 11
-    target 5
+    target 0
     duration "0"
     weight 1
   ]
@@ -169,15 +169,15 @@ graph
   ]
   edge
   [
-    source 13
-    target 4
+    source 11
+    target 1
     duration "0"
     weight 1
   ]
   edge
   [
     source 11
-    target 6
+    target 2
     duration "0"
     weight 1
   ]
@@ -197,15 +197,22 @@ graph
   ]
   edge
   [
-    source 11
-    target 2
+    source 13
+    target 4
     duration "0"
     weight 1
   ]
   edge
   [
     source 11
-    target 9
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 6
     duration "0"
     weight 1
   ]
@@ -219,7 +226,21 @@ graph
   edge
   [
     source 11
-    target 0
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 9
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
     duration "0"
     weight 1
   ]
@@ -227,27 +248,6 @@ graph
   [
     source 12
     target 10
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 10
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
     duration "0"
     weight 1
   ]

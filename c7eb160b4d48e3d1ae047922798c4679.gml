@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:02:57 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:14 2012"
 Version 1
 graph
 [
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 7
-    constraint 0.177347
+    constraint 0.17734693877551
     color "black"
     timestamp "1111167480"
     label "05OTTAWA822"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 5
-    constraint 0.334745
+    constraint 0.334744897959184
     color "black"
     timestamp "1111170960"
     label "05OTTAWA824"
@@ -127,32 +127,11 @@ graph
   [
     id 12
     degree 2
-    constraint 0.686531
+    constraint 0.686530612244898
     color "red"
     timestamp ""
     label "05TORONTO430"
     place "TORONTO"
-  ]
-  edge
-  [
-    source 11
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 8
-    duration "518640"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "522300"
-    weight 1
   ]
   edge
   [
@@ -170,6 +149,34 @@ graph
   ]
   edge
   [
+    source 3
+    target 2
+    duration "682080"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 2
+    duration "1642380"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "522300"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 3
+    duration "2324460"
+    weight 1
+  ]
+  edge
+  [
     source 10
     target 3
     duration "0"
@@ -177,9 +184,9 @@ graph
   ]
   edge
   [
-    source 12
-    target 8
-    duration "0"
+    source 9
+    target 4
+    duration "2328120"
     weight 1
   ]
   edge
@@ -205,16 +212,9 @@ graph
   ]
   edge
   [
-    source 8
-    target 2
-    duration "1642380"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 4
-    duration "2328120"
+    source 11
+    target 7
+    duration "0"
     weight 1
   ]
   edge
@@ -226,16 +226,16 @@ graph
   ]
   edge
   [
-    source 3
-    target 2
-    duration "682080"
+    source 9
+    target 8
+    duration "518640"
     weight 1
   ]
   edge
   [
-    source 8
-    target 3
-    duration "2324460"
+    source 12
+    target 8
+    duration "0"
     weight 1
   ]
 ]

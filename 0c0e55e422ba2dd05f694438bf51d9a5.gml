@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:40 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:56 2012"
 Version 1
 graph
 [
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1160131320"
     label "06VILNIUS922"
@@ -107,11 +107,32 @@ graph
   [
     id 10
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1192687920"
     label "07VILNIUS742"
     place "VILNIUS"
+  ]
+  edge
+  [
+    source 10
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 1
+    duration "0"
+    weight 1
   ]
   edge
   [
@@ -122,9 +143,16 @@ graph
   ]
   edge
   [
-    source 3
-    target 1
-    duration "0"
+    source 10
+    target 3
+    duration "35576760"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 4
+    duration "3018720"
     weight 1
   ]
   edge
@@ -143,20 +171,6 @@ graph
   ]
   edge
   [
-    source 10
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 3
-    duration "35576760"
-    weight 1
-  ]
-  edge
-  [
     source 9
     target 8
     duration "0"
@@ -164,23 +178,9 @@ graph
   ]
   edge
   [
-    source 4
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 10
     target 8
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 4
-    duration "3018720"
     weight 1
   ]
 ]

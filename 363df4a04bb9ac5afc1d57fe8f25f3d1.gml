@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:25 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:18 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "red"
     timestamp ""
     label "09BRUSSELS1055"
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "black"
     timestamp "1254804600"
     label "09BRUSSELS1347"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "black"
     timestamp "1256039700"
     label "09BRUSSELS1400"
@@ -115,16 +115,23 @@ graph
   ]
   edge
   [
-    source 8
-    target 7
-    duration "933240"
+    source 1
+    target 0
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 5
-    target 4
-    duration "614460"
+    source 3
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 0
+    duration "0"
     weight 1
   ]
   edge
@@ -136,16 +143,9 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
-    duration "267000"
-    weight 1
-  ]
-  edge
-  [
     source 3
-    target 0
-    duration "0"
+    target 2
+    duration "3704760"
     weight 1
   ]
   edge
@@ -157,16 +157,9 @@ graph
   ]
   edge
   [
-    source 3
-    target 2
-    duration "3704760"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "0"
+    source 5
+    target 4
+    duration "614460"
     weight 1
   ]
   edge
@@ -178,13 +171,6 @@ graph
   ]
   edge
   [
-    source 9
-    target 8
-    duration "6658260"
-    weight 1
-  ]
-  edge
-  [
     source 7
     target 6
     duration "273960"
@@ -192,9 +178,23 @@ graph
   ]
   edge
   [
-    source 4
-    target 0
-    duration "0"
+    source 8
+    target 7
+    duration "933240"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "6658260"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "267000"
     weight 1
   ]
 ]

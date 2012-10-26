@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:30 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:20 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.611111
+    constraint 0.611111111111111
     color "black"
     timestamp "1250258460"
     label "09CHISINAU643"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1252584240"
     label "09CHISINAU700"
@@ -137,25 +137,11 @@ graph
   [
     id 13
     degree 2
-    constraint 1.00694
+    constraint 1.00694444444444
     color "black"
     timestamp "1253282160"
     label "09CHISINAU714"
     place "CHISINAU"
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "431520"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 4
-    duration "3023700"
-    weight 1
   ]
   edge
   [
@@ -173,23 +159,9 @@ graph
   ]
   edge
   [
-    source 9
-    target 5
-    duration "1811280"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "1035720"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 4
-    duration "1811580"
+    source 3
+    target 1
+    duration "427680"
     weight 1
   ]
   edge
@@ -201,30 +173,9 @@ graph
   ]
   edge
   [
-    source 12
-    target 10
-    duration "689340"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "777600"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 11
-    duration "697920"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "346380"
+    source 9
+    target 4
+    duration "1811580"
     weight 1
   ]
   edge
@@ -236,9 +187,30 @@ graph
   ]
   edge
   [
-    source 3
-    target 1
-    duration "427680"
+    source 13
+    target 4
+    duration "3023700"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "431520"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 5
+    duration "1811280"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "777600"
     weight 1
   ]
   edge
@@ -246,6 +218,34 @@ graph
     source 9
     target 8
     duration "170880"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "346380"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 9
+    duration "1035720"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "689340"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
+    duration "697920"
     weight 1
   ]
 ]

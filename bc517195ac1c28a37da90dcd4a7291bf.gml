@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:08:44 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:37 2012"
 Version 1
 graph
 [
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 5
-    constraint 0.486244
+    constraint 0.486244444444444
     color "black"
     timestamp "1199512080"
     label "08SINGAPORE13"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 5
-    constraint 0.486244
+    constraint 0.486244444444444
     color "black"
     timestamp "1200038880"
     label "08SINGAPORE40"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.431111
+    constraint 0.431111111111111
     color "red"
     timestamp ""
     label "08STATE1198"
@@ -155,65 +155,23 @@ graph
   ]
   edge
   [
-    source 11
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 12
-    target 4
-    duration "16409880"
+    target 0
+    duration "88980"
     weight 1
   ]
   edge
   [
-    source 11
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 8
+    source 6
+    target 1
     duration "0"
     weight 1
   ]
   edge
   [
     source 7
-    target 6
-    duration "526800"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 7
+    target 1
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 0
-    duration "88980"
     weight 1
   ]
   edge
@@ -226,28 +184,7 @@ graph
   edge
   [
     source 11
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 5
-    duration "587760"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 1
+    target 2
     duration "0"
     weight 1
   ]
@@ -260,6 +197,55 @@ graph
   ]
   edge
   [
+    source 10
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 4
+    duration "16409880"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "60960"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
+    duration "587760"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
     source 13
     target 5
     duration "32398560"
@@ -267,9 +253,9 @@ graph
   ]
   edge
   [
-    source 12
-    target 10
-    duration "0"
+    source 7
+    target 6
+    duration "526800"
     weight 1
   ]
   edge
@@ -281,23 +267,37 @@ graph
   ]
   edge
   [
-    source 10
-    target 3
+    source 11
+    target 6
     duration "0"
     weight 1
   ]
   edge
   [
-    source 7
-    target 1
+    source 8
+    target 7
     duration "0"
     weight 1
   ]
   edge
   [
-    source 6
-    target 5
-    duration "60960"
+    source 11
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "0"
     weight 1
   ]
   edge

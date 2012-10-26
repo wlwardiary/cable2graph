@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:45 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:48 2012"
 Version 1
 graph
 [
@@ -267,7 +267,7 @@ graph
   [
     id 26
     degree 28
-    constraint 0.0357143
+    constraint 0.0357142857142857
     color "red"
     timestamp ""
     label "07STATE102149"
@@ -306,56 +306,7 @@ graph
   edge
   [
     source 26
-    target 20
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 18
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 19
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 26
+    target 0
     duration "0"
     weight 1
   ]
@@ -369,42 +320,35 @@ graph
   edge
   [
     source 26
-    target 13
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "1024260"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 3
     duration "0"
     weight 1
   ]
   edge
   [
     source 26
-    target 25
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 27
-    target 26
+    target 5
     duration "0"
     weight 1
   ]
   edge
   [
     source 26
-    target 22
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 21
+    target 6
     duration "0"
     weight 1
   ]
@@ -418,7 +362,7 @@ graph
   edge
   [
     source 26
-    target 23
+    target 8
     duration "0"
     weight 1
   ]
@@ -439,35 +383,35 @@ graph
   edge
   [
     source 26
+    target 11
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 12
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 13
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
     target 14
     duration "0"
     weight 1
   ]
   edge
   [
-    source 4
-    target 3
-    duration "1024260"
-    weight 1
-  ]
-  edge
-  [
     source 26
     target 15
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 3
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 24
     duration "0"
     weight 1
   ]
@@ -481,7 +425,77 @@ graph
   edge
   [
     source 26
-    target 0
+    target 17
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 18
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 19
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 20
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 21
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 22
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 23
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 24
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 26
+    target 25
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 27
+    target 26
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 26
     duration "0"
     weight 1
   ]
@@ -489,20 +503,6 @@ graph
   [
     source 29
     target 26
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 26
-    target 17
     duration "0"
     weight 1
   ]

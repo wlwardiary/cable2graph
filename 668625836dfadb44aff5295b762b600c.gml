@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:37 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:55 2012"
 Version 1
 graph
 [
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 2
-    constraint 0.804444
+    constraint 0.804444444444444
     color "black"
     timestamp "1141294380"
     label "06TASHKENT430"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 5
-    constraint 0.281111
+    constraint 0.281111111111111
     color "black"
     timestamp "1142840460"
     label "06TASHKENT520"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.521111
+    constraint 0.521111111111111
     color "black"
     timestamp "1143118440"
     label "06TASHKENT536"
@@ -115,23 +115,9 @@ graph
   ]
   edge
   [
-    source 8
-    target 4
-    duration "1570980"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "277980"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 3
-    duration "1824060"
+    source 2
+    target 0
+    duration "0"
     weight 1
   ]
   edge
@@ -150,6 +136,27 @@ graph
   ]
   edge
   [
+    source 4
+    target 3
+    duration "1546080"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 3
+    duration "1824060"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "277980"
+    weight 1
+  ]
+  edge
+  [
     source 6
     target 4
     duration "373740"
@@ -158,28 +165,14 @@ graph
   edge
   [
     source 8
+    target 4
+    duration "1570980"
+    weight 1
+  ]
+  edge
+  [
+    source 8
     target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "1546080"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "828900"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 0
     duration "0"
     weight 1
   ]
@@ -195,6 +188,13 @@ graph
     source 8
     target 8
     duration "3516120"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "828900"
     weight 1
   ]
 ]

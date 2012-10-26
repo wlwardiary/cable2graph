@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:50 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:48 2012"
 Version 1
 graph
 [
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "black"
     timestamp "1089382560"
     label "04PRETORIA3113"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1117699500"
     label "05PRETORIA2161"
@@ -145,15 +145,29 @@ graph
   ]
   edge
   [
-    source 8
-    target 6
-    duration "5145240"
+    source 6
+    target 0
+    duration "0"
     weight 1
   ]
   edge
   [
     source 6
     target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 3
     duration "0"
     weight 1
   ]
@@ -174,29 +188,15 @@ graph
   edge
   [
     source 7
-    target 2
-    duration "0"
+    target 6
+    duration "1032420"
     weight 1
   ]
   edge
   [
-    source 13
-    target 12
-    duration "1102680"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 8
-    duration "808380"
+    source 8
+    target 6
+    duration "5145240"
     weight 1
   ]
   edge
@@ -208,20 +208,6 @@ graph
   ]
   edge
   [
-    source 6
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "1032420"
-    weight 1
-  ]
-  edge
-  [
     source 13
     target 6
     duration "28316940"
@@ -229,9 +215,23 @@ graph
   ]
   edge
   [
-    source 7
-    target 3
+    source 9
+    target 8
+    duration "808380"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
+    duration "1102680"
     weight 1
   ]
 ]

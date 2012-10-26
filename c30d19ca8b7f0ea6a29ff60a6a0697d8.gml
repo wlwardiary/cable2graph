@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:15 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:22 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 5
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1145515320"
     label "06ALMATY1437"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1164789360"
     label "06ASTANA689"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "07STATE138130"
@@ -135,36 +135,22 @@ graph
   ]
   edge
   [
-    source 12
-    target 10
-    duration "0"
+    source 3
+    target 0
+    duration "15191520"
     weight 1
   ]
   edge
   [
-    source 9
-    target 9
-    duration "5598420"
+    source 8
+    target 0
+    duration "54092220"
     weight 1
   ]
   edge
   [
     source 5
     target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 2
-    duration "42682320"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 2
     duration "0"
     weight 1
   ]
@@ -177,9 +163,9 @@ graph
   ]
   edge
   [
-    source 9
-    target 8
-    duration "7605720"
+    source 4
+    target 2
+    duration "0"
     weight 1
   ]
   edge
@@ -192,22 +178,8 @@ graph
   edge
   [
     source 8
-    target 5
-    duration "23408280"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 0
-    duration "54092220"
+    target 2
+    duration "42682320"
     weight 1
   ]
   edge
@@ -219,9 +191,37 @@ graph
   ]
   edge
   [
-    source 3
-    target 0
-    duration "15191520"
+    source 8
+    target 5
+    duration "23408280"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "7605720"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 9
+    duration "5598420"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 9
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "0"
     weight 1
   ]
   edge

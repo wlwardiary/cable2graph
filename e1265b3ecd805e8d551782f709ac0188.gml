@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:25 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:38 2012"
 Version 1
 graph
 [
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "03STATE307029"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1077784860"
     label "04AMMAN1469"
@@ -185,65 +185,9 @@ graph
   ]
   edge
   [
-    source 16
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 12
-    duration "233940"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 13
-    duration "2424540"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 11
-    duration "0"
+    source 9
+    target 0
+    duration "12708720"
     weight 1
   ]
   edge
@@ -256,15 +200,29 @@ graph
   edge
   [
     source 7
-    target 5
+    target 2
     duration "0"
     weight 1
   ]
   edge
   [
-    source 9
-    target 0
-    duration "12708720"
+    source 8
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 5
+    duration "0"
     weight 1
   ]
   edge
@@ -283,9 +241,16 @@ graph
   ]
   edge
   [
-    source 14
-    target 13
-    duration "3987420"
+    source 11
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "0"
     weight 1
   ]
   edge
@@ -297,9 +262,44 @@ graph
   ]
   edge
   [
-    source 8
-    target 3
+    source 16
+    target 11
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 11
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
+    duration "233940"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 12
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 13
+    duration "3987420"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 13
+    duration "2424540"
     weight 1
   ]
 ]

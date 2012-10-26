@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:09:44 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:01 2012"
 Version 1
 graph
 [
@@ -185,9 +185,9 @@ graph
   ]
   edge
   [
-    source 14
-    target 1
-    duration "928380"
+    source 15
+    target 0
+    duration "0"
     weight 1
   ]
   edge
@@ -199,15 +199,57 @@ graph
   ]
   edge
   [
-    source 15
-    target 0
+    source 14
+    target 1
+    duration "928380"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 2
     duration "0"
     weight 1
   ]
   edge
   [
-    source 15
-    target 6
+    source 5
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 5
     duration "0"
     weight 1
   ]
@@ -221,14 +263,14 @@ graph
   edge
   [
     source 15
-    target 7
+    target 6
     duration "0"
     weight 1
   ]
   edge
   [
-    source 16
-    target 12
+    source 15
+    target 7
     duration "0"
     weight 1
   ]
@@ -241,48 +283,6 @@ graph
   ]
   edge
   [
-    source 11
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 15
     target 10
     duration "0"
@@ -290,15 +290,15 @@ graph
   ]
   edge
   [
-    source 8
-    target 5
+    source 16
+    target 12
     duration "0"
     weight 1
   ]
   edge
   [
-    source 5
-    target 3
+    source 17
+    target 12
     duration "0"
     weight 1
   ]

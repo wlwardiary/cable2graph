@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:27 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:26 2012"
 Version 1
 graph
 [
@@ -177,25 +177,11 @@ graph
   [
     id 17
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "red"
     timestamp ""
     label "05STATE82983"
     place "STATE"
-  ]
-  edge
-  [
-    source 16
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 3
-    duration "0"
-    weight 1
   ]
   edge
   [
@@ -213,29 +199,15 @@ graph
   ]
   edge
   [
-    source 17
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 10
+    source 16
+    target 2
     duration "0"
     weight 1
   ]
   edge
   [
     source 16
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 17
-    target 6
+    target 3
     duration "0"
     weight 1
   ]
@@ -249,14 +221,28 @@ graph
   edge
   [
     source 16
-    target 7
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 6
     duration "0"
     weight 1
   ]
   edge
   [
     source 16
-    target 4
+    target 7
     duration "0"
     weight 1
   ]
@@ -270,21 +256,14 @@ graph
   edge
   [
     source 16
-    target 14
+    target 9
     duration "0"
     weight 1
   ]
   edge
   [
-    source 14
-    target 13
-    duration "499380"
-    weight 1
-  ]
-  edge
-  [
     source 17
-    target 15
+    target 10
     duration "0"
     weight 1
   ]
@@ -298,6 +277,20 @@ graph
   edge
   [
     source 16
+    target 12
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 13
+    duration "499380"
+    weight 1
+  ]
+  edge
+  [
+    source 16
     target 13
     duration "0"
     weight 1
@@ -305,7 +298,14 @@ graph
   edge
   [
     source 16
-    target 12
+    target 14
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 15
     duration "0"
     weight 1
   ]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:09:51 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:04 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 2
-    constraint 0.784722
+    constraint 0.784722222222222
     color "black"
     timestamp "1210365600"
     label "08WELLINGTON159"
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 6
-    constraint 0.222994
+    constraint 0.222993827160494
     color "black"
     timestamp "1211517180"
     label "08WELLINGTON168"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 3
-    constraint 0.512346
+    constraint 0.512345679012346
     color "black"
     timestamp "1224013860"
     label "08WELLINGTON337"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1224807240"
     label "08WELLINGTON357"
@@ -135,6 +135,69 @@ graph
   ]
   edge
   [
+    source 2
+    target 0
+    duration "1151580"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 0
+    duration "13648260"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "786840"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "1105680"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 2
+    duration "5150100"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 2
+    duration "5150100"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 2
+    duration "12496680"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 4
+    duration "190740"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "4331040"
+    weight 1
+  ]
+  edge
+  [
     source 10
     target 8
     duration "795840"
@@ -149,16 +212,9 @@ graph
   ]
   edge
   [
-    source 5
-    target 2
-    duration "5150100"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 2
-    duration "5150100"
+    source 10
+    target 9
+    duration "793380"
     weight 1
   ]
   edge
@@ -166,62 +222,6 @@ graph
     source 11
     target 10
     duration "3552480"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "4331040"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 0
-    duration "1151580"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "1105680"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 0
-    duration "13648260"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 4
-    duration "190740"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 1
-    duration "786840"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 2
-    duration "12496680"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "793380"
     weight 1
   ]
 ]

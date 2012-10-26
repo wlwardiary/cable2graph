@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:30 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:40 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1049792880"
     label "03AMMAN2117"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1058275560"
     label "03AMMAN4361"
@@ -182,6 +182,27 @@ graph
   ]
   edge
   [
+    source 3
+    target 1
+    duration "431700"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "368220"
+    weight 1
+  ]
+  edge
+  [
     source 15
     target 2
     duration "0"
@@ -196,8 +217,22 @@ graph
   ]
   edge
   [
-    source 14
-    target 1
+    source 5
+    target 4
+    duration "18660"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 4
+    duration "620640"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 4
     duration "0"
     weight 1
   ]
@@ -210,27 +245,6 @@ graph
   ]
   edge
   [
-    source 6
-    target 4
-    duration "620640"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "18660"
-    weight 1
-  ]
-  edge
-  [
     source 8
     target 7
     duration "81240"
@@ -238,22 +252,15 @@ graph
   ]
   edge
   [
-    source 16
-    target 9
+    source 14
+    target 7
     duration "0"
     weight 1
   ]
   edge
   [
-    source 3
-    target 2
-    duration "368220"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 12
+    source 16
+    target 9
     duration "0"
     weight 1
   ]
@@ -266,22 +273,15 @@ graph
   ]
   edge
   [
-    source 14
-    target 7
+    source 15
+    target 12
     duration "0"
     weight 1
   ]
   edge
   [
-    source 3
-    target 1
-    duration "431700"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 4
+    source 14
+    target 13
     duration "0"
     weight 1
   ]

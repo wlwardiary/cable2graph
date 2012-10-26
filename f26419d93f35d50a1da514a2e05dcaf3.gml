@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:14 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:46 2012"
 Version 1
 graph
 [
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1159757940"
     label "06LUSAKA1349"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "black"
     timestamp "1160742480"
     label "06LUSAKA1419"
@@ -185,43 +185,8 @@ graph
   ]
   edge
   [
-    source 12
-    target 10
-    duration "1796640"
-    weight 1
-  ]
-  edge
-  [
     source 4
     target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 8
-    duration "975540"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 4
     duration "0"
     weight 1
   ]
@@ -234,20 +199,6 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 6
-    duration "1294620"
-    weight 1
-  ]
-  edge
-  [
     source 3
     target 2
     duration "0"
@@ -255,8 +206,8 @@ graph
   ]
   edge
   [
-    source 14
-    target 10
+    source 4
+    target 2
     duration "0"
     weight 1
   ]
@@ -269,8 +220,15 @@ graph
   ]
   edge
   [
-    source 16
-    target 7
+    source 13
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 4
     duration "0"
     weight 1
   ]
@@ -283,9 +241,9 @@ graph
   ]
   edge
   [
-    source 15
-    target 10
-    duration "0"
+    source 10
+    target 6
+    duration "1294620"
     weight 1
   ]
   edge
@@ -297,6 +255,13 @@ graph
   ]
   edge
   [
+    source 16
+    target 7
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
     source 17
     target 7
     duration "0"
@@ -304,8 +269,43 @@ graph
   ]
   edge
   [
-    source 4
-    target 2
+    source 10
+    target 8
+    duration "975540"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 10
+    duration "1796640"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
     duration "0"
     weight 1
   ]

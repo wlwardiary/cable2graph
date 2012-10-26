@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:15 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:14 2012"
 Version 1
 graph
 [
@@ -207,7 +207,7 @@ graph
   [
     id 20
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1236183900"
     label "09USUNNEWYORK205"
@@ -236,8 +236,57 @@ graph
   edge
   [
     source 15
-    target 10
+    target 0
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "79320"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 2
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 6
+    duration "12780"
     weight 1
   ]
   edge
@@ -250,14 +299,7 @@ graph
   edge
   [
     source 15
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 13
+    target 7
     duration "0"
     weight 1
   ]
@@ -278,6 +320,13 @@ graph
   edge
   [
     source 15
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 15
     target 11
     duration "0"
     weight 1
@@ -285,21 +334,28 @@ graph
   edge
   [
     source 15
-    target 3
+    target 12
     duration "0"
     weight 1
   ]
   edge
   [
-    source 2
-    target 1
-    duration "79320"
+    source 15
+    target 13
+    duration "0"
     weight 1
   ]
   edge
   [
     source 15
     target 14
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 15
     duration "0"
     weight 1
   ]
@@ -319,14 +375,7 @@ graph
   ]
   edge
   [
-    source 15
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 17
+    source 21
     target 15
     duration "0"
     weight 1
@@ -341,63 +390,14 @@ graph
   edge
   [
     source 20
-    target 19
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 21
-    target 15
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 6
-    duration "12780"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 2
+    target 16
     duration "0"
     weight 1
   ]
   edge
   [
     source 20
-    target 16
+    target 19
     duration "0"
     weight 1
   ]

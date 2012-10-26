@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:10:43 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:02:26 2012"
 Version 1
 graph
 [
@@ -115,51 +115,9 @@ graph
   ]
   edge
   [
-    source 5
+    source 1
     target 0
-    duration "3624480"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 2
-    duration "2611020"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 0
-    duration "1710360"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 3
-    duration "2425980"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 0
-    duration "4136340"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 4
-    duration "1920840"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 1
-    duration "670620"
+    duration "342840"
     weight 1
   ]
   edge
@@ -172,50 +130,29 @@ graph
   edge
   [
     source 3
-    target 2
-    duration "696900"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 1
-    duration "3793500"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "2168100"
+    target 0
+    duration "1710360"
     weight 1
   ]
   edge
   [
     source 5
-    target 1
-    duration "3281640"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 6
-    duration "4638300"
-    weight 1
-  ]
-  edge
-  [
-    source 1
     target 0
-    duration "342840"
+    duration "3624480"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 0
+    duration "4136340"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "670620"
     weight 1
   ]
   edge
@@ -227,16 +164,30 @@ graph
   ]
   edge
   [
-    source 9
-    target 8
-    duration "0"
+    source 5
+    target 1
+    duration "3281640"
     weight 1
   ]
   edge
   [
     source 6
-    target 5
-    duration "511860"
+    target 1
+    duration "3793500"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "696900"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 2
+    duration "2611020"
     weight 1
   ]
   edge
@@ -251,6 +202,55 @@ graph
     source 5
     target 3
     duration "1914120"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 3
+    duration "2425980"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 4
+    duration "1920840"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "511860"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "2168100"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 6
+    duration "4638300"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "0"
     weight 1
   ]
 ]

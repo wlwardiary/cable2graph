@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:07:26 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:05 2012"
 Version 1
 graph
 [
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 6
-    constraint 0.166667
+    constraint 0.166666666666667
     color "black"
     timestamp "1202851140"
     label "08BOGOTA570"
@@ -145,44 +145,9 @@ graph
   ]
   edge
   [
-    source 4
-    target 2
-    duration "1241040"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 10
-    duration "3004380"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 8
-    duration "16490640"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 9
-    duration "21834000"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 2
-    duration "11523180"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 6
-    duration "8010180"
+    source 2
+    target 0
+    duration "1102440"
     weight 1
   ]
   edge
@@ -190,13 +155,6 @@ graph
     source 5
     target 0
     duration "7080240"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 2
-    duration "27733380"
     weight 1
   ]
   edge
@@ -215,6 +173,34 @@ graph
   ]
   edge
   [
+    source 4
+    target 2
+    duration "1241040"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 2
+    duration "27733380"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 2
+    duration "11523180"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 6
+    duration "8010180"
+    weight 1
+  ]
+  edge
+  [
     source 8
     target 7
     duration "280440"
@@ -222,9 +208,23 @@ graph
   ]
   edge
   [
-    source 13
-    target 12
-    duration "1204620"
+    source 12
+    target 8
+    duration "16490640"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 9
+    duration "21834000"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
+    duration "3004380"
     weight 1
   ]
   edge
@@ -236,9 +236,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 0
-    duration "1102440"
+    source 13
+    target 12
+    duration "1204620"
     weight 1
   ]
 ]

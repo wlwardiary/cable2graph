@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:24 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:50 2012"
 Version 1
 graph
 [
@@ -287,7 +287,7 @@ graph
   [
     id 28
     degree 28
-    constraint 0.0357143
+    constraint 0.0357142857142857
     color "red"
     timestamp ""
     label "05REFERENCE:OTTAWA1504"
@@ -296,112 +296,7 @@ graph
   edge
   [
     source 28
-    target 22
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 3
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 13
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 21
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 24
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 6
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 5
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 16
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 23
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 25
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 27
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 28
-    target 10
+    target 0
     duration "0"
     weight 1
   ]
@@ -415,21 +310,35 @@ graph
   edge
   [
     source 28
-    target 14
+    target 2
     duration "0"
     weight 1
   ]
   edge
   [
     source 28
-    target 9
+    target 3
     duration "0"
     weight 1
   ]
   edge
   [
     source 28
-    target 0
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 6
     duration "0"
     weight 1
   ]
@@ -443,14 +352,49 @@ graph
   edge
   [
     source 28
-    target 26
+    target 8
     duration "0"
     weight 1
   ]
   edge
   [
     source 28
-    target 18
+    target 9
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 10
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 11
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 12
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 13
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 14
     duration "0"
     weight 1
   ]
@@ -464,7 +408,21 @@ graph
   edge
   [
     source 28
-    target 4
+    target 16
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 17
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 18
     duration "0"
     weight 1
   ]
@@ -485,7 +443,49 @@ graph
   edge
   [
     source 28
-    target 17
+    target 21
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 22
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 23
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 24
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 25
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 26
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 28
+    target 27
     duration "0"
     weight 1
   ]

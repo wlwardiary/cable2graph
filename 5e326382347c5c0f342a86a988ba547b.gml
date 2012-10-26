@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:45 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:59 2012"
 Version 1
 graph
 [
@@ -135,30 +135,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 2
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "25620"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "158160"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 10
-    duration "49260"
+    source 1
+    target 0
+    duration "525360"
     weight 1
   ]
   edge
@@ -177,58 +156,16 @@ graph
   ]
   edge
   [
-    source 10
-    target 9
-    duration "3960"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "2803560"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "285780"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 5
+    source 2
+    target 2
     duration "0"
     weight 1
   ]
   edge
   [
-    source 9
-    target 8
-    duration "620460"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "1528320"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "91020"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 6
-    duration "0"
+    source 3
+    target 2
+    duration "158160"
     weight 1
   ]
   edge
@@ -240,9 +177,72 @@ graph
   ]
   edge
   [
-    source 1
-    target 0
-    duration "525360"
+    source 4
+    target 3
+    duration "25620"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "91020"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "1528320"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "285780"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "620460"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "3960"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
+    duration "49260"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "2803560"
     weight 1
   ]
 ]

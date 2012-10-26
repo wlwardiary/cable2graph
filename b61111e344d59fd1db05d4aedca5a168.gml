@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:06:46 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:48 2012"
 Version 1
 graph
 [
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1195818720"
     label "07BEIRUT1834"
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 10
-    constraint 0.21599
+    constraint 0.215990114795918
     color "black"
     timestamp "1195926000"
     label "07BEIRUT1854"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1195926480"
     label "07BEIRUT1855"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 5
-    constraint 0.38612
+    constraint 0.386119614512472
     color "black"
     timestamp "1196079360"
     label "07BEIRUT1860"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.416236
+    constraint 0.416235827664399
     color "black"
     timestamp "1196090220"
     label "07BEIRUT1863"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 4
-    constraint 0.285734
+    constraint 0.285734215561224
     color "black"
     timestamp "1196090880"
     label "07BEIRUT1864"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 3
-    constraint 0.523376
+    constraint 0.523376480221718
     color "black"
     timestamp "1196091900"
     label "07BEIRUT1865"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 2
-    constraint 0.686531
+    constraint 0.686530612244898
     color "black"
     timestamp "1196166240"
     label "07BEIRUT1875"
@@ -147,7 +147,7 @@ graph
   [
     id 14
     degree 5
-    constraint 0.449267
+    constraint 0.449266975308642
     color "black"
     timestamp "1196174220"
     label "07BEIRUT1876"
@@ -157,7 +157,7 @@ graph
   [
     id 15
     degree 7
-    constraint 0.274012
+    constraint 0.274012188208617
     color "black"
     timestamp "1196175240"
     label "07BEIRUT1877"
@@ -167,7 +167,7 @@ graph
   [
     id 16
     degree 4
-    constraint 0.294102
+    constraint 0.2941015625
     color "black"
     timestamp "1196177400"
     label "07BEIRUT1879"
@@ -217,7 +217,7 @@ graph
   [
     id 21
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "07SECSTATE158852"
@@ -236,8 +236,15 @@ graph
   edge
   [
     source 22
-    target 19
+    target 0
     duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 1
+    duration "335760"
     weight 1
   ]
   edge
@@ -249,51 +256,9 @@ graph
   ]
   edge
   [
-    source 22
-    target 0
+    source 21
+    target 2
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 6
-    duration "123240"
-    weight 1
-  ]
-  edge
-  [
-    source 22
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 10
-    duration "84000"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 6
-    duration "249240"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 7
-    duration "250920"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 9
-    duration "98040"
     weight 1
   ]
   edge
@@ -301,34 +266,6 @@ graph
     source 21
     target 3
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 6
-    duration "251400"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 5
-    duration "263880"
-    weight 1
-  ]
-  edge
-  [
-    source 18
-    target 6
-    duration "491460"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 13
-    duration "9000"
     weight 1
   ]
   edge
@@ -354,16 +291,9 @@ graph
   ]
   edge
   [
-    source 15
-    target 10
-    duration "85020"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 6
-    duration "153360"
+    source 16
+    target 5
+    duration "263880"
     weight 1
   ]
   edge
@@ -375,6 +305,20 @@ graph
   ]
   edge
   [
+    source 8
+    target 6
+    duration "123240"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 6
+    duration "153360"
+    weight 1
+  ]
+  edge
+  [
     source 11
     target 6
     duration "164880"
@@ -382,9 +326,9 @@ graph
   ]
   edge
   [
-    source 17
-    target 15
-    duration "58320"
+    source 12
+    target 6
+    duration "165900"
     weight 1
   ]
   edge
@@ -397,15 +341,22 @@ graph
   edge
   [
     source 15
-    target 11
-    duration "84360"
+    target 6
+    duration "249240"
     weight 1
   ]
   edge
   [
-    source 21
-    target 2
-    duration "0"
+    source 16
+    target 6
+    duration "251400"
+    weight 1
+  ]
+  edge
+  [
+    source 18
+    target 6
+    duration "491460"
     weight 1
   ]
   edge
@@ -417,44 +368,16 @@ graph
   ]
   edge
   [
-    source 12
-    target 6
-    duration "165900"
+    source 16
+    target 7
+    duration "250920"
     weight 1
   ]
   edge
   [
-    source 15
-    target 12
-    duration "83340"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 14
+    source 22
+    target 7
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 1
-    duration "335760"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 9
-    duration "95880"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 12
-    duration "82320"
     weight 1
   ]
   edge
@@ -469,6 +392,83 @@ graph
     source 13
     target 9
     duration "86880"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 9
+    duration "95880"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 9
+    duration "98040"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 10
+    duration "84000"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 10
+    duration "85020"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 11
+    duration "84360"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 12
+    duration "82320"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 12
+    duration "83340"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 13
+    duration "9000"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 14
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 17
+    target 15
+    duration "58320"
+    weight 1
+  ]
+  edge
+  [
+    source 22
+    target 19
+    duration "0"
     weight 1
   ]
 ]

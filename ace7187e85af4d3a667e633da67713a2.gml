@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:04:57 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:03 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1144235100"
     label "06ALMATY1226"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1150854300"
     label "06ALMATY2187"
@@ -157,7 +157,7 @@ graph
   [
     id 15
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "06STATE42857"
@@ -167,7 +167,7 @@ graph
   [
     id 16
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "06STATE79256"
@@ -177,7 +177,7 @@ graph
   [
     id 17
     degree 15
-    constraint 0.075679
+    constraint 0.075679012345679
     color "red"
     timestamp ""
     label "06STATE92033"
@@ -207,7 +207,7 @@ graph
   [
     id 20
     degree 2
-    constraint 0.728889
+    constraint 0.728888888888889
     color "black"
     timestamp "1149852240"
     label "06TELAVIV2228"
@@ -217,7 +217,7 @@ graph
   [
     id 21
     degree 3
-    constraint 0.487531
+    constraint 0.487530864197531
     color "black"
     timestamp "1150208040"
     label "06TELAVIV2294"
@@ -265,22 +265,50 @@ graph
   ]
   edge
   [
-    source 21
-    target 17
+    source 1
+    target 0
+    duration "6619200"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 0
+    duration "12757140"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 0
     duration "0"
     weight 1
   ]
   edge
   [
-    source 21
-    target 19
-    duration "2333760"
+    source 17
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 18
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 3
+    duration "0"
     weight 1
   ]
   edge
   [
     source 17
-    target 7
+    target 4
     duration "0"
     weight 1
   ]
@@ -301,49 +329,14 @@ graph
   edge
   [
     source 17
-    target 13
+    target 7
     duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 23
-    target 17
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "6619200"
     weight 1
   ]
   edge
   [
     source 17
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 22
-    target 17
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 21
-    target 20
-    duration "355800"
-    weight 1
-  ]
-  edge
-  [
-    source 19
-    target 16
+    target 8
     duration "0"
     weight 1
   ]
@@ -363,13 +356,6 @@ graph
   ]
   edge
   [
-    source 16
-    target 3
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 12
     target 11
     duration "2219580"
@@ -378,7 +364,7 @@ graph
   edge
   [
     source 17
-    target 4
+    target 11
     duration "0"
     weight 1
   ]
@@ -391,6 +377,13 @@ graph
   ]
   edge
   [
+    source 17
+    target 13
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
     source 15
     target 14
     duration "0"
@@ -398,9 +391,9 @@ graph
   ]
   edge
   [
-    source 2
-    target 0
-    duration "12757140"
+    source 19
+    target 16
+    duration "0"
     weight 1
   ]
   edge
@@ -412,14 +405,21 @@ graph
   ]
   edge
   [
-    source 17
-    target 8
+    source 21
+    target 17
     duration "0"
     weight 1
   ]
   edge
   [
-    source 25
+    source 22
+    target 17
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 23
     target 17
     duration "0"
     weight 1
@@ -433,23 +433,23 @@ graph
   ]
   edge
   [
-    source 15
-    target 0
+    source 25
+    target 17
     duration "0"
     weight 1
   ]
   edge
   [
-    source 18
-    target 1
-    duration "0"
+    source 21
+    target 19
+    duration "2333760"
     weight 1
   ]
   edge
   [
-    source 17
-    target 1
-    duration "0"
+    source 21
+    target 20
+    duration "355800"
     weight 1
   ]
 ]

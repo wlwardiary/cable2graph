@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:03:22 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:59:24 2012"
 Version 1
 graph
 [
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1129208760"
     label "05ANKARA6233"
@@ -135,72 +135,9 @@ graph
   ]
   edge
   [
-    source 8
-    target 6
-    duration "1988640"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 3
-    duration "1569360"
-    weight 1
-  ]
-  edge
-  [
-    source 7
-    target 6
-    duration "605520"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "2158200"
-    weight 1
-  ]
-  edge
-  [
     source 1
     target 0
     duration "1315920"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "680340"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 8
-    duration "4831860"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 6
-    duration "7783020"
     weight 1
   ]
   edge
@@ -215,6 +152,69 @@ graph
     source 5
     target 2
     duration "4490460"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "680340"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 3
+    duration "1569360"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "2158200"
+    weight 1
+  ]
+  edge
+  [
+    source 7
+    target 6
+    duration "605520"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 6
+    duration "1988640"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 6
+    duration "7783020"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "4831860"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "0"
     weight 1
   ]
 ]

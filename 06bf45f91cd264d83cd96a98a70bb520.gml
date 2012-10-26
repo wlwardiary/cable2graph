@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:07:10 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:58 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1186575000"
     label "07ATHENS1594"
@@ -77,7 +77,7 @@ graph
   [
     id 7
     degree 3
-    constraint 0.654707
+    constraint 0.654706790123457
     color "black"
     timestamp "1189081620"
     label "07ATHENS1785"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 2
-    constraint 0.760851
+    constraint 0.760850694444444
     color "black"
     timestamp "1189414800"
     label "07ATHENS1804"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.589892
+    constraint 0.589891975308642
     color "black"
     timestamp "1189597200"
     label "07ATHENS1834"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 3
-    constraint 0.654707
+    constraint 0.654706790123457
     color "black"
     timestamp "1189767540"
     label "07ATHENS1853"
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 2
-    constraint 0.760851
+    constraint 0.760850694444444
     color "black"
     timestamp "1190011200"
     label "07ATHENS1861"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 8
-    constraint 0.250868
+    constraint 0.250868055555556
     color "black"
     timestamp "1190196180"
     label "07ATHENS1886"
@@ -155,22 +155,15 @@ graph
   ]
   edge
   [
-    source 10
-    target 7
-    duration "515580"
+    source 2
+    target 0
+    duration "3624480"
     weight 1
   ]
   edge
   [
-    source 13
-    target 11
-    duration "428640"
-    weight 1
-  ]
-  edge
-  [
-    source 14
-    target 13
+    source 1
+    target 1
     duration "0"
     weight 1
   ]
@@ -183,69 +176,6 @@ graph
   ]
   edge
   [
-    source 13
-    target 12
-    duration "184980"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 9
-    duration "680580"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 0
-    duration "3624480"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 7
-    duration "333180"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 11
-    duration "243660"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 10
-    duration "598980"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 4
-    duration "688140"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 8
-    duration "781380"
-    weight 1
-  ]
-  edge
-  [
     source 9
     target 2
     duration "2940600"
@@ -253,9 +183,9 @@ graph
   ]
   edge
   [
-    source 11
-    target 10
-    duration "170340"
+    source 5
+    target 3
+    duration "868380"
     weight 1
   ]
   edge
@@ -267,9 +197,37 @@ graph
   ]
   edge
   [
-    source 5
-    target 3
-    duration "868380"
+    source 6
+    target 4
+    duration "688140"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 5
+    duration "1900860"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 6
+    duration "2248440"
+    weight 1
+  ]
+  edge
+  [
+    source 8
+    target 7
+    duration "333180"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 7
+    duration "515580"
     weight 1
   ]
   edge
@@ -282,15 +240,57 @@ graph
   edge
   [
     source 13
-    target 6
-    duration "2248440"
+    target 8
+    duration "781380"
     weight 1
   ]
   edge
   [
-    source 9
-    target 5
-    duration "1900860"
+    source 13
+    target 9
+    duration "680580"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
+    duration "170340"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 10
+    duration "598980"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 11
+    duration "243660"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 11
+    duration "428640"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
+    duration "184980"
+    weight 1
+  ]
+  edge
+  [
+    source 14
+    target 13
+    duration "0"
     weight 1
   ]
 ]

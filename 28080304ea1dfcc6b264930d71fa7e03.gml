@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:05:26 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:00:15 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 3
-    constraint 0.645062
+    constraint 0.645061728395062
     color "black"
     timestamp "1165306020"
     label "06BEIJING24304"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 6
-    constraint 0.209877
+    constraint 0.209876543209877
     color "black"
     timestamp "1148242200"
     label "06BEIJING9677"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.645062
+    constraint 0.645061728395062
     color "black"
     timestamp "1169017620"
     label "07BEIJING390"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "black"
     timestamp "1169795640"
     label "07BEIJING594"
@@ -115,6 +115,41 @@ graph
   ]
   edge
   [
+    source 0
+    target 0
+    duration "57197940"
+    weight 1
+  ]
+  edge
+  [
+    source 1
+    target 0
+    duration "4857600"
+    weight 1
+  ]
+  edge
+  [
+    source 1
+    target 1
+    duration "3907500"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 1
+    duration "5256540"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 2
+    duration "17063820"
+    weight 1
+  ]
+  edge
+  [
     source 8
     target 2
     duration "3711600"
@@ -122,8 +157,36 @@ graph
   ]
   edge
   [
+    source 9
+    target 2
+    duration "4489620"
+    weight 1
+  ]
+  edge
+  [
     source 3
     target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 4
+    target 3
+    duration "18329640"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 4
     duration "0"
     weight 1
   ]
@@ -136,58 +199,9 @@ graph
   ]
   edge
   [
-    source 1
-    target 1
-    duration "3907500"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 3
-    duration "18329640"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 2
-    duration "4489620"
-    weight 1
-  ]
-  edge
-  [
-    source 5
+    source 8
     target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 4
-    target 2
-    duration "17063820"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 1
-    target 0
-    duration "4857600"
+    duration "20775420"
     weight 1
   ]
   edge
@@ -199,23 +213,9 @@ graph
   ]
   edge
   [
-    source 3
-    target 1
-    duration "5256540"
-    weight 1
-  ]
-  edge
-  [
-    source 8
-    target 4
-    duration "20775420"
-    weight 1
-  ]
-  edge
-  [
-    source 0
-    target 0
-    duration "57197940"
+    source 10
+    target 9
+    duration "0"
     weight 1
   ]
 ]

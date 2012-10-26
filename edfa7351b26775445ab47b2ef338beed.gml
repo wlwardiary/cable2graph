@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:07:27 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:05 2012"
 Version 1
 graph
 [
@@ -127,7 +127,7 @@ graph
   [
     id 12
     degree 13
-    constraint 0.0769231
+    constraint 0.0769230769230769
     color "red"
     timestamp ""
     label "07STATE56397"
@@ -146,6 +146,20 @@ graph
   edge
   [
     source 12
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
     target 2
     duration "0"
     weight 1
@@ -153,7 +167,7 @@ graph
   edge
   [
     source 12
-    target 5
+    target 3
     duration "0"
     weight 1
   ]
@@ -167,7 +181,21 @@ graph
   edge
   [
     source 12
-    target 10
+    target 5
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 6
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 12
+    target 7
     duration "0"
     weight 1
   ]
@@ -187,15 +215,8 @@ graph
   ]
   edge
   [
-    source 13
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 12
-    target 3
+    target 10
     duration "0"
     weight 1
   ]
@@ -208,29 +229,8 @@ graph
   ]
   edge
   [
-    source 12
-    target 7
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 0
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 12
-    target 6
+    source 13
+    target 12
     duration "0"
     weight 1
   ]

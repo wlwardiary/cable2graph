@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:16 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:34 2012"
 Version 1
 graph
 [
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 3
-    constraint 0.746914
+    constraint 0.746913580246914
     color "black"
     timestamp "1051294560"
     label "03OTTAWA1168"
@@ -47,7 +47,7 @@ graph
   [
     id 4
     degree 2
-    constraint 0.784722
+    constraint 0.784722222222222
     color "black"
     timestamp "1051900080"
     label "03OTTAWA1250"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 6
-    constraint 0.29321
+    constraint 0.29320987654321
     color "black"
     timestamp "1055435640"
     label "03OTTAWA1662"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 2
-    constraint 0.784722
+    constraint 0.784722222222222
     color "red"
     timestamp ""
     label "03STATE105217"
@@ -112,13 +112,6 @@ graph
     timestamp ""
     label "03STATE1211"
     place "STATE"
-  ]
-  edge
-  [
-    source 9
-    target 3
-    duration "0"
-    weight 1
   ]
   edge
   [
@@ -143,9 +136,37 @@ graph
   ]
   edge
   [
+    source 4
+    target 3
+    duration "605520"
+    weight 1
+  ]
+  edge
+  [
     source 5
     target 3
     duration "4141080"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 3
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 5
+    target 4
+    duration "3535560"
+    weight 1
+  ]
+  edge
+  [
+    source 6
+    target 5
+    duration "13221780"
     weight 1
   ]
   edge
@@ -164,27 +185,6 @@ graph
   ]
   edge
   [
-    source 8
-    target 7
-    duration "1543740"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 5
-    duration "13221780"
-    weight 1
-  ]
-  edge
-  [
-    source 5
-    target 4
-    duration "3535560"
-    weight 1
-  ]
-  edge
-  [
     source 7
     target 7
     duration "970140"
@@ -192,16 +192,16 @@ graph
   ]
   edge
   [
-    source 10
+    source 8
     target 7
-    duration "0"
+    duration "1543740"
     weight 1
   ]
   edge
   [
-    source 4
-    target 3
-    duration "605520"
+    source 10
+    target 7
+    duration "0"
     weight 1
   ]
 ]

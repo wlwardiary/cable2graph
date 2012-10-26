@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:01:56 2011"
+Creator "igraph version 0.6 Fri Oct 26 00:58:50 2012"
 Version 1
 graph
 [
@@ -7,7 +7,7 @@ graph
   [
     id 0
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "red"
     timestamp ""
     label "03STATE344921"
@@ -17,7 +17,7 @@ graph
   [
     id 1
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1169738640"
     label "07ATHENS171"
@@ -57,7 +57,7 @@ graph
   [
     id 5
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1177491060"
     label "07ATHENS823"
@@ -87,7 +87,7 @@ graph
   [
     id 8
     degree 3
-    constraint 0.673611
+    constraint 0.673611111111111
     color "black"
     timestamp "1193587320"
     label "07BAKU1294"
@@ -97,7 +97,7 @@ graph
   [
     id 9
     degree 4
-    constraint 0.347222
+    constraint 0.347222222222222
     color "black"
     timestamp "1193644140"
     label "07BAKU1295"
@@ -107,7 +107,7 @@ graph
   [
     id 10
     degree 3
-    constraint 0.506173
+    constraint 0.506172839506173
     color "black"
     timestamp "1193671620"
     label "07BAKU1296"
@@ -117,7 +117,7 @@ graph
   [
     id 11
     degree 3
-    constraint 0.673611
+    constraint 0.673611111111111
     color "black"
     timestamp "1193750220"
     label "07BAKU1297"
@@ -137,7 +137,7 @@ graph
   [
     id 13
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1193777940"
     label "07STATE150670"
@@ -175,91 +175,21 @@ graph
   ]
   edge
   [
-    source 13
-    target 10
-    duration "106320"
-    weight 1
-  ]
-  edge
-  [
-    source 9
-    target 8
-    duration "56820"
-    weight 1
-  ]
-  edge
-  [
-    source 6
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 16
-    target 5
-    duration "40920"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 12
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 8
-    duration "84300"
-    weight 1
-  ]
-  edge
-  [
-    source 15
-    target 3
-    duration "19920"
-    weight 1
-  ]
-  edge
-  [
-    source 9
+    source 3
     target 0
     duration "0"
     weight 1
   ]
   edge
   [
-    source 11
-    target 10
-    duration "78600"
+    source 5
+    target 0
+    duration "0"
     weight 1
   ]
   edge
   [
-    source 11
-    target 9
-    duration "106080"
-    weight 1
-  ]
-  edge
-  [
-    source 11
-    target 8
-    duration "162900"
-    weight 1
-  ]
-  edge
-  [
-    source 13
-    target 9
-    duration "133800"
-    weight 1
-  ]
-  edge
-  [
-    source 3
+    source 9
     target 0
     duration "0"
     weight 1
@@ -273,8 +203,8 @@ graph
   ]
   edge
   [
-    source 5
-    target 0
+    source 6
+    target 1
     duration "0"
     weight 1
   ]
@@ -287,13 +217,6 @@ graph
   ]
   edge
   [
-    source 14
-    target 3
-    duration "17220"
-    weight 1
-  ]
-  edge
-  [
     source 3
     target 2
     duration "13560"
@@ -301,8 +224,85 @@ graph
   ]
   edge
   [
+    source 14
+    target 3
+    duration "17220"
+    weight 1
+  ]
+  edge
+  [
+    source 15
+    target 3
+    duration "19920"
+    weight 1
+  ]
+  edge
+  [
     source 5
     target 4
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 16
+    target 5
+    duration "40920"
+    weight 1
+  ]
+  edge
+  [
+    source 9
+    target 8
+    duration "56820"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 8
+    duration "84300"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 8
+    duration "162900"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 9
+    duration "106080"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 9
+    duration "133800"
+    weight 1
+  ]
+  edge
+  [
+    source 11
+    target 10
+    duration "78600"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 10
+    duration "106320"
+    weight 1
+  ]
+  edge
+  [
+    source 13
+    target 12
     duration "0"
     weight 1
   ]

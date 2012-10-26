@@ -1,4 +1,4 @@
-Creator "igraph version 0.5.4 Fri Sep  9 20:09:29 2011"
+Creator "igraph version 0.6 Fri Oct 26 01:01:55 2012"
 Version 1
 graph
 [
@@ -27,7 +27,7 @@ graph
   [
     id 2
     degree 5
-    constraint 0.281111
+    constraint 0.281111111111111
     color "black"
     timestamp "1261394760"
     label "09KINSHASA1113"
@@ -37,7 +37,7 @@ graph
   [
     id 3
     degree 2
-    constraint 0.804444
+    constraint 0.804444444444444
     color "black"
     timestamp "1250577720"
     label "09KINSHASA758"
@@ -67,7 +67,7 @@ graph
   [
     id 6
     degree 3
-    constraint 0.521111
+    constraint 0.521111111111111
     color "black"
     timestamp "1249994520"
     label "09STATE83255"
@@ -107,11 +107,32 @@ graph
   [
     id 10
     degree 3
-    constraint 0.333333
+    constraint 0.333333333333333
     color "black"
     timestamp "1262898840"
     label "10USUNNEWYORK8"
     place "USUNNEWYORK"
+  ]
+  edge
+  [
+    source 1
+    target 0
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 2
+    target 1
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 3
+    target 2
+    duration "10817040"
+    weight 1
   ]
   edge
   [
@@ -129,13 +150,6 @@ graph
   ]
   edge
   [
-    source 6
-    target 4
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
     source 10
     target 2
     duration "1504080"
@@ -143,36 +157,15 @@ graph
   ]
   edge
   [
-    source 1
-    target 0
-    duration "0"
+    source 6
+    target 3
+    duration "583200"
     weight 1
   ]
   edge
   [
-    source 10
-    target 8
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 3
-    target 2
-    duration "10817040"
-    weight 1
-  ]
-  edge
-  [
-    source 2
-    target 1
-    duration "0"
-    weight 1
-  ]
-  edge
-  [
-    source 10
-    target 9
+    source 6
+    target 4
     duration "0"
     weight 1
   ]
@@ -185,9 +178,16 @@ graph
   ]
   edge
   [
-    source 6
-    target 3
-    duration "583200"
+    source 10
+    target 8
+    duration "0"
+    weight 1
+  ]
+  edge
+  [
+    source 10
+    target 9
+    duration "0"
     weight 1
   ]
 ]
