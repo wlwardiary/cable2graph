@@ -1,0 +1,151 @@
+# Stats
+
+Lines read from csv:             251287
+MRN[0]:                          251287 
+Dates:                           251287 
+References / Edges               232319
+No Reference                      18968
+Referenced MRN's:                132215
+Difference:                       56251
+(MRN not in cables.csv)
+Total known MRN's                307538 
+Ref MRN with ":"                    454
+Ref to FBIS[1]                      101
+Ref with strange MRN                923
+
+Full Graph N/E                   307538, 232319
+Nodes with Degree = 0             85850,      0
+N/E                 1            126422,  23908
+                    2             43962,  12434
+                    3             21264,   6893
+
+Clusters / Connected Components  127212
+             size = 1             88647
+                    2             24528
+                    3              6266
+                    4              2812
+                    5              1502
+                    6               909
+                    7               601
+
+           tail sizes               102
+                                    107
+                                    114
+                                    123
+                                    148
+                                    170
+                                    187
+                                    228
+                                    305
+                                    361
+                                    450
+                                  91896
+
+        at Degree = 1            102514
+                    2             34756
+                    3             16515
+        Giant                     91896, 130574
+
+# Strange MRN
+
+Also, none of these are referenced by other cables.
+
+06ASTANA
+06MADRID002583ZFR2585
+06SECION01OF02HARARE628
+06SECTIKN01OF03MINSK1223
+06SECTIO03OF03MINSK1128
+06SECTION01O02HONGKONG2311
+07OSLO000160ZDK164
+07SECTION01OF03ANKARA365
+07SECTION02OF03EIJING483
+07SECTON03OF04DAKAR269
+07SETION02OF02BAKU1501
+08ACCRA001382SUSPECTEDDUPLICATE1392
+08ECTION01OF02MANAMA492
+08ECTION02OF02ATHENS959
+08MADRID000762ZFR763
+08SCTION02OF02SAOPAULO335
+08SCTION02OF04NAIROBI1373
+08SECTIN01OF02BUDAPEST836
+08SECTIN02OF02PORTOFSPAIN546
+08SECTIN03OF03KABUL3036
+08SECTINN02OF02JAKARTA1486
+08SECTIO01OF02JERUSALEM1847
+08SECTIO04OF07BEIJING3049
+08SECTION01F03BEIRUT1568
+08SECTION01GF02BISHIEK21
+08SECTION01OF02CHISINAU976
+08SECTION01OF03CAIRO1416
+08SECTION01OF04HARARE754
+08SECTON01OF02BEIRUT896
+08SECTON02OF02TIRANA398
+0901OF02RPODUBAI288
+092OF5
+09ECTION03OF05MANILA924
+09SCTION02OF02PRAGUE383
+09SCTION08OF09NAIROBI809
+09SECION02OF02NAIROBI417
+09SECTIO01OF02NDJAMENA530
+09SECTIO01OF03BRUSSELS1363
+09SECTION01OF03BRUSSELS1234
+09SECTION01OF03SANJOSE525
+09SECTION02F02BRUSSELS1639
+09SECTION02OF03QRIPOLI583
+09SECTION0QF05HANOI297
+09SECTIOQ1OF06HARARE876
+09SECTON02OF02BRUSSELS579
+09SQCTION02OF02DUSHANBE143
+10SECION03OF08VIENNA176
+7575LIBREVILLE1895
+90STATE255195TOSEC140301
+90STATE255291TOSEC140303
+90STATE255577TOSEC140323
+90STATE255723TOSEC140328
+94STATE183691TOSEC140193
+
+# Without Subject
+
+01VATICAN5293
+03TEGUCIGALPA1725
+04QUITO2502
+04QUITO2879
+06MAPUTO435
+06ABUJA1587
+06BANGKOK5133
+07HAVANA895
+07CAIRO3070
+07STATE156270
+08FREETOWN122
+08ANKARA588
+08HANOI532
+09HANOI524
+09NICOSIA765
+
+[0] Message Reference Numbers
+[1] Foreign Broadcast Information Services 
+
+# Log
+
+$ grep -c ':' data/ref_regex_ids.list data/ref_ids.list 
+data/ref_regex_ids.list:454
+data/ref_ids.list:454
+
+$ grep -ic fbis data/ref_regex_ids.list data/ref_ids.list 
+data/ref_regex_ids.list:98
+data/ref_ids.list:77
+
+$ grep -vP '^[0-9]{2}[A-Za-z]+[0-9]+$' data/cable_ids.list
+
+$ for mrn in $(grep -vP '^[0-9]{2}[A-Za-z]+[0-9]+$' data/cable_ids.list); 
+ do
+   grep -P "\b$mrn\b" data/edges.list ; 
+ done
+
+$ grep -cvP '^[0-9]{2}[A-Za-z]+[0-9]+$' data/ref_ids.list
+
+> gcs = g.clusters().sizes()
+> len(filter(lambda c: c == 1, gcs))
+
+> giant = g.clusters().giant()
+> giant_ceb = giant.community_edge_betweenness(directed=True)
