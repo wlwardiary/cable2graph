@@ -4,7 +4,7 @@ the short version
 
 _[optional]_ create list of IDs and edges as plain text files:
 
-    $ python ref.py cables.csv
+    $ python extract.py cables.csv
 
 Edit and modify the filter in `c2g.py` (see example below), and run it to create [say] `any.gml`:
     
@@ -16,7 +16,7 @@ create html with inline svg:
 
 # note
 
-* You _don't_ need to run `ref.py`, the code comes with all generated files.
+* You _don't_ need to run `extract.py`, the code comes with all generated files.
 * c2g.py reads calccache and graphcache, so you dont have to calculate
   the graph weight again. Can take 10-15min if you remove the cache.
 * You can customize svg.tmpl (example: `svg-jquery-tooltip.tmpl`), and run `g2svg.py` with `-t yourtemplate.svg`.
