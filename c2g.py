@@ -13,21 +13,21 @@ embassy = set()
 ref = []
 timestamp_map = {}
 
-for i in open('embassy.list').readlines():
+for i in open('data/embassy.list').readlines():
     embassy.add(i.strip().upper())
 
 place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 
-for i in open('all_ids.list').readlines():
+for i in open('data/all_ids.list').readlines():
     cable_ids.add(i.strip())
 
-for y in open('diff_ids.list').readlines():
+for y in open('data/diff_ids.list').readlines():
     missing.add(y.strip())
     
-for l in open('edges.list').readlines():
+for l in open('data/edges.list').readlines():
     ref.append((l.split(' ')[0].strip(),l.split(' ')[1].strip()))
 
-for j in open('dates.list').readlines():
+for j in open('data/dates.list').readlines():
     tmp_cable_id = j.split(' ')[0].strip()
     tmp_ts = j.split(' ')[1].strip()
     timestamp_map.update({tmp_cable_id: tmp_ts})
