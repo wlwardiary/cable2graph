@@ -6,7 +6,6 @@ from os import listdir, path
 import re
 from hashlib import md5
 
-
 cable_ids = set()
 missing = set()
 embassy = set()
@@ -119,7 +118,7 @@ else:
     pickle.dump( g, open('graphcache','w'))
 
 print "all fine, read the source"
-exit()
+#exit()
 
 # write the full big fkn graph
 # g.write_gml('full.gml')
@@ -133,26 +132,37 @@ exit()
 #exit()
 
 # make clusters
+print "clusters"
+# use size of the largest cluster as limit
+giant_size = len(g.clusters().giant().vs)
 
 # this is faster then calling len(cluster) in the for loop
 cluster_sizes = g.clusters().sizes()
 
 # also adds the cluster index
 filterd_clusters = filter(
-        lambda c: c[1] > 10 and c[1] < 500, 
-        enumerate(cluster_sizes))
+    lambda c: c[1] > 10 and c[1] < giant_size, 
+    enumerate(cluster_sizes))
 
 print "matched %s clusters" % len(filterd_clusters)
 for cluster_index, cluster_size in filterd_clusters:
     # create the subgraph from the cluster index
     sg = g.clusters().subgraph(cluster_index)
-
     # create a uniq id for the graph
     # concat all sorted(!) label names and hash it
     idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
     filename = md5(idconcat).hexdigest()
-
     sg.write_gml('%s.gml' % filename)
-    print filename, cluster_size
-    del sg, filename, idconcat
+    print filename, len(sg.es), len(sg.vs)
+
+# split the giant cluster into smaller communities
+# new in igraph v0.6
+
+print "split giant cluster"
+gcm = g.clusters().giant().community_multilevel()
+for sgcm in gcm.subgraphs():
+    idconcat = ''.join(sorted(sgcm.vs.get_attribute_values('label')))
+    filename = md5(idconcat).hexdigest()
+    sgcm.write_gml('%s.gml' % filename)
+    print filename, len(sgcm.es), len(sgcm.vs)
 
