@@ -365,6 +365,8 @@
           fill: rgba(255,255,255,0.8); 
           text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
         }
+        #vertices text.date { font-size: .8em; } 
+
         #vertices text:hover {
           font-size: 1.4em;
           fill: rgba(255,255,255,1.0); 
@@ -447,11 +449,11 @@
             class="{{ v.class }} degree{{ v.degree }}" id="{{ v.label }}">
             <circle cx="0" cy="0" r="{{ 10 + v.degree|int }}" style="filter:url(#dropshadow)" />
             {% if v.timestamp|int > 0 %} 
-            <text x="0" y="-16" class="date">
+            <text x="0" y="{{ -10 + (v.degree|int / 2) }}" class="date">
                 {{ v.timestamp|formatts('%x') }}
             </text>
             {% endif %}
-            <text x="0" y="5" class="label">
+            <text x="0" y="{{ 10 + (v.degree|int / 2) }}" class="label">
             {% if v.uri %} 
                 <a xlink:href="{{v.uri}}">{{ v.label }}</a>
             {% else %}
@@ -460,7 +462,9 @@
             </text>
             {% if v.subject|length > 0 %}
                 <g id="subject"> 
-                  <text x="-200" y="20" class="sentence"><tspan class="subject">{{ v.subject }}</tspan></text>
+                  <text x="-200" y="{{ 35 + (v.degree|int / 2) }}" class="sentence">
+                    <tspan class="subject">{{ v.subject }}</tspan>
+                  </text>
                 </g>
             {% endif %}
             {% if v.sentences %}
