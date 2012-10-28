@@ -15,7 +15,7 @@ parser.add_option("-t", "--tmpl", dest="template",
 parser.add_option("-g", "--gml", dest="gmlfile",
     help="Single source graph in gml format FILE", metavar="FILE")
 
-parser.add_option("-l", "--load-from", dest="gmllist",
+parser.add_option("-i", "--include", dest="gmllist",
     help="Load all .gml graphs listed in FILE", metavar="FILE")
 
 parser.add_option("-d", "--dest", dest="destdir",
@@ -27,12 +27,16 @@ parser.add_option("-r", "--reverb", dest="reverb",
     help="Load sentences from a ReVerb result tsv FILE (e.g. mycables.reverb)", metavar="FILE")
 
 parser.add_option("-s", "--subjects", dest="subjects",
-    default="subjects.list",
+    default="data/subjects.list",
     help="Load map of label -> subject. Default: subjects.list", metavar="FILE")
 
 parser.add_option("-u", "--uri", dest="uri",
-    default="all.map",
+    default="data/all.map",
     help="Load map of label -> uri from FILE. Default: all.map", metavar="FILE")
+
+parser.add_option("-l", "--layout", dest="layout",
+    help="Use layout TYPE", metavar="TYPE")
+
 (options, args) = parser.parse_args()
 
 graph_files = set()
@@ -143,19 +147,31 @@ for gml in graph_files:
             if l in smap:
                 subjects.append(smap[l])
             else:
-                subjects.append('(no subject)')
+                subjects.append('')
 
         g.vs['subjects'] = subjects
 
     # create x,y positions
-    layout = g.layout_fruchterman_reingold(weights='weight', maxiter=3000)
-
-    # calc graph size based on number of vertices
-    width = len(g.vs) * 20
-    height = len(g.vs) * 20
+    # layout = g.layout_fruchterman_reingold()
+    # layout = g.layout_graphopt()
+    # layout = g.layout_kamada_kawai()
+    # layout = g.layout_auto()
+    
+    if options.layout == 'tree':
+        first_timestamp = int(min([ts for ts in g.vs.get_attribute_values('timestamp') if ts > 0]))
+        rootvs = g.vs.select(timestamp_eq=first_timestamp)
+        layout = g.layout_reingold_tilford(root=rootvs.indices)
+        width = g.vcount() * 60 
+        height = g.vcount() * 20
+    else:
+        layout = g.layout_auto()
+        # calc graph size based on number of vertices
+        width = g.vcount() * 20 
+        height = width
     
     if width < 800: 
         width = 800
+
     if height < 600: 
         height = 600
 
@@ -167,8 +183,15 @@ for gml in graph_files:
 
     labels = g.vs.get_attribute_values('label')
     colors = g.vs.get_attribute_values('color')
-    degrees = g.vs.get_attribute_values('degree')
     timestamps = g.vs.get_attribute_values('timestamp')
+    places = g.vs.get_attribute_values('place')
+    # rescale range of numbers to 1-10 for CSS class and radius
+    degrees = igraph.utils.rescale(
+        g.vs.get_attribute_values('degree'),
+        (1,10))
+    betweenness = igraph.utils.rescale(
+        g.es.get_attribute_values('betweenness'),
+        (1,10))
 
     if options.uri:
         uris = g.vs.get_attribute_values('uri')
@@ -212,7 +235,8 @@ for gml in graph_files:
             {'x1': '%.4f' % x1, 
              'y1': '%.4f' % y1, 
              'x2': '%.4f' % x2, 
-             'y2': '%.4f' % y2 })
+             'y2': '%.4f' % y2, 
+             'betweenness': betweenness[eidx]})
 
     for vidx in range(g.vcount()):
         tmpd = {
@@ -221,7 +245,7 @@ for gml in graph_files:
             'label': str(labels[vidx]),
             'degree': str(int(degrees[vidx])),
             'timestamp': str(timestamps[vidx]),
-            'class': str(colors[vidx]) 
+            'class': "%s %s" % (str(colors[vidx]), str(places[vidx]))
         }
         # optional
         if options.uri:
