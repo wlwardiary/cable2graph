@@ -1,486 +1,104 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <style type="text/css">
-        a:visited { fill: rgba(255, 255, 255, 0.1); }
-
-        svg { background-color: rgb(44,44,44); }
-
-        #vertices circle { 
-          stroke: rgba(255,255,255,0.8); 
-          stroke-width: 2; 
-          fill: rgba(255,255,255,0.8); 
-        }
-
-        #vertices .red circle { 
-          stroke: rgba(0,255,255,0.8);   
-        }
-
-        #vertices .ABIDJAN circle { fill: rgba(237,149,161,0.8); }
-        #vertices .ABUDHABI circle { fill: rgba(89,184,231,0.8); }
-        #vertices .ABUJA circle { fill: rgba(216,173,83,0.8); }
-        #vertices .ACCRA circle { fill: rgba(28,39,99,0.8); }
-        #vertices .ADANA circle { fill: rgba(84,128,151,0.8); }
-        #vertices .ADDISABABA circle { fill: rgba(99,44,120,0.8); }
-        #vertices .AITTAIPEI circle { fill: rgba(109,214,155,0.8); }
-        #vertices .AITTAIPIE circle { fill: rgba(152,128,215,0.8); }
-        #vertices .ALEXANDRIA circle { fill: rgba(215,220,99,0.8); }
-        #vertices .ALGIERS circle { fill: rgba(157,133,92,0.8); }
-        #vertices .ALMATY circle { fill: rgba(41,67,141,0.8); }
-        #vertices .AMEMBASSYHANOI circle { fill: rgba(64,87,105,0.8); }
-        #vertices .AMMAN circle { fill: rgba(47,98,140,0.8); }
-        #vertices .AMSTERDAM circle { fill: rgba(156,220,136,0.8); }
-        #vertices .ANILA circle { fill: rgba(79,22,88,0.8); }
-        #vertices .ANKARA circle { fill: rgba(84,43,156,0.8); }
-        #vertices .ANOI circle { fill: rgba(68,158,229,0.8); }
-        #vertices .ANTANANARIVO circle { fill: rgba(70,30,91,0.8); }
-        #vertices .APIA circle { fill: rgba(134,135,72,0.8); }
-        #vertices .AQNA circle { fill: rgba(119,172,211,0.8); }
-        #vertices .ARAJEVO circle { fill: rgba(143,96,134,0.8); }
-        #vertices .ASHGABAT circle { fill: rgba(98,146,216,0.8); }
-        #vertices .ASMARA circle { fill: rgba(119,183,189,0.8); }
-        #vertices .ASTANA circle { fill: rgba(52,84,165,0.8); }
-        #vertices .ASUNCION circle { fill: rgba(86,196,217,0.8); }
-        #vertices .ATANANARIVO circle { fill: rgba(139,47,130,0.8); }
-        #vertices .ATHENS circle { fill: rgba(85,64,119,0.8); }
-        #vertices .AUCKLAND circle { fill: rgba(153,91,148,0.8); }
-        #vertices .BAGHDAD circle { fill: rgba(203,123,124,0.8); }
-        #vertices .BAKU circle { fill: rgba(83,116,63,0.8); }
-        #vertices .BAMAKO circle { fill: rgba(161,150,44,0.8); }
-        #vertices .BANDARSERIBEGAWAN circle { fill: rgba(231,114,170,0.8); }
-        #vertices .BANGKOK circle { fill: rgba(80,142,148,0.8); }
-        #vertices .BANGOK circle { fill: rgba(88,85,54,0.8); }
-        #vertices .BANGUI circle { fill: rgba(174,75,240,0.8); }
-        #vertices .BANJUL circle { fill: rgba(47,52,84,0.8); }
-        #vertices .BARCELONA circle { fill: rgba(70,53,134,0.8); }
-        #vertices .BASRAH circle { fill: rgba(111,42,91,0.8); }
-        #vertices .BAU circle { fill: rgba(80,223,232,0.8); }
-        #vertices .BEIJIG circle { fill: rgba(128,155,95,0.8); }
-        #vertices .BEIJING circle { fill: rgba(160,145,103,0.8); }
-        #vertices .BEIRT circle { fill: rgba(113,106,29,0.8); }
-        #vertices .BEIRUT circle { fill: rgba(62,81,31,0.8); }
-        #vertices .BELFAST circle { fill: rgba(164,205,134,0.8); }
-        #vertices .BELGADE circle { fill: rgba(38,174,120,0.8); }
-        #vertices .BELGRADE circle { fill: rgba(141,180,105,0.8); }
-        #vertices .BELIZE circle { fill: rgba(79,182,40,0.8); }
-        #vertices .BELMOPAN circle { fill: rgba(107,49,122,0.8); }
-        #vertices .BERLIN circle { fill: rgba(229,202,151,0.8); }
-        #vertices .BERN circle { fill: rgba(97,60,91,0.8); }
-        #vertices .BISHKEK circle { fill: rgba(66,54,79,0.8); }
-        #vertices .BOGOTA circle { fill: rgba(210,195,42,0.8); }
-        #vertices .BONN circle { fill: rgba(151,215,237,0.8); }
-        #vertices .BRAILIA circle { fill: rgba(203,196,42,0.8); }
-        #vertices .BRASIIA circle { fill: rgba(125,61,145,0.8); }
-        #vertices .BRASILIA circle { fill: rgba(19,84,44,0.8); }
-        #vertices .BRATISLAVA circle { fill: rgba(102,33,50,0.8); }
-        #vertices .BRAZZAVILLE circle { fill: rgba(167,190,98,0.8); }
-        #vertices .BRIDGETOWN circle { fill: rgba(47,99,37,0.8); }
-        #vertices .BRUSELS circle { fill: rgba(160,55,106,0.8); }
-        #vertices .BRUSSELS circle { fill: rgba(192,141,228,0.8); }
-        #vertices .BRUSSLS circle { fill: rgba(48,51,201,0.8); }
-        #vertices .BRUSSQLS circle { fill: rgba(68,51,112,0.8); }
-        #vertices .BUCHAREST circle { fill: rgba(104,98,44,0.8); }
-        #vertices .BUDAPEST circle { fill: rgba(194,92,200,0.8); }
-        #vertices .BUENOSAIRES circle { fill: rgba(238,212,125,0.8); }
-        #vertices .BUENOSQRES circle { fill: rgba(125,196,78,0.8); }
-        #vertices .BUJUMBURA circle { fill: rgba(196,198,124,0.8); }
-        #vertices .BUSSELS circle { fill: rgba(42,189,108,0.8); }
-        #vertices .CAIRO circle { fill: rgba(239,48,176,0.8); }
-        #vertices .CALCUTTA circle { fill: rgba(172,151,111,0.8); }
-        #vertices .CALGARY circle { fill: rgba(73,124,87,0.8); }
-        #vertices .CANBERRA circle { fill: rgba(42,52,163,0.8); }
-        #vertices .CAPETOWN circle { fill: rgba(150,216,65,0.8); }
-        #vertices .CARACAS circle { fill: rgba(85,99,42,0.8); }
-        #vertices .CASABLANCA circle { fill: rgba(42,139,31,0.8); }
-        #vertices .CDGENEVA circle { fill: rgba(129,128,82,0.8); }
-        #vertices .CHENGDU circle { fill: rgba(67,230,67,0.8); }
-        #vertices .CHENNAI circle { fill: rgba(61,203,54,0.8); }
-        #vertices .CHIANGMAI circle { fill: rgba(99,23,68,0.8); }
-        #vertices .CHISINAU circle { fill: rgba(148,131,219,0.8); }
-        #vertices .CIUDADJUAREZ circle { fill: rgba(53,166,150,0.8); }
-        #vertices .COLOMBO circle { fill: rgba(110,180,207,0.8); }
-        #vertices .CONAKRY circle { fill: rgba(93,179,50,0.8); }
-        #vertices .COPENHAEN circle { fill: rgba(61,64,101,0.8); }
-        #vertices .COPENHAGEN circle { fill: rgba(186,161,237,0.8); }
-        #vertices .COTONOU circle { fill: rgba(159,236,210,0.8); }
-        #vertices .CURACAO circle { fill: rgba(62,137,69,0.8); }
-        #vertices .DAKAR circle { fill: rgba(53,104,175,0.8); }
-        #vertices .DAMASCCUS circle { fill: rgba(76,138,106,0.8); }
-        #vertices .DAMASCUS circle { fill: rgba(173,79,181,0.8); }
-        #vertices .DARESSALAAM circle { fill: rgba(59,98,41,0.8); }
-        #vertices .DHAHRAN circle { fill: rgba(74,59,85,0.8); }
-        #vertices .DHAKA circle { fill: rgba(143,53,101,0.8); }
-        #vertices .DILI circle { fill: rgba(52,74,89,0.8); }
-        #vertices .DJIBOUTI circle { fill: rgba(138,66,99,0.8); }
-        #vertices .DOHA circle { fill: rgba(90,215,43,0.8); }
-        #vertices .DUBAI circle { fill: rgba(149,138,97,0.8); }
-        #vertices .DUBLIN circle { fill: rgba(102,32,100,0.8); }
-        #vertices .DULIN circle { fill: rgba(136,59,91,0.8); }
-        #vertices .DURBAN circle { fill: rgba(111,74,147,0.8); }
-        #vertices .DUSHANBE circle { fill: rgba(175,113,217,0.8); }
-        #vertices .DUSSELDORF circle { fill: rgba(76,110,126,0.8); }
-        #vertices .ECTION circle { fill: rgba(74,69,116,0.8); }
-        #vertices .FESTTWO circle { fill: rgba(101,35,82,0.8); }
-        #vertices .FLORENCE circle { fill: rgba(41,107,137,0.8); }
-        #vertices .FRANKFURT circle { fill: rgba(73,209,52,0.8); }
-        #vertices .FREETOWN circle { fill: rgba(56,66,217,0.8); }
-        #vertices .FSCCHARLESTON circle { fill: rgba(236,49,132,0.8); }
-        #vertices .FSINFATC circle { fill: rgba(116,213,205,0.8); }
-        #vertices .FUKUOKA circle { fill: rgba(114,54,92,0.8); }
-        #vertices .GABORONE circle { fill: rgba(52,155,108,0.8); }
-        #vertices .GENEVA circle { fill: rgba(39,50,91,0.8); }
-        #vertices .GEORGETON circle { fill: rgba(234,131,203,0.8); }
-        #vertices .GEORGETOWN circle { fill: rgba(60,99,97,0.8); }
-        #vertices .GRENADA circle { fill: rgba(224,150,184,0.8); }
-        #vertices .GUADALAJARA circle { fill: rgba(56,86,30,0.8); }
-        #vertices .GUANGZHOU circle { fill: rgba(111,74,129,0.8); }
-        #vertices .GUATEMALA circle { fill: rgba(213,64,92,0.8); }
-        #vertices .GUATEMLA circle { fill: rgba(59,91,70,0.8); }
-        #vertices .GUAYAQUIL circle { fill: rgba(214,50,203,0.8); }
-        #vertices .HALIFAX circle { fill: rgba(123,72,95,0.8); }
-        #vertices .HAMBURG circle { fill: rgba(66,34,163,0.8); }
-        #vertices .HAMILTON circle { fill: rgba(65,169,108,0.8); }
-        #vertices .HANOI circle { fill: rgba(92,117,81,0.8); }
-        #vertices .HARARE circle { fill: rgba(141,71,87,0.8); }
-        #vertices .HAVANA circle { fill: rgba(67,142,145,0.8); }
-        #vertices .HELSINKI circle { fill: rgba(133,187,78,0.8); }
-        #vertices .HERMOSILLO circle { fill: rgba(240,61,147,0.8); }
-        #vertices .HILLAH circle { fill: rgba(102,29,42,0.8); }
-        #vertices .HOCHIMINHCITY circle { fill: rgba(166,90,176,0.8); }
-        #vertices .HONGKOG circle { fill: rgba(168,64,205,0.8); }
-        #vertices .HONGKONG circle { fill: rgba(69,106,133,0.8); }
-        #vertices .HYDERABAD circle { fill: rgba(149,41,92,0.8); }
-        #vertices .IHARTOUM circle { fill: rgba(101,173,169,0.8); }
-        #vertices .INSHASA circle { fill: rgba(106,53,197,0.8); }
-        #vertices .IRANRPODUBAI circle { fill: rgba(99,174,174,0.8); }
-        #vertices .ISLAMABAD circle { fill: rgba(140,74,222,0.8); }
-        #vertices .ISTANBUL circle { fill: rgba(104,52,70,0.8); }
-        #vertices .IZMIR circle { fill: rgba(154,195,136,0.8); }
-        #vertices .JAKARTA circle { fill: rgba(64,35,89,0.8); }
-        #vertices .JEDDAH circle { fill: rgba(102,45,50,0.8); }
-        #vertices .JERUSALEM circle { fill: rgba(35,41,138,0.8); }
-        #vertices .JOHANNESBURG circle { fill: rgba(43,131,30,0.8); }
-        #vertices .KABUL circle { fill: rgba(71,21,86,0.8); }
-        #vertices .KADUNA circle { fill: rgba(101,130,202,0.8); }
-        #vertices .KAMPALA circle { fill: rgba(129,84,122,0.8); }
-        #vertices .KAPALA circle { fill: rgba(79,55,119,0.8); }
-        #vertices .KARACHI circle { fill: rgba(84,59,87,0.8); }
-        #vertices .KATHMANDU circle { fill: rgba(191,156,88,0.8); }
-        #vertices .KHARTOUM circle { fill: rgba(71,74,151,0.8); }
-        #vertices .KIEV circle { fill: rgba(128,105,49,0.8); }
-        #vertices .KIGALI circle { fill: rgba(22,98,33,0.8); }
-        #vertices .KINGSTON circle { fill: rgba(141,94,147,0.8); }
-        #vertices .KINHASA circle { fill: rgba(101,62,118,0.8); }
-        #vertices .KINSHAA circle { fill: rgba(231,158,161,0.8); }
-        #vertices .KINSHASA circle { fill: rgba(63,75,162,0.8); }
-        #vertices .KIRKUK circle { fill: rgba(168,102,130,0.8); }
-        #vertices .KOLKATA circle { fill: rgba(83,145,65,0.8); }
-        #vertices .KOLONIA circle { fill: rgba(104,56,231,0.8); }
-        #vertices .KOROR circle { fill: rgba(236,99,207,0.8); }
-        #vertices .KRAKOW circle { fill: rgba(53,102,116,0.8); }
-        #vertices .KUALALUMPUR circle { fill: rgba(70,100,52,0.8); }
-        #vertices .KUWAIT circle { fill: rgba(39,90,82,0.8); }
-        #vertices .KYIV circle { fill: rgba(109,64,85,0.8); }
-        #vertices .LAGOS circle { fill: rgba(211,105,155,0.8); }
-        #vertices .LAHORE circle { fill: rgba(94,163,152,0.8); }
-        #vertices .LAPAZ circle { fill: rgba(87,212,161,0.8); }
-        #vertices .LEIPZIG circle { fill: rgba(101,60,87,0.8); }
-        #vertices .LENINGRAD circle { fill: rgba(47,78,54,0.8); }
-        #vertices .LIBREVILLE circle { fill: rgba(115,179,160,0.8); }
-        #vertices .LILONGWE circle { fill: rgba(50,65,123,0.8); }
-        #vertices .LIMA circle { fill: rgba(228,57,60,0.8); }
-        #vertices .LINSK circle { fill: rgba(108,50,62,0.8); }
-        #vertices .LISBON circle { fill: rgba(144,234,154,0.8); }
-        #vertices .LJUBLJANA circle { fill: rgba(101,43,163,0.8); }
-        #vertices .LOME circle { fill: rgba(68,78,123,0.8); }
-        #vertices .LONDON circle { fill: rgba(83,64,99,0.8); }
-        #vertices .LUANDA circle { fill: rgba(195,170,108,0.8); }
-        #vertices .LUSAKA circle { fill: rgba(147,131,79,0.8); }
-        #vertices .LUXEMBOURG circle { fill: rgba(46,86,138,0.8); }
-        #vertices .MAAMA circle { fill: rgba(158,88,196,0.8); }
-        #vertices .MADRAS circle { fill: rgba(203,108,138,0.8); }
-        #vertices .MADRID circle { fill: rgba(87,62,136,0.8); }
-        #vertices .MAILA circle { fill: rgba(89,49,70,0.8); }
-        #vertices .MAJURO circle { fill: rgba(102,24,73,0.8); }
-        #vertices .MALABO circle { fill: rgba(79,186,101,0.8); }
-        #vertices .MANAGUA circle { fill: rgba(69,47,83,0.8); }
-        #vertices .MANAMA circle { fill: rgba(166,206,241,0.8); }
-        #vertices .MANILA circle { fill: rgba(76,119,117,0.8); }
-        #vertices .MAPUTO circle { fill: rgba(109,69,79,0.8); }
-        #vertices .MARSEILLE circle { fill: rgba(118,118,61,0.8); }
-        #vertices .MASERU circle { fill: rgba(89,103,53,0.8); }
-        #vertices .MATAMOROS circle { fill: rgba(164,107,131,0.8); }
-        #vertices .MBABANE circle { fill: rgba(227,166,74,0.8); }
-        #vertices .MELBOURNE circle { fill: rgba(82,104,185,0.8); }
-        #vertices .MERIDA circle { fill: rgba(75,110,73,0.8); }
-        #vertices .MEXICO circle { fill: rgba(34,77,65,0.8); }
-        #vertices .MILAN circle { fill: rgba(107,49,93,0.8); }
-        #vertices .MILSK circle { fill: rgba(239,196,98,0.8); }
-        #vertices .MINSI circle { fill: rgba(98,77,24,0.8); }
-        #vertices .MINSK circle { fill: rgba(89,41,56,0.8); }
-        #vertices .MOGADISHU circle { fill: rgba(91,26,34,0.8); }
-        #vertices .MONROVIA circle { fill: rgba(87,96,133,0.8); }
-        #vertices .MONTERREY circle { fill: rgba(136,188,92,0.8); }
-        #vertices .MONTEVIDEO circle { fill: rgba(164,76,122,0.8); }
-        #vertices .MONTREAL circle { fill: rgba(53,213,145,0.8); }
-        #vertices .MOSCOW circle { fill: rgba(45,31,89,0.8); }
-        #vertices .MOSUL circle { fill: rgba(160,220,72,0.8); }
-        #vertices .MUMBAI circle { fill: rgba(83,201,63,0.8); }
-        #vertices .MUNICH circle { fill: rgba(86,45,129,0.8); }
-        #vertices .MUSCAT circle { fill: rgba(48,104,127,0.8); }
-        #vertices .NAGOYA circle { fill: rgba(110,50,155,0.8); }
-        #vertices .NAHA circle { fill: rgba(159,76,158,0.8); }
-        #vertices .NAIROBI circle { fill: rgba(158,212,126,0.8); }
-        #vertices .NAPLES circle { fill: rgba(136,167,218,0.8); }
-        #vertices .NASSAU circle { fill: rgba(224,50,150,0.8); }
-        #vertices .NDJAENA circle { fill: rgba(121,100,25,0.8); }
-        #vertices .NDJAMENA circle { fill: rgba(151,136,78,0.8); }
-        #vertices .NEWDELHI circle { fill: rgba(87,104,147,0.8); }
-        #vertices .NIAMEY circle { fill: rgba(52,91,120,0.8); }
-        #vertices .NICOSIA circle { fill: rgba(57,174,107,0.8); }
-        #vertices .NOFORNMOGADISHU circle { fill: rgba(42,124,37,0.8); }
-        #vertices .NOGALES circle { fill: rgba(161,38,189,0.8); }
-        #vertices .NOUAKCHOTT circle { fill: rgba(59,56,143,0.8); }
-        #vertices .NOUKKCHOTT circle { fill: rgba(78,19,21,0.8); }
-        #vertices .NSSAU circle { fill: rgba(58,45,91,0.8); }
-        #vertices .NUEVOLAREDO circle { fill: rgba(46,93,206,0.8); }
-        #vertices .OSAKAKOBE circle { fill: rgba(132,120,86,0.8); }
-        #vertices .OSLO circle { fill: rgba(124,206,72,0.8); }
-        #vertices .OTTAWA circle { fill: rgba(238,207,109,0.8); }
-        #vertices .OUAGADOUGOU circle { fill: rgba(118,57,117,0.8); }
-        #vertices .PANAMA circle { fill: rgba(27,88,22,0.8); }
-        #vertices .PARAMARIBO circle { fill: rgba(190,129,176,0.8); }
-        #vertices .PARIS circle { fill: rgba(66,228,222,0.8); }
-        #vertices .PARISFR circle { fill: rgba(134,116,198,0.8); }
-        #vertices .PARTO circle { fill: rgba(95,70,218,0.8); }
-        #vertices .PERTH circle { fill: rgba(41,22,83,0.8); }
-        #vertices .PESHAWAR circle { fill: rgba(38,147,182,0.8); }
-        #vertices .PHNOMPENH circle { fill: rgba(70,83,17,0.8); }
-        #vertices .PODGORICA circle { fill: rgba(33,130,102,0.8); }
-        #vertices .PONTADELGADA circle { fill: rgba(175,65,207,0.8); }
-        #vertices .PORTAUPRINCE circle { fill: rgba(56,122,55,0.8); }
-        #vertices .PORTLOUIS circle { fill: rgba(90,157,115,0.8); }
-        #vertices .PORTMORESBY circle { fill: rgba(101,220,198,0.8); }
-        #vertices .PORTOFPAIN circle { fill: rgba(23,73,78,0.8); }
-        #vertices .PORTOFSPAIN circle { fill: rgba(64,185,180,0.8); }
-        #vertices .POTAUPRINCE circle { fill: rgba(85,73,172,0.8); }
-        #vertices .PRAGUE circle { fill: rgba(41,89,205,0.8); }
-        #vertices .PRAIA circle { fill: rgba(102,160,97,0.8); }
-        #vertices .PRETORIA circle { fill: rgba(144,207,72,0.8); }
-        #vertices .PRISTINA circle { fill: rgba(71,118,88,0.8); }
-        #vertices .QUEBEC circle { fill: rgba(226,177,59,0.8); }
-        #vertices .QUITO circle { fill: rgba(134,212,173,0.8); }
-        #vertices .QXICO circle { fill: rgba(220,52,107,0.8); }
-        #vertices .RABAT circle { fill: rgba(72,76,191,0.8); }
-        #vertices .RANGOON circle { fill: rgba(93,169,124,0.8); }
-        #vertices .RECIFE circle { fill: rgba(203,58,101,0.8); }
-        #vertices .REYKJAVIK circle { fill: rgba(161,136,52,0.8); }
-        #vertices .RIGA circle { fill: rgba(137,208,136,0.8); }
-        #vertices .RIODEJANEIRO circle { fill: rgba(27,119,120,0.8); }
-        #vertices .RIYADH circle { fill: rgba(128,219,102,0.8); }
-        #vertices .ROME circle { fill: rgba(86,49,92,0.8); }
-        #vertices .RPODUBAI circle { fill: rgba(47,228,235,0.8); }
-        #vertices .RUSSELS circle { fill: rgba(83,155,139,0.8); }
-        #vertices .SANAA circle { fill: rgba(100,142,87,0.8); }
-        #vertices .SANJOSE circle { fill: rgba(213,131,212,0.8); }
-        #vertices .SANODOMINGO circle { fill: rgba(37,53,157,0.8); }
-        #vertices .SANSALVADOR circle { fill: rgba(216,200,56,0.8); }
-        #vertices .SANTIAGO circle { fill: rgba(46,100,159,0.8); }
-        #vertices .SANTODOMINGO circle { fill: rgba(175,45,88,0.8); }
-        #vertices .SANTOOMINGO circle { fill: rgba(34,88,115,0.8); }
-        #vertices .SAOPAULO circle { fill: rgba(98,178,137,0.8); }
-        #vertices .SAPPORO circle { fill: rgba(224,144,234,0.8); }
-        #vertices .SARAEVO circle { fill: rgba(143,121,83,0.8); }
-        #vertices .SARAJEVO circle { fill: rgba(42,95,28,0.8); }
-        #vertices .SECSTATE circle { fill: rgba(255,255,255,0.8); }
-        #vertices .SEOUL circle { fill: rgba(61,169,70,0.8); }
-        #vertices .SETION circle { fill: rgba(42,199,64,0.8); }
-        #vertices .SHANGHAI circle { fill: rgba(99,90,187,0.8); }
-        #vertices .SHENYANG circle { fill: rgba(95,119,58,0.8); }
-        #vertices .SIFIEDABUJA circle { fill: rgba(70,211,68,0.8); }
-        #vertices .SINGAPORE circle { fill: rgba(176,141,221,0.8); }
-        #vertices .SKOPJE circle { fill: rgba(54,82,66,0.8); }
-        #vertices .SOFIA circle { fill: rgba(42,60,115,0.8); }
-        #vertices .SOIA circle { fill: rgba(72,43,88,0.8); }
-        #vertices .STATE circle { fill: rgba(255,255,255,0.8); }
-        #vertices .STOCKHOLM circle { fill: rgba(127,220,75,0.8); }
-        #vertices .STPETERSBURG circle { fill: rgba(19,22,88,0.8); }
-        #vertices .STRASBOURG circle { fill: rgba(76,105,108,0.8); }
-        #vertices .SURABAYA circle { fill: rgba(80,185,155,0.8); }
-        #vertices .SUVA circle { fill: rgba(93,156,146,0.8); }
-        #vertices .SYDNEY circle { fill: rgba(88,184,190,0.8); }
-        #vertices .TAIPEI circle { fill: rgba(228,208,87,0.8); }
-        #vertices .TALLINN circle { fill: rgba(65,70,95,0.8); }
-        #vertices .TASHKENT circle { fill: rgba(151,193,134,0.8); }
-        #vertices .TBILISI circle { fill: rgba(48,82,201,0.8); }
-        #vertices .TEGUCIGALPA circle { fill: rgba(64,97,83,0.8); }
-        #vertices .TEHRAN circle { fill: rgba(195,199,93,0.8); }
-        #vertices .TELAVIV circle { fill: rgba(141,71,81,0.8); }
-        #vertices .THEHAGE circle { fill: rgba(149,68,88,0.8); }
-        #vertices .THEHAGU circle { fill: rgba(125,26,95,0.8); }
-        #vertices .THEHAGUE circle { fill: rgba(182,201,132,0.8); }
-        #vertices .THESSALONIKI circle { fill: rgba(23,114,71,0.8); }
-        #vertices .TIJUANA circle { fill: rgba(147,142,94,0.8); }
-        #vertices .TILISI circle { fill: rgba(154,131,192,0.8); }
-        #vertices .TIRANA circle { fill: rgba(130,239,94,0.8); }
-        #vertices .TOKYO circle { fill: rgba(47,106,167,0.8); }
-        #vertices .TORONTO circle { fill: rgba(30,99,78,0.8); }
-        #vertices .TRIPOLI circle { fill: rgba(97,106,45,0.8); }
-        #vertices .TUNIS circle { fill: rgba(59,160,127,0.8); }
-        #vertices .ULAANBAATAR circle { fill: rgba(209,77,215,0.8); }
-        #vertices .USOSCE circle { fill: rgba(77,61,34,0.8); }
-        #vertices .USTRGENEVA circle { fill: rgba(60,93,34,0.8); }
-        #vertices .USUNNEWYORK circle { fill: rgba(123,167,222,0.8); }
-        #vertices .VALLETTA circle { fill: rgba(47,181,173,0.8); }
-        #vertices .VANCOUVER circle { fill: rgba(54,119,70,0.8); }
-        #vertices .VATICAN circle { fill: rgba(49,210,66,0.8); }
-        #vertices .VIENNA circle { fill: rgba(63,94,79,0.8); }
-        #vertices .VIENTIANE circle { fill: rgba(179,158,97,0.8); }
-        #vertices .VILNIUS circle { fill: rgba(114,125,64,0.8); }
-        #vertices .VLADIVOSTOK circle { fill: rgba(179,91,110,0.8); }
-        #vertices .WARSAW circle { fill: rgba(156,238,76,0.8); }
-        #vertices .WASHDC circle { fill: rgba(124,190,61,0.8); }
-        #vertices .WELLINGTON circle { fill: rgba(48,81,81,0.8); }
-        #vertices .WINDHOEK circle { fill: rgba(141,49,183,0.8); }
-        #vertices .YAOUNDE circle { fill: rgba(62,124,137,0.8); }
-        #vertices .YEKATERINBURG circle { fill: rgba(84,30,59,0.8); }
-        #vertices .YEREVAN circle { fill: rgba(26,60,77,0.8); }
-        #vertices .ZAGREB circle { fill: rgba(52,115,104,0.8); }
-
-        #vertices .degree1  circle { stroke-width: 1.0; } 
-        #vertices .degree2  circle { stroke-width: 1.4; } 
-        #vertices .degree3  circle { stroke-width: 1.6; } 
-        #vertices .degree4  circle { stroke-width: 1.8; } 
-        #vertices .degree5  circle { stroke-width: 2.0; } 
-        #vertices .degree6  circle { stroke-width: 2.2; } 
-        #vertices .degree7  circle { stroke-width: 2.4; } 
-        #vertices .degree8  circle { stroke-width: 2.6; } 
-        #vertices .degree9  circle { stroke-width: 2.8; } 
-        #vertices .degree10 circle { stroke-width: 3.0; } 
-
-        #vertices text { 
-          text-anchor: middle; 
-          font-size: 1em; 
-          font-weight: normal; 
-          font-family: sans-serif;
-          fill: rgba(255,255,255,0.8); 
-          text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px ;
-        }
-        #vertices text.date { font-size: .8em; } 
-
-        #vertices text:hover {
-          font-size: 1.4em;
-          fill: rgba(255,255,255,1.0); 
-          text-shadow: rgba(0, 0, 0, 1) 2px 2px 10px ;
-        }
-        #vertices .red text:hover {
-          text-shadow: rgba(0, 255, 255, 1) 2px 2px 10px ;
-        }
-
-        #vertices text.sentence { 
-            text-anchor: start;
-            visibility: hidden;
-        } 
-        #vertices g:hover text.sentence { 
-            visibility: visible;
-        } 
-
-        #vertices text.sentence tspan.subject { 
-            font-size: 1.1em;
-            fill: rgba(255,255,255,1);
-        }
-
-        #vertices text.sentence tspan.a1 { 
-            fill: rgba(255,255,255,0.9);
-        }
-        #vertices text.sentence tspan.rel { 
-            fill: rgba(255,255,255,0.6);
-        }
-        #vertices text.sentence tspan.a2 { 
-            fill: rgba(255,255,255,1);
-        }
-
-        #edges line { 
-            fill: none;
-            stroke-linejoin: round;
-            stroke-width: 3; 
-            stroke: rgba(255,255,255,0.4); 
-            z-index: -1; 
-        }
-        
-        #edges line:hover { 
-            stroke-width: 5; 
-            stroke: rgba(255,255,255,0.8); 
-        }
-
-        #edges line.btwns1  { stroke: rgba(0,255,255,0.1); }
-        #edges line.btwns2  { stroke: rgba(0,255,255,0.1); }
-        #edges line.btwns3  { stroke: rgba(0,255,255,0.2); }
-        #edges line.btwns4  { stroke: rgba(0,255,255,0.2); }
-        #edges line.btwns5  { stroke: rgba(0,255,255,0.3); }
-        #edges line.btwns6  { stroke: rgba(0,255,255,0.4); }
-        #edges line.btwns7  { stroke: rgba(0,255,255,0.5); }
-        #edges line.btwns8  { stroke: rgba(0,255,255,0.6); }
-        #edges line.btwns9  { stroke: rgba(0,255,255,0.7); }
-        #edges line.btwns10 { stroke: rgba(0,255,255,0.8); }
-
-    </style>
+ <title>WikiLeaks Cablegate Visualisation</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualisation of the WikiLeaks cables.csv reference network." />
 </head>
 <body>
-<svg width="{{ width }}" height="{{ height }}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<filter id="dropshadow" height="130%">
-  <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
-    <feOffset dx="3" dy="3" result="offsetblur"/> 
-    <feMerge> 
-      <feMergeNode/>
-      <feMergeNode in="SourceGraphic"/>
-   </feMerge>
-</filter>
-
-<g transform="translate({{ xw }},{{ xh }}) scale(0.9)">
-    <g id="edges">
-    {% for e in edges %}
-        <line x1="{{e.x1}}" y1="{{e.y1}}" 
-              x2="{{e.x2}}" y2="{{e.y2}}" class="btwns{{ e.betweenness|int }}"/>
+<div id="info">
+    <h1>WikiLeaks Cablegate Visualisation</h1>
+    <ul>
+        <li><a href="https://github.com/wlwardiary/cables2graph/">Code</a></li>
+        <li><a href="https://wlwardiary.github.com/cables2graph/">Info</a></li>
+        <li><a href="https://twitter.com/c2graph">Contact</a></li>
+        <li><a href="https://wikileaks.org/cablegate/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; GPLv3 by Anonymous</p>
+</div>
+<div id="legend">
+    <h4>Usage</h4>
+    <p>Works best in a recent chromium or safari. Use browser zoom!</p>
+    <h4>Legend</h4>
+    <p><u>Underlined</u> <abbr title="Message Reference Number">MRN</abbr>: 
+       cable not included in the cables.csv.</p> 
+    <p>Node size: degree.</p>
+    <p>Edge color: betweenness.</p>
+    <h4>Places</h4>
+    <ul>
+{% for place in places %}
+        <li class="{{ place }}">{{ place }}</li>
+{% endfor %}
+    </ul>
+</div>
+<div id="jump">
+    <h4>Jump to MRN</h4>
+    {% for v in vertices %}
+      <h5><a class="{{ v.class }}" href="#{{v.label}}">{{ v.label }}</a></h5> 
+      {% if v.timestamp|int > 0 %}<p class="date">{{ v.timestamp|formatts('%x') }}</p>{% endif %}
+      {% if v.subject|length > 0 %}<p class="subject">{{ v.subject }}</p>{% endif %}
     {% endfor %}
-    </g>
-    <g id="vertices">
-        {% for v in vertices %}
-        <g transform="translate({{ v.x }} {{ v.y }})" 
-            class="{{ v.class }} degree{{ v.degree }}" id="{{ v.label }}">
-            <circle cx="0" cy="0" r="{{ 10 + v.degree|int }}" style="filter:url(#dropshadow)" />
-            {% if v.timestamp|int > 0 %} 
-            <text x="0" y="{{ -10 + (v.degree|int / 2) }}" class="date">
-                {{ v.timestamp|formatts('%x') }}
-            </text>
-            {% endif %}
-            <text x="0" y="{{ 10 + (v.degree|int / 2) }}" class="label">
-            {% if v.uri %} 
-                <a xlink:href="{{v.uri}}">{{ v.label }}</a>
-            {% else %}
-                {{ v.label }}
-            {% endif %}
-            </text>
-            {% if v.subject|length > 0 %}
-                <g id="subject"> 
-                  <text x="-200" y="{{ 35 + (v.degree|int / 2) }}" class="sentence">
-                    <tspan class="subject">{{ v.subject }}</tspan>
-                  </text>
-                </g>
-            {% endif %}
-            {% if v.sentences %}
-                <g id="sentences"> 
-                {% for s in v.sentences %}
-                <text x="-200" y="{{ 30 + loop.index * 20 }}" class="sentence">
-                    <tspan class="a1">{{ s.a1 }}</tspan>
-                    <tspan class="rel">{{ s.rel }}</tspan>
-                    <tspan class="a2">{{ s.a2 }}</tspan>
-                </text>
-                {% endfor %}
-                </g>
-            {% endif %}
-        </g>
+    </ul>
+</div>
+<div id="graph">
+  <svg width="{{ width }}" height="{{ height }}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <filter id="dropshadow" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5"/>
+        <feOffset dx="3" dy="3" result="offsetblur"/> 
+        <feMerge> 
+          <feMergeNode/>
+          <feMergeNode in="SourceGraphic"/>
+       </feMerge>
+    </filter>
+
+    <g transform="translate({{ xw }},{{ xh }}) scale(1.0)">
+        <g id="edges">
+        {% for e in edges %}
+            <line x1="{{e.x1}}" y1="{{e.y1}}" 
+                  x2="{{e.x2}}" y2="{{e.y2}}" class="btwns{{ e.betweenness|int }}"/>
         {% endfor %}
+        </g>
+        <g id="vertices">
+            {% for v in vertices %}
+            <g transform="translate({{ v.x }} {{ v.y }})" id="{{ v.label }}" 
+                class="vertice {{ v.class }} degree{{ v.degree }} btwns{{v.betweenness|int }}">
+                <circle cx="0" cy="0" r="{{ 10 + v.degree|int }}" />
+                {% if v.timestamp|int > 0 %} 
+                    <text x="0" y="{{ -10 + (v.degree|int / 2) }}" class="date">
+                        {{ v.timestamp|formatts('%x') }}
+                    </text>
+                {% endif %}
+                <text x="0" y="{{ 10 + (v.degree|int / 2) }}" class="label">
+                {% if v.uri %} 
+                    <a xlink:href="{{v.uri}}">{{ v.label }}</a>
+                {% else %}
+                    {{ v.label }}
+                {% endif %}
+                </text>
+                {% if v.subject|length > 0 %}
+                    <g class="subject"> 
+                      <text x="-200" y="{{ 35 + (v.degree|int / 2) }}">
+                        <tspan>{{ v.subject }}</tspan>
+                      </text>
+                    </g>
+                {% endif %}
+                {% if v.sentences %}
+                    <g class="sentence"> 
+                    {% for s in v.sentences %}
+                    <text x="-200" y="{{ 30 + loop.index * 20 }}">
+                        <tspan class="a1">{{ s.a1 }}</tspan>
+                        <tspan class="rel">{{ s.rel }}</tspan>
+                        <tspan class="a2">{{ s.a2 }}</tspan>
+                    </text>
+                    {% endfor %}
+                    </g>
+                {% endif %}
+            </g>
+            {% endfor %}
+        </g>
     </g>
-</g>
-</svg>
+  </svg>
+</div>
 </body>
