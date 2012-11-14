@@ -176,7 +176,7 @@ for gml in graph_files:
         #layout = g.layout_lgl(root=rootvs[0])
         # calc graph size based on number of vertices
         #width = int(g.diameter() * g.vcount() * g.ecount() * g.density(loops=True))
-        width = g.vcount() * 16
+        width = g.vcount() * 20
         height = width
     
     if width < 800: 
