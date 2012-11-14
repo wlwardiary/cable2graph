@@ -101,7 +101,7 @@ cluster_sizes = g.clusters().sizes()
 
 # also adds the cluster index
 filterd_clusters = filter(
-    lambda c: c[1] > 23 and c[1] < giant_size, 
+    lambda c: c[1] > 42 and c[1] < giant_size, 
     enumerate(cluster_sizes))
 
 print "matched %s clusters" % len(filterd_clusters)
@@ -131,19 +131,6 @@ for cluster_index, cluster_size in filterd_clusters:
 print "loading giant"
 giant = g.clusters().giant()
 giant.simplify()
-giant.to_directed()
-print "calculating..."
-print "...degree"
-giant.vs['degree'] = giant.degree()
-print "...constraint"
-giant.vs['constraint'] = giant.constraint()
-print "...pageranke"
-giant.vs['pagerank'] = giant.pagerank()
-print "...authority"
-giant.vs['authority'] = giant.authority_score()
-
-# TODO calc global betweenness for the giant. it is slow.
-
 giant.to_undirected()
 
 print "split giant cluster"
@@ -151,6 +138,11 @@ gcm = giant.community_multilevel()
 
 for sgcm in gcm.subgraphs():
     sgcm.to_directed()
+    sgcm.simplify()
+    sgcm.vs['degree'] = sgcm.degree()
+    sgcm.vs['constraint'] = sgcm.constraint()
+    sgcm.vs['pagerank'] = sgcm.pagerank()
+    sgcm.vs['authority'] = sgcm.authority_score()
     sgcm.vs['betweenness'] = sgcm.betweenness(directed=sgcm.is_directed())
     sgcm.es['betweenness'] = sgcm.edge_betweenness(directed=sgcm.is_directed())
     sgcm.vs['closeness'] = sgcm.closeness()
