@@ -81,63 +81,27 @@ for a,b in edges:
         dur = ts_b - ts_a
     duration.append(int(dur))
 
-if path.exists('graphcache'):
-    print 'Loading graph cache...'
-    g = pickle.load(open('graphcache'))
-else:
-    # load numeric edges into graph
-    print 'Loading graph...'
-    g = igraph.Graph(edges)
-    g.to_directed()
-    g.es['duration'] = duration
-    g.vs['label'] = cable_ids
-    g.vs['place'] = place
-    g.vs['color'] = color
-    g.vs['timestamp'] = timestamp
-    print "calculating..."
-    print "..degree"
-    g.vs['degree'] = g.degree()
-    print "..constraint"
-    g.vs['constraint'] = g.constraint()
-    print "..page rank"
-    g.vs['pagerank'] = g.pagerank()
-    print "..authority"
-    g.vs['authority'] = g.authority_score()
-    print 'Saving graph cache.'
-#    print "..betweenness"
-#    g.vs['betweenness'] = g.betweenness(directed=g.is_directed())
-#    g.es['betweenness'] = g.edge_betweenness(directed=g.is_directed())
-#    print "..closeness"
-#    g.vs['closeness'] = g.closeness()
-#    print "..eccentricity"
-#    g.vs['eccentricity'] = g.eccentricity()
-    pickle.dump( g, open('graphcache','w'))
-
-print "all fine, read the source"
-exit()
-
-# write the full big fkn graph
-# g.write_gml('full.gml')
-# exit()
-
-# filter by embassy
-#de = ['BERLIN']
-#sg = g.subgraph(g.vs.select(_degree_gt=2, place_in=de))
-#print sg.summary()
-#sg.write_gml('de.gml')
-#exit()
+print 'Loading graph...'
+g = igraph.Graph(edges)
+g.to_directed()
+g.es['duration'] = duration
+g.vs['label'] = cable_ids
+g.vs['place'] = place
+g.vs['color'] = color
+g.vs['timestamp'] = timestamp
+g.simplify()
 
 # make clusters
 print "clusters"
 # use size of the largest cluster as limit
-giant_size = len(g.clusters().giant().vs)
+giant_size = g.clusters().giant().vcount()
 
 # this is faster then calling len(cluster) in the for loop
 cluster_sizes = g.clusters().sizes()
 
 # also adds the cluster index
 filterd_clusters = filter(
-    lambda c: c[1] > 10 and c[1] < giant_size, 
+    lambda c: c[1] > 23 and c[1] < giant_size, 
     enumerate(cluster_sizes))
 
 print "matched %s clusters" % len(filterd_clusters)
@@ -145,6 +109,11 @@ for cluster_index, cluster_size in filterd_clusters:
     # create the subgraph from the cluster index
     sg = g.clusters().subgraph(cluster_index)
     sg.to_directed()
+    sg.simplify()
+    sg.vs['degree'] = sg.degree()
+    sg.vs['constraint'] = sg.constraint()
+    sg.vs['pagerank'] = sg.pagerank()
+    sg.vs['authority'] = sg.authority_score()
     sg.vs['betweenness'] = sg.betweenness(directed=sg.is_directed())
     sg.es['betweenness'] = sg.edge_betweenness(directed=sg.is_directed())
     sg.vs['closeness'] = sg.closeness()
@@ -159,9 +128,27 @@ for cluster_index, cluster_size in filterd_clusters:
 # split the giant cluster into smaller communities
 # new in igraph v0.6
 
+print "loading giant"
+giant = g.clusters().giant()
+giant.simplify()
+giant.to_directed()
+print "calculating..."
+print "...degree"
+giant.vs['degree'] = giant.degree()
+print "...constraint"
+giant.vs['constraint'] = giant.constraint()
+print "...pageranke"
+giant.vs['pagerank'] = giant.pagerank()
+print "...authority"
+giant.vs['authority'] = giant.authority_score()
+
+# TODO calc global betweenness for the giant. it is slow.
+
+giant.to_undirected()
+
 print "split giant cluster"
-g.to_undirected()
-gcm = g.clusters().giant().community_multilevel()
+gcm = giant.community_multilevel()
+
 for sgcm in gcm.subgraphs():
     sgcm.to_directed()
     sgcm.vs['betweenness'] = sgcm.betweenness(directed=sgcm.is_directed())
