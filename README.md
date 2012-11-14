@@ -4,6 +4,10 @@ the short version
 
 install igraph 0.6 with python bindings
 
+install jinja2
+
+    $ pip install jinja2
+
 _[optional]_ create list of MRNs and edges as plain text files:
 
     $ python extract.py cables.csv
@@ -28,6 +32,15 @@ or:
 * use [ReVerb](http://reverb.cs.washington.edu/) to extract sentences from the cables and use `g2svg.py -r example.reverb`. To generate input files for ReVerb: `python c2txt.py cables.csv MRN1 MRN2 ...`.
 * `python g2svg.py -h` for more options.
 * you _don't_ need to run `extract.py`, the code comes with all generated data/ files.
+
+# files
+
+* `c2g.py`: create graph and split into clusters and communities
+* `c2txt.py`: extract body and header from cables.csv
+* `calcdates.py`: estimate date for missing MRNs
+* `extract.py`: feature extraction from cables.csv
+* `g2svg.py`: render graph layout and create svg
+* `gen_colors.py`: create a random color for every place (see svg.css)
 
 # copyleft
 
