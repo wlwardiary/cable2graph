@@ -151,6 +151,11 @@ for gml in graph_files:
 
         g.vs['subjects'] = subjects
 
+    labels = g.vs.get_attribute_values('label')
+    colors = g.vs.get_attribute_values('color')
+    timestamps = g.vs.get_attribute_values('timestamp')
+    places = g.vs.get_attribute_values('place')
+
     # create x,y positions
     # layout = g.layout_fruchterman_reingold()
     # layout = g.layout_graphopt()
@@ -158,15 +163,20 @@ for gml in graph_files:
     # layout = g.layout_auto()
     
     if options.layout == 'tree':
-        first_timestamp = int(min([ts for ts in g.vs.get_attribute_values('timestamp') if ts > 0]))
+        first_timestamp = int(min([ts for ts in timestamps if ts > 0]))
         rootvs = g.vs.select(timestamp_eq=first_timestamp)
         layout = g.layout_reingold_tilford(root=rootvs.indices)
         width = g.vcount() * 60 
         height = g.vcount() * 20
     else:
-        layout = g.layout_auto()
+        layout = g.layout_fruchterman_reingold()
+        # layout = g.layout_kamada_kawai()
+        #first_timestamp = int(min([ts for ts in timestamps if ts > 0]))
+        #rootvs = g.vs.select(timestamp_eq=first_timestamp)
+        #layout = g.layout_lgl(root=rootvs[0])
         # calc graph size based on number of vertices
-        width = g.vcount() * 20 
+        #width = int(g.diameter() * g.vcount() * g.ecount() * g.density(loops=True))
+        width = g.vcount() * 16
         height = width
     
     if width < 800: 
@@ -181,16 +191,18 @@ for gml in graph_files:
     xw = '%.4f' % ((width+400)/2.0)
     xh = '%.4f' % ((height+300)/2.0)
 
-    labels = g.vs.get_attribute_values('label')
-    colors = g.vs.get_attribute_values('color')
-    timestamps = g.vs.get_attribute_values('timestamp')
-    places = g.vs.get_attribute_values('place')
     # rescale range of numbers to 1-10 for CSS class and radius
     degrees = igraph.utils.rescale(
         g.vs.get_attribute_values('degree'),
         (1,10))
-    betweenness = igraph.utils.rescale(
+    authority = igraph.utils.rescale(
+        g.vs.get_attribute_values('authority'),
+        (1,10))
+    ebetweenness = igraph.utils.rescale(
         g.es.get_attribute_values('betweenness'),
+        (1,10))
+    vbetweenness = igraph.utils.rescale(
+        g.vs.get_attribute_values('betweenness'),
         (1,10))
 
     if options.uri:
@@ -236,7 +248,7 @@ for gml in graph_files:
              'y1': '%.4f' % y1, 
              'x2': '%.4f' % x2, 
              'y2': '%.4f' % y2, 
-             'betweenness': betweenness[eidx]})
+             'betweenness': ebetweenness[eidx]})
 
     for vidx in range(g.vcount()):
         tmpd = {
@@ -244,7 +256,9 @@ for gml in graph_files:
             'y': '%.4f' % layout[vidx][1],
             'label': str(labels[vidx]),
             'degree': str(int(degrees[vidx])),
+            'authority': str(int(authority[vidx])),
             'timestamp': str(timestamps[vidx]),
+            'betweenness': vbetweenness[vidx],
             'class': "%s %s" % (str(colors[vidx]), str(places[vidx]))
         }
         # optional
