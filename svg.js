@@ -56,6 +56,7 @@ function main() {
         setTransform(xw * scale, xh * scale, scale);
         setSize(width * scale, height * scale);
         get('zoom-circle').setAttribute('class', 'level' + zlevel);
+        get('graph').setAttribute('class', 'level' + zlevel);
     });
 
     addEvent(get('zoom-in'), 'click', function(e) {
@@ -71,6 +72,7 @@ function main() {
         setTransform(xw * scale, xh * scale, scale);
         setSize(width * scale, height * scale);
         get('zoom-circle').setAttribute('class', 'level' + zlevel);
+        get('graph').setAttribute('class', 'level' + zlevel);
     });
 }
 
