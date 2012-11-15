@@ -39,6 +39,8 @@ function setSize(w, h) {
     if (svg) {
         svg.setAttribute('width', w);
         svg.setAttribute('height', h);
+        svg.style.width = w + 'px';
+        svg.style.height = h + 'px';
     }
 }
 
