@@ -8,12 +8,18 @@
     <style type="text/css">
         body {
             margin: 2em 10em;
-            background-color: black;
+            background-color: rgb(44,44,44);
             color: white;
             font-size: 1.2em;
             font-family: sans-serif;
         }
-        h1, h2 { text-shadow: rgba(255,255,255,0.8) .08em .08em 3em; }
+        h1, h2 { text-shadow: black 3px 3px 10px; }
+        img { 
+            box-shadow: black 3px 3px 10px; 
+            -moz-box-shadow: black 3px 3px 10px; 
+            -webkit-box-shadow: black 3px 3px 10px; 
+            -o-box-shadow: black 3px 3px 10px; 
+        }
         ul { margin: 0; padding: 0; font-family: monospace; }
         ul li { list-style-type: none; display: inline; } 
         a { color: white; }
@@ -21,96 +27,102 @@
     </style>
 </head>
 <body>
-    <h1>WikiLeaks Cablegate</h1>
-    <h2>Reference Network Visualization</h2>
-    <p>
-        The cables.csv contains a field for referencing related cables via <abbr title="Message Reference Number">MRN</abbr>. 
-        These 232319 references make a large network (or graph) with many groups of cables, also known as clusters.
-        The largest cluster (giant) contains 91896 cables with 130574 references between them.
-        Community detection can split the giant cluster into smaller communities.
-    </p>
-    <p>
-        From the total of 251287 cables ~56000 additional cables are referenced but not included in the cables.csv
-    </p>
-    <p>
-    <a href="https://github.com/wlwardiary/cable2graph/">cable2graph</a> provides a interactive visualization of this reference network with links to the original cables.
-    </p>
-    <h2>Dirty Data</h2>
-    <p>
-        Following a sample of larger clusters and communities from the giant cluster.
-    </p>
-    <ul>
-        <li><a href="070029e4945c93ef2bf663ae1d5b4002.gml.html">070029e4945c93ef2bf663ae1d5b4002</a></li>
-        <li><a href="070a0f5cd867d447ad1ad845ff8212f1.gml.html">070a0f5cd867d447ad1ad845ff8212f1</a></li>
-        <li><a href="094c232b25b71bb2f0b92936fff7d582.gml.html">094c232b25b71bb2f0b92936fff7d582</a></li>
-        <li><a href="0af672a68b8b2f09247352849350f857.gml.html">0af672a68b8b2f09247352849350f857</a></li>
-        <li><a href="102b26f0bd522adb715f7a433f59d2ed.gml.html">102b26f0bd522adb715f7a433f59d2ed</a></li>
-        <li><a href="131fca528fa6f336cd5be6dbd747a13d.gml.html">131fca528fa6f336cd5be6dbd747a13d</a></li>
-        <li><a href="14e494a94e92e44a60112999df8629da.gml.html">14e494a94e92e44a60112999df8629da</a></li>
-        <li><a href="14ef32d1619566d8adb0a2cb498e4da7.gml.html">14ef32d1619566d8adb0a2cb498e4da7</a></li>
-        <li><a href="1589431fdc55646236171fcbd58ed6ac.gml.html">1589431fdc55646236171fcbd58ed6ac</a></li>
-        <li><a href="16258f591d08b6142aaee8875eca1bbb.gml.html">16258f591d08b6142aaee8875eca1bbb</a></li>
-        <li><a href="17541046b871eb92179d700d9cdd1a60.gml.html">17541046b871eb92179d700d9cdd1a60</a></li>
-        <li><a href="22e58d28546bfc2b7c04c981accc744d.gml.html">22e58d28546bfc2b7c04c981accc744d</a></li>
-        <li><a href="2f69d05545aac2b896a4f286dfbb927c.gml.html">2f69d05545aac2b896a4f286dfbb927c</a></li>
-        <li><a href="2f7ef3bf92710dab9b2f018b993bd7b4.gml.html">2f7ef3bf92710dab9b2f018b993bd7b4</a></li>
-        <li><a href="2fa056fc0ca8a186368ed736c1bf6dfc.gml.html">2fa056fc0ca8a186368ed736c1bf6dfc</a></li>
-        <li><a href="303468c543509d9c88121bfdf15a258f.gml.html">303468c543509d9c88121bfdf15a258f</a></li>
-        <li><a href="306dbb67d8bd6f93562bc55340976b4e.gml.html">306dbb67d8bd6f93562bc55340976b4e</a></li>
-        <li><a href="3157d6b81f9e1113954a41ae3d04d280.gml.html">3157d6b81f9e1113954a41ae3d04d280</a></li>
-        <li><a href="352568cdcab8481c012127e8494a20b6.gml.html">352568cdcab8481c012127e8494a20b6</a></li>
-        <li><a href="395787bb8b5df47802df88fc615b9382.gml.html">395787bb8b5df47802df88fc615b9382</a></li>
-        <li><a href="3b886df1b39b6f0a3435f2ebbde48c8d.gml.html">3b886df1b39b6f0a3435f2ebbde48c8d</a></li>
-        <li><a href="40010596426dcb2064653a8724c01b0c.gml.html">40010596426dcb2064653a8724c01b0c</a></li>
-        <li><a href="4471c1c6f8538ae80ab815f954f175fd.gml.html">4471c1c6f8538ae80ab815f954f175fd</a></li>
-        <li><a href="46a4e0a240b34ff8ac084ab037fea3df.gml.html">46a4e0a240b34ff8ac084ab037fea3df</a></li>
-        <li><a href="46fd7ee26d788a9ca1e2311524a97fc5.gml.html">46fd7ee26d788a9ca1e2311524a97fc5</a></li>
-        <li><a href="49386e7f29297866f483d12c779cc9f0.gml.html">49386e7f29297866f483d12c779cc9f0</a></li>
-        <li><a href="4a62c6970d89aea66b501b6f49be778f.gml.html">4a62c6970d89aea66b501b6f49be778f</a></li>
-        <li><a href="4b2721924c3e80c3acbf435430526dd9.gml.html">4b2721924c3e80c3acbf435430526dd9</a></li>
-        <li><a href="4bd870f759e019dfc5a0e8041495a275.gml.html">4bd870f759e019dfc5a0e8041495a275</a></li>
-        <li><a href="4ec2ccd6074fd200ce3cf04d565f5e8b.gml.html">4ec2ccd6074fd200ce3cf04d565f5e8b</a></li>
-        <li><a href="5797e4cbceb766c109c9261991422038.gml.html">5797e4cbceb766c109c9261991422038</a></li>
-        <li><a href="5e1cc37cc6a2f06af640637ca461e490.gml.html">5e1cc37cc6a2f06af640637ca461e490</a></li>
-        <li><a href="61e757085fd0a4d5aa1dd68e92edaa92.gml.html">61e757085fd0a4d5aa1dd68e92edaa92</a></li>
-        <li><a href="62b3099cc57ed6882772fb82e490aa16.gml.html">62b3099cc57ed6882772fb82e490aa16</a></li>
-        <li><a href="6d0217c4ebddc26549b34ecc45295277.gml.html">6d0217c4ebddc26549b34ecc45295277</a></li>
-        <li><a href="6edf98845283e6e4e22c9abca8b779cc.gml.html">6edf98845283e6e4e22c9abca8b779cc</a></li>
-        <li><a href="71f93b52980cc70acb86815ca7d66932.gml.html">71f93b52980cc70acb86815ca7d66932</a></li>
-        <li><a href="77a85b04b39648d8450dce6e77c885de.gml.html">77a85b04b39648d8450dce6e77c885de</a></li>
-        <li><a href="7ab098044c8bff0f075438f4e85a733b.gml.html">7ab098044c8bff0f075438f4e85a733b</a></li>
-        <li><a href="7bed14d4e98bab861f9b9b8e08806053.gml.html">7bed14d4e98bab861f9b9b8e08806053</a></li>
-        <li><a href="7d404a7529c35f37be662617b4ace9c3.gml.html">7d404a7529c35f37be662617b4ace9c3</a></li>
-        <li><a href="866132a2db3ef39c4bed80a236a2b7d2.gml.html">866132a2db3ef39c4bed80a236a2b7d2</a></li>
-        <li><a href="89a1ae16492eafaa4a682abcb40c6ed3.gml.html">89a1ae16492eafaa4a682abcb40c6ed3</a></li>
-        <li><a href="8b932e637958490a434c578aca137ac4.gml.html">8b932e637958490a434c578aca137ac4</a></li>
-        <li><a href="918985e7ae8a2cc4765cd9905360dd13.gml.html">918985e7ae8a2cc4765cd9905360dd13</a></li>
-        <li><a href="9b44327642dbe5da79cf87733b0bfae1.gml.html">9b44327642dbe5da79cf87733b0bfae1</a></li>
-        <li><a href="a0a623fc8d8134ce6fde68cf2b3d1fb3.gml.html">a0a623fc8d8134ce6fde68cf2b3d1fb3</a></li>
-        <li><a href="a0bbc085f5d85d91e7ec8940577c3f61.gml.html">a0bbc085f5d85d91e7ec8940577c3f61</a></li>
-        <li><a href="a2d83df45c48270e0db5690c5a37c9b3.gml.html">a2d83df45c48270e0db5690c5a37c9b3</a></li>
-        <li><a href="a53c724e15926b5f307bcf82fddb443a.gml.html">a53c724e15926b5f307bcf82fddb443a</a></li>
-        <li><a href="a7ecfccd1526432e76c5491870bf865f.gml.html">a7ecfccd1526432e76c5491870bf865f</a></li>
-        <li><a href="ab7cb9cc89dc928e1e471044663e516a.gml.html">ab7cb9cc89dc928e1e471044663e516a</a></li>
-        <li><a href="ad27fd0159d993a73340c49f925fecc3.gml.html">ad27fd0159d993a73340c49f925fecc3</a></li>
-        <li><a href="ae2b0c8f9e232ab852a416048bad2126.gml.html">ae2b0c8f9e232ab852a416048bad2126</a></li>
-        <li><a href="b7ce968958d31e12e8e2ad9e88615b4f.gml.html">b7ce968958d31e12e8e2ad9e88615b4f</a></li>
-        <li><a href="c52219da590d6241b020b6ba09f536b5.gml.html">c52219da590d6241b020b6ba09f536b5</a></li>
-        <li><a href="c6197d5808c335cdf1ea7f1cb5a1154e.gml.html">c6197d5808c335cdf1ea7f1cb5a1154e</a></li>
-        <li><a href="c65370c7db5cc99088bcf0f2e36f52e5.gml.html">c65370c7db5cc99088bcf0f2e36f52e5</a></li>
-        <li><a href="c972407dc1d6329f9ba1eccc70d266c4.gml.html">c972407dc1d6329f9ba1eccc70d266c4</a></li>
-        <li><a href="ca67f5bd2d66a75996ae87fc9364a40d.gml.html">ca67f5bd2d66a75996ae87fc9364a40d</a></li>
-        <li><a href="d2e9ee59e7eb66835752242dd37ae218.gml.html">d2e9ee59e7eb66835752242dd37ae218</a></li>
-        <li><a href="d3de83bac410144046de4923b24465df.gml.html">d3de83bac410144046de4923b24465df</a></li>
-        <li><a href="d4864fc7d5afc9149556a0599b871318.gml.html">d4864fc7d5afc9149556a0599b871318</a></li>
-        <li><a href="d86cf7b75b82793763515412957d37d8.gml.html">d86cf7b75b82793763515412957d37d8</a></li>
-        <li><a href="dae80296dd7b02d9343bdf6f06b5f1b1.gml.html">dae80296dd7b02d9343bdf6f06b5f1b1</a></li>
-        <li><a href="dc154feb420f2a9fda3edb9982940915.gml.html">dc154feb420f2a9fda3edb9982940915</a></li>
-        <li><a href="e9b458a1aa2b125c6539625e58a78a1b.gml.html">e9b458a1aa2b125c6539625e58a78a1b</a></li>
-        <li><a href="ecde10277cb5194ce0190aca72e8cb22.gml.html">ecde10277cb5194ce0190aca72e8cb22</a></li>
-        <li><a href="f47107b51e4772cf7ace59a930ad77c7.gml.html">f47107b51e4772cf7ace59a930ad77c7</a></li>
-        <li><a href="fbe8eeb78267e3f6f7ce478269a1f97a.gml.html">fbe8eeb78267e3f6f7ce478269a1f97a</a></li>
-    </ul>
+    <section>
+        <h1>WikiLeaks Cablegate</h1>
+        <h2>Reference Network Visualization</h2>
+        <div><img src="screen1.jpg" width="800" height="200" alt="Screenshot cable2graph" /></div>
+        <p>
+            The cables.csv contains a field for referencing related cables via <abbr title="Message Reference Number">MRN</abbr>. 
+            These 232319 references make a large network (or graph) with many groups of cables, also known as clusters.
+            The largest cluster (giant) contains 91896 cables with 130574 references between them.
+            Community detection can split the giant cluster into smaller communities.
+        </p>
+        <p>
+            From the total of 251287 cables ~56000 additional cables are referenced but not included in the cables.csv
+        </p>
+        <p>
+            <a href="https://github.com/wlwardiary/cable2graph/">cable2graph</a> provides a interactive visualization 
+            of this reference network with links to the original cables.
+        </p>
+    </section>
+    <section>
+        <h2>D1R7Y DA7A PR0N</h2>
+        <p>
+            Following a sample of 70 larger clusters and communities. Each link is a visualization.
+        </p>
+        <ul>
+            <li><a href="070029e4945c93ef2bf663ae1d5b4002.gml.html">070029e4945c93ef2bf663ae1d5b4002</a></li>
+            <li><a href="070a0f5cd867d447ad1ad845ff8212f1.gml.html">070a0f5cd867d447ad1ad845ff8212f1</a></li>
+            <li><a href="094c232b25b71bb2f0b92936fff7d582.gml.html">094c232b25b71bb2f0b92936fff7d582</a></li>
+            <li><a href="0af672a68b8b2f09247352849350f857.gml.html">0af672a68b8b2f09247352849350f857</a></li>
+            <li><a href="102b26f0bd522adb715f7a433f59d2ed.gml.html">102b26f0bd522adb715f7a433f59d2ed</a></li>
+            <li><a href="131fca528fa6f336cd5be6dbd747a13d.gml.html">131fca528fa6f336cd5be6dbd747a13d</a></li>
+            <li><a href="14e494a94e92e44a60112999df8629da.gml.html">14e494a94e92e44a60112999df8629da</a></li>
+            <li><a href="14ef32d1619566d8adb0a2cb498e4da7.gml.html">14ef32d1619566d8adb0a2cb498e4da7</a></li>
+            <li><a href="1589431fdc55646236171fcbd58ed6ac.gml.html">1589431fdc55646236171fcbd58ed6ac</a></li>
+            <li><a href="16258f591d08b6142aaee8875eca1bbb.gml.html">16258f591d08b6142aaee8875eca1bbb</a></li>
+            <li><a href="17541046b871eb92179d700d9cdd1a60.gml.html">17541046b871eb92179d700d9cdd1a60</a></li>
+            <li><a href="22e58d28546bfc2b7c04c981accc744d.gml.html">22e58d28546bfc2b7c04c981accc744d</a></li>
+            <li><a href="2f69d05545aac2b896a4f286dfbb927c.gml.html">2f69d05545aac2b896a4f286dfbb927c</a></li>
+            <li><a href="2f7ef3bf92710dab9b2f018b993bd7b4.gml.html">2f7ef3bf92710dab9b2f018b993bd7b4</a></li>
+            <li><a href="2fa056fc0ca8a186368ed736c1bf6dfc.gml.html">2fa056fc0ca8a186368ed736c1bf6dfc</a></li>
+            <li><a href="303468c543509d9c88121bfdf15a258f.gml.html">303468c543509d9c88121bfdf15a258f</a></li>
+            <li><a href="306dbb67d8bd6f93562bc55340976b4e.gml.html">306dbb67d8bd6f93562bc55340976b4e</a></li>
+            <li><a href="3157d6b81f9e1113954a41ae3d04d280.gml.html">3157d6b81f9e1113954a41ae3d04d280</a></li>
+            <li><a href="352568cdcab8481c012127e8494a20b6.gml.html">352568cdcab8481c012127e8494a20b6</a></li>
+            <li><a href="395787bb8b5df47802df88fc615b9382.gml.html">395787bb8b5df47802df88fc615b9382</a></li>
+            <li><a href="3b886df1b39b6f0a3435f2ebbde48c8d.gml.html">3b886df1b39b6f0a3435f2ebbde48c8d</a></li>
+            <li><a href="40010596426dcb2064653a8724c01b0c.gml.html">40010596426dcb2064653a8724c01b0c</a></li>
+            <li><a href="4471c1c6f8538ae80ab815f954f175fd.gml.html">4471c1c6f8538ae80ab815f954f175fd</a></li>
+            <li><a href="46a4e0a240b34ff8ac084ab037fea3df.gml.html">46a4e0a240b34ff8ac084ab037fea3df</a></li>
+            <li><a href="46fd7ee26d788a9ca1e2311524a97fc5.gml.html">46fd7ee26d788a9ca1e2311524a97fc5</a></li>
+            <li><a href="49386e7f29297866f483d12c779cc9f0.gml.html">49386e7f29297866f483d12c779cc9f0</a></li>
+            <li><a href="4a62c6970d89aea66b501b6f49be778f.gml.html">4a62c6970d89aea66b501b6f49be778f</a></li>
+            <li><a href="4b2721924c3e80c3acbf435430526dd9.gml.html">4b2721924c3e80c3acbf435430526dd9</a></li>
+            <li><a href="4bd870f759e019dfc5a0e8041495a275.gml.html">4bd870f759e019dfc5a0e8041495a275</a></li>
+            <li><a href="4ec2ccd6074fd200ce3cf04d565f5e8b.gml.html">4ec2ccd6074fd200ce3cf04d565f5e8b</a></li>
+            <li><a href="5797e4cbceb766c109c9261991422038.gml.html">5797e4cbceb766c109c9261991422038</a></li>
+            <li><a href="5e1cc37cc6a2f06af640637ca461e490.gml.html">5e1cc37cc6a2f06af640637ca461e490</a></li>
+            <li><a href="61e757085fd0a4d5aa1dd68e92edaa92.gml.html">61e757085fd0a4d5aa1dd68e92edaa92</a></li>
+            <li><a href="62b3099cc57ed6882772fb82e490aa16.gml.html">62b3099cc57ed6882772fb82e490aa16</a></li>
+            <li><a href="6d0217c4ebddc26549b34ecc45295277.gml.html">6d0217c4ebddc26549b34ecc45295277</a></li>
+            <li><a href="6edf98845283e6e4e22c9abca8b779cc.gml.html">6edf98845283e6e4e22c9abca8b779cc</a></li>
+            <li><a href="71f93b52980cc70acb86815ca7d66932.gml.html">71f93b52980cc70acb86815ca7d66932</a></li>
+            <li><a href="77a85b04b39648d8450dce6e77c885de.gml.html">77a85b04b39648d8450dce6e77c885de</a></li>
+            <li><a href="7ab098044c8bff0f075438f4e85a733b.gml.html">7ab098044c8bff0f075438f4e85a733b</a></li>
+            <li><a href="7bed14d4e98bab861f9b9b8e08806053.gml.html">7bed14d4e98bab861f9b9b8e08806053</a></li>
+            <li><a href="7d404a7529c35f37be662617b4ace9c3.gml.html">7d404a7529c35f37be662617b4ace9c3</a></li>
+            <li><a href="866132a2db3ef39c4bed80a236a2b7d2.gml.html">866132a2db3ef39c4bed80a236a2b7d2</a></li>
+            <li><a href="89a1ae16492eafaa4a682abcb40c6ed3.gml.html">89a1ae16492eafaa4a682abcb40c6ed3</a></li>
+            <li><a href="8b932e637958490a434c578aca137ac4.gml.html">8b932e637958490a434c578aca137ac4</a></li>
+            <li><a href="918985e7ae8a2cc4765cd9905360dd13.gml.html">918985e7ae8a2cc4765cd9905360dd13</a></li>
+            <li><a href="9b44327642dbe5da79cf87733b0bfae1.gml.html">9b44327642dbe5da79cf87733b0bfae1</a></li>
+            <li><a href="a0a623fc8d8134ce6fde68cf2b3d1fb3.gml.html">a0a623fc8d8134ce6fde68cf2b3d1fb3</a></li>
+            <li><a href="a0bbc085f5d85d91e7ec8940577c3f61.gml.html">a0bbc085f5d85d91e7ec8940577c3f61</a></li>
+            <li><a href="a2d83df45c48270e0db5690c5a37c9b3.gml.html">a2d83df45c48270e0db5690c5a37c9b3</a></li>
+            <li><a href="a53c724e15926b5f307bcf82fddb443a.gml.html">a53c724e15926b5f307bcf82fddb443a</a></li>
+            <li><a href="a7ecfccd1526432e76c5491870bf865f.gml.html">a7ecfccd1526432e76c5491870bf865f</a></li>
+            <li><a href="ab7cb9cc89dc928e1e471044663e516a.gml.html">ab7cb9cc89dc928e1e471044663e516a</a></li>
+            <li><a href="ad27fd0159d993a73340c49f925fecc3.gml.html">ad27fd0159d993a73340c49f925fecc3</a></li>
+            <li><a href="ae2b0c8f9e232ab852a416048bad2126.gml.html">ae2b0c8f9e232ab852a416048bad2126</a></li>
+            <li><a href="b7ce968958d31e12e8e2ad9e88615b4f.gml.html">b7ce968958d31e12e8e2ad9e88615b4f</a></li>
+            <li><a href="c52219da590d6241b020b6ba09f536b5.gml.html">c52219da590d6241b020b6ba09f536b5</a></li>
+            <li><a href="c6197d5808c335cdf1ea7f1cb5a1154e.gml.html">c6197d5808c335cdf1ea7f1cb5a1154e</a></li>
+            <li><a href="c65370c7db5cc99088bcf0f2e36f52e5.gml.html">c65370c7db5cc99088bcf0f2e36f52e5</a></li>
+            <li><a href="c972407dc1d6329f9ba1eccc70d266c4.gml.html">c972407dc1d6329f9ba1eccc70d266c4</a></li>
+            <li><a href="ca67f5bd2d66a75996ae87fc9364a40d.gml.html">ca67f5bd2d66a75996ae87fc9364a40d</a></li>
+            <li><a href="d2e9ee59e7eb66835752242dd37ae218.gml.html">d2e9ee59e7eb66835752242dd37ae218</a></li>
+            <li><a href="d3de83bac410144046de4923b24465df.gml.html">d3de83bac410144046de4923b24465df</a></li>
+            <li><a href="d4864fc7d5afc9149556a0599b871318.gml.html">d4864fc7d5afc9149556a0599b871318</a></li>
+            <li><a href="d86cf7b75b82793763515412957d37d8.gml.html">d86cf7b75b82793763515412957d37d8</a></li>
+            <li><a href="dae80296dd7b02d9343bdf6f06b5f1b1.gml.html">dae80296dd7b02d9343bdf6f06b5f1b1</a></li>
+            <li><a href="dc154feb420f2a9fda3edb9982940915.gml.html">dc154feb420f2a9fda3edb9982940915</a></li>
+            <li><a href="e9b458a1aa2b125c6539625e58a78a1b.gml.html">e9b458a1aa2b125c6539625e58a78a1b</a></li>
+            <li><a href="ecde10277cb5194ce0190aca72e8cb22.gml.html">ecde10277cb5194ce0190aca72e8cb22</a></li>
+            <li><a href="f47107b51e4772cf7ace59a930ad77c7.gml.html">f47107b51e4772cf7ace59a930ad77c7</a></li>
+            <li><a href="fbe8eeb78267e3f6f7ce478269a1f97a.gml.html">fbe8eeb78267e3f6f7ce478269a1f97a</a></li>
+        </ul>
+    </section>
     <h2>Code</h2>
     <p>Please contribute!</p>
     <p>
@@ -120,5 +132,8 @@
     <p>
         Feedback? Questions? Ideas? <a href="https://twitter.com/c2graph">@c2graph</a>
     </p>
+    <footer>
+        Last update: Thu Nov 15 15:00:00 UTC 2012
+    </footer>
 </body>
 </html>
