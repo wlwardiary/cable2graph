@@ -11,11 +11,17 @@ source = sys.argv[1]
 # remove page break from body to avoid problems 
 # when subject is spaning multiple pages
 
-re_page = re.compile(r'^(\ {1,30}(CONFIDENTIAL|UNCLASSIFIED)\s+){1,3}^PAGE\s+[0-9]{2}.*\n', re.M)
-
+re_page = re.compile(r'^(\ {1,30}(CONFIDENTIAL|SECRET|UNCLASSIFIED)\s+){1,3}^PAGE\s+[0-9]{2}.*\n', re.M)
 re_ref = re.compile(r'^REF: (.*)$', re.M)
+
+# parse TAGS over multiple lines with a couple of stop words
+re_tags = re.compile(r'^TAGS:([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED\ BY|Classified\ by|REF:|REFS:|Ref:|RETELS:|REFTEL:|REF\ :|SUBJECT:|Subject:|SUBJ:|Subj:|E\.O\.|\*\*\*\*|FINAL\ SECTION\ OF|SECRET\ |CONFIDENTIAL\ |UNCLASSIFIED\ |COMBINE:))', re.M)
 re_cable_id = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
+
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
+
+# people mentioned in the TAGS field
+re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO)(\s?)\(.*\)')
 
 csv.field_size_limit(131072*2)
 
@@ -34,6 +40,10 @@ diff_cnt = {}
 edges = []
 dates = {}
 subjects = {}
+tags = {}
+classifications = {}
+locations = set()
+tagnames = set()
 
 for row in content:
     count = count + 1
@@ -47,6 +57,8 @@ for row in content:
     tdate = datetime.strptime(cabledate.strip(), '%m/%d/%Y %H:%M')
     timestamp = int(time.mktime(tdate.timetuple()))
     dates.update({cable:timestamp})
+    locations.add(location)
+    classifications.update({cable:classification})
 
     cable_ids.add(cable)
     for r in referrer.split('|'):
@@ -71,6 +83,15 @@ for row in content:
 
     subjects.update({cable:subject})
 
+
+    tags_match = re.search(re_tags, body)
+    if tags_match is not None:
+        tag = tags_match.group(1).replace('\n','').strip()
+    else:
+        print "No TAGS found in MRN %s" % cable
+        tag = ''
+        
+    tags.update({cable:tag})
 
 #    re_referrer = re.search(re_ref, body)
 #    if re_referrer is not None:
@@ -99,6 +120,8 @@ print "Diff Count: %s" % len(diff_cnt)
 print "Edges: %s" % len(edges)
 print "Dates %s " % len(dates)
 print "Subjects %s " % len(subjects)
+print "Tags %s " % len(tags)
+print "Locations %s " % len(locations)
 
 cf = file('data/cable_ids.list','w')
 rf = file('data/ref_ids.list','w')
@@ -108,6 +131,9 @@ dcf = file('data/diff_cnt.list','w')
 ef = file('data/edges.list','w')
 datef = file('data/dates.list','w')
 subf = file('data/subjects.list','w')
+locf = file('data/locations.list','w')
+tagsf = file('data/tags.list','w')
+classf = file('data/classifications.list','w')
 
 for i in sorted(cable_ids):
     cf.write('%s\n' % i)
@@ -140,3 +166,16 @@ datef.close()
 for k,v in sorted(subjects.iteritems()):
     subf.write('%s %s\n' % (k,v))
 subf.close()
+
+for k,v in sorted(tags.iteritems()):
+    tagsf.write('%s %s\n' % (k,v))
+tagsf.close()
+
+for k,v in sorted(classifications.iteritems()):
+    classf.write('%s %s\n' % (k,v))
+classf.close()
+
+for i in sorted(locations):
+    locf.write('%s\n' % i)
+locf.close()
+
