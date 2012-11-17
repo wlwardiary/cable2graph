@@ -8,20 +8,51 @@ if len(sys.argv) == 3:
 
 source = sys.argv[1]
 
+# dirty data, be gentle
+
 # remove page break from body to avoid problems 
 # when subject is spaning multiple pages
-
 re_page = re.compile(r'^(\ {1,30}(CONFIDENTIAL|SECRET|UNCLASSIFIED)\s+){1,3}^PAGE\s+[0-9]{2}.*\n', re.M)
-re_ref = re.compile(r'^REF: (.*)$', re.M)
+
+# multi line reference from body
+# second regex is matching mrn, see below
+re_ref = re.compile(r'^(REF|REFS|Ref|RETELS|REFTEL):([\s\S]*?)(?=(?:\n\s\n)|1\.|SIPDIS|Summary|SUMMARY|Classified\ By|CLASSIFIED\ BY|Sensitive\ But\ Unclassified|SENSITIVE\ BUT\ UNCLASSIFIED)', re.M)
 
 # parse TAGS over multiple lines with a couple of stop words
 re_tags = re.compile(r'^TAGS:([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED\ BY|Classified\ by|REF:|REFS:|Ref:|RETELS:|REFTEL:|REF\ :|SUBJECT:|Subject:|SUBJ:|Subj:|E\.O\.|\*\*\*\*|FINAL\ SECTION\ OF|SECRET\ |CONFIDENTIAL\ |UNCLASSIFIED\ |COMBINE:))', re.M)
-re_cable_id = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
 
+# try to match a valid MRN
+re_mrn1 = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
+re_mrn2 = re.compile(r'([0-9]{2,4})?([a-zA-Z]{3,18})\s([0-9]{1,8})')
+re_mrn3 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})\W')
+re_mrn4 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})(\s+\(NOTAL|EXDIS|NODIS|Notal|Exdis|Nodis\))?\W')
+
+# load embassy names
+emb = [ l.strip() for l in open('data/embassy.list').readlines() ] 
+
+# list like A. B. C. / A) B) C)
+mrn5_list = r'([a-zA-Z][\s\W]{1,3})?'
+
+# year as 0x 9x 20xx 19xx
+mrn5_year = r'([0,6-9][0-9]|19[0-9]{2}|20[0-9]{2})?'
+mrn5_num = r'([0-9]{1,10})'
+# caption after the MRN like (NOTAL) or (EXDIS)
+mrn5_caption = '(\s+\((NOTAL|EXDIS|NODIS|Notal|Exdis|Nodis)\))?'
+re_mrn5 = re.compile(
+    r'\W' + 
+    mrn5_list + 
+    mrn5_year + 
+    '(\s)?(' + '|'.join(emb) + ')(\s)?' + 
+    mrn5_num + 
+    mrn5_caption + 
+    '\W'
+    )
+
+# find subject over multiple lines
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
 
 # people mentioned in the TAGS field
-re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO)(\s?)\(.*\)')
+re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO|HO|CO|RO|PINR|OTRA|PREL|APER|CASC|CLOK|CVIS|DR|EG|FR|MX|NI|PM|PA|SCE|SY|UN|US|USPTO|VM)(\W+)?\(.*\)')
 
 csv.field_size_limit(131072*2)
 
@@ -33,11 +64,19 @@ except IOError:
 
 count = 0
 
-cable_ids = set()
+mrns = set()
+
+# reference from header
 ref_ids = set()
 ref_cnt = {}
+
+# reference from body text via regex
+ref_from_text = {}
+ref_body_mrns = set()
+ref_body_cnt = {}
+
 diff_cnt = {}
-edges = []
+edges = set()
 dates = {}
 subjects = {}
 tags = {}
@@ -60,19 +99,39 @@ for row in content:
     locations.add(location)
     classifications.update({cable:classification})
 
-    cable_ids.add(cable)
+    mrns.add(cable)
+
+    # remove page break
+    body_filterd, page_match_count = re.subn(re_page,'',body)
+
     for r in referrer.split('|'):
         if len(r.strip()) > 0:
-            edges.append((cable.upper(),r.upper()))
+            edges.add((cable.upper(),r.upper()))
             ref_ids.add(r)
             if ref_cnt.has_key(r):
                 ref_cnt[r] = ref_cnt[r] + 1
             else:
                 ref_cnt[r] = 1
 
+    match_ref = re.search(re_ref, body_filterd)
+    if match_ref is not None:
+        match_mrn = re.findall(re_mrn5, match_ref.group(2))
+        for ignore, year, ignore, place, ignore, num, flag, ignore in match_mrn:
+            # use current year if no year is given
+            if len(year.strip()) == 0:
+                year = str(tdate.strftime('%y'))
+            elif len(year.strip()) == 4:
+                year = year[2:4]
 
-    # remove page break
-    body_filterd, page_match_count = re.subn(re_page,'',body)
+            txt_mrn = "%s%s%s" % (year.strip() , place.strip().upper().replace(' ',''), int(num.strip()) )
+            # load them, but do the cross check later
+            ref_from_text.update({cable:(txt_mrn,flag.strip())})
+            ref_body_mrns.add(txt_mrn)
+
+            if ref_body_cnt.has_key(txt_mrn):
+                ref_body_cnt[txt_mrn] = ref_body_cnt[txt_mrn] + 1
+            else:
+                ref_body_cnt[txt_mrn] = 1
 
     subject_match = re.search(re_subject, body_filterd)
     if subject_match is not None:
@@ -83,48 +142,64 @@ for row in content:
 
     subjects.update({cable:subject})
 
-
     tags_match = re.search(re_tags, body)
     if tags_match is not None:
         tag = tags_match.group(1).replace('\n','').strip()
+        # tag_without_ppl = re.sub(re_ppl_tags,'',tag)
+        # TODO
     else:
         print "No TAGS found in MRN %s" % cable
         tag = ''
         
     tags.update({cable:tag})
 
-#    re_referrer = re.search(re_ref, body)
-#    if re_referrer is not None:
-#        month, day, year = cabledate.split(' ')[0].split('/') # 3/9/1972 5:40
-#        ref = re_referrer.group(0).strip()
-#        re_cids = re.findall(re_cable_id, ref)
-#        for (ref_year, ref_name, ref_id)  in re_cids:
-#            if ref_year == '':
-#                ref_year = year[2:4]
-#            x = "%s%s%s" % (ref_year, ref_name.replace(' ','').upper(), ref_id)
-#            ref_ids.add(x)
-
     if count % 10000 == 0:
         print count
 
-diff_ids = ref_ids.difference(cable_ids)
+diff_ids = ref_ids.difference(mrns)
 for d in diff_ids:
     diff_cnt[d] = ref_cnt[d]
 
+# cross check for mrn extracted from body
+# mrn exists in the header or
+# mrn is counted at least twice
+ref_ack = set()
+captions = {}
+for src_mrn, (txt_mrn, caption) in ref_from_text.iteritems():
+    if txt_mrn in mrns or txt_mrn in ref_ids or ref_body_cnt[txt_mrn] > 1:
+            ref_ack.add((src_mrn, txt_mrn))
+
+    if (txt_mrn in mrns or txt_mrn in ref_ids) and len(caption.strip()) > 0:
+        captions.update({txt_mrn: caption})
+
+ref_body_new = ref_ack.difference(edges)
+
+all_mrns = mrns.union(ref_body_mrns.union(ref_ids))
+
 print "Lines read from csv: %s" % count
-print "MRN / Message Reference Numbers: %s " % len(cable_ids)
+print "MRNs           : %s" % len(mrns)
 print "Referenced MRNs: %s" % len(ref_ids)
-print "               : %s" % len(ref_cnt)
-print "Difference: %s" % len(diff_ids)
-print "Diff Count: %s" % len(diff_cnt)
-print "Edges: %s" % len(edges)
-print "Dates %s " % len(dates)
-print "Subjects %s " % len(subjects)
-print "Tags %s " % len(tags)
-print "Locations %s " % len(locations)
+print "          count: %s" % len(ref_cnt)
+print "      from body: %s" % len(ref_body_mrns)
+print "       together: %s" % len(all_mrns)
+print "   with caption: %s" % len(captions)
+print "Difference     : %s" % len(diff_ids)
+print "Diff Count     : %s" % len(diff_cnt)
+print "Edges          : %s" % len(edges)
+print "   from body ok: %s" % len(ref_ack)
+print "  from body new: %s" % len(ref_body_new)
+print "Dates          : %s" % len(dates)
+print "Subjects       : %s" % len(subjects)
+print "Tags           : %s" % len(tags)
+print "Locations      : %s" % len(locations)
+
+# merge ref from body
+edges.update(ref_body_new)
+ref_ids.update(ref_body_mrns)
 
 cf = file('data/cable_ids.list','w')
 rf = file('data/ref_ids.list','w')
+allf = file('data/all_ids.list','w')
 df = file('data/diff_ids.list','w')
 rcf = file('data/ref_cnt.list','w')
 dcf = file('data/diff_cnt.list','w')
@@ -134,14 +209,19 @@ subf = file('data/subjects.list','w')
 locf = file('data/locations.list','w')
 tagsf = file('data/tags.list','w')
 classf = file('data/classifications.list','w')
+captionsf = file('data/captions.list','w')
 
-for i in sorted(cable_ids):
+for i in sorted(mrns):
     cf.write('%s\n' % i)
 cf.close()
 
 for i in sorted(ref_ids):
     rf.write('%s\n' % i)
 rf.close()
+
+for i in sorted(all_mrns):
+    allf.write('%s\n' % i)
+allf.close()
 
 for i in sorted(diff_ids):
     df.write('%s\n' % i)
@@ -174,6 +254,10 @@ tagsf.close()
 for k,v in sorted(classifications.iteritems()):
     classf.write('%s %s\n' % (k,v))
 classf.close()
+
+for k,v in sorted(captions.iteritems()):
+    captionsf.write('%s %s\n' % (k,v))
+captionsf.close()
 
 for i in sorted(locations):
     locf.write('%s\n' % i)
