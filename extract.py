@@ -21,6 +21,16 @@ re_ref = re.compile(r'^(REF|REFS|Ref|RETELS|REFTEL):([\s\S]*?)(?=(?:\n\s\n)|1\.|
 # parse TAGS over multiple lines with a couple of stop words
 re_tags = re.compile(r'^TAGS:([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED\ BY|Classified\ by|REF:|REFS:|Ref:|RETELS:|REFTEL:|REF\ :|SUBJECT:|Subject:|SUBJ:|Subj:|E\.O\.|\*\*\*\*|FINAL\ SECTION\ OF|SECRET\ |CONFIDENTIAL\ |UNCLASSIFIED\ |COMBINE:))', re.M)
 
+# source cabletags website
+all_subject_tags = [ l.strip() for l in open('data/tags.subject').readlines() ] 
+all_program_tags = [ l.strip() for l in open('data/tags.program').readlines() ] 
+
+re_subject_tags = re.compile(r'(' + '|'.join(all_subject_tags) + r')',re.M)
+re_program_tags = re.compile(r'(' + '|'.join(all_program_tags) + r')',re.M)
+
+# people mentioned in the TAGS field
+re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO|HO|CO|RO|PINR|OTRA|PREL|APER|CASC|CLOK|CVIS|DR|EG|FR|MX|NI|PM|PA|SCE|SY|UN|US|USPTO|VM)(\W+)?\(.*\)')
+
 # try to match a valid MRN
 re_mrn1 = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
 re_mrn2 = re.compile(r'([0-9]{2,4})?([a-zA-Z]{3,18})\s([0-9]{1,8})')
@@ -42,7 +52,7 @@ re_mrn5 = re.compile(
     r'\W' + 
     mrn5_list + 
     mrn5_year + 
-    '(\s)?(' + '|'.join(emb) + ')(\s)?' + 
+    r'(\s)?(' + '|'.join(emb) + r')(\s)?' + 
     mrn5_num + 
     mrn5_caption + 
     '\W'
@@ -50,9 +60,6 @@ re_mrn5 = re.compile(
 
 # find subject over multiple lines
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
-
-# people mentioned in the TAGS field
-re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO|HO|CO|RO|PINR|OTRA|PREL|APER|CASC|CLOK|CVIS|DR|EG|FR|MX|NI|PM|PA|SCE|SY|UN|US|USPTO|VM)(\W+)?\(.*\)')
 
 csv.field_size_limit(131072*2)
 
@@ -79,10 +86,10 @@ diff_cnt = {}
 edges = set()
 dates = {}
 subjects = {}
-tags = {}
 classifications = {}
 locations = set()
-tagnames = set()
+tags = {}
+tag_edges = set()
 
 for row in content:
     count = count + 1
@@ -145,8 +152,13 @@ for row in content:
     tags_match = re.search(re_tags, body)
     if tags_match is not None:
         tag = tags_match.group(1).replace('\n','').strip()
-        # tag_without_ppl = re.sub(re_ppl_tags,'',tag)
-        # TODO
+        subject_tags = re.findall(re_subject_tags, tag)
+        program_tags = re.findall(re_program_tags, tag)
+        ppl_tags = re.findall(re_ppl_tags, tag)
+        for stag in subject_tags:
+            tag_edges.add((cable,stag))
+        for ktag in program_tags:
+            tag_edges.add((cable,ktag))
     else:
         print "No TAGS found in MRN %s" % cable
         tag = ''
@@ -167,7 +179,7 @@ ref_ack = set()
 captions = {}
 for src_mrn, (txt_mrn, caption) in ref_from_text.iteritems():
     if txt_mrn in mrns or txt_mrn in ref_ids or ref_body_cnt[txt_mrn] > 1:
-            ref_ack.add((src_mrn, txt_mrn))
+        ref_ack.add((src_mrn, txt_mrn))
 
     if (txt_mrn in mrns or txt_mrn in ref_ids) and len(caption.strip()) > 0:
         captions.update({txt_mrn: caption})
@@ -207,7 +219,7 @@ ef = file('data/edges.list','w')
 datef = file('data/dates.list','w')
 subf = file('data/subjects.list','w')
 locf = file('data/locations.list','w')
-tagsf = file('data/tags.list','w')
+tagsf = file('data/tag_edges.list','w')
 classf = file('data/classifications.list','w')
 captionsf = file('data/captions.list','w')
 
@@ -247,7 +259,7 @@ for k,v in sorted(subjects.iteritems()):
     subf.write('%s %s\n' % (k,v))
 subf.close()
 
-for k,v in sorted(tags.iteritems()):
+for k,v in sorted(tag_edges):
     tagsf.write('%s %s\n' % (k,v))
 tagsf.close()
 
