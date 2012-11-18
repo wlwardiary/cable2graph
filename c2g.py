@@ -11,6 +11,7 @@ missing = set()
 embassy = set()
 ref = []
 timestamp_map = {}
+captions = {}
 
 print "Loading graph data..."
 for i in open('data/embassy.list').readlines():
@@ -27,6 +28,10 @@ for y in open('data/diff_ids.list').readlines():
 for l in open('data/edges.list').readlines():
     ref.append((l.split(' ')[0].strip(),l.split(' ')[1].strip()))
 
+for l in open('data/captions.list').readlines():
+    cap_mrn, cap = l.split(' ')
+    captions.update({ cap_mrn.strip(): cap.strip() })
+
 for j in open('data/dates.list').readlines():
     tmp_cable_id = j.split(' ')[0].strip()
     tmp_ts = j.split(' ')[1].strip()
@@ -38,20 +43,31 @@ ref = sorted(ref)
 place = []
 color = []
 timestamp = []
+caption = []
+
 for c in cable_ids:
     m = re.search(place_rgx,c)
     if m is not None:
         place.append(m.group(1).upper())
     else:
         place.append('unknown')
+
     if c in missing:
         color.append('red')
     else:
         color.append('black')
+
     if timestamp_map.has_key(c):
         timestamp.append(int(timestamp_map[c]))
     else:
         timestamp.append(0)
+
+    if c in captions:
+        caption.append(captions[c])
+    else:
+        caption.append(None)
+
+
 
 # create dictionary with ids for every cable
 cl = dict( [ (v,i) for i,v in enumerate(cable_ids) ] )
@@ -63,12 +79,12 @@ duration = []
 for a,b in edges:
     acid = id_cable_map[a]
     bcid = id_cable_map[b]
-    if acid not in missing:
+    if acid not in missing and acid in timestamp_map:
         ts_a = int(timestamp_map[acid])
     else:
         ts_a = None
 
-    if bcid not in missing:
+    if bcid not in missing and bcid in timestamp_map:
         ts_b = int(timestamp_map[bcid])
     else:
         ts_b = None
@@ -89,6 +105,7 @@ g.vs['label'] = cable_ids
 g.vs['place'] = place
 g.vs['color'] = color
 g.vs['timestamp'] = timestamp
+g.vs['caption'] = caption
 g.simplify()
 
 # make clusters
