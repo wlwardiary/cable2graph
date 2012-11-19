@@ -8,7 +8,7 @@ from itertools import repeat
 mrns = sorted([ l.strip() for l in open('data/cable_ids.list').readlines() ])
 subject_tags = sorted([ l.strip() for l in open('data/tags.subject').readlines() ])
 program_tags = sorted([ l.strip() for l in open('data/tags.program').readlines() ])
-tag_edges = [ (l.split()) for l in open('data/tag_edges.list').readlines() ]
+tags_edges = [ (l.split()) for l in open('data/tags_edges.list').readlines() ]
 
 # merge everything together
 everything = []
@@ -18,7 +18,7 @@ everything.extend(program_tags)
 
 # give everything numeric ids and map it
 all_id = dict( [ (v,i) for i,v in enumerate(everything) ] )
-num_edges = [ (all_id[f], all_id[t]) for f, t in tag_edges ]
+num_edges = [ (all_id[f], all_id[t]) for f, t in tags_edges ]
 
 # create a node type map. 1 node type A, 0 node type B
 t1 = [ f for f in repeat(1, len(mrns)) ]
