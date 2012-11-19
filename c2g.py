@@ -22,7 +22,7 @@ place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 for i in open('data/all_ids.list').readlines():
     cable_ids.add(i.strip().upper())
 
-for y in open('data/diff_ids.list').readlines():
+for y in open('data/missing_mrn.list').readlines():
     missing.add(y.strip().upper())
     
 for l in open('data/edges.list').readlines():
@@ -65,9 +65,7 @@ for c in cable_ids:
     if c in captions:
         caption.append(captions[c])
     else:
-        caption.append(None)
-
-
+        caption.append('')
 
 # create dictionary with ids for every cable
 cl = dict( [ (v,i) for i,v in enumerate(cable_ids) ] )
@@ -118,7 +116,7 @@ cluster_sizes = g.clusters().sizes()
 
 # also adds the cluster index
 filterd_clusters = filter(
-    lambda c: c[1] > 42 and c[1] < giant_size, 
+    lambda c: c[1] > 9 and c[1] < giant_size, 
     enumerate(cluster_sizes))
 
 print "matched %s clusters" % len(filterd_clusters)
@@ -135,16 +133,21 @@ for cluster_index, cluster_size in filterd_clusters:
     sg.es['betweenness'] = sg.edge_betweenness(directed=sg.is_directed())
     sg.vs['closeness'] = sg.closeness()
     sg.vs['eccentricity'] = sg.eccentricity()
+
+    prefix = ''
+    tc = sg.triad_census()
+    # allow some variations. t102 and t300 are 0 in a strict star
+    if sg.diameter() == 2 and sg.radius() == 1.0 and tc.t102 < 20 and tc.t300 < 10 and tc.t201 > 0:
+        prefix = 'star_'
     # create a uniq id for the graph
     # concat all sorted(!) label names and hash it
     idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
     filename = md5(idconcat).hexdigest()
-    sg.write_gml('%s.gml' % filename)
+    sg.write_gml('%s%s_%s_%s.gml' % (prefix, cluster_index, cluster_size, filename))
     print filename, len(sg.es), len(sg.vs)
 
 # split the giant cluster into smaller communities
 # new in igraph v0.6
-
 print "loading giant"
 giant = g.clusters().giant()
 giant.simplify()
