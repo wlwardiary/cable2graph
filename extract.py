@@ -54,6 +54,12 @@ re_mrn5 = re.compile(mrn5_str, re.I)
 # find subject over multiple lines
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
 
+re_caption = re.compile(r'(.*)^E\.(O|0)\.', re.S|re.M)
+
+# regex for header
+re_head_fm = re.compile(r'VZ[\s\S]+\n(FM [A-Z\b\ ]+)')
+re_head_to   = re.compile(r'VZ[\s\S]+\n(TO [A-Z\ /]+)(PRIORITY|IMMEDIATE)?[0-9]{1,10}')
+
 csv.field_size_limit(131072*2)
 
 try:
@@ -91,6 +97,34 @@ for row in content:
 
     # read csv values
     line_num, cabledate, cable, location, classification, referrer, head, body = row
+
+    #pos = body.find('E.O.')
+    #if pos > 0:
+    #    print cable, body[0:pos].replace('\n','').strip()
+
+    #pos_fm = head.find('\nFM ')
+    #pos_to = head.find('\nTO ')
+    #pos_banner = head.find('This record is a partial extract of the original cable. The full text of the original cable is not available.')
+    #if pos_fm > -1 and pos_to > -1 and pos_to > pos_fm:
+    #    #print head[pos_fm:pos_to].strip()
+    #    pass
+    #elif pos_banner > -1:
+    #    pass
+    #else:
+    #    print cable
+    #    print head
+
+    #match_caption = re.match(re_caption, body)
+    #if match_caption is not None:
+    #    print cable, match_caption.group(0)
+    #del body, match_caption
+
+    #match_head_fm = re.match(re_head_fm, head)
+    #match_head_to = re.match(re_head_to, head)
+    #if match_head_fm is not None and match_head_to is not None:
+    #    print '%s\t%s\t%s' % ( cable, match_head_fm.group(1).strip(), match_head_to.group(1).strip() )
+    #
+    # continue
 
     tdate = datetime.strptime(cabledate.strip(), '%m/%d/%Y %H:%M')
     timestamp = int(time.mktime(tdate.timetuple()))
@@ -159,7 +193,6 @@ for row in content:
 
     if count % 10000 == 0:
         print count
-
 
 # cross check for mrn extracted from body
 # mrn exists in the header or
