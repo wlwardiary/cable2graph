@@ -192,18 +192,25 @@ for gml in graph_files:
     xh = '%.4f' % ((height+300)/2.0)
 
     # rescale range of numbers to 1-10 for CSS class and radius
-    degrees = igraph.utils.rescale(
-        g.vs.get_attribute_values('degree'),
-        (1,10))
-    authority = igraph.utils.rescale(
-        g.vs.get_attribute_values('authority'),
-        (1,10))
-    ebetweenness = igraph.utils.rescale(
-        g.es.get_attribute_values('betweenness'),
-        (1,10))
-    vbetweenness = igraph.utils.rescale(
-        g.vs.get_attribute_values('betweenness'),
-        (1,10))
+    if 'degree' in g.vs.attribute_names():
+        degrees = igraph.utils.rescale(
+            g.vs.get_attribute_values('degree'),
+            (1,10))
+
+    if 'authority' in g.vs.attribute_names():
+        authority = igraph.utils.rescale(
+            g.vs.get_attribute_values('authority'),
+            (1,10))
+
+    if 'betweenness' in g.es.attribute_names():
+        ebetweenness = igraph.utils.rescale(
+            g.es.get_attribute_values('betweenness'),
+            (1,10))
+
+    if 'betweenness' in g.vs.attribute_names():
+        vbetweenness = igraph.utils.rescale(
+            g.vs.get_attribute_values('betweenness'),
+            (1,10))
 
     if options.uri:
         uris = g.vs.get_attribute_values('uri')
@@ -261,6 +268,7 @@ for gml in graph_files:
             'betweenness': vbetweenness[vidx],
             'class': "%s %s" % (str(colors[vidx]), str(places[vidx]))
         }
+
         # optional
         if options.uri:
             tmpd.update({'uri': str(uris[vidx])})
