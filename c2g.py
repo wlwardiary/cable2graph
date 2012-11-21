@@ -12,6 +12,7 @@ embassy = set()
 ref = []
 timestamp_map = {}
 captions = {}
+classifications = {}
 
 print "Loading graph data..."
 for i in open('data/embassy.list').readlines():
@@ -32,6 +33,10 @@ for l in open('data/captions.list').readlines():
     cap_mrn, cap = l.split(' ')
     captions.update({ cap_mrn.strip(): cap.strip() })
 
+for l in open('data/classifications.list').readlines():
+    clss_mrn, clss= l.split(' ', 1) # only split first
+    classifications.update({ clss_mrn.strip(): clss.strip() })
+
 for j in open('data/dates.list').readlines():
     tmp_cable_id = j.split(' ')[0].strip()
     tmp_ts = j.split(' ')[1].strip()
@@ -44,6 +49,7 @@ place = []
 color = []
 timestamp = []
 caption = []
+classification = []
 
 for c in cable_ids:
     m = re.search(place_rgx,c)
@@ -66,6 +72,11 @@ for c in cable_ids:
         caption.append(captions[c])
     else:
         caption.append('')
+
+    if c in classifications:
+        classification.append(classifications[c])
+    else:
+        classification.append('')
 
 # create dictionary with ids for every cable
 cl = dict( [ (v,i) for i,v in enumerate(cable_ids) ] )
@@ -96,18 +107,99 @@ for a,b in edges:
     duration.append(int(dur))
 
 print 'Loading graph...'
-g = igraph.Graph(edges)
-g.to_directed()
+g = igraph.Graph(edges, directed=False)
 g.es['duration'] = duration
 g.vs['label'] = cable_ids
 g.vs['place'] = place
 g.vs['color'] = color
 g.vs['timestamp'] = timestamp
 g.vs['caption'] = caption
-g.simplify()
+g.vs['classification'] = classification
+
+g.vs['degree'] = g.degree()
+g.vs['constraint'] = g.constraint()
+g.vs['pagerank'] = g.pagerank()
+g.vs['authority'] = g.authority_score()
 
 # make clusters
 print "clusters"
+
+# function to detect a star graph
+def is_star(gstar):
+    if gstar.girth() != 0:
+        return False
+
+    if gstar.diameter() != 2:
+        return False
+    
+    if gstar.radius() != 1.0:
+        return False
+
+    # example [1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1]
+    dgr = gstar.degree()
+
+    # all but one are 1
+    if dgr.count(1) != (len(dgr) - 1):
+        return False
+
+    # the largest only exists once
+    if dgr.count(max(dgr)) != 1:
+        return False
+
+    # value of the max is equal to amount of 1
+    if max(dgr) != dgr.count(1):
+        return False
+
+    # yep, pretty sure it's a star
+    return True
+
+def traverse(sg, visited, node):
+    visited.append(node)
+    # find possible new nodes to visit next
+    next_nodes = [ (v['betweenness'], v.index) for v in sg.vs[node].neighbors() if v['betweenness'] > 0 and v.index not in visited ]
+    if len(next_nodes) > 0:
+        # take the node with the max betweenness
+        btwn, n = max(next_nodes)
+        print node, n, btwn, sg.vs[node]['label'], sg.vs[n]['label']
+        # play it again sam
+        traverse(sg, visited, n)
+    else:
+        print "end."
+
+def get_trail(sg):
+    # list of visited nodes
+    trail = []
+    # get the edge with the max betweenness
+    max_btwn = max(sg.es['betweenness'])
+    top_edge = sg.es.select(betweenness_eq=max_btwn)
+    for e in top_edge:
+        # make sure the first run dosn't go into the direction of the source
+        trail.append(e.source)
+        # traverse along both sides of the edge
+        traverse(sg, trail, e.target)
+        traverse(sg, trail, e.source)
+    
+    return trail
+
+def save(sg, prefix):
+    # create a uniq id for the graph
+    # concat all sorted(!) label names and hash it
+    sg = sg.simplify()
+    idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
+    digest = md5(idconcat).hexdigest()
+    di = sg.diameter()
+    de = sg.density()
+    ra = sg.radius()
+    pl = sg.average_path_length()
+    sg['diameter'] = di
+    sg['density'] = de
+    sg['radius'] = ra
+    sg['avg_path_length'] = pl
+    filename = '%s_di%s_de%s_ra%s_pl%s_%s.gml' % (prefix, di, de, ra, pl ,digest)
+    print prefix, di, de, ra, pl
+    sg.write_gml(filename)
+    print filename, len(sg.es), len(sg.vs)
+
 # use size of the largest cluster as limit
 giant_size = g.clusters().giant().vcount()
 
@@ -116,59 +208,54 @@ cluster_sizes = g.clusters().sizes()
 
 # also adds the cluster index
 filterd_clusters = filter(
-    lambda c: c[1] > 9 and c[1] < giant_size, 
+    lambda c: c[1] > 42 and c[1] < giant_size, 
     enumerate(cluster_sizes))
 
 print "matched %s clusters" % len(filterd_clusters)
 for cluster_index, cluster_size in filterd_clusters:
     # create the subgraph from the cluster index
     sg = g.clusters().subgraph(cluster_index)
-    sg.to_directed()
-    sg.simplify()
-    sg.vs['degree'] = sg.degree()
-    sg.vs['constraint'] = sg.constraint()
-    sg.vs['pagerank'] = sg.pagerank()
-    sg.vs['authority'] = sg.authority_score()
+    #sg.vs['degree'] = sg.degree()
+    #sg.vs['constraint'] = sg.constraint()
+    #sg.vs['pagerank'] = sg.pagerank()
+    #sg.vs['authority'] = sg.authority_score()
     sg.vs['betweenness'] = sg.betweenness(directed=sg.is_directed())
     sg.es['betweenness'] = sg.edge_betweenness(directed=sg.is_directed())
     sg.vs['closeness'] = sg.closeness()
     sg.vs['eccentricity'] = sg.eccentricity()
 
-    prefix = ''
-    tc = sg.triad_census()
-    # allow some variations. t102 and t300 are 0 in a strict star
-    if sg.diameter() == 2 and sg.radius() == 1.0 and tc.t102 < 20 and tc.t300 < 10 and tc.t201 > 0:
-        prefix = 'star_'
-    # create a uniq id for the graph
-    # concat all sorted(!) label names and hash it
-    idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
-    filename = md5(idconcat).hexdigest()
-    sg.write_gml('%s%s_%s_%s.gml' % (prefix, cluster_index, cluster_size, filename))
-    print filename, len(sg.es), len(sg.vs)
+    prefix = 'cluster_ci%s_cs%s' % (cluster_index, cluster_size)
+    if is_star(sg):
+        prefix = 'star'
+    elif sg.density() < 0.01 and sg.average_path_length() > 5.0:
+        trail = get_trail(sg)
+        sg_trail = sg.vs.select(trail).subgraph()
+        save(sg_trail, 'trail_ci%s' % cluster_index)
+
+    save(sg, prefix)
 
 # split the giant cluster into smaller communities
 # new in igraph v0.6
 print "loading giant"
 giant = g.clusters().giant()
-giant.simplify()
-giant.to_undirected()
 
 print "split giant cluster"
 gcm = giant.community_multilevel()
 
+prefix = 'community'
 for sgcm in gcm.subgraphs():
-    sgcm.to_directed()
-    sgcm.simplify()
-    sgcm.vs['degree'] = sgcm.degree()
-    sgcm.vs['constraint'] = sgcm.constraint()
-    sgcm.vs['pagerank'] = sgcm.pagerank()
-    sgcm.vs['authority'] = sgcm.authority_score()
+    #sgcm.vs['degree'] = sgcm.degree()
+    #sgcm.vs['constraint'] = sgcm.constraint()
+    #sgcm.vs['pagerank'] = sgcm.pagerank()
+    #sgcm.vs['authority'] = sgcm.authority_score()
     sgcm.vs['betweenness'] = sgcm.betweenness(directed=sgcm.is_directed())
     sgcm.es['betweenness'] = sgcm.edge_betweenness(directed=sgcm.is_directed())
     sgcm.vs['closeness'] = sgcm.closeness()
     sgcm.vs['eccentricity'] = sgcm.eccentricity()
-    idconcat = ''.join(sorted(sgcm.vs.get_attribute_values('label')))
-    filename = md5(idconcat).hexdigest()
-    sgcm.write_gml('%s.gml' % filename)
-    print filename, len(sgcm.es), len(sgcm.vs)
+    if sgcm.density() < 0.01 and sgcm.average_path_length() > 5.0:
+        trail = get_trail(sgcm)
+        sg_trail = sgcm.vs.select(trail).subgraph()
+        save(sg_trail, 'community_trail')
+
+    save(sgcm, prefix)
 
