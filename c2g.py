@@ -184,7 +184,6 @@ def get_trail(sg):
 def save(sg, prefix):
     # create a uniq id for the graph
     # concat all sorted(!) label names and hash it
-    sg = sg.simplify()
     idconcat = ''.join(sorted(sg.vs.get_attribute_values('label')))
     digest = md5(idconcat).hexdigest()
     di = sg.diameter()
@@ -197,6 +196,7 @@ def save(sg, prefix):
     sg['avg_path_length'] = pl
     filename = '%s_di%s_de%s_ra%s_pl%s_%s.gml' % (prefix, di, de, ra, pl ,digest)
     print prefix, di, de, ra, pl
+    print sg
     sg.write_gml(filename)
     print filename, len(sg.es), len(sg.vs)
 
