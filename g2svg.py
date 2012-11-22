@@ -5,6 +5,10 @@ from os import listdir, path
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
 from datetime import datetime
+from os import environ
+
+environ['TZ'] = 'UTC'
+time.tzset()
 
 parser = OptionParser()
 parser.add_option("-t", "--tmpl", dest="template",
