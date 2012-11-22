@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 import csv, re, sys, os.path, time
+from os import environ
 from datetime import datetime
+
+environ['TZ'] = 'UTC'
+time.tzset()
 
 limit = None
 if len(sys.argv) == 3:
