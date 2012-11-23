@@ -16,7 +16,7 @@ missing = dict() # missing cables
 ignore = set()   # list of cables that are not in "order"
                  # can not be used for prediction
 
-dfh = open('dates.list')
+dfh = open('data/dates.list')
 for line in dfh.readlines():
     cableid, timestamp = line.split()
     m = re.match(re_cable_id, cableid)
@@ -28,7 +28,7 @@ for line in dfh.readlines():
     else:
         dates[year_emb] = {num: int(timestamp)}
 
-mfh = open('diff_ids.list')
+mfh = open('data/missing_mrn.list')
 for line in mfh.readlines():
     m = re.match(re_cable_id, line.strip())
     if m is not None:
@@ -67,14 +67,17 @@ for year_emb, numlist in missing.iteritems():
                     if days > 90: # not much of a value
                         continue
                     durations.append(days)
-                    print "%s%s %s %s %s %s" % (
-                        year_emb, 
-                        num, 
-                        last_ts,
-                        next_ts,
-                        duration,
-                        days) 
+                    new_ts = last_ts + (duration / 2)
+                    print "%s%s %s" % (year_emb, num, new_ts)
+#                    print "%s%s %s %s %s %s -> %s" % (
+#                        year_emb, 
+#                        num, 
+#                        last_ts,
+#                        next_ts,
+#                        duration,
+#                        days,
+#                        new_ts) 
                             
                 last_num = existing_num
 
-average = float(sum(durations)) / len(durations)
+#average = float(sum(durations)) / len(durations)
