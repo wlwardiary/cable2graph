@@ -11,6 +11,7 @@ missing = set()
 embassy = set()
 ref = []
 timestamp_map = {}
+missing_timestamps = {}
 captions = {}
 classifications = {}
 
@@ -38,9 +39,12 @@ for l in open('data/classifications.list').readlines():
     classifications.update({ clss_mrn.strip(): clss.strip() })
 
 for j in open('data/dates.list').readlines():
-    tmp_cable_id = j.split(' ')[0].strip()
-    tmp_ts = j.split(' ')[1].strip()
-    timestamp_map.update({tmp_cable_id: tmp_ts})
+    tmp_cable_id, tmp_ts = j.split(' ')
+    timestamp_map.update({ tmp_cable_id.strip(): tmp_ts.strip() })
+
+for dml in open('data/dates_missing.list').readlines():
+    tmp_mrn, tmp_ts = dml.split(' ')
+    missing_timestamps.update({ tmp_mrn.strip(): tmp_ts.strip() })
 
 cable_ids = sorted(cable_ids)
 ref = sorted(ref)
@@ -48,6 +52,7 @@ ref = sorted(ref)
 place = []
 color = []
 timestamp = []
+missing_timestamp = []
 caption = []
 classification = []
 
@@ -65,6 +70,8 @@ for c in cable_ids:
 
     if timestamp_map.has_key(c):
         timestamp.append(int(timestamp_map[c]))
+    elif missing_timestamps.has_key(c):
+        timestamp.append(int(missing_timestamps[c]))
     else:
         timestamp.append(0)
 
