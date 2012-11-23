@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import igraph, math, csv
+import igraph, math, csv, time
 from sys import argv, exit
 from os import listdir, path
 from jinja2 import Template, Environment, FileSystemLoader
