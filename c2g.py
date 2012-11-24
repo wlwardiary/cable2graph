@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import igraph
-import cPickle as pickle
 from sys import argv, exit
 from os import listdir, path
 import re
@@ -45,6 +44,14 @@ for j in open('data/dates.list').readlines():
 for dml in open('data/dates_missing.list').readlines():
     tmp_mrn, tmp_ts = dml.split(' ')
     missing_timestamps.update({ tmp_mrn.strip(): tmp_ts.strip() })
+
+tags = {}
+
+for k,v in [ (l.split() ) for l in open('data/tags_edges.list').readlines() ]:
+    if tags.has_key(k):
+        tags[k].append(v)
+    else:
+        tags[k] = list()
 
 cable_ids = sorted(cable_ids)
 ref = sorted(ref)
@@ -160,7 +167,7 @@ def is_star(gstar):
     # yep, pretty sure it's a star
     return True
 
-def traverse(sg, visited, node):
+def walk(sg, visited, node):
     visited.append(node)
     # find possible new nodes to visit next
     next_nodes = [ (v['betweenness'], v.index) for v in sg.vs[node].neighbors() if v['betweenness'] > 0 and v.index not in visited ]
@@ -169,7 +176,7 @@ def traverse(sg, visited, node):
         btwn, n = max(next_nodes)
         print node, n, btwn, sg.vs[node]['label'], sg.vs[n]['label']
         # play it again sam
-        traverse(sg, visited, n)
+        walk(sg, visited, n)
     else:
         print "end."
 
@@ -182,11 +189,20 @@ def get_trail(sg):
     for e in top_edge:
         # make sure the first run dosn't go into the direction of the source
         trail.append(e.source)
-        # traverse along both sides of the edge
-        traverse(sg, trail, e.target)
-        traverse(sg, trail, e.source)
+        # walk along both sides of the edge
+        walk(sg, trail, e.target)
+        walk(sg, trail, e.source)
     
     return trail
+
+def get_tags(labels):
+    tmp_tags = set()
+    for label in labels:
+        if label in tags:
+            for tag in tags[label]:
+                tmp_tags.add(tag)
+
+    return tmp_tags
 
 def save(sg, prefix):
     # create a uniq id for the graph
@@ -201,10 +217,11 @@ def save(sg, prefix):
     sg['density'] = de
     sg['radius'] = ra
     sg['avg_path_length'] = pl
-    filename = '%s_di%s_de%s_ra%s_pl%s_%s.gml' % (prefix, di, de, ra, pl ,digest)
+    sg['tags'] = ','.join(get_tags(sg.vs['label']))
+    filename = '%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (prefix, di, de, ra, pl ,digest)
     print prefix, di, de, ra, pl
     print sg
-    sg.write_gml(filename)
+    sg.write_graphml(filename)
     print filename, len(sg.es), len(sg.vs)
 
 # use size of the largest cluster as limit
