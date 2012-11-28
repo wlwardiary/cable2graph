@@ -1,30 +1,57 @@
 #!/usr/bin/env python
-import csv, re, sys, os.path, time
-from os import environ
+# GPLv3 by anonymous 2011-2012
+#
+# extract cable features from cables.csv
+# - MRNs
+# - references
+# - TAGS
+# - locations
+# - subject
+# - captions
+# - all header data for ACP-126 and ACP-127
+#   origin, from, to, info, routing, classifications, priorties and operating signals
+# - dates
+# 
+# dirty data, be gentle
+#
+
+import csv, re, sys, time
+from os import environ, path
 from datetime import datetime
 
+# set timezone fixed to UTC for the date parser
 environ['TZ'] = 'UTC'
 time.tzset()
+
+if len(sys.argv) < 2:
+    sys.stderr.write("Usage: %s /path/to/cables.csv [LIMIT]\n" % argv[0])
+    sys.exit(1)
 
 limit = None
 if len(sys.argv) == 3:
     limit = int(sys.argv[2])
 
 source = sys.argv[1]
+if not path.exists(source):
+    sys.stderr.write("Error: source %s does not exist.\n" % source)
+    sys.exit(1)
 
-# dirty data, be gentle
+#
+# compile all the regex magic
+#
 
 # remove page break from body to avoid problems 
 # when subject is spaning multiple pages
 re_page = re.compile(r'^(\ {1,30}(CONFIDENTIAL|SECRET|UNCLASSIFIED)\s+){1,3}^PAGE\s+[0-9]{2}.*\n', re.M)
 
 # multi line reference from body
-# second regex is matching mrn, see below
+# second regex is matching MRN, see below
 re_ref = re.compile(r'^(REF|REFS|Ref|RETELS|REFTEL):([\s\S]*?)(?=(?:\n\s\n)|1\.|SIPDIS|Summary|SUMMARY|Classified\ By|CLASSIFIED\ BY|Sensitive\ But\ Unclassified|SENSITIVE\ BUT\ UNCLASSIFIED)', re.M)
 
 # parse TAGS over multiple lines with a couple of stop words
 re_tags = re.compile(r'^TAGS:([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED\ BY|Classified\ by|REF:|REFS:|Ref:|RETELS:|REFTEL:|REF\ :|SUBJECT:|Subject:|SUBJ:|Subj:|E\.O\.|\*\*\*\*|FINAL\ SECTION\ OF|SECRET\ |CONFIDENTIAL\ |UNCLASSIFIED\ |COMBINE:))', re.M)
 
+# load valid TAGS
 # source cabletags website
 all_subject_tags = [ l.strip() for l in open('data/tags.subject').readlines() ] 
 all_program_tags = [ l.strip() for l in open('data/tags.program').readlines() ] 
@@ -33,16 +60,39 @@ re_subject_tags = re.compile(r'(' + '|'.join(all_subject_tags) + r')',re.M)
 re_program_tags = re.compile(r'(' + '|'.join(all_program_tags) + r')',re.M)
 
 # people mentioned in the TAGS field
-re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO|HO|CO|RO|PINR|OTRA|PREL|APER|CASC|CLOK|CVIS|DR|EG|FR|MX|NI|PM|PA|SCE|SY|UN|US|USPTO|VM)(\W+)?\(.*\)')
+# re_ppl_tags = re.compile(r'(OVIP|OREP|SP|JO|HO|CO|RO|PINR|OTRA|PREL|APER|CASC|CLOK|CVIS|DR|EG|FR|MX|NI|PM|PA|SCE|SY|UN|US|USPTO|VM)(\W+)?\(.*\)')
 
-# try to match a valid MRN
-re_mrn1 = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
-re_mrn2 = re.compile(r'([0-9]{2,4})?([a-zA-Z]{3,18})\s([0-9]{1,8})')
-re_mrn3 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})\W')
-re_mrn4 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})(\s+\(NOTAL|EXDIS|NODIS|Notal|Exdis|Nodis\))?\W')
+# try to match a valid MRN o_O
+# re_mrn1 = re.compile(r'\W+[A-Z]\W+([0-9]{2,4})?([a-zA-Z\s]{3,12})\s([0-9]{1,8})')
+# re_mrn2 = re.compile(r'([0-9]{2,4})?([a-zA-Z]{3,18})\s([0-9]{1,8})')
+# re_mrn3 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})\W')
+# re_mrn4 = re.compile(r'\b([A-Z][\s\W]{1,3})?([0-9]{2,4})?\s?([a-zA-Z\s]{3,18})\s?([0-9]{1,8})(\s+\(NOTAL|EXDIS|NODIS|Notal|Exdis|Nodis\))?\W')
 
-# embassy names
-emb = r'(ABIDJAN|ABU\s?DHABI|ABUJA|ACCRA|ADANA|ADDIS\s?ABABA|AITTAIPEI|AITTAIPIE|ALEXANDRIA|ALGIERS|ALMATY|AMEMBASSYHANOI|AMMAN|AMSTERDAM|ANILA|ANKARA|ANOI|ANTANANARIVO|APIA|AQNA|ARAJEVO|ASHGABAT|ASMARA|ASTANA|ASUNCION|ATANANARIVO|ATHENS|AUCKLAND|BAGHDAD|BAKU|BAMAKO|BANDARSERIBEGAWAN|BANGKOK|BANGOK|BANGUI|BANJUL|BARCELONA|BASRAH|BAU|BEIJIG|BEIJING|BEIRT|BEIRUT|BELFAST|BELGADE|BELGRADE|BELIZE|BELMOPAN|BERLIN|BERN|BISHKEK|BOGOTA|BONN|BRAILIA|BRASIIA|BRASILIA|BRATISLAVA|BRAZZAVILLE|BRIDGETOWN|BRUSELS|BRUSSELS|BRUSSLS|BRUSSQLS|BUCHAREST|BUDAPEST|BUENOS\s?AIRES|BUENOSQRES|BUJUMBURA|BUSSELS|CAIRO|CALCUTTA|CALGARY|CANBERRA|CAPETOWN|CARACAS|CASABLANCA|CDGENEVA|CHENGDU|CHENNAI|CHIANGMAI|CHISINAU|CIUDADJUAREZ|COLOMBO|CONAKRY|COPENHAEN|COPENHAGEN|COTONOU|CURACAO|DAKAR|DAMASCCUS|DAMASCUS|DARESSALAAM|DHAHRAN|DHAKA|DILI|DJIBOUTI|DOHA|DUBAI|DUBLIN|DULIN|DURBAN|DUSHANBE|DUSSELDORF|ECTION|FESTTWO|FLORENCE|FRANKFURT|FREETOWN|FSCCHARLESTON|FSINFATC|FUKUOKA|GABORONE|GENEVA|GEORGETON|GEORGETOWN|GRENADA|GUADALAJARA|GUANGZHOU|GUATEMALA|GUATEMLA|GUAYAQUIL|HALIFAX|HAMBURG|HAMILTON|HANOI|HARARE|HAVANA|HELSINKI|HERMOSILLO|HILLAH|HOCHIMINHCITY|HONGKOG|HONGKONG|HYDERABAD|IHARTOUM|INSHASA|IRANRPODUBAI|ISLAMABAD|ISTANBUL|IZMIR|JAKARTA|JEDDAH|JERUSALEM|JOHANNESBURG|KABUL|KADUNA|KAMPALA|KAPALA|KARACHI|KATHMANDU|KHARTOUM|KIEV|KIGALI|KINGSTON|KINHASA|KINSHAA|KINSHASA|KIRKUK|KOLKATA|KOLONIA|KOROR|KRAKOW|KUALALUMPUR|KUWAIT|KYIV|LAGOS|LAHORE|LAPAZ|LEIPZIG|LENINGRAD|LIBREVILLE|LILONGWE|LIMA|LINSK|LISBON|LJUBLJANA|LOME|LONDON|LUANDA|LUSAKA|LUXEMBOURG|MAAMA|MADRAS|MADRID|MAILA|MAJURO|MALABO|MANAGUA|MANAMA|MANILA|MAPUTO|MARSEILLE|MASERU|MATAMOROS|MBABANE|MELBOURNE|MERIDA|MEXICO|MILAN|MILSK|MINSI|MINSK|MOGADISHU|MONROVIA|MONTERREY|MONTEVIDEO|MONTREAL|MOSCOW|MOSUL|MUMBAI|MUNICH|MUSCAT|NAGOYA|NAHA|NAIROBI|NAPLES|NASSAU|NDJAENA|NDJAMENA|NEWDELHI|NIAMEY|NICOSIA|NOFORNMOGADISHU|NOGALES|NOUAKCHOTT|NOUKKCHOTT|NSSAU|NUEVOLAREDO|OSAKAKOBE|OSLO|OTTAWA|OUAGADOUGOU|PANAMA|PARAMARIBO|PARIS|PARISFR|PARTO|PERTH|PESHAWAR|PHNOMPENH|PODGORICA|PONTADELGADA|PORTAUPRINCE|PORTLOUIS|PORTMORESBY|PORTOFPAIN|PORTOFSPAIN|POTAUPRINCE|PRAGUE|PRAIA|PRETORIA|PRISTINA|QUEBEC|QUITO|QXICO|RABAT|RANGOON|RECIFE|REYKJAVIK|RIGA|RIODEJANEIRO|RIYADH|ROME|RPODUBAI|RUSSELS|SANAA|SANJOSE|SANODOMINGO|SANSALVADOR|SANTIAGO|SANTODOMINGO|SANTOOMINGO|SAO\s?PAULO|SAPPORO|SARAEVO|SARAJEVO|SECSTATE|SEOUL|SETION|SHANGHAI|SHENYANG|SIFIEDABUJA|SINGAPORE|SKOPJE|SOFIA|SOIA|STATE|STOCKHOLM|STPETERSBURG|STRASBOURG|SURABAYA|SUVA|SYDNEY|TAIPEI|TALLINN|TASHKENT|TBILISI|TEGUCIGALPA|TEHRAN|TELAVIV|THEHAGE|THEHAGU|THEHAGUE|THESSALONIKI|TIJUANA|TILISI|TIRANA|TOKYO|TORONTO|TRIPOLI|TUNIS|ULAANBAATAR|USOSCE|USTRGENEVA|USUNNEWYORK|VALLETTA|VANCOUVER|VATICAN|VIENNA|VIENTIANE|VILNIUS|VLADIVOSTOK|WARSAW|WASHDC|WELLINGTON|WINDHOEK|YAOUNDE|YEKATERINBURG|YEREVAN|ZAGREB)'
+# embassy names with optional space in city names
+re_emb = (
+r'(ABIDJAN|ABU\s?DHABI|ABUJA|ACCRA|ADANA|ADDIS\s?ABABA|AITTAIPEI|AITTAIPIE|ALEXANDRIA|ALGIERS|ALMATY|AMEMBASSYHANOI|AMMAN|AMSTERDAM|ANILA|ANKARA|ANOI|ANTANANARIVO|APIA|AQNA|ARAJEVO|ASHGABAT|ASMARA|ASTANA|ASUNCION|ATANANARIVO|ATHENS|AUCKLAND|'
+'BAGHDAD|BAKU|BAMAKO|BANDARSERIBEGAWAN|BANGKOK|BANGOK|BANGUI|BANJUL|BARCELONA|BASRAH|BAU|BEIJIG|BEIJING|BEIRT|BEIRUT|BELFAST|BELGADE|BELGRADE|BELIZE|BELMOPAN|BERLIN|BERN|BISHKEK|BOGOTA|BONN|BRAILIA|BRASIIA|BRASILIA|BRATISLAVA|BRAZZAVILLE|BRIDGETOWN|BRUSELS|BRUSSELS|BRUSSLS|BRUSSQLS|BUCHAREST|BUDAPEST|BUENOS\s?AIRES|BUENOSQRES|BUJUMBURA|BUSSELS|'
+r'CAIRO|CALCUTTA|CALGARY|CANBERRA|CAPETOWN|CARACAS|CASABLANCA|CDGENEVA|CHENGDU|CHENNAI|CHIANGMAI|CHISINAU|CIUDADJUAREZ|COLOMBO|CONAKRY|COPENHAEN|COPENHAGEN|COTONOU|CURACAO|' 
+r'DAKAR|DAMASCCUS|DAMASCUS|DARESSALAAM|DHAHRAN|DHAKA|DILI|DJIBOUTI|DOHA|DUBAI|DUBLIN|DULIN|DURBAN|DUSHANBE|DUSSELDORF|'
+r'FESTTWO|FLORENCE|FRANKFURT|FREETOWN|FSCCHARLESTON|FSINFATC|FUKUOKA|' 
+r'GABORONE|GENEVA|GEORGETON|GEORGETOWN|GRENADA|GUADALAJARA|GUANGZHOU|GUATEMALA|GUATEMLA|GUAYAQUIL|' 
+r'HALIFAX|HAMBURG|HAMILTON|HANOI|HARARE|HAVANA|HELSINKI|HERMOSILLO|HILLAH|HOCHIMINHCITY|HONGKOG|HONGKONG|HYDERABAD|'
+r'IHARTOUM|INSHASA|IRANRPODUBAI|ISLAMABAD|ISTANBUL|IZMIR|'
+r'JAKARTA|JEDDAH|JERUSALEM|JOHANNESBURG|'
+r'KABUL|KADUNA|KAMPALA|KAPALA|KARACHI|KATHMANDU|KHARTOUM|KIEV|KIGALI|KINGSTON|KINHASA|KINSHAA|KINSHASA|KIRKUK|KOLKATA|KOLONIA|KOROR|KRAKOW|KUALALUMPUR|KUWAIT|KYIV|'
+r'LAGOS|LAHORE|LAPAZ|LEIPZIG|LENINGRAD|LIBREVILLE|LILONGWE|LIMA|LINSK|LISBON|LJUBLJANA|LOME|LONDON|LUANDA|LUSAKA|LUXEMBOURG|'
+r'MAAMA|MADRAS|MADRID|MAILA|MAJURO|MALABO|MANAGUA|MANAMA|MANILA|MAPUTO|MARSEILLE|MASERU|MATAMOROS|MBABANE|MELBOURNE|MERIDA|MEXICO|MILAN|MILSK|MINSI|MINSK|MOGADISHU|MONROVIA|MONTERREY|MONTEVIDEO|MONTREAL|MOSCOW|MOSUL|MUMBAI|MUNICH|MUSCAT|'
+r'NAGOYA|NAHA|NAIROBI|NAPLES|NASSAU|NDJAENA|NDJAMENA|NEWDELHI|NIAMEY|NICOSIA|NOFORNMOGADISHU|NOGALES|NOUAKCHOTT|NOUKKCHOTT|NSSAU|NUEVOLAREDO|'
+r'OSAKAKOBE|OSLO|OTTAWA|OUAGADOUGOU|'
+r'PANAMA|PARAMARIBO|PARIS|PARISFR|PARTO|PERTH|PESHAWAR|PHNOMPENH|PODGORICA|PONTADELGADA|PORTAUPRINCE|PORTLOUIS|PORTMORESBY|PORTOFPAIN|PORTOFSPAIN|POTAUPRINCE|PRAGUE|PRAIA|PRETORIA|PRISTINA|'
+r'QUEBEC|QUITO|QXICO|'
+r'RABAT|RANGOON|RECIFE|REYKJAVIK|RIGA|RIODEJANEIRO|RIYADH|ROME|RPODUBAI|RUSSELS|'
+r'SANAA|SANJOSE|SANODOMINGO|SANSALVADOR|SANTIAGO|SANTODOMINGO|SANTOOMINGO|SAO\s?PAULO|SAPPORO|SARAEVO|SARAJEVO|SECSTATE|SEOUL|SETION|SHANGHAI|SHENYANG|SIFIEDABUJA|SINGAPORE|SKOPJE|SOFIA|SOIA|STATE|STOCKHOLM|STPETERSBURG|STRASBOURG|SURABAYA|SUVA|SYDNEY|'
+r'TAIPEI|TALLINN|TASHKENT|TBILISI|TEGUCIGALPA|TEHRAN|TELAVIV|THEHAGE|THEHAGU|THEHAGUE|THESSALONIKI|TIJUANA|TILISI|TIRANA|TOKYO|TORONTO|TRIPOLI|TUNIS|'
+r'ULAANBAATAR|USOSCE|USTRGENEVA|USUNNEWYORK|'
+r'VALLETTA|VANCOUVER|VATICAN|VIENNA|VIENTIANE|VILNIUS|VLADIVOSTOK|'
+r'WARSAW|WASHDC|WELLINGTON|WINDHOEK|YAOUNDE|YEKATERINBURG|YEREVAN|ZAGREB)'
+)
 
 # list like A. B. C. / A) B) C)
 mrn5_list = r'([A-Z][\s\W]{1,3})?'
@@ -51,19 +101,232 @@ mrn5_list = r'([A-Z][\s\W]{1,3})?'
 mrn5_year = r'([0,6-9][0-9]|19[0-9]{2}|20[0-9]{2})?'
 mrn5_num = r'([0-9]{1,10})'
 # caption after the MRN like (NOTAL) or (EXDIS)
-mrn5_caption = '(\s+\((NOTAL|EXDIS|NODIS|LIMDIS|ROGER|SIPDIS|STADIS|OIG|DISSENT|MED|DS)\))?'
-mrn5_str = r'\W' + mrn5_list + mrn5_year + r'(\s)?' + emb + r'(\s)?' + mrn5_num + mrn5_caption + '\W'
+mrn5_caption = '(\s+\((NOTAL|EXDIS|NODIS|STADIS)\))?'
+mrn5_str = r'\W' + mrn5_list + mrn5_year + r'(\s)?' + re_emb + r'(\s)?' + mrn5_num + mrn5_caption + '\W'
 re_mrn5 = re.compile(mrn5_str, re.I)
 
 # find subject over multiple lines
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
 
+# caption area goes from the start of the body until E.O.
 re_caption = re.compile(r'(.*)^E\.(O|0)\.', re.S|re.M)
 
-# regex for header
-re_head_fm = re.compile(r'VZ[\s\S]+\n(FM [A-Z\b\ ]+)')
-re_head_to   = re.compile(r'VZ[\s\S]+\n(TO [A-Z\ /]+)(PRIORITY|IMMEDIATE)?[0-9]{1,10}')
+# ACP-127 FL1 start of message indicator
+# two char transfer station
+# ADI, AJI, AYI, BGI, BSI, BSO, DOI, DRI,FRI, JII, KEI, LII, LOI, MDI, MZI, PCI, SFI, UNI, XRO, XYZ
+# exist in the cables.
+# I for incoming, O for outgoing and Z for ?
+re_acp127_som = re.compile(r'VZCZC([A-Z]{2}[Z,I,O])([0-9]{4})')
 
+# ACP-127 FL2 Addressees
+# First two letter Priority
+# Second Routing, can be multi line
+# See: ROUTING INDICATOR DELINEATION TABLE from ACP-121
+# OO RUEHC RHRMDAB RUCNRAQ RUEKJCS RUENAAA RHEHNSC
+# RUEKJCS RUCNDT RUCXONI RUCJACC RUHPFTA RHRMABI RUWDXEU RUEHDE
+re_acp127_addr = re.compile(r'(ZZ|OO|PP|RR)\ ([QRU][A-IK-QS-UW-Z][A-Z]{1,5}\s?)+')
+
+# ACP-127 FL3 Originator
+# originating station's routing indicator (osri), station serial number (ssn) and time of transmission (tot)
+# day of the year, hour and minute %j%H%M
+# Examples:
+# DE RUEHLL #0524 2351212
+# DE RUZDSVC #0741 2611349
+re_acp127_origin = re.compile(r'^DE\ ([QRU][A-IK-QS-UW-Z][A-Z]{1,5}) #([0-9]{4})(/([0-9]{2}))?(\ [0-9]{3,7})?',re.M)
+
+# ACP-127 FL4 classification line
+# Examples:
+# ZNR UUUAA ZZH
+# ZNR UUUUU ZFD
+# ZNY SSSSS/BBBBB ZZH
+#
+# AA in UUUAA is TRC Transmission Release Code
+# A - Australia, 
+# B - British, 
+# C - Canada, 
+# O - Japan, 
+# U - United States (from non. U.S. interfaces)
+# X - all other NATO
+#
+# SSSSS/BBBBB: B indicates Military
+# ZNY SSSBB/FFFFF, ZNY CCCBB/FFFFF, or ZNY TTTBB/FFFFF would be TOP SECRET for UK
+# 
+# ZZH: from Department of State offices
+# ZFD: This message is a suspected duplicate
+# ZZK: NIACT
+# ZDF: Received
+# ZOC: Station(s) called relay this message to addressees for whom you are responsible
+# ZUI: Your attention is invited to...
+# ZFR: cancel
+# ZOJ: This is corrected version number.
+# ZEL: This message is a correction
+# ZEX: book message
+
+re_acp127_clss = re.compile(r'^ZN[R,Y]\ ([U,E,C,S,T]{5}|[U,E,C,S,T]{3}[A,B,C,O,U,X]{2})(/[B,F]{5})?(\ Z[A-Z]{2})+', re.M)
+
+# ACP-126 date time group
+# Z,O,P,R == Flash, Immediate, Priority, Routine
+# optional Z.... in the end is operation signaling for night actions and such
+# Examples
+# O P 180800Z MAR 08 ZDS
+# O P 260738Z APR 08
+# P 011533Z MAY 09
+
+re_acp126_dtg = re.compile(r'^([ZOPR\ ]{4})([0-9]{6}Z [A-Z]{3} [0-9]{2})( Z[A-Z0-9]+)?', re.M)
+
+
+#
+# functions
+#
+
+# parse the ACP-126 message header
+def parse_acp126(header):
+    parsed = dict()
+
+    match_dtg = re.match(re_acp126_dtg, header)
+    if match_dtg is None:
+        return False
+    else:
+        parsed['precedence'] = match_dtg.group(1).strip().split(' ')
+        if match_dtg.group(3) is not None:
+            parsed['operating_signal'] = match_dtg.group(3).strip()
+    
+    lines = header.split('\n')
+    to_start = None
+    to_end = None
+    info_start = None
+    for num, line in enumerate(lines):
+        if num == 0:
+            continue
+        if line[0:3] == 'FM ' and 'FM' not in parsed:
+            parsed['FM'] = line[3:]
+            continue
+        if line[0:3] == 'TO ' and not to_start:
+            to_start = num
+            continue
+        if line[0:5] == 'INFO ' and not info_start:
+            to_end = num
+            info_start = num
+
+    if to_start and to_end:
+        parsed['TO'] = [ line.strip() for line in lines[to_start:to_end ] if len(line.strip()) > 0 ] 
+
+    if to_start and not to_end and not info_start:
+        parsed['TO'] = [ line.strip() for line in lines[to_start:] if len(line.strip()) > 0 ]
+
+    if info_start:
+        parsed['INFO'] = [ line.strip() for line in lines[info_start:] if len(line.strip()) > 0 ]
+
+    return parsed
+
+# parse ACP-127 msg header
+def parse_acp127(header):
+    parsed = dict()
+
+    match_som = re.match(re_acp127_som, header)
+    if match_som is None:
+        return False
+
+    # FL2
+    match_addr = re.search(re_acp127_addr, header)
+    if match_addr is not None:
+        parsed['addr'] = match_addr.group(2).strip()
+
+    # FL3
+    match_origin = re.search(re_acp127_origin, header)
+    if match_origin is not None:
+        parsed['osri'] = match_origin.group(1)
+        parsed['ssn'] = int(match_origin.group(2))
+        if match_origin.group(4) is not None:
+            parsed['part'] = int(match_origin.group(4))
+        parsed['tot'] = match_origin.group(5)
+    
+    # FL4
+    match_clss = re.search(re_acp127_clss, header)
+    if match_clss is not None:
+        parsed['classification'] = match_clss.group(1)
+        if match_clss.group(2) is not None:
+            parsed['classification_external'] = match_clss.group(3)
+        if match_clss.group(3) is not None:
+            parsed['classification_operating_signal'] = match_clss.group(3)
+    # FL5
+    # date time group same as acp126
+    match_dtg = re.search(re_acp126_dtg, header)
+    if match_dtg is not None:
+        parsed['precedence'] = match_dtg.group(1).strip().split(' ')
+        if match_dtg.group(3) is not None:
+            parsed['dtg_operating_signal'] = match_dtg.group(3).strip()
+
+    to_start = None
+    to_end = None
+    info_start = None
+    lines = header.split('\n')
+    for num, line in enumerate(lines):
+        # skip the first, already parsed with regex
+        if num in [0,1,2,3,4]:
+            continue
+
+        if line[0:3] == 'FM ':
+            parsed['FM'] = line[3:].strip()
+
+        if line[0:3] == 'TO ' and not to_start:
+            to_start = num
+            continue
+
+        if line[0:5] == 'INFO ' and not info_start:
+            to_end = num
+            info_start = num
+
+    if to_start and to_end:
+        parsed['TO'] = [ line.strip() for line in lines[to_start:to_end ] if len(line.strip()) > 0 ] 
+
+    if to_start and not to_end and not info_start:
+        parsed['TO'] = [ line.strip() for line in lines[to_start:] if len(line.strip()) > 0 ]
+
+    if info_start:
+        parsed['INFO'] = [ line.strip() for line in lines[info_start:] if len(line.strip()) > 0 ]
+
+    return parsed
+
+#
+# init data vars
+#
+
+# list of MRNs contained in the cables.csv
+mrns = set()
+
+# MRN reference's from csv header
+ref_ids = set()
+ref_cnt = {}
+
+# MRN reference's from cable text body via regex
+ref_from_text = set()
+ref_body_mrns = set()
+ref_body_cnt = {}
+
+# MRN -> MRN relation for the graph
+# set of tuples
+edges = set()
+
+# all cable dates as POSIX MRN -> timestamp
+dates = {}
+
+# subjects as MRN -> subject
+subjects = {}
+
+# classifications for each MRN
+classifications = {}
+
+# locations from the csv header
+locations = set()
+
+# MRN -> TAGS relation
+# set of tuples
+tags_edges = set()
+    
+#
+# start reading the csv
+#
 csv.field_size_limit(131072*2)
 
 try:
@@ -73,77 +336,66 @@ except IOError:
     sys.exit(1)
 
 count = 0
-
-mrns = set()
-
-# reference from header
-ref_ids = set()
-ref_cnt = {}
-
-# reference from body text via regex
-ref_from_text = set()
-ref_body_mrns = set()
-ref_body_cnt = {}
-
-diff_cnt = {}
-edges = set()
-dates = {}
-subjects = {}
-classifications = {}
-locations = set()
-tags_edges = set()
-
 for row in content:
     count = count + 1
     if limit is not None and count > limit:
-        print "Limit %d reached." % limit
+        sys.stderr.write("Limit %d reached.\n" % limit)
         sys.exit(0)
 
     # read csv values
-    line_num, cabledate, cable, location, classification, referrer, head, body = row
+    line_num, cabledate, mrn, location, classification, referrer, head, body = row
+
+    # parse header
+    # either:
+    # - valid ACP-126 header (~5936 cables)
+    # - valid ACP-127 header (~193225 cables)
+    # - only partial record (~49082 cables)
+    # - valid ACP 126/127 later in the header
+
+    #acp126 = parse_acp126(head)
+    #if acp126 and ('Z' in acp126['precedence'] or acp126.has_key('operating_signal')):
+    #    print "126 ",  mrn, acp126
+
+    #acp127 = parse_acp127(head)
+    #if acp127:
+    #    print "127 ", mrn, acp127['osri']
 
     #pos = body.find('E.O.')
     #if pos > 0:
-    #    print cable, body[0:pos].replace('\n','').strip()
+    #    print mrn, body[0:pos].replace('\n','').strip()
 
     #pos_fm = head.find('\nFM ')
     #pos_to = head.find('\nTO ')
-    #pos_banner = head.find('This record is a partial extract of the original cable. The full text of the original cable is not available.')
+    # pos_banner = head.find('This record is a partial extract of the original cable. The full text of the original cable is not available.')
     #if pos_fm > -1 and pos_to > -1 and pos_to > pos_fm:
     #    #print head[pos_fm:pos_to].strip()
     #    pass
     #elif pos_banner > -1:
     #    pass
     #else:
-    #    print cable
+    #    print mrn
     #    print head
 
     #match_caption = re.match(re_caption, body)
     #if match_caption is not None:
-    #    print cable, match_caption.group(0)
+    #    print mrn, match_caption.group(0)
     #del body, match_caption
 
-    #match_head_fm = re.match(re_head_fm, head)
-    #match_head_to = re.match(re_head_to, head)
-    #if match_head_fm is not None and match_head_to is not None:
-    #    print '%s\t%s\t%s' % ( cable, match_head_fm.group(1).strip(), match_head_to.group(1).strip() )
-    #
-    # continue
-
+    # parse cable date into POSIX timestamp
     tdate = datetime.strptime(cabledate.strip(), '%m/%d/%Y %H:%M')
     timestamp = int(time.mktime(tdate.timetuple()))
-    dates.update({cable:timestamp})
-    locations.add(location)
-    classifications.update({cable:classification})
+    dates.update({mrn:timestamp})
 
-    mrns.add(cable)
+    locations.add(location)
+    classifications.update({mrn:classification})
+    mrns.add(mrn)
 
     # remove page break
     body_filterd, page_match_count = re.subn(re_page,'',body)
 
     for r in referrer.split('|'):
         if len(r.strip()) > 0:
-            edges.add((cable.upper(),r.upper()))
+            edges.add((mrn.upper(),r.upper()))
             ref_ids.add(r)
             if ref_cnt.has_key(r):
                 ref_cnt[r] = ref_cnt[r] + 1
@@ -163,7 +415,7 @@ for row in content:
 
             txt_mrn = "%s%s%s" % (year.strip() , place.strip().upper().replace(' ',''), int(num.strip()) )
             # load them, but do the cross check later
-            ref_from_text.add((cable, txt_mrn, caption.strip().upper()))
+            ref_from_text.add((mrn, txt_mrn, caption.strip().upper()))
             ref_body_mrns.add(txt_mrn)
 
             if ref_body_cnt.has_key(txt_mrn):
@@ -176,10 +428,10 @@ for row in content:
     if subject_match is not None:
         subject = subject_match.group(2).replace('\n','').strip()
     else:
-        print "No Subject found in MRN %s" % cable
+        sys.stderr.write("INFO: No Subject found in MRN %s\n" % mrn)
         subject = ''
 
-    subjects.update({cable:subject})
+    subjects.update({mrn:subject})
 
     # match TAGS
     tags_match = re.search(re_tags, body)
@@ -189,14 +441,14 @@ for row in content:
         program_tags = re.findall(re_program_tags, tags_line)
         # ppl_tags = re.findall(re_ppl_tags, tag)
         for stag in subject_tags:
-            tags_edges.add((cable,stag))
+            tags_edges.add((mrn,stag))
         for ktag in program_tags:
-            tags_edges.add((cable,ktag))
+            tags_edges.add((mrn,ktag))
     else:
-        print "No TAGS found in MRN %s" % cable
+        sys.stderr.write("INFO: No TAGS found in MRN %s\n" % mrn)
 
     if count % 10000 == 0:
-        print count
+        sys.stderr.write("%s lines read\n" % count)
 
 # cross check for mrn extracted from body
 # mrn exists in the header or
