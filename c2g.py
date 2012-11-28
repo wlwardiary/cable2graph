@@ -4,6 +4,7 @@ from sys import argv, exit
 from os import listdir, path
 import re
 from hashlib import md5
+from collections import defaultdict
 
 cable_ids = set()
 missing = set()
@@ -45,13 +46,10 @@ for dml in open('data/dates_missing.list').readlines():
     tmp_mrn, tmp_ts = dml.split(' ')
     missing_timestamps.update({ tmp_mrn.strip(): tmp_ts.strip() })
 
-tags = {}
+tags = defaultdict(list)
 
 for k,v in [ (l.split() ) for l in open('data/tags_edges.list').readlines() ]:
-    if tags.has_key(k):
-        tags[k].append(v)
-    else:
-        tags[k] = list()
+    tags[k].append(v)
 
 cable_ids = sorted(cable_ids)
 ref = sorted(ref)
