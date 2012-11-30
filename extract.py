@@ -24,7 +24,7 @@ environ['TZ'] = 'UTC'
 time.tzset()
 
 if len(sys.argv) < 2:
-    sys.stderr.write("Usage: %s /path/to/cables.csv [LIMIT]\n" % argv[0])
+    sys.stderr.write("Usage: %s /path/to/cables.csv [LIMIT]\n" % sys.argv[0])
     sys.exit(1)
 
 limit = None
@@ -106,6 +106,9 @@ mrn5_str = r'\W' + mrn5_list + mrn5_year + r'(\s)?' + re_emb + r'(\s)?' + mrn5_n
 re_mrn5 = re.compile(mrn5_str, re.I)
 
 # find subject over multiple lines
+# line starts with SUBJECT:
+# followed by space and non-space greedy matching which can span multiple lines
+# until two new lines or other body elements
 re_subject = re.compile(r'^(SUBJ|SUBJECT):([\s\S]*?)(?=(?:\n\s\n)|(?:CLASSIFIED BY|Classified by|REF:|REFS:))', re.M)
 
 # caption area goes from the start of the body until E.O.
@@ -174,6 +177,44 @@ re_acp127_clss = re.compile(r'^ZN[R,Y]\ ([U,E,C,S,T]{5}|[U,E,C,S,T]{3}[A,B,C,O,U
 
 re_acp126_dtg = re.compile(r'^([ZOPR\ ]{4})([0-9]{6}Z [A-Z]{3} [0-9]{2})( Z[A-Z0-9]+)?', re.M)
 
+#
+# normalize station names
+#
+
+# optional start with TO or INFO followed by space
+re_str_pre = r'^((TO|INFO)\ +)?'
+
+# routing indicator
+re_str_ri  = r'([QRU][A-IK-QS-UW-Z][A-Z]{1,5})'
+
+# we do greedy matching, (*?) so it 
+# must follow a / or new line or...
+re_str_end = r'(?=\/|$|NIACT|IMMEDIATE|PRIORITY|ROUTINE|[0-9]{1,6})'
+
+# plain language single destination
+# Examples:
+# TO USMISSION USUN NEWYORK NIACT IMMEDIATE
+# INFO AMEMBASSY PARIS
+# SECSTATE WASHDC IMMEDIATE 7102
+
+re_pl_single = re.compile(re_str_pre + r'([A-Z\ \-]*?)' + re_str_end, re.M)
+
+# plain language collective
+re_pl_collective = re.compile( re_str_pre + r'([A-Z\ \-]*?COLLECTIVE)' + re_str_end, re.M)
+
+# single station name with routing indicator
+re_ri_single = re.compile(re_str_pre + re_str_ri + '/([A-Z\ \-]*?)' + re_str_end, re.M)
+
+# collective with routing indicator
+re_ri_collective = re.compile(re_str_pre + re_str_ri + r'/([A-Z\ \-]*?COLLECTIVE)' + re_str_end, re.M)
+
+# routing indicator to plain language and the reverse
+ri2pl = dict()
+pl2ri = dict()
+
+for ri,pl in [ ( l.split(' ', 1) ) for l in open('data/routing.codes').readlines() ]:
+    ri2pl[ri.strip()] = pl.strip()
+    pl2ri[pl.strip()] = ri.strip()
 
 #
 # functions
@@ -244,11 +285,11 @@ def parse_acp127(header):
     # FL4
     match_clss = re.search(re_acp127_clss, header)
     if match_clss is not None:
-        parsed['classification'] = match_clss.group(1)
+        parsed['classification'] = match_clss.group(1).strip()
         if match_clss.group(2) is not None:
-            parsed['classification_external'] = match_clss.group(3)
+            parsed['classification_external'] = match_clss.group(3).strip()
         if match_clss.group(3) is not None:
-            parsed['classification_operating_signal'] = match_clss.group(3)
+            parsed['classification_operating_signal'] = match_clss.group(3).strip()
     # FL5
     # date time group same as acp126
     match_dtg = re.search(re_acp126_dtg, header)
@@ -288,6 +329,35 @@ def parse_acp127(header):
 
     return parsed
 
+# check raw input for valid station name
+def match_station(raw):
+    # match the most restrictive first
+    match_ri_collective = re.match(re_ri_collective, raw)
+    if match_ri_collective is not None:
+        return match_ri_collective.group(3).strip()
+
+    match_ri_single = re.match(re_ri_single, raw)
+    if match_ri_single is not None:
+        return match_ri_single.group(3).strip()
+
+    match_pl_collective = re.match(re_pl_collective, raw)
+    if match_pl_collective is not None:
+        m = match_pl_collective.group(3).strip()
+        if m in pl2ri:
+            return pl2ri[m]
+        else:
+            return m
+
+    match_pl_single = re.match(re_pl_single, raw)
+    if match_pl_single is not None:
+        m = match_pl_single.group(3).strip()
+        if m in pl2ri:
+            return pl2ri[m]
+        else:
+            return m
+
+    return False    
+
 #
 # init data vars
 #
@@ -324,6 +394,9 @@ locations = set()
 # set of tuples
 tags_edges = set()
     
+# routings
+from_to= set()
+
 #
 # start reading the csv
 #
@@ -352,29 +425,46 @@ for row in content:
     # - only partial record (~49082 cables)
     # - valid ACP 126/127 later in the header
 
-    #acp126 = parse_acp126(head)
-    #if acp126 and ('Z' in acp126['precedence'] or acp126.has_key('operating_signal')):
-    #    print "126 ",  mrn, acp126
+    acp127 = parse_acp127(head)
+    acp126 = parse_acp126(head)
 
-    #acp127 = parse_acp127(head)
-    #if acp127:
-    #    print "127 ", mrn, acp127['osri']
+    if acp127:
+        acp12x = acp127
+    elif acp126:
+        acp12x = acp126
+    else:
+        acp12x = False
+
+    if acp12x:
+        if 'osri' in acp12x:
+            osri = acp12x['osri']
+        elif 'FM' in acp12x and acp12x['FM'] in pl2ri:
+            osri = pl2ri[acp12x['FM']]
+        else:
+            osri = False
+            sys.stderr.write("INFO: No OSRI in MRN %s.\n" % mrn)
+
+        if osri and 'TO' in acp12x:
+            for to in acp12x['TO']:
+                ms = match_station(to)
+                if ms:
+                    from_to.add((mrn, osri, ms))
+                else:
+                    sys.stderr.write("INFO: Invalid TO line in MRN %s: (%s)\n" % (mrn, to))
+
+        if osri and 'INFO' in acp12x:
+            for info in acp12x['INFO']:
+                ms = match_station(info)
+                if ms:
+                    from_to.add((mrn, osri, ms))
+                else:
+                    sys.stderr.write("INFO: Invalid INFO line in MRN %s: (%s)\n" % (mrn, info))
 
     #pos = body.find('E.O.')
     #if pos > 0:
     #    print mrn, body[0:pos].replace('\n','').strip()
 
-    #pos_fm = head.find('\nFM ')
-    #pos_to = head.find('\nTO ')
     # pos_banner = head.find('This record is a partial extract of the original cable. The full text of the original cable is not available.')
-    #if pos_fm > -1 and pos_to > -1 and pos_to > pos_fm:
-    #    #print head[pos_fm:pos_to].strip()
-    #    pass
-    #elif pos_banner > -1:
-    #    pass
-    #else:
-    #    print mrn
-    #    print head
 
     #match_caption = re.match(re_caption, body)
     #if match_caption is not None:
@@ -487,6 +577,7 @@ print "Dates             : %s" % len(dates)
 print "Subjects          : %s" % len(subjects)
 print "TAGS Edges        : %s" % len(tags_edges)
 print "Locations         : %s" % len(locations)
+print "From -> To/Info   : %s" % len(from_to)
 
 
 cf = file('data/cable_ids.list','w')
@@ -500,6 +591,7 @@ locf = file('data/locations.list','w')
 tagsf = file('data/tags_edges.list','w')
 classf = file('data/classifications.list','w')
 captionsf = file('data/captions.list','w')
+fromtof = file('data/from_to.list','w')
 
 for i in sorted(mrns):
     cf.write('%s\n' % i)
@@ -545,3 +637,6 @@ for i in sorted(locations):
     locf.write('%s\n' % i)
 locf.close()
 
+for m,s,t in sorted(from_to):
+    fromtof.write('%s\t%s\t%s\n' % (m,s,t))
+fromtof.close()
