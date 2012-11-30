@@ -47,5 +47,5 @@ g.vs['weighted-out-degree'] = g.strength(mode='OUT', weights='weight')
 
 print g.summary()
 print "Writing from_to.gml..."
-g.write_gml('from_to.gml')
+g.write_gml('from_to.gml', creator='anonymous')
 
