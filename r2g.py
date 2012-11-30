@@ -30,8 +30,20 @@ except ImportError:
     edges, weight = map(list, zip(*ftcnt))
 
 g = igraph.Graph(edges, directed=True)
-g.es['weight'] = weight
 g.vs['label'] = sorted(ri)
+
+g.es['weight'] = weight
+g.es['betweenness'] = g.es.edge_betweenness()
+g.vs['authority'] = g.authority_score(weights='weight')
+g.vs['in-coreness'] = g.coreness(mode='IN')
+g.vs['out-coreness'] = g.coreness(mode='OUT')
+g.vs['convergence-degree'] = g.convergence_degree()
+g.vs['degree'] = g.degree()
+g.vs['in-degree'] = g.indegree()
+g.vs['out-degree'] = g.outdegree()
+g.vs['weighted-degree'] = g.strength(weights='weight')
+g.vs['weighted-in-degree'] = g.strength(mode='IN', weights='weight')
+g.vs['weighted-out-degree'] = g.strength(mode='OUT', weights='weight')
 
 print g.summary()
 print "Writing from_to.gml..."
