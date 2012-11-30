@@ -8,7 +8,7 @@ install jinja2
 
     $ pip install jinja2
 
-_[optional]_ create list of MRNs and edges as plain text files:
+_[optional]_ extract features from the cables.csv into smaller plain text files
 
     $ python extract.py cables.csv
 
@@ -33,13 +33,18 @@ or:
 * `python g2svg.py -h` for more options.
 * you _don't_ need to run `extract.py`, the code comes with all generated data/ files.
 
-# files
+# main tools
 
-* `c2g.py`: create graph and split into clusters and communities
+* `extract.py`: feature extraction from cables.csv
+* `c2g.py`: create a graph from the reference data and split the graph into clusters and communities
+* `t2g.py`: create a graph from the TAGS data
+* `r2g.py`: create a graph with the "from -> to" routing data
+* `g2svg.py`: render graph layout and create svg
+
+# misc tools
+
 * `c2txt.py`: extract body and header from cables.csv
 * `calcdates.py`: estimate date for missing MRNs
-* `extract.py`: feature extraction from cables.csv
-* `g2svg.py`: render graph layout and create svg
 * `gen_colors.py`: create a random color for every place (see svg.css)
 
 # copyleft
