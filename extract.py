@@ -127,7 +127,7 @@ re_acp127_som = re.compile(r'VZCZC([A-Z]{2}[Z,I,O])([0-9]{4})')
 # See: ROUTING INDICATOR DELINEATION TABLE from ACP-121
 # OO RUEHC RHRMDAB RUCNRAQ RUEKJCS RUENAAA RHEHNSC
 # RUEKJCS RUCNDT RUCXONI RUCJACC RUHPFTA RHRMABI RUWDXEU RUEHDE
-re_acp127_addr = re.compile(r'(ZZ|OO|PP|RR)\ ([QRU][A-IK-QS-UW-Z][A-Z]{1,5}\s?)+')
+re_acp127_addr = re.compile(r'^(ZZ|OO|PP|RR)\ ((?:[QRU][A-IK-QS-UW-Z][A-Z]{1,5}\s?)+)', re.M)
 
 # ACP-127 FL3 Originator
 # originating station's routing indicator (osri), station serial number (ssn) and time of transmission (tot)
@@ -270,8 +270,8 @@ def parse_acp127(header):
 
     # FL2
     match_addr = re.search(re_acp127_addr, header)
-    if match_addr is not None:
-        parsed['addr'] = match_addr.group(2).strip()
+    if match_addr is not None and match_addr.group(2) is not None:
+        parsed['addr'] = [ a.strip() for a in match_addr.group(2).strip().split() ]
 
     # FL3
     match_origin = re.search(re_acp127_origin, header)
@@ -443,6 +443,10 @@ for row in content:
         else:
             osri = False
             sys.stderr.write("INFO: No OSRI in MRN %s.\n" % mrn)
+
+        if osri and 'addr' in acp12x:
+            for addr in acp12x['addr']:
+                from_to.add((mrn, osri, addr))
 
         if osri and 'TO' in acp12x:
             for to in acp12x['TO']:
