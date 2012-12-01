@@ -645,5 +645,5 @@ for i in sorted(locations):
 locf.close()
 
 for m,s,t in sorted(from_to):
-    fromtof.write('%s\t%s\t%s\n' % (m,s,t))
+    fromtof.write('%s\t%s\t%s\t%s\n' % (m,s,t,dates[m]))
 fromtof.close()
