@@ -446,13 +446,15 @@ for row in content:
 
         if osri and 'addr' in acp12x:
             for addr in acp12x['addr']:
-                from_to.add((mrn, osri, addr))
+                if osri != addr:
+                    from_to.add((mrn, osri, addr))
 
         if osri and 'TO' in acp12x:
             for to in acp12x['TO']:
                 ms = match_station(to)
                 if ms:
-                    from_to.add((mrn, osri, ms))
+                    if osri != ms:
+                        from_to.add((mrn, osri, ms))
                 else:
                     sys.stderr.write("INFO: Invalid TO line in MRN %s: (%s)\n" % (mrn, to))
 
@@ -460,7 +462,8 @@ for row in content:
             for info in acp12x['INFO']:
                 ms = match_station(info)
                 if ms:
-                    from_to.add((mrn, osri, ms))
+                    if osri != ms:
+                        from_to.add((mrn, osri, ms))
                 else:
                     sys.stderr.write("INFO: Invalid INFO line in MRN %s: (%s)\n" % (mrn, info))
 
