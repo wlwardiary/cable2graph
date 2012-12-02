@@ -1,10 +1,10 @@
 DROP TABLE IF EXISTS msg;
 CREATE TABLE msg (
-    mrn varchar(255),
-    sndr varchar(255),
+    mrn char(42),
+    sndr char(7),
     rcvr varchar(255),
     created datetime
-) ENGINE=InnoDB CHARSET=utf8;
+) CHARSET=utf8;
 
 LOAD DATA INFILE '/tmp/from_to.list'
 INTO TABLE msg
@@ -15,3 +15,6 @@ IGNORE 0 LINES
 (mrn, sndr, rcvr, @created)
 SET created=FROM_UNIXTIME(@created)
 ;
+
+ALTER TABLE msg ADD KEY sndr_rcvr (sndr, rcvr);
+ALTER TABLE msg ADD KEY created (created);
