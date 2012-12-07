@@ -133,6 +133,8 @@ g.vs['constraint'] = g.constraint()
 g.vs['pagerank'] = g.pagerank()
 g.vs['authority'] = g.authority_score()
 
+# g.write('full.graphml')
+
 # make clusters
 print "clusters"
 
@@ -219,7 +221,9 @@ def save(sg, prefix):
     filename = '%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (prefix, di, de, ra, pl ,digest)
     print prefix, di, de, ra, pl
     print sg
-    sg.write_graphml(filename)
+    fh = open(filename, 'w')
+    sg.write_graphml(fh)
+    fh.close()
     print filename, len(sg.es), len(sg.vs)
 
 # use size of the largest cluster as limit
