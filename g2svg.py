@@ -155,10 +155,24 @@ for gml in graph_files:
 
         g.vs['subjects'] = subjects
 
-    labels = g.vs.get_attribute_values('label')
-    colors = g.vs.get_attribute_values('color')
-    timestamps = g.vs.get_attribute_values('timestamp')
-    places = g.vs.get_attribute_values('place')
+    labels = g.vs['label']
+
+    if 'missing' in g.vs.attribute_names():
+        missing = g.vs['missing']
+
+    if 'timestamp' in g.vs.attribute_names():
+        timestamps = g.vs['timestamp']
+
+    if 'place' in g.vs.attribute_names():
+        places = g.vs['place']
+    
+    if 'tags' in g.attributes(): 
+        tags = g['tags'].split(',')
+    else:
+        tags = []
+
+    if 'classification' in g.vs.attribute_names():
+        classifications = g.vs['classification']
 
     # create x,y positions
     # layout = g.layout_fruchterman_reingold()
@@ -199,22 +213,25 @@ for gml in graph_files:
     if 'degree' in g.vs.attribute_names():
         degrees = igraph.utils.rescale(
             g.vs.get_attribute_values('degree'),
-            (1,10))
+            (0,10))
 
-    if 'authority' in g.vs.attribute_names():
+    # sometimes it's all zero, then keep it zero
+    if 'authority' in g.vs.attribute_names() and sum(g.vs['authority']) > 0:
         authority = igraph.utils.rescale(
             g.vs.get_attribute_values('authority'),
-            (1,10))
+            (0,10))
+    else:
+        authority = g.vs['authority']
 
     if 'betweenness' in g.es.attribute_names():
         ebetweenness = igraph.utils.rescale(
             g.es.get_attribute_values('betweenness'),
-            (1,10))
+            (0,10))
 
     if 'betweenness' in g.vs.attribute_names():
         vbetweenness = igraph.utils.rescale(
             g.vs.get_attribute_values('betweenness'),
-            (1,10))
+            (0,10))
 
     if options.uri:
         uris = g.vs.get_attribute_values('uri')
@@ -265,22 +282,39 @@ for gml in graph_files:
         tmpd = {
             'x': '%.4f' % layout[vidx][0], 
             'y': '%.4f' % layout[vidx][1],
-            'label': str(labels[vidx]),
-            'degree': str(int(degrees[vidx])),
-            'authority': str(int(authority[vidx])),
-            'timestamp': str(timestamps[vidx]),
-            'betweenness': vbetweenness[vidx],
-            'class': "%s %s" % (str(colors[vidx]), str(places[vidx]))
+            'label': str(labels[vidx])
         }
 
         # optional
         if options.uri:
             tmpd.update({'uri': str(uris[vidx])})
+
         if options.subjects:
             tmpd.update({'subject': str(subjects[vidx])})
 
         if options.reverb:
             tmpd.update({'sentences': sentences[vidx]})
+
+        if 'missing' in g.vs.attribute_names():
+            tmpd.update({'missing': str(missing[vidx])})
+
+        if 'place' in g.vs.attribute_names():
+            tmpd.update({'place': str(places[vidx])})
+
+        if 'degree' in g.vs.attribute_names():
+            tmpd.update({'degree': str(int(degrees[vidx]))})
+
+        if 'authority' in g.vs.attribute_names():
+            tmpd.update({'authority': str(int(authority[vidx]))})
+
+        if 'timestamp' in g.vs.attribute_names():
+            tmpd.update({'timestamp': str(timestamps[vidx])})
+
+        if 'betweenness' in g.vs.attribute_names():
+            tmpd.update({'betweenness': vbetweenness[vidx]})
+
+        if 'classification' in g.vs.attribute_names():
+            tmpd.update({'classification': classifications[vidx]})
 
         vertices.append(tmpd)
 
@@ -290,6 +324,7 @@ for gml in graph_files:
         width = w,
         xh = xh,
         xw = xw,
+        tags = tags,
         edges = edges, 
         vertices = vertices))
     print "%s -> %s" % (gml, destfile)
