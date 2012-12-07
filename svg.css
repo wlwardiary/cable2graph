@@ -1,5 +1,8 @@
 /*
+ *
  * GPLv3
+ * 2011-2012 by anonymous
+ *
  */
 
 body { 
@@ -10,28 +13,42 @@ body {
 }
 
 a { color: white; text-decoration: none; }
+#sidebar a { color: black; }
 #sidebar a:hover { text-decoration: underline; }
 a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 
 #graph {
     position: fixed;
-    top: 1%;
+    top: 0%;
     left: 0;
-    width: 82.5%;
-    height: 98%;
+    width: 82%;
+    height: 100%;
     overflow-y: auto;
     overflow-x: auto;
     z-index: -10;
 }
 
 #graph svg { 
-    background-color: rgb(44,44,44); 
+    background-color: rgb(44,44,44);
 }
 
 #vertices circle.node { 
-    stroke: rgba(0,255,255,0.5); 
-    stroke-width: 3; 
+    stroke: rgba(255,255,255,0.5); 
+    stroke-width: 1; 
     fill: rgba(255,255,255,0.8); 
+    z-index: 1;
+}
+
+#vertices circle.betweenness { 
+    stroke: rgba(255,255,255,0.1); 
+    stroke-width: 1; 
+    fill: transparent;
+    z-index: 1;
+}
+#vertices circle.authority { 
+    stroke: rgba(255,255,255,0.1); 
+    stroke-width: 1; 
+    fill: transparent;
     z-index: 1;
 }
 
@@ -44,15 +61,16 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     stroke-width: 12;
 }
 
-#vertices circle.deco1 { stroke: rgba(0,255,255,0.5); }
-#vertices circle.deco2 { stroke: rgba(0,255,255,0.4); }
-#vertices circle.deco3 { stroke: rgba(0,255,255,0.3); stroke-width: 10; }
-#vertices circle.deco4 { stroke: rgba(0,255,255,0.2); stroke-width: 8;  }
-#vertices circle.deco5 { stroke: rgba(0,255,255,0.1); stroke-width: 6;  }
+#vertices circle.deco1 { stroke: rgba(255,255,255,0.5); }
+#vertices circle.deco2 { stroke: rgba(255,255,255,0.4); }
+#vertices circle.deco3 { stroke: rgba(255,255,255,0.3); stroke-width: 10; }
+#vertices circle.deco4 { stroke: rgba(255,255,255,0.2); stroke-width: 8;  }
+#vertices circle.deco5 { stroke: rgba(255,255,255,0.1); stroke-width: 6;  }
 
-#vertices .red circle.node {
-    stroke: rgba(0,255,255,0.8);
-    stroke-dasharray: 12, 6;
+#vertices circle.missing {
+    stroke-width: 3;
+    fill: transparent;
+    stroke: red;
 }
 
 #zoom button {
@@ -89,7 +107,7 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 
 #zoom-circle circle {
     fill: rgb(44,44,44);
-    stroke: rgba(0,255,255,0.1);
+    stroke: rgba(255,255,255,0.1);
     stroke-width: 10;
     transition-property: stroke, stroke-dasharray;
     transition-duration: .5s;
@@ -99,44 +117,86 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     -moz-transition-duration: .5s;
 }
 
-#zoom-circle.level1  circle { stroke-width: 1; }
-#zoom-circle.level2  circle { stroke-width: 2; }
-#zoom-circle.level3  circle { stroke-width: 3; }
-#zoom-circle.level4  circle { stroke-width: 4; }
-#zoom-circle.level5  circle { stroke-width: 5; }
-#zoom-circle.level6  circle { stroke-width: 6; }
-#zoom-circle.level7  circle { stroke-width: 7; }
-#zoom-circle.level8  circle { stroke-width: 8; }
-#zoom-circle.level9  circle { stroke-width: 9; }
-#zoom-circle.level10 circle { stroke-width: 10; stroke-dasharray: 22 2; }
-#zoom-circle.level11 circle { stroke-width: 11; }
-#zoom-circle.level12 circle { stroke-width: 12; }
+#page.level1  #zoom circle { stroke-width: 1; }
+#page.level2  #zoom circle { stroke-width: 2; }
+#page.level3  #zoom circle { stroke-width: 3; }
+#page.level4  #zoom circle { stroke-width: 4; }
+#page.level5  #zoom circle { stroke-width: 5; }
+#page.level6  #zoom circle { stroke-width: 6; }
+#page.level7  #zoom circle { stroke-width: 7; }
+#page.level8  #zoom circle { stroke-width: 8; }
+#page.level9  #zoom circle { stroke-width: 9; }
+#page.level10 #zoom circle { stroke-width: 10; stroke-dasharray: 22 2; }
+#page.level11 #zoom circle { stroke-width: 11; }
+#page.level12 #zoom circle { stroke-width: 12; }
 
 #zoom:hover circle, 
 #zoom-in:hover circle,
 #zoom-out:hover circle {
-    stroke: rgba(0,255,255,0.4);
+    stroke: rgba(255,255,255,0.4);
+}
+
+#tools {
+    position: fixed;
+    top: 120px;
+    left: 24px;
+    width: 90px;
+    background-color: rgba(77,77,77,0.4);
+    border-radius: .4em;
+    padding: .3em .2em;
+    transition-property: background-color, color;
+    transition-duration: .5s;
+    -webkit-transition-property: background-color, color;
+    -webkit-transition-duration: .5s;
+    -moz-transition-property: background-color, color;
+    -moz-transition-duration: .5s;
+}
+
+#tools:hover {
+    background-color: rgba(77,77,77,1.0);
+}
+
+#tools h3 {
+    margin: .5em .1em .1em .1em;
+    padding: 0;
+    font-size: .8em;
+    text-align: center;
+}
+
+#tools button {
+    display: inline;
+    padding: .3em;
+    margin: .2em 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    color: white;
+    border: none;
+}
+
+#tools button.active {
+    background-color: black;
+}
+
+#tools button:hover {
+    background-color: rgb(200,200,200);
+    color: black;
+}
+
+#tools button.active:hover {
+    background-color: white;
+    color: black;
 }
 
 #sidebar {
     position: fixed;
-    padding: 0 1em;
-    width: 14%;
+    padding: 0;
+    margin: 0;
+    width: 18%;
     right: 0%;
-    top: 1%;
-    max-height: 98%;
-    background-color: rgb(66,66,66);
-    box-shadow: 3px 3px 15px rgba(0,0,0,0.5);
-
-    border-left: 1px solid rgba(0,0,0,0);
-    border-bottom: 1px solid rgba(0,0,0,0);
-    border-top: 1px solid rgba(0,0,0,0);
-    border-top-left-radius: .5em;
-    border-bottom-left-radius: .5em;
-    box-shadow: inset 3px 3px 15px rgba(0,0,0,0.5);
-    -webkit-box-shadow: inset 3px 3px 15px rgba(0,0,0,0.5);
-    -moz-box-shadow: inset 3px 3px 15px rgba(0,0,0,0.5);
-    -o-box-shadow: inset 3px 3px 15px rgba(0,0,0,0.5);
+    top: 0%;
+    max-height: 100%;
+    background-color: rgb(200,200,200);
+    color: black;
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -171,21 +231,26 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 #sidebar h3, 
 #sidebar h4, 
 #sidebar h5 { 
-    padding: 0; 
-    margin: .9em 0 .2em 0; 
+    color: black;
+    padding: .5em .3em 0 .3em; 
+    margin: 0;
 }
 #sidebar h1,
 #sidebar h2 {
     font-size: 1em; 
 }
-#sidebar h5 .red { border-bottom: 2px solid red; }
-#sidebar p { font-size: .8em; }
-#sidebar p.date { font-size: .4em; display: inline; }
-#sidebar p.subject { font-size: .5em; display: inline; }
-#sidebar ul { padding: 0; }
-#sidebar ul li { list-style-type: none; }
+#sidebar h5 .missing { border-bottom: 2px solid red; }
+#sidebar p { font-size: .9em; color: black; margin: 0; padding: .3em; }
+#sidebar p.date, 
+#sidebar p.classification { display: inline; font-size: .7em; margin: 0; padding: 0 0 0 .3em; }
+#sidebar p.subject { font-size: .8em; }
+#sidebar ul { padding: .3em; margin: 0; }
+#sidebar ul li { list-style-type: none; font-size: .9em; }
+#sidebar div { margin: 0 0 .1em 0; padding: .1em 0; }
+#sidebar div.odd { background-color: rgb(240,240,240); }
+#sidebar div.even { background-color: rgb(220,220,220); }
 
-#vertices .unknown circle.node { fill: black; }
+#vertices .unknown circle.node { fill: gray; }
 #vertices .ABIDJAN circle.node { fill: rgba(237,149,161,0.8); }
 #vertices .ABUDHABI circle.node { fill: rgba(89,184,231,0.8); }
 #vertices .ABUJA circle.node { fill: rgba(216,173,83,0.8); }
@@ -517,32 +582,33 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 #vertices .YEREVAN circle.node { fill: rgba(26,60,77,0.8); }
 #vertices .ZAGREB circle.node { fill: rgba(52,115,104,0.8); }
 
-#vertices .btwns1 circle.deco1  { stroke-dasharray: 10 2; } 
-#vertices .btwns2 circle.deco1  { stroke-dasharray: 10 4; } 
-#vertices .btwns3 circle.deco1  { stroke-dasharray: 10 6; } 
-#vertices .btwns4 circle.deco1  { stroke-dasharray: 10 8; } 
-#vertices .btwns5 circle.deco1  { stroke-dasharray: 10 10; } 
-#vertices .btwns6 circle.deco1  { stroke-dasharray: 10 12; } 
-#vertices .btwns7 circle.deco1  { stroke-dasharray: 10 14; } 
-#vertices .btwns8 circle.deco1  { stroke-dasharray: 10 16; } 
-#vertices .btwns9 circle.deco1  { stroke-dasharray: 10 18; } 
-#vertices .btwns10 circle.deco1 { stroke-dasharray: 10 20; } 
+#vertices .btwns1 circle.betweenness  { stroke-width: 1; stroke: rgba(255,255,255,0.1); } 
+#vertices .btwns2 circle.betweenness  { stroke-width: 2; stroke: rgba(255,255,255,0.1); } 
+#vertices .btwns3 circle.betweenness  { stroke-width: 3; stroke: rgba(255,255,255,0.2); } 
+#vertices .btwns4 circle.betweenness  { stroke-width: 4; stroke: rgba(255,255,255,0.2); } 
+#vertices .btwns5 circle.betweenness  { stroke-width: 5; stroke: rgba(255,255,255,0.3); } 
+#vertices .btwns6 circle.betweenness  { stroke-width: 6; stroke: rgba(255,255,255,0.3); } 
+#vertices .btwns7 circle.betweenness  { stroke-width: 7; stroke: rgba(255,255,255,0.4); } 
+#vertices .btwns8 circle.betweenness  { stroke-width: 8; stroke: rgba(255,255,255,0.4); } 
+#vertices .btwns9 circle.betweenness  { stroke-width: 9; stroke: rgba(255,255,255,0.5); } 
+#vertices .btwns10 circle.betweenness { stroke-width: 10; stroke: rgba(255,255,255,0.6); } 
 
-#vertices .authority1 circle.deco2  { stroke-dasharray: 100 2; } 
-#vertices .authority2 circle.deco2  { stroke-dasharray: 90  4; } 
-#vertices .authority3 circle.deco2  { stroke-dasharray: 80  6; } 
-#vertices .authority4 circle.deco2  { stroke-dasharray: 70  8; } 
-#vertices .authority5 circle.deco2  { stroke-dasharray: 60  10; } 
-#vertices .authority6 circle.deco2  { stroke-dasharray: 50  12; } 
-#vertices .authority7 circle.deco2  { stroke-dasharray: 40  14; } 
-#vertices .authority8 circle.deco2  { stroke-dasharray: 30  16; } 
-#vertices .authority9 circle.deco2  { stroke-dasharray: 20  18; } 
-#vertices .authority10 circle.deco2 { stroke-dasharray: 10  20; } 
+#vertices .authority1 circle.authority  { stroke-width: 1; stroke: rgba(255,255,255,0.1); } 
+#vertices .authority2 circle.authority  { stroke-width: 2; stroke: rgba(255,255,255,0.1); } 
+#vertices .authority3 circle.authority  { stroke-width: 3; stroke: rgba(255,255,255,0.2); } 
+#vertices .authority4 circle.authority  { stroke-width: 4; stroke: rgba(255,255,255,0.2); } 
+#vertices .authority5 circle.authority  { stroke-width: 5; stroke: rgba(255,255,255,0.3); } 
+#vertices .authority6 circle.authority  { stroke-width: 6; stroke: rgba(255,255,255,0.3); } 
+#vertices .authority7 circle.authority  { stroke-width: 7; stroke: rgba(255,255,255,0.4); } 
+#vertices .authority8 circle.authority  { stroke-width: 8; stroke: rgba(255,255,255,0.4); } 
+#vertices .authority9 circle.authority  { stroke-width: 9; stroke: rgba(255,255,255,0.5); } 
+#vertices .authority10 circle.authority { stroke-width: 10; stroke: rgba(255,255,255,0.6); } 
 
-#graph.level1 #vertices text,
-#graph.level2 #vertices text,
-#graph.level3 #vertices text,
-#graph.level4 #vertices text { 
+/* hide all labels in the last four zoom levels */
+#page.level1 #graph #vertices text,
+#page.level2 #graph #vertices text,
+#page.level3 #graph #vertices text,
+#page.level4 #graph #vertices text { 
     visibility: hidden;
 }
 
@@ -551,6 +617,8 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     font-size: 1em; 
     font-weight: normal; 
     fill: rgba(255,255,255,1.0); 
+    stroke-width: .3; 
+    stroke: black;
     text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
     -webkit-text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
     -moz-text-shadow: rgba(0, 0, 0, 0.5) 2px 2px 2px;
@@ -563,9 +631,15 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     -moz-transition-duration: .5s;
     -o-transition-property: text-shadow;
     -o-transition-duration: .5s;
-
 }
-#vertices text.date { font-size: .8em; } 
+
+/* for tools on/off */
+#graph.hide-date #vertices text.date { visibility: hidden; } 
+#graph.hide-classification #vertices text.classification { visibility: hidden; }
+#graph.hide-mrn #vertices text.label { visibility: hidden; }
+#graph.hide-betweenness #vertices circle.betweenness { visibility: hidden; }
+#graph.hide-authority #vertices circle.authority { visibility: hidden; }
+#graph.hide-missing #vertices circle.missing { visibility: hidden; }
 
 #vertices text:hover {
   text-shadow: rgba(0, 0, 0, 1) 6px 6px 10px;
@@ -574,64 +648,66 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
   -o-text-shadow: rgba(0, 0, 0, 1) 6px 6px 10px;
 }
 
-#vertices :target .label {
+/* always show labels for selected node */
+#vertices :target text.label,
+#vertices :target text.subject,
+#vertices :target text.classification,
+#vertices :target text.date {
     visibility: visible !important;
-    font-size: 1.5em;
 }
 
-#vertices .red .label {
-    text-decoration: underline;
+#vertices :target text.label {
+    font-size: 1.4em;
 }
 
-#vertices g.subject text,
-#vertices g.sentence text { 
+#vertices text.date { font-size: .8em; } 
+#vertices text.classification { font-size: .7em; }
+#vertices text.classification.SECRET-NOFORN { fill: red; }
+#vertices text.classification.SECRET { fill: red; }
+#vertices text.classification.CONFIDENTIAL-NOFORN  { fill: yellow; }
+#vertices text.classification.CONFIDENTIAL { fill: yellow; }
+#vertices text.classification.UNCLASSIFIED { fill: rgb(0,255,0); }
+#vertices text.classification.UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY  { fill: rgb(0,255,0); }
+
+#vertices text.subject,
+#vertices text.sentence  { 
     text-anchor: start;
     visibility: hidden;
 } 
 
-#vertices g.vertice:target g.subject text,
-#vertices g.vertice:hover g.subject text,
-#vertices g.vertice:hover g.sentence text { 
+#vertices g.labels:hover text.subject,
+#vertices g.labels:hover text.sentence { 
     visibility: visible;
     z-index: 500;
 } 
 
-#vertices g .subject text tspan { 
-    fill: rgba(255,255,255,1);
-}
-
-#vertices g .sentence text tspan.a1 { 
-    fill: rgba(255,255,255,0.9);
-}
-#vertices g .sentence text tspan.rel { 
-    fill: rgba(255,255,255,0.6);
-}
-#vertices g .sentence text tspan.a2 { 
-    fill: rgba(255,255,255,1);
-}
+#vertices text.subject  tspan     { fill: rgba(255,255,255,1.0); }
+#vertices text.sentence tspan.a1  { fill: rgba(255,255,255,0.9); }
+#vertices text.sentence tspan.rel { fill: rgba(255,255,255,0.6); }
+#vertices text.sentence tspan.a2  { fill: rgba(255,255,255,1.0); }
 
 #graph.level1 #edges line,
 #graph.level2 #edges line,
 #graph.level3 #edges line,
 #graph.level4 #edges line { 
-    stroke-width: 7; 
+    stroke-width: 8 !important; 
 }
 
 #edges line { 
     fill: none;
     stroke-linejoin: round;
-    stroke-width: 3; 
+    stroke-width: 2; 
     stroke: rgba(255,255,255,0.4); 
 }
 
-#edges line.btwns1  { stroke: rgba(0,255,255,0.1); }
-#edges line.btwns2  { stroke: rgba(0,255,255,0.1); }
-#edges line.btwns3  { stroke: rgba(0,255,255,0.2); }
-#edges line.btwns4  { stroke: rgba(0,255,255,0.2); }
-#edges line.btwns5  { stroke: rgba(0,255,255,0.3); }
-#edges line.btwns6  { stroke: rgba(0,255,255,0.4); }
-#edges line.btwns7  { stroke: rgba(0,255,255,0.5); }
-#edges line.btwns8  { stroke: rgba(0,255,255,0.6); }
-#edges line.btwns9  { stroke: rgba(0,255,255,0.7); }
-#edges line.btwns10 { stroke: rgba(0,255,255,0.8); }
+#edges line.btwns1  { stroke: rgba(255,255,255,0.1); stroke-width: 2; }
+#edges line.btwns2  { stroke: rgba(255,255,255,0.1); stroke-width: 2; }
+#edges line.btwns3  { stroke: rgba(255,255,255,0.2); stroke-width: 2; }
+#edges line.btwns4  { stroke: rgba(255,255,255,0.2); stroke-width: 3; }
+#edges line.btwns5  { stroke: rgba(255,255,255,0.3); stroke-width: 3; }
+#edges line.btwns6  { stroke: rgba(255,255,255,0.3); stroke-width: 3; }
+#edges line.btwns7  { stroke: rgba(255,255,255,0.4); stroke-width: 4; }
+#edges line.btwns8  { stroke: rgba(255,255,255,0.4); stroke-width: 4; }
+#edges line.btwns9  { stroke: rgba(255,255,255,0.5); stroke-width: 4; }
+#edges line.btwns10 { stroke: rgba(255,255,255,0.6); stroke-width: 5; }
 

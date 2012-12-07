@@ -1,13 +1,19 @@
 /*
+ *
  * GPLv3
+ * 2011-2012 by anonymous
+ *
  */
 
+/* zoom level */
 var zlevel = 10;
 
+/* get element */
 function get(el) {
     return document.getElementById(el);
 }
 
+/* add event to object */
 var addEvent = function() {
     if (window.addEventListener) {
         return function(el, type, fn) {
@@ -23,6 +29,7 @@ var addEvent = function() {
     }
 }();
 
+/* set the SVG transform attribute */
 function setTransform(w, h, s) {
     var frame = get('frame');
     if (frame) {
@@ -34,6 +41,7 @@ function setTransform(w, h, s) {
     }
 }
 
+/* set the SVG size attributes */
 function setSize(w, h) {
     var svg = get('svg');
     if (svg) {
@@ -44,7 +52,28 @@ function setSize(w, h) {
     }
 }
 
+/* toggle any class attribute */
+function toggleClass(e, v) {
+    if (e.className == null) {
+        var a = Array()
+    } else {
+        var a = e.className.split(/\s+/);
+    }
+    if (a.indexOf(v) > - 1) {
+        a[a.indexOf(v)] = "";
+    } else {
+        a.push(v);
+    }
+    e.className = a.join(" ");
+}
+
 function main() {
+    
+    /* 
+     * The last 4 zoom levels hide all labels.
+     * Zoom is using the #page class attribute. 
+     */
+
     addEvent(get('zoom-out'), 'click', function(e) {
         scale = scale - .1;
         zlevel = zlevel - 1;
@@ -57,8 +86,7 @@ function main() {
         }
         setTransform(xw * scale, xh * scale, scale);
         setSize(width * scale, height * scale);
-        get('zoom-circle').setAttribute('class', 'level' + zlevel);
-        get('graph').setAttribute('class', 'level' + zlevel);
+        get('page').className = 'level' + zlevel;
     });
 
     addEvent(get('zoom-in'), 'click', function(e) {
@@ -73,8 +101,42 @@ function main() {
         }
         setTransform(xw * scale, xh * scale, scale);
         setSize(width * scale, height * scale);
-        get('zoom-circle').setAttribute('class', 'level' + zlevel);
-        get('graph').setAttribute('class', 'level' + zlevel);
+        get('page').className = 'level' + zlevel;
+    });
+
+    /* 
+     * Labels and Properties can be switched on and off via CSS.
+     * This is using the #graph class attribute 
+     */
+
+    addEvent(get('mrn-switch'), 'click', function(e) {
+        toggleClass(get('mrn-switch'), 'active');
+        toggleClass(get('graph'), 'hide-mrn');
+    });
+
+    addEvent(get('date-switch'), 'click', function(e) {
+        toggleClass(get('date-switch'), 'active');
+        toggleClass(get('graph'), 'hide-date');
+    });
+
+    addEvent(get('classification-switch'), 'click', function(e) {
+        toggleClass(get('classification-switch'), 'active');
+        toggleClass(get('graph'), 'hide-classification');
+    });
+
+    addEvent(get('betweenness-switch'), 'click', function(e) {
+        toggleClass(get('betweenness-switch'), 'active');
+        toggleClass(get('graph'), 'hide-betweenness');
+    });
+
+    addEvent(get('authority-switch'), 'click', function(e) {
+        toggleClass(get('authority-switch'), 'active');
+        toggleClass(get('graph'), 'hide-authority');
+    });
+
+    addEvent(get('missing-switch'), 'click', function(e) {
+        toggleClass(get('missing-switch'), 'active');
+        toggleClass(get('graph'), 'hide-missing');
     });
 }
 

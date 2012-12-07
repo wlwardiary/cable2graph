@@ -17,6 +17,7 @@
   content="Graph visualization of the WikiLeaks cables.csv reference network." />
 </head>
 <body>
+<div id="page" class="level10">
 <div id="zoom">
     <button id="zoom-in">+</button>
     <button id="zoom-out">-</button>
@@ -25,33 +26,55 @@
         width="100" 
         height="100" 
         version="1.1" 
-        class="level10"
         xmlns="http://www.w3.org/2000/svg">
         <g transform="translate(50,50) scale(1.0)">
             <circle x="0" y="0" r="35" />
         </g>
     </svg>
 </div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
 <section id="sidebar">
     <h1>WikiLeaks Cablegate</h1>
     <p>Graph visualization of the cables.csv reference network.</p>
     <p>Works best in Chrome or Safari (anything Webkit based).</p>
-    <p>Underlined cables are not included in cables.csv.</p>
-    <p>Node size and amount of rings indicate degree.</p>
-    <p>First ring shows betweenness of nodes.</p>
-    <p>Second ring shows authority of nodes.</p>
-    <p>Line color indicates edge betweenness.</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
     <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
-    {% for v in vertices %}
-      <h5><a class="{{ v.class }}" href="#{{v.label}}">{{ v.label }}</a></h5> 
+    {% for v in vertices|sort(attribute='timestamp') %}
+    <div class="{{ loop.cycle('odd', 'even') }}">
+      <h5>
+        {% if v.missing and v.missing|int == 1 %}
+        <a class="desc missing" href="#{{v.label}}">{{ v.label }}</a>
+        {% else %}
+        <a class="desc" href="#{{v.label}}">{{ v.label }}</a>
+        {% endif %}
+
+        {% if v.uri|length > 0 %}
+        <a href="{{v.uri}}">&#8599;</a>
+        {% endif %}
+      </h5> 
       {% if v.timestamp|int > 0 %}<p class="date">{{ v.timestamp|formatts('%x') }}</p>{% endif %}
+      {% if v.classification|length > 0 %}<p class="classification">{{ v.classification }}</p>{% endif %}
       {% if v.subject|length > 0 %}<p class="subject">{{ v.subject }}</p>{% endif %}
+    </div>
     {% endfor %}
     <h2>About</h2>
-    <p>
-        This dirty data porn was made with python, igraph, html5, css3, svg 
-        and a little bit of javascript.
-    </p>
     <ul>
         <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
         <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
@@ -63,9 +86,9 @@
         This HTML/SVG file: creative commons 
         <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
     </p>
-    <p>cables2graph <a href="http://gnu.org/">GPLv3</a></p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
 </section>
-<section id="graph">
+<section id="graph" class="level10 hide-date hide-classification">
   <svg
     id="svg" 
     width="{{ width }}" 
@@ -84,27 +107,18 @@
         <g id="vertices">
             {% for v in vertices %}
             <g transform="translate({{ v.x }} {{ v.y }})" 
-                class="vertice {{ v.class }} degree{{ v.degree|int }} btwns{{v.betweenness|int }} authority{{ v.authority|int }}">
-                <circle cx="0" cy="0" r="{{ 10 + v.degree|int }}" z-index="1" class="node" />
+                class="vertice degree{{ v.degree|int }} btwns{{v.betweenness|int }} authority{{ v.authority|int }} {{ v.place }}">
+                <circle cx="0" cy="0" r="{{ 15 + v.degree|int }}" z-index="1" class="node" />
 
-                {% if v.degree|int > 1 %}
-                <circle cx="0" cy="0" r="30" class="deco1" z-index="-10" />
+                {% if v.missing and v.missing|int == 1 %}
+                <circle cx="0" cy="0" r="{{ 20 + v.degree|int }}" z-index="1" class="missing" />
                 {% endif %}
 
-                {% if v.degree|int > 3 %}
-                <circle cx="0" cy="0" r="50" class="deco2" z-index="-10" /> 
+                {% if v.betweenness|int > 0 %}
+                <circle cx="0" cy="0" r="{{ 25 + v.betweenness|int }}" class="betweenness" z-index="1" />
                 {% endif %}
-
-                {% if v.degree|int > 5 %}
-                <circle cx="0" cy="0" r="70" class="deco3" z-index="-10" />
-                {% endif %}
-
-                {% if v.degree|int > 7 %}
-                <circle cx="0" cy="0" r="90" class="deco4" z-index="-10" />
-                {% endif %}
-
-                {% if v.degree|int > 9 %}
-                <circle cx="0" cy="0" r="110" class="deco5" z-index="-10" />
+                {% if v.authority|int > 0 %}
+                <circle cx="0" cy="0" r="{{ 35 + v.authority|int }}" class="authority" z-index="1" />
                 {% endif %}
             </g>
             {% endfor %}
@@ -112,14 +126,14 @@
             {% for v in vertices %}
             <g transform="translate({{ v.x }} {{ v.y }})" 
                 id="{{ v.label }}" 
-                class="vertice {{ v.class }}">
+                class="labels">
                 {% if v.timestamp|int > 0 %} 
-                <text x="0" y="{{ -10 + (v.degree|int / 2) }}" class="date" z-index="1">
-                    {{ v.timestamp|formatts('%x') }}
+                <text x="0" y="{{ -15 + (v.degree|int / 2) }}" class="date" z-index="1">
+                    <tspan>{{ v.timestamp|formatts('%x') }}</tspan>
                 </text>
                 {% endif %}
 
-                <text x="0" y="{{ 10 + (v.degree|int / 2) }}" class="label" z-index="1">
+                <text x="0" y="{{ 5 + (v.degree|int / 2) }}" class="label" z-index="1">
                 {% if v.uri %} 
                     <a xlink:href="{{v.uri}}">{{ v.label }}</a>
                 {% else %}
@@ -127,22 +141,25 @@
                 {% endif %}
                 </text>
                 {% if v.subject|length > 0 %}
-                    <g class="subject"> 
-                      <text x="-200" y="{{ 35 + (v.degree|int / 2) }}" z-index="10">
+                    <text x="-200" y="{{ 25 + (v.degree|int / 2) }}" z-index="10" class="subject">
                         <tspan>{{ v.subject }}</tspan>
-                      </text>
-                    </g>
+                    </text>
+                {% endif %}
+                {% if v.classification|length > 0 %}
+                    <text x="0" y="{{ -30 + (v.degree|int / 2) }}" 
+                          z-index="10" 
+                          class="classification {{ v.classification|replace('//','-')|replace(' ','-') }}">
+                        <tspan>{{ v.classification }}</tspan>
+                    </text>
                 {% endif %}
                 {% if v.sentences %}
-                    <g class="sentence"> 
                     {% for s in v.sentences %}
-                    <text x="-200" y="{{ 30 + loop.index * 20 }}">
+                    <text x="-200" y="{{ 30 + loop.index * 20 }}" class="sentence">
                         <tspan class="a1">{{ s.a1 }}</tspan>
                         <tspan class="rel">{{ s.rel }}</tspan>
                         <tspan class="a2">{{ s.a2 }}</tspan>
                     </text>
                     {% endfor %}
-                    </g>
                 {% endif %}
             </g>
             {% endfor %}
@@ -150,4 +167,5 @@
     </g>
   </svg>
 </section>
+</div>
 </body>
