@@ -493,7 +493,7 @@ for row in content:
     for r in referrer.split('|'):
         if len(r.strip()) > 0:
             edges.add((mrn.upper(),r.upper()))
-            ref_ids.add(r)
+            ref_ids.add(r.upper())
             if ref_cnt.has_key(r):
                 ref_cnt[r] = ref_cnt[r] + 1
             else:
