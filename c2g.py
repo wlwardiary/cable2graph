@@ -7,7 +7,7 @@ from hashlib import md5
 from collections import defaultdict
 
 cable_ids = set()
-missing = set()
+missing_mrn = set()
 embassy = set()
 ref = []
 timestamp_map = {}
@@ -25,7 +25,7 @@ for i in open('data/all_ids.list').readlines():
     cable_ids.add(i.strip().upper())
 
 for y in open('data/missing_mrn.list').readlines():
-    missing.add(y.strip().upper())
+    missing_mrn.add(y.strip().upper())
     
 for l in open('data/edges.list').readlines():
     ref.append((l.split(' ')[0].strip(),l.split(' ')[1].strip()))
@@ -55,7 +55,7 @@ cable_ids = sorted(cable_ids)
 ref = sorted(ref)
 
 place = []
-color = []
+missing = []
 timestamp = []
 missing_timestamp = []
 caption = []
@@ -68,14 +68,14 @@ for c in cable_ids:
     else:
         place.append('unknown')
 
-    if c in missing:
-        color.append('red')
+    if c in missing_mrn:
+        missing.append(1)
     else:
-        color.append('black')
+        missing.append(0)
 
-    if timestamp_map.has_key(c):
+    if c in timestamp_map:
         timestamp.append(int(timestamp_map[c]))
-    elif missing_timestamps.has_key(c):
+    elif c in missing_timestamps:
         timestamp.append(int(missing_timestamps[c]))
     else:
         timestamp.append(0)
@@ -100,12 +100,12 @@ duration = []
 for a,b in edges:
     acid = id_cable_map[a]
     bcid = id_cable_map[b]
-    if acid not in missing and acid in timestamp_map:
+    if acid not in missing_mrn and acid in timestamp_map:
         ts_a = int(timestamp_map[acid])
     else:
         ts_a = None
 
-    if bcid not in missing and bcid in timestamp_map:
+    if bcid not in missing_mrn and bcid in timestamp_map:
         ts_b = int(timestamp_map[bcid])
     else:
         ts_b = None
@@ -123,7 +123,7 @@ g = igraph.Graph(edges, directed=False)
 g.es['duration'] = duration
 g.vs['label'] = cable_ids
 g.vs['place'] = place
-g.vs['color'] = color
+g.vs['missing'] = missing
 g.vs['timestamp'] = timestamp
 g.vs['caption'] = caption
 g.vs['classification'] = classification
