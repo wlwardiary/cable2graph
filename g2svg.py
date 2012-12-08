@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+# 
+# GPLv3 2011-2012 by anonymous
+# 
+
 import igraph, math, csv, time
 from sys import argv, exit
 from os import listdir, path
@@ -39,7 +43,11 @@ parser.add_option("-u", "--uri", dest="uri",
     help="Load map of label -> uri from FILE. Default: all.map", metavar="FILE")
 
 parser.add_option("-l", "--layout", dest="layout",
-    help="Use layout TYPE", metavar="TYPE")
+    help="Use layout NAME", metavar="NAME")
+
+parser.add_option("-x", "--index", dest="index",
+    default="index.tmpl",
+    help="Create index using FILE as template. Default: index.tmpl", metavar="FILE")
 
 (options, args) = parser.parse_args()
 
@@ -64,6 +72,11 @@ CURDIR = path.dirname(path.abspath(__file__))
 env = Environment(loader=FileSystemLoader(CURDIR))
 env.filters['formatts'] = format_timestamp
 svg_tmpl = env.get_template(options.template)
+
+# load index template
+if options.index:
+    index_tmpl = env.get_template(options.index)
+    index = []
 
 # load optional ReVerb sentences result .tsv
 # http://reverb.cs.washington.edu/
@@ -113,11 +126,6 @@ if options.subjects:
         smap[k.strip()] = v.strip()
 
 for gml in graph_files:
-    destfile = "%s/%s.html" % (options.destdir, path.basename(gml))
-    if path.exists(destfile):
-        print  "%s exists. skipping" % destfile
-        continue
-
     # load graph from file
     g = igraph.load(gml)
 
@@ -173,6 +181,24 @@ for gml in graph_files:
 
     if 'classification' in g.vs.attribute_names():
         classifications = g.vs['classification']
+
+    if options.index:
+        meta = {
+            'filename': "%s.html" % path.basename(gml), 
+            'tags': tags,
+            'nodes': g.vcount(),
+            'edges': g.ecount(),
+            'diameter': g.diameter(),
+            'radius': g.radius()
+        }
+        index.append(meta)
+
+    # cancel late so index data is still set
+    destfile = "%s/%s.html" % (options.destdir, path.basename(gml))
+    if path.exists(destfile):
+        del g
+        print "%s exists. skipping" % destfile
+        continue
 
     # create x,y positions
     # layout = g.layout_fruchterman_reingold()
@@ -327,6 +353,16 @@ for gml in graph_files:
         tags = tags,
         edges = edges, 
         vertices = vertices))
+    dfh.close()
     print "%s -> %s" % (gml, destfile)
 
-# GPLv3 anonymous
+
+if options.index:
+    index_file = "%s/index.html" % (options.destdir)
+    if path.exists(index_file):
+        print "Index %s exists. skipping" % index_file
+    else:
+        print "Writing %s" % index_file
+        ifh = open(index_file,'w')
+        ifh.write(index_tmpl.render(index=index))
+        ifh.close()
