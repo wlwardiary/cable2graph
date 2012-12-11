@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BISHKEK1400">07BISHKEK1400</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07BISHKEK1400.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/28/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KYRGYZ STATE TV CHANGES DIRECTORS, BUT NOT DIRECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK954">08BISHKEK954</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BISHKEK954.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/22/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR DISCUSSES FREEDOM OF SPEECH WITH KYRGYZ STATE TV DIRECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK966">08BISHKEK966</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BISHKEK966.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OSH TRIP: IFTAR MEETING REVEALS WORRIES ABOUT SAUDI MONEY AND INTEREST IN VISITING THE U.S.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK996">08BISHKEK996</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BISHKEK996.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/30/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KYRGYZ ANALYST CRITICIZES USG'S MUSLIM OUTREACH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK1021">08BISHKEK1021</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08BISHKEK1021.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Libel Suits Chill Free Speech in Kyrgyzstan</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK1222">08BISHKEK1222</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08BISHKEK1222.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KYRGYZ TV PULLS RFE/RL OFF THE AIR, AVOIDS EMBASSY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK1254">08BISHKEK1254</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08BISHKEK1254.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/17/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KYRGYZ STATE TELEVISION AND RADIO REFUSES TO RESUME RFE/RL BROADCASTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK1273">08BISHKEK1273</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08BISHKEK1273.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHARGE ENGAGES KYRGYZ WHITE HOUSE OVER RFE/RL BROADCASTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BISHKEK63">09BISHKEK63</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BISHKEK63.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KYRGYZSTAN: AMBASSADOR ADVOCATES FOR RFE/RL WITH STATE TV DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BISHKEK147">09BISHKEK147</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09BISHKEK147.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KYRGYZSTAN: RFE/RL PROGRAMMING DOWN; RUSSIAN AND CHINESE PROGRAMMING ON THE RISE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="116.7231" y1="214.5721" 
+                  x2="106.7231" y2="214.5721" class="btwns0"/>
+        
+            <line x1="116.7231" y1="214.5721" 
+                  x2="172.9637" y2="28.8450" class="btwns10"/>
+        
+            <line x1="116.7231" y1="214.5721" 
+                  x2="-64.7570" y2="286.3233" class="btwns8"/>
+        
+            <line x1="-18.2564" y1="-66.5212" 
+                  x2="166.7154" y2="15.2317" class="btwns2"/>
+        
+            <line x1="-18.2564" y1="-66.5212" 
+                  x2="108.6605" y2="-152.6848" class="btwns1"/>
+        
+            <line x1="311.7142" y1="-88.2845" 
+                  x2="183.7021" y2="13.0668" class="btwns2"/>
+        
+            <line x1="311.7142" y1="-88.2845" 
+                  x2="384.9605" y2="37.2534" class="btwns0"/>
+        
+            <line x1="311.7142" y1="-88.2845" 
+                  x2="126.3445" y2="-154.9189" class="btwns1"/>
+        
+            <line x1="175.8619" y1="19.2742" 
+                  x2="380.0764" y2="44.6572" class="btwns2"/>
+        
+            <line x1="175.8619" y1="19.2742" 
+                  x2="120.0836" y2="-148.8106" class="btwns4"/>
+        
+            <line x1="-74.0566" y1="290.0000" 
+                  x2="-259.6992" y2="219.5300" class="btwns6"/>
+        
+            <line x1="-390.0000" y1="90.2756" 
+                  x2="-275.9817" y2="208.7751" class="btwns3"/>
+        
+            <line x1="116.9340" y1="-158.3017" 
+                  x2="-23.7720" y2="-283.3569" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(116.7231 214.5721)" 
+                class="vertice degree7 btwns8 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-18.2564 -66.5212)" 
+                class="vertice degree2 btwns0 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(311.7142 -88.2845)" 
+                class="vertice degree5 btwns0 authority5 BISHKEK">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(175.8619 19.2742)" 
+                class="vertice degree10 btwns10 authority10 BISHKEK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.8907)" 
+                class="vertice degree2 btwns0 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-74.0566 290.0000)" 
+                class="vertice degree2 btwns6 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 90.2756)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-269.0482 215.9811)" 
+                class="vertice degree2 btwns3 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(116.9340 -158.3017)" 
+                class="vertice degree7 btwns3 authority7 BISHKEK">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-31.2465 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(116.7231 214.5721)" 
+                id="07BISHKEK1400" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>11/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07BISHKEK1400.html">07BISHKEK1400</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KYRGYZ STATE TV CHANGES DIRECTORS, BUT NOT DIRECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-18.2564 -66.5212)" 
+                id="08BISHKEK1021" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08BISHKEK1021.html">08BISHKEK1021</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Libel Suits Chill Free Speech in Kyrgyzstan</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(311.7142 -88.2845)" 
+                id="08BISHKEK1222" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BISHKEK1222.html">08BISHKEK1222</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>KYRGYZ TV PULLS RFE/RL OFF THE AIR, AVOIDS EMBASSY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(175.8619 19.2742)" 
+                id="08BISHKEK1254" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BISHKEK1254.html">08BISHKEK1254</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>KYRGYZ STATE TELEVISION AND RADIO REFUSES TO RESUME RFE/RL BROADCASTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.8907)" 
+                id="08BISHKEK1273" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BISHKEK1273.html">08BISHKEK1273</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHARGE ENGAGES KYRGYZ WHITE HOUSE OVER RFE/RL BROADCASTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-74.0566 290.0000)" 
+                id="08BISHKEK954" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BISHKEK954.html">08BISHKEK954</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR DISCUSSES FREEDOM OF SPEECH WITH KYRGYZ STATE TV DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 90.2756)" 
+                id="08BISHKEK966" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BISHKEK966.html">08BISHKEK966</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OSH TRIP: IFTAR MEETING REVEALS WORRIES ABOUT SAUDI MONEY AND INTEREST IN VISITING THE U.S.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-269.0482 215.9811)" 
+                id="08BISHKEK996" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BISHKEK996.html">08BISHKEK996</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KYRGYZ ANALYST CRITICIZES USG'S MUSLIM OUTREACH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(116.9340 -158.3017)" 
+                id="09BISHKEK147" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>02/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09BISHKEK147.html">09BISHKEK147</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KYRGYZSTAN: RFE/RL PROGRAMMING DOWN; RUSSIAN AND CHINESE PROGRAMMING ON THE RISE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-31.2465 -290.0000)" 
+                id="09BISHKEK63" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BISHKEK63.html">09BISHKEK63</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KYRGYZSTAN: AMBASSADOR ADVOCATES FOR RFE/RL WITH STATE TV DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

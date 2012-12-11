@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA218">06PRISTINA218</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06PRISTINA218.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/10/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KOSOVO: AGIM CEKU APPROVED AS NEW PRIME MINISTER; KOLE BERISHA AS NEW ASSEMBLY PRESIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA229">06PRISTINA229</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06PRISTINA229.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KOSOVO: CEKU OFF TO GOOD START IN HIS FIRST DAYS AS PRIME MINISTER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA242">06PRISTINA242</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06PRISTINA242.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW KOSOVO PRIME MINISTER ROARS OUT OF THE GATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA491">06PRISTINA491</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PRISTINA491.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KOSOVO: PM CEKU ALREADY AT WORK ON CONTACT GROUP PRIORITIES FOR STANDARDS IMPLEMENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA513">06PRISTINA513</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PRISTINA513.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KOSOVO: THACI OK WITH ELECTION DELAY IF HIS PARTY BROUGHT INTO GOVERNMENT (IT WON'T BE)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA520">06PRISTINA520</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PRISTINA520.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/16/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KOSOVO: BAD POLL NUMBERS FOR THACI SIGNAL REQUEST FOR CONTACT GROUP HELP?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA539">06PRISTINA539</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PRISTINA539.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KOSOVO'S NEXT UN ADMINISTRATOR:  THACI WEIGHS IN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA567">06PRISTINA567</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PRISTINA567.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KOSOVO: PM CEKU UP-BEAT ON FULFILLMENT OF PRIORITIES FOR STANDARDS IMPLEMENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA600">06PRISTINA600</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PRISTINA600.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/17/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KOSOVO: PISG PROGRESS ON CG STANDARDS PRIORITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA609">06PRISTINA609</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PRISTINA609.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/19/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KOSOVO: REVIEWS OF PM CEKU'S FIRST 100 DAYS GENERALLY POSITIVE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRISTINA661">06PRISTINA661</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06PRISTINA661.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KOSOVO: LDK ASSERTS PRIMARY POSITION IN GOVERNMENT IN A LETTER TO PM CEKU</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="49.7345" y1="-290.0000" 
+                  x2="-84.2074" y2="-235.9953" class="btwns3"/>
+        
+            <line x1="-93.4820" y1="-232.2558" 
+                  x2="-187.6889" y2="-118.6762" class="btwns6"/>
+        
+            <line x1="-194.0730" y1="-110.9792" 
+                  x2="-233.0668" y2="41.6184" class="btwns8"/>
+        
+            <line x1="140.6683" y1="227.3677" 
+                  x2="237.2618" y2="94.6453" class="btwns8"/>
+        
+            <line x1="140.6683" y1="227.3677" 
+                  x2="-10.9448" y2="286.3731" class="btwns9"/>
+        
+            <line x1="243.1462" y1="86.5599" 
+                  x2="380.1593" y2="111.3154" class="btwns3"/>
+        
+            <line x1="243.1462" y1="86.5599" 
+                  x2="273.4060" y2="-56.6754" class="btwns3"/>
+        
+            <line x1="-20.2639" y1="290.0000" 
+                  x2="-159.4086" y2="212.9482" class="btwns10"/>
+        
+            <line x1="-168.1568" y1="208.1038" 
+                  x2="-231.5941" y2="60.4946" class="btwns10"/>
+        
+            <line x1="-235.5426" y1="51.3071" 
+                  x2="-245.5426" y2="51.3071" class="btwns0"/>
+        
+            <line x1="-235.5426" y1="51.3071" 
+                  x2="-380.0335" y2="63.1583" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(49.7345 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PRISTINA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-93.4820 -232.2558)" 
+                class="vertice degree2 btwns3 authority4 PRISTINA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-194.0730 -110.9792)" 
+                class="vertice degree2 btwns5 authority4 PRISTINA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(140.6683 227.3677)" 
+                class="vertice degree2 btwns7 authority4 PRISTINA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(243.1462 86.5599)" 
+                class="vertice degree5 btwns6 authority9 PRISTINA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 113.0934)" 
+                class="vertice degree0 btwns0 authority0 PRISTINA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(275.4730 -66.4594)" 
+                class="vertice degree0 btwns0 authority0 PRISTINA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-20.2639 290.0000)" 
+                class="vertice degree2 btwns8 authority4 PRISTINA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-168.1568 208.1038)" 
+                class="vertice degree2 btwns9 authority4 PRISTINA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-235.5426 51.3071)" 
+                class="vertice degree10 btwns10 authority10 PRISTINA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 63.9758)" 
+                class="vertice degree0 btwns0 authority0 PRISTINA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(49.7345 -290.0000)" 
+                id="06PRISTINA218" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06PRISTINA218.html">06PRISTINA218</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: AGIM CEKU APPROVED AS NEW PRIME MINISTER; KOLE BERISHA AS NEW ASSEMBLY PRESIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-93.4820 -232.2558)" 
+                id="06PRISTINA229" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06PRISTINA229.html">06PRISTINA229</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: CEKU OFF TO GOOD START IN HIS FIRST DAYS AS PRIME MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-194.0730 -110.9792)" 
+                id="06PRISTINA242" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06PRISTINA242.html">06PRISTINA242</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW KOSOVO PRIME MINISTER ROARS OUT OF THE GATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(140.6683 227.3677)" 
+                id="06PRISTINA491" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PRISTINA491.html">06PRISTINA491</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: PM CEKU ALREADY AT WORK ON CONTACT GROUP PRIORITIES FOR STANDARDS IMPLEMENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(243.1462 86.5599)" 
+                id="06PRISTINA513" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PRISTINA513.html">06PRISTINA513</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>KOSOVO: THACI OK WITH ELECTION DELAY IF HIS PARTY BROUGHT INTO GOVERNMENT (IT WON'T BE)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 113.0934)" 
+                id="06PRISTINA520" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PRISTINA520.html">06PRISTINA520</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: BAD POLL NUMBERS FOR THACI SIGNAL REQUEST FOR CONTACT GROUP HELP?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(275.4730 -66.4594)" 
+                id="06PRISTINA539" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PRISTINA539.html">06PRISTINA539</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KOSOVO'S NEXT UN ADMINISTRATOR:  THACI WEIGHS IN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.2639 290.0000)" 
+                id="06PRISTINA567" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PRISTINA567.html">06PRISTINA567</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: PM CEKU UP-BEAT ON FULFILLMENT OF PRIORITIES FOR STANDARDS IMPLEMENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.1568 208.1038)" 
+                id="06PRISTINA600" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PRISTINA600.html">06PRISTINA600</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: PISG PROGRESS ON CG STANDARDS PRIORITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-235.5426 51.3071)" 
+                id="06PRISTINA609" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PRISTINA609.html">06PRISTINA609</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: REVIEWS OF PM CEKU'S FIRST 100 DAYS GENERALLY POSITIVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 63.9758)" 
+                id="06PRISTINA661" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06PRISTINA661.html">06PRISTINA661</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KOSOVO: LDK ASSERTS PRIMARY POSITION IN GOVERNMENT IN A LETTER TO PM CEKU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

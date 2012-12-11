@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA6862">07BOGOTA6862</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07BOGOTA6862.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COLOMBIA AUCTIONS NINE OFFSHORE BLOCKS ON CARIBBEAN COAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA7019">07BOGOTA7019</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07BOGOTA7019.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMBASSADOR BROWNFIELD'S SEPTEMBER 24 CALL ON TRADE MINISTER PLATA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA7088">07BOGOTA7088</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07BOGOTA7088.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/02/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECOPETROL PARTIAL PRIVATIZATION RESOUNDING SUCCESS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA7239">07BOGOTA7239</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07BOGOTA7239.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/09/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMBASSADOR'S OCTOBER 1 CALL ON FINANCE MINISTER ZULUAGA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA7423">07BOGOTA7423</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07BOGOTA7423.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">ECOPETROL OUTLINES ITS APPROACH TO HUMAN RIGHTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BOGOTA8434">07BOGOTA8434</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07BOGOTA8434.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PROSECUTOR GENERAL DATA SKETCHY BUT SHOWS MOST LABOR MURDERS NOT DUE TO UNION TIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA570">08BOGOTA570</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08BOGOTA570.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/12/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COLOMBIA'S OIL & GAS OUTLOOK: INVESTORS BULLISH, PREDICT PROLONGED EXPORTER STATUS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA712">08BOGOTA712</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08BOGOTA712.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ECOPETROL ANNOUNCES PLAN TO TRIPLE OIL PRODUCTION BY 2015</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA1789">08BOGOTA1789</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BOGOTA1789.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">RECORD PRICES AND INVESTMENT PROPELLING COLOMBIAN MINING SECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA3017">08BOGOTA3017</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08BOGOTA3017.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COLOMBIA SHOWCASES POTENTIAL AS STRATEGIC ENERGY PARTNER TO DOE DEPSEC KUPFER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA3082">08BOGOTA3082</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08BOGOTA3082.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOC TO TAKE LARGER SHARE OF HIGH OIL REVENUES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA3848">08BOGOTA3848</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08BOGOTA3848.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/22/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ECOPETROL TO EXPAND COOPERATION WITH PETROBRAS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA4088">08BOGOTA4088</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08BOGOTA4088.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/12/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COLOMBIA AUCTIONS OFF 22 NEW OIL BLOCS TO EXTEND SELF-SUFFICIENCY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA4452">08BOGOTA4452</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08BOGOTA4452.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/17/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COLOMBIA ENERGY UPDATE: MORE BLOCS, GAS PROSPECTS, AND BIOFUELS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="290.7227" y1="-159.5399" 
+                  x2="205.1178" y2="-5.6718" class="btwns4"/>
+        
+            <line x1="290.7227" y1="-159.5399" 
+                  x2="318.1225" y2="-280.2481" class="btwns1"/>
+        
+            <line x1="277.7457" y1="290.0000" 
+                  x2="294.4434" y2="168.1376" class="btwns1"/>
+        
+            <line x1="200.2561" y1="3.0668" 
+                  x2="290.5576" y2="149.7150" class="btwns4"/>
+        
+            <line x1="200.2561" y1="3.0668" 
+                  x2="380.0201" y2="-8.3450" class="btwns1"/>
+        
+            <line x1="200.2561" y1="3.0668" 
+                  x2="106.0264" y2="130.3783" class="btwns1"/>
+        
+            <line x1="200.2561" y1="3.0668" 
+                  x2="-44.1477" y2="-52.5778" class="btwns10"/>
+        
+            <line x1="17.5929" y1="-213.8275" 
+                  x2="-49.7980" y2="-63.9185" class="btwns1"/>
+        
+            <line x1="100.0772" y1="138.4162" 
+                  x2="-29.3321" y2="114.8301" class="btwns0"/>
+        
+            <line x1="-39.1700" y1="113.0370" 
+                  x2="-53.0240" y2="-44.8360" class="btwns1"/>
+        
+            <line x1="-134.0982" y1="-216.0834" 
+                  x2="-58.3506" y2="-63.7518" class="btwns1"/>
+        
+            <line x1="-247.8559" y1="-81.9514" 
+                  x2="-380.2109" y2="-54.3329" class="btwns1"/>
+        
+            <line x1="-247.8559" y1="-81.9514" 
+                  x2="-63.8016" y2="-56.1842" class="btwns4"/>
+        
+            <line x1="-53.8982" y1="-54.7977" 
+                  x2="-187.4544" y2="70.8089" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(290.7227 -159.5399)" 
+                class="vertice degree2 btwns2 authority2 BOGOTA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(277.7457 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(200.2561 3.0668)" 
+                class="vertice degree8 btwns9 authority7 BOGOTA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(295.8010 158.2301)" 
+                class="vertice degree2 btwns2 authority2 BOGOTA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -8.9785)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(320.3361 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(17.5929 -213.8275)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(100.0772 138.4162)" 
+                class="vertice degree2 btwns0 authority2 BOGOTA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-39.1700 113.0370)" 
+                class="vertice degree2 btwns0 authority2 BOGOTA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-134.0982 -216.0834)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-247.8559 -81.9514)" 
+                class="vertice degree2 btwns2 authority1 BOGOTA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -52.2902)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-53.8982 -54.7977)" 
+                class="vertice degree10 btwns10 authority10 BOGOTA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-194.7390 77.6599)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(290.7227 -159.5399)" 
+                id="07BOGOTA6862" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07BOGOTA6862.html">07BOGOTA6862</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA AUCTIONS NINE OFFSHORE BLOCKS ON CARIBBEAN COAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(277.7457 290.0000)" 
+                id="07BOGOTA7019" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07BOGOTA7019.html">07BOGOTA7019</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR BROWNFIELD'S SEPTEMBER 24 CALL ON TRADE MINISTER PLATA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(200.2561 3.0668)" 
+                id="07BOGOTA7088" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>10/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07BOGOTA7088.html">07BOGOTA7088</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>ECOPETROL PARTIAL PRIVATIZATION RESOUNDING SUCCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(295.8010 158.2301)" 
+                id="07BOGOTA7239" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07BOGOTA7239.html">07BOGOTA7239</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S OCTOBER 1 CALL ON FINANCE MINISTER ZULUAGA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -8.9785)" 
+                id="07BOGOTA7423" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07BOGOTA7423.html">07BOGOTA7423</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ECOPETROL OUTLINES ITS APPROACH TO HUMAN RIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(320.3361 -290.0000)" 
+                id="07BOGOTA8434" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07BOGOTA8434.html">07BOGOTA8434</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PROSECUTOR GENERAL DATA SKETCHY BUT SHOWS MOST LABOR MURDERS NOT DUE TO UNION TIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(17.5929 -213.8275)" 
+                id="08BOGOTA1789" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BOGOTA1789.html">08BOGOTA1789</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RECORD PRICES AND INVESTMENT PROPELLING COLOMBIAN MINING SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.0772 138.4162)" 
+                id="08BOGOTA3017" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08BOGOTA3017.html">08BOGOTA3017</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA SHOWCASES POTENTIAL AS STRATEGIC ENERGY PARTNER TO DOE DEPSEC KUPFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-39.1700 113.0370)" 
+                id="08BOGOTA3082" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08BOGOTA3082.html">08BOGOTA3082</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOC TO TAKE LARGER SHARE OF HIGH OIL REVENUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-134.0982 -216.0834)" 
+                id="08BOGOTA3848" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08BOGOTA3848.html">08BOGOTA3848</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ECOPETROL TO EXPAND COOPERATION WITH PETROBRAS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-247.8559 -81.9514)" 
+                id="08BOGOTA4088" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08BOGOTA4088.html">08BOGOTA4088</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA AUCTIONS OFF 22 NEW OIL BLOCS TO EXTEND SELF-SUFFICIENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -52.2902)" 
+                id="08BOGOTA4452" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BOGOTA4452.html">08BOGOTA4452</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA ENERGY UPDATE: MORE BLOCS, GAS PROSPECTS, AND BIOFUELS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-53.8982 -54.7977)" 
+                id="08BOGOTA570" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BOGOTA570.html">08BOGOTA570</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA'S OIL & GAS OUTLOOK: INVESTORS BULLISH, PREDICT PROLONGED EXPORTER STATUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-194.7390 77.6599)" 
+                id="08BOGOTA712" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BOGOTA712.html">08BOGOTA712</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ECOPETROL ANNOUNCES PLAN TO TRIPLE OIL PRODUCTION BY 2015</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU595">09CHISINAU595</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09CHISINAU595.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/31/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPOSITION HAS BIG PLANS TO LEAD MOLDOVA IN NEW DIRECTION -- BUT CAN THEY SUCCEED?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU614">09CHISINAU614</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU614.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRESIDENT VORONIN ACCEPTS THE IDEA OF COMMUNISTS GOING INTO OPPOSITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU623">09CHISINAU623</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU623.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/07/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPOSITION WORKING TO FORM RULING COALITION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU626">09CHISINAU626</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU626.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COMMUNISTS CONSIDERING PLAN TO LET NON-COMMUNIST COALITION TAKE OVER GOVERNMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU643">09CHISINAU643</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU643.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">POSSIBILITY OF COMMUNIST PARTY SPLIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU644">09CHISINAU644</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU644.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DID LUPU GO TO MOSCOW?  IF SO, WHY?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU659">09CHISINAU659</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU659.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WHO WANTS ION STURZA TO BE PRESIDENT?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU671">09CHISINAU671</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CHISINAU671.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/28/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ALLIANCE ELECTS SPEAKER, BUT WHAT'S NEXT?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU675">09CHISINAU675</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU675.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Voronin Announces Intention to Resign as "Rump" Parliament Meets September 2</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU685">09CHISINAU685</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU685.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LUPU FEELS "WINDS OF CHANGE" IN THE AIR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU694">09CHISINAU694</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU694.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">VORONIN OFFERED LUPU A HUGE BRIBE IN ATTEMPT TO SPLIT NON-COMMUNIST ALLIANCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU700">09CHISINAU700</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU700.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DPM DODON BELIEVES COMMUNISTS SHOULD GIVE EIGHT VOTES TO LUPU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU711">09CHISINAU711</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU711.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">EX-PRESIDENT VORONIN PREPARING FOR REPEAT ELECTIONS IN 2010</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHISINAU714">09CHISINAU714</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09CHISINAU714.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DPM DODON STILL CONSIDERING SPLIT WITH COMMUNISTS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="52.9480" 
+                  x2="352.9458" y2="-58.3352" class="btwns2"/>
+        
+            <line x1="268.0832" y1="-187.6542" 
+                  x2="344.1533" y2="-76.0853" class="btwns4"/>
+        
+            <line x1="268.0832" y1="-187.6542" 
+                  x2="147.4837" y2="-270.9703" class="btwns6"/>
+        
+            <line x1="139.2562" y1="-276.6543" 
+                  x2="-10.6894" y2="-289.1683" class="btwns8"/>
+        
+            <line x1="-245.6087" y1="77.3658" 
+                  x2="-62.3933" y2="147.8061" class="btwns6"/>
+        
+            <line x1="-245.6087" y1="77.3658" 
+                  x2="-336.5172" y2="-32.6524" class="btwns2"/>
+        
+            <line x1="-245.6087" y1="77.3658" 
+                  x2="-380.1123" y2="57.0405" class="btwns2"/>
+        
+            <line x1="-45.3267" y1="-18.9311" 
+                  x2="-80.0241" y2="-161.5489" class="btwns9"/>
+        
+            <line x1="-45.3267" y1="-18.9311" 
+                  x2="-52.6058" y2="141.4050" class="btwns10"/>
+        
+            <line x1="-82.3880" y1="-171.2654" 
+                  x2="-25.2678" y2="-281.1276" class="btwns9"/>
+        
+            <line x1="131.6190" y1="184.1198" 
+                  x2="-43.2127" y2="153.1396" class="btwns2"/>
+        
+            <line x1="-53.0593" y1="151.3947" 
+                  x2="-107.2657" y2="272.2083" class="btwns2"/>
+        
+            <line x1="-53.0593" y1="151.3947" 
+                  x2="5.3820" y2="280.8853" class="btwns2"/>
+        
+            <line x1="-111.3593" y1="281.3321" 
+                  x2="-0.4787" y2="289.2846" class="btwns0"/>
+        
+            <line x1="-342.8870" y1="-40.3612" 
+                  x2="-385.5909" y2="46.5708" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 52.9480)" 
+                class="vertice degree0 btwns0 authority0 CHISINAU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(268.0832 -187.6542)" 
+                class="vertice degree2 btwns4 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(349.7867 -67.8230)" 
+                class="vertice degree2 btwns2 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(139.2562 -276.6543)" 
+                class="vertice degree2 btwns5 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-245.6087 77.3658)" 
+                class="vertice degree5 btwns4 authority5 CHISINAU">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-45.3267 -18.9311)" 
+                class="vertice degree2 btwns7 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-82.3880 -171.2654)" 
+                class="vertice degree2 btwns7 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-20.6548 -290.0000)" 
+                class="vertice degree2 btwns6 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(131.6190 184.1198)" 
+                class="vertice degree0 btwns0 authority0 CHISINAU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-53.0593 151.3947)" 
+                class="vertice degree10 btwns10 authority10 CHISINAU">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-111.3593 281.3321)" 
+                class="vertice degree2 btwns0 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-342.8870 -40.3612)" 
+                class="vertice degree2 btwns0 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(9.4956 290.0000)" 
+                class="vertice degree2 btwns0 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 55.5463)" 
+                class="vertice degree2 btwns0 authority2 CHISINAU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 52.9480)" 
+                id="09CHISINAU595" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09CHISINAU595.html">09CHISINAU595</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OPPOSITION HAS BIG PLANS TO LEAD MOLDOVA IN NEW DIRECTION -- BUT CAN THEY SUCCEED?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(268.0832 -187.6542)" 
+                id="09CHISINAU614" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU614.html">09CHISINAU614</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRESIDENT VORONIN ACCEPTS THE IDEA OF COMMUNISTS GOING INTO OPPOSITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(349.7867 -67.8230)" 
+                id="09CHISINAU623" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU623.html">09CHISINAU623</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>OPPOSITION WORKING TO FORM RULING COALITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(139.2562 -276.6543)" 
+                id="09CHISINAU626" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU626.html">09CHISINAU626</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>COMMUNISTS CONSIDERING PLAN TO LET NON-COMMUNIST COALITION TAKE OVER GOVERNMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.6087 77.3658)" 
+                id="09CHISINAU643" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU643.html">09CHISINAU643</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>POSSIBILITY OF COMMUNIST PARTY SPLIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-45.3267 -18.9311)" 
+                id="09CHISINAU644" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU644.html">09CHISINAU644</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DID LUPU GO TO MOSCOW?  IF SO, WHY?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-82.3880 -171.2654)" 
+                id="09CHISINAU659" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU659.html">09CHISINAU659</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>WHO WANTS ION STURZA TO BE PRESIDENT?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.6548 -290.0000)" 
+                id="09CHISINAU671" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CHISINAU671.html">09CHISINAU671</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ALLIANCE ELECTS SPEAKER, BUT WHAT'S NEXT?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(131.6190 184.1198)" 
+                id="09CHISINAU675" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU675.html">09CHISINAU675</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Voronin Announces Intention to Resign as "Rump" Parliament Meets September 2</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-53.0593 151.3947)" 
+                id="09CHISINAU685" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU685.html">09CHISINAU685</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>LUPU FEELS "WINDS OF CHANGE" IN THE AIR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.3593 281.3321)" 
+                id="09CHISINAU694" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU694.html">09CHISINAU694</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VORONIN OFFERED LUPU A HUGE BRIBE IN ATTEMPT TO SPLIT NON-COMMUNIST ALLIANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-342.8870 -40.3612)" 
+                id="09CHISINAU700" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU700.html">09CHISINAU700</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DPM DODON BELIEVES COMMUNISTS SHOULD GIVE EIGHT VOTES TO LUPU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(9.4956 290.0000)" 
+                id="09CHISINAU711" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU711.html">09CHISINAU711</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EX-PRESIDENT VORONIN PREPARING FOR REPEAT ELECTIONS IN 2010</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 55.5463)" 
+                id="09CHISINAU714" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09CHISINAU714.html">09CHISINAU714</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DPM DODON STILL CONSIDERING SPLIT WITH COMMUNISTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

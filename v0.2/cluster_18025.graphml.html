@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05ROME751">05ROME751</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/06/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05ROME757">05ROME757</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/06/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ROME781">05ROME781</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME781.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/08/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ/ITALY: ACCIDENTAL KILLING IN BAGHDAD, BERLUSCONI PROPOSES JOINT COMMISSION, AGREES TO JOINT INVESTIGATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ROME799">05ROME799</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME799.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/10/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">IRAQ/ITALY: FM FINI SPEAKS TO PARLIAMENT ON NICOLA CALIPARI INCIDENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ROME821">05ROME821</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME821.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">IRAQ/ITALY: PM BERLUSCONI SPEAKS TO THE SENATE ON NICOLA CALIPARI INCIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ROME858">05ROME858</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME858.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">U.S.-ITALY INVESTIGATION INTO DEATH OF ITALIAN OFFICIAL CALIPARI IN IRAQ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ROME1021">05ROME1021</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME1021.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ: ITALIAN CRIMINAL INVESTIGATION REQUESTS - EMBASSY VIEWS ON NEXT STEPS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ROME1024">05ROME1024</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ROME1024.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/25/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ: US/ITALY JOINT INVESTIGATION - LOOKING AHEAD TO PUBLIC AFFAIRS STRATEGY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD1005">05BAGHDAD1005</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD1082">05BAGHDAD1082</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD1186">05BAGHDAD1186</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD1198">05BAGHDAD1198</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD965">05BAGHDAD965</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="343.1741" y1="155.1263" 
+                  x2="224.2169" y2="48.5311" class="btwns2"/>
+        
+            <line x1="-198.9984" y1="290.0000" 
+                  x2="-239.5767" y2="172.2976" class="btwns2"/>
+        
+            <line x1="-225.0568" y1="-162.9555" 
+                  x2="-214.2923" y2="-8.4840" class="btwns5"/>
+        
+            <line x1="-225.0568" y1="-162.9555" 
+                  x2="-187.7105" y2="-280.4697" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-9.9524" 
+                  x2="-223.5762" y2="0.8444" class="btwns2"/>
+        
+            <line x1="-1.5029" y1="21.5958" 
+                  x2="-203.6418" y2="2.4355" class="btwns10"/>
+        
+            <line x1="-1.5029" y1="21.5958" 
+                  x2="206.8123" y2="40.9333" class="btwns10"/>
+        
+            <line x1="-213.5971" y1="1.4918" 
+                  x2="-223.5971" y2="1.4918" class="btwns0"/>
+        
+            <line x1="-213.5971" y1="1.4918" 
+                  x2="-241.0529" y2="153.0039" class="btwns5"/>
+        
+            <line x1="-184.6817" y1="-290.0000" 
+                  x2="-194.6817" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-13.1005" 
+                  x2="226.3013" y2="38.8336" class="btwns2"/>
+        
+            <line x1="166.2036" y1="201.4856" 
+                  x2="213.7496" y2="51.3908" class="btwns2"/>
+        
+            <line x1="216.7694" y1="41.8576" 
+                  x2="226.8203" y2="-125.6976" class="btwns5"/>
+        
+            <line x1="227.4191" y1="-135.6796" 
+                  x2="213.4584" y2="-261.3683" class="btwns2"/>
+        
+            <line x1="-242.8360" y1="162.8437" 
+                  x2="-252.8360" y2="162.8437" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(343.1741 155.1263)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-198.9984 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-225.0568 -162.9555)" 
+                class="vertice degree2 btwns2 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -9.9524)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-1.5029 21.5958)" 
+                class="vertice degree2 btwns8 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-213.5971 1.4918)" 
+                class="vertice degree10 btwns9 authority8 ROME">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-184.6817 -290.0000)" 
+                class="vertice degree4 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -13.1005)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(166.2036 201.4856)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(216.7694 41.8576)" 
+                class="vertice degree8 btwns10 authority10 ROME">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(227.4191 -135.6796)" 
+                class="vertice degree2 btwns2 authority2 ROME">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(212.3545 -271.3072)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-242.8360 162.8437)" 
+                class="vertice degree6 btwns2 authority2 ROME">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(343.1741 155.1263)" 
+                id="05BAGHDAD1005" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BAGHDAD1005
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-198.9984 290.0000)" 
+                id="05BAGHDAD1082" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BAGHDAD1082
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-225.0568 -162.9555)" 
+                id="05BAGHDAD1186" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05BAGHDAD1186
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -9.9524)" 
+                id="05BAGHDAD1198" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BAGHDAD1198
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-1.5029 21.5958)" 
+                id="05BAGHDAD965" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05BAGHDAD965
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-213.5971 1.4918)" 
+                id="05ROME1021" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME1021.html">05ROME1021</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IRAQ: ITALIAN CRIMINAL INVESTIGATION REQUESTS - EMBASSY VIEWS ON NEXT STEPS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-184.6817 -290.0000)" 
+                id="05ROME1024" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME1024.html">05ROME1024</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>IRAQ: US/ITALY JOINT INVESTIGATION - LOOKING AHEAD TO PUBLIC AFFAIRS STRATEGY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -13.1005)" 
+                id="05ROME751" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ROME751
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(166.2036 201.4856)" 
+                id="05ROME757" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ROME757
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(216.7694 41.8576)" 
+                id="05ROME781" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME781.html">05ROME781</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>IRAQ/ITALY: ACCIDENTAL KILLING IN BAGHDAD, BERLUSCONI PROPOSES JOINT COMMISSION, AGREES TO JOINT INVESTIGATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(227.4191 -135.6796)" 
+                id="05ROME799" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME799.html">05ROME799</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IRAQ/ITALY: FM FINI SPEAKS TO PARLIAMENT ON NICOLA CALIPARI INCIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(212.3545 -271.3072)" 
+                id="05ROME821" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME821.html">05ROME821</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQ/ITALY: PM BERLUSCONI SPEAKS TO THE SENATE ON NICOLA CALIPARI INCIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-242.8360 162.8437)" 
+                id="05ROME858" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ROME858.html">05ROME858</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>U.S.-ITALY INVESTIGATION INTO DEATH OF ITALIAN OFFICIAL CALIPARI IN IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

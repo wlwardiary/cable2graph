@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE155088">06STATE155088</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/19/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SINGAPORE3429">06SINGAPORE3429</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06SINGAPORE3429.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST1672">06BUCHAREST1672</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BUCHAREST1672.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/01/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN985">06TALLINN985</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TALLINN985.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL - ESTONIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA4568">06MANILA4568</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06MANILA4568.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PHILIPPINES 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06HANOI2800">06HANOI2800</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06HANOI2800.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2006-2007 INCSR PART I -- VIETNAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06NICOSIA1885">06NICOSIA1885</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06NICOSIA1885.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CYPRUS: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA6373">06ANKARA6373</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ANKARA6373.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TURKEY: INSCR 2006-2007 DRUGS AND CHEMICAL CONTROL REPORT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA3355">06VIENNA3355</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06VIENNA3355.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRIA: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INSCR) - PART 1</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KUALALUMPUR2266">06KUALALUMPUR2266</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KUALALUMPUR2266.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-109.6824" y1="290.0000" 
+                  x2="0.4092" y2="15.1801" class="btwns5"/>
+        
+            <line x1="358.5376" y1="138.8597" 
+                  x2="13.4907" y2="9.4098" class="btwns5"/>
+        
+            <line x1="-268.3109" y1="-209.5857" 
+                  x2="-3.7153" y2="-0.3063" class="btwns5"/>
+        
+            <line x1="161.2713" y1="278.0611" 
+                  x2="9.1281" y2="14.5573" class="btwns5"/>
+        
+            <line x1="-326.8662" y1="168.7000" 
+                  x2="-4.8454" y2="10.3108" class="btwns5"/>
+        
+            <line x1="240.7459" y1="-231.8906" 
+                  x2="11.1815" y2="-1.1913" class="btwns5"/>
+        
+            <line x1="-19.1374" y1="-290.0000" 
+                  x2="3.3441" y2="-4.0720" class="btwns5"/>
+        
+            <line x1="4.1279" y1="5.8972" 
+                  x2="380.1535" y2="-60.7649" class="btwns5"/>
+        
+            <line x1="4.1279" y1="5.8972" 
+                  x2="-380.0376" y2="-27.5242" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-109.6824 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(358.5376 138.8597)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-268.3109 -209.5857)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(161.2713 278.0611)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-326.8662 168.7000)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(240.7459 -231.8906)" 
+                class="vertice degree0 btwns0 authority0 NICOSIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-19.1374 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SINGAPORE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(4.1279 5.8972)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -62.5105)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -28.3909)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-109.6824 290.0000)" 
+                id="06ANKARA6373" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ANKARA6373.html">06ANKARA6373</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKEY: INSCR 2006-2007 DRUGS AND CHEMICAL CONTROL REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(358.5376 138.8597)" 
+                id="06BUCHAREST1672" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BUCHAREST1672.html">06BUCHAREST1672</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-268.3109 -209.5857)" 
+                id="06HANOI2800" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06HANOI2800.html">06HANOI2800</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2006-2007 INCSR PART I -- VIETNAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(161.2713 278.0611)" 
+                id="06KUALALUMPUR2266" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KUALALUMPUR2266.html">06KUALALUMPUR2266</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-326.8662 168.7000)" 
+                id="06MANILA4568" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MANILA4568.html">06MANILA4568</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PHILIPPINES 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(240.7459 -231.8906)" 
+                id="06NICOSIA1885" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06NICOSIA1885.html">06NICOSIA1885</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CYPRUS: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-19.1374 -290.0000)" 
+                id="06SINGAPORE3429" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06SINGAPORE3429.html">06SINGAPORE3429</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(4.1279 5.8972)" 
+                id="06STATE155088" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE155088
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -62.5105)" 
+                id="06TALLINN985" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TALLINN985.html">06TALLINN985</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INCSR) PART I, DRUGS AND CHEMICAL CONTROL - ESTONIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -28.3909)" 
+                id="06VIENNA3355" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06VIENNA3355.html">06VIENNA3355</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRIA: 2006-2007 INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT (INSCR) - PART 1</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

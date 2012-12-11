@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2851">09BAGHDAD2851</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2851.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SWIRLING CROSS-CURRENT OF HIDDEN AGENDAS AND POLITICAL JOCKEYING CONTRIBUTE TO IMPASSE ON ELECTION LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2856">09BAGHDAD2856</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2856.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IMPASSE ON KIRKUK: LEADERS DISAGREE BUT OFFER FEW SOLUTIONS TO BREAK ELECTION LAW DEADLOCK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2864">09BAGHDAD2864</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2864.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/25/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKOMANS: THE THIRD WHEEL ON ELECTION LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2872">09BAGHDAD2872</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2872.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE OCTOBER 26, 2009</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2901">09BAGHDAD2901</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2901.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQ ELECTION LAW UPDATE, OCTOBER 29, 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2912">09BAGHDAD2912</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2912.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/31/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR REVIEWS REVISED UNAMI ELECTIONS LAW PROPOSAL WITH SAMARRA'I</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2913">09BAGHDAD2913</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BAGHDAD2913.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/31/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ACTION REQUEST: IRAQI ELECTION LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2920">09BAGHDAD2920</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2920.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/01/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE, NOVEMBER 1, 2009: UNAMI PROPOSAL GETS TRACTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2931">09BAGHDAD2931</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2931.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE, NOVEMBER 2, 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2935">09BAGHDAD2935</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2935.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE, NOVEMBER 3, 2009</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2944">09BAGHDAD2944</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2944.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE: NOVEMBER 4, 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2951">09BAGHDAD2951</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2951.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE: NOVEMBER 5, 2009</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2955">09BAGHDAD2955</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2955.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE: NOVEMBER 6, 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2958">09BAGHDAD2958</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2958.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI ELECTION LAW UPDATE: NOVEMBER 7, 2009</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD2998">09BAGHDAD2998</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD2998.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/15/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">PM MALIKI AND PRESIDENT TALABANI DISCUSS ELECTIONS AND TERRORIST ATTACKS WITH GENERAL PETRAEUS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-36.7475" y1="183.7309" 
+                  x2="161.5019" y2="203.9654" class="btwns5"/>
+        
+            <line x1="-36.7475" y1="183.7309" 
+                  x2="-106.1065" y2="78.8258" class="btwns8"/>
+        
+            <line x1="-36.7475" y1="183.7309" 
+                  x2="-171.5305" y2="235.0988" class="btwns0"/>
+        
+            <line x1="353.1754" y1="173.4315" 
+                  x2="181.3028" y2="203.2703" class="btwns0"/>
+        
+            <line x1="224.9662" y1="290.0000" 
+                  x2="176.7773" y2="213.4438" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-42.4493" 
+                  x2="-296.0731" y2="21.6886" class="btwns0"/>
+        
+            <line x1="-287.8148" y1="27.3278" 
+                  x2="-121.3345" y2="68.1051" class="btwns2"/>
+        
+            <line x1="-111.6216" y1="70.4842" 
+                  x2="60.6010" y2="19.0248" class="btwns10"/>
+        
+            <line x1="70.1824" y1="16.1619" 
+                  x2="255.9095" y2="-12.2976" class="btwns9"/>
+        
+            <line x1="265.7942" y1="-13.8123" 
+                  x2="381.3844" y2="-81.9204" class="btwns8"/>
+        
+            <line x1="390.0000" y1="-86.9969" 
+                  x2="289.9716" y2="-165.5485" class="btwns7"/>
+        
+            <line x1="282.1068" y1="-171.7247" 
+                  x2="102.1212" y2="-201.3723" class="btwns5"/>
+        
+            <line x1="92.2541" y1="-202.9976" 
+                  x2="73.9681" y2="-280.2688" class="btwns0"/>
+        
+            <line x1="92.2541" y1="-202.9976" 
+                  x2="-81.9414" y2="-199.4862" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-36.7475 183.7309)" 
+                class="vertice degree10 btwns7 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(353.1754 173.4315)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(224.9662 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(171.4502 204.9808)" 
+                class="vertice degree10 btwns4 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -42.4493)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-287.8148 27.3278)" 
+                class="vertice degree5 btwns2 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-111.6216 70.4842)" 
+                class="vertice degree10 btwns10 authority10 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(70.1824 16.1619)" 
+                class="vertice degree5 btwns8 authority5 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(265.7942 -13.8123)" 
+                class="vertice degree5 btwns7 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -86.9969)" 
+                class="vertice degree5 btwns6 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(282.1068 -171.7247)" 
+                class="vertice degree5 btwns5 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(92.2541 -202.9976)" 
+                class="vertice degree10 btwns4 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(71.6652 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-91.9393 -199.2847)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-180.8748 238.6601)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-36.7475 183.7309)" 
+                id="09BAGHDAD2851" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2851.html">09BAGHDAD2851</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SWIRLING CROSS-CURRENT OF HIDDEN AGENDAS AND POLITICAL JOCKEYING CONTRIBUTE TO IMPASSE ON ELECTION LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(353.1754 173.4315)" 
+                id="09BAGHDAD2856" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2856.html">09BAGHDAD2856</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IMPASSE ON KIRKUK: LEADERS DISAGREE BUT OFFER FEW SOLUTIONS TO BREAK ELECTION LAW DEADLOCK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(224.9662 290.0000)" 
+                id="09BAGHDAD2864" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2864.html">09BAGHDAD2864</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKOMANS: THE THIRD WHEEL ON ELECTION LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(171.4502 204.9808)" 
+                id="09BAGHDAD2872" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2872.html">09BAGHDAD2872</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE OCTOBER 26, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -42.4493)" 
+                id="09BAGHDAD2901" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2901.html">09BAGHDAD2901</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQ ELECTION LAW UPDATE, OCTOBER 29, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-287.8148 27.3278)" 
+                id="09BAGHDAD2912" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2912.html">09BAGHDAD2912</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR REVIEWS REVISED UNAMI ELECTIONS LAW PROPOSAL WITH SAMARRA'I</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.6216 70.4842)" 
+                id="09BAGHDAD2913" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BAGHDAD2913.html">09BAGHDAD2913</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ACTION REQUEST: IRAQI ELECTION LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(70.1824 16.1619)" 
+                id="09BAGHDAD2920" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2920.html">09BAGHDAD2920</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE, NOVEMBER 1, 2009: UNAMI PROPOSAL GETS TRACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(265.7942 -13.8123)" 
+                id="09BAGHDAD2931" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2931.html">09BAGHDAD2931</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE, NOVEMBER 2, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -86.9969)" 
+                id="09BAGHDAD2935" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2935.html">09BAGHDAD2935</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE, NOVEMBER 3, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(282.1068 -171.7247)" 
+                id="09BAGHDAD2944" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2944.html">09BAGHDAD2944</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE: NOVEMBER 4, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(92.2541 -202.9976)" 
+                id="09BAGHDAD2951" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2951.html">09BAGHDAD2951</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE: NOVEMBER 5, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(71.6652 -290.0000)" 
+                id="09BAGHDAD2955" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2955.html">09BAGHDAD2955</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE: NOVEMBER 6, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-91.9393 -199.2847)" 
+                id="09BAGHDAD2958" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2958.html">09BAGHDAD2958</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQI ELECTION LAW UPDATE: NOVEMBER 7, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-180.8748 238.6601)" 
+                id="09BAGHDAD2998" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD2998.html">09BAGHDAD2998</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PM MALIKI AND PRESIDENT TALABANI DISCUSS ELECTIONS AND TERRORIST ATTACKS WITH GENERAL PETRAEUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

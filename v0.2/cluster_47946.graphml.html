@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SKOPJE1144">06SKOPJE1144</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06SKOPJE1144.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MACEDONIA: RENEWED ACTIVITY IN 45 MILLION EURO EMBEZZLEMENT CORRUPTION CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE492">07SKOPJE492</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07SKOPJE492.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MACEDONIA: PROGRESS PROSECUTING CORRUPTION CASES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE615">07SKOPJE615</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07SKOPJE615.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MACEDONIA: COURT NETS "BIG FISH" CORRUPTION CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE629">07SKOPJE629</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SKOPJE629.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/01/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: PRIME MINISTER ON WAY AHEAD FOR NATO CANDIDACY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE730">07SKOPJE730</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE730.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIAN: ELECTORAL CODE CHANGES WOULD ALLOW GUARANTEED MINORITY AND DIASPORA SEATS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE760">07SKOPJE760</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE760.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: PROPOSED ELECTORAL CODE CHANGES STUCK IN PARLIAMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE766">07SKOPJE766</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE766.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: PRESIDENT ON COHABITATION CHALLENGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE767">07SKOPJE767</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE767.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: PRESIDENT ON NAME ISSUE, KOSOVO, SECURITY MATTERS, TROOPS FOR GWOT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE786">07SKOPJE786</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE786.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">MACEDONIA: DEADLOCK ON STATE JUDICIAL COUNCIL NEARS RESOLUTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE792">07SKOPJE792</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SKOPJE792.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: PARLIAMENT BRAWL MARS RESOLUTION OF STATE JUDICIAL COUNCIL STANDOFF</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE815">07SKOPJE815</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SKOPJE815.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/10/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">MACEDONIA: TENSIONS EBB AFTER PARLIAMENTARY BRAWL, SOME PROGRESS ON STATE JUDICIAL COUNCIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE841">07SKOPJE841</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SKOPJE841.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: DAS DICARLO FOCUSES ON NATO REFORMS, NAME DISPUTE, AND KOSOVO IN MEETINGS WITH GOM LEADERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SKOPJE842">07SKOPJE842</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SKOPJE842.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MACEDONIA: DAS DICARLO'S OCTOBER 10 MEETINGS WITH OPPOSITION LEADERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SKOPJE86">08SKOPJE86</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08SKOPJE86.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MACEDONIA: MAJOR CORRUPTION PROSECUTIONS UPDATE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-342.1628" y1="129.1155" 
+                  x2="-352.1628" y2="129.1155" class="btwns0"/>
+        
+            <line x1="-342.1628" y1="129.1155" 
+                  x2="-380.1330" y2="29.5299" class="btwns4"/>
+        
+            <line x1="-342.1628" y1="129.1155" 
+                  x2="-240.6159" y2="205.8812" class="btwns6"/>
+        
+            <line x1="-383.6957" y1="20.1860" 
+                  x2="-389.4001" y2="-74.7244" class="btwns2"/>
+        
+            <line x1="-232.6388" y1="211.9116" 
+                  x2="-80.7875" y2="221.6042" class="btwns8"/>
+        
+            <line x1="-70.8078" y1="222.2412" 
+                  x2="93.9575" y2="189.1304" class="btwns9"/>
+        
+            <line x1="103.7615" y1="187.1602" 
+                  x2="151.5458" y2="281.0871" class="btwns2"/>
+        
+            <line x1="103.7615" y1="187.1602" 
+                  x2="225.2790" y2="89.6676" class="btwns10"/>
+        
+            <line x1="233.0790" y1="83.4098" 
+                  x2="380.0053" y2="78.6380" class="btwns2"/>
+        
+            <line x1="233.0790" y1="83.4098" 
+                  x2="230.2292" y2="-32.7819" class="btwns9"/>
+        
+            <line x1="229.9840" y1="-42.7789" 
+                  x2="144.2806" y2="-129.3512" class="btwns8"/>
+        
+            <line x1="137.2453" y1="-136.4579" 
+                  x2="6.9143" y2="-203.5768" class="btwns6"/>
+        
+            <line x1="-1.9761" y1="-208.1552" 
+                  x2="-151.3743" y2="-222.2098" class="btwns2"/>
+        
+            <line x1="-1.9761" y1="-208.1552" 
+                  x2="83.8768" y2="-283.4084" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-342.1628 129.1155)" 
+                class="vertice degree10 btwns4 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-383.6957 20.1860)" 
+                class="vertice degree3 btwns2 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-232.6388 211.9116)" 
+                class="vertice degree3 btwns6 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-70.8078 222.2412)" 
+                class="vertice degree3 btwns7 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(103.7615 187.1602)" 
+                class="vertice degree6 btwns10 authority10 SKOPJE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(156.0801 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(233.0790 83.4098)" 
+                class="vertice degree6 btwns10 authority9 SKOPJE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 78.3134)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(229.9840 -42.7789)" 
+                class="vertice degree3 btwns7 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(137.2453 -136.4579)" 
+                class="vertice degree3 btwns6 authority5 SKOPJE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-1.9761 -208.1552)" 
+                class="vertice degree6 btwns4 authority9 SKOPJE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-161.3303 -223.1464)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(91.3969 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -84.7064)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-342.1628 129.1155)" 
+                id="06SKOPJE1144" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06SKOPJE1144.html">06SKOPJE1144</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: RENEWED ACTIVITY IN 45 MILLION EURO EMBEZZLEMENT CORRUPTION CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-383.6957 20.1860)" 
+                id="07SKOPJE492" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07SKOPJE492.html">07SKOPJE492</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PROGRESS PROSECUTING CORRUPTION CASES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-232.6388 211.9116)" 
+                id="07SKOPJE615" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07SKOPJE615.html">07SKOPJE615</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MACEDONIA: COURT NETS "BIG FISH" CORRUPTION CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-70.8078 222.2412)" 
+                id="07SKOPJE629" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SKOPJE629.html">07SKOPJE629</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PRIME MINISTER ON WAY AHEAD FOR NATO CANDIDACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(103.7615 187.1602)" 
+                id="07SKOPJE730" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE730.html">07SKOPJE730</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MACEDONIAN: ELECTORAL CODE CHANGES WOULD ALLOW GUARANTEED MINORITY AND DIASPORA SEATS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(156.0801 290.0000)" 
+                id="07SKOPJE760" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE760.html">07SKOPJE760</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PROPOSED ELECTORAL CODE CHANGES STUCK IN PARLIAMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(233.0790 83.4098)" 
+                id="07SKOPJE766" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE766.html">07SKOPJE766</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PRESIDENT ON COHABITATION CHALLENGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 78.3134)" 
+                id="07SKOPJE767" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE767.html">07SKOPJE767</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PRESIDENT ON NAME ISSUE, KOSOVO, SECURITY MATTERS, TROOPS FOR GWOT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(229.9840 -42.7789)" 
+                id="07SKOPJE786" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE786.html">07SKOPJE786</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MACEDONIA: DEADLOCK ON STATE JUDICIAL COUNCIL NEARS RESOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(137.2453 -136.4579)" 
+                id="07SKOPJE792" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SKOPJE792.html">07SKOPJE792</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MACEDONIA: PARLIAMENT BRAWL MARS RESOLUTION OF STATE JUDICIAL COUNCIL STANDOFF</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-1.9761 -208.1552)" 
+                id="07SKOPJE815" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SKOPJE815.html">07SKOPJE815</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: TENSIONS EBB AFTER PARLIAMENTARY BRAWL, SOME PROGRESS ON STATE JUDICIAL COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-161.3303 -223.1464)" 
+                id="07SKOPJE841" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SKOPJE841.html">07SKOPJE841</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: DAS DICARLO FOCUSES ON NATO REFORMS, NAME DISPUTE, AND KOSOVO IN MEETINGS WITH GOM LEADERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(91.3969 -290.0000)" 
+                id="07SKOPJE842" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SKOPJE842.html">07SKOPJE842</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: DAS DICARLO'S OCTOBER 10 MEETINGS WITH OPPOSITION LEADERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -84.7064)" 
+                id="08SKOPJE86" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08SKOPJE86.html">08SKOPJE86</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA: MAJOR CORRUPTION PROSECUTIONS UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

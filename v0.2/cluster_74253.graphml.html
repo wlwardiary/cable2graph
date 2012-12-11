@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE18101">08STATE18101</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/22/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA365">08JAKARTA365</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08JAKARTA365.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA/PIRACY -- WORKING TOWARD A UNSC RESOLUTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA382">08ANKARA382</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08ANKARA382.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA AND PIRACY: TURKEY INTERESTED IN POSSIBLY SUPPORTING UNSCR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA301">08OTTAWA301</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08OTTAWA301.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADIAN SUPPORT FOR UNSC PIRACY RESOLUTION LIKELY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08QUITO190">08QUITO190</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08QUITO190.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">ECUADOR DEMARCH RESPONSE: SOMALIA AND PIRACY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MADRID224">08MADRID224</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08MADRID224.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPAIN INTERESTED IN SOMALIA PIRACY UNSCR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERN108">08BERN108</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08BERN108.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA AND PIRACY:  SEEKING SWISS VIEWS ON POSSIBLE UNSC ACTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON76">08WELLINGTON76</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08WELLINGTON76.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA AND PIRACY:  NEW ZEALAND RESPONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA209">08CANBERRA209</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08CANBERRA209.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/29/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AUSTRALIAN ASSISTANCE FOR UN ACTION ON SOMALIAN PIRACY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08PRETORIA421">08PRETORIA421</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08PRETORIA421.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/29/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE ON SOMALI PIRACY DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08KINGSTON185">08KINGSTON185</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08KINGSTON185.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/29/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAMAICA: DEMARCHE ON SOMALIA AND PIRACY DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08LONDON626">08LONDON626</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/29/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN663">08AMMAN663</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08AMMAN663.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON POSSIBLE UNSC RESOLUTION REGARDING SOMALI COAST PIRACY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08PARIS362">08PARIS362</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PARIS362.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH VIEWS ON SOMALIA AND PIRACY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANSALVADOR256">08SANSALVADOR256</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08SANSALVADOR256.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EL SALVADOR: DEMARCHE ON POSSIBLE UNSC ACTION ON SOMALIA AND PIRACY DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ATHENS309">08ATHENS309</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ATHENS309.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEAMRCHE DELIVERED ON PIRACY OFF SOMALIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA225">08CANBERRA225</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08CANBERRA225.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AUSTRALIAN RESPONSE ON ASSISTANCE FOR UN ACTION ON SOMALIAN PIRACY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08HELSINKI91">08HELSINKI91</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08HELSINKI91.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FINNISH VIEWS ON POSSIBLE UNSC ACTION ON PIRACY OFF OF SOMALI COAST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO585">08TOKYO585</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO585.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PIRQY DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08KUWAIT244">08KUWAIT244</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08KUWAIT244.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED: SOMALIA AND PIRACY, SEEKING VIEWS ON POSSIBLE UNSC ACTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08PANAMA197">08PANAMA197</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PANAMA197.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PANAMA:  SOMALIA AND PIRACY DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ROME288">08ROME288</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ROME288.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY ON SOMALIA AND PIRACY IN THE UNSC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANJOSE184">08SANJOSE184</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08SANJOSE184.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COSTA RICA SUPPORTS RENEWAL OF AMISOM MANDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DUBLIN121">08DUBLIN121</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08DUBLIN121.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRISH VIEWS ON SEEKING UNSC ACTION ON PIRACY IN SOMALIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB231">08ZAGREB231</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ZAGREB231.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NO RESPONSE ON SOMALIA AND PIRACY, POSSIBLE SECURITY COUNCIL ACTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE31432">08STATE31432</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08STATE31432.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA-- DRAFT ELEMENTS FOR POSSIBLE UNSCR ON SOMALIA PIRACY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MADRID451">08MADRID451</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08MADRID451.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPAIN FULLY SUPPORTS U.S. ANTI-PIRACY INITIATIVE AT UNSC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA1042">08JAKARTA1042</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08JAKARTA1042.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA/PIRACY -- GOI REMAINS OPPOSED TO FRENCH PROPOSAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-189.1537" y1="-1.0664" 
+                  x2="-13.6726" y2="76.6202" class="btwns5"/>
+        
+            <line x1="390.0000" y1="102.8785" 
+                  x2="5.4556" y2="81.2304" class="btwns5"/>
+        
+            <line x1="-247.6343" y1="245.4340" 
+                  x2="-12.8065" y2="86.2787" class="btwns5"/>
+        
+            <line x1="11.3862" y1="290.0000" 
+                  x2="-3.7705" y2="90.6396" class="btwns5"/>
+        
+            <line x1="368.8642" y1="30.2878" 
+                  x2="5.3816" y2="79.3312" class="btwns5"/>
+        
+            <line x1="-245.2195" y1="88.5308" 
+                  x2="-14.5233" y2="80.9948" class="btwns5"/>
+        
+            <line x1="265.0298" y1="233.8079" 
+                  x2="4.1662" y2="85.6080" class="btwns5"/>
+        
+            <line x1="340.2196" y1="171.8690" 
+                  x2="5.1388" y2="83.2258" class="btwns5"/>
+        
+            <line x1="215.6509" y1="-86.4545" 
+                  x2="121.6351" y2="-101.8993" class="btwns0"/>
+        
+            <line x1="215.6509" y1="-86.4545" 
+                  x2="3.4367" y2="74.6224" class="btwns5"/>
+        
+            <line x1="111.7674" y1="-103.5203" 
+                  x2="0.8102" y2="72.2127" class="btwns5"/>
+        
+            <line x1="4.5958" y1="-39.8217" 
+                  x2="-3.7735" y2="70.6969" class="btwns5"/>
+        
+            <line x1="-348.8268" y1="-16.7388" 
+                  x2="-14.1509" y2="77.9460" class="btwns5"/>
+        
+            <line x1="-76.1984" y1="-290.0000" 
+                  x2="-55.1456" y2="-164.6905" class="btwns5"/>
+        
+            <line x1="183.4632" y1="3.5147" 
+                  x2="4.7226" y2="76.8716" class="btwns5"/>
+        
+            <line x1="-334.6923" y1="187.8196" 
+                  x2="-14.0402" y2="83.7552" class="btwns5"/>
+        
+            <line x1="-259.6848" y1="-75.2791" 
+                  x2="-13.0611" y2="75.4534" class="btwns5"/>
+        
+            <line x1="143.1824" y1="269.4540" 
+                  x2="1.6336" y2="88.5441" class="btwns5"/>
+        
+            <line x1="-112.8367" y1="-95.9932" 
+                  x2="-9.7553" y2="72.1430" class="btwns4"/>
+        
+            <line x1="-112.8367" y1="-95.9932" 
+                  x2="-60.5905" y2="-147.7883" class="btwns0"/>
+        
+            <line x1="160.3220" y1="175.9628" 
+                  x2="4.1290" y2="85.6730" class="btwns5"/>
+        
+            <line x1="240.8564" y1="92.7116" 
+                  x2="5.4594" y2="81.1585" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="50.0619" 
+                  x2="-14.4972" y2="79.8768" class="btwns5"/>
+        
+            <line x1="-388.2587" y1="123.2837" 
+                  x2="-14.4675" y2="81.7721" class="btwns5"/>
+        
+            <line x1="-4.7550" y1="209.4389" 
+                  x2="-4.5462" y2="90.6683" class="btwns5"/>
+        
+            <line x1="-4.5286" y1="80.6683" 
+                  x2="-51.4533" y2="-145.0380" class="btwns10"/>
+        
+            <line x1="-4.5286" y1="80.6683" 
+                  x2="-162.0711" y2="169.7402" class="btwns5"/>
+        
+            <line x1="-4.5286" y1="80.6683" 
+                  x2="314.0451" y2="-33.2953" class="btwns5"/>
+        
+            <line x1="-4.5286" y1="80.6683" 
+                  x2="-119.2214" y2="266.3270" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-189.1537 -1.0664)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 102.8785)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-247.6343 245.4340)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(11.3862 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BERN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(368.8642 30.2878)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-245.2195 88.5308)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(265.0298 233.8079)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(340.2196 171.8690)" 
+                class="vertice degree0 btwns0 authority0 HELSINKI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(215.6509 -86.4545)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(111.7674 -103.5203)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(4.5958 -39.8217)" 
+                class="vertice degree0 btwns0 authority0 KINGSTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-348.8268 -16.7388)" 
+                class="vertice degree0 btwns0 authority0 KUWAIT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-76.1984 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 LONDON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(183.4632 3.5147)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-334.6923 187.8196)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-259.6848 -75.2791)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(143.1824 269.4540)" 
+                class="vertice degree0 btwns0 authority0 PANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-112.8367 -95.9932)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(160.3220 175.9628)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(240.8564 92.7116)" 
+                class="vertice degree0 btwns0 authority0 QUITO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 50.0619)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-388.2587 123.2837)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-4.7550 209.4389)" 
+                class="vertice degree0 btwns0 authority0 SANSALVADOR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-4.5286 80.6683)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-53.4888 -154.8287)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-170.7761 174.6618)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(323.4607 -36.6636)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-124.4770 274.8346)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-189.1537 -1.0664)" 
+                id="08AMMAN663" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08AMMAN663.html">08AMMAN663</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON POSSIBLE UNSC RESOLUTION REGARDING SOMALI COAST PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 102.8785)" 
+                id="08ANKARA382" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08ANKARA382.html">08ANKARA382</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA AND PIRACY: TURKEY INTERESTED IN POSSIBLY SUPPORTING UNSCR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-247.6343 245.4340)" 
+                id="08ATHENS309" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS309.html">08ATHENS309</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEAMRCHE DELIVERED ON PIRACY OFF SOMALIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(11.3862 290.0000)" 
+                id="08BERN108" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BERN108.html">08BERN108</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA AND PIRACY:  SEEKING SWISS VIEWS ON POSSIBLE UNSC ACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(368.8642 30.2878)" 
+                id="08CANBERRA209" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08CANBERRA209.html">08CANBERRA209</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIAN ASSISTANCE FOR UN ACTION ON SOMALIAN PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.2195 88.5308)" 
+                id="08CANBERRA225" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08CANBERRA225.html">08CANBERRA225</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIAN RESPONSE ON ASSISTANCE FOR UN ACTION ON SOMALIAN PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(265.0298 233.8079)" 
+                id="08DUBLIN121" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08DUBLIN121.html">08DUBLIN121</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRISH VIEWS ON SEEKING UNSC ACTION ON PIRACY IN SOMALIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(340.2196 171.8690)" 
+                id="08HELSINKI91" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08HELSINKI91.html">08HELSINKI91</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FINNISH VIEWS ON POSSIBLE UNSC ACTION ON PIRACY OFF OF SOMALI COAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(215.6509 -86.4545)" 
+                id="08JAKARTA1042" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08JAKARTA1042.html">08JAKARTA1042</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA/PIRACY -- GOI REMAINS OPPOSED TO FRENCH PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(111.7674 -103.5203)" 
+                id="08JAKARTA365" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08JAKARTA365.html">08JAKARTA365</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA/PIRACY -- WORKING TOWARD A UNSC RESOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(4.5958 -39.8217)" 
+                id="08KINGSTON185" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KINGSTON185.html">08KINGSTON185</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAMAICA: DEMARCHE ON SOMALIA AND PIRACY DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-348.8268 -16.7388)" 
+                id="08KUWAIT244" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08KUWAIT244.html">08KUWAIT244</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: SOMALIA AND PIRACY, SEEKING VIEWS ON POSSIBLE UNSC ACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-76.1984 -290.0000)" 
+                id="08LONDON626" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08LONDON626
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(183.4632 3.5147)" 
+                id="08MADRID224" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08MADRID224.html">08MADRID224</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN INTERESTED IN SOMALIA PIRACY UNSCR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-334.6923 187.8196)" 
+                id="08MADRID451" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08MADRID451.html">08MADRID451</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN FULLY SUPPORTS U.S. ANTI-PIRACY INITIATIVE AT UNSC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-259.6848 -75.2791)" 
+                id="08OTTAWA301" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08OTTAWA301.html">08OTTAWA301</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADIAN SUPPORT FOR UNSC PIRACY RESOLUTION LIKELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(143.1824 269.4540)" 
+                id="08PANAMA197" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PANAMA197.html">08PANAMA197</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PANAMA:  SOMALIA AND PIRACY DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.8367 -95.9932)" 
+                id="08PARIS362" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PARIS362.html">08PARIS362</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH VIEWS ON SOMALIA AND PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(160.3220 175.9628)" 
+                id="08PRETORIA421" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08PRETORIA421.html">08PRETORIA421</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON SOMALI PIRACY DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(240.8564 92.7116)" 
+                id="08QUITO190" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08QUITO190.html">08QUITO190</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ECUADOR DEMARCH RESPONSE: SOMALIA AND PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 50.0619)" 
+                id="08ROME288" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ROME288.html">08ROME288</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY ON SOMALIA AND PIRACY IN THE UNSC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-388.2587 123.2837)" 
+                id="08SANJOSE184" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08SANJOSE184.html">08SANJOSE184</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COSTA RICA SUPPORTS RENEWAL OF AMISOM MANDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.7550 209.4389)" 
+                id="08SANSALVADOR256" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08SANSALVADOR256.html">08SANSALVADOR256</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EL SALVADOR: DEMARCHE ON POSSIBLE UNSC ACTION ON SOMALIA AND PIRACY DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.5286 80.6683)" 
+                id="08STATE18101" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE18101
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-53.4888 -154.8287)" 
+                id="08STATE31432" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/26/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08STATE31432.html">08STATE31432</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA-- DRAFT ELEMENTS FOR POSSIBLE UNSCR ON SOMALIA PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-170.7761 174.6618)" 
+                id="08TOKYO585" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO585.html">08TOKYO585</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PIRQY DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(323.4607 -36.6636)" 
+                id="08WELLINGTON76" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08WELLINGTON76.html">08WELLINGTON76</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA AND PIRACY:  NEW ZEALAND RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-124.4770 274.8346)" 
+                id="08ZAGREB231" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ZAGREB231.html">08ZAGREB231</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NO RESPONSE ON SOMALIA AND PIRACY, POSSIBLE SECURITY COUNCIL ACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

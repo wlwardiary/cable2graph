@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE145242">06SECSTATE145242</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE149133">06SECSTATE149133</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KATHMANDU2405">06KATHMANDU2405</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KATHMANDU2405.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/05/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED FOR ATTENDEES OF NAM SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANGKOK5460">06BANGKOK5460</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BANGKOK5460.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED: ATTENDEES OF NAM SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERN1639">06BERN1639</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BERN1639.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE FOR ATTENDEES OF NAM SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SOFIA1267">06SOFIA1267</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SOFIA1267.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BULGARIA ATTENDING NAM SUMMIT FOR POLITICAL REASONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06NIAMEY1012">06NIAMEY1012</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06NIAMEY1012.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NIGER MFA DEMARCHED RE: NAM SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANDARSERIBEGAWAN460">06BANDARSERIBEGAWAN460</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BANDARSERIBEGAWAN460.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BRUNEI RECEPTIVE TO NAM DEMARCHES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANGKOK5553">06BANGKOK5553</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BANGKOK5553.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THAILAND:  DEMARCHE ON IRANIAN NUCLEAR PROGRAM FOR NAM SUMMIT ATTENDEES DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KATHMANDU2458">06KATHMANDU2458</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KATHMANDU2458.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEPAL: DEMARCHE DELIVERED ON IRANIAN NUCLEAR PROGRAM FOR ATTENDEES OF NAM SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SOFIA1292">06SOFIA1292</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SOFIA1292.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BULGARIA: DEMARCHE ON IRAN DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ2494">06LAPAZ2494</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06LAPAZ2494.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BOLIVIA: NOT TERRIBLY HELPFUL ON THE NAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ2495">06LAPAZ2495</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06LAPAZ2495.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UNSCR 1696: BOLIVIA NOT HELPFUL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-210.1018" y1="290.0000" 
+                  x2="-163.4154" y2="175.3406" class="btwns0"/>
+        
+            <line x1="189.0194" y1="-290.0000" 
+                  x2="166.1714" y2="-160.3450" class="btwns0"/>
+        
+            <line x1="-315.4273" y1="30.8329" 
+                  x2="-167.1955" y2="159.5231" class="btwns0"/>
+        
+            <line x1="-31.2090" y1="-269.6359" 
+                  x2="155.8950" y2="-155.6978" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-46.8756" 
+                  x2="173.5230" y2="-146.3223" class="btwns0"/>
+        
+            <line x1="35.6254" y1="275.5943" 
+                  x2="-150.9223" y2="170.9705" class="btwns0"/>
+        
+            <line x1="-93.1162" y1="-156.5952" 
+                  x2="154.4388" y2="-150.7334" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="148.3872" 
+                  x2="-169.6149" y2="165.3131" class="btwns0"/>
+        
+            <line x1="387.3626" y1="-182.3886" 
+                  x2="174.3352" y2="-151.9129" class="btwns0"/>
+        
+            <line x1="164.4360" y1="-150.4967" 
+                  x2="178.7753" y2="2.7571" class="btwns10"/>
+        
+            <line x1="-159.6443" y1="166.0789" 
+                  x2="66.2224" y2="130.1089" class="btwns9"/>
+        
+            <line x1="179.7069" y1="12.7136" 
+                  x2="82.7652" y2="121.0830" class="btwns10"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-210.1018 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BANDARSERIBEGAWAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(189.0194 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BANGKOK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-315.4273 30.8329)" 
+                class="vertice degree0 btwns0 authority0 BANGKOK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-31.2090 -269.6359)" 
+                class="vertice degree0 btwns0 authority0 BERN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -46.8756)" 
+                class="vertice degree0 btwns0 authority0 KATHMANDU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(35.6254 275.5943)" 
+                class="vertice degree0 btwns0 authority0 KATHMANDU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-93.1162 -156.5952)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.3872)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(387.3626 -182.3886)" 
+                class="vertice degree0 btwns0 authority0 NIAMEY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(164.4360 -150.4967)" 
+                class="vertice degree10 btwns10 authority10 SECSTATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-159.6443 166.0789)" 
+                class="vertice degree8 btwns8 authority7 SECSTATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.7069 12.7136)" 
+                class="vertice degree2 btwns8 authority2 SOFIA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(76.0980 128.5361)" 
+                class="vertice degree2 btwns7 authority2 SOFIA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-210.1018 290.0000)" 
+                id="06BANDARSERIBEGAWAN460" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BANDARSERIBEGAWAN460.html">06BANDARSERIBEGAWAN460</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRUNEI RECEPTIVE TO NAM DEMARCHES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(189.0194 -290.0000)" 
+                id="06BANGKOK5460" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BANGKOK5460.html">06BANGKOK5460</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: ATTENDEES OF NAM SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-315.4273 30.8329)" 
+                id="06BANGKOK5553" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BANGKOK5553.html">06BANGKOK5553</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THAILAND:  DEMARCHE ON IRANIAN NUCLEAR PROGRAM FOR NAM SUMMIT ATTENDEES DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-31.2090 -269.6359)" 
+                id="06BERN1639" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BERN1639.html">06BERN1639</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE FOR ATTENDEES OF NAM SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -46.8756)" 
+                id="06KATHMANDU2405" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KATHMANDU2405.html">06KATHMANDU2405</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED FOR ATTENDEES OF NAM SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(35.6254 275.5943)" 
+                id="06KATHMANDU2458" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KATHMANDU2458.html">06KATHMANDU2458</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEPAL: DEMARCHE DELIVERED ON IRANIAN NUCLEAR PROGRAM FOR ATTENDEES OF NAM SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-93.1162 -156.5952)" 
+                id="06LAPAZ2494" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06LAPAZ2494.html">06LAPAZ2494</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOLIVIA: NOT TERRIBLY HELPFUL ON THE NAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.3872)" 
+                id="06LAPAZ2495" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06LAPAZ2495.html">06LAPAZ2495</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNSCR 1696: BOLIVIA NOT HELPFUL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(387.3626 -182.3886)" 
+                id="06NIAMEY1012" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06NIAMEY1012.html">06NIAMEY1012</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NIGER MFA DEMARCHED RE: NAM SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.4360 -150.4967)" 
+                id="06SECSTATE145242" 
+                class="labels">
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06SECSTATE145242
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-159.6443 166.0789)" 
+                id="06SECSTATE149133" 
+                class="labels">
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    06SECSTATE149133
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(179.7069 12.7136)" 
+                id="06SOFIA1267" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SOFIA1267.html">06SOFIA1267</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BULGARIA ATTENDING NAM SUMMIT FOR POLITICAL REASONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(76.0980 128.5361)" 
+                id="06SOFIA1292" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SOFIA1292.html">06SOFIA1292</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BULGARIA: DEMARCHE ON IRAN DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

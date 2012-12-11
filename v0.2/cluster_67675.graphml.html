@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07RIGA383">07RIGA383</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/23/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08RIGA22">08RIGA22</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08RIGA22.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/11/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">(S/NF) LATVIA/RUSSIA - INTEL ISSUES TO COMPLICATE RELATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA23">08RIGA23</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08RIGA23.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/11/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">LATVIAN PASSPORT SCANDAL CAUSE FOR SERIOUS CONCERN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08RIGA36">08RIGA36</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/14/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA55">08RIGA55</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08RIGA55.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">LATVIA/RUSSIA SPY INCIDENT: FALLOUT MORE DOMESTIC THAN BILATERAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08RIGA88">08RIGA88</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08RIGA88.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">AMBASSADOR LARSON'S COURTESY CALL WITH LATVIAN PRIME MINISTER GODMANIS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA89">08RIGA89</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08RIGA89.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">LATVIAN PASSPORT SCANDAL CONTINUES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08RIGA363">08RIGA363</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/18/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA386">08RIGA386</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08RIGA386.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KNAB CHIEF DISMISSED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08RIGA507">08RIGA507</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08RIGA507.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ALLEGED CORRUPTION COSTS CUSTOMS ENFORCEMENT CHIEF HIS CLEARANCE; JOB?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA700">08RIGA700</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08RIGA700.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">VASKEVICS CLOSER TO JUSTICE?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08RIGA709">08RIGA709</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08RIGA709.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ANTI-CORRUPTION BUREAU STUMBLES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIGA710">08RIGA710</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08RIGA710.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ANTI-CORRUPTION BUREAU STUMBLES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09RIGA186">09RIGA186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09RIGA186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW ANTI-CORRUPTION BUREAU CHIEF: NORMUNDS VILNITIS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09RIGA584">09RIGA584</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09RIGA584.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LATVIA'S FALLING CORRUPTION SCORE: RESOURCE REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10RIGA51">10RIGA51</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10RIGA51.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LATVIA: MORE CHARGES LIKELY AS POLICE CONTINUE PASSPORT FRAUD INVESTIGATION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-155.7432" 
+                  x2="-236.2891" y2="-123.5931" class="btwns2"/>
+        
+            <line x1="390.0000" y1="-113.3638" 
+                  x2="330.8717" y2="-49.3821" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-113.3638" 
+                  x2="223.4589" y2="-142.3997" class="btwns2"/>
+        
+            <line x1="-20.5772" y1="-195.3470" 
+                  x2="-217.0872" y2="-124.9196" class="btwns10"/>
+        
+            <line x1="-20.5772" y1="-195.3470" 
+                  x2="203.8385" y2="-146.2543" class="btwns6"/>
+        
+            <line x1="-20.5772" y1="-195.3470" 
+                  x2="81.2556" y2="-283.4569" class="btwns2"/>
+        
+            <line x1="-20.5772" y1="-195.3470" 
+                  x2="-133.2398" y2="-283.3786" class="btwns2"/>
+        
+            <line x1="235.9304" y1="-259.0283" 
+                  x2="215.5144" y2="-153.9337" class="btwns1"/>
+        
+            <line x1="235.9304" y1="-259.0283" 
+                  x2="98.6033" y2="-287.9399" class="btwns1"/>
+        
+            <line x1="-76.9666" y1="290.0000" 
+                  x2="-78.1914" y2="193.5734" class="btwns2"/>
+        
+            <line x1="-78.3184" y1="183.5742" 
+                  x2="-136.6731" y2="87.5279" class="btwns3"/>
+        
+            <line x1="-78.3184" y1="183.5742" 
+                  x2="-261.6714" y2="142.9978" class="btwns3"/>
+        
+            <line x1="-78.3184" y1="183.5742" 
+                  x2="116.1084" y2="197.2092" class="btwns4"/>
+        
+            <line x1="-226.5009" y1="-121.5459" 
+                  x2="-273.0453" y2="5.5186" class="btwns10"/>
+        
+            <line x1="324.0847" y1="-42.0380" 
+                  x2="220.9522" y2="-137.3309" class="btwns2"/>
+        
+            <line x1="-276.4849" y1="14.9084" 
+                  x2="-150.8949" y2="74.6840" class="btwns4"/>
+        
+            <line x1="-276.4849" y1="14.9084" 
+                  x2="-271.8359" y2="130.8451" class="btwns4"/>
+        
+            <line x1="126.0839" y1="197.9087" 
+                  x2="278.7237" y2="193.9178" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -155.7432)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -113.3638)" 
+                class="vertice degree3 btwns0 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-20.5772 -195.3470)" 
+                class="vertice degree10 btwns9 authority10 RIGA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(235.9304 -259.0283)" 
+                class="vertice degree3 btwns0 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-76.9666 290.0000)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-78.3184 183.5742)" 
+                class="vertice degree10 btwns6 authority9 RIGA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-226.5009 -121.5459)" 
+                class="vertice degree6 btwns10 authority6 RIGA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(324.0847 -42.0380)" 
+                class="vertice degree3 btwns0 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-276.4849 14.9084)" 
+                class="vertice degree6 btwns8 authority6 RIGA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-141.8655 78.9816)" 
+                class="vertice degree3 btwns3 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-271.4352 140.8371)" 
+                class="vertice degree3 btwns3 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(213.6075 -144.1173)" 
+                class="vertice degree10 btwns5 authority9 RIGA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(88.8178 -290.0000)" 
+                class="vertice degree3 btwns0 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(126.0839 197.9087)" 
+                class="vertice degree3 btwns2 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(288.7203 193.6565)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-141.1196 -289.5357)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -155.7432)" 
+                id="07RIGA383" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07RIGA383
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -113.3638)" 
+                id="08RIGA22" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08RIGA22.html">08RIGA22</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>(S/NF) LATVIA/RUSSIA - INTEL ISSUES TO COMPLICATE RELATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.5772 -195.3470)" 
+                id="08RIGA23" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08RIGA23.html">08RIGA23</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>LATVIAN PASSPORT SCANDAL CAUSE FOR SERIOUS CONCERN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(235.9304 -259.0283)" 
+                id="08RIGA36" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    08RIGA36
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-76.9666 290.0000)" 
+                id="08RIGA363" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08RIGA363
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-78.3184 183.5742)" 
+                id="08RIGA386" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08RIGA386.html">08RIGA386</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>KNAB CHIEF DISMISSED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-226.5009 -121.5459)" 
+                id="08RIGA507" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08RIGA507.html">08RIGA507</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ALLEGED CORRUPTION COSTS CUSTOMS ENFORCEMENT CHIEF HIS CLEARANCE; JOB?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(324.0847 -42.0380)" 
+                id="08RIGA55" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08RIGA55.html">08RIGA55</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LATVIA/RUSSIA SPY INCIDENT: FALLOUT MORE DOMESTIC THAN BILATERAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-276.4849 14.9084)" 
+                id="08RIGA700" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08RIGA700.html">08RIGA700</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>VASKEVICS CLOSER TO JUSTICE?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-141.8655 78.9816)" 
+                id="08RIGA709" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08RIGA709.html">08RIGA709</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ANTI-CORRUPTION BUREAU STUMBLES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-271.4352 140.8371)" 
+                id="08RIGA710" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08RIGA710.html">08RIGA710</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ANTI-CORRUPTION BUREAU STUMBLES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(213.6075 -144.1173)" 
+                id="08RIGA88" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08RIGA88.html">08RIGA88</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR LARSON'S COURTESY CALL WITH LATVIAN PRIME MINISTER GODMANIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(88.8178 -290.0000)" 
+                id="08RIGA89" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08RIGA89.html">08RIGA89</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LATVIAN PASSPORT SCANDAL CONTINUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(126.0839 197.9087)" 
+                id="09RIGA186" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09RIGA186.html">09RIGA186</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NEW ANTI-CORRUPTION BUREAU CHIEF: NORMUNDS VILNITIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(288.7203 193.6565)" 
+                id="09RIGA584" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09RIGA584.html">09RIGA584</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATVIA'S FALLING CORRUPTION SCORE: RESOURCE REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-141.1196 -289.5357)" 
+                id="10RIGA51" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10RIGA51.html">10RIGA51</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATVIA: MORE CHARGES LIKELY AS POLICE CONTINUE PASSPORT FRAUD INVESTIGATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

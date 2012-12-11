@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09MINSK91">09MINSK91</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/18/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE27301">09STATE27301</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/20/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09VILNIUS180">09VILNIUS180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09VILNIUS180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LITHUANIA: SCENESETTER FOR VISIT OF CODEL BERKLEY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MINSK106">09MINSK106</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK106.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: INTERIOR MINISTER OUT, AT LONG LAST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MINSK115">09MINSK115</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK115.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: LIKELY MISINTERPRETATION OF USG SANCTIONS: ACTION REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MINSK132">09MINSK132</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK132.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: HIGHLIGHTS OF LUKASHENKA'S ANNUAL ADDRESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MINSK133">09MINSK133</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK133.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/26/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: DEMONSTRATORS, POLICE CALM AT APRIL 26 PROTEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09VILNIUS228">09VILNIUS228</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09VILNIUS228.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LITHUANIA TELLS CODEL BERKLEY: RELY ON US IN AFGHANISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MINSK136">09MINSK136</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK136.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: SERIOUS DISCORD WITHIN UNITED DEMOCRATIC FORCES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MINSK137">09MINSK137</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK137.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: REGIME VIEWS ON POSITIVE POLITICAL CHANGES, OTHER ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MINSK138">09MINSK138</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MINSK138.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: DENIAL OVER DEPTH OF ECONOMIC CRISIS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MINSK171">09MINSK171</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09MINSK171.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELARUS: NEW INTERIOR MINISTER APPOINTED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-251.7563" y1="38.3765" 
+                  x2="-70.2154" y2="50.0380" class="btwns5"/>
+        
+            <line x1="-251.7563" y1="38.3765" 
+                  x2="-380.4516" y2="-1.6708" class="btwns0"/>
+        
+            <line x1="-83.0013" y1="277.9900" 
+                  x2="50.9184" y2="184.5377" class="btwns0"/>
+        
+            <line x1="220.1786" y1="68.9357" 
+                  x2="112.3719" y2="-39.7450" class="btwns3"/>
+        
+            <line x1="220.1786" y1="68.9357" 
+                  x2="67.3798" y2="173.1794" class="btwns2"/>
+        
+            <line x1="220.1786" y1="68.9357" 
+                  x2="380.2080" y2="35.7785" class="btwns0"/>
+        
+            <line x1="-60.2359" y1="50.6790" 
+                  x2="96.7131" y2="-41.7693" class="btwns6"/>
+        
+            <line x1="-60.2359" y1="50.6790" 
+                  x2="52.3032" y2="171.4978" class="btwns4"/>
+        
+            <line x1="105.3295" y1="-46.8446" 
+                  x2="146.0830" y2="-184.7139" class="btwns10"/>
+        
+            <line x1="59.1191" y1="178.8151" 
+                  x2="155.8091" y2="282.6806" class="btwns0"/>
+        
+            <line x1="-125.6392" y1="-290.0000" 
+                  x2="22.5718" y2="-286.6043" class="btwns0"/>
+        
+            <line x1="32.5691" y1="-286.3752" 
+                  x2="141.0760" y2="-200.5091" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-251.7563 38.3765)" 
+                class="vertice degree3 btwns3 authority3 MINSK">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-83.0013 277.9900)" 
+                class="vertice degree0 btwns0 authority0 MINSK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(220.1786 68.9357)" 
+                class="vertice degree6 btwns5 authority6 MINSK">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-60.2359 50.6790)" 
+                class="vertice degree6 btwns8 authority6 MINSK">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(105.3295 -46.8446)" 
+                class="vertice degree6 btwns10 authority6 MINSK">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(59.1191 178.8151)" 
+                class="vertice degree10 btwns8 authority10 MINSK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 33.7497)" 
+                class="vertice degree0 btwns0 authority0 MINSK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -4.6420)" 
+                class="vertice degree0 btwns0 authority0 MINSK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(162.6228 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MINSK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-125.6392 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(32.5691 -286.3752)" 
+                class="vertice degree3 btwns3 authority3 VILNIUS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(148.9177 -194.3037)" 
+                class="vertice degree3 btwns6 authority3 VILNIUS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-251.7563 38.3765)" 
+                id="09MINSK106" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK106.html">09MINSK106</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>BELARUS: INTERIOR MINISTER OUT, AT LONG LAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-83.0013 277.9900)" 
+                id="09MINSK115" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK115.html">09MINSK115</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELARUS: LIKELY MISINTERPRETATION OF USG SANCTIONS: ACTION REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(220.1786 68.9357)" 
+                id="09MINSK132" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK132.html">09MINSK132</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BELARUS: HIGHLIGHTS OF LUKASHENKA'S ANNUAL ADDRESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-60.2359 50.6790)" 
+                id="09MINSK133" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK133.html">09MINSK133</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BELARUS: DEMONSTRATORS, POLICE CALM AT APRIL 26 PROTEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(105.3295 -46.8446)" 
+                id="09MINSK136" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK136.html">09MINSK136</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BELARUS: SERIOUS DISCORD WITHIN UNITED DEMOCRATIC FORCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(59.1191 178.8151)" 
+                id="09MINSK137" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK137.html">09MINSK137</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>BELARUS: REGIME VIEWS ON POSITIVE POLITICAL CHANGES, OTHER ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 33.7497)" 
+                id="09MINSK138" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MINSK138.html">09MINSK138</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELARUS: DENIAL OVER DEPTH OF ECONOMIC CRISIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -4.6420)" 
+                id="09MINSK171" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09MINSK171.html">09MINSK171</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELARUS: NEW INTERIOR MINISTER APPOINTED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(162.6228 290.0000)" 
+                id="09MINSK91" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09MINSK91
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-125.6392 -290.0000)" 
+                id="09STATE27301" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE27301
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(32.5691 -286.3752)" 
+                id="09VILNIUS180" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09VILNIUS180.html">09VILNIUS180</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LITHUANIA: SCENESETTER FOR VISIT OF CODEL BERKLEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(148.9177 -194.3037)" 
+                id="09VILNIUS228" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09VILNIUS228.html">09VILNIUS228</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LITHUANIA TELLS CODEL BERKLEY: RELY ON US IN AFGHANISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

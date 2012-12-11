@@ -1,0 +1,1427 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM2227">06KHARTOUM2227</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KHARTOUM2227.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Juba: Laws Needed So Legislature Puts Off Anti-Corruption</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07KHARTOUM39">07KHARTOUM39</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/10/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07KHARTOUM133">07KHARTOUM133</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/28/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM143">07KHARTOUM143</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07KHARTOUM143.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SO. SUDAN:  UPDATE ON UNMIS PKO KILLING AND LRA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM157">07KHARTOUM157</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KHARTOUM157.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SO. SUDAN:  SOUTH'S MINISTRY OF FINANCE WRACKED BY CORRUPTION CHARGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM166">07KHARTOUM166</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KHARTOUM166.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Fiscal Federalism Comes to Sudan</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM194">07KHARTOUM194</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KHARTOUM194.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OIL REVENUE: 2007 GNU BUDGET BASED ON QUESTIONABLE ASSUMPTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM211">07KHARTOUM211</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KHARTOUM211.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOSS 2007 Budget Adopted</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE18712">07STATE18712</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07OSLO159">07OSLO159</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07OSLO159.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NORWAY SUPPORTS IGAD SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ROME331">07ROME331</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ROME331.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ITALIANS AGREED TO SUPPORT MARCH IGAD SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM248">07KHARTOUM248</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KHARTOUM248.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOSS BUDGET SHOWS NEED FOR DONOR ACTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07CAIRO469">07CAIRO469</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07CAIRO469.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EGYPT CONSIDERING UTILITY OF IGAD SUMMIT ON SUDAN'S COMPREHENSIVE PEACE AGREEMENT IMPLEMENTATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM456">07KHARTOUM456</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KHARTOUM456.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOSS FINANCE MINISTER SUSPENDED OVER CORRUPTION CHARGES, OTHER INVESTIGATIONS ONGOING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07KHARTOUM461">07KHARTOUM461</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/24/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM468">07KHARTOUM468</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KHARTOUM468.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOSS FINANCE MINISTER SUSPENDED OVER CORRUPTION CHARGES, OTHER INVESTIGATIONS ONGOING (CORRECTED SUBJECT LINE: KHARTOUM 0456)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM470">07KHARTOUM470</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KHARTOUM470.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUDAN:  SPLA CHIEF OF STAFF SAYS HE MIGHT BE REPLACED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM544">07KHARTOUM544</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KHARTOUM544.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/05/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SUDAN: AN ECONOMIST SHARES HIS PESSIMISTIC OUTLOOK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07KHARTOUM591">07KHARTOUM591</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/16/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM613">07KHARTOUM613</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KHARTOUM613.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPLA AND FORCES LOYAL TO FORMER MILITIA LEADER SQUARE OFF IN JUBA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM693">07KHARTOUM693</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KHARTOUM693.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Governance, Capacity and Infrastructure Challenges in Southern Sudan Two years After CPA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM720">07KHARTOUM720</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KHARTOUM720.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOSS Governor's Forum Focuses Tackles State Budgets and Security</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KHARTOUM737">07KHARTOUM737</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KHARTOUM737.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ACTING GOSS MINISTER OF FINANCE OULINES PRIORITIES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-218.3566" y1="-193.0821" 
+                  x2="-306.5023" y2="-164.7658" class="btwns1"/>
+        
+            <line x1="-218.3566" y1="-193.0821" 
+                  x2="-112.6117" y2="-210.2963" class="btwns3"/>
+        
+            <line x1="-390.0000" y1="58.8688" 
+                  x2="-274.3724" y2="68.7180" class="btwns1"/>
+        
+            <line x1="95.1327" y1="186.7187" 
+                  x2="2.5594" y2="229.7730" class="btwns1"/>
+        
+            <line x1="95.1327" y1="186.7187" 
+                  x2="84.4374" y2="88.3262" class="btwns2"/>
+        
+            <line x1="390.0000" y1="167.9625" 
+                  x2="380.0000" y2="167.9625" class="btwns0"/>
+        
+            <line x1="390.0000" y1="167.9625" 
+                  x2="362.4900" y2="112.1965" class="btwns1"/>
+        
+            <line x1="234.3666" y1="103.3289" 
+                  x2="93.2231" y2="80.0145" class="btwns5"/>
+        
+            <line x1="234.3666" y1="103.3289" 
+                  x2="348.0659" y2="103.2365" class="btwns3"/>
+        
+            <line x1="-86.1976" y1="290.0000" 
+                  x2="-14.6893" y2="239.7404" class="btwns1"/>
+        
+            <line x1="-6.5079" y1="233.9901" 
+                  x2="-23.5988" y2="154.1511" class="btwns2"/>
+        
+            <line x1="83.3568" y1="78.3847" 
+                  x2="-87.4720" y2="80.7155" class="btwns6"/>
+        
+            <line x1="83.3568" y1="78.3847" 
+                  x2="-17.1365" y2="139.1955" class="btwns2"/>
+        
+            <line x1="83.3568" y1="78.3847" 
+                  x2="187.4754" y2="-22.6931" class="btwns10"/>
+        
+            <line x1="83.3568" y1="78.3847" 
+                  x2="88.6151" y2="2.9769" class="btwns1"/>
+        
+            <line x1="-97.4710" y1="80.8519" 
+                  x2="-33.1808" y2="137.7455" class="btwns1"/>
+        
+            <line x1="-97.4710" y1="80.8519" 
+                  x2="-254.4313" y2="70.2412" class="btwns6"/>
+        
+            <line x1="51.5346" y1="-290.0000" 
+                  x2="33.1485" y2="-230.6872" class="btwns1"/>
+        
+            <line x1="-102.7416" y1="-211.9030" 
+                  x2="20.2116" y2="-220.4427" class="btwns5"/>
+        
+            <line x1="30.1876" y1="-221.1356" 
+                  x2="152.4557" y2="-197.9167" class="btwns7"/>
+        
+            <line x1="316.2576" y1="-76.3488" 
+                  x2="247.2664" y2="-119.0254" class="btwns0"/>
+        
+            <line x1="316.2576" y1="-76.3488" 
+                  x2="203.9860" y2="-33.2429" class="btwns1"/>
+        
+            <line x1="162.2801" y1="-196.0511" 
+                  x2="231.4696" y2="-131.1287" class="btwns8"/>
+        
+            <line x1="238.7620" y1="-124.2861" 
+                  x2="198.8755" y2="-38.7222" class="btwns8"/>
+        
+            <line x1="194.6505" y1="-29.6586" 
+                  x2="99.0871" y2="-9.1018" class="btwns0"/>
+        
+            <line x1="-312.4548" y1="150.2617" 
+                  x2="-269.5244" y2="78.1591" class="btwns1"/>
+        
+            <line x1="-306.4840" y1="-13.3035" 
+                  x2="-268.9357" y2="60.6502" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-218.3566 -193.0821)" 
+                class="vertice degree2 btwns1 authority1 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 58.8688)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(95.1327 186.7187)" 
+                class="vertice degree2 btwns0 authority2 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 167.9625)" 
+                class="vertice degree4 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(234.3666 103.3289)" 
+                class="vertice degree2 btwns2 authority2 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-86.1976 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-6.5079 233.9901)" 
+                class="vertice degree4 btwns1 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(83.3568 78.3847)" 
+                class="vertice degree10 btwns10 authority10 KHARTOUM">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-97.4710 80.8519)" 
+                class="vertice degree4 btwns4 authority4 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(358.0659 103.2284)" 
+                class="vertice degree2 btwns1 authority1 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-316.0231 -161.7073)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(51.5346 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-102.7416 -211.9030)" 
+                class="vertice degree2 btwns2 authority1 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(30.1876 -221.1356)" 
+                class="vertice degree4 btwns4 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-25.6921 144.3726)" 
+                class="vertice degree4 btwns1 authority4 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(316.2576 -76.3488)" 
+                class="vertice degree2 btwns0 authority2 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(162.2801 -196.0511)" 
+                class="vertice degree2 btwns5 authority1 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(238.7620 -124.2861)" 
+                class="vertice degree4 btwns6 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(194.6505 -29.6586)" 
+                class="vertice degree6 btwns7 authority6 KHARTOUM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(89.3107 -6.9988)" 
+                class="vertice degree2 btwns0 authority2 KHARTOUM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-312.4548 150.2617)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-306.4840 -13.3035)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-264.4085 69.5668)" 
+                class="vertice degree6 btwns3 authority5 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-218.3566 -193.0821)" 
+                id="06KHARTOUM2227" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KHARTOUM2227.html">06KHARTOUM2227</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Juba: Laws Needed So Legislature Puts Off Anti-Corruption</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 58.8688)" 
+                id="07CAIRO469" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07CAIRO469.html">07CAIRO469</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EGYPT CONSIDERING UTILITY OF IGAD SUMMIT ON SUDAN'S COMPREHENSIVE PEACE AGREEMENT IMPLEMENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(95.1327 186.7187)" 
+                id="07KHARTOUM133" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07KHARTOUM133
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 167.9625)" 
+                id="07KHARTOUM143" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KHARTOUM143.html">07KHARTOUM143</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SO. SUDAN:  UPDATE ON UNMIS PKO KILLING AND LRA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(234.3666 103.3289)" 
+                id="07KHARTOUM157" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KHARTOUM157.html">07KHARTOUM157</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SO. SUDAN:  SOUTH'S MINISTRY OF FINANCE WRACKED BY CORRUPTION CHARGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-86.1976 290.0000)" 
+                id="07KHARTOUM166" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KHARTOUM166.html">07KHARTOUM166</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Fiscal Federalism Comes to Sudan</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-6.5079 233.9901)" 
+                id="07KHARTOUM194" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>02/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KHARTOUM194.html">07KHARTOUM194</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>OIL REVENUE: 2007 GNU BUDGET BASED ON QUESTIONABLE ASSUMPTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(83.3568 78.3847)" 
+                id="07KHARTOUM211" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KHARTOUM211.html">07KHARTOUM211</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GOSS 2007 Budget Adopted</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-97.4710 80.8519)" 
+                id="07KHARTOUM248" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>02/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KHARTOUM248.html">07KHARTOUM248</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>GOSS BUDGET SHOWS NEED FOR DONOR ACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(358.0659 103.2284)" 
+                id="07KHARTOUM39" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07KHARTOUM39
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-316.0231 -161.7073)" 
+                id="07KHARTOUM456" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KHARTOUM456.html">07KHARTOUM456</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOSS FINANCE MINISTER SUSPENDED OVER CORRUPTION CHARGES, OTHER INVESTIGATIONS ONGOING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(51.5346 -290.0000)" 
+                id="07KHARTOUM461" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07KHARTOUM461
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-102.7416 -211.9030)" 
+                id="07KHARTOUM468" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KHARTOUM468.html">07KHARTOUM468</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOSS FINANCE MINISTER SUSPENDED OVER CORRUPTION CHARGES, OTHER INVESTIGATIONS ONGOING (CORRECTED SUBJECT LINE: KHARTOUM 0456)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(30.1876 -221.1356)" 
+                id="07KHARTOUM470" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KHARTOUM470.html">07KHARTOUM470</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SUDAN:  SPLA CHIEF OF STAFF SAYS HE MIGHT BE REPLACED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-25.6921 144.3726)" 
+                id="07KHARTOUM544" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>04/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KHARTOUM544.html">07KHARTOUM544</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SUDAN: AN ECONOMIST SHARES HIS PESSIMISTIC OUTLOOK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(316.2576 -76.3488)" 
+                id="07KHARTOUM591" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07KHARTOUM591
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(162.2801 -196.0511)" 
+                id="07KHARTOUM613" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KHARTOUM613.html">07KHARTOUM613</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SPLA AND FORCES LOYAL TO FORMER MILITIA LEADER SQUARE OFF IN JUBA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.7620 -124.2861)" 
+                id="07KHARTOUM693" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KHARTOUM693.html">07KHARTOUM693</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Governance, Capacity and Infrastructure Challenges in Southern Sudan Two years After CPA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(194.6505 -29.6586)" 
+                id="07KHARTOUM720" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KHARTOUM720.html">07KHARTOUM720</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>GOSS Governor's Forum Focuses Tackles State Budgets and Security</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(89.3107 -6.9988)" 
+                id="07KHARTOUM737" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KHARTOUM737.html">07KHARTOUM737</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ACTING GOSS MINISTER OF FINANCE OULINES PRIORITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-312.4548 150.2617)" 
+                id="07OSLO159" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07OSLO159.html">07OSLO159</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NORWAY SUPPORTS IGAD SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-306.4840 -13.3035)" 
+                id="07ROME331" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ROME331.html">07ROME331</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALIANS AGREED TO SUPPORT MARCH IGAD SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-264.4085 69.5668)" 
+                id="07STATE18712" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    07STATE18712
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

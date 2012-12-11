@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05HELSINKI137">05HELSINKI137</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05HELSINKI137.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FINLAND: REACTION TO IRAQI ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HELSINKI160">05HELSINKI160</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05HELSINKI160.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S LUNCH WITH FM: MIDDLE EAST IS "NUMBER ONE ITEM" FOR PRESIDENT'S MEETING WITH THE EUROPEAN COMMISSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE25111">05STATE25111</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/05/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HELSINKI186">05HELSINKI186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05HELSINKI186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/14/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S LUNCH WITH PRESIDENT HALONEN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA131">05BRATISLAVA131</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05BRATISLAVA131.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FEB 21 GAERC: SLOVAK RESPONSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05MADRID617">05MADRID617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05MADRID617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPAIN'S VIEWS IN ADVANCE OF FEBRUARY 21 GAERC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05HELSINKI207">05HELSINKI207</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05HELSINKI207.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FEBRUARY 21 GAERC: FINLAND RESPONSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA473">05VIENNA473</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05VIENNA473.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">APPROACHING EU IN ADVANCE OF FOREIGN MINISTERS MEETING: AUSTRIAN RESPONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DUBLIN207">05DUBLIN207</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05DUBLIN207.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRISH RESPONSE TO PRE-GAERC DEMARCHE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRAGUE241">05PRAGUE241</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05PRAGUE241.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CZECHS AND GAERC MEETING:  PREPARING TO SPEAK OUT ON HIZBALLAH AND, EVENTUALLY, CHINA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PARIS1082">05PARIS1082</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05PARIS1082.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/18/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH ON FEB. 21 GAERC</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-268.7617" y1="233.8899" 
+                  x2="-0.9244" y2="122.6582" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="101.9926" 
+                  x2="-1.6802" y2="118.4006" class="btwns0"/>
+        
+            <line x1="-251.0244" y1="-290.0000" 
+                  x2="24.7090" y2="-288.9715" class="btwns0"/>
+        
+            <line x1="34.7089" y1="-288.9342" 
+                  x2="273.5527" y2="-210.0849" class="btwns4"/>
+        
+            <line x1="283.0486" y1="-206.9500" 
+                  x2="214.6697" y2="-63.7793" class="btwns7"/>
+        
+            <line x1="210.3600" y1="-54.7556" 
+                  x2="15.8962" y2="112.3064" class="btwns10"/>
+        
+            <line x1="390.0000" y1="87.7009" 
+                  x2="18.2778" y2="118.0101" class="btwns0"/>
+        
+            <line x1="25.0428" y1="290.0000" 
+                  x2="9.2837" y2="128.7754" class="btwns0"/>
+        
+            <line x1="-233.1628" y1="-11.8446" 
+                  x2="-0.4840" y2="114.0636" class="btwns0"/>
+        
+            <line x1="8.3109" y1="118.8228" 
+                  x2="298.0101" y2="220.0366" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-268.7617 233.8899)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 101.9926)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-251.0244 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 HELSINKI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(34.7089 -288.9342)" 
+                class="vertice degree1 btwns2 authority1 HELSINKI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(283.0486 -206.9500)" 
+                class="vertice degree1 btwns4 authority1 HELSINKI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(210.3600 -54.7556)" 
+                class="vertice degree1 btwns5 authority1 HELSINKI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 87.7009)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(25.0428 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-233.1628 -11.8446)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(8.3109 118.8228)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(307.4505 223.3348)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-268.7617 233.8899)" 
+                id="05BRATISLAVA131" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05BRATISLAVA131.html">05BRATISLAVA131</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FEB 21 GAERC: SLOVAK RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 101.9926)" 
+                id="05DUBLIN207" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05DUBLIN207.html">05DUBLIN207</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRISH RESPONSE TO PRE-GAERC DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.0244 -290.0000)" 
+                id="05HELSINKI137" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05HELSINKI137.html">05HELSINKI137</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FINLAND: REACTION TO IRAQI ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(34.7089 -288.9342)" 
+                id="05HELSINKI160" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05HELSINKI160.html">05HELSINKI160</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S LUNCH WITH FM: MIDDLE EAST IS "NUMBER ONE ITEM" FOR PRESIDENT'S MEETING WITH THE EUROPEAN COMMISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(283.0486 -206.9500)" 
+                id="05HELSINKI186" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05HELSINKI186.html">05HELSINKI186</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S LUNCH WITH PRESIDENT HALONEN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.3600 -54.7556)" 
+                id="05HELSINKI207" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05HELSINKI207.html">05HELSINKI207</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>FEBRUARY 21 GAERC: FINLAND RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 87.7009)" 
+                id="05MADRID617" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05MADRID617.html">05MADRID617</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN'S VIEWS IN ADVANCE OF FEBRUARY 21 GAERC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(25.0428 290.0000)" 
+                id="05PARIS1082" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05PARIS1082.html">05PARIS1082</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH ON FEB. 21 GAERC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-233.1628 -11.8446)" 
+                id="05PRAGUE241" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05PRAGUE241.html">05PRAGUE241</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECHS AND GAERC MEETING:  PREPARING TO SPEAK OUT ON HIZBALLAH AND, EVENTUALLY, CHINA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(8.3109 118.8228)" 
+                id="05STATE25111" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE25111
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(307.4505 223.3348)" 
+                id="05VIENNA473" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05VIENNA473.html">05VIENNA473</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>APPROACHING EU IN ADVANCE OF FOREIGN MINISTERS MEETING: AUSTRIAN RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BRUSSELS3788">05BRUSSELS3788</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/27/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BRUSSELS4385">05BRUSSELS4385</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/19/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BRUSSELS309">06BRUSSELS309</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/21/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BRUSSELS574">06BRUSSELS574</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/23/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS1637">06BRUSSELS1637</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BRUSSELS1637.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Belgium's Environmental Management: The Devolution of Pollution</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS1876">06BRUSSELS1876</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRUSSELS1876.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIAN STEWPOT: June 6, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS2199">06BRUSSELS2199</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRUSSELS2199.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIAN STEWPOT: June 26, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS2926">06BRUSSELS2926</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06BRUSSELS2926.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIAN STEWPOT: August 29, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS3196">06BRUSSELS3196</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BRUSSELS3196.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">883 Million Euro Hole in 2006 Belgian Budget</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS3403">06BRUSSELS3403</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BRUSSELS3403.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIAN STEWPOT: October 5, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS3531">06BRUSSELS3531</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BRUSSELS3531.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/18/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Airbus Turbulence Hits Belgian Suppliers</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS3715">06BRUSSELS3715</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BRUSSELS3715.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIUM,S 2007 FEDERAL BUDGET: OLD TRICKS HARDER TO SELL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS3748">06BRUSSELS3748</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BRUSSELS3748.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGIAN STEWPOT: November 7, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRUSSELS4130">06BRUSSELS4130</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BRUSSELS4130.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EU Faults Belgian Aerospace Subsidies</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS477">07BRUSSELS477</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BRUSSELS477.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/12/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">What does Climate Change Mean for Belgium?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS843">07BRUSSELS843</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BRUSSELS843.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Belairbus Copes With Airbus Restructuring</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS941">07BRUSSELS941</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BRUSSELS941.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Last Belgian Budget Check Before Elections - Much Ado About Nothing</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07BRUSSELS1201">07BRUSSELS1201</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/10/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS1238">07BRUSSELS1238</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BRUSSELS1238.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/12/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Environmental Problems and Progress May Color Elections Green</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS1892">07BRUSSELS1892</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07BRUSSELS1892.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Belgian Regions and Federal Taxes - Paying For Political Devolution In Belgium</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="136.6210" y1="-290.0000" 
+                  x2="92.9976" y2="-181.5876" class="btwns1"/>
+        
+            <line x1="-307.1045" y1="-288.2023" 
+                  x2="-274.0200" y2="-206.7600" class="btwns1"/>
+        
+            <line x1="212.2526" y1="221.1508" 
+                  x2="128.0732" y2="160.5501" class="btwns3"/>
+        
+            <line x1="212.2526" y1="221.1508" 
+                  x2="138.6020" y2="283.5366" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-144.3010" 
+                  x2="-279.3952" y2="-193.4355" class="btwns1"/>
+        
+            <line x1="-270.2564" y1="-197.4953" 
+                  x2="-116.1269" y2="-186.1501" class="btwns5"/>
+        
+            <line x1="357.8519" y1="-1.6896" 
+                  x2="246.7915" y2="-69.0341" class="btwns1"/>
+        
+            <line x1="-371.1462" y1="71.1839" 
+                  x2="-280.4457" y2="134.5742" class="btwns1"/>
+        
+            <line x1="-371.1462" y1="71.1839" 
+                  x2="-385.6047" y2="141.6321" class="btwns0"/>
+        
+            <line x1="89.2646" y1="-172.3105" 
+                  x2="229.8887" y2="-79.7184" class="btwns3"/>
+        
+            <line x1="89.2646" y1="-172.3105" 
+                  x2="35.8566" y2="-46.9215" class="btwns10"/>
+        
+            <line x1="89.2646" y1="-172.3105" 
+                  x2="-96.1763" y2="-184.7468" class="btwns6"/>
+        
+            <line x1="89.2646" y1="-172.3105" 
+                  x2="9.7573" y2="-273.2314" class="btwns1"/>
+        
+            <line x1="89.2646" y1="-172.3105" 
+                  x2="246.6023" y2="-202.4149" class="btwns3"/>
+        
+            <line x1="-272.2491" y1="140.3028" 
+                  x2="-377.6613" y2="150.4681" class="btwns1"/>
+        
+            <line x1="-272.2491" y1="140.3028" 
+                  x2="-141.3570" y2="151.5182" class="btwns5"/>
+        
+            <line x1="31.9379" y1="-37.7213" 
+                  x2="2.2238" y2="79.1878" class="btwns9"/>
+        
+            <line x1="390.0000" y1="-196.8846" 
+                  x2="266.4088" y2="-203.7403" class="btwns1"/>
+        
+            <line x1="119.9575" y1="154.7076" 
+                  x2="109.9575" y2="154.7076" class="btwns0"/>
+        
+            <line x1="119.9575" y1="154.7076" 
+                  x2="8.5313" y2="93.6831" class="btwns5"/>
+        
+            <line x1="-131.3935" y1="152.3720" 
+                  x2="-9.2403" y2="93.2370" class="btwns6"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(136.6210 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-307.1045 -288.2023)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(212.2526 221.1508)" 
+                class="vertice degree2 btwns1 authority1 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -144.3010)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-270.2564 -197.4953)" 
+                class="vertice degree4 btwns2 authority3 BRUSSELS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(357.8519 -1.6896)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-371.1462 71.1839)" 
+                class="vertice degree2 btwns0 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(89.2646 -172.3105)" 
+                class="vertice degree10 btwns10 authority10 BRUSSELS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(238.2407 -74.2191)" 
+                class="vertice degree2 btwns1 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-272.2491 140.3028)" 
+                class="vertice degree4 btwns2 authority3 BRUSSELS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(31.9379 -37.7213)" 
+                class="vertice degree2 btwns6 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-106.1539 -185.4160)" 
+                class="vertice degree2 btwns3 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-387.6151 151.4280)" 
+                class="vertice degree2 btwns0 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(3.5689 -281.0866)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -196.8846)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(119.9575 154.7076)" 
+                class="vertice degree6 btwns2 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(256.4241 -204.2942)" 
+                class="vertice degree2 btwns1 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(130.9715 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-131.3935 152.3720)" 
+                class="vertice degree2 btwns3 authority2 BRUSSELS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-0.2395 88.8797)" 
+                class="vertice degree4 btwns7 authority4 BRUSSELS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(136.6210 -290.0000)" 
+                id="05BRUSSELS3788" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BRUSSELS3788
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-307.1045 -288.2023)" 
+                id="05BRUSSELS4385" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BRUSSELS4385
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(212.2526 221.1508)" 
+                id="06BRUSSELS1637" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BRUSSELS1637.html">06BRUSSELS1637</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Belgium's Environmental Management: The Devolution of Pollution</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -144.3010)" 
+                id="06BRUSSELS1876" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRUSSELS1876.html">06BRUSSELS1876</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGIAN STEWPOT: June 6, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-270.2564 -197.4953)" 
+                id="06BRUSSELS2199" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRUSSELS2199.html">06BRUSSELS2199</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>BELGIAN STEWPOT: June 26, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(357.8519 -1.6896)" 
+                id="06BRUSSELS2926" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06BRUSSELS2926.html">06BRUSSELS2926</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGIAN STEWPOT: August 29, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-371.1462 71.1839)" 
+                id="06BRUSSELS309" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BRUSSELS309
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(89.2646 -172.3105)" 
+                id="06BRUSSELS3196" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BRUSSELS3196.html">06BRUSSELS3196</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>883 Million Euro Hole in 2006 Belgian Budget</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.2407 -74.2191)" 
+                id="06BRUSSELS3403" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BRUSSELS3403.html">06BRUSSELS3403</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BELGIAN STEWPOT: October 5, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-272.2491 140.3028)" 
+                id="06BRUSSELS3531" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BRUSSELS3531.html">06BRUSSELS3531</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Airbus Turbulence Hits Belgian Suppliers</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(31.9379 -37.7213)" 
+                id="06BRUSSELS3715" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BRUSSELS3715.html">06BRUSSELS3715</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BELGIUM,S 2007 FEDERAL BUDGET: OLD TRICKS HARDER TO SELL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-106.1539 -185.4160)" 
+                id="06BRUSSELS3748" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BRUSSELS3748.html">06BRUSSELS3748</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BELGIAN STEWPOT: November 7, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-387.6151 151.4280)" 
+                id="06BRUSSELS4130" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BRUSSELS4130.html">06BRUSSELS4130</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EU Faults Belgian Aerospace Subsidies</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(3.5689 -281.0866)" 
+                id="06BRUSSELS574" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BRUSSELS574
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -196.8846)" 
+                id="07BRUSSELS1201" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07BRUSSELS1201
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(119.9575 154.7076)" 
+                id="07BRUSSELS1238" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BRUSSELS1238.html">07BRUSSELS1238</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Environmental Problems and Progress May Color Elections Green</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(256.4241 -204.2942)" 
+                id="07BRUSSELS1892" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07BRUSSELS1892.html">07BRUSSELS1892</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Belgian Regions and Federal Taxes - Paying For Political Devolution In Belgium</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(130.9715 290.0000)" 
+                id="07BRUSSELS477" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BRUSSELS477.html">07BRUSSELS477</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>What does Climate Change Mean for Belgium?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-131.3935 152.3720)" 
+                id="07BRUSSELS843" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BRUSSELS843.html">07BRUSSELS843</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Belairbus Copes With Airbus Restructuring</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-0.2395 88.8797)" 
+                id="07BRUSSELS941" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BRUSSELS941.html">07BRUSSELS941</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Last Belgian Budget Check Before Elections - Much Ado About Nothing</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

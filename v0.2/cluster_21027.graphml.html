@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05DOHA1264">05DOHA1264</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/09/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1567">05DOHA1567</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05DOHA1567.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/13/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AL JAZEERA INTERNATIONAL: THE HASSAN AND JOSH SHOW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1593">05DOHA1593</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05DOHA1593.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">9/17 MEETING WITH AL JAZEERA MANAGING DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1605">05DOHA1605</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05DOHA1605.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AL JAZEERA CHILDREN'S CHANNEL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1765">05DOHA1765</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05DOHA1765.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAO MEETING WITH AL JAZEERA MANAGING DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1786">05DOHA1786</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05DOHA1786.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MEETING WITH AL JAZEERA QUALITY ASSURANCE CHIEF</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1803">05DOHA1803</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05DOHA1803.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MEETING WITH AL JAZEERA MEDIA TRAINING CENTER DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE217718">05STATE217718</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1976">05DOHA1976</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05DOHA1976.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DAS GRAY'S DECEMBER 1 MEETING WITH AL JAZEERA MANAGING DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA104">06DOHA104</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06DOHA104.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/23/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ENTERING ITS TENTH YEAR, AL JAZEERA COVETS GLOBAL ROLE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA219">06DOHA219</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06DOHA219.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">AL JAZEERA AND KIDNAPPING TAPES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA312">06DOHA312</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06DOHA312.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AL JAZEERA NETWORK BOARD OF DIRECTORS NAMED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA317">06DOHA317</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06DOHA317.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">U/S HUGHES MEETINGS AT AL JAZEERA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA328">06DOHA328</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06DOHA328.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Al Jazeera website director to quit; start new newspaper</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA467">06DOHA467</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06DOHA467.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WADAH KHANFAR TAKES THE HELM OF THE AL JAZEERA NETWORK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA526">06DOHA526</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DOHA526.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMCIT AL JAZEERA NETWORK BOARD MEMBER CRITICIZES AL JAZEERA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA793">06DOHA793</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06DOHA793.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AL JAZEERA ACCORDING TO WADAH KHANFAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA1614">06DOHA1614</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06DOHA1614.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AL JAZEERA TURNS TEN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA1745">06DOHA1745</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06DOHA1745.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AL JAZEERA QUALITY ASSURANCE CHIEF BELIEVES PROGRESS HAS BEEN MADE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DOHA495">07DOHA495</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07DOHA495.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WADAH KHANFAR LOSES POSITION AS MEMBER OF AL JAZEERA BOARD; MAY ALSO LOSE JOB MANAGING AL JAZEERA NETWORK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07DOHA641">07DOHA641</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07DOHA641.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BEGINNING OF THE END? KHANFAR STILL AT THE HELM OF AL JAZEERA, BUT STRIPPED OF FINANCIAL AND ADMIN POWERS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-283.3916" y1="-13.1824" 
+                  x2="-380.7968" y2="-54.5840" class="btwns1"/>
+        
+            <line x1="-283.3916" y1="-13.1824" 
+                  x2="-122.7343" y2="-60.4324" class="btwns3"/>
+        
+            <line x1="-390.0000" y1="-58.4958" 
+                  x2="-289.0044" y2="-107.1088" class="btwns1"/>
+        
+            <line x1="-113.1406" y1="-63.2539" 
+                  x2="-270.3866" y2="-108.6711" class="btwns3"/>
+        
+            <line x1="-113.1406" y1="-63.2539" 
+                  x2="-111.9608" y2="52.3354" class="btwns3"/>
+        
+            <line x1="-113.1406" y1="-63.2539" 
+                  x2="-146.7279" y2="-171.7144" class="btwns2"/>
+        
+            <line x1="-113.1406" y1="-63.2539" 
+                  x2="153.7221" y2="-44.4262" class="btwns10"/>
+        
+            <line x1="203.6483" y1="290.0000" 
+                  x2="129.6479" y2="213.4675" class="btwns2"/>
+        
+            <line x1="-111.8587" y1="62.3349" 
+                  x2="-65.0205" y2="162.0263" class="btwns3"/>
+        
+            <line x1="-111.8587" y1="62.3349" 
+                  x2="7.1109" y2="15.6482" class="btwns1"/>
+        
+            <line x1="-60.7681" y1="171.0771" 
+                  x2="112.8759" y2="204.3941" class="btwns2"/>
+        
+            <line x1="5.8375" y1="282.0293" 
+                  x2="114.3056" y2="211.7179" class="btwns2"/>
+        
+            <line x1="122.6968" y1="206.2785" 
+                  x2="271.2473" y2="185.6999" class="btwns0"/>
+        
+            <line x1="122.6968" y1="206.2785" 
+                  x2="217.1259" y2="101.8813" class="btwns5"/>
+        
+            <line x1="247.1449" y1="-290.0000" 
+                  x2="228.6389" y2="-197.1974" class="btwns2"/>
+        
+            <line x1="16.4198" y1="11.9952" 
+                  x2="154.3442" y2="-40.1841" class="btwns2"/>
+        
+            <line x1="281.1527" y1="184.3277" 
+                  x2="229.2117" y2="102.8960" class="btwns1"/>
+        
+            <line x1="163.6973" y1="-43.7225" 
+                  x2="219.8437" y2="85.2957" class="btwns7"/>
+        
+            <line x1="163.6973" y1="-43.7225" 
+                  x2="283.1734" y2="-0.1592" class="btwns0"/>
+        
+            <line x1="163.6973" y1="-43.7225" 
+                  x2="270.2198" y2="-93.9443" class="btwns1"/>
+        
+            <line x1="163.6973" y1="-43.7225" 
+                  x2="373.3881" y2="-24.9255" class="btwns1"/>
+        
+            <line x1="163.6973" y1="-43.7225" 
+                  x2="222.6681" y2="-178.2320" class="btwns9"/>
+        
+            <line x1="223.8340" y1="94.4650" 
+                  x2="286.5496" y2="11.2522" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-215.2273" 
+                  x2="236.5411" y2="-189.0707" class="btwns2"/>
+        
+            <line x1="292.5684" y1="3.2663" 
+                  x2="280.5648" y2="-88.2937" class="btwns0"/>
+        
+            <line x1="292.5684" y1="3.2663" 
+                  x2="373.7718" y2="-21.1529" class="btwns0"/>
+        
+            <line x1="279.2649" y1="-98.2088" 
+                  x2="231.7622" y2="-178.7763" class="btwns0"/>
+        
+            <line x1="226.6833" y1="-187.3905" 
+                  x2="106.6680" y2="-261.6211" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-283.3916 -13.1824)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -58.4958)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-113.1406 -63.2539)" 
+                class="vertice degree6 btwns6 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-279.9939 -111.4460)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(203.6483 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-111.8587 62.3349)" 
+                class="vertice degree3 btwns1 authority3 DOHA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-60.7681 171.0771)" 
+                class="vertice degree1 btwns1 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-149.6860 -181.2669)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(5.8375 282.0293)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(122.6968 206.2785)" 
+                class="vertice degree6 btwns3 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(247.1449 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(16.4198 11.9952)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(281.1527 184.3277)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(163.6973 -43.7225)" 
+                class="vertice degree10 btwns10 authority10 DOHA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(223.8340 94.4650)" 
+                class="vertice degree5 btwns4 authority5 DOHA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -215.2273)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(292.5684 3.2663)" 
+                class="vertice degree5 btwns0 authority5 DOHA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(279.2649 -98.2088)" 
+                class="vertice degree3 btwns0 authority3 DOHA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(383.3482 -24.0327)" 
+                class="vertice degree1 btwns0 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(226.6833 -187.3905)" 
+                class="vertice degree6 btwns4 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(98.1633 -266.8813)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-283.3916 -13.1824)" 
+                id="05DOHA1264" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05DOHA1264
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -58.4958)" 
+                id="05DOHA1567" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05DOHA1567.html">05DOHA1567</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AL JAZEERA INTERNATIONAL: THE HASSAN AND JOSH SHOW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-113.1406 -63.2539)" 
+                id="05DOHA1593" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05DOHA1593.html">05DOHA1593</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>9/17 MEETING WITH AL JAZEERA MANAGING DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-279.9939 -111.4460)" 
+                id="05DOHA1605" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05DOHA1605.html">05DOHA1605</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AL JAZEERA CHILDREN'S CHANNEL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(203.6483 290.0000)" 
+                id="05DOHA1765" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05DOHA1765.html">05DOHA1765</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PAO MEETING WITH AL JAZEERA MANAGING DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.8587 62.3349)" 
+                id="05DOHA1786" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05DOHA1786.html">05DOHA1786</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MEETING WITH AL JAZEERA QUALITY ASSURANCE CHIEF</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-60.7681 171.0771)" 
+                id="05DOHA1803" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05DOHA1803.html">05DOHA1803</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>MEETING WITH AL JAZEERA MEDIA TRAINING CENTER DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-149.6860 -181.2669)" 
+                id="05DOHA1976" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05DOHA1976.html">05DOHA1976</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DAS GRAY'S DECEMBER 1 MEETING WITH AL JAZEERA MANAGING DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(5.8375 282.0293)" 
+                id="05STATE217718" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE217718
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(122.6968 206.2785)" 
+                id="06DOHA104" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06DOHA104.html">06DOHA104</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ENTERING ITS TENTH YEAR, AL JAZEERA COVETS GLOBAL ROLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(247.1449 -290.0000)" 
+                id="06DOHA1614" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06DOHA1614.html">06DOHA1614</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AL JAZEERA TURNS TEN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(16.4198 11.9952)" 
+                id="06DOHA1745" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06DOHA1745.html">06DOHA1745</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AL JAZEERA QUALITY ASSURANCE CHIEF BELIEVES PROGRESS HAS BEEN MADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(281.1527 184.3277)" 
+                id="06DOHA219" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06DOHA219.html">06DOHA219</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AL JAZEERA AND KIDNAPPING TAPES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(163.6973 -43.7225)" 
+                id="06DOHA312" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06DOHA312.html">06DOHA312</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AL JAZEERA NETWORK BOARD OF DIRECTORS NAMED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(223.8340 94.4650)" 
+                id="06DOHA317" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06DOHA317.html">06DOHA317</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>U/S HUGHES MEETINGS AT AL JAZEERA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -215.2273)" 
+                id="06DOHA328" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06DOHA328.html">06DOHA328</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Al Jazeera website director to quit; start new newspaper</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(292.5684 3.2663)" 
+                id="06DOHA467" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06DOHA467.html">06DOHA467</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>WADAH KHANFAR TAKES THE HELM OF THE AL JAZEERA NETWORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(279.2649 -98.2088)" 
+                id="06DOHA526" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DOHA526.html">06DOHA526</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AMCIT AL JAZEERA NETWORK BOARD MEMBER CRITICIZES AL JAZEERA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(383.3482 -24.0327)" 
+                id="06DOHA793" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06DOHA793.html">06DOHA793</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AL JAZEERA ACCORDING TO WADAH KHANFAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(226.6833 -187.3905)" 
+                id="07DOHA495" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07DOHA495.html">07DOHA495</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>WADAH KHANFAR LOSES POSITION AS MEMBER OF AL JAZEERA BOARD; MAY ALSO LOSE JOB MANAGING AL JAZEERA NETWORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(98.1633 -266.8813)" 
+                id="07DOHA641" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07DOHA641.html">07DOHA641</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BEGINNING OF THE END? KHANFAR STILL AT THE HELM OF AL JAZEERA, BUT STRIPPED OF FINANCIAL AND ADMIN POWERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

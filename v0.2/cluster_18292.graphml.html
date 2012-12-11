@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD3731">05BAGHDAD3731</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/11/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD3853">05BAGHDAD3853</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/18/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD4147">05BAGHDAD4147</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05BAGHDAD4147.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/08/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQI MCNS MEETS TO DISCUSS TRANSFER OF SECURITY RESPONSIBILITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1056">06BAGHDAD1056</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1056.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/01/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ: JOINT COMMITTEE TO TRANSFER SECURITY RESPONSIBLITY MEETS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06STATE61597">06STATE61597</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06STATE61597.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQ SECURITY TRANSITION ISSUES FOR 19 APRIL LONDON MINI-QUAD MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD2046">06BAGHDAD2046</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BAGHDAD2046.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PLAN FOR SECURITY TRANSFER OF MUTHANNA PROVINCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD2082">06BAGHDAD2082</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BAGHDAD2082.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AUSTRALIAN DEMARCHE: MILITARY PARTICIPATION CONDITIONS AND PRT REFUSAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD2114">06BAGHDAD2114</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BAGHDAD2114.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS - MUTHANNA, BASRAH, AND BAGHDAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06STATE109375">06STATE109375</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06STATE109375.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQ: FIRST TRANSITION TO PROVINCIAL IRAQI CONTROL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2220">06SEOUL2220</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06SEOUL2220.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POINTS ON PROVINCIAL IRAQI CONTROL DELIVERED TO ROKG</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAKU994">06BAKU994</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06BAKU994.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED ON FIRST TRANSITION TO IRAQI CONTROL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06STATE123845">06STATE123845</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06STATE123845.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/28/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AZERBAIJAN AND THE OIC: LENDING SUPPORT TO THE GOI</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06STATE123851">06STATE123851</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06STATE123851.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/28/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AZERBAIJAN AND THE OIC: LENDING SUPPORT TO THE GOI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAKU1289">06BAKU1289</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06BAKU1289.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AZERBAIJAN AND THE OIC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BAGHDAD3731">06BAGHDAD3731</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/08/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BAGHDAD3853">06BAGHDAD3853</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/16/06</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-192.0683" y1="290.0000" 
+                  x2="-273.9820" y2="201.4964" class="btwns1"/>
+        
+            <line x1="-299.9056" y1="64.3316" 
+                  x2="-282.2324" y2="184.2642" class="btwns4"/>
+        
+            <line x1="-299.9056" y1="64.3316" 
+                  x2="-233.8583" y2="-70.7298" class="btwns6"/>
+        
+            <line x1="-229.4653" y1="-79.7132" 
+                  x2="-20.1056" y2="-171.8432" class="btwns10"/>
+        
+            <line x1="-229.4653" y1="-79.7132" 
+                  x2="-380.2315" y2="-112.7296" class="btwns1"/>
+        
+            <line x1="-10.9527" y1="-175.8710" 
+                  x2="-131.8066" y2="-283.3544" class="btwns1"/>
+        
+            <line x1="-10.9527" y1="-175.8710" 
+                  x2="185.8283" y2="-224.5176" class="btwns0"/>
+        
+            <line x1="-10.9527" y1="-175.8710" 
+                  x2="38.5704" y2="-73.5363" class="btwns0"/>
+        
+            <line x1="-10.9527" y1="-175.8710" 
+                  x2="81.8217" y2="-252.7004" class="btwns0"/>
+        
+            <line x1="-10.9527" y1="-175.8710" 
+                  x2="178.0437" y2="-118.8507" class="btwns7"/>
+        
+            <line x1="195.5361" y1="-226.9175" 
+                  x2="188.3294" y2="-125.9369" class="btwns0"/>
+        
+            <line x1="42.9264" y1="-64.5349" 
+                  x2="178.1950" y2="-112.6132" class="btwns0"/>
+        
+            <line x1="89.5236" y1="-259.0786" 
+                  x2="181.9639" y2="-124.2107" class="btwns0"/>
+        
+            <line x1="349.1017" y1="270.3097" 
+                  x2="368.4635" y2="166.8367" class="btwns1"/>
+        
+            <line x1="243.8570" y1="64.8496" 
+                  x2="190.5875" y2="-106.4135" class="btwns8"/>
+        
+            <line x1="243.8570" y1="64.8496" 
+                  x2="362.2214" y2="151.1173" class="btwns4"/>
+        
+            <line x1="243.8570" y1="64.8496" 
+                  x2="148.6168" y2="180.1616" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-129.0045" 
+                  x2="197.5968" y2="-116.6054" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-192.0683 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-299.9056 64.3316)" 
+                class="vertice degree2 btwns4 authority1 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-280.7746 194.1574)" 
+                class="vertice degree2 btwns2 authority1 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-229.4653 -79.7132)" 
+                class="vertice degree4 btwns7 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-10.9527 -175.8710)" 
+                class="vertice degree10 btwns10 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-139.2790 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(195.5361 -226.9175)" 
+                class="vertice degree2 btwns0 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(42.9264 -64.5349)" 
+                class="vertice degree2 btwns0 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(89.5236 -259.0786)" 
+                class="vertice degree2 btwns0 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(349.1017 270.3097)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(243.8570 64.8496)" 
+                class="vertice degree4 btwns6 authority3 BAKU">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.0045)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(187.6175 -115.9623)" 
+                class="vertice degree10 btwns9 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(370.3027 157.0073)" 
+                class="vertice degree2 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(142.2487 187.8718)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -114.8688)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-192.0683 290.0000)" 
+                id="05BAGHDAD3731" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BAGHDAD3731
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-299.9056 64.3316)" 
+                id="05BAGHDAD3853" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05BAGHDAD3853
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-280.7746 194.1574)" 
+                id="05BAGHDAD4147" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05BAGHDAD4147.html">05BAGHDAD4147</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IRAQI MCNS MEETS TO DISCUSS TRANSFER OF SECURITY RESPONSIBILITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-229.4653 -79.7132)" 
+                id="06BAGHDAD1056" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>04/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1056.html">06BAGHDAD1056</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>IRAQ: JOINT COMMITTEE TO TRANSFER SECURITY RESPONSIBLITY MEETS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.9527 -175.8710)" 
+                id="06BAGHDAD2046" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BAGHDAD2046.html">06BAGHDAD2046</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PLAN FOR SECURITY TRANSFER OF MUTHANNA PROVINCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-139.2790 -290.0000)" 
+                id="06BAGHDAD2082" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BAGHDAD2082.html">06BAGHDAD2082</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIAN DEMARCHE: MILITARY PARTICIPATION CONDITIONS AND PRT REFUSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(195.5361 -226.9175)" 
+                id="06BAGHDAD2114" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BAGHDAD2114.html">06BAGHDAD2114</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>MCNS - MUTHANNA, BASRAH, AND BAGHDAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(42.9264 -64.5349)" 
+                id="06BAGHDAD3731" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BAGHDAD3731
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(89.5236 -259.0786)" 
+                id="06BAGHDAD3853" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BAGHDAD3853
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(349.1017 270.3097)" 
+                id="06BAKU1289" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06BAKU1289.html">06BAKU1289</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AZERBAIJAN AND THE OIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(243.8570 64.8496)" 
+                id="06BAKU994" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BAKU994.html">06BAKU994</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON FIRST TRANSITION TO IRAQI CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.0045)" 
+                id="06SEOUL2220" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06SEOUL2220.html">06SEOUL2220</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POINTS ON PROVINCIAL IRAQI CONTROL DELIVERED TO ROKG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(187.6175 -115.9623)" 
+                id="06STATE109375" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06STATE109375.html">06STATE109375</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IRAQ: FIRST TRANSITION TO PROVINCIAL IRAQI CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(370.3027 157.0073)" 
+                id="06STATE123845" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06STATE123845.html">06STATE123845</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AZERBAIJAN AND THE OIC: LENDING SUPPORT TO THE GOI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(142.2487 187.8718)" 
+                id="06STATE123851" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06STATE123851.html">06STATE123851</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AZERBAIJAN AND THE OIC: LENDING SUPPORT TO THE GOI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -114.8688)" 
+                id="06STATE61597" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06STATE61597.html">06STATE61597</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQ SECURITY TRANSITION ISSUES FOR 19 APRIL LONDON MINI-QUAD MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

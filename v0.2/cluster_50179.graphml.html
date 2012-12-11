@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO4543">06TOKYO4543</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06TOKYO4543.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/11/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">US-JAPAN COORDINATION ON DPRK MISSILES LAUNCHES: LESSONS LEARNED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO5177">06TOKYO5177</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TOKYO5177.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ASO, NUKAGA AGREE WITH AMBASSADOR ON DPRK MISSILE LAUNCHES 'LESSONS LEARNED'</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO5336">06TOKYO5336</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TOKYO5336.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DPRK "LESSONS LEARNED CAPSTONE CONFERENCE"</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO445">09TOKYO445</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09TOKYO445.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">READ-OUT ON COORDINATION MEETING WITH JAPANESE OFFICIALS ON POSSIBLE TD-2 LAUNCH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09TOKYO446">09TOKYO446</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/26/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO579">09TOKYO579</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09TOKYO579.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">PRE-COORDINATION WITH JAPAN ON POSSIBLE DPRK TD2 LAUNCH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO633">09TOKYO633</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09TOKYO633.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/21/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">U.S.-JAPAN BILATERAL COORDINATION (MARCH 19) ON DPRK TD2 LAUNCH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO687">09TOKYO687</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09TOKYO687.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">U.S.-JAPAN BILATERAL COORDINATION (MARCH 26) ON DPRK TD2 LAUNCH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE29932">09STATE29932</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09STATE29932.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">(S) ALLIANCE COORDINATION ON PUBLIC DIPLOMACY IMMEDIATELY FOLLOWING A TD-2 LAUNCH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO724">09TOKYO724</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09TOKYO724.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/31/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">COORDINATING ON PUBLIC MESSAGING PRIOR TO DPRK TD2 LAUNCH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL534">09SEOUL534</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09SEOUL534.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROKG DETAILS POST-LAUNCH RESPONSE SEQUENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO747">09TOKYO747</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09TOKYO747.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">U.S.-JAPAN BILATERAL COORDINATION (APRIL 2) ON DPRK TD2 LAUNCH</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-30.4763" 
+                  x2="-174.0839" y2="47.7145" class="btwns5"/>
+        
+            <line x1="-60.9840" y1="-290.0000" 
+                  x2="-136.7923" y2="-166.9280" class="btwns5"/>
+        
+            <line x1="-142.0368" y1="-158.4136" 
+                  x2="-163.6070" y2="41.1773" class="btwns10"/>
+        
+            <line x1="390.0000" y1="-13.5620" 
+                  x2="240.3241" y2="74.6519" class="btwns5"/>
+        
+            <line x1="231.7090" y1="79.7293" 
+                  x2="-0.5445" y2="125.6566" class="btwns5"/>
+        
+            <line x1="231.7090" y1="79.7293" 
+                  x2="73.5010" y2="166.4605" class="btwns4"/>
+        
+            <line x1="-164.6814" y1="51.1194" 
+                  x2="-109.4072" y2="224.3747" class="btwns1"/>
+        
+            <line x1="-164.6814" y1="51.1194" 
+                  x2="-124.5622" y2="148.0884" class="btwns1"/>
+        
+            <line x1="-164.6814" y1="51.1194" 
+                  x2="-220.1011" y2="202.2523" class="btwns2"/>
+        
+            <line x1="-164.6814" y1="51.1194" 
+                  x2="-19.3147" y2="123.1563" class="btwns4"/>
+        
+            <line x1="-164.6814" y1="51.1194" 
+                  x2="55.8736" y2="166.6282" class="btwns4"/>
+        
+            <line x1="-26.6527" y1="290.0000" 
+                  x2="-98.1899" y2="239.6567" class="btwns0"/>
+        
+            <line x1="-26.6527" y1="290.0000" 
+                  x2="-114.9544" y2="165.4857" class="btwns0"/>
+        
+            <line x1="-26.6527" y1="290.0000" 
+                  x2="-214.2527" y2="215.3387" class="btwns0"/>
+        
+            <line x1="-26.6527" y1="290.0000" 
+                  x2="-11.3530" y2="137.5465" class="btwns0"/>
+        
+            <line x1="-26.6527" y1="290.0000" 
+                  x2="58.6329" y2="179.1922" class="btwns1"/>
+        
+            <line x1="-106.3678" y1="233.9016" 
+                  x2="-118.8945" y2="167.1571" class="btwns0"/>
+        
+            <line x1="-106.3678" y1="233.9016" 
+                  x2="-213.7196" y2="213.5074" class="btwns0"/>
+        
+            <line x1="-106.3678" y1="233.9016" 
+                  x2="-17.0572" y2="135.0177" class="btwns0"/>
+        
+            <line x1="-106.3678" y1="233.9016" 
+                  x2="55.3416" y2="174.7052" class="btwns0"/>
+        
+            <line x1="-120.7391" y1="157.3287" 
+                  x2="-214.7020" y2="206.9698" class="btwns0"/>
+        
+            <line x1="-120.7391" y1="157.3287" 
+                  x2="-20.0104" y2="130.1973" class="btwns0"/>
+        
+            <line x1="-120.7391" y1="157.3287" 
+                  x2="54.7603" y2="170.5182" class="btwns0"/>
+        
+            <line x1="-223.5439" y1="211.6410" 
+                  x2="-19.6577" y2="131.2640" class="btwns1"/>
+        
+            <line x1="-10.3545" y1="127.5965" 
+                  x2="56.0879" y2="166.2401" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -30.4763)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-60.9840 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-142.0368 -158.4136)" 
+                class="vertice degree1 btwns3 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -13.5620)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(231.7090 79.7293)" 
+                class="vertice degree3 btwns3 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-164.6814 51.1194)" 
+                class="vertice degree10 btwns10 authority9 TOKYO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-26.6527 290.0000)" 
+                class="vertice degree6 btwns0 authority6 TOKYO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-106.3678 233.9016)" 
+                class="vertice degree8 btwns0 authority8 TOKYO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-120.7391 157.3287)" 
+                class="vertice degree8 btwns0 authority8 TOKYO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-223.5439 211.6410)" 
+                class="vertice degree6 btwns0 authority6 TOKYO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-10.3545 127.5965)" 
+                class="vertice degree10 btwns3 authority10 TOKYO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(64.7322 171.2677)" 
+                class="vertice degree8 btwns2 authority8 TOKYO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -30.4763)" 
+                id="06TOKYO4543" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TOKYO4543.html">06TOKYO4543</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>US-JAPAN COORDINATION ON DPRK MISSILES LAUNCHES: LESSONS LEARNED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-60.9840 -290.0000)" 
+                id="06TOKYO5177" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TOKYO5177.html">06TOKYO5177</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ASO, NUKAGA AGREE WITH AMBASSADOR ON DPRK MISSILE LAUNCHES 'LESSONS LEARNED'</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-142.0368 -158.4136)" 
+                id="06TOKYO5336" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TOKYO5336.html">06TOKYO5336</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DPRK "LESSONS LEARNED CAPSTONE CONFERENCE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -13.5620)" 
+                id="09SEOUL534" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09SEOUL534.html">09SEOUL534</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG DETAILS POST-LAUNCH RESPONSE SEQUENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(231.7090 79.7293)" 
+                id="09STATE29932" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09STATE29932.html">09STATE29932</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>(S) ALLIANCE COORDINATION ON PUBLIC DIPLOMACY IMMEDIATELY FOLLOWING A TD-2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-164.6814 51.1194)" 
+                id="09TOKYO445" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09TOKYO445.html">09TOKYO445</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>READ-OUT ON COORDINATION MEETING WITH JAPANESE OFFICIALS ON POSSIBLE TD-2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.6527 290.0000)" 
+                id="09TOKYO446" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    09TOKYO446
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-106.3678 233.9016)" 
+                id="09TOKYO579" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TOKYO579.html">09TOKYO579</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>PRE-COORDINATION WITH JAPAN ON POSSIBLE DPRK TD2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-120.7391 157.3287)" 
+                id="09TOKYO633" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TOKYO633.html">09TOKYO633</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>U.S.-JAPAN BILATERAL COORDINATION (MARCH 19) ON DPRK TD2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-223.5439 211.6410)" 
+                id="09TOKYO687" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TOKYO687.html">09TOKYO687</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>U.S.-JAPAN BILATERAL COORDINATION (MARCH 26) ON DPRK TD2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.3545 127.5965)" 
+                id="09TOKYO724" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TOKYO724.html">09TOKYO724</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>COORDINATING ON PUBLIC MESSAGING PRIOR TO DPRK TD2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(64.7322 171.2677)" 
+                id="09TOKYO747" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>04/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09TOKYO747.html">09TOKYO747</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>U.S.-JAPAN BILATERAL COORDINATION (APRIL 2) ON DPRK TD2 LAUNCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

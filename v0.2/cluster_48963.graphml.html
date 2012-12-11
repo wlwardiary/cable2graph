@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TALLINN347">06TALLINN347</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/14/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN582">06TALLINN582</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06TALLINN582.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">WHAT MAKES TOOMAS HENDRIK RUN?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TALLINN756">06TALLINN756</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/20/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN798">06TALLINN798</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06TALLINN798.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ESTONIAN PRESIDENTIAL ELECTIONS BEGIN WITH BOYCOTT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN845">06TALLINN845</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TALLINN845.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONAIN-RUSSIAN RELATIONS: NO LONGER HOT BUT STILL POTATOES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN867">06TALLINN867</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TALLINN867.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ESTONIA: PRESIDENTIAL ELECTIONS - TEMPEST IN A TEAPOT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN887">06TALLINN887</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TALLINN887.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ESTONIA: ILVES IS ELECTED PRESIDENT OF ESTONIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN941">06TALLINN941</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06TALLINN941.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA'S NEW PRESIDENT PART I: ILVES ELECTION SHAKES UP POLITICAL LANDSCAPE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN964">06TALLINN964</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06TALLINN964.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA'S NEW PRESIDENT PART II: A MORE ASSERTIVE FOREIGN POLICY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN968">06TALLINN968</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06TALLINN968.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA STANDS UP FOR GEORGIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN972">06TALLINN972</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06TALLINN972.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA:  SCENESETTER FOR THE PRESIDENT'S VISIT TO TALLINN NOV 27-28.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN983">06TALLINN983</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TALLINN983.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA: REFLECTIONS ON EU MEMBERSHIP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN1049">06TALLINN1049</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TALLINN1049.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA: SCENESETTER FOR THE SECRETARY'S TRAVEL TO  TALLINN NOV 27-28</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-218.3472" y1="-162.9236" 
+                  x2="-40.4799" y2="-241.3824" class="btwns4"/>
+        
+            <line x1="-218.3472" y1="-162.9236" 
+                  x2="-342.6653" y2="-40.2989" class="btwns8"/>
+        
+            <line x1="-218.3472" y1="-162.9236" 
+                  x2="-325.5187" y2="-244.3263" class="btwns1"/>
+        
+            <line x1="141.8816" y1="-290.0000" 
+                  x2="-21.6461" y2="-247.9109" class="btwns1"/>
+        
+            <line x1="271.9730" y1="290.0000" 
+                  x2="298.2588" y2="166.3202" class="btwns1"/>
+        
+            <line x1="390.0000" y1="24.6785" 
+                  x2="233.6440" y2="-2.2467" class="btwns0"/>
+        
+            <line x1="390.0000" y1="24.6785" 
+                  x2="305.9606" y2="148.2694" class="btwns0"/>
+        
+            <line x1="223.7891" y1="-3.9438" 
+                  x2="111.8338" y2="120.5029" class="btwns2"/>
+        
+            <line x1="300.3376" y1="156.5387" 
+                  x2="115.0400" y2="129.3871" class="btwns4"/>
+        
+            <line x1="105.1457" y1="127.9372" 
+                  x2="-74.2183" y2="217.3209" class="btwns9"/>
+        
+            <line x1="-83.1685" y1="221.7811" 
+                  x2="-269.9699" y2="225.8019" class="btwns10"/>
+        
+            <line x1="-279.9676" y1="226.0171" 
+                  x2="-383.1160" y2="117.3337" class="btwns10"/>
+        
+            <line x1="-349.7847" y1="-33.2765" 
+                  x2="-387.2990" y2="100.4520" class="btwns9"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-218.3472 -162.9236)" 
+                class="vertice degree10 btwns8 authority9 TALLINN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(141.8816 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(271.9730 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 24.6785)" 
+                class="vertice degree5 btwns0 authority5 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(223.7891 -3.9438)" 
+                class="vertice degree5 btwns1 authority5 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-31.3304 -245.4183)" 
+                class="vertice degree5 btwns3 authority4 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.3376 156.5387)" 
+                class="vertice degree10 btwns4 authority9 TALLINN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(105.1457 127.9372)" 
+                class="vertice degree10 btwns9 authority10 TALLINN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-83.1685 221.7811)" 
+                class="vertice degree5 btwns9 authority5 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-279.9676 226.0171)" 
+                class="vertice degree5 btwns10 authority4 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-349.7847 -33.2765)" 
+                class="vertice degree5 btwns8 authority4 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-333.4820 -250.3749)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 110.0804)" 
+                class="vertice degree5 btwns9 authority4 TALLINN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-218.3472 -162.9236)" 
+                id="06TALLINN1049" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TALLINN1049.html">06TALLINN1049</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ESTONIA: SCENESETTER FOR THE SECRETARY'S TRAVEL TO  TALLINN NOV 27-28</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(141.8816 -290.0000)" 
+                id="06TALLINN347" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TALLINN347
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(271.9730 290.0000)" 
+                id="06TALLINN582" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06TALLINN582.html">06TALLINN582</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>WHAT MAKES TOOMAS HENDRIK RUN?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 24.6785)" 
+                id="06TALLINN756" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06TALLINN756
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(223.7891 -3.9438)" 
+                id="06TALLINN798" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TALLINN798.html">06TALLINN798</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONIAN PRESIDENTIAL ELECTIONS BEGIN WITH BOYCOTT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-31.3304 -245.4183)" 
+                id="06TALLINN845" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TALLINN845.html">06TALLINN845</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONAIN-RUSSIAN RELATIONS: NO LONGER HOT BUT STILL POTATOES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.3376 156.5387)" 
+                id="06TALLINN867" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TALLINN867.html">06TALLINN867</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ESTONIA: PRESIDENTIAL ELECTIONS - TEMPEST IN A TEAPOT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(105.1457 127.9372)" 
+                id="06TALLINN887" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TALLINN887.html">06TALLINN887</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ESTONIA: ILVES IS ELECTED PRESIDENT OF ESTONIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-83.1685 221.7811)" 
+                id="06TALLINN941" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06TALLINN941.html">06TALLINN941</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONIA'S NEW PRESIDENT PART I: ILVES ELECTION SHAKES UP POLITICAL LANDSCAPE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-279.9676 226.0171)" 
+                id="06TALLINN964" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06TALLINN964.html">06TALLINN964</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONIA'S NEW PRESIDENT PART II: A MORE ASSERTIVE FOREIGN POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-349.7847 -33.2765)" 
+                id="06TALLINN968" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06TALLINN968.html">06TALLINN968</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONIA STANDS UP FOR GEORGIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-333.4820 -250.3749)" 
+                id="06TALLINN972" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06TALLINN972.html">06TALLINN972</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA:  SCENESETTER FOR THE PRESIDENT'S VISIT TO TALLINN NOV 27-28.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 110.0804)" 
+                id="06TALLINN983" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TALLINN983.html">06TALLINN983</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ESTONIA: REFLECTIONS ON EU MEMBERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

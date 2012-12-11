@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE77168">08STATE77168</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/18/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ASHGABAT927">08ASHGABAT927</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ASHGABAT927.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/22/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GLOBAL INITIATIVE CONFERENCE ON LEGAL AND REGULATORY FRAMEWORKS INVITATION DELIVERED TO TURKMENISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA1311">08ANKARA1311</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ANKARA1311.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GLOBAL INITIATIVE LEGAL AND REGULATORY FRAMEWORKS CONFERENCE DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE80436">08STATE80436</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/25/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ISLAMABAD2528">08ISLAMABAD2528</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ISLAMABAD2528.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PAKISTAN LIKELY TO ATTEND GI CONFERENCE ON LEGAL/REGULATORY FRAMEWORKS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ASHGABAT975">08ASHGABAT975</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ASHGABAT975.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MAURITIUS AND UZBEKISTAN ENDORSE GLOBAL INITIATIVE DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ASHGABAT976">08ASHGABAT976</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ASHGABAT976.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MAURITIUS AND UZBEKISTAN ENDORSE GLOBAL INITIATIVE DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08VILNIUS610">08VILNIUS610</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08VILNIUS610.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LITHUANIA OK ON NEW GI MEMBERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB575">08ZAGREB575</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08ZAGREB575.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/01/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK793">08BISHKEK793</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08BISHKEK793.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KYRGYZSTAN: DEMARCHE DELIVERED ON NEW GLOBAL INITIATIVE PARTNERS UZBEKISTAN AND MAURITIUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TIRANA589">08TIRANA589</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TIRANA589.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOA REACTION TO NEW GLOBAL INITIATIVE PARTNERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV1689">08TELAVIV1689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TELAVIV1689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTIAGO712">08SANTIAGO712</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08SANTIAGO712.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CHILE WELCOMES GLOBAL INITIATIVE MEMBERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN2356">08AMMAN2356</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08AMMAN2356.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/12/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INFORMING JORDAN THAT MAURITIUS AND UZBEKISTAN JOINED THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BELGRADE951">08BELGRADE951</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BELGRADE951.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SERBIA: RESPONSE ON NEW GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM PARTNERS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="375.7716" y1="-27.2924" 
+                  x2="190.6031" y2="78.1830" class="btwns0"/>
+        
+            <line x1="-316.1793" y1="48.7407" 
+                  x2="-223.6472" y2="-116.8668" class="btwns0"/>
+        
+            <line x1="-273.8555" y1="-276.2429" 
+                  x2="-222.2038" y2="-134.9884" class="btwns0"/>
+        
+            <line x1="34.3099" y1="275.7795" 
+                  x2="175.8320" y2="91.0704" class="btwns0"/>
+        
+            <line x1="390.0000" y1="107.7303" 
+                  x2="191.8448" y2="84.3064" class="btwns0"/>
+        
+            <line x1="176.5294" y1="290.0000" 
+                  x2="181.6537" y2="93.1291" class="btwns0"/>
+        
+            <line x1="312.0610" y1="232.3773" 
+                  x2="188.4863" y2="90.6693" class="btwns0"/>
+        
+            <line x1="-101.9344" y1="-290.0000" 
+                  x2="-212.9767" y2="-133.7479" class="btwns0"/>
+        
+            <line x1="-34.7267" y1="-29.1379" 
+                  x2="-209.9123" y2="-120.9544" class="btwns9"/>
+        
+            <line x1="-34.7267" y1="-29.1379" 
+                  x2="173.0353" y2="78.5313" class="btwns10"/>
+        
+            <line x1="-218.7696" y1="-125.5966" 
+                  x2="-380.1796" y2="-94.5851" class="btwns0"/>
+        
+            <line x1="181.9139" y1="83.1325" 
+                  x2="-6.8934" y2="155.6440" class="btwns0"/>
+        
+            <line x1="181.9139" y1="83.1325" 
+                  x2="154.5187" y2="-98.9438" class="btwns0"/>
+        
+            <line x1="181.9139" y1="83.1325" 
+                  x2="284.4579" y2="-121.7061" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(375.7716 -27.2924)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-316.1793 48.7407)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-273.8555 -276.2429)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(34.3099 275.7795)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 107.7303)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(176.5294 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BELGRADE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(312.0610 232.3773)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-101.9344 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-34.7267 -29.1379)" 
+                class="vertice degree1 btwns5 authority1 SANTIAGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-218.7696 -125.5966)" 
+                class="vertice degree5 btwns6 authority4 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(181.9139 83.1325)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -92.6983)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-16.2286 159.2292)" 
+                class="vertice degree0 btwns0 authority0 TIRANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(153.0309 -108.8325)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(288.9344 -130.6482)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(375.7716 -27.2924)" 
+                id="08AMMAN2356" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08AMMAN2356.html">08AMMAN2356</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INFORMING JORDAN THAT MAURITIUS AND UZBEKISTAN JOINED THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-316.1793 48.7407)" 
+                id="08ANKARA1311" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ANKARA1311.html">08ANKARA1311</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GLOBAL INITIATIVE LEGAL AND REGULATORY FRAMEWORKS CONFERENCE DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-273.8555 -276.2429)" 
+                id="08ASHGABAT927" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ASHGABAT927.html">08ASHGABAT927</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GLOBAL INITIATIVE CONFERENCE ON LEGAL AND REGULATORY FRAMEWORKS INVITATION DELIVERED TO TURKMENISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(34.3099 275.7795)" 
+                id="08ASHGABAT975" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ASHGABAT975.html">08ASHGABAT975</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MAURITIUS AND UZBEKISTAN ENDORSE GLOBAL INITIATIVE DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 107.7303)" 
+                id="08ASHGABAT976" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ASHGABAT976.html">08ASHGABAT976</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MAURITIUS AND UZBEKISTAN ENDORSE GLOBAL INITIATIVE DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(176.5294 290.0000)" 
+                id="08BELGRADE951" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BELGRADE951.html">08BELGRADE951</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SERBIA: RESPONSE ON NEW GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM PARTNERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(312.0610 232.3773)" 
+                id="08BISHKEK793" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08BISHKEK793.html">08BISHKEK793</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KYRGYZSTAN: DEMARCHE DELIVERED ON NEW GLOBAL INITIATIVE PARTNERS UZBEKISTAN AND MAURITIUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-101.9344 -290.0000)" 
+                id="08ISLAMABAD2528" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/26/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ISLAMABAD2528.html">08ISLAMABAD2528</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PAKISTAN LIKELY TO ATTEND GI CONFERENCE ON LEGAL/REGULATORY FRAMEWORKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-34.7267 -29.1379)" 
+                id="08SANTIAGO712" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08SANTIAGO712.html">08SANTIAGO712</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CHILE WELCOMES GLOBAL INITIATIVE MEMBERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-218.7696 -125.5966)" 
+                id="08STATE77168" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    08STATE77168
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(181.9139 83.1325)" 
+                id="08STATE80436" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE80436
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -92.6983)" 
+                id="08TELAVIV1689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TELAVIV1689.html">08TELAVIV1689</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-16.2286 159.2292)" 
+                id="08TIRANA589" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TIRANA589.html">08TIRANA589</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOA REACTION TO NEW GLOBAL INITIATIVE PARTNERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(153.0309 -108.8325)" 
+                id="08VILNIUS610" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08VILNIUS610.html">08VILNIUS610</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LITHUANIA OK ON NEW GI MEMBERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(288.9344 -130.6482)" 
+                id="08ZAGREB575" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08ZAGREB575.html">08ZAGREB575</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

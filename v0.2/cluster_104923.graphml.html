@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR78">09KUALALUMPUR78</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09KUALALUMPUR78.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAJIB LEADS TAKEOVER OF OPPOSITION-HELD STATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR194">09KUALALUMPUR194</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR194.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ONE YEAR LATER, ANWAR IN DOLDRUMS, SODOMY TRIAL AND NAJIB TAKEOVER LOOMING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR229">09KUALALUMPUR229</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR229.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAJIB CLOSING MALAYSIA'S DEMOCRATIC SPACE?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR231">09KUALALUMPUR231</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR231.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RULING PARTY CONFIRMS NAJIB, ELECTS NEW LEADERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR253">09KUALALUMPUR253</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR253.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAJIB RAZAK SWORN IN AS MALAYSIA'S SIXTH PM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR259">09KUALALUMPUR259</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR259.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/08/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BY-ELECTION RESULTS -- HONEYMOON DAMPENER FOR NAJIB</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR266">09KUALALUMPUR266</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR266.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/09/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAJIB UNVEILS CABINET, PLACES LOYALISTS IN KEY POSITIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE40438">09STATE40438</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09STATE40438.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">(C)  KUDOS FOR TIMELY COVERAGE OF MALAYSIAN CABINET REORGANIZATION (C-AL9-00911)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR337">09KUALALUMPUR337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09KUALALUMPUR337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARRESTS PRECEDE MAY 7 PERAK ASSEMBLY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR342">09KUALALUMPUR342</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09KUALALUMPUR342.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/07/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PANDEMONIUM IN PERAK STATE ASSEMBLY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10KUALALUMPUR92">10KUALALUMPUR92</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10KUALALUMPUR92.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/12/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COURT DECISION ON STATE POWER PLAY ENDS LEGAL BATTLE, BUT SETS WORRISOME PRECEDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10KUALALUMPUR107">10KUALALUMPUR107</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10KUALALUMPUR107.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/19/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POWER STRUGGLES IN PERAK: RULING COALITION WORKING HARD TO REGAIN VOTERS' SUPPORT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-136.3160" y1="290.0000" 
+                  x2="-105.9506" y2="141.4566" class="btwns2"/>
+        
+            <line x1="-289.8585" y1="110.6509" 
+                  x2="-223.4187" y2="-14.0652" class="btwns0"/>
+        
+            <line x1="-289.8585" y1="110.6509" 
+                  x2="-113.8845" y2="130.5363" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-90.8139" 
+                  x2="-228.0127" y2="-26.5772" class="btwns2"/>
+        
+            <line x1="-218.7169" y1="-22.8909" 
+                  x2="-109.9097" y2="123.6308" class="btwns7"/>
+        
+            <line x1="-218.7169" y1="-22.8909" 
+                  x2="-127.3152" y2="-174.2527" class="btwns5"/>
+        
+            <line x1="-103.9478" y1="131.6592" 
+                  x2="133.4001" y2="97.7439" class="btwns10"/>
+        
+            <line x1="-122.1460" y1="-182.8130" 
+                  x2="-9.9176" y2="-283.3283" class="btwns2"/>
+        
+            <line x1="390.0000" y1="-129.3785" 
+                  x2="325.7942" y2="-2.7207" class="btwns2"/>
+        
+            <line x1="321.2727" y1="6.1987" 
+                  x2="152.2208" y2="91.8114" class="btwns3"/>
+        
+            <line x1="321.2727" y1="6.1987" 
+                  x2="321.0034" y2="136.7667" class="btwns0"/>
+        
+            <line x1="143.2996" y1="96.3293" 
+                  x2="311.3628" y2="144.0359" class="btwns3"/>
+        
+            <line x1="320.9828" y1="146.7667" 
+                  x2="327.0288" y2="274.0816" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-136.3160 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-289.8585 110.6509)" 
+                class="vertice degree3 btwns0 authority3 KUALALUMPUR">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -90.8139)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-218.7169 -22.8909)" 
+                class="vertice degree10 btwns7 authority9 KUALALUMPUR">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-103.9478 131.6592)" 
+                class="vertice degree10 btwns10 authority10 KUALALUMPUR">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-122.1460 -182.8130)" 
+                class="vertice degree3 btwns2 authority3 KUALALUMPUR">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.3785)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(321.2727 6.1987)" 
+                class="vertice degree6 btwns2 authority6 KUALALUMPUR">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(143.2996 96.3293)" 
+                class="vertice degree6 btwns8 authority6 KUALALUMPUR">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-2.4685 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(320.9828 146.7667)" 
+                class="vertice degree6 btwns2 authority6 KUALALUMPUR">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(327.5032 284.0703)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-136.3160 290.0000)" 
+                id="09KUALALUMPUR194" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR194.html">09KUALALUMPUR194</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ONE YEAR LATER, ANWAR IN DOLDRUMS, SODOMY TRIAL AND NAJIB TAKEOVER LOOMING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-289.8585 110.6509)" 
+                id="09KUALALUMPUR229" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR229.html">09KUALALUMPUR229</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NAJIB CLOSING MALAYSIA'S DEMOCRATIC SPACE?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -90.8139)" 
+                id="09KUALALUMPUR231" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KUALALUMPUR231.html">09KUALALUMPUR231</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RULING PARTY CONFIRMS NAJIB, ELECTS NEW LEADERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-218.7169 -22.8909)" 
+                id="09KUALALUMPUR253" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR253.html">09KUALALUMPUR253</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>NAJIB RAZAK SWORN IN AS MALAYSIA'S SIXTH PM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-103.9478 131.6592)" 
+                id="09KUALALUMPUR259" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR259.html">09KUALALUMPUR259</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>BY-ELECTION RESULTS -- HONEYMOON DAMPENER FOR NAJIB</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-122.1460 -182.8130)" 
+                id="09KUALALUMPUR266" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09KUALALUMPUR266.html">09KUALALUMPUR266</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NAJIB UNVEILS CABINET, PLACES LOYALISTS IN KEY POSITIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.3785)" 
+                id="09KUALALUMPUR337" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09KUALALUMPUR337.html">09KUALALUMPUR337</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARRESTS PRECEDE MAY 7 PERAK ASSEMBLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(321.2727 6.1987)" 
+                id="09KUALALUMPUR342" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09KUALALUMPUR342.html">09KUALALUMPUR342</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PANDEMONIUM IN PERAK STATE ASSEMBLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(143.2996 96.3293)" 
+                id="09KUALALUMPUR78" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09KUALALUMPUR78.html">09KUALALUMPUR78</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>NAJIB LEADS TAKEOVER OF OPPOSITION-HELD STATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-2.4685 -290.0000)" 
+                id="09STATE40438" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09STATE40438.html">09STATE40438</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(C)  KUDOS FOR TIMELY COVERAGE OF MALAYSIAN CABINET REORGANIZATION (C-AL9-00911)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(320.9828 146.7667)" 
+                id="10KUALALUMPUR107" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/19/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10KUALALUMPUR107.html">10KUALALUMPUR107</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>POWER STRUGGLES IN PERAK: RULING COALITION WORKING HARD TO REGAIN VOTERS' SUPPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(327.5032 284.0703)" 
+                id="10KUALALUMPUR92" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/12/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10KUALALUMPUR92.html">10KUALALUMPUR92</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COURT DECISION ON STATE POWER PLAY ENDS LEGAL BATTLE, BUT SETS WORRISOME PRECEDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

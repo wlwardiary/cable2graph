@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI2388">06TAIPEI2388</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06TAIPEI2388.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/14/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Taiwan to Streamline Insurance Policy Review</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06AITTAIPEI2695">06AITTAIPEI2695</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/08/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI2695">06TAIPEI2695</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06TAIPEI2695.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/09/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NTD Loans Considered Foreign Direct Investment</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI3051">06TAIPEI3051</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TAIPEI3051.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Taiwan Economy: Sunny With Polychrome Clouds</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06AITTAIPEI3550">06AITTAIPEI3550</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06AITTAIPEI3550.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">New Taiwan Foreign Currency Bond Market</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI3603">06TAIPEI3603</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06TAIPEI3603.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">New Taiwan Foreign Currency Bond Market</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI3945">06TAIPEI3945</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TAIPEI3945.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/24/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Foreign Investment in Taiwan Surges 291 Percent</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06AITTAIPEI3985">06AITTAIPEI3985</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/28/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI3985">06TAIPEI3985</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TAIPEI3985.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Another Taiwan-PRC Rumor Bites the Dust</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06AITTAIPEI3989">06AITTAIPEI3989</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06AITTAIPEI3989.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NT Dollar Loans to Foreign Borrowers</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TAIPEI4078">06TAIPEI4078</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06TAIPEI4078.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NT Dollar Loans to Foreign Borrowers</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI1086">07TAIPEI1086</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TAIPEI1086.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Taiwan Insurers Can Invest More Offshore</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-144.0309" y1="290.0000" 
+                  x2="-198.6305" y2="132.1001" class="btwns0"/>
+        
+            <line x1="145.3404" y1="33.7805" 
+                  x2="-49.7161" y2="-83.7240" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="168.9249" 
+                  x2="-211.6090" y2="125.0381" class="btwns0"/>
+        
+            <line x1="63.8903" y1="-258.2893" 
+                  x2="-52.4325" y2="-96.9949" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-91.5279" 
+                  x2="215.3340" y2="-119.1154" class="btwns0"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="2.5240" y2="82.1617" class="btwns0"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="-250.1954" y2="-213.3779" class="btwns0"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="-105.2489" y2="-280.2881" class="btwns0"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="-196.2815" y2="114.3758" class="btwns10"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="-285.7189" y2="-81.1661" class="btwns0"/>
+        
+            <line x1="-58.2819" y1="-88.8841" 
+                  x2="195.5283" y2="-119.4787" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-144.0309 290.0000)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(145.3404 33.7805)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 168.9249)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(63.8903 -258.2893)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -91.5279)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-58.2819 -88.8841)" 
+                class="vertice degree10 btwns10 authority10 TAIPEI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(5.8736 91.5840)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-258.5848 -218.8201)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-107.6320 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-201.8985 122.6492)" 
+                class="vertice degree2 btwns3 authority2 TAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-295.7132 -80.8270)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(205.4564 -120.6755)" 
+                class="vertice degree1 btwns1 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-144.0309 290.0000)" 
+                id="06AITTAIPEI2695" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06AITTAIPEI2695
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(145.3404 33.7805)" 
+                id="06AITTAIPEI3550" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06AITTAIPEI3550.html">06AITTAIPEI3550</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>New Taiwan Foreign Currency Bond Market</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 168.9249)" 
+                id="06AITTAIPEI3985" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06AITTAIPEI3985
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(63.8903 -258.2893)" 
+                id="06AITTAIPEI3989" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06AITTAIPEI3989.html">06AITTAIPEI3989</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NT Dollar Loans to Foreign Borrowers</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -91.5279)" 
+                id="06TAIPEI2388" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06TAIPEI2388.html">06TAIPEI2388</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Taiwan to Streamline Insurance Policy Review</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-58.2819 -88.8841)" 
+                id="06TAIPEI2695" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TAIPEI2695.html">06TAIPEI2695</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>NTD Loans Considered Foreign Direct Investment</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(5.8736 91.5840)" 
+                id="06TAIPEI3051" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TAIPEI3051.html">06TAIPEI3051</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Taiwan Economy: Sunny With Polychrome Clouds</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-258.5848 -218.8201)" 
+                id="06TAIPEI3603" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06TAIPEI3603.html">06TAIPEI3603</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>New Taiwan Foreign Currency Bond Market</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-107.6320 -290.0000)" 
+                id="06TAIPEI3945" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TAIPEI3945.html">06TAIPEI3945</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Foreign Investment in Taiwan Surges 291 Percent</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-201.8985 122.6492)" 
+                id="06TAIPEI3985" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TAIPEI3985.html">06TAIPEI3985</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Another Taiwan-PRC Rumor Bites the Dust</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-295.7132 -80.8270)" 
+                id="06TAIPEI4078" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06TAIPEI4078.html">06TAIPEI4078</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NT Dollar Loans to Foreign Borrowers</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(205.4564 -120.6755)" 
+                id="07TAIPEI1086" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TAIPEI1086.html">07TAIPEI1086</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>Taiwan Insurers Can Invest More Offshore</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

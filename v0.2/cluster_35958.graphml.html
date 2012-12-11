@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO1474">06CAIRO1474</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06CAIRO1474.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPTIAN RETAIL CHAIN PRIVATIZATION GENERATES CONTROVERSY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO1493">06CAIRO1493</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06CAIRO1493.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRIVATIZING SUGAR MAY BE BITTER IN THE SHORT TERM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06CAIRO1805">06CAIRO1805</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/23/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO1838">06CAIRO1838</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06CAIRO1838.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOE MAKES SIGNIFICANT PROGRESS ON FINANCIAL SECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06CAIRO2789">06CAIRO2789</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/11/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO3746">06CAIRO3746</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06CAIRO3746.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NAZIF SLOWS DOWN EGYPT'S PRIVATIZATION PROGRAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO4142">06CAIRO4142</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06CAIRO4142.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT: ETISALAT CONSORTIUM WINS THIRD MOBILE LICENSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO4876">06CAIRO4876</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO4876.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT:  GOE ANNOUNCES SHORT LIST OF BUYERS FOR BANK OF ALEXANDRIA, MAKES PROGRESS ON OTHER FINANCIAL SECTOR MOU BENCHMARKS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5001">06CAIRO5001</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5001.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT:  FINANCIAL SECTOR MOU UPDATE, PART I</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5169">06CAIRO5169</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5169.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/17/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT:  FINANCIAL SECTOR MOU UPDATE, PART II</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5287">06CAIRO5287</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5287.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT:  THIRD MOBILE LICENSE AGREEMENT SIGNED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5337">06CAIRO5337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CBE GOVERNOR EL OKDAH PROPOSES "AUDIT" SOLUTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5392">06CAIRO5392</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5392.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/29/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CBE GOVERNOR EL OKDAH UPDATES AMBASSADOR ON GOE FINANCIAL SECTOR REFORM PROGRAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO5461">06CAIRO5461</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06CAIRO5461.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EGYPT:  CONGRESSIONAL EARMARK AGAINST PRESIDENT'S 2007 APPROPRIATIONS REQUEST WOULD HAMPER ASSISTANCE GOALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO6022">06CAIRO6022</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06CAIRO6022.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BANK OF ALEXANDRIA:  BIDS DELAYED UNTIL OCTOBER 7</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO6980">06CAIRO6980</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06CAIRO6980.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EGYPT: OMAR EFFENDI SALE SHOWS PRIVATIZATION COMMITMENT, BUT IS STILL CONTROVERSIAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-323.3344" y1="9.5549" 
+                  x2="-163.8486" y2="-57.4771" class="btwns4"/>
+        
+            <line x1="-323.3344" y1="9.5549" 
+                  x2="-384.4787" y2="101.8877" class="btwns2"/>
+        
+            <line x1="-157.3914" y1="67.9760" 
+                  x2="-154.8433" y2="-51.3541" class="btwns2"/>
+        
+            <line x1="238.3010" y1="285.9639" 
+                  x2="127.3804" y2="239.0852" class="btwns2"/>
+        
+            <line x1="-110.8599" y1="-211.4462" 
+                  x2="-236.5081" y2="-172.1002" class="btwns1"/>
+        
+            <line x1="-110.8599" y1="-211.4462" 
+                  x2="53.9090" y2="-153.9163" class="btwns2"/>
+        
+            <line x1="-22.3333" y1="290.0000" 
+                  x2="108.8530" y2="238.8264" class="btwns2"/>
+        
+            <line x1="-154.6298" y1="-61.3518" 
+                  x2="-239.5818" y2="-161.4864" class="btwns1"/>
+        
+            <line x1="-154.6298" y1="-61.3518" 
+                  x2="54.0960" y2="-146.8301" class="btwns7"/>
+        
+            <line x1="118.1693" y1="235.1923" 
+                  x2="196.6440" y2="128.8494" class="btwns6"/>
+        
+            <line x1="63.3501" y1="-150.6199" 
+                  x2="186.6739" y2="-241.1587" class="btwns2"/>
+        
+            <line x1="63.3501" y1="-150.6199" 
+                  x2="211.9892" y2="-22.3527" class="btwns10"/>
+        
+            <line x1="63.3501" y1="-150.6199" 
+                  x2="233.0086" y2="-171.7361" class="btwns2"/>
+        
+            <line x1="63.3501" y1="-150.6199" 
+                  x2="36.0831" y2="-280.2143" class="btwns2"/>
+        
+            <line x1="194.7348" y1="-247.0767" 
+                  x2="237.4799" y2="-181.3542" class="btwns0"/>
+        
+            <line x1="202.5817" y1="120.8030" 
+                  x2="218.3268" y2="-5.8958" class="btwns7"/>
+        
+            <line x1="390.0000" y1="0.5627" 
+                  x2="229.5141" y2="-14.8628" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-323.3344 9.5549)" 
+                class="vertice degree2 btwns1 authority1 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-157.3914 67.9760)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(238.3010 285.9639)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-110.8599 -211.4462)" 
+                class="vertice degree2 btwns0 authority2 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-22.3333 290.0000)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-154.6298 -61.3518)" 
+                class="vertice degree6 btwns5 authority5 CAIRO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(118.1693 235.1923)" 
+                class="vertice degree4 btwns3 authority3 CAIRO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-246.0511 -169.1119)" 
+                class="vertice degree2 btwns0 authority2 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(63.3501 -150.6199)" 
+                class="vertice degree10 btwns10 authority10 CAIRO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(194.7348 -247.0767)" 
+                class="vertice degree2 btwns0 authority2 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(202.5817 120.8030)" 
+                class="vertice degree2 btwns4 authority1 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 0.5627)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(219.5600 -15.8195)" 
+                class="vertice degree4 btwns7 authority4 CAIRO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(242.9320 -172.9712)" 
+                class="vertice degree2 btwns0 authority2 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(34.0242 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 110.2252)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-323.3344 9.5549)" 
+                id="06CAIRO1474" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CAIRO1474.html">06CAIRO1474</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EGYPTIAN RETAIL CHAIN PRIVATIZATION GENERATES CONTROVERSY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-157.3914 67.9760)" 
+                id="06CAIRO1493" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CAIRO1493.html">06CAIRO1493</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRIVATIZING SUGAR MAY BE BITTER IN THE SHORT TERM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.3010 285.9639)" 
+                id="06CAIRO1805" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06CAIRO1805
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-110.8599 -211.4462)" 
+                id="06CAIRO1838" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06CAIRO1838.html">06CAIRO1838</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOE MAKES SIGNIFICANT PROGRESS ON FINANCIAL SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-22.3333 290.0000)" 
+                id="06CAIRO2789" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06CAIRO2789
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-154.6298 -61.3518)" 
+                id="06CAIRO3746" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06CAIRO3746.html">06CAIRO3746</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>NAZIF SLOWS DOWN EGYPT'S PRIVATIZATION PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(118.1693 235.1923)" 
+                id="06CAIRO4142" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06CAIRO4142.html">06CAIRO4142</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>EGYPT: ETISALAT CONSORTIUM WINS THIRD MOBILE LICENSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-246.0511 -169.1119)" 
+                id="06CAIRO4876" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO4876.html">06CAIRO4876</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EGYPT:  GOE ANNOUNCES SHORT LIST OF BUYERS FOR BANK OF ALEXANDRIA, MAKES PROGRESS ON OTHER FINANCIAL SECTOR MOU BENCHMARKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(63.3501 -150.6199)" 
+                id="06CAIRO5001" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5001.html">06CAIRO5001</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>EGYPT:  FINANCIAL SECTOR MOU UPDATE, PART I</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(194.7348 -247.0767)" 
+                id="06CAIRO5169" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5169.html">06CAIRO5169</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EGYPT:  FINANCIAL SECTOR MOU UPDATE, PART II</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(202.5817 120.8030)" 
+                id="06CAIRO5287" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5287.html">06CAIRO5287</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EGYPT:  THIRD MOBILE LICENSE AGREEMENT SIGNED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 0.5627)" 
+                id="06CAIRO5337" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5337.html">06CAIRO5337</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CBE GOVERNOR EL OKDAH PROPOSES "AUDIT" SOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(219.5600 -15.8195)" 
+                id="06CAIRO5392" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5392.html">06CAIRO5392</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CBE GOVERNOR EL OKDAH UPDATES AMBASSADOR ON GOE FINANCIAL SECTOR REFORM PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(242.9320 -172.9712)" 
+                id="06CAIRO5461" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06CAIRO5461.html">06CAIRO5461</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EGYPT:  CONGRESSIONAL EARMARK AGAINST PRESIDENT'S 2007 APPROPRIATIONS REQUEST WOULD HAMPER ASSISTANCE GOALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(34.0242 -290.0000)" 
+                id="06CAIRO6022" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06CAIRO6022.html">06CAIRO6022</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BANK OF ALEXANDRIA:  BIDS DELAYED UNTIL OCTOBER 7</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 110.2252)" 
+                id="06CAIRO6980" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06CAIRO6980.html">06CAIRO6980</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EGYPT: OMAR EFFENDI SALE SHOWS PRIVATIZATION COMMITMENT, BUT IS STILL CONTROVERSIAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

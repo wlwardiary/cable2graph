@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BUENOSAIRES2749">06BUENOSAIRES2749</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUENOSAIRES2782">06BUENOSAIRES2782</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BUENOSAIRES2782.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARGENTINE FOREIGN MINISTER TAIANA ON CHINA, BOLIVIA, MEXICO, CUBA, AND UNESCO</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUENOSAIRES2805">06BUENOSAIRES2805</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BUENOSAIRES2805.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARGENTINA: STAFFDEL MEETING WITH MFA ON AMIA, TRI-BORDER; LATEST AMIA DEVELOPMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07BUENOSAIRES46">07BUENOSAIRES46</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/11/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07STATE29082">07STATE29082</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07STATE29082.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE REQUEST - ARGENTINA'S REQUEST FOR USG ASSISTANCE IN CONNECTION WITH MARCH 13-15 INTERPOL EXECUTIVE COMMITTEE MEETING IN LYON, FRANCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV736">07TELAVIV736</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07TELAVIV736.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ISRAEL MFA INFORMED OF USG INTEREST IN AMIA CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SINGAPORE480">07SINGAPORE480</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07SINGAPORE480.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE ON INTERPOL'S AMIA PROPOSAL DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN493">07BERLIN493</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BERLIN493.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DEMARCHE TO GERMANY ON ARGENTINA'S REQUEST FOR USG ASSISTANCE IN CONNECTION WITH MARCH 13-15 INTERPOL EXECUTIVE COMMITTEE MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MADRID457">07MADRID457</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07MADRID457.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMIA CASE: SPAIN WILL SUPPORT ARGENTINE POSITION AT INTERPOL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ROME478">07ROME478</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ROME478.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY SYMPATHETIC TO ARGENTINA'S INTERPOL PROPOSAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07RABAT458">07RABAT458</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07RABAT458.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOROCCO ON INTERPOL'S AMIA PROPOSAL FOR EXECUTIVE COMMITTEE MEETING IN LYON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI1216">07NEWDELHI1216</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07NEWDELHI1216.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE ON ARGENTINA'S REQUEST FOR USG ASSISTANCE WITH INTERPOL EXECUTIVE MEETING DELIVERED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-94.5487" y1="145.9267" 
+                  x2="50.5512" y2="283.1294" class="btwns0"/>
+        
+            <line x1="-94.5487" y1="145.9267" 
+                  x2="-340.0610" y2="234.8329" class="btwns0"/>
+        
+            <line x1="-94.5487" y1="145.9267" 
+                  x2="4.9463" y2="-83.9513" class="btwns10"/>
+        
+            <line x1="-36.2482" y1="-290.0000" 
+                  x2="6.6823" y2="-102.8754" class="btwns0"/>
+        
+            <line x1="369.7876" y1="-155.5155" 
+                  x2="18.7723" y2="-94.8321" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-122.1204" 
+                  x2="-1.0553" y2="-93.8534" class="btwns0"/>
+        
+            <line x1="-263.5589" y1="-235.7168" 
+                  x2="0.0583" y2="-97.7651" class="btwns0"/>
+        
+            <line x1="210.3809" y1="-258.7431" 
+                  x2="16.6433" y2="-99.4789" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-23.3246" 
+                  x2="18.7548" y2="-91.3268" class="btwns0"/>
+        
+            <line x1="-295.7600" y1="-2.6820" 
+                  x2="-0.6681" y2="-90.2828" class="btwns0"/>
+        
+            <line x1="8.9184" y1="-93.1286" 
+                  x2="200.4365" y2="55.2156" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-94.5487 145.9267)" 
+                class="vertice degree2 btwns3 authority2 BUENOSAIRES">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(57.8172 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUENOSAIRES">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-349.4635 238.2378)" 
+                class="vertice degree0 btwns0 authority0 BUENOSAIRES">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-36.2482 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(369.7876 -155.5155)" 
+                class="vertice degree0 btwns0 authority0 BUENOSAIRES">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -122.1204)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-263.5589 -235.7168)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(210.3809 -258.7431)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -23.3246)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-295.7600 -2.6820)" 
+                class="vertice degree0 btwns0 authority0 SINGAPORE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(8.9184 -93.1286)" 
+                class="vertice degree10 btwns10 authority9 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(208.3423 61.3392)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-94.5487 145.9267)" 
+                id="06BUENOSAIRES2749" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BUENOSAIRES2749
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(57.8172 290.0000)" 
+                id="06BUENOSAIRES2782" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BUENOSAIRES2782.html">06BUENOSAIRES2782</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARGENTINE FOREIGN MINISTER TAIANA ON CHINA, BOLIVIA, MEXICO, CUBA, AND UNESCO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-349.4635 238.2378)" 
+                id="06BUENOSAIRES2805" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BUENOSAIRES2805.html">06BUENOSAIRES2805</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARGENTINA: STAFFDEL MEETING WITH MFA ON AMIA, TRI-BORDER; LATEST AMIA DEVELOPMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-36.2482 -290.0000)" 
+                id="07BERLIN493" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BERLIN493.html">07BERLIN493</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE TO GERMANY ON ARGENTINA'S REQUEST FOR USG ASSISTANCE IN CONNECTION WITH MARCH 13-15 INTERPOL EXECUTIVE COMMITTEE MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(369.7876 -155.5155)" 
+                id="07BUENOSAIRES46" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07BUENOSAIRES46
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -122.1204)" 
+                id="07MADRID457" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07MADRID457.html">07MADRID457</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMIA CASE: SPAIN WILL SUPPORT ARGENTINE POSITION AT INTERPOL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-263.5589 -235.7168)" 
+                id="07NEWDELHI1216" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07NEWDELHI1216.html">07NEWDELHI1216</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON ARGENTINA'S REQUEST FOR USG ASSISTANCE WITH INTERPOL EXECUTIVE MEETING DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.3809 -258.7431)" 
+                id="07RABAT458" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07RABAT458.html">07RABAT458</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOROCCO ON INTERPOL'S AMIA PROPOSAL FOR EXECUTIVE COMMITTEE MEETING IN LYON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -23.3246)" 
+                id="07ROME478" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ROME478.html">07ROME478</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY SYMPATHETIC TO ARGENTINA'S INTERPOL PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-295.7600 -2.6820)" 
+                id="07SINGAPORE480" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07SINGAPORE480.html">07SINGAPORE480</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON INTERPOL'S AMIA PROPOSAL DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(8.9184 -93.1286)" 
+                id="07STATE29082" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07STATE29082.html">07STATE29082</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST - ARGENTINA'S REQUEST FOR USG ASSISTANCE IN CONNECTION WITH MARCH 13-15 INTERPOL EXECUTIVE COMMITTEE MEETING IN LYON, FRANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(208.3423 61.3392)" 
+                id="07TELAVIV736" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07TELAVIV736.html">07TELAVIV736</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ISRAEL MFA INFORMED OF USG INTEREST IN AMIA CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

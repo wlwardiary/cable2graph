@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05TOKYO4642">05TOKYO4642</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06REFA:TOKYO675">06REFA:TOKYO675</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO325">06TOKYO325</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/22/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO399">06TOKYO399</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/25/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO408">06TOKYO408</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/26/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO441">06TOKYO441</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/27/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO533">06TOKYO533</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/31/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO597">06TOKYO597</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/02/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO675">06TOKYO675</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06TOKYO675.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAN THE KOIZUMI GOVERNMENT MANAGE HIS ECONOMIC AGENDA IN THE DIET?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO679">06TOKYO679</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06TOKYO679.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ECONOMIC GOALS OF JAPAN'S 164TH DIET SESSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO2905">06TOKYO2905</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06TOKYO2905.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JFTC Flexes Its Muscles on Bid-rigging</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-106.4630" 
+                  x2="274.6031" y2="-218.4910" class="btwns0"/>
+        
+            <line x1="-242.7370" y1="290.0000" 
+                  x2="-251.0556" y2="137.4179" class="btwns0"/>
+        
+            <line x1="267.4280" y1="-225.4565" 
+                  x2="72.4193" y2="-210.8895" class="btwns5"/>
+        
+            <line x1="-161.4557" y1="-290.0000" 
+                  x2="-151.5180" y2="-86.9956" class="btwns0"/>
+        
+            <line x1="69.9534" y1="-0.4417" 
+                  x2="-141.5801" y2="-73.7337" class="btwns0"/>
+        
+            <line x1="-31.9112" y1="116.4172" 
+                  x2="-145.7853" y2="-68.4927" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-50.3937" 
+                  x2="-160.9676" y2="-75.9007" class="btwns0"/>
+        
+            <line x1="-338.0684" y1="-216.1495" 
+                  x2="-159.0524" y2="-82.9763" class="btwns0"/>
+        
+            <line x1="62.4471" y1="-210.1446" 
+                  x2="-142.5439" y2="-82.2994" class="btwns10"/>
+        
+            <line x1="-151.0290" y1="-77.0075" 
+                  x2="-247.1858" y2="118.4596" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -106.4630)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-242.7370 290.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(267.4280 -225.4565)" 
+                class="vertice degree1 btwns2 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-161.4557 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(69.9534 -0.4417)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-31.9112 116.4172)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -50.3937)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-338.0684 -216.1495)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(62.4471 -210.1446)" 
+                class="vertice degree1 btwns3 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-151.0290 -77.0075)" 
+                class="vertice degree10 btwns10 authority10 TOKYO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-251.6000 127.4327)" 
+                class="vertice degree1 btwns2 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -106.4630)" 
+                id="05TOKYO4642" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05TOKYO4642
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-242.7370 290.0000)" 
+                id="06REFA:TOKYO675" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06REFA:TOKYO675
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(267.4280 -225.4565)" 
+                id="06TOKYO2905" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TOKYO2905.html">06TOKYO2905</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JFTC Flexes Its Muscles on Bid-rigging</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-161.4557 -290.0000)" 
+                id="06TOKYO325" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TOKYO325
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(69.9534 -0.4417)" 
+                id="06TOKYO399" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TOKYO399
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-31.9112 116.4172)" 
+                id="06TOKYO408" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TOKYO408
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -50.3937)" 
+                id="06TOKYO441" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TOKYO441
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-338.0684 -216.1495)" 
+                id="06TOKYO533" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06TOKYO533
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(62.4471 -210.1446)" 
+                id="06TOKYO597" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06TOKYO597
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-151.0290 -77.0075)" 
+                id="06TOKYO675" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06TOKYO675.html">06TOKYO675</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CAN THE KOIZUMI GOVERNMENT MANAGE HIS ECONOMIC AGENDA IN THE DIET?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.6000 127.4327)" 
+                id="06TOKYO679" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06TOKYO679.html">06TOKYO679</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ECONOMIC GOALS OF JAPAN'S 164TH DIET SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

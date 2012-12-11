@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08JERUSALEM2025">08JERUSALEM2025</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/13/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2045">08JERUSALEM2045</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08JERUSALEM2045.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROCKETS STRIKE ISRAEL AS ISRAEL MAINTAINS GAZA CROSSINGS CLOSURE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2050">08JERUSALEM2050</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08JERUSALEM2050.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GAZA: VIOLENCE CONTINUES; SOME GOODS - BUT NO FUEL - ENTER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2081">08JERUSALEM2081</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08JERUSALEM2081.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/19/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">GAZA: CROSSINGS CLOSED, ROCKET FIRE CONTINUES; GOI DETAINS AMCIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2098">08JERUSALEM2098</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08JERUSALEM2098.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA UPDATE - NOV 21</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2122">08JERUSALEM2122</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08JERUSALEM2122.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA CROSSINGS OPEN FOR A DAY, BUT POWER PLANT NOT YET OPERATIONAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2172">08JERUSALEM2172</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JERUSALEM2172.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA CROSSINGS REMAIN CLOSED, HUMANITARIAN CONDITIONS DETERIORATE FURTHER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2179">08JERUSALEM2179</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JERUSALEM2179.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/02/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA: BANK BRANCHES TO CLOSE DUE TO LACK OF CASH IN ADVANCE OF SALARY PAYMENTS AND EID</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2201">08JERUSALEM2201</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JERUSALEM2201.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA: LIMITED SHIPMENTS ARRIVE, POWER PLANT DOWN, NO COOKING GAS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2216">08JERUSALEM2216</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JERUSALEM2216.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/09/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA: SOME SUPPLIES ENTER; COOKING GAS IN GAZA NOT DISTRIBUTED DUE TO FEAR OF VIOLENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JERUSALEM2226">08JERUSALEM2226</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JERUSALEM2226.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOI ALLOWS PALESTINIAN BANKS TO TRANSFER NIS 100M IN CURRENCY TO GAZA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-1.9558" y1="290.0000" 
+                  x2="138.3375" y2="222.7513" class="btwns0"/>
+        
+            <line x1="147.3550" y1="218.4288" 
+                  x2="242.7314" y2="99.2401" class="btwns4"/>
+        
+            <line x1="248.9794" y1="91.4322" 
+                  x2="381.4549" y2="10.9042" class="btwns0"/>
+        
+            <line x1="248.9794" y1="91.4322" 
+                  x2="136.8915" y2="-7.8164" class="btwns9"/>
+        
+            <line x1="129.4047" y1="-14.4457" 
+                  x2="-44.7680" y2="-49.6431" class="btwns10"/>
+        
+            <line x1="-54.5698" y1="-51.6238" 
+                  x2="-233.5292" y2="-94.4457" class="btwns10"/>
+        
+            <line x1="-243.2546" y1="-96.7729" 
+                  x2="-170.3966" y2="-220.9411" class="btwns4"/>
+        
+            <line x1="-243.2546" y1="-96.7729" 
+                  x2="-363.4025" y2="10.2048" class="btwns4"/>
+        
+            <line x1="-165.3358" y1="-229.5659" 
+                  x2="-11.6001" y2="-286.5257" class="btwns0"/>
+        
+            <line x1="-370.8710" y1="16.8546" 
+                  x2="-388.4871" y2="131.9540" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-1.9558 290.0000)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(147.3550 218.4288)" 
+                class="vertice degree5 btwns3 authority4 JERUSALEM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(248.9794 91.4322)" 
+                class="vertice degree10 btwns8 authority9 JERUSALEM">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 5.7099)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(129.4047 -14.4457)" 
+                class="vertice degree5 btwns8 authority5 JERUSALEM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-54.5698 -51.6238)" 
+                class="vertice degree5 btwns8 authority5 JERUSALEM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-243.2546 -96.7729)" 
+                class="vertice degree10 btwns10 authority10 JERUSALEM">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-165.3358 -229.5659)" 
+                class="vertice degree5 btwns3 authority4 JERUSALEM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-370.8710 16.8546)" 
+                class="vertice degree5 btwns3 authority4 JERUSALEM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 141.8389)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-2.2231 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-1.9558 290.0000)" 
+                id="08JERUSALEM2025" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08JERUSALEM2025
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(147.3550 218.4288)" 
+                id="08JERUSALEM2045" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08JERUSALEM2045.html">08JERUSALEM2045</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ROCKETS STRIKE ISRAEL AS ISRAEL MAINTAINS GAZA CROSSINGS CLOSURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(248.9794 91.4322)" 
+                id="08JERUSALEM2050" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08JERUSALEM2050.html">08JERUSALEM2050</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GAZA: VIOLENCE CONTINUES; SOME GOODS - BUT NO FUEL - ENTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 5.7099)" 
+                id="08JERUSALEM2081" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08JERUSALEM2081.html">08JERUSALEM2081</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GAZA: CROSSINGS CLOSED, ROCKET FIRE CONTINUES; GOI DETAINS AMCIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(129.4047 -14.4457)" 
+                id="08JERUSALEM2098" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08JERUSALEM2098.html">08JERUSALEM2098</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GAZA UPDATE - NOV 21</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-54.5698 -51.6238)" 
+                id="08JERUSALEM2122" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08JERUSALEM2122.html">08JERUSALEM2122</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GAZA CROSSINGS OPEN FOR A DAY, BUT POWER PLANT NOT YET OPERATIONAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-243.2546 -96.7729)" 
+                id="08JERUSALEM2172" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2172.html">08JERUSALEM2172</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GAZA CROSSINGS REMAIN CLOSED, HUMANITARIAN CONDITIONS DETERIORATE FURTHER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-165.3358 -229.5659)" 
+                id="08JERUSALEM2179" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2179.html">08JERUSALEM2179</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GAZA: BANK BRANCHES TO CLOSE DUE TO LACK OF CASH IN ADVANCE OF SALARY PAYMENTS AND EID</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-370.8710 16.8546)" 
+                id="08JERUSALEM2201" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2201.html">08JERUSALEM2201</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GAZA: LIMITED SHIPMENTS ARRIVE, POWER PLANT DOWN, NO COOKING GAS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 141.8389)" 
+                id="08JERUSALEM2216" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2216.html">08JERUSALEM2216</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GAZA: SOME SUPPLIES ENTER; COOKING GAS IN GAZA NOT DISTRIBUTED DUE TO FEAR OF VIOLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-2.2231 -290.0000)" 
+                id="08JERUSALEM2226" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JERUSALEM2226.html">08JERUSALEM2226</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOI ALLOWS PALESTINIAN BANKS TO TRANSFER NIS 100M IN CURRENCY TO GAZA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

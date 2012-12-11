@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE131744">09STATE131744</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT34">10TASHKENT34</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TASHKENT34.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/11/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UZBEKISTAN: GOU INOCULATES INDEPENDENT JOURNALISTS AGAINST SOCIAL CRITICISM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT19">10TASHKENT19</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TASHKENT19.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/14/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Uzbekistan: GOU Proposals for ABC Follow-on</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT29">10TASHKENT29</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TASHKENT29.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/21/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Uzbekistan: Feedback from the Embassy-hosted MLK Day Reception</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#10TASHKENT43">10TASHKENT43</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/26/10</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT45">10TASHKENT45</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TASHKENT45.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Uzbek Deputy FM Kamilov Urges Progress in Key Areas</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT47">10TASHKENT47</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TASHKENT47.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Uzbekistan: Freedom of Expression under Strain</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT55">10TASHKENT55</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TASHKENT55.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Uzbekistan: Karimov Decree Offers Opportunities, But Requires USG Decisions</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT67">10TASHKENT67</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TASHKENT67.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/11/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Uzbekistan: Photographer Akhmedova Convicted and Amnestied</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#10STATE15680">10STATE15680</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/20/10</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT91">10TASHKENT91</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TASHKENT91.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UZBEKISTAN: PRESIDENT KARIMOV APPOINTS SENATORS WITH AN EYE TO THE FUTURE -- INCLUDING, PERHAPS, HIS OWN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TASHKENT93">10TASHKENT93</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TASHKENT93.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UZBEKS ASK FOR SUBSTANCE ON SWG AND PETRAEUS VISIT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="133.9497" 
+                  x2="-163.7377" y2="192.4468" class="btwns2"/>
+        
+            <line x1="-311.0081" y1="-224.0407" 
+                  x2="-78.8903" y2="-228.6148" class="btwns2"/>
+        
+            <line x1="115.7531" y1="-290.0000" 
+                  x2="194.5238" y2="-182.8638" class="btwns1"/>
+        
+            <line x1="115.7531" y1="-290.0000" 
+                  x2="312.8900" y2="-278.6896" class="btwns0"/>
+        
+            <line x1="115.7531" y1="-290.0000" 
+                  x2="-59.3999" y2="-231.9574" class="btwns0"/>
+        
+            <line x1="-154.0560" y1="194.9499" 
+                  x2="-2.4836" y2="284.8967" class="btwns0"/>
+        
+            <line x1="-154.0560" y1="194.9499" 
+                  x2="97.8511" y2="178.4552" class="btwns4"/>
+        
+            <line x1="-154.0560" y1="194.9499" 
+                  x2="-71.8053" y2="101.3120" class="btwns0"/>
+        
+            <line x1="6.1162" y1="290.0000" 
+                  x2="101.1133" y2="185.2106" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-41.5687" 
+                  x2="208.6286" y2="-169.0565" class="btwns9"/>
+        
+            <line x1="390.0000" y1="-41.5687" 
+                  x2="362.4050" y2="99.7200" class="btwns10"/>
+        
+            <line x1="200.4474" y1="-174.8071" 
+                  x2="315.2311" y2="-271.6676" class="btwns2"/>
+        
+            <line x1="200.4474" y1="-174.8071" 
+                  x2="-59.0874" y2="-226.8459" class="btwns4"/>
+        
+            <line x1="107.8298" y1="177.8018" 
+                  x2="-56.2099" y2="98.1661" class="btwns1"/>
+        
+            <line x1="107.8298" y1="177.8018" 
+                  x2="350.8343" y2="112.1429" class="btwns9"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 133.9497)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-311.0081 -224.0407)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(115.7531 -290.0000)" 
+                class="vertice degree6 btwns0 authority6 TASHKENT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-154.0560 194.9499)" 
+                class="vertice degree10 btwns3 authority9 TASHKENT">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(6.1162 290.0000)" 
+                class="vertice degree3 btwns0 authority3 TASHKENT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -41.5687)" 
+                class="vertice degree3 btwns10 authority3 TASHKENT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(200.4474 -174.8071)" 
+                class="vertice degree10 btwns9 authority9 TASHKENT">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(107.8298 177.8018)" 
+                class="vertice degree10 btwns9 authority10 TASHKENT">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(322.8736 -278.1168)" 
+                class="vertice degree3 btwns0 authority3 TASHKENT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-65.2058 93.7989)" 
+                class="vertice degree3 btwns0 authority3 TASHKENT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(360.4881 109.5345)" 
+                class="vertice degree3 btwns10 authority3 TASHKENT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-68.8922 -228.8118)" 
+                class="vertice degree6 btwns3 authority6 TASHKENT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 133.9497)" 
+                id="09STATE131744" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE131744
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-311.0081 -224.0407)" 
+                id="10STATE15680" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/20/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    10STATE15680
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(115.7531 -290.0000)" 
+                id="10TASHKENT19" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/14/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TASHKENT19.html">10TASHKENT19</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Uzbekistan: GOU Proposals for ABC Follow-on</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-154.0560 194.9499)" 
+                id="10TASHKENT29" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/21/10</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TASHKENT29.html">10TASHKENT29</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Uzbekistan: Feedback from the Embassy-hosted MLK Day Reception</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(6.1162 290.0000)" 
+                id="10TASHKENT34" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/11/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TASHKENT34.html">10TASHKENT34</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>UZBEKISTAN: GOU INOCULATES INDEPENDENT JOURNALISTS AGAINST SOCIAL CRITICISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -41.5687)" 
+                id="10TASHKENT43" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    10TASHKENT43
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(200.4474 -174.8071)" 
+                id="10TASHKENT45" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/28/10</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TASHKENT45.html">10TASHKENT45</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Uzbek Deputy FM Kamilov Urges Progress in Key Areas</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(107.8298 177.8018)" 
+                id="10TASHKENT47" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/28/10</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TASHKENT47.html">10TASHKENT47</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Uzbekistan: Freedom of Expression under Strain</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(322.8736 -278.1168)" 
+                id="10TASHKENT55" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/01/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TASHKENT55.html">10TASHKENT55</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Uzbekistan: Karimov Decree Offers Opportunities, But Requires USG Decisions</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-65.2058 93.7989)" 
+                id="10TASHKENT67" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/11/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TASHKENT67.html">10TASHKENT67</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Uzbekistan: Photographer Akhmedova Convicted and Amnestied</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(360.4881 109.5345)" 
+                id="10TASHKENT91" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/23/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TASHKENT91.html">10TASHKENT91</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>UZBEKISTAN: PRESIDENT KARIMOV APPOINTS SENATORS WITH AN EYE TO THE FUTURE -- INCLUDING, PERHAPS, HIS OWN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-68.8922 -228.8118)" 
+                id="10TASHKENT93" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/23/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TASHKENT93.html">10TASHKENT93</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UZBEKS ASK FOR SUBSTANCE ON SWG AND PETRAEUS VISIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

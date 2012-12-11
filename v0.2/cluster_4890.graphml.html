@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE322108">03STATE322108</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05ANKARA5376">05ANKARA5376</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE180202">05STATE180202</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA6068">03ANKARA6068</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/09/03ANKARA6068.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/26/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Proposal for a Joint Demarche with EU on Intellectual Property Issues (Action Request)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA6847">03ANKARA6847</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/11/03ANKARA6847.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Post Comments on Special 301</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA7761">03ANKARA7761</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/12/03ANKARA7761.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/18/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOT's Unclear Message on Data Exclusivity</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04STATE180202">04STATE180202</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/24/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA5376">04ANKARA5376</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04ANKARA5376.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Ambassador Raises Rice Demarche and AgTrade Issues</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA5385">04ANKARA5385</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04ANKARA5385.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/22/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMBASSADOR PRESSES TRADE MINISTER ON IPR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA5695">04ANKARA5695</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/10/04ANKARA5695.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Turkey: European Commission Pushing on Data Exclusivity</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA6279">04ANKARA6279</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04ANKARA6279.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update and Next Steps on Pharmaceuticals Issues in Turkey</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA6371">04ANKARA6371</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04ANKARA6371.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Health Ministry Views on Data Exclusivity; Danish Embassy Interested in Joint Action</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ANKARA1079">05ANKARA1079</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05ANKARA1079.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Turkish Rice Quota Restrains Imports</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="74.2401" y1="290.0000" 
+                  x2="-71.1893" y2="260.1449" class="btwns2"/>
+        
+            <line x1="-80.9850" y1="258.1340" 
+                  x2="-204.3169" y2="174.6986" class="btwns4"/>
+        
+            <line x1="-212.5996" y1="169.0953" 
+                  x2="-245.6253" y2="35.5051" class="btwns6"/>
+        
+            <line x1="-248.0252" y1="25.7973" 
+                  x2="-222.3813" y2="-134.4186" class="btwns8"/>
+        
+            <line x1="179.2462" y1="-36.5292" 
+                  x2="149.8555" y2="-151.8449" class="btwns1"/>
+        
+            <line x1="179.2462" y1="-36.5292" 
+                  x2="305.0832" y2="-80.7918" class="btwns0"/>
+        
+            <line x1="-32.5211" y1="-208.4878" 
+                  x2="-211.3358" y2="-147.5201" class="btwns10"/>
+        
+            <line x1="-32.5211" y1="-208.4878" 
+                  x2="137.7099" y2="-164.0604" class="btwns9"/>
+        
+            <line x1="-390.0000" y1="-126.2199" 
+                  x2="-230.7442" y2="-143.2308" class="btwns2"/>
+        
+            <line x1="-220.8008" y1="-144.2929" 
+                  x2="-233.1593" y2="-280.0412" class="btwns2"/>
+        
+            <line x1="147.3858" y1="-161.5351" 
+                  x2="305.4430" y2="-88.3135" class="btwns6"/>
+        
+            <line x1="314.5167" y1="-84.1100" 
+                  x2="384.6969" y2="-196.3052" class="btwns2"/>
+        
+            <line x1="314.5167" y1="-84.1100" 
+                  x2="381.8961" y2="45.4261" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(74.2401 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-80.9850 258.1340)" 
+                class="vertice degree3 btwns2 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-212.5996 169.0953)" 
+                class="vertice degree3 btwns4 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-248.0252 25.7973)" 
+                class="vertice degree3 btwns6 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.2462 -36.5292)" 
+                class="vertice degree3 btwns0 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-32.5211 -208.4878)" 
+                class="vertice degree3 btwns7 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -126.2199)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-220.8008 -144.2929)" 
+                class="vertice degree10 btwns10 authority9 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-234.0659 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(147.3858 -161.5351)" 
+                class="vertice degree6 btwns7 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(314.5167 -84.1100)" 
+                class="vertice degree10 btwns4 authority10 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -204.7833)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(386.5108 54.2977)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(74.2401 290.0000)" 
+                id="03ANKARA6068" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/26/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/09/03ANKARA6068.html">03ANKARA6068</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Proposal for a Joint Demarche with EU on Intellectual Property Issues (Action Request)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-80.9850 258.1340)" 
+                id="03ANKARA6847" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/03/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/11/03ANKARA6847.html">03ANKARA6847</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Post Comments on Special 301</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-212.5996 169.0953)" 
+                id="03ANKARA7761" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/18/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/12/03ANKARA7761.html">03ANKARA7761</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>GOT's Unclear Message on Data Exclusivity</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-248.0252 25.7973)" 
+                id="03STATE322108" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    03STATE322108
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(179.2462 -36.5292)" 
+                id="04ANKARA5376" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04ANKARA5376.html">04ANKARA5376</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Ambassador Raises Rice Demarche and AgTrade Issues</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-32.5211 -208.4878)" 
+                id="04ANKARA5385" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/22/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04ANKARA5385.html">04ANKARA5385</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR PRESSES TRADE MINISTER ON IPR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -126.2199)" 
+                id="04ANKARA5695" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/04/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04ANKARA5695.html">04ANKARA5695</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Turkey: European Commission Pushing on Data Exclusivity</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-220.8008 -144.2929)" 
+                id="04ANKARA6279" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04ANKARA6279.html">04ANKARA6279</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Update and Next Steps on Pharmaceuticals Issues in Turkey</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-234.0659 -290.0000)" 
+                id="04ANKARA6371" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/10/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04ANKARA6371.html">04ANKARA6371</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Health Ministry Views on Data Exclusivity; Danish Embassy Interested in Joint Action</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(147.3858 -161.5351)" 
+                id="04STATE180202" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/24/04</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    04STATE180202
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(314.5167 -84.1100)" 
+                id="05ANKARA1079" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05ANKARA1079.html">05ANKARA1079</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Turkish Rice Quota Restrains Imports</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -204.7833)" 
+                id="05ANKARA5376" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ANKARA5376
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(386.5108 54.2977)" 
+                id="05STATE180202" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE180202
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

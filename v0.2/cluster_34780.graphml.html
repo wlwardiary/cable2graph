@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BRASILIA1042">06BRASILIA1042</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/31/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE202028">06STATE202028</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRASILIA12">07BRASILIA12</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07BRASILIA12.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/04/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POSSIBLE INSTRUMENT FOR BRAZIL MERCURY REDUCTION PILOT PROJECT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DAKAR40">07DAKAR40</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07DAKAR40.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/08/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SENEGAL'S RESPONSE TO MERCURY ISSUES DEMARCHE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANJOSE17">07SANJOSE17</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07SANJOSE17.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/08/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COSTA RICA: DEMARCHE ON MERCURY ISSUES AT 24TH SESSION OF UNEP GOVERNING COUNCIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANTODOMINGO48">07SANTODOMINGO48</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07SANTODOMINGO48.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DOMINICAN REPUBLIC: DEMARCHE RESPONSE REGARDING MERCURY ISSUES AT THE 24TH SESSION OF UNEP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRASILIA50">07BRASILIA50</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07BRASILIA50.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Brazil Supports UNEP Voluntary Mercury Partnerships</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07OTTAWA67">07OTTAWA67</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07OTTAWA67.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/12/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CANADIAN VIEWS ON MERCURY AT UPCOMING UNEP GOVERNING COUNCIL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRASILIA162">07BRASILIA162</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07BRASILIA162.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BINDING MERCURY POLLUTION REDUCTION TARGETS - NO POSITION FOR BRAZIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BISHKEK120">07BISHKEK120</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BISHKEK120.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KYRGYZ REPLY TO MERCURY MINING QUERY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ABUJA1165">07ABUJA1165</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ABUJA1165.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NIGERIA RESPONDS TO MERCURY DEMARCHE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-364.4160" y1="187.0890" 
+                  x2="-211.3630" y2="15.1019" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="343.9093" y2="154.8940" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="273.3380" y2="-222.0423" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="-71.0081" y2="-115.0344" class="btwns3"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="-194.7152" y2="7.5907" class="btwns10"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="81.1378" y2="-280.1093" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="188.4835" y2="280.2674" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="-1.2283" y2="248.8108" class="btwns4"/>
+        
+            <line x1="123.8240" y1="6.2889" 
+                  x2="380.2162" y2="-47.9079" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="-143.6854" 
+                  x2="-212.4604" y2="1.3062" class="btwns4"/>
+        
+            <line x1="-79.4969" y1="-120.3204" 
+                  x2="-197.7208" y2="0.4846" class="btwns1"/>
+        
+            <line x1="79.6636" y1="-290.0000" 
+                  x2="69.6636" y2="-290.0000" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-364.4160 187.0890)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(123.8240 6.2889)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(352.1969 160.4900)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(278.8162 -230.4083)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -143.6854)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-79.4969 -120.3204)" 
+                class="vertice degree1 btwns0 authority1 BRASILIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-204.7151 7.6316)" 
+                class="vertice degree4 btwns4 authority4 BRASILIA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(79.6636 -290.0000)" 
+                class="vertice degree2 btwns0 authority0 DAKAR">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(190.7804 290.0000)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-5.8113 257.6988)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -49.9760)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-364.4160 187.0890)" 
+                id="06BRASILIA1042" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BRASILIA1042
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(123.8240 6.2889)" 
+                id="06STATE202028" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE202028
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(352.1969 160.4900)" 
+                id="07ABUJA1165" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ABUJA1165.html">07ABUJA1165</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NIGERIA RESPONDS TO MERCURY DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(278.8162 -230.4083)" 
+                id="07BISHKEK120" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BISHKEK120.html">07BISHKEK120</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KYRGYZ REPLY TO MERCURY MINING QUERY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -143.6854)" 
+                id="07BRASILIA12" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07BRASILIA12.html">07BRASILIA12</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POSSIBLE INSTRUMENT FOR BRAZIL MERCURY REDUCTION PILOT PROJECT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-79.4969 -120.3204)" 
+                id="07BRASILIA162" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07BRASILIA162.html">07BRASILIA162</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BINDING MERCURY POLLUTION REDUCTION TARGETS - NO POSITION FOR BRAZIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-204.7151 7.6316)" 
+                id="07BRASILIA50" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07BRASILIA50.html">07BRASILIA50</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Brazil Supports UNEP Voluntary Mercury Partnerships</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(79.6636 -290.0000)" 
+                id="07DAKAR40" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07DAKAR40.html">07DAKAR40</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SENEGAL'S RESPONSE TO MERCURY ISSUES DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(190.7804 290.0000)" 
+                id="07OTTAWA67" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07OTTAWA67.html">07OTTAWA67</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADIAN VIEWS ON MERCURY AT UPCOMING UNEP GOVERNING COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-5.8113 257.6988)" 
+                id="07SANJOSE17" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07SANJOSE17.html">07SANJOSE17</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COSTA RICA: DEMARCHE ON MERCURY ISSUES AT 24TH SESSION OF UNEP GOVERNING COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -49.9760)" 
+                id="07SANTODOMINGO48" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07SANTODOMINGO48.html">07SANTODOMINGO48</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DOMINICAN REPUBLIC: DEMARCHE RESPONSE REGARDING MERCURY ISSUES AT THE 24TH SESSION OF UNEP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

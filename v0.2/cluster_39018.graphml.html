@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06ISLAMABAD22000">06ISLAMABAD22000</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/15/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE187685">06STATE187685</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/16/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ISLAMABAD22174">06ISLAMABAD22174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ISLAMABAD22174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/27/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TERROR FINANCE: EMBASSY PRESSES GOP ON UN 1267 COMMITTEE CASES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07USUNNEWYORK115">07USUNNEWYORK115</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07USUNNEWYORK115.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PAKISTANI NON-COMPLIANCE WITH AL-QAIDA SANCTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07USUNNEWYORK128">07USUNNEWYORK128</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07USUNNEWYORK128.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PAKISTAN UN PERMREP ON SANCTIONS ENFORCEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE4359">08STATE4359</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/15/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08VIENNA73">08VIENNA73</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08VIENNA73.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TERRORIST FINANCE: PRENOTIFICATION TO AUSTRIA OF LET-4 DESIGNATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK42">08USUNNEWYORK42</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08USUNNEWYORK42.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/17/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TERRORIST FINANCE: LET OPERATIVES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08THEHAGUE57">08THEHAGUE57</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08THEHAGUE57.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/17/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NETHERLANDS/TERRORISM FINANCE: LET OPERATIVES PRE-NOTIFICATION DELIVERED TO DUTCH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WARSAW95">08WARSAW95</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08WARSAW95.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLAND: LET OPERATIVES PRENOTIFICATION DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE36712">08STATE36712</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08STATE36712.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/09/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(U) SECURING GOVERNMENT OF PAKISTAN SUPPORT FOR THE  UN 1267 (AL QAIDA/TALIBAN SANCTIONS) REGIME</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ISLAMABAD1678">08ISLAMABAD1678</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ISLAMABAD1678.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GOP RESPONSE TO SUPPORT FOR UN 1267 REGIME</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08ISLAMABAD1739">08ISLAMABAD1739</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/04/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE52473">08STATE52473</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08STATE52473.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">INSTRUCTIONS TO SUBMIT LISTING PROPOSAL FOR 4 LASHKAR E-TAYIBBA (LET-4) TERRORISTS UNDER UNSCR 1267</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE52694">08STATE52694</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08STATE52694.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE REQUEST TO SECURE CHINESE SUPPORT FOR UN 1267 TERRORIST LISTING OVER PAKISTANI OBJECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING1927">08BEIJING1927</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BEIJING1927.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">REQUEST TO SECURE CHINESE SUPPORT FOR UN 1267 TERRORIST LISTING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING4002">08BEIJING4002</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08BEIJING4002.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">PRC/IRAN: TREASURY UNDER SECRETARY LEVEY'S MEETINGS IN BEIJING</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-180.1458" y1="-181.5525" 
+                  x2="-69.2584" y2="-192.2114" class="btwns0"/>
+        
+            <line x1="-180.1458" y1="-181.5525" 
+                  x2="-72.5745" y2="-283.1342" class="btwns2"/>
+        
+            <line x1="-180.1458" y1="-181.5525" 
+                  x2="-206.7380" y2="-267.8546" class="btwns2"/>
+        
+            <line x1="-180.1458" y1="-181.5525" 
+                  x2="-89.6747" y2="-38.8727" class="btwns8"/>
+        
+            <line x1="-59.3043" y1="-193.1682" 
+                  x2="-64.6855" y2="-280.0191" class="btwns2"/>
+        
+            <line x1="-59.3043" y1="-193.1682" 
+                  x2="-200.9584" y2="-272.5239" class="btwns2"/>
+        
+            <line x1="-59.3043" y1="-193.1682" 
+                  x2="-82.8003" y2="-40.3113" class="btwns8"/>
+        
+            <line x1="-348.9485" y1="-53.4897" 
+                  x2="-94.2818" y2="-31.2956" class="btwns4"/>
+        
+            <line x1="-65.3040" y1="-290.0000" 
+                  x2="-199.7205" y2="-278.2799" class="btwns0"/>
+        
+            <line x1="390.0000" y1="130.1539" 
+                  x2="313.2692" y2="196.5774" class="btwns0"/>
+        
+            <line x1="390.0000" y1="130.1539" 
+                  x2="158.3330" y2="90.8072" class="btwns4"/>
+        
+            <line x1="305.7086" y1="203.1224" 
+                  x2="156.5704" y2="95.0023" class="btwns4"/>
+        
+            <line x1="122.2365" y1="-40.3254" 
+                  x2="-74.3311" y2="-30.9060" class="btwns2"/>
+        
+            <line x1="122.2365" y1="-40.3254" 
+                  x2="56.8435" y2="36.9651" class="btwns0"/>
+        
+            <line x1="122.2365" y1="-40.3254" 
+                  x2="146.4879" y2="79.3320" class="btwns1"/>
+        
+            <line x1="289.6075" y1="7.2213" 
+                  x2="60.2646" y2="43.0556" class="btwns1"/>
+        
+            <line x1="289.6075" y1="7.2213" 
+                  x2="157.1231" y2="84.1131" class="btwns2"/>
+        
+            <line x1="-84.3196" y1="-30.4274" 
+                  x2="-129.5131" y2="137.8934" class="btwns10"/>
+        
+            <line x1="-84.3196" y1="-30.4274" 
+                  x2="41.6482" y2="39.7334" class="btwns2"/>
+        
+            <line x1="-84.3196" y1="-30.4274" 
+                  x2="139.5788" y2="84.5642" class="btwns6"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="41.6749" y2="49.5128" class="btwns2"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="138.6842" y2="91.1711" class="btwns5"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="-211.9078" y2="281.4106" class="btwns4"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="-380.0646" y2="119.2328" class="btwns4"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="-349.0681" y2="218.3973" class="btwns4"/>
+        
+            <line x1="-132.1062" y1="147.5514" 
+                  x2="-38.0591" y2="279.2188" class="btwns4"/>
+        
+            <line x1="50.3845" y1="44.5993" 
+                  x2="139.3687" y2="84.9988" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-180.1458 -181.5525)" 
+                class="vertice degree5 btwns2 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-59.3043 -193.1682)" 
+                class="vertice degree5 btwns2 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-348.9485 -53.4897)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-65.3040 -290.0000)" 
+                class="vertice degree3 btwns0 authority3 USUNNEWYORK">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-209.6827 -277.4113)" 
+                class="vertice degree3 btwns0 authority3 USUNNEWYORK">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 130.1539)" 
+                class="vertice degree1 btwns0 authority1 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(305.7086 203.1224)" 
+                class="vertice degree1 btwns0 authority1 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(122.2365 -40.3254)" 
+                class="vertice degree3 btwns0 authority3 ISLAMABAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(289.6075 7.2213)" 
+                class="vertice degree1 btwns0 authority1 ISLAMABAD">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-84.3196 -30.4274)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-132.1062 147.5514)" 
+                class="vertice degree10 btwns8 authority9 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(50.3845 44.5993)" 
+                class="vertice degree6 btwns1 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(148.4742 89.1328)" 
+                class="vertice degree10 btwns5 authority9 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-217.0285 290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 118.0981)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-358.5741 221.5014)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-32.2467 287.3562)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-180.1458 -181.5525)" 
+                id="06ISLAMABAD22000" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06ISLAMABAD22000
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-59.3043 -193.1682)" 
+                id="06ISLAMABAD22174" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ISLAMABAD22174.html">06ISLAMABAD22174</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>TERROR FINANCE: EMBASSY PRESSES GOP ON UN 1267 COMMITTEE CASES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-348.9485 -53.4897)" 
+                id="06STATE187685" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE187685
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-65.3040 -290.0000)" 
+                id="07USUNNEWYORK115" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07USUNNEWYORK115.html">07USUNNEWYORK115</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PAKISTANI NON-COMPLIANCE WITH AL-QAIDA SANCTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.6827 -277.4113)" 
+                id="07USUNNEWYORK128" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07USUNNEWYORK128.html">07USUNNEWYORK128</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PAKISTAN UN PERMREP ON SANCTIONS ENFORCEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 130.1539)" 
+                id="08BEIJING1927" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BEIJING1927.html">08BEIJING1927</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>REQUEST TO SECURE CHINESE SUPPORT FOR UN 1267 TERRORIST LISTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(305.7086 203.1224)" 
+                id="08BEIJING4002" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08BEIJING4002.html">08BEIJING4002</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRC/IRAN: TREASURY UNDER SECRETARY LEVEY'S MEETINGS IN BEIJING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(122.2365 -40.3254)" 
+                id="08ISLAMABAD1678" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ISLAMABAD1678.html">08ISLAMABAD1678</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>GOP RESPONSE TO SUPPORT FOR UN 1267 REGIME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(289.6075 7.2213)" 
+                id="08ISLAMABAD1739" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08ISLAMABAD1739
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-84.3196 -30.4274)" 
+                id="08STATE36712" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08STATE36712.html">08STATE36712</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>(U) SECURING GOVERNMENT OF PAKISTAN SUPPORT FOR THE  UN 1267 (AL QAIDA/TALIBAN SANCTIONS) REGIME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-132.1062 147.5514)" 
+                id="08STATE4359" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE4359
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(50.3845 44.5993)" 
+                id="08STATE52473" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08STATE52473.html">08STATE52473</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>INSTRUCTIONS TO SUBMIT LISTING PROPOSAL FOR 4 LASHKAR E-TAYIBBA (LET-4) TERRORISTS UNDER UNSCR 1267</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(148.4742 89.1328)" 
+                id="08STATE52694" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08STATE52694.html">08STATE52694</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST TO SECURE CHINESE SUPPORT FOR UN 1267 TERRORIST LISTING OVER PAKISTANI OBJECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-217.0285 290.0000)" 
+                id="08THEHAGUE57" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08THEHAGUE57.html">08THEHAGUE57</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/TERRORISM FINANCE: LET OPERATIVES PRE-NOTIFICATION DELIVERED TO DUTCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 118.0981)" 
+                id="08USUNNEWYORK42" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08USUNNEWYORK42.html">08USUNNEWYORK42</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: LET OPERATIVES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-358.5741 221.5014)" 
+                id="08VIENNA73" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08VIENNA73.html">08VIENNA73</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: PRENOTIFICATION TO AUSTRIA OF LET-4 DESIGNATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-32.2467 287.3562)" 
+                id="08WARSAW95" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08WARSAW95.html">08WARSAW95</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND: LET OPERATIVES PRENOTIFICATION DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

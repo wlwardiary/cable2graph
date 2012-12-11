@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE33263">08STATE33263</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/01/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ASTANA701">08ASTANA701</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ASTANA701.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KAZAKHSTAN - IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TUNIS360">08TUNIS360</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TUNIS360.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN1107">08AMMAN1107</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08AMMAN1107.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/15/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Jordan's Implementation of the International Health Regulations</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CONAKRY113">08CONAKRY113</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08CONAKRY113.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">WHO'S INTERNATIONAL HEALTH REGULATION DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BOGOTA1467">08BOGOTA1467</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BOGOTA1467.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COLOMBIAN IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ADDISABABA1106">08ADDISABABA1106</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ADDISABABA1106.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE ON IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW1342">08MOSCOW1342</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08MOSCOW1342.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RUSSIA MOVING FORWARD WITH IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MUSCAT494">08MUSCAT494</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08MUSCAT494.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/01/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OMAN INTERESTED IN USG EFFORTS ON IMPLEMENTING HEALTH REGS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB506">08ZAGREB506</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ZAGREB506.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/08/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NO RESPONSE FROM CROATIA ON IMPLEMENTATION OF THE INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ROME873">08ROME873</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ROME873.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ITALIAN IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANSALVADOR926">08SANSALVADOR926</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08SANSALVADOR926.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/07/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EL SALVADOR WORKING WITH WHO AND PAHO TO IMPLEMENT INTERNATIONAL HEALTH REGULATIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-39.2080" y1="290.0000" 
+                  x2="-6.7341" y2="5.7565" class="btwns5"/>
+        
+            <line x1="-380.0698" y1="95.3281" 
+                  x2="-15.2636" y2="-1.6108" class="btwns5"/>
+        
+            <line x1="313.3983" y1="-176.5907" 
+                  x2="3.1983" y2="-8.9337" class="btwns5"/>
+        
+            <line x1="-245.9666" y1="227.6732" 
+                  x2="-12.7964" y2="2.7635" class="btwns5"/>
+        
+            <line x1="178.7905" y1="254.3493" 
+                  x2="0.2077" y2="3.9625" class="btwns5"/>
+        
+            <line x1="-84.2266" y1="-290.0000" 
+                  x2="-8.2514" y2="-13.8207" class="btwns5"/>
+        
+            <line x1="340.3281" y1="140.2405" 
+                  x2="3.6291" y2="-0.3263" class="btwns5"/>
+        
+            <line x1="138.4942" y1="-279.9391" 
+                  x2="-0.9679" y2="-13.0419" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="-70.0940" 
+                  x2="-15.4552" y2="-5.8690" class="btwns5"/>
+        
+            <line x1="-5.5990" y1="-4.1789" 
+                  x2="380.0095" y2="-20.9614" class="btwns5"/>
+        
+            <line x1="-5.5990" y1="-4.1789" 
+                  x2="-275.4377" y2="-209.6483" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-39.2080 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-380.0698 95.3281)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(313.3983 -176.5907)" 
+                class="vertice degree0 btwns0 authority0 ASTANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-245.9666 227.6732)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(178.7905 254.3493)" 
+                class="vertice degree0 btwns0 authority0 CONAKRY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-84.2266 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(340.3281 140.2405)" 
+                class="vertice degree0 btwns0 authority0 MUSCAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(138.4942 -279.9391)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -70.0940)" 
+                class="vertice degree0 btwns0 authority0 SANSALVADOR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-5.5990 -4.1789)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -21.3962)" 
+                class="vertice degree0 btwns0 authority0 TUNIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-283.3938 -215.7064)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-39.2080 290.0000)" 
+                id="08ADDISABABA1106" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ADDISABABA1106.html">08ADDISABABA1106</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-380.0698 95.3281)" 
+                id="08AMMAN1107" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08AMMAN1107.html">08AMMAN1107</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Jordan's Implementation of the International Health Regulations</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(313.3983 -176.5907)" 
+                id="08ASTANA701" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ASTANA701.html">08ASTANA701</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN - IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.9666 227.6732)" 
+                id="08BOGOTA1467" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BOGOTA1467.html">08BOGOTA1467</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COLOMBIAN IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(178.7905 254.3493)" 
+                id="08CONAKRY113" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08CONAKRY113.html">08CONAKRY113</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>WHO'S INTERNATIONAL HEALTH REGULATION DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-84.2266 -290.0000)" 
+                id="08MOSCOW1342" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08MOSCOW1342.html">08MOSCOW1342</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIA MOVING FORWARD WITH IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(340.3281 140.2405)" 
+                id="08MUSCAT494" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08MUSCAT494.html">08MUSCAT494</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OMAN INTERESTED IN USG EFFORTS ON IMPLEMENTING HEALTH REGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(138.4942 -279.9391)" 
+                id="08ROME873" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ROME873.html">08ROME873</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALIAN IMPLEMENTATION OF INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -70.0940)" 
+                id="08SANSALVADOR926" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08SANSALVADOR926.html">08SANSALVADOR926</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EL SALVADOR WORKING WITH WHO AND PAHO TO IMPLEMENT INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-5.5990 -4.1789)" 
+                id="08STATE33263" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE33263
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -21.3962)" 
+                id="08TUNIS360" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TUNIS360.html">08TUNIS360</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-283.3938 -215.7064)" 
+                id="08ZAGREB506" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ZAGREB506.html">08ZAGREB506</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NO RESPONSE FROM CROATIA ON IMPLEMENTATION OF THE INTERNATIONAL HEALTH REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

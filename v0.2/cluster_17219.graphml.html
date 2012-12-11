@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE58384">05STATE58384</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE81619">05STATE81619</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA847">05PRETORIA847</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05PRETORIA847.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DTI DISCUSSES DOHA WITH COMMERCE DAS VINEYARD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA922">05PRETORIA922</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05PRETORIA922.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DTI DISCUSSES BEE WITH COMMERCE DAS VINEYARD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA937">05PRETORIA937</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05PRETORIA937.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMCHAM COMMENTS ON CODES OF GOOD PRACTICE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BUCHAREST839">05BUCHAREST839</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05BUCHAREST839.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/05/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">WTO SERVICES NEGOTIATIONS: ROMANIA WILL NOT SUBMIT ITS OWN OFFER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1575">05PRETORIA1575</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05PRETORIA1575.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">WTO SERVICES NEGOTIATIONS: SOUTH AFRICA'S INITIAL OFFER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05WELLINGTON375">05WELLINGTON375</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05WELLINGTON375.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND: REVISED OFFER FOR WTO SERVICES NEGOTIATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BUCHAREST1114">05BUCHAREST1114</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05BUCHAREST1114.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">WTO SERVICES NEGOTIATIONS: ROMANIA DECLINES TO SUBMIT AN INDEPENDENT PROPOSAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05MADRID1819">05MADRID1819</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05MADRID1819.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SPANISH VIEWS ON WTO SERVICES NEGOTIATIONS:REVISED OFFER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA1593">05VIENNA1593</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05VIENNA1593.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRIAN VIEWS ON WTO SERVICES NEGOTIATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DUBLIN597">05DUBLIN597</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05DUBLIN597.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/20/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRISH RESPONSE TO WTO SERVICE DEMARCHE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ANKARA2901">05ANKARA2901</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05ANKARA2901.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOT PREPARING REVISED WTO SERVICES OFFER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ASUNCION701">05ASUNCION701</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05ASUNCION701.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PARAGUAY WILL NOT SUBMIT REVISED WTO SERVICES OFFER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DHAKA2439">05DHAKA2439</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05DHAKA2439.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">WTO SERVICES NEGOTIATIONS - BANGLADESH</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="250.5724" y1="239.6064" 
+                  x2="73.0813" y2="144.1815" class="btwns1"/>
+        
+            <line x1="278.3395" y1="37.3136" 
+                  x2="73.2989" y2="135.1401" class="btwns1"/>
+        
+            <line x1="-193.5688" y1="12.7337" 
+                  x2="-380.2264" y2="-27.6792" class="btwns0"/>
+        
+            <line x1="-193.5688" y1="12.7337" 
+                  x2="-280.6571" y2="-112.9840" class="btwns7"/>
+        
+            <line x1="-193.5688" y1="12.7337" 
+                  x2="55.2987" y2="135.0356" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="-29.7952" 
+                  x2="-293.8516" y2="-114.5900" class="btwns0"/>
+        
+            <line x1="-97.9992" y1="263.3270" 
+                  x2="56.3250" y2="145.5142" class="btwns1"/>
+        
+            <line x1="91.7255" y1="2.9060" 
+                  x2="66.2446" y2="129.6423" class="btwns1"/>
+        
+            <line x1="82.3484" y1="290.0000" 
+                  x2="65.4655" y2="149.3749" class="btwns1"/>
+        
+            <line x1="-178.0696" y1="-243.1287" 
+                  x2="7.1688" y2="-287.6625" class="btwns6"/>
+        
+            <line x1="-178.0696" y1="-243.1287" 
+                  x2="-279.7112" y2="-128.6813" class="btwns7"/>
+        
+            <line x1="16.8918" y1="-290.0000" 
+                  x2="209.9132" y2="-276.5618" class="btwns4"/>
+        
+            <line x1="219.8891" y1="-275.8673" 
+                  x2="380.3813" y2="-230.2329" class="btwns1"/>
+        
+            <line x1="64.2735" y1="139.4462" 
+                  x2="-166.7735" y2="164.3185" class="btwns1"/>
+        
+            <line x1="64.2735" y1="139.4462" 
+                  x2="323.0931" y2="140.3052" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(250.5724 239.6064)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(278.3395 37.3136)" 
+                class="vertice degree0 btwns0 authority0 ASUNCION">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-193.5688 12.7337)" 
+                class="vertice degree2 btwns6 authority2 BUCHAREST">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -29.7952)" 
+                class="vertice degree1 btwns0 authority1 BUCHAREST">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-97.9992 263.3270)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(91.7255 2.9060)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(82.3484 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-178.0696 -243.1287)" 
+                class="vertice degree1 btwns4 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(16.8918 -290.0000)" 
+                class="vertice degree1 btwns3 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(219.8891 -275.8673)" 
+                class="vertice degree1 btwns1 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -227.4979)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-286.3516 -121.2043)" 
+                class="vertice degree2 btwns5 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(64.2735 139.4462)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-176.7161 165.3888)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(333.0931 140.3384)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(250.5724 239.6064)" 
+                id="05ANKARA2901" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05ANKARA2901.html">05ANKARA2901</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOT PREPARING REVISED WTO SERVICES OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(278.3395 37.3136)" 
+                id="05ASUNCION701" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05ASUNCION701.html">05ASUNCION701</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PARAGUAY WILL NOT SUBMIT REVISED WTO SERVICES OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-193.5688 12.7337)" 
+                id="05BUCHAREST1114" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05BUCHAREST1114.html">05BUCHAREST1114</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>WTO SERVICES NEGOTIATIONS: ROMANIA DECLINES TO SUBMIT AN INDEPENDENT PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -29.7952)" 
+                id="05BUCHAREST839" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05BUCHAREST839.html">05BUCHAREST839</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>WTO SERVICES NEGOTIATIONS: ROMANIA WILL NOT SUBMIT ITS OWN OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-97.9992 263.3270)" 
+                id="05DHAKA2439" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05DHAKA2439.html">05DHAKA2439</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>WTO SERVICES NEGOTIATIONS - BANGLADESH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(91.7255 2.9060)" 
+                id="05DUBLIN597" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05DUBLIN597.html">05DUBLIN597</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRISH RESPONSE TO WTO SERVICE DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(82.3484 290.0000)" 
+                id="05MADRID1819" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05MADRID1819.html">05MADRID1819</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPANISH VIEWS ON WTO SERVICES NEGOTIATIONS:REVISED OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-178.0696 -243.1287)" 
+                id="05PRETORIA1575" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PRETORIA1575.html">05PRETORIA1575</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>WTO SERVICES NEGOTIATIONS: SOUTH AFRICA'S INITIAL OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(16.8918 -290.0000)" 
+                id="05PRETORIA847" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05PRETORIA847.html">05PRETORIA847</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DTI DISCUSSES DOHA WITH COMMERCE DAS VINEYARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(219.8891 -275.8673)" 
+                id="05PRETORIA922" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05PRETORIA922.html">05PRETORIA922</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DTI DISCUSSES BEE WITH COMMERCE DAS VINEYARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -227.4979)" 
+                id="05PRETORIA937" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05PRETORIA937.html">05PRETORIA937</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMCHAM COMMENTS ON CODES OF GOOD PRACTICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-286.3516 -121.2043)" 
+                id="05STATE58384" 
+                class="labels">
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05STATE58384
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(64.2735 139.4462)" 
+                id="05STATE81619" 
+                class="labels">
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE81619
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-176.7161 165.3888)" 
+                id="05VIENNA1593" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05VIENNA1593.html">05VIENNA1593</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRIAN VIEWS ON WTO SERVICES NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(333.0931 140.3384)" 
+                id="05WELLINGTON375" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05WELLINGTON375.html">05WELLINGTON375</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND: REVISED OFFER FOR WTO SERVICES NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

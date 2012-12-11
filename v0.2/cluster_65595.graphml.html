@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07MUSCAT574">07MUSCAT574</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/06/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT576">07MUSCAT576</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT576.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TROPICAL CYCLONE GONU CAUSES EXTENSIVE FLOODING, DAMAGE IN MUSCAT AREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT581">07MUSCAT581</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT581.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OMAN DECLINES U.S. AND OTHER FOREIGN ASSISTANCE IN THE AFTERMATH OF TROPICAL CYCLONE GONU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT586">07MUSCAT586</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT586.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">TROPICAL CYCLONE GONU CAUSES SEVERE HARDSHIP FOR LOW-SKILLED EXPATRIATE WORKERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT587">07MUSCAT587</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT587.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OMANI MEDIA CHALLENGED BY CYCLONE REPORTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT590">07MUSCAT590</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT590.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OMAN BEGINS CYCLONE RECOVERY EFFORTS, CONTINUES TO ASSESS DAMAGE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT596">07MUSCAT596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OMAN ISSUES CYCLONE RECOVERY DIRECTIVES, QUIETLY ACCEPTS FUNDS FROM GCC STATES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT600">07MUSCAT600</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT600.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DISASTER DECLARATION: CYCLONE GONU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE84648">07STATE84648</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/17/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT638">07MUSCAT638</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT638.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">C-NE7-01141: OMAN MOVES FORWARD ON POST-CYCLONE RECOVERY EFFORTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT654">07MUSCAT654</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MUSCAT654.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">C-NE7-01141: OMAN THREE WEEKS AFTER GONU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT668">07MUSCAT668</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07MUSCAT668.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">C-NE7-01141: SULTAN QABOOS ADDRESSES NATION ON CYCLONE GONU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MUSCAT718">07MUSCAT718</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07MUSCAT718.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/28/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DAMAGE ASSESSMENTS CONTINUE IN WAKE OF GONU</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-151.9383" y1="-290.0000" 
+                  x2="105.8940" y2="-264.6940" class="btwns0"/>
+        
+            <line x1="-151.9383" y1="-290.0000" 
+                  x2="-61.2517" y2="-158.1865" class="btwns5"/>
+        
+            <line x1="115.8462" y1="-263.7172" 
+                  x2="-47.2516" y2="-155.4776" class="btwns4"/>
+        
+            <line x1="115.8462" y1="-263.7172" 
+                  x2="380.0541" y2="-236.1145" class="btwns1"/>
+        
+            <line x1="115.8462" y1="-263.7172" 
+                  x2="203.2328" y2="-149.6762" class="btwns2"/>
+        
+            <line x1="-55.5837" y1="-149.9480" 
+                  x2="-173.4414" y2="0.0541" class="btwns7"/>
+        
+            <line x1="-55.5837" y1="-149.9480" 
+                  x2="24.9597" y2="-1.3059" class="btwns7"/>
+        
+            <line x1="-55.5837" y1="-149.9480" 
+                  x2="199.3200" y2="-142.0484" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-235.0754" 
+                  x2="218.1998" y2="-146.3281" class="btwns5"/>
+        
+            <line x1="-179.6196" y1="7.9173" 
+                  x2="-93.4107" y2="173.0674" class="btwns4"/>
+        
+            <line x1="-179.6196" y1="7.9173" 
+                  x2="39.0087" y2="130.9062" class="btwns2"/>
+        
+            <line x1="29.7239" y1="7.4863" 
+                  x2="-210.3287" y2="103.1627" class="btwns3"/>
+        
+            <line x1="29.7239" y1="7.4863" 
+                  x2="201.6238" y2="-135.3477" class="btwns10"/>
+        
+            <line x1="29.7239" y1="7.4863" 
+                  x2="-83.1639" y2="173.6605" class="btwns8"/>
+        
+            <line x1="29.7239" y1="7.4863" 
+                  x2="46.3351" y2="125.9061" class="btwns5"/>
+        
+            <line x1="-219.6180" y1="106.8651" 
+                  x2="-97.4570" y2="176.9557" class="btwns1"/>
+        
+            <line x1="-219.6180" y1="106.8651" 
+                  x2="37.7823" y2="134.7328" class="btwns0"/>
+        
+            <line x1="-88.7832" y1="181.9323" 
+                  x2="81.8189" y2="284.8351" class="btwns3"/>
+        
+            <line x1="-88.7832" y1="181.9323" 
+                  x2="38.2504" y2="139.0102" class="btwns0"/>
+        
+            <line x1="-88.7832" y1="181.9323" 
+                  x2="225.0811" y2="223.9198" class="btwns3"/>
+        
+            <line x1="-88.7832" y1="181.9323" 
+                  x2="-380.3201" y2="257.5216" class="btwns7"/>
+        
+            <line x1="90.3818" y1="290.0000" 
+                  x2="50.3906" y2="145.4471" class="btwns2"/>
+        
+            <line x1="90.3818" y1="290.0000" 
+                  x2="225.8660" y2="229.3326" class="btwns0"/>
+        
+            <line x1="47.7242" y1="135.8092" 
+                  x2="225.9691" y2="220.9362" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-151.9383 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 MUSCAT">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(115.8462 -263.7172)" 
+                class="vertice degree5 btwns1 authority4 MUSCAT">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-55.5837 -149.9480)" 
+                class="vertice degree6 btwns6 authority6 MUSCAT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -235.0754)" 
+                class="vertice degree1 btwns0 authority1 MUSCAT">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-179.6196 7.9173)" 
+                class="vertice degree3 btwns2 authority3 MUSCAT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.7239 7.4863)" 
+                class="vertice degree6 btwns10 authority6 MUSCAT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-219.6180 106.8651)" 
+                class="vertice degree3 btwns0 authority3 MUSCAT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(209.3152 -141.7386)" 
+                class="vertice degree5 btwns4 authority4 MUSCAT">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-88.7832 181.9323)" 
+                class="vertice degree10 btwns8 authority10 MUSCAT">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(90.3818 290.0000)" 
+                class="vertice degree3 btwns0 authority3 MUSCAT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(47.7242 135.8092)" 
+                class="vertice degree8 btwns3 authority8 MUSCAT">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(234.9928 225.2458)" 
+                class="vertice degree3 btwns0 authority3 MUSCAT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 260.0314)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-151.9383 -290.0000)" 
+                id="07MUSCAT574" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07MUSCAT574
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(115.8462 -263.7172)" 
+                id="07MUSCAT576" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT576.html">07MUSCAT576</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>TROPICAL CYCLONE GONU CAUSES EXTENSIVE FLOODING, DAMAGE IN MUSCAT AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-55.5837 -149.9480)" 
+                id="07MUSCAT581" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT581.html">07MUSCAT581</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>OMAN DECLINES U.S. AND OTHER FOREIGN ASSISTANCE IN THE AFTERMATH OF TROPICAL CYCLONE GONU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -235.0754)" 
+                id="07MUSCAT586" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT586.html">07MUSCAT586</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TROPICAL CYCLONE GONU CAUSES SEVERE HARDSHIP FOR LOW-SKILLED EXPATRIATE WORKERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-179.6196 7.9173)" 
+                id="07MUSCAT587" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT587.html">07MUSCAT587</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>OMANI MEDIA CHALLENGED BY CYCLONE REPORTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(29.7239 7.4863)" 
+                id="07MUSCAT590" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT590.html">07MUSCAT590</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>OMAN BEGINS CYCLONE RECOVERY EFFORTS, CONTINUES TO ASSESS DAMAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-219.6180 106.8651)" 
+                id="07MUSCAT596" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT596.html">07MUSCAT596</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>OMAN ISSUES CYCLONE RECOVERY DIRECTIVES, QUIETLY ACCEPTS FUNDS FROM GCC STATES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(209.3152 -141.7386)" 
+                id="07MUSCAT600" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT600.html">07MUSCAT600</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>DISASTER DECLARATION: CYCLONE GONU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-88.7832 181.9323)" 
+                id="07MUSCAT638" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT638.html">07MUSCAT638</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>C-NE7-01141: OMAN MOVES FORWARD ON POST-CYCLONE RECOVERY EFFORTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(90.3818 290.0000)" 
+                id="07MUSCAT654" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MUSCAT654.html">07MUSCAT654</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>C-NE7-01141: OMAN THREE WEEKS AFTER GONU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(47.7242 135.8092)" 
+                id="07MUSCAT668" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>07/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07MUSCAT668.html">07MUSCAT668</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>C-NE7-01141: SULTAN QABOOS ADDRESSES NATION ON CYCLONE GONU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(234.9928 225.2458)" 
+                id="07MUSCAT718" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07MUSCAT718.html">07MUSCAT718</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>DAMAGE ASSESSMENTS CONTINUE IN WAKE OF GONU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 260.0314)" 
+                id="07STATE84648" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE84648
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

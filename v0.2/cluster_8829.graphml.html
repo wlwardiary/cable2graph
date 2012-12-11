@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04ABUJA1558">04ABUJA1558</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/08/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04LAGOS1905">04LAGOS1905</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/14/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04ABUJA1635">04ABUJA1635</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/20/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA1670">04ABUJA1670</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04ABUJA1670.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AVIATION MINISTER MAKES PITCH IN BEHALF OF VIRGIN NIGERIA AIRWAYS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA1708">04ABUJA1708</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/10/04ABUJA1708.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/07/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CONTINENTAL'S DESIGNATION IN TROUBLE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA2118">04ABUJA2118</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04ABUJA2118.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GON AVIATION MINISTER PROTESTS EMBASSY PRESS BRIEFING ON VIRGIN NIGERIA AIRLINES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA2119">04ABUJA2119</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04ABUJA2119.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GON AVIATION MINISTER RESTATES CASE THAT VIRGIN NIGERIA AIRWAYS IS A NIGERIAN AIRLINE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA2121">04ABUJA2121</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04ABUJA2121.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MEDIA REACTION: U.S. POSITION ON VIRGIN NIGERIA AIRWAYS CRITICIZED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA2128">04ABUJA2128</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04ABUJA2128.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NIGERIAN CONSULTANT EXPLAINS GON THINKING ON VIRGIN NIGERIA AIRWAYS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ABUJA2135">04ABUJA2135</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04ABUJA2135.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GON AVIATION MINISTER PROTESTS EMBASSY PRESS BRIEFING ON VIRGIN NIGERIA AIRLINES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="324.9897" y1="152.4418" 
+                  x2="149.5781" y2="45.4412" class="btwns1"/>
+        
+            <line x1="-150.0940" y1="290.0000" 
+                  x2="1.8777" y2="203.1113" class="btwns1"/>
+        
+            <line x1="141.0410" y1="40.2336" 
+                  x2="16.9287" y2="190.4390" class="btwns10"/>
+        
+            <line x1="141.0410" y1="40.2336" 
+                  x2="136.3267" y2="-117.8221" class="btwns3"/>
+        
+            <line x1="141.0410" y1="40.2336" 
+                  x2="-136.3744" y2="-21.3158" class="btwns10"/>
+        
+            <line x1="141.0410" y1="40.2336" 
+                  x2="380.2980" y2="-19.5245" class="btwns1"/>
+        
+            <line x1="136.0286" y1="-127.8176" 
+                  x2="-70.8339" y2="-171.6741" class="btwns0"/>
+        
+            <line x1="-146.1370" y1="-23.4818" 
+                  x2="-380.1004" y2="9.9313" class="btwns1"/>
+        
+            <line x1="-146.1370" y1="-23.4818" 
+                  x2="-84.6133" y2="-164.5816" class="btwns2"/>
+        
+            <line x1="-177.2461" y1="-290.0000" 
+                  x2="-87.0086" y2="-181.4383" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(324.9897 152.4418)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-150.0940 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(141.0410 40.2336)" 
+                class="vertice degree10 btwns10 authority10 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(10.5590 198.1478)" 
+                class="vertice degree2 btwns3 authority2 ABUJA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(136.0286 -127.8176)" 
+                class="vertice degree2 btwns1 authority2 ABUJA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-146.1370 -23.4818)" 
+                class="vertice degree5 btwns5 authority4 ABUJA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-177.2461 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 11.3450)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-80.6164 -173.7481)" 
+                class="vertice degree5 btwns3 authority5 ABUJA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -21.9477)" 
+                class="vertice degree0 btwns0 authority0 LAGOS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(324.9897 152.4418)" 
+                id="04ABUJA1558" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ABUJA1558
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-150.0940 290.0000)" 
+                id="04ABUJA1635" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ABUJA1635
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(141.0410 40.2336)" 
+                id="04ABUJA1670" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/29/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04ABUJA1670.html">04ABUJA1670</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AVIATION MINISTER MAKES PITCH IN BEHALF OF VIRGIN NIGERIA AIRWAYS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(10.5590 198.1478)" 
+                id="04ABUJA1708" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/07/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04ABUJA1708.html">04ABUJA1708</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CONTINENTAL'S DESIGNATION IN TROUBLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.0286 -127.8176)" 
+                id="04ABUJA2118" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ABUJA2118.html">04ABUJA2118</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GON AVIATION MINISTER PROTESTS EMBASSY PRESS BRIEFING ON VIRGIN NIGERIA AIRLINES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-146.1370 -23.4818)" 
+                id="04ABUJA2119" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ABUJA2119.html">04ABUJA2119</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GON AVIATION MINISTER RESTATES CASE THAT VIRGIN NIGERIA AIRWAYS IS A NIGERIAN AIRLINE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-177.2461 -290.0000)" 
+                id="04ABUJA2121" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ABUJA2121.html">04ABUJA2121</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MEDIA REACTION: U.S. POSITION ON VIRGIN NIGERIA AIRWAYS CRITICIZED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 11.3450)" 
+                id="04ABUJA2128" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ABUJA2128.html">04ABUJA2128</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NIGERIAN CONSULTANT EXPLAINS GON THINKING ON VIRGIN NIGERIA AIRWAYS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-80.6164 -173.7481)" 
+                id="04ABUJA2135" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04ABUJA2135.html">04ABUJA2135</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GON AVIATION MINISTER PROTESTS EMBASSY PRESS BRIEFING ON VIRGIN NIGERIA AIRLINES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -21.9477)" 
+                id="04LAGOS1905" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04LAGOS1905
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

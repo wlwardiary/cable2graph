@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO2780">09MEXICO2780</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09MEXICO2780.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EMBASSY ENGAGES CIVIL SOCIETY ON HUMAN RIGHTS PRESAGING FUTURE PARTNERSHIP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3443">09MEXICO3443</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3443.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEPSEC LEW STRESSES USG COMMITMENT TO COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3455">09MEXICO3455</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3455.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/09/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">U/S OTERO LEADS USG TO HRC "REFLECTION GROUP"</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3468">09MEXICO3468</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3468.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SSP TO REPLACE MILITARY AS PRIMARY SECURITY PLAYER IN CIUDAD JUAREZ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3501">09MEXICO3501</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3501.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MEXICO: VISIT OF A/S VALENZUELA (DEC 06-08)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3617">09MEXICO3617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UPDATE: SSP TO REPLACE MILITARY AS PRIMARY SECURITY PLAYER IN CIUDAD JUAREZ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3627">09MEXICO3627</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3627.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MEXICO:  BUILDING AN EFFECTIVE HUMAN RIGHTS STRATEGY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3634">09MEXICO3634</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3634.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENTIAL SECURITY ASSISTANT BRENNAN STRESSES COMMITMENT TO DEEPER COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3641">09MEXICO3641</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3641.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMNESTY INTERNATIONAL RELEASES REPORT CRITICAL OF MEXICO FOR MILITARY ABUSES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO3642">09MEXICO3642</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MEXICO3642.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW MEXICAN HUMAN RIGHTS COMMISSION PRESIDENT PLEDGES MODEST CHANGES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#10MEXICO47">10MEXICO47</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/16/10</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10MEXICO75">10MEXICO75</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10MEXICO75.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">INTER-AMERICAN COURT RULINGS PRESSURE MEXICO TO ADDRESS HUMAN RIGHTS ISSUES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="308.9144" y1="-134.9819" 
+                  x2="182.6127" y2="11.0971" class="btwns2"/>
+        
+            <line x1="390.0000" y1="29.1258" 
+                  x2="186.0604" y2="19.1502" class="btwns2"/>
+        
+            <line x1="117.3347" y1="205.6984" 
+                  x2="173.0761" y2="28.2023" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="208.4174" 
+                  x2="-254.1857" y2="141.8345" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="208.4174" 
+                  x2="-270.7738" y2="284.6148" class="btwns0"/>
+        
+            <line x1="123.5873" y1="-169.4922" 
+                  x2="173.3854" y2="9.0294" class="btwns2"/>
+        
+            <line x1="-245.2066" y1="137.4325" 
+                  x2="-261.2311" y2="280.0625" class="btwns2"/>
+        
+            <line x1="-245.2066" y1="137.4325" 
+                  x2="-105.5769" y2="1.6400" class="btwns7"/>
+        
+            <line x1="176.0723" y1="18.6617" 
+                  x2="-88.4460" y2="-4.4611" class="btwns10"/>
+        
+            <line x1="176.0723" y1="18.6617" 
+                  x2="294.2333" y2="176.9250" class="btwns2"/>
+        
+            <line x1="-98.4080" y1="-5.3319" 
+                  x2="-224.0535" y2="-145.2988" class="btwns5"/>
+        
+            <line x1="-266.5179" y1="-290.0000" 
+                  x2="-233.2563" y2="-162.4169" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(308.9144 -134.9819)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 29.1258)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(117.3347 205.6984)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 208.4174)" 
+                class="vertice degree2 btwns0 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(123.5873 -169.4922)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-245.2066 137.4325)" 
+                class="vertice degree4 btwns4 authority4 MEXICO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(176.0723 18.6617)" 
+                class="vertice degree10 btwns10 authority10 MEXICO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-262.3476 290.0000)" 
+                class="vertice degree2 btwns0 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-98.4080 -5.3319)" 
+                class="vertice degree4 btwns9 authority4 MEXICO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.2159 184.9381)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-266.5179 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-230.7336 -152.7403)" 
+                class="vertice degree2 btwns2 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(308.9144 -134.9819)" 
+                id="09MEXICO2780" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09MEXICO2780.html">09MEXICO2780</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY ENGAGES CIVIL SOCIETY ON HUMAN RIGHTS PRESAGING FUTURE PARTNERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 29.1258)" 
+                id="09MEXICO3443" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3443.html">09MEXICO3443</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEPSEC LEW STRESSES USG COMMITMENT TO COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(117.3347 205.6984)" 
+                id="09MEXICO3455" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3455.html">09MEXICO3455</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>U/S OTERO LEADS USG TO HRC "REFLECTION GROUP"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 208.4174)" 
+                id="09MEXICO3468" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3468.html">09MEXICO3468</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SSP TO REPLACE MILITARY AS PRIMARY SECURITY PLAYER IN CIUDAD JUAREZ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(123.5873 -169.4922)" 
+                id="09MEXICO3501" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3501.html">09MEXICO3501</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MEXICO: VISIT OF A/S VALENZUELA (DEC 06-08)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.2066 137.4325)" 
+                id="09MEXICO3617" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3617.html">09MEXICO3617</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>UPDATE: SSP TO REPLACE MILITARY AS PRIMARY SECURITY PLAYER IN CIUDAD JUAREZ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(176.0723 18.6617)" 
+                id="09MEXICO3627" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3627.html">09MEXICO3627</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MEXICO:  BUILDING AN EFFECTIVE HUMAN RIGHTS STRATEGY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-262.3476 290.0000)" 
+                id="09MEXICO3634" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3634.html">09MEXICO3634</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL SECURITY ASSISTANT BRENNAN STRESSES COMMITMENT TO DEEPER COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-98.4080 -5.3319)" 
+                id="09MEXICO3641" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3641.html">09MEXICO3641</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AMNESTY INTERNATIONAL RELEASES REPORT CRITICAL OF MEXICO FOR MILITARY ABUSES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.2159 184.9381)" 
+                id="09MEXICO3642" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MEXICO3642.html">09MEXICO3642</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW MEXICAN HUMAN RIGHTS COMMISSION PRESIDENT PLEDGES MODEST CHANGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-266.5179 -290.0000)" 
+                id="10MEXICO47" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    10MEXICO47
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-230.7336 -152.7403)" 
+                id="10MEXICO75" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10MEXICO75.html">10MEXICO75</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>INTER-AMERICAN COURT RULINGS PRESSURE MEXICO TO ADDRESS HUMAN RIGHTS ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

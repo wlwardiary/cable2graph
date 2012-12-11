@@ -1,0 +1,2448 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 540.0000;
+    var width = 1200;
+    var height = 1080;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05KINSHASA1064">05KINSHASA1064</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/29/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05KINSHASA1782">05KINSHASA1782</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/26/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA102">07KINSHASA102</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07KINSHASA102.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KABILA ALLIES WIN EIGHT OF NINE GUBERNATORIAL RACES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA130">07KINSHASA130</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA130.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTORAL COMMISSION POSTPONES GUBERNATORIAL VOTE IN DRC'S KASAI PROVINCES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA134">07KINSHASA134</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA134.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PROTESTS TURN VIOLENT IN BAS-CONGO PROVINCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA136">07KINSHASA136</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA136.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BAS-CONGO CALM, CALL FOR GENERAL STRIKE IN KINSHASA UNSUCCESSFUL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA161">07KINSHASA161</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA161.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BAS-CONGO UPDATE: COURT GRANTS APPEAL FOR GUBERNATORIAL RE-VOTE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA179">07KINSHASA179</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA179.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/14/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DRC'S COURTS SLOW TO RESOLVE ELECTORAL DISPUTES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA186">07KINSHASA186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AMP CANDIDATES WIN KASAI GUBERNATORIAL ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA200">07KINSHASA200</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA200.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BAS-CONGO UPDATE: DRC SUPREME COURT UPHOLDS ELECTION OF PRO-KABILA CANDIDATE IN GUBERNATORIAL RACE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA221">07KINSHASA221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW NORTH KIVU GOVERNOR'S PRIORITIES: SECURITY, RECONCILIATION AND DEVELOPMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA240">07KINSHASA240</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KINSHASA240.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BAS-CONGO UPDATE: NATIONAL ASSEMBLY ESTABLISHES COMMITTEE OF INQUIRY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA275">07KINSHASA275</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA275.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DRC SUPREME COURT CLOSING OUT BACKLOG OF NATIONAL ASSEMBLY ELECTION CHALLENGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA290">07KINSHASA290</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA290.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONGOLESE AND ANGOLAN MINISTERS TO ATTEMPT RESOLUTION TO REMOTE BORDER DISPUTE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA291">07KINSHASA291</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA291.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EXAMINING BAS-CONGO'S FEBRUARY VIOLENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA318">07KINSHASA318</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA318.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CONGO ACKNOWLEDGES DISPUTED BORDER AREA IS IN ANGOLA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA343">07KINSHASA343</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA343.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NATIONAL ASSEMBLY ESTABLISHES COMMISSION OF INQUIRY INTO BORDER DISPUTE WITH ANGOLA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA350">07KINSHASA350</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINSHASA350.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BUNDU DIA KONGO: A DANGEROUS INSURRECTIONIST MOVEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA414">07KINSHASA414</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KINSHASA414.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MONUC INVESTIGATION ASSIGNS BLAME TO BOTH SIDES FOR BAS-CONGO VIOLENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA546">07KINSHASA546</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KINSHASA546.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PARLIAMENTARY COMMISSION BLAMES BOTH SIDES FOR BAS-CONGO VIOLENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA642">07KINSHASA642</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07KINSHASA642.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">WESTERN KASAI GOVERNOR LOSES NO-CONFIDENCE VOTE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA644">07KINSHASA644</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07KINSHASA644.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DRC'S OPPOSITION LAW NEARLY READY FOR PLENARY DEBATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA679">07KINSHASA679</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07KINSHASA679.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NATIONAL ASSEMBLY CLOSES REGULAR SESSION, REOPENS EXTRAORDINARY SESSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07KINSHASA855">07KINSHASA855</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/21/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA882">07KINSHASA882</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA882.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KABILA, OTHER LEADERS AGREE ON POLITICAL AND DIPLOMATIC STRATEGY TO REDUCE TENSIONS IN EAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA884">07KINSHASA884</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA884.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ANGOLAN EXPULSION: TOTAL OF CONGOLESE ARRIVALS RISES FROM 16,000 TO 26,500</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA887">07KINSHASA887</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA887.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MONUC LAUNCHES MINEMBWE PEACE EFFORT IN WAKE OF RENEWED FIGHTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA888">07KINSHASA888</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA888.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SSR CONTACT GROUP:  SUBSTANCE REFERRED TO EXPERTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA895">07KINSHASA895</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA895.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SENATE PRESIDENT KENGO REVIEWS STATE OF PLAY AT END OF SESSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA900">07KINSHASA900</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KINSHASA900.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATIONAL ASSEMBLY PRESIDENT KAMERHE JUGGLES LEGISLATIVE AGENDA AND PEACE INITIATIVE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA906">07KINSHASA906</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA906.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/02/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PARLIAMENTARY UPDATE:  EXTRAORDINARY SESSION POST-MORTEM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA932">07KINSHASA932</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA932.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AT LEAST 89 DEAD AND 100 INJURED IN DRC TRAIN-WRECK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KAMPALA1272">07KAMPALA1272</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KAMPALA1272.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/07/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UGANDA PROTESTS TO DRC OVER OIL FACILITY ATTACK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA945">07KINSHASA945</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA945.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC SUPREME COURT REINSTATES KASAI OCCIDENTAL GOVERNOR TO OFFICE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA949">07KINSHASA949</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA949.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONGOLESE MILITARY RELEASES FOUR UGANDAN SOLDIERS HELD IN ITURI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA991">07KINSHASA991</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA991.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KABILA RELAXED AND UPBEAT IN FAREWELL MEETING WITH AMBASSADOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA992">07KINSHASA992</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA992.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KABILA VISITS KASAI OCCIDENTAL PROVINCE IN WAKE OF DEADLY TRAIN WRECKENTAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA1032">07KINSHASA1032</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA1032.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONGO, ANGOLA ANNOUNCE PLANS TO DEMARCATE BORDER, DEVELOP SHARED OIL VENTURES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA1040">07KINSHASA1040</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KINSHASA1040.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KIVU DEMARCHE DELIVERED IN KINSHASA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="1080" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,540.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="160.4566" y1="-285.5267" 
+                  x2="221.7252" y2="-184.4736" class="btwns1"/>
+        
+            <line x1="229.2337" y1="223.8340" 
+                  x2="173.3264" y2="129.2970" class="btwns1"/>
+        
+            <line x1="-272.1306" y1="-270.7025" 
+                  x2="-213.0617" y2="-297.8991" class="btwns0"/>
+        
+            <line x1="-272.1306" y1="-270.7025" 
+                  x2="-239.1335" y2="-194.5529" class="btwns1"/>
+        
+            <line x1="275.7654" y1="-33.9933" 
+                  x2="186.7834" y2="43.9799" class="btwns5"/>
+        
+            <line x1="275.7654" y1="-33.9933" 
+                  x2="230.1645" y2="-166.4670" class="btwns2"/>
+        
+            <line x1="275.7654" y1="-33.9933" 
+                  x2="194.0065" y2="-48.1038" class="btwns1"/>
+        
+            <line x1="275.7654" y1="-33.9933" 
+                  x2="354.3568" y2="44.6360" class="btwns1"/>
+        
+            <line x1="275.7654" y1="-33.9933" 
+                  x2="372.5064" y2="-58.6541" class="btwns1"/>
+        
+            <line x1="-99.3333" y1="322.2365" 
+                  x2="-145.5680" y2="267.9134" class="btwns0"/>
+        
+            <line x1="-99.3333" y1="322.2365" 
+                  x2="-47.7940" y2="267.8535" class="btwns1"/>
+        
+            <line x1="-99.3333" y1="322.2365" 
+                  x2="-175.1053" y2="331.5415" class="btwns0"/>
+        
+            <line x1="-99.3333" y1="322.2365" 
+                  x2="-19.0893" y2="344.0668" class="btwns0"/>
+        
+            <line x1="-142.7687" y1="-380.0000" 
+                  x2="-197.8008" y2="-309.9451" class="btwns1"/>
+        
+            <line x1="179.2624" y1="50.5704" 
+                  x2="169.2624" y2="50.5704" class="btwns0"/>
+        
+            <line x1="179.2624" y1="50.5704" 
+                  x2="169.7896" y2="110.8109" class="btwns5"/>
+        
+            <line x1="179.2624" y1="50.5704" 
+                  x2="241.0942" y2="124.8071" class="btwns0"/>
+        
+            <line x1="179.2624" y1="50.5704" 
+                  x2="54.9051" y2="19.5540" class="btwns10"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="216.9097" y2="-175.9225" class="btwns0"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="231.8339" y2="-290.4645" class="btwns1"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="187.3630" y2="-59.2751" class="btwns1"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="139.3566" y2="-162.8982" class="btwns0"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="307.1501" y2="-177.1026" class="btwns1"/>
+        
+            <line x1="226.9097" y1="-175.9225" 
+                  x2="315.8063" y2="-227.8103" class="btwns1"/>
+        
+            <line x1="232.2634" y1="-300.4553" 
+                  x2="222.2634" y2="-300.4553" class="btwns0"/>
+        
+            <line x1="184.1522" y1="-49.8046" 
+                  x2="169.1656" y2="110.7328" class="btwns3"/>
+        
+            <line x1="184.1522" y1="-49.8046" 
+                  x2="133.8651" y2="-152.4466" class="btwns1"/>
+        
+            <line x1="168.2361" y1="120.6895" 
+                  x2="158.2361" y2="120.6895" class="btwns0"/>
+        
+            <line x1="168.2361" y1="120.6895" 
+                  x2="237.6032" y2="131.0182" class="btwns0"/>
+        
+            <line x1="168.2361" y1="120.6895" 
+                  x2="71.7221" y2="193.1913" class="btwns7"/>
+        
+            <line x1="129.4655" y1="-161.4268" 
+                  x2="67.7835" y2="-243.7248" class="btwns1"/>
+        
+            <line x1="361.4262" y1="51.7088" 
+                  x2="351.4262" y2="51.7088" class="btwns0"/>
+        
+            <line x1="63.7268" y1="199.1974" 
+                  x2="-32.2902" y2="255.5346" class="btwns7"/>
+        
+            <line x1="-242.7398" y1="228.6092" 
+                  x2="-161.4897" y2="256.9996" class="btwns1"/>
+        
+            <line x1="317.1491" y1="-177.2497" 
+                  x2="323.1421" y2="-222.9363" class="btwns0"/>
+        
+            <line x1="317.1491" y1="-177.2497" 
+                  x2="380.3354" y2="-160.4601" class="btwns0"/>
+        
+            <line x1="-152.0494" y1="260.2982" 
+                  x2="-50.9152" y2="260.5685" class="btwns2"/>
+        
+            <line x1="-152.0494" y1="260.2982" 
+                  x2="-180.8882" y2="323.6588" class="btwns0"/>
+        
+            <line x1="-40.9152" y1="260.5952" 
+                  x2="-12.8735" y2="337.2998" class="btwns2"/>
+        
+            <line x1="382.1965" y1="-61.1242" 
+                  x2="389.1962" y2="-147.9244" class="btwns0"/>
+        
+            <line x1="324.4428" y1="-232.8513" 
+                  x2="314.4428" y2="-232.8513" class="btwns0"/>
+        
+            <line x1="324.4428" y1="-232.8513" 
+                  x2="383.4168" y2="-165.4194" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-157.8920" 
+                  x2="380.0000" y2="-157.8920" class="btwns0"/>
+        
+            <line x1="45.2024" y1="17.1340" 
+                  x2="-43.8789" y2="-46.5776" class="btwns9"/>
+        
+            <line x1="167.5802" y1="376.9327" 
+                  x2="157.5802" y2="376.9327" class="btwns0"/>
+        
+            <line x1="167.5802" y1="376.9327" 
+                  x2="91.8257" y2="379.6425" class="btwns1"/>
+        
+            <line x1="81.8321" y1="380.0000" 
+                  x2="-0.0460" y2="350.1201" class="btwns2"/>
+        
+            <line x1="-296.0565" y1="34.5172" 
+                  x2="-315.9559" y2="-59.9034" class="btwns1"/>
+        
+            <line x1="-296.0565" y1="34.5172" 
+                  x2="-345.9896" y2="88.5848" class="btwns0"/>
+        
+            <line x1="-318.0181" y1="-69.6884" 
+                  x2="-381.7606" y2="-113.5289" class="btwns1"/>
+        
+            <line x1="-318.0181" y1="-69.6884" 
+                  x2="-372.5950" y2="7.2266" class="btwns1"/>
+        
+            <line x1="-318.0181" y1="-69.6884" 
+                  x2="-240.9805" y2="-177.2475" class="btwns4"/>
+        
+            <line x1="-352.7742" y1="95.9312" 
+                  x2="-362.7742" y2="95.9312" class="btwns0"/>
+        
+            <line x1="-352.7742" y1="95.9312" 
+                  x2="-375.3522" y2="24.9121" class="btwns0"/>
+        
+            <line x1="-224.3071" y1="-108.8328" 
+                  x2="-233.7541" y2="-175.4763" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-119.1958" 
+                  x2="-400.0000" y2="-119.1958" class="btwns0"/>
+        
+            <line x1="-378.3820" y1="15.3821" 
+                  x2="-388.3820" y2="15.3821" class="btwns0"/>
+        
+            <line x1="-9.4400" y1="346.6919" 
+                  x2="-19.4400" y2="346.6919" class="btwns0"/>
+        
+            <line x1="-118.4057" y1="-153.1246" 
+                  x2="-57.5160" y2="-60.7444" class="btwns9"/>
+        
+            <line x1="-118.4057" y1="-153.1246" 
+                  x2="-225.5186" y2="-182.7145" class="btwns8"/>
+        
+            <line x1="-118.4057" y1="-153.1246" 
+                  x2="-84.9119" y2="-235.3559" class="btwns1"/>
+        
+            <line x1="-203.9782" y1="-302.0813" 
+                  x2="-232.5765" y2="-195.0384" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(160.4566 -285.5267)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(229.2337 223.8340)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-272.1306 -270.7025)" 
+                class="vertice degree1 btwns0 authority1 KAMPALA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(275.7654 -33.9933)" 
+                class="vertice degree5 btwns5 authority6 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-99.3333 322.2365)" 
+                class="vertice degree3 btwns0 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-142.7687 -380.0000)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(179.2624 50.5704)" 
+                class="vertice degree6 btwns10 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(226.9097 -175.9225)" 
+                class="vertice degree10 btwns4 authority10 KINSHASA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(232.2634 -300.4553)" 
+                class="vertice degree2 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(184.1522 -49.8046)" 
+                class="vertice degree3 btwns3 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(168.2361 120.6895)" 
+                class="vertice degree7 btwns8 authority6 KINSHASA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(247.4941 132.4910)" 
+                class="vertice degree1 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(129.4655 -161.4268)" 
+                class="vertice degree2 btwns1 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(361.4262 51.7088)" 
+                class="vertice degree2 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(61.7861 -251.7267)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(63.7268 199.1974)" 
+                class="vertice degree1 btwns6 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-242.7398 228.6092)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(317.1491 -177.2497)" 
+                class="vertice degree2 btwns0 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-152.0494 260.2982)" 
+                class="vertice degree3 btwns1 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-40.9152 260.5952)" 
+                class="vertice degree3 btwns6 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(382.1965 -61.1242)" 
+                class="vertice degree1 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(324.4428 -232.8513)" 
+                class="vertice degree5 btwns0 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -157.8920)" 
+                class="vertice degree5 btwns0 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(45.2024 17.1340)" 
+                class="vertice degree1 btwns8 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(167.5802 376.9327)" 
+                class="vertice degree2 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(81.8321 380.0000)" 
+                class="vertice degree1 btwns1 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-296.0565 34.5172)" 
+                class="vertice degree1 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-318.0181 -69.6884)" 
+                class="vertice degree3 btwns3 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-185.0308 332.7604)" 
+                class="vertice degree1 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-352.7742 95.9312)" 
+                class="vertice degree3 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-224.3071 -108.8328)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -119.1958)" 
+                class="vertice degree2 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-378.3820 15.3821)" 
+                class="vertice degree3 btwns0 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-9.4400 346.6919)" 
+                class="vertice degree5 btwns1 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-118.4057 -153.1246)" 
+                class="vertice degree2 btwns8 authority2 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-52.0127 -52.3950)" 
+                class="vertice degree1 btwns8 authority1 KINSHASA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-203.9782 -302.0813)" 
+                class="vertice degree2 btwns1 authority2 KINSHASA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-235.1576 -185.3773)" 
+                class="vertice degree5 btwns7 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-81.1397 -244.6172)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(160.4566 -285.5267)" 
+                id="05KINSHASA1064" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05KINSHASA1064
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(229.2337 223.8340)" 
+                id="05KINSHASA1782" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05KINSHASA1782
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-272.1306 -270.7025)" 
+                id="07KAMPALA1272" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KAMPALA1272.html">07KAMPALA1272</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>UGANDA PROTESTS TO DRC OVER OIL FACILITY ATTACK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(275.7654 -33.9933)" 
+                id="07KINSHASA102" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KINSHASA102.html">07KINSHASA102</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>KABILA ALLIES WIN EIGHT OF NINE GUBERNATORIAL RACES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-99.3333 322.2365)" 
+                id="07KINSHASA1032" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA1032.html">07KINSHASA1032</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CONGO, ANGOLA ANNOUNCE PLANS TO DEMARCATE BORDER, DEVELOP SHARED OIL VENTURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-142.7687 -380.0000)" 
+                id="07KINSHASA1040" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA1040.html">07KINSHASA1040</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KIVU DEMARCHE DELIVERED IN KINSHASA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.2624 50.5704)" 
+                id="07KINSHASA130" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA130.html">07KINSHASA130</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ELECTORAL COMMISSION POSTPONES GUBERNATORIAL VOTE IN DRC'S KASAI PROVINCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(226.9097 -175.9225)" 
+                id="07KINSHASA134" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA134.html">07KINSHASA134</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PROTESTS TURN VIOLENT IN BAS-CONGO PROVINCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(232.2634 -300.4553)" 
+                id="07KINSHASA136" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA136.html">07KINSHASA136</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BAS-CONGO CALM, CALL FOR GENERAL STRIKE IN KINSHASA UNSUCCESSFUL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(184.1522 -49.8046)" 
+                id="07KINSHASA161" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA161.html">07KINSHASA161</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>BAS-CONGO UPDATE: COURT GRANTS APPEAL FOR GUBERNATORIAL RE-VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.2361 120.6895)" 
+                id="07KINSHASA179" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>02/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA179.html">07KINSHASA179</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>DRC'S COURTS SLOW TO RESOLVE ELECTORAL DISPUTES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(247.4941 132.4910)" 
+                id="07KINSHASA186" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA186.html">07KINSHASA186</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AMP CANDIDATES WIN KASAI GUBERNATORIAL ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(129.4655 -161.4268)" 
+                id="07KINSHASA200" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA200.html">07KINSHASA200</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BAS-CONGO UPDATE: DRC SUPREME COURT UPHOLDS ELECTION OF PRO-KABILA CANDIDATE IN GUBERNATORIAL RACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(361.4262 51.7088)" 
+                id="07KINSHASA221" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA221.html">07KINSHASA221</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW NORTH KIVU GOVERNOR'S PRIORITIES: SECURITY, RECONCILIATION AND DEVELOPMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(61.7861 -251.7267)" 
+                id="07KINSHASA240" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KINSHASA240.html">07KINSHASA240</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BAS-CONGO UPDATE: NATIONAL ASSEMBLY ESTABLISHES COMMITTEE OF INQUIRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(63.7268 199.1974)" 
+                id="07KINSHASA275" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA275.html">07KINSHASA275</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DRC SUPREME COURT CLOSING OUT BACKLOG OF NATIONAL ASSEMBLY ELECTION CHALLENGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-242.7398 228.6092)" 
+                id="07KINSHASA290" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA290.html">07KINSHASA290</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CONGOLESE AND ANGOLAN MINISTERS TO ATTEMPT RESOLUTION TO REMOTE BORDER DISPUTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(317.1491 -177.2497)" 
+                id="07KINSHASA291" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA291.html">07KINSHASA291</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EXAMINING BAS-CONGO'S FEBRUARY VIOLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-152.0494 260.2982)" 
+                id="07KINSHASA318" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA318.html">07KINSHASA318</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CONGO ACKNOWLEDGES DISPUTED BORDER AREA IS IN ANGOLA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-40.9152 260.5952)" 
+                id="07KINSHASA343" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA343.html">07KINSHASA343</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NATIONAL ASSEMBLY ESTABLISHES COMMISSION OF INQUIRY INTO BORDER DISPUTE WITH ANGOLA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(382.1965 -61.1242)" 
+                id="07KINSHASA350" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINSHASA350.html">07KINSHASA350</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BUNDU DIA KONGO: A DANGEROUS INSURRECTIONIST MOVEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(324.4428 -232.8513)" 
+                id="07KINSHASA414" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KINSHASA414.html">07KINSHASA414</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>MONUC INVESTIGATION ASSIGNS BLAME TO BOTH SIDES FOR BAS-CONGO VIOLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -157.8920)" 
+                id="07KINSHASA546" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KINSHASA546.html">07KINSHASA546</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PARLIAMENTARY COMMISSION BLAMES BOTH SIDES FOR BAS-CONGO VIOLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(45.2024 17.1340)" 
+                id="07KINSHASA642" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07KINSHASA642.html">07KINSHASA642</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>WESTERN KASAI GOVERNOR LOSES NO-CONFIDENCE VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(167.5802 376.9327)" 
+                id="07KINSHASA644" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07KINSHASA644.html">07KINSHASA644</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DRC'S OPPOSITION LAW NEARLY READY FOR PLENARY DEBATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(81.8321 380.0000)" 
+                id="07KINSHASA679" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07KINSHASA679.html">07KINSHASA679</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NATIONAL ASSEMBLY CLOSES REGULAR SESSION, REOPENS EXTRAORDINARY SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-296.0565 34.5172)" 
+                id="07KINSHASA855" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07KINSHASA855
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-318.0181 -69.6884)" 
+                id="07KINSHASA882" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA882.html">07KINSHASA882</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>KABILA, OTHER LEADERS AGREE ON POLITICAL AND DIPLOMATIC STRATEGY TO REDUCE TENSIONS IN EAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-185.0308 332.7604)" 
+                id="07KINSHASA884" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA884.html">07KINSHASA884</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ANGOLAN EXPULSION: TOTAL OF CONGOLESE ARRIVALS RISES FROM 16,000 TO 26,500</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-352.7742 95.9312)" 
+                id="07KINSHASA887" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA887.html">07KINSHASA887</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MONUC LAUNCHES MINEMBWE PEACE EFFORT IN WAKE OF RENEWED FIGHTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-224.3071 -108.8328)" 
+                id="07KINSHASA888" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA888.html">07KINSHASA888</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SSR CONTACT GROUP:  SUBSTANCE REFERRED TO EXPERTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -119.1958)" 
+                id="07KINSHASA895" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA895.html">07KINSHASA895</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SENATE PRESIDENT KENGO REVIEWS STATE OF PLAY AT END OF SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-378.3820 15.3821)" 
+                id="07KINSHASA900" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KINSHASA900.html">07KINSHASA900</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NATIONAL ASSEMBLY PRESIDENT KAMERHE JUGGLES LEGISLATIVE AGENDA AND PEACE INITIATIVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-9.4400 346.6919)" 
+                id="07KINSHASA906" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA906.html">07KINSHASA906</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PARLIAMENTARY UPDATE:  EXTRAORDINARY SESSION POST-MORTEM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-118.4057 -153.1246)" 
+                id="07KINSHASA932" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA932.html">07KINSHASA932</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AT LEAST 89 DEAD AND 100 INJURED IN DRC TRAIN-WRECK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-52.0127 -52.3950)" 
+                id="07KINSHASA945" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA945.html">07KINSHASA945</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DRC SUPREME COURT REINSTATES KASAI OCCIDENTAL GOVERNOR TO OFFICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-203.9782 -302.0813)" 
+                id="07KINSHASA949" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA949.html">07KINSHASA949</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CONGOLESE MILITARY RELEASES FOUR UGANDAN SOLDIERS HELD IN ITURI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-235.1576 -185.3773)" 
+                id="07KINSHASA991" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA991.html">07KINSHASA991</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>KABILA RELAXED AND UPBEAT IN FAREWELL MEETING WITH AMBASSADOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-81.1397 -244.6172)" 
+                id="07KINSHASA992" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KINSHASA992.html">07KINSHASA992</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KABILA VISITS KASAI OCCIDENTAL PROVINCE IN WAKE OF DEADLY TRAIN WRECKENTAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

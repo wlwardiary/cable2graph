@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06LONDON3046">06LONDON3046</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/14/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE65363">06STATE65363</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/22/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BEIJING7918">06BEIJING7918</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BEIJING7918.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MFA RESPONSE TO U.S. PROPOSAL ON UNSC 1267 COMMITTEE PROCEDURE CHANGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MOSCOW4497">06MOSCOW4497</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/26/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA344">06BRATISLAVA344</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BRATISLAVA344.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNSCR 1267 DEMARCHE DELIVERED TO SLOVAKIA; NO RESPONSE YET</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06USUNNEWYORK917">06USUNNEWYORK917</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK917.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">1267 COMMITTEE PROCEDURAL PROTECTIONS AND FAIRNESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PARIS3382">06PARIS3382</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06PARIS3382.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH COMMENT ON U.S. PROPOSAL REGARDING THE 1267 COMMITTEE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06USUNNEWYORK1078">06USUNNEWYORK1078</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK1078.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">1267 COMMITTEE: FRENCH REACTION TO U.S. PAPER ON FAIRNESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06USUNNEWYORK1430">06USUNNEWYORK1430</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06USUNNEWYORK1430.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/31/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">1267 COMMITTEE PROCEDURAL PROTECTIONS AND FAIRNESS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06STATE147093">06STATE147093</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06STATE147093.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">1267 COMMITTEE: FRANCO-AMERICAN PROPOSAL ON</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE196351">06STATE196351</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE199549">06STATE199549</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06USUNNEWYORK2296">06USUNNEWYORK2296</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06USUNNEWYORK2296.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/27/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UNSC ADOPTS RES 1730 ON SANCTIONS "DUE PROCESS"</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="165.8367" y1="176.5727" 
+                  x2="-53.4263" y2="142.2911" class="btwns0"/>
+        
+            <line x1="165.8367" y1="176.5727" 
+                  x2="143.2871" y2="4.9299" class="btwns2"/>
+        
+            <line x1="-179.9959" y1="290.0000" 
+                  x2="-69.4655" y2="148.6245" class="btwns4"/>
+        
+            <line x1="390.0000" y1="13.8246" 
+                  x2="151.9559" y2="-4.2287" class="btwns4"/>
+        
+            <line x1="307.6096" y1="-146.9648" 
+                  x2="149.5768" y2="-11.4932" class="btwns4"/>
+        
+            <line x1="49.1068" y1="80.9820" 
+                  x2="-54.4765" y2="136.0521" class="btwns0"/>
+        
+            <line x1="49.1068" y1="80.9820" 
+                  x2="134.6457" y2="1.8078" class="btwns1"/>
+        
+            <line x1="49.1068" y1="80.9820" 
+                  x2="-97.6935" y2="14.0535" class="btwns0"/>
+        
+            <line x1="-13.9913" y1="-290.0000" 
+                  x2="-135.8135" y2="-138.9402" class="btwns4"/>
+        
+            <line x1="-236.4579" y1="-289.6341" 
+                  x2="-147.2073" y2="-139.7482" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="-159.1664" 
+                  x2="-152.0278" y2="-132.2788" class="btwns4"/>
+        
+            <line x1="-63.3062" y1="140.7464" 
+                  x2="-268.6836" y2="41.6608" class="btwns2"/>
+        
+            <line x1="-63.3062" y1="140.7464" 
+                  x2="133.8302" y2="0.8036" class="btwns3"/>
+        
+            <line x1="-63.3062" y1="140.7464" 
+                  x2="-103.6385" y2="19.3947" class="btwns1"/>
+        
+            <line x1="-277.6901" y1="37.3155" 
+                  x2="-148.3612" y2="-123.3660" class="btwns2"/>
+        
+            <line x1="141.9845" y1="-4.9849" 
+                  x2="-132.9519" y2="-127.0970" class="btwns10"/>
+        
+            <line x1="-142.0911" y1="-131.1561" 
+                  x2="-109.2200" y2="0.2042" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(165.8367 176.5727)" 
+                class="vertice degree2 btwns0 authority2 BEIJING">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-179.9959 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 13.8246)" 
+                class="vertice degree0 btwns0 authority0 LONDON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(307.6096 -146.9648)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(49.1068 80.9820)" 
+                class="vertice degree4 btwns0 authority4 PARIS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-13.9913 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-236.4579 -289.6341)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -159.1664)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-63.3062 140.7464)" 
+                class="vertice degree10 btwns5 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-277.6901 37.3155)" 
+                class="vertice degree2 btwns0 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(141.9845 -4.9849)" 
+                class="vertice degree10 btwns9 authority9 USUNNEWYORK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-142.0911 -131.1561)" 
+                class="vertice degree10 btwns10 authority9 USUNNEWYORK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-106.7925 9.9051)" 
+                class="vertice degree4 btwns1 authority4 USUNNEWYORK">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(165.8367 176.5727)" 
+                id="06BEIJING7918" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BEIJING7918.html">06BEIJING7918</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>MFA RESPONSE TO U.S. PROPOSAL ON UNSC 1267 COMMITTEE PROCEDURE CHANGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-179.9959 290.0000)" 
+                id="06BRATISLAVA344" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BRATISLAVA344.html">06BRATISLAVA344</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNSCR 1267 DEMARCHE DELIVERED TO SLOVAKIA; NO RESPONSE YET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 13.8246)" 
+                id="06LONDON3046" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06LONDON3046
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(307.6096 -146.9648)" 
+                id="06MOSCOW4497" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MOSCOW4497
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(49.1068 80.9820)" 
+                id="06PARIS3382" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06PARIS3382.html">06PARIS3382</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>FRENCH COMMENT ON U.S. PROPOSAL REGARDING THE 1267 COMMITTEE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-13.9913 -290.0000)" 
+                id="06STATE147093" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06STATE147093.html">06STATE147093</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>1267 COMMITTEE: FRANCO-AMERICAN PROPOSAL ON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-236.4579 -289.6341)" 
+                id="06STATE196351" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE196351
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -159.1664)" 
+                id="06STATE199549" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE199549
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-63.3062 140.7464)" 
+                id="06STATE65363" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE65363
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-277.6901 37.3155)" 
+                id="06USUNNEWYORK1078" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK1078.html">06USUNNEWYORK1078</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>1267 COMMITTEE: FRENCH REACTION TO U.S. PAPER ON FAIRNESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(141.9845 -4.9849)" 
+                id="06USUNNEWYORK1430" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06USUNNEWYORK1430.html">06USUNNEWYORK1430</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>1267 COMMITTEE PROCEDURAL PROTECTIONS AND FAIRNESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-142.0911 -131.1561)" 
+                id="06USUNNEWYORK2296" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06USUNNEWYORK2296.html">06USUNNEWYORK2296</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UNSC ADOPTS RES 1730 ON SANCTIONS "DUE PROCESS"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-106.7925 9.9051)" 
+                id="06USUNNEWYORK917" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06USUNNEWYORK917.html">06USUNNEWYORK917</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>1267 COMMITTEE PROCEDURAL PROTECTIONS AND FAIRNESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

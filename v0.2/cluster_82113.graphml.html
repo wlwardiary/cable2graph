@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08KABUL2020">08KABUL2020</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KABUL268">09KABUL268</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09KABUL268.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/08/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FINANCIAL SERVICES NOW AVAILABLE THROUGH MOBILE PHONES IN AFGHANISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KABUL2020">09KABUL2020</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09KABUL2020.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Using Connection Technologies to Promote US Strategic Interests in Afghanistan:  Mobile Banking, Telecommunications Insurance, and Co-Location of Cell Phone Towers</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KABUL2920">09KABUL2920</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09KABUL2920.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Afghanistan: Building Cell Towers and Developing Telecom Capacity and Fiber Optic Infrastructure</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KABUL2962">09KABUL2962</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09KABUL2962.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/26/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AFGHAN REGULATORS USE TELECOMMUNICATIONS DEVELOPMENT FUND FOR RURAL SERVICE EXPANSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KABUL3767">09KABUL3767</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09KABUL3767.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/24/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AFGHANISTAN'S FIBER-OPTIC CABLE: PROBLEMS AND PROSPECTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KABUL3863">09KABUL3863</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09KABUL3863.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Corruption Threatens Mobile Money Pilot Program for Police Salaries</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10KABUL125">10KABUL125</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10KABUL125.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/15/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF AFGHAN FINANCIAL REGULATOR: "GOOD PEOPLE UNDER ATTACK"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10KABUL127">10KABUL127</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10KABUL127.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AFGHAN CENTRAL BANK GOVERNOR REITERATES SUPPORT FOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10EFTOKABUL597">10EFTOKABUL597</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10EFTOKABUL597.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AWCC BETS ON DRAMATIC MARKET EXPANSION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-114.5572" y1="-290.0000" 
+                  x2="-10.3827" y2="-173.5699" class="btwns0"/>
+        
+            <line x1="-307.7273" y1="43.2968" 
+                  x2="-384.6551" y2="164.9421" class="btwns0"/>
+        
+            <line x1="-307.7273" y1="43.2968" 
+                  x2="-119.5728" y2="9.6966" class="btwns4"/>
+        
+            <line x1="-3.7147" y1="-166.1175" 
+                  x2="-104.5266" y2="-0.6019" class="btwns8"/>
+        
+            <line x1="-3.7147" y1="-166.1175" 
+                  x2="171.6211" y2="-223.2649" class="btwns0"/>
+        
+            <line x1="-109.7285" y1="7.9387" 
+                  x2="-38.0748" y2="176.4968" class="btwns10"/>
+        
+            <line x1="113.6666" y1="290.0000" 
+                  x2="-25.9917" y2="191.4648" class="btwns8"/>
+        
+            <line x1="113.6666" y1="290.0000" 
+                  x2="278.2037" y2="224.0695" class="btwns4"/>
+        
+            <line x1="390.0000" y1="91.1511" 
+                  x2="293.7018" y2="212.5164" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-114.5572 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-307.7273 43.2968)" 
+                class="vertice degree5 btwns3 authority5 KABUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 173.3939)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-3.7147 -166.1175)" 
+                class="vertice degree10 btwns5 authority9 KABUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-109.7285 7.9387)" 
+                class="vertice degree10 btwns10 authority10 KABUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(181.1288 -226.3638)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(113.6666 290.0000)" 
+                class="vertice degree5 btwns5 authority4 KABUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-34.1626 185.6998)" 
+                class="vertice degree5 btwns6 authority5 unknown">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 91.1511)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(287.4862 220.3500)" 
+                class="vertice degree5 btwns3 authority4 KABUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-114.5572 -290.0000)" 
+                id="08KABUL2020" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08KABUL2020
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-307.7273 43.2968)" 
+                id="09KABUL2020" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09KABUL2020.html">09KABUL2020</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>Using Connection Technologies to Promote US Strategic Interests in Afghanistan:  Mobile Banking, Telecommunications Insurance, and Co-Location of Cell Phone Towers</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 173.3939)" 
+                id="09KABUL268" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09KABUL268.html">09KABUL268</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FINANCIAL SERVICES NOW AVAILABLE THROUGH MOBILE PHONES IN AFGHANISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-3.7147 -166.1175)" 
+                id="09KABUL2920" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09KABUL2920.html">09KABUL2920</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Afghanistan: Building Cell Towers and Developing Telecom Capacity and Fiber Optic Infrastructure</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-109.7285 7.9387)" 
+                id="09KABUL2962" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09KABUL2962.html">09KABUL2962</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AFGHAN REGULATORS USE TELECOMMUNICATIONS DEVELOPMENT FUND FOR RURAL SERVICE EXPANSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(181.1288 -226.3638)" 
+                id="09KABUL3767" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09KABUL3767.html">09KABUL3767</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AFGHANISTAN'S FIBER-OPTIC CABLE: PROBLEMS AND PROSPECTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(113.6666 290.0000)" 
+                id="09KABUL3863" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09KABUL3863.html">09KABUL3863</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>Corruption Threatens Mobile Money Pilot Program for Police Salaries</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-34.1626 185.6998)" 
+                id="10EFTOKABUL597" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/17/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10EFTOKABUL597.html">10EFTOKABUL597</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>AWCC BETS ON DRAMATIC MARKET EXPANSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 91.1511)" 
+                id="10KABUL125" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/15/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10KABUL125.html">10KABUL125</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHIEF AFGHAN FINANCIAL REGULATOR: "GOOD PEOPLE UNDER ATTACK"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(287.4862 220.3500)" 
+                id="10KABUL127" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/16/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10KABUL127.html">10KABUL127</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>AFGHAN CENTRAL BANK GOVERNOR REITERATES SUPPORT FOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

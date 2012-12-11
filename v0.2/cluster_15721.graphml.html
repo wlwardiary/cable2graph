@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04WELLINGTON934">04WELLINGTON934</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/09/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04WELLINGTON975">04WELLINGTON975</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/22/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04WELLINGTON1047">04WELLINGTON1047</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/16/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05WELLINGTON231">05WELLINGTON231</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/19/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05WELLINGTON499">05WELLINGTON499</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/28/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05WELLINGTON507">05WELLINGTON507</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/02/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE162859">05STATE162859</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/05/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE165862">05STATE165862</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/05/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05WELLINGTON684">05WELLINGTON684</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05WELLINGTON684.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/05</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">SECURITY ENVIRONMENT PROFILE QUESTIONNAIRE (SEPQ) FOR NEW ZEALAND</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05SANAA2778">05SANAA2778</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05SANAA2778.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/05</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">SANAA EAC MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LIMA4078">05LIMA4078</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05LIMA4078.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">SECURITY ENVIRONMENT PROFILE QUESTIONNAIRE (SEPQ)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05SANAA2882">05SANAA2882</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05SANAA2882.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/03/05</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">SANAA EAC MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05MADRID3482">05MADRID3482</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05MADRID3482.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SECURITY ENVIRONMENTAL PROFILE QUESTIONNAIRE RESPONSE (SEPQ) - MISSION SPAIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE186137">05STATE186137</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/18/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05SANAA3048">05SANAA3048</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05SANAA3048.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">SANAA EAC MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05SANAA3546">05SANAA3546</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05SANAA3546.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/20/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">STATE-DOD MOU ON SECURITY - ANNUAL REVIEW OF MOA FOR YEMEN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-149.8951" y1="-11.0915" 
+                  x2="-96.9760" y2="-131.7736" class="btwns2"/>
+        
+            <line x1="-316.7260" y1="-59.1210" 
+                  x2="-102.3521" y2="-137.4981" class="btwns2"/>
+        
+            <line x1="-324.7638" y1="-173.3151" 
+                  x2="-102.8639" y2="-142.3154" class="btwns2"/>
+        
+            <line x1="346.3853" y1="-124.8302" 
+                  x2="187.6933" y2="-30.2734" class="btwns2"/>
+        
+            <line x1="390.0000" y1="0.9384" 
+                  x2="189.0270" y2="-23.9268" class="btwns2"/>
+        
+            <line x1="164.3943" y1="163.5722" 
+                  x2="129.3601" y2="280.4213" class="btwns1"/>
+        
+            <line x1="164.3943" y1="163.5722" 
+                  x2="-11.6505" y2="250.6961" class="btwns5"/>
+        
+            <line x1="164.3943" y1="163.5722" 
+                  x2="178.3257" y2="-15.1849" class="btwns9"/>
+        
+            <line x1="164.3943" y1="163.5722" 
+                  x2="341.8627" y2="204.3135" class="btwns2"/>
+        
+            <line x1="126.4881" y1="290.0000" 
+                  x2="-10.8827" y2="257.4381" class="btwns0"/>
+        
+            <line x1="-20.6130" y1="255.1316" 
+                  x2="-214.3176" y2="272.9890" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="235.7885" 
+                  x2="-234.0209" y2="271.6654" class="btwns2"/>
+        
+            <line x1="179.1027" y1="-25.1547" 
+                  x2="-83.7586" y2="-137.0161" class="btwns10"/>
+        
+            <line x1="-207.7467" y1="-266.0517" 
+                  x2="-99.7204" y2="-148.3006" class="btwns2"/>
+        
+            <line x1="-25.4669" y1="-290.0000" 
+                  x2="-88.8355" y2="-150.0416" class="btwns2"/>
+        
+            <line x1="99.5373" y1="-211.7884" 
+                  x2="-83.5757" y2="-144.3862" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-149.8951 -11.0915)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-316.7260 -59.1210)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-324.7638 -173.3151)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(346.3853 -124.8302)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 0.9384)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(164.3943 163.5722)" 
+                class="vertice degree5 btwns7 authority5 SANAA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(126.4881 290.0000)" 
+                class="vertice degree1 btwns0 authority1 SANAA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-20.6130 255.1316)" 
+                class="vertice degree3 btwns3 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 235.7885)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(179.1027 -25.1547)" 
+                class="vertice degree5 btwns10 authority4 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(351.6092 206.5510)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-224.2754 273.9070)" 
+                class="vertice degree1 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-207.7467 -266.0517)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-25.4669 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(99.5373 -211.7884)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-92.9601 -140.9318)" 
+                class="vertice degree10 btwns10 authority10 WELLINGTON">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-149.8951 -11.0915)" 
+                id="04WELLINGTON1047" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/16/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04WELLINGTON1047
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-316.7260 -59.1210)" 
+                id="04WELLINGTON934" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/09/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04WELLINGTON934
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-324.7638 -173.3151)" 
+                id="04WELLINGTON975" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04WELLINGTON975
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(346.3853 -124.8302)" 
+                id="05LIMA4078" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05LIMA4078.html">05LIMA4078</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SECURITY ENVIRONMENT PROFILE QUESTIONNAIRE (SEPQ)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 0.9384)" 
+                id="05MADRID3482" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05MADRID3482.html">05MADRID3482</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SECURITY ENVIRONMENTAL PROFILE QUESTIONNAIRE RESPONSE (SEPQ) - MISSION SPAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.3943 163.5722)" 
+                id="05SANAA2778" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05SANAA2778.html">05SANAA2778</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SANAA EAC MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(126.4881 290.0000)" 
+                id="05SANAA2882" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05SANAA2882.html">05SANAA2882</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SANAA EAC MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.6130 255.1316)" 
+                id="05SANAA3048" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05SANAA3048.html">05SANAA3048</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SANAA EAC MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 235.7885)" 
+                id="05SANAA3546" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05SANAA3546.html">05SANAA3546</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>STATE-DOD MOU ON SECURITY - ANNUAL REVIEW OF MOA FOR YEMEN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.1027 -25.1547)" 
+                id="05STATE162859" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    05STATE162859
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(351.6092 206.5510)" 
+                id="05STATE165862" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE165862
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-224.2754 273.9070)" 
+                id="05STATE186137" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05STATE186137
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-207.7467 -266.0517)" 
+                id="05WELLINGTON231" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05WELLINGTON231
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-25.4669 -290.0000)" 
+                id="05WELLINGTON499" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/28/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05WELLINGTON499
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(99.5373 -211.7884)" 
+                id="05WELLINGTON507" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05WELLINGTON507
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-92.9601 -140.9318)" 
+                id="05WELLINGTON684" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05WELLINGTON684.html">05WELLINGTON684</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SECURITY ENVIRONMENT PROFILE QUESTIONNAIRE (SEPQ) FOR NEW ZEALAND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

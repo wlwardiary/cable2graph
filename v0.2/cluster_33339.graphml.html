@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BANJUL297">06BANJUL297</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/09/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL303">06BANJUL303</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BANJUL303.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: CONVERSATION WITH ISLAMIC RELIGIOUS LEADER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL316">06BANJUL316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BANJUL316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: MEETING WITH PRESIDENTIAL ADVISOR ON HUMAN RIGHTS ISSUES, MCA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL318">06BANJUL318</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BANJUL318.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">THE GAMBIA: UDPATE ON DETAINEES, STATUS OF NEWSPAPER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL343">06BANJUL343</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BANJUL343.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: DISCUSSIONS WITH ISLAMIC RELIGIOUS FIGURES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL348">06BANJUL348</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BANJUL348.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/31/06</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">THE GAMBIA: UPDATE ON TREASON TRIAL, MEDIA ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL354">06BANJUL354</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BANJUL354.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: CONVERSATION WITH HUMAN RIGHTS NGO DIRECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL394">06BANJUL394</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BANJUL394.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: VISIT BY SENEGALESE PRESIDENT WADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL436">06BANJUL436</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06BANJUL436.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/10/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: JAMMEH'S PITCH TO UNSYG ANNAN ON SENEGAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL451">06BANJUL451</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06BANJUL451.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: IMPROVED TENOR OF RELATIONSHIP WITH SENEGAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DAKAR1789">06DAKAR1789</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06DAKAR1789.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SENEGALESE-GAMBIAN RELATIONS ARE GOOD, BUT IS THE GOTG GETTING THE MESSAGE?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BANJUL574">06BANJUL574</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BANJUL574.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GAMBIA: UPDATE ON TIES WITH SENEGAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-225.4277" y1="-162.2668" 
+                  x2="-333.8399" y2="-48.6215" class="btwns3"/>
+        
+            <line x1="-225.4277" y1="-162.2668" 
+                  x2="-263.4306" y2="-280.4799" class="btwns0"/>
+        
+            <line x1="-225.4277" y1="-162.2668" 
+                  x2="-43.2846" y2="-181.6036" class="btwns8"/>
+        
+            <line x1="-340.7425" y1="-41.3858" 
+                  x2="-386.3269" y2="74.0421" class="btwns0"/>
+        
+            <line x1="-33.3404" y1="-182.6593" 
+                  x2="145.0721" y2="-144.7112" class="btwns10"/>
+        
+            <line x1="154.8533" y1="-142.6307" 
+                  x2="227.9062" y2="-258.4795" class="btwns0"/>
+        
+            <line x1="154.8533" y1="-142.6307" 
+                  x2="221.2653" y2="6.8710" class="btwns10"/>
+        
+            <line x1="225.3250" y1="16.0099" 
+                  x2="380.0465" y2="30.9855" class="btwns0"/>
+        
+            <line x1="225.3250" y1="16.0099" 
+                  x2="160.3519" y2="154.7419" class="btwns6"/>
+        
+            <line x1="156.1106" y1="163.7979" 
+                  x2="35.9133" y2="254.1252" class="btwns3"/>
+        
+            <line x1="-128.8547" y1="290.0000" 
+                  x2="18.0957" y2="262.0043" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-225.4277 -162.2668)" 
+                class="vertice degree10 btwns7 authority9 BANJUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-340.7425 -41.3858)" 
+                class="vertice degree5 btwns2 authority4 BANJUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-266.4911 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BANJUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-33.3404 -182.6593)" 
+                class="vertice degree5 btwns8 authority5 BANJUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 83.3431)" 
+                class="vertice degree0 btwns0 authority0 BANJUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(154.8533 -142.6307)" 
+                class="vertice degree10 btwns10 authority10 BANJUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(233.2402 -266.9382)" 
+                class="vertice degree0 btwns0 authority0 BANJUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(225.3250 16.0099)" 
+                class="vertice degree10 btwns8 authority9 BANJUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.9489)" 
+                class="vertice degree0 btwns0 authority0 BANJUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(156.1106 163.7979)" 
+                class="vertice degree5 btwns5 authority4 BANJUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-128.8547 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BANJUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(27.9190 260.1328)" 
+                class="vertice degree5 btwns2 authority4 DAKAR">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-225.4277 -162.2668)" 
+                id="06BANJUL297" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06BANJUL297
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-340.7425 -41.3858)" 
+                id="06BANJUL303" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BANJUL303.html">06BANJUL303</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: CONVERSATION WITH ISLAMIC RELIGIOUS LEADER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-266.4911 -290.0000)" 
+                id="06BANJUL316" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BANJUL316.html">06BANJUL316</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: MEETING WITH PRESIDENTIAL ADVISOR ON HUMAN RIGHTS ISSUES, MCA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-33.3404 -182.6593)" 
+                id="06BANJUL318" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BANJUL318.html">06BANJUL318</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: UDPATE ON DETAINEES, STATUS OF NEWSPAPER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 83.3431)" 
+                id="06BANJUL343" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BANJUL343.html">06BANJUL343</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: DISCUSSIONS WITH ISLAMIC RELIGIOUS FIGURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(154.8533 -142.6307)" 
+                id="06BANJUL348" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BANJUL348.html">06BANJUL348</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: UPDATE ON TREASON TRIAL, MEDIA ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(233.2402 -266.9382)" 
+                id="06BANJUL354" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BANJUL354.html">06BANJUL354</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: CONVERSATION WITH HUMAN RIGHTS NGO DIRECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(225.3250 16.0099)" 
+                id="06BANJUL394" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BANJUL394.html">06BANJUL394</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: VISIT BY SENEGALESE PRESIDENT WADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.9489)" 
+                id="06BANJUL436" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BANJUL436.html">06BANJUL436</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: JAMMEH'S PITCH TO UNSYG ANNAN ON SENEGAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(156.1106 163.7979)" 
+                id="06BANJUL451" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BANJUL451.html">06BANJUL451</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: IMPROVED TENOR OF RELATIONSHIP WITH SENEGAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-128.8547 290.0000)" 
+                id="06BANJUL574" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BANJUL574.html">06BANJUL574</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE GAMBIA: UPDATE ON TIES WITH SENEGAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(27.9190 260.1328)" 
+                id="06DAKAR1789" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06DAKAR1789.html">06DAKAR1789</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SENEGALESE-GAMBIAN RELATIONS ARE GOOD, BUT IS THE GOTG GETTING THE MESSAGE?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

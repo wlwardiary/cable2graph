@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN406">07YEREVAN406</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07YEREVAN406.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA REQUESTS UZBEK HELP TO LOCATE ESCAPED TRAFFICKER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN649">07YEREVAN649</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07YEREVAN649.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WITNESS DIES DURING INTERROGATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN658">07YEREVAN658</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07YEREVAN658.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PM SARGSIAN HOPES FOR "BIG TENT" COALITION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN661">07YEREVAN661</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07YEREVAN661.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TRAFFICKING VICTIMS HELD IN GEORGIA RETURNED TO ARMENIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN691">07YEREVAN691</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07YEREVAN691.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CDA'S LUNCH WITH DEPUTY PG AND ANTI-TIP WORKERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN713">07YEREVAN713</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07YEREVAN713.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HR DEFENDER GIVES US GHULYAN DEATH CASE UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN754">07YEREVAN754</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07YEREVAN754.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LAWYERS: DEATH IN CUSTODY CASE PROCEEDING FAIRLY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN296">08YEREVAN296</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08YEREVAN296.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/07/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ARMENIAN GENERAL'S SON ALLEGEDLY INVOVLED IN MURDER, BUT NOT CHARGED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN392">08YEREVAN392</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08YEREVAN392.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ONE YEAR LATER:  LEVON GULYAN DEATH CASE SMELLS OF COVER-UP AS IT REACHES FINAL STAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN479">08YEREVAN479</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08YEREVAN479.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/10/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COURT UNEXPECTEDLY ORDERS REOPENING OF SUSPICIOUS DEATH CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN596">08YEREVAN596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08YEREVAN596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">APPEALS COURT UPHOLDS ORDER FOR PROSECUTION TO RE-OPEN DEATH-IN-POLICE CUSTODY INVESTIGATION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="127.0309" 
+                  x2="300.1675" y2="9.7502" class="btwns4"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-172.4169" y2="75.8623" class="btwns0"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-380.2047" y2="31.1103" class="btwns4"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="90.8080" y2="37.9963" class="btwns10"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-120.6551" y2="144.2341" class="btwns2"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-263.9694" y2="235.6026" class="btwns2"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-128.2026" y2="-102.1712" class="btwns7"/>
+        
+            <line x1="-162.4169" y1="75.8623" 
+                  x2="-67.2638" y2="280.9290" class="btwns2"/>
+        
+            <line x1="294.0867" y1="1.8114" 
+                  x2="284.0867" y2="1.8114" class="btwns0"/>
+        
+            <line x1="294.0867" y1="1.8114" 
+                  x2="110.5408" y2="34.7510" class="btwns7"/>
+        
+            <line x1="100.6980" y1="36.5174" 
+                  x2="90.6980" y2="36.5174" class="btwns0"/>
+        
+            <line x1="-115.4426" y1="152.7681" 
+                  x2="-260.7334" y2="238.9404" class="btwns1"/>
+        
+            <line x1="-115.4426" y1="152.7681" 
+                  x2="-125.9051" y2="-102.0000" class="btwns2"/>
+        
+            <line x1="-115.4426" y1="152.7681" 
+                  x2="-66.6212" y2="280.6576" class="btwns1"/>
+        
+            <line x1="1.2960" y1="-290.0000" 
+                  x2="-8.7040" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="1.2960" y1="-290.0000" 
+                  x2="-120.4890" y2="-120.1189" class="btwns4"/>
+        
+            <line x1="-126.3154" y1="-111.9915" 
+                  x2="-136.3154" y2="-111.9915" class="btwns0"/>
+        
+            <line x1="-126.3154" y1="-111.9915" 
+                  x2="-232.5172" y2="-274.5390" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 127.0309)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-162.4169 75.8623)" 
+                class="vertice degree10 btwns10 authority10 YEREVAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 29.0975)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(294.0867 1.8114)" 
+                class="vertice degree4 btwns2 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(100.6980 36.5174)" 
+                class="vertice degree4 btwns5 authority2 YEREVAN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-115.4426 152.7681)" 
+                class="vertice degree4 btwns1 authority5 YEREVAN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-269.3344 244.0416)" 
+                class="vertice degree1 btwns0 authority2 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(1.2960 -290.0000)" 
+                class="vertice degree2 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-126.3154 -111.9915)" 
+                class="vertice degree7 btwns5 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-237.9869 -282.9105)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-63.0548 290.0000)" 
+                class="vertice degree1 btwns0 authority2 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 127.0309)" 
+                id="07YEREVAN406" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07YEREVAN406.html">07YEREVAN406</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARMENIA REQUESTS UZBEK HELP TO LOCATE ESCAPED TRAFFICKER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-162.4169 75.8623)" 
+                id="07YEREVAN649" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07YEREVAN649.html">07YEREVAN649</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>WITNESS DIES DURING INTERROGATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 29.0975)" 
+                id="07YEREVAN658" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07YEREVAN658.html">07YEREVAN658</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PM SARGSIAN HOPES FOR "BIG TENT" COALITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(294.0867 1.8114)" 
+                id="07YEREVAN661" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07YEREVAN661.html">07YEREVAN661</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>TRAFFICKING VICTIMS HELD IN GEORGIA RETURNED TO ARMENIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.6980 36.5174)" 
+                id="07YEREVAN691" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07YEREVAN691.html">07YEREVAN691</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CDA'S LUNCH WITH DEPUTY PG AND ANTI-TIP WORKERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-115.4426 152.7681)" 
+                id="07YEREVAN713" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07YEREVAN713.html">07YEREVAN713</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>HR DEFENDER GIVES US GHULYAN DEATH CASE UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-269.3344 244.0416)" 
+                id="07YEREVAN754" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07YEREVAN754.html">07YEREVAN754</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LAWYERS: DEATH IN CUSTODY CASE PROCEEDING FAIRLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.2960 -290.0000)" 
+                id="08YEREVAN296" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08YEREVAN296.html">08YEREVAN296</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ARMENIAN GENERAL'S SON ALLEGEDLY INVOVLED IN MURDER, BUT NOT CHARGED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-126.3154 -111.9915)" 
+                id="08YEREVAN392" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>05/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08YEREVAN392.html">08YEREVAN392</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>ONE YEAR LATER:  LEVON GULYAN DEATH CASE SMELLS OF COVER-UP AS IT REACHES FINAL STAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-237.9869 -282.9105)" 
+                id="08YEREVAN479" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08YEREVAN479.html">08YEREVAN479</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COURT UNEXPECTEDLY ORDERS REOPENING OF SUSPICIOUS DEATH CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-63.0548 290.0000)" 
+                id="08YEREVAN596" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08YEREVAN596.html">08YEREVAN596</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>APPEALS COURT UPHOLDS ORDER FOR PROSECUTION TO RE-OPEN DEATH-IN-POLICE CUSTODY INVESTIGATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

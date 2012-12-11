@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07PRAGUE160">07PRAGUE160</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/19/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE244">07PRAGUE244</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE244.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">IPR SITUATION AT CZECH BORDER MARKETS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE274">07PRAGUE274</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE274.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH REPUBLIC: ACTIONS TO COMBAT PIRACY AT BORDER MARKETS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE293">07PRAGUE293</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE293.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH REPUBLIC: AMBASSADOR PUSHES IPR PROTECTION AND BUSINESS CLIMATE IMPROVEMENTS WITH NEW MINISTER OF INDUSTRY AND TRADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE315">07PRAGUE315</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE315.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/07</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">CZECH REPUBLIC:  AMBASSADOR'S MEETING WITH PM TOPOLANEK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE323">07PRAGUE323</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE323.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH RESPONSE TO RIAA SPECIAL 301 COMPLAINT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE328">07PRAGUE328</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PRAGUE328.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AGING CZECH SOCIAL DEMOCRATS RE-ELECT A WEAKENED PAROUBEK, MISS CHANCE FOR CHANGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE399">07PRAGUE399</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07PRAGUE399.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH REPUBLIC: PROGRESS ON IPR ACTION PLAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE56305">07STATE56305</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/26/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE457">07PRAGUE457</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07PRAGUE457.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SPECIAL 301 CZECH REPUBLIC 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE578">07PRAGUE578</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PRAGUE578.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH REPUBLIC: IPR OFF-CYCLE REVIEW ACTION PLAN DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE742">07PRAGUE742</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07PRAGUE742.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SUMMARY OF CZECH IPR INTER-MINISTERIAL MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE849">07PRAGUE849</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07PRAGUE849.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PIRATES OF THE CZECH REPUBLIC: MINISTRY WILL PRESENT IPR ACTION PLAN TO GOVERNMENT IN SEPTEMBER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE1228">07PRAGUE1228</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07PRAGUE1228.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH REPUBLIC: POST RECOMMENDS WATCH LIST FOR SPECIAL 301 OUT-OF-CYCLE REVIEW</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="-134.9429" y2="189.0602" class="btwns7"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="140.6570" y2="159.7149" class="btwns10"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="43.4657" y2="-175.5341" class="btwns9"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="-322.5293" y2="117.0722" class="btwns6"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="189.8934" y2="13.3119" class="btwns4"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="-197.9071" y2="-153.1195" class="btwns4"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="-315.0726" y2="-99.7419" class="btwns4"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="-380.0246" y2="-19.6802" class="btwns4"/>
+        
+            <line x1="-87.0441" y1="0.8919" 
+                  x2="169.7242" y2="-68.2766" class="btwns4"/>
+        
+            <line x1="44.6687" y1="290.0000" 
+                  x2="-128.4696" y2="203.2315" class="btwns3"/>
+        
+            <line x1="44.6687" y1="290.0000" 
+                  x2="142.4431" y2="173.1063" class="btwns2"/>
+        
+            <line x1="-137.4097" y1="198.7512" 
+                  x2="-349.5029" y2="247.4690" class="btwns3"/>
+        
+            <line x1="148.8589" y1="165.4358" 
+                  x2="380.1632" y2="207.7447" class="btwns5"/>
+        
+            <line x1="49.4128" y1="-183.5735" 
+                  x2="179.3342" y2="-283.8885" class="btwns5"/>
+        
+            <line x1="-359.2491" y1="249.7077" 
+                  x2="-333.6128" y2="131.2703" class="btwns2"/>
+        
+            <line x1="199.8834" y1="13.7599" 
+                  x2="181.7344" y2="-61.1588" class="btwns0"/>
+        
+            <line x1="-203.7492" y1="-161.2355" 
+                  x2="-315.1952" y2="-108.0841" class="btwns0"/>
+        
+            <line x1="-324.2213" y1="-103.7794" 
+                  x2="-383.8072" y2="-28.2324" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-87.0441 0.8919)" 
+                class="vertice degree10 btwns10 authority10 PRAGUE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(44.6687 290.0000)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-137.4097 198.7512)" 
+                class="vertice degree2 btwns1 authority2 PRAGUE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(148.8589 165.4358)" 
+                class="vertice degree2 btwns2 authority2 PRAGUE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 209.5440)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(49.4128 -183.5735)" 
+                class="vertice degree1 btwns1 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-359.2491 249.7077)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(187.2494 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-331.4972 121.4966)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(199.8834 13.7599)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-203.7492 -161.2355)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-324.2213 -103.7794)" 
+                class="vertice degree2 btwns0 authority2 PRAGUE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -20.3807)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.3800 -70.8777)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-87.0441 0.8919)" 
+                id="07PRAGUE1228" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07PRAGUE1228.html">07PRAGUE1228</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: POST RECOMMENDS WATCH LIST FOR SPECIAL 301 OUT-OF-CYCLE REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(44.6687 290.0000)" 
+                id="07PRAGUE160" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07PRAGUE160
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-137.4097 198.7512)" 
+                id="07PRAGUE244" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE244.html">07PRAGUE244</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IPR SITUATION AT CZECH BORDER MARKETS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(148.8589 165.4358)" 
+                id="07PRAGUE274" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE274.html">07PRAGUE274</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: ACTIONS TO COMBAT PIRACY AT BORDER MARKETS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 209.5440)" 
+                id="07PRAGUE293" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE293.html">07PRAGUE293</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: AMBASSADOR PUSHES IPR PROTECTION AND BUSINESS CLIMATE IMPROVEMENTS WITH NEW MINISTER OF INDUSTRY AND TRADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(49.4128 -183.5735)" 
+                id="07PRAGUE315" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE315.html">07PRAGUE315</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC:  AMBASSADOR'S MEETING WITH PM TOPOLANEK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-359.2491 249.7077)" 
+                id="07PRAGUE323" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE323.html">07PRAGUE323</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CZECH RESPONSE TO RIAA SPECIAL 301 COMPLAINT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(187.2494 -290.0000)" 
+                id="07PRAGUE328" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PRAGUE328.html">07PRAGUE328</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AGING CZECH SOCIAL DEMOCRATS RE-ELECT A WEAKENED PAROUBEK, MISS CHANCE FOR CHANGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-331.4972 121.4966)" 
+                id="07PRAGUE399" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07PRAGUE399.html">07PRAGUE399</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: PROGRESS ON IPR ACTION PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(199.8834 13.7599)" 
+                id="07PRAGUE457" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07PRAGUE457.html">07PRAGUE457</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SPECIAL 301 CZECH REPUBLIC 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-203.7492 -161.2355)" 
+                id="07PRAGUE578" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PRAGUE578.html">07PRAGUE578</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: IPR OFF-CYCLE REVIEW ACTION PLAN DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-324.2213 -103.7794)" 
+                id="07PRAGUE742" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07PRAGUE742.html">07PRAGUE742</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SUMMARY OF CZECH IPR INTER-MINISTERIAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -20.3807)" 
+                id="07PRAGUE849" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07PRAGUE849.html">07PRAGUE849</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PIRATES OF THE CZECH REPUBLIC: MINISTRY WILL PRESENT IPR ACTION PLAN TO GOVERNMENT IN SEPTEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.3800 -70.8777)" 
+                id="07STATE56305" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07STATE56305
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

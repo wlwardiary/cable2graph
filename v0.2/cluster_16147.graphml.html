@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05ABUJA2029">05ABUJA2029</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/22/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1643">05LAGOS1643</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1643.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #1: LAGOS BELLVIEW FLIGHT 3210 CRASH; TIME: 4:00 AM (LOCAL)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1644">05LAGOS1644</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1644.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #2: LAGOS BELLVIEW FLIGHT 3210 CRASH; TIME: 6:00 AM (LOCAL)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ABUJA2030">05ABUJA2030</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ABUJA2030.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ABUJA SITREP #2: CRASH OF BELLVIEW FLIGHT 3210</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ABUJA2031">05ABUJA2031</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ABUJA2031.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #1 - 10/23/2005 1130 HOURS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1645">05LAGOS1645</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1645.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #3: LAGOS BELLEVIEW FLIGHT 3210 CRASH; TIME 1:00 AM (LOCAL)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ABUJA2032">05ABUJA2032</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ABUJA2032.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ABUJA SITREP #3: CRASH OF BELLVIEW FLIGHT 3210, TIME 16:30 LOCAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1646">05LAGOS1646</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1646.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #4: CRASH OF BELLVIEW FLIGHT B3-210; TIME: 17:00 (LOCAL)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1648">05LAGOS1648</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1648.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SITREP #5: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 10:30 AM (LOCAL)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ABUJA2039">05ABUJA2039</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ABUJA2039.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NIGERIA REQUESTS U.S. ASSISTANCE IN INVESTIGATING BELLVIEW AIRLINES' FATAL CRASH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1656">05LAGOS1656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SITREP #6: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 5:23 PM (LOCAL)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1660">05LAGOS1660</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1660.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/25/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SITREP #7: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 25, 12:30 AM (LOCAL)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1662">05LAGOS1662</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1662.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/25/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SITREP #8: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 7:50 PM (LOCAL)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1674">05LAGOS1674</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1674.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELLVIEW CRASH: AN UNLIKELY CLAIM OF RESPONSIBILITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ABUJA2070">05ABUJA2070</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ABUJA2070.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">REQUEST FOR ASSISTANCE IN INVESTIGATING BELLVIEW CRASH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1675">05LAGOS1675</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LAGOS1675.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SITREP #9: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 26, 6:00 PM (LOCAL)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1705">05LAGOS1705</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1705.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELLVIEW PLANE CRASH INVESTIGATION: AVIATION MINISTER AGREES TO ABIDE BY ICAO CONVENTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1708">05LAGOS1708</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1708.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELLVIEW CRASH: NOVEMBER 1 UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1726">05LAGOS1726</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1726.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/04/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELLVIEW CRASH: WHERE ARE THE NIGERIANS!</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1734">05LAGOS1734</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1734.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">BELLVIEW CRASH:  POTENTIALLY WORRISOME EVIDENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1743">05LAGOS1743</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1743.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/09/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">BELLVIEW CRASH: AVIATION MINISTER ACCEPTS ADDITIONAL FORENSIC ASSISTANCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1748">05LAGOS1748</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1748.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRELIMINARY REVIEW YIELDS NO "SMOKING GUN" IN BELLVIEW DEBRIS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LAGOS1769">05LAGOS1769</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05LAGOS1769.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELLVIEW CRASH UPDATE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-101.5555" 
+                  x2="381.8443" y2="-176.9885" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-101.5555" 
+                  x2="325.1406" y2="-29.2456" class="btwns1"/>
+        
+            <line x1="318.4634" y1="-21.8015" 
+                  x2="368.5297" y2="57.3739" class="btwns3"/>
+        
+            <line x1="318.4634" y1="-21.8015" 
+                  x2="187.6698" y2="-44.0235" class="btwns7"/>
+        
+            <line x1="373.8743" y1="65.8258" 
+                  x2="361.2013" y2="142.5289" class="btwns1"/>
+        
+            <line x1="359.5711" y1="152.3951" 
+                  x2="312.8723" y2="214.2828" class="btwns0"/>
+        
+            <line x1="177.8111" y1="-45.6985" 
+                  x2="97.4911" y2="18.4102" class="btwns0"/>
+        
+            <line x1="177.8111" y1="-45.6985" 
+                  x2="146.4792" y2="-137.2822" class="btwns8"/>
+        
+            <line x1="143.2423" y1="-146.7438" 
+                  x2="124.6121" y2="-231.5441" class="btwns9"/>
+        
+            <line x1="122.4663" y1="-241.3112" 
+                  x2="32.1428" y2="-285.5976" class="btwns9"/>
+        
+            <line x1="23.1640" y1="-290.0000" 
+                  x2="-84.1321" y2="-267.3594" class="btwns10"/>
+        
+            <line x1="-93.9166" y1="-265.2948" 
+                  x2="-163.6422" y2="-199.5721" class="btwns10"/>
+        
+            <line x1="-170.9190" y1="-192.7130" 
+                  x2="-238.3930" y2="-116.5730" class="btwns9"/>
+        
+            <line x1="-245.0253" y1="-109.0889" 
+                  x2="-331.1267" y2="-152.5816" class="btwns0"/>
+        
+            <line x1="-245.0253" y1="-109.0889" 
+                  x2="-273.4602" y2="-15.5340" class="btwns8"/>
+        
+            <line x1="-276.3682" y1="-5.9662" 
+                  x2="-380.2577" y2="18.0891" class="btwns0"/>
+        
+            <line x1="-276.3682" y1="-5.9662" 
+                  x2="-246.8378" y2="77.8430" class="btwns7"/>
+        
+            <line x1="-243.5146" y1="87.2747" 
+                  x2="-248.9437" y2="165.5296" class="btwns6"/>
+        
+            <line x1="-249.6358" y1="175.5056" 
+                  x2="-192.4522" y2="237.9081" class="btwns4"/>
+        
+            <line x1="-185.6961" y1="245.2807" 
+                  x2="-87.8769" y2="270.2180" class="btwns3"/>
+        
+            <line x1="-78.1868" y1="272.6883" 
+                  x2="22.7428" y2="274.2693" class="btwns1"/>
+        
+            <line x1="32.7416" y1="274.4260" 
+                  x2="124.3635" y2="288.4835" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -101.5555)" 
+                class="vertice degree5 btwns1 authority4 ABUJA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(380.7694 -186.9306)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(318.4634 -21.8015)" 
+                class="vertice degree10 btwns7 authority10 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(373.8743 65.8258)" 
+                class="vertice degree5 btwns3 authority5 ABUJA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(359.5711 152.3951)" 
+                class="vertice degree5 btwns1 authority4 ABUJA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(306.8490 222.2652)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(177.8111 -45.6985)" 
+                class="vertice degree10 btwns8 authority9 LAGOS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(89.6754 24.6485)" 
+                class="vertice degree0 btwns0 authority0 LAGOS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(143.2423 -146.7438)" 
+                class="vertice degree5 btwns8 authority5 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(122.4663 -241.3112)" 
+                class="vertice degree5 btwns9 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(23.1640 -290.0000)" 
+                class="vertice degree5 btwns9 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-93.9166 -265.2948)" 
+                class="vertice degree5 btwns9 authority5 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-170.9190 -192.7130)" 
+                class="vertice degree5 btwns9 authority5 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-245.0253 -109.0889)" 
+                class="vertice degree10 btwns10 authority9 LAGOS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-340.0526 -157.0904)" 
+                class="vertice degree0 btwns0 authority0 LAGOS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-276.3682 -5.9662)" 
+                class="vertice degree10 btwns8 authority9 LAGOS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 20.3448)" 
+                class="vertice degree0 btwns0 authority0 LAGOS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-243.5146 87.2747)" 
+                class="vertice degree5 btwns6 authority5 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-249.6358 175.5056)" 
+                class="vertice degree5 btwns5 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-185.6961 245.2807)" 
+                class="vertice degree5 btwns4 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-78.1868 272.6883)" 
+                class="vertice degree5 btwns3 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(32.7416 274.4260)" 
+                class="vertice degree5 btwns1 authority4 LAGOS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(134.2478 290.0000)" 
+                class="vertice degree0 btwns0 authority0 LAGOS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -101.5555)" 
+                id="05ABUJA2029" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    05ABUJA2029
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(380.7694 -186.9306)" 
+                id="05ABUJA2030" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ABUJA2030.html">05ABUJA2030</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ABUJA SITREP #2: CRASH OF BELLVIEW FLIGHT 3210</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(318.4634 -21.8015)" 
+                id="05ABUJA2031" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ABUJA2031.html">05ABUJA2031</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SITREP #1 - 10/23/2005 1130 HOURS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(373.8743 65.8258)" 
+                id="05ABUJA2032" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ABUJA2032.html">05ABUJA2032</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ABUJA SITREP #3: CRASH OF BELLVIEW FLIGHT 3210, TIME 16:30 LOCAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(359.5711 152.3951)" 
+                id="05ABUJA2039" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ABUJA2039.html">05ABUJA2039</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>NIGERIA REQUESTS U.S. ASSISTANCE IN INVESTIGATING BELLVIEW AIRLINES' FATAL CRASH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(306.8490 222.2652)" 
+                id="05ABUJA2070" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ABUJA2070.html">05ABUJA2070</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>REQUEST FOR ASSISTANCE IN INVESTIGATING BELLVIEW CRASH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(177.8111 -45.6985)" 
+                id="05LAGOS1643" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1643.html">05LAGOS1643</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SITREP #1: LAGOS BELLVIEW FLIGHT 3210 CRASH; TIME: 4:00 AM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(89.6754 24.6485)" 
+                id="05LAGOS1644" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1644.html">05LAGOS1644</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SITREP #2: LAGOS BELLVIEW FLIGHT 3210 CRASH; TIME: 6:00 AM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(143.2423 -146.7438)" 
+                id="05LAGOS1645" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1645.html">05LAGOS1645</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SITREP #3: LAGOS BELLEVIEW FLIGHT 3210 CRASH; TIME 1:00 AM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(122.4663 -241.3112)" 
+                id="05LAGOS1646" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1646.html">05LAGOS1646</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SITREP #4: CRASH OF BELLVIEW FLIGHT B3-210; TIME: 17:00 (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(23.1640 -290.0000)" 
+                id="05LAGOS1648" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1648.html">05LAGOS1648</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SITREP #5: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 10:30 AM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-93.9166 -265.2948)" 
+                id="05LAGOS1656" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1656.html">05LAGOS1656</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SITREP #6: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 5:23 PM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-170.9190 -192.7130)" 
+                id="05LAGOS1660" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1660.html">05LAGOS1660</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SITREP #7: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 25, 12:30 AM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.0253 -109.0889)" 
+                id="05LAGOS1662" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1662.html">05LAGOS1662</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SITREP #8: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 24, 7:50 PM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-340.0526 -157.0904)" 
+                id="05LAGOS1674" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1674.html">05LAGOS1674</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH: AN UNLIKELY CLAIM OF RESPONSIBILITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-276.3682 -5.9662)" 
+                id="05LAGOS1675" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LAGOS1675.html">05LAGOS1675</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SITREP #9: CRASH OF BELLVIEW FLIGHT B3210; OCTOBER 26, 6:00 PM (LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 20.3448)" 
+                id="05LAGOS1705" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1705.html">05LAGOS1705</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELLVIEW PLANE CRASH INVESTIGATION: AVIATION MINISTER AGREES TO ABIDE BY ICAO CONVENTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-243.5146 87.2747)" 
+                id="05LAGOS1708" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1708.html">05LAGOS1708</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH: NOVEMBER 1 UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-249.6358 175.5056)" 
+                id="05LAGOS1726" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1726.html">05LAGOS1726</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH: WHERE ARE THE NIGERIANS!</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-185.6961 245.2807)" 
+                id="05LAGOS1734" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1734.html">05LAGOS1734</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH:  POTENTIALLY WORRISOME EVIDENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-78.1868 272.6883)" 
+                id="05LAGOS1743" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1743.html">05LAGOS1743</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH: AVIATION MINISTER ACCEPTS ADDITIONAL FORENSIC ASSISTANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(32.7416 274.4260)" 
+                id="05LAGOS1748" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1748.html">05LAGOS1748</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRELIMINARY REVIEW YIELDS NO "SMOKING GUN" IN BELLVIEW DEBRIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(134.2478 290.0000)" 
+                id="05LAGOS1769" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05LAGOS1769.html">05LAGOS1769</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELLVIEW CRASH UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

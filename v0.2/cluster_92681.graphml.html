@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK735">08USUNNEWYORK735</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08USUNNEWYORK735.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/15/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">2008 MEETING OF THE SPECIAL COMMITTEE ON THE CHARTER OF THE UNITED NATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK831">08USUNNEWYORK831</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK831.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AT THE UN, RAISING EYEBROWS: A NONTRADITIONAL OPENING OF THE 63RD SESSION OF THE UN GENERAL ASSEMBLY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK833">08USUNNEWYORK833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR KHALILZAD AND P-3 MEET WITH THE SECRETARY-GENERAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK837">08USUNNEWYORK837</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK837.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SYG BAN WILL SIGN NATO AGREEMENT; CONCERNED WITH PGA D'ESCOTO'S OPENING REMARKS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK842">08USUNNEWYORK842</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK842.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNGA: AMBASSADOR KHALILZAD VOICES CONCERN TO PGA ABOUT HIS OPENING SESSION REMARKS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK863">08USUNNEWYORK863</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK863.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNGA PRESIDENT D'ESCOTO OPENS GENERAL DEBATE WITH TONED DOWN SPEECH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK873">08USUNNEWYORK873</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK873.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN GENERAL DEBATE CONTINUES: UK, PALESTINE AND OTHERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK890">08USUNNEWYORK890</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK890.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/30/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN GENERAL DEBATE: VENEZUELA, ERITREA AND OTHERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08USUNNEWYORK990">08USUNNEWYORK990</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/31/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08USUNNEWYORK1125">08USUNNEWYORK1125</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/02/08</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-45.4118" 
+                  x2="-233.3836" y2="-136.9644" class="btwns3"/>
+        
+            <line x1="-224.7505" y1="-142.0110" 
+                  x2="-35.6959" y2="-67.2592" class="btwns8"/>
+        
+            <line x1="-224.7505" y1="-142.0110" 
+                  x2="-172.2839" y2="-280.6474" class="btwns3"/>
+        
+            <line x1="187.0621" y1="35.6663" 
+                  x2="30.4142" y2="187.1710" class="btwns6"/>
+        
+            <line x1="187.0621" y1="35.6663" 
+                  x2="281.0197" y2="-121.0168" class="btwns3"/>
+        
+            <line x1="187.0621" y1="35.6663" 
+                  x2="380.6099" y2="-35.2150" class="btwns3"/>
+        
+            <line x1="187.0621" y1="35.6663" 
+                  x2="308.1007" y2="170.4454" class="btwns3"/>
+        
+            <line x1="187.0621" y1="35.6663" 
+                  x2="-17.3287" y2="-59.3661" class="btwns10"/>
+        
+            <line x1="-135.7651" y1="290.0000" 
+                  x2="14.6627" y2="199.2871" class="btwns3"/>
+        
+            <line x1="286.1626" y1="-129.5930" 
+                  x2="382.4772" y2="-45.2423" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -45.4118)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-224.7505 -142.0110)" 
+                class="vertice degree5 btwns5 authority4 USUNNEWYORK">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(187.0621 35.6663)" 
+                class="vertice degree10 btwns10 authority10 USUNNEWYORK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-135.7651 290.0000)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(23.2262 194.1230)" 
+                class="vertice degree2 btwns2 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(286.1626 -129.5930)" 
+                class="vertice degree2 btwns0 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -38.6539)" 
+                class="vertice degree2 btwns0 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(314.7823 177.8855)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-26.3965 -63.5822)" 
+                class="vertice degree2 btwns6 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-168.7445 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -45.4118)" 
+                id="08USUNNEWYORK1125" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08USUNNEWYORK1125
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-224.7505 -142.0110)" 
+                id="08USUNNEWYORK735" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08USUNNEWYORK735.html">08USUNNEWYORK735</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>2008 MEETING OF THE SPECIAL COMMITTEE ON THE CHARTER OF THE UNITED NATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(187.0621 35.6663)" 
+                id="08USUNNEWYORK831" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK831.html">08USUNNEWYORK831</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AT THE UN, RAISING EYEBROWS: A NONTRADITIONAL OPENING OF THE 63RD SESSION OF THE UN GENERAL ASSEMBLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-135.7651 290.0000)" 
+                id="08USUNNEWYORK833" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK833.html">08USUNNEWYORK833</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR KHALILZAD AND P-3 MEET WITH THE SECRETARY-GENERAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(23.2262 194.1230)" 
+                id="08USUNNEWYORK837" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK837.html">08USUNNEWYORK837</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SYG BAN WILL SIGN NATO AGREEMENT; CONCERNED WITH PGA D'ESCOTO'S OPENING REMARKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(286.1626 -129.5930)" 
+                id="08USUNNEWYORK842" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK842.html">08USUNNEWYORK842</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UNGA: AMBASSADOR KHALILZAD VOICES CONCERN TO PGA ABOUT HIS OPENING SESSION REMARKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -38.6539)" 
+                id="08USUNNEWYORK863" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK863.html">08USUNNEWYORK863</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UNGA PRESIDENT D'ESCOTO OPENS GENERAL DEBATE WITH TONED DOWN SPEECH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(314.7823 177.8855)" 
+                id="08USUNNEWYORK873" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK873.html">08USUNNEWYORK873</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN GENERAL DEBATE CONTINUES: UK, PALESTINE AND OTHERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.3965 -63.5822)" 
+                id="08USUNNEWYORK890" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08USUNNEWYORK890.html">08USUNNEWYORK890</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UN GENERAL DEBATE: VENEZUELA, ERITREA AND OTHERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.7445 -290.0000)" 
+                id="08USUNNEWYORK990" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08USUNNEWYORK990
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

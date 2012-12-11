@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE57146">08STATE57146</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/29/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE57695">08STATE57695</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/30/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN709">08BERLIN709</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BERLIN709.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GERMANY INVITED TO SPEAK AT THE JUNE 16-18 MEETING OF THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08THEHAGUE463">08THEHAGUE463</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08THEHAGUE463.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NETHERLANDS: PARTICIPATION IN GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM MEETING IN MADRID</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN723">08BERLIN723</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08BERLIN723.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GERMANY DECLINES INVITATION TO PRESENT AT THE JUNE 16-18 MEETING OF THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ASTANA1027">08ASTANA1027</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08ASTANA1027.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/03/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KAZAKHSTAN WILL ATTEND FOURTH MEETING OF GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ASHGABAT711">08ASHGABAT711</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08ASHGABAT711.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/03/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM: ENCOURAGING ATTENDANCE AT THE FOURTH MEETING IN SPAIN, 16-18 JUNE 2008, DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08LJUBLJANA244">08LJUBLJANA244</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08LJUBLJANA244.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVENIA TO SEND DELEGATION TO GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM MADRID MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BUCHAREST447">08BUCHAREST447</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08BUCHAREST447.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA TO SPEAK AT THE FOURTH GLOBAL INITIATIVE MEETING IN MADRID JUNE 16-18.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA1049">08ANKARA1049</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08ANKARA1049.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TURKEY WILL ATTEND 4TH GI MEETING, UNCLEAR AT WHAT LEVEL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW1605">08MOSCOW1605</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08MOSCOW1605.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GICNT MADRID MEETING: RUSSIAN SUPPORT FOR INVITATIONS TO MAKE PRESENTATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DUBLIN337">08DUBLIN337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08DUBLIN337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/10/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IRELAND TO ATTEND GLOBAL INITIATIVE MEETING, 16-18 JUNE 2008, IN SPAIN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-58.3734" y1="-232.0554" 
+                  x2="161.7654" y2="-144.6792" class="btwns0"/>
+        
+            <line x1="365.4669" y1="-18.7067" 
+                  x2="179.5248" y2="-135.6657" class="btwns0"/>
+        
+            <line x1="20.1495" y1="-6.2466" 
+                  x2="-129.5924" y2="127.5877" class="btwns10"/>
+        
+            <line x1="20.1495" y1="-6.2466" 
+                  x2="163.6007" y2="-134.3299" class="btwns9"/>
+        
+            <line x1="-302.3789" y1="-14.2659" 
+                  x2="-144.4876" y2="127.5690" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="108.8524" 
+                  x2="-146.9984" y2="133.2526" class="btwns0"/>
+        
+            <line x1="121.8184" y1="199.2523" 
+                  x2="-127.3495" y2="136.6870" class="btwns0"/>
+        
+            <line x1="151.7651" y1="-290.0000" 
+                  x2="169.7759" y2="-150.9073" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-170.1415" 
+                  x2="180.9726" y2="-142.3099" class="btwns0"/>
+        
+            <line x1="-30.2107" y1="290.0000" 
+                  x2="-131.3917" y2="142.4980" class="btwns0"/>
+        
+            <line x1="-137.0484" y1="134.2517" 
+                  x2="-264.5243" y2="247.9037" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-58.3734 -232.0554)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(365.4669 -18.7067)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(20.1495 -6.2466)" 
+                class="vertice degree2 btwns7 authority1 ASTANA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-302.3789 -14.2659)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.8524)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(121.8184 199.2523)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(151.7651 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -170.1415)" 
+                class="vertice degree0 btwns0 authority0 LJUBLJANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-30.2107 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-137.0484 134.2517)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(171.0601 -140.9901)" 
+                class="vertice degree8 btwns8 authority7 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-271.9885 254.5584)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-58.3734 -232.0554)" 
+                id="08ANKARA1049" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08ANKARA1049.html">08ANKARA1049</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKEY WILL ATTEND 4TH GI MEETING, UNCLEAR AT WHAT LEVEL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(365.4669 -18.7067)" 
+                id="08ASHGABAT711" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08ASHGABAT711.html">08ASHGABAT711</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM: ENCOURAGING ATTENDANCE AT THE FOURTH MEETING IN SPAIN, 16-18 JUNE 2008, DELIVERED TO THE GOVERNMENT OF TURKMENISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(20.1495 -6.2466)" 
+                id="08ASTANA1027" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08ASTANA1027.html">08ASTANA1027</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN WILL ATTEND FOURTH MEETING OF GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-302.3789 -14.2659)" 
+                id="08BERLIN709" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BERLIN709.html">08BERLIN709</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY INVITED TO SPEAK AT THE JUNE 16-18 MEETING OF THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.8524)" 
+                id="08BERLIN723" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08BERLIN723.html">08BERLIN723</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY DECLINES INVITATION TO PRESENT AT THE JUNE 16-18 MEETING OF THE GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(121.8184 199.2523)" 
+                id="08BUCHAREST447" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08BUCHAREST447.html">08BUCHAREST447</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA TO SPEAK AT THE FOURTH GLOBAL INITIATIVE MEETING IN MADRID JUNE 16-18.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(151.7651 -290.0000)" 
+                id="08DUBLIN337" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08DUBLIN337.html">08DUBLIN337</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRELAND TO ATTEND GLOBAL INITIATIVE MEETING, 16-18 JUNE 2008, IN SPAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -170.1415)" 
+                id="08LJUBLJANA244" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08LJUBLJANA244.html">08LJUBLJANA244</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVENIA TO SEND DELEGATION TO GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM MADRID MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-30.2107 290.0000)" 
+                id="08MOSCOW1605" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08MOSCOW1605.html">08MOSCOW1605</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GICNT MADRID MEETING: RUSSIAN SUPPORT FOR INVITATIONS TO MAKE PRESENTATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-137.0484 134.2517)" 
+                id="08STATE57146" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE57146
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(171.0601 -140.9901)" 
+                id="08STATE57695" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>05/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    08STATE57695
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-271.9885 254.5584)" 
+                id="08THEHAGUE463" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08THEHAGUE463.html">08THEHAGUE463</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS: PARTICIPATION IN GLOBAL INITIATIVE TO COMBAT NUCLEAR TERRORISM MEETING IN MADRID</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

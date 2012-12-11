@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO1607">09TOKYO1607</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09TOKYO1607.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAPAN REVISES ORGAN TRANSPLANT LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE115135">09STATE115135</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09STATE115135.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PARIS1508">09PARIS1508</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09PARIS1508.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">(S) REACTION TO IRANIAN BANK SUBSIDIARY DESIGNATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BERLIN1438">09BERLIN1438</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BERLIN1438.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GERMANY NOTIFIED OF DESIGNATION OF MALAYSIAN BANK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PARIS1510">09PARIS1510</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09PARIS1510.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">(C) REACTION TO IRANIAN BANK SUBSIDIARY DESIGNATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRASILIA1318">09BRASILIA1318</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BRASILIA1318.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BRAZIL INFORMED OF DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ROME1264">09ROME1264</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09ROME1264.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ITALY TO ALERT PRIVATE SECTOR ENTITIES TO USG DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BAGHDAD3030">09BAGHDAD3030</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BAGHDAD3030.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: DESIGNATION OF FIRST EAST EXPORT BANK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MUSCAT1033">09MUSCAT1033</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09MUSCAT1033.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/18/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OMAN - DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO2691">09TOKYO2691</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09TOKYO2691.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JAPAN URGED TO DESIGNATE FIRST EAST EXPORT BANK, AND BANK MELLAT CHAIRMAN ALI DIVANDARI</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="218.8221" y1="260.7422" 
+                  x2="10.7887" y2="93.5572" class="btwns0"/>
+        
+            <line x1="-68.0584" y1="290.0000" 
+                  x2="-0.3139" y2="96.7301" class="btwns0"/>
+        
+            <line x1="390.0000" y1="136.1945" 
+                  x2="12.9150" y2="88.5466" class="btwns0"/>
+        
+            <line x1="341.2578" y1="-13.2505" 
+                  x2="12.5795" y2="84.4438" class="btwns0"/>
+        
+            <line x1="-314.7538" y1="204.5087" 
+                  x2="-6.3881" y2="90.7540" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="53.9654" 
+                  x2="-6.9703" y2="86.4480" class="btwns0"/>
+        
+            <line x1="-243.1515" y1="-74.6514" 
+                  x2="-5.3601" y2="81.7967" class="btwns0"/>
+        
+            <line x1="2.9939" y1="87.2930" 
+                  x2="77.0348" y2="-124.8949" class="btwns10"/>
+        
+            <line x1="134.1101" y1="-290.0000" 
+                  x2="83.5950" y2="-143.7884" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(218.8221 260.7422)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-68.0584 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 136.1945)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(341.2578 -13.2505)" 
+                class="vertice degree0 btwns0 authority0 MUSCAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-314.7538 204.5087)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 53.9654)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-243.1515 -74.6514)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(2.9939 87.2930)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(134.1101 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(80.3294 -134.3366)" 
+                class="vertice degree1 btwns2 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(218.8221 260.7422)" 
+                id="09BAGHDAD3030" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BAGHDAD3030.html">09BAGHDAD3030</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: DESIGNATION OF FIRST EAST EXPORT BANK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-68.0584 290.0000)" 
+                id="09BERLIN1438" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BERLIN1438.html">09BERLIN1438</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY NOTIFIED OF DESIGNATION OF MALAYSIAN BANK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 136.1945)" 
+                id="09BRASILIA1318" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BRASILIA1318.html">09BRASILIA1318</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRAZIL INFORMED OF DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(341.2578 -13.2505)" 
+                id="09MUSCAT1033" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09MUSCAT1033.html">09MUSCAT1033</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OMAN - DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-314.7538 204.5087)" 
+                id="09PARIS1508" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09PARIS1508.html">09PARIS1508</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(S) REACTION TO IRANIAN BANK SUBSIDIARY DESIGNATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 53.9654)" 
+                id="09PARIS1510" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09PARIS1510.html">09PARIS1510</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(C) REACTION TO IRANIAN BANK SUBSIDIARY DESIGNATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-243.1515 -74.6514)" 
+                id="09ROME1264" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ROME1264.html">09ROME1264</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY TO ALERT PRIVATE SECTOR ENTITIES TO USG DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(2.9939 87.2930)" 
+                id="09STATE115135" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09STATE115135.html">09STATE115135</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DESIGNATION OF MALAYSIAN BANK AND BANK MELLAT CHAIRMAN UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(134.1101 -290.0000)" 
+                id="09TOKYO1607" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09TOKYO1607.html">09TOKYO1607</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPAN REVISES ORGAN TRANSPLANT LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(80.3294 -134.3366)" 
+                id="09TOKYO2691" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09TOKYO2691.html">09TOKYO2691</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JAPAN URGED TO DESIGNATE FIRST EAST EXPORT BANK, AND BANK MELLAT CHAIRMAN ALI DIVANDARI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

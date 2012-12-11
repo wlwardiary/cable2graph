@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE254401">05STATE254401</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05VILNIUS1430">05VILNIUS1430</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04MADRID1233">04MADRID1233</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/23/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04MADRID2236">04MADRID2236</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04MADRID2236.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISAS VIPER SUBMISSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04MADRID2343">04MADRID2343</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04MADRID2343.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISAS VIPER SUBMISSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05MADRID1">05MADRID1</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05MADRID1.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2004-2005 INCSR PART II: SPAIN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05MADRID11">05MADRID11</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05MADRID11.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2004-2005 INCSR PART II: SPAIN CORRECTED VERSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BUCHAREST32">05BUCHAREST32</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05BUCHAREST32.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA: 2004-2005 INTERNATIONAL NARCOTICS CONTROL STRAGEGY REPORT (INCSR), SECTION II, FINANCIAL CRIMES AND MONEY LAUNDERING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VILNIUS28">05VILNIUS28</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05VILNIUS28.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LITHUANIA INCSR (INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT) PART II (FINANCIAL CRIMES AND MONEY LAUNDERING) 2004-2005</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PARIS365">05PARIS365</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05PARIS365.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/20/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FRANCE  - 2005 MONEY LAUNDERING CONTRIBUTION FOR 2005 INCSR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05MADRID1183">05MADRID1183</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05MADRID1183.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISAS VIPER SUBMISSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VILNIUS478">05VILNIUS478</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05VILNIUS478.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LITHUANIA REJECTS UKRAINIAN MONEY LAUNDERING ALLEGATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05MADRID2337">05MADRID2337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05MADRID2337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/16/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISAS VIPER SUBMISSION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="215.5874" y1="196.9264" 
+                  x2="51.6358" y2="263.9982" class="btwns0"/>
+        
+            <line x1="215.5874" y1="196.9264" 
+                  x2="355.6729" y2="94.2122" class="btwns6"/>
+        
+            <line x1="215.5874" y1="196.9264" 
+                  x2="293.4137" y2="282.5981" class="btwns0"/>
+        
+            <line x1="363.7373" y1="88.2991" 
+                  x2="388.0584" y2="-34.5818" class="btwns8"/>
+        
+            <line x1="-58.0539" y1="-290.0000" 
+                  x2="-25.1925" y2="-160.8472" class="btwns0"/>
+        
+            <line x1="-220.7416" y1="-188.9377" 
+                  x2="-32.5495" y2="-153.0302" class="btwns0"/>
+        
+            <line x1="212.5143" y1="-108.8125" 
+                  x2="380.6000" y2="-47.8033" class="btwns9"/>
+        
+            <line x1="212.5143" y1="-108.8125" 
+                  x2="-12.8849" y2="-149.3844" class="btwns10"/>
+        
+            <line x1="144.8693" y1="-254.2554" 
+                  x2="-14.2093" y2="-156.3956" class="btwns0"/>
+        
+            <line x1="-22.7267" y1="-151.1560" 
+                  x2="-192.1846" y2="-10.2651" class="btwns6"/>
+        
+            <line x1="-390.0000" y1="16.9516" 
+                  x2="-209.8146" y2="-2.7832" class="btwns0"/>
+        
+            <line x1="-199.8740" y1="-3.8719" 
+                  x2="-247.9675" y2="128.4041" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(215.5874 196.9264)" 
+                class="vertice degree5 btwns4 authority4 MADRID">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(42.3803 267.7846)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(363.7373 88.2991)" 
+                class="vertice degree2 btwns5 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-58.0539 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-220.7416 -188.9377)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(212.5143 -108.8125)" 
+                class="vertice degree2 btwns7 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.1377 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -44.3915)" 
+                class="vertice degree2 btwns6 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(144.8693 -254.2554)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-22.7267 -151.1560)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 16.9516)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-199.8740 -3.8719)" 
+                class="vertice degree5 btwns4 authority4 VILNIUS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-251.3845 137.8021)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(215.5874 196.9264)" 
+                id="04MADRID1233" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    04MADRID1233
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(42.3803 267.7846)" 
+                id="04MADRID2236" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04MADRID2236.html">04MADRID2236</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VISAS VIPER SUBMISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(363.7373 88.2991)" 
+                id="04MADRID2343" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04MADRID2343.html">04MADRID2343</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VISAS VIPER SUBMISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-58.0539 -290.0000)" 
+                id="05BUCHAREST32" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05BUCHAREST32.html">05BUCHAREST32</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA: 2004-2005 INTERNATIONAL NARCOTICS CONTROL STRAGEGY REPORT (INCSR), SECTION II, FINANCIAL CRIMES AND MONEY LAUNDERING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-220.7416 -188.9377)" 
+                id="05MADRID1" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05MADRID1.html">05MADRID1</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2004-2005 INCSR PART II: SPAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(212.5143 -108.8125)" 
+                id="05MADRID11" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05MADRID11.html">05MADRID11</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>2004-2005 INCSR PART II: SPAIN CORRECTED VERSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.1377 290.0000)" 
+                id="05MADRID1183" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05MADRID1183.html">05MADRID1183</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VISAS VIPER SUBMISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -44.3915)" 
+                id="05MADRID2337" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05MADRID2337.html">05MADRID2337</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VISAS VIPER SUBMISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(144.8693 -254.2554)" 
+                id="05PARIS365" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05PARIS365.html">05PARIS365</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRANCE  - 2005 MONEY LAUNDERING CONTRIBUTION FOR 2005 INCSR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-22.7267 -151.1560)" 
+                id="05STATE254401" 
+                class="labels">
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE254401
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 16.9516)" 
+                id="05VILNIUS1430" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05VILNIUS1430
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-199.8740 -3.8719)" 
+                id="05VILNIUS28" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05VILNIUS28.html">05VILNIUS28</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>LITHUANIA INCSR (INTERNATIONAL NARCOTICS CONTROL STRATEGY REPORT) PART II (FINANCIAL CRIMES AND MONEY LAUNDERING) 2004-2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.3845 137.8021)" 
+                id="05VILNIUS478" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05VILNIUS478.html">05VILNIUS478</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LITHUANIA REJECTS UKRAINIAN MONEY LAUNDERING ALLEGATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

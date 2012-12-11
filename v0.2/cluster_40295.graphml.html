@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06KHARTOUM985">06KHARTOUM985</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/25/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1030">06KHARTOUM1030</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1030.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Geraida Situation</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1033">06KHARTOUM1033</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1033.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 2, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1044">06KHARTOUM1044</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1044.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 3, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1067">06KHARTOUM1067</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1067.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 5, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1090">06KHARTOUM1090</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1090.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 8, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1094">06KHARTOUM1094</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1094.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AU Interpreter, Two Protesters Killed; 11 AMIS CivPol Injured in Kalma and Hassahisa IDP Camp Riots</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1098">06KHARTOUM1098</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1098.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 9, 2006</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1104">06KHARTOUM1104</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1104.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 10, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1120">06KHARTOUM1120</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1120.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AMIS Issues Press Release on Kalma, Hassahissa IDP Camp Demonstrations, Death of AU Interpreter</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1132">06KHARTOUM1132</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1132.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 14, 2006</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KHARTOUM1153">06KHARTOUM1153</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KHARTOUM1153.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Update on Darfur Security and Humanitarian Access - May 15, 2006</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-326.0606" y1="54.0663" 
+                  x2="-252.1020" y2="184.1191" class="btwns2"/>
+        
+            <line x1="-326.0606" y1="54.0663" 
+                  x2="-384.3183" y2="138.4449" class="btwns0"/>
+        
+            <line x1="-247.1586" y1="192.8118" 
+                  x2="-96.4534" y2="284.7904" class="btwns7"/>
+        
+            <line x1="-247.1586" y1="192.8118" 
+                  x2="-380.4841" y2="149.7477" class="btwns2"/>
+        
+            <line x1="-87.9176" y1="290.0000" 
+                  x2="82.6404" y2="272.8886" class="btwns9"/>
+        
+            <line x1="92.5904" y1="271.8904" 
+                  x2="158.4208" y2="129.7682" class="btwns10"/>
+        
+            <line x1="162.6238" y1="120.6943" 
+                  x2="224.0303" y2="-25.5058" class="btwns6"/>
+        
+            <line x1="162.6238" y1="120.6943" 
+                  x2="59.2476" y2="6.0844" class="btwns4"/>
+        
+            <line x1="227.9027" y1="-34.7255" 
+                  x2="64.5840" y2="-144.0608" class="btwns4"/>
+        
+            <line x1="227.9027" y1="-34.7255" 
+                  x2="380.1578" y2="-7.3538" class="btwns2"/>
+        
+            <line x1="52.5498" y1="-1.3412" 
+                  x2="56.0231" y2="-139.6271" class="btwns3"/>
+        
+            <line x1="56.2742" y1="-149.6239" 
+                  x2="-116.1560" y2="-214.0893" class="btwns2"/>
+        
+            <line x1="56.2742" y1="-149.6239" 
+                  x2="74.3603" y2="-280.0947" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-326.0606 54.0663)" 
+                class="vertice degree3 btwns0 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-247.1586 192.8118)" 
+                class="vertice degree6 btwns5 authority6 KHARTOUM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-87.9176 290.0000)" 
+                class="vertice degree3 btwns7 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(92.5904 271.8904)" 
+                class="vertice degree3 btwns9 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(162.6238 120.6943)" 
+                class="vertice degree6 btwns10 authority6 KHARTOUM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(227.9027 -34.7255)" 
+                class="vertice degree6 btwns6 authority6 KHARTOUM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(52.5498 -1.3412)" 
+                class="vertice degree3 btwns2 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(56.2742 -149.6239)" 
+                class="vertice degree10 btwns6 authority10 KHARTOUM">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -5.5845)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-125.5228 -217.5912)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(75.7334 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 146.6740)" 
+                class="vertice degree3 btwns0 authority3 KHARTOUM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-326.0606 54.0663)" 
+                id="06KHARTOUM1030" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1030.html">06KHARTOUM1030</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Update on Geraida Situation</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-247.1586 192.8118)" 
+                id="06KHARTOUM1033" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1033.html">06KHARTOUM1033</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 2, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-87.9176 290.0000)" 
+                id="06KHARTOUM1044" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1044.html">06KHARTOUM1044</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 3, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(92.5904 271.8904)" 
+                id="06KHARTOUM1067" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1067.html">06KHARTOUM1067</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 5, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(162.6238 120.6943)" 
+                id="06KHARTOUM1090" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1090.html">06KHARTOUM1090</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 8, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(227.9027 -34.7255)" 
+                id="06KHARTOUM1094" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1094.html">06KHARTOUM1094</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>AU Interpreter, Two Protesters Killed; 11 AMIS CivPol Injured in Kalma and Hassahisa IDP Camp Riots</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(52.5498 -1.3412)" 
+                id="06KHARTOUM1098" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1098.html">06KHARTOUM1098</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 9, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(56.2742 -149.6239)" 
+                id="06KHARTOUM1104" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1104.html">06KHARTOUM1104</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 10, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -5.5845)" 
+                id="06KHARTOUM1120" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1120.html">06KHARTOUM1120</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMIS Issues Press Release on Kalma, Hassahissa IDP Camp Demonstrations, Death of AU Interpreter</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-125.5228 -217.5912)" 
+                id="06KHARTOUM1132" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1132.html">06KHARTOUM1132</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 14, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(75.7334 -290.0000)" 
+                id="06KHARTOUM1153" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KHARTOUM1153.html">06KHARTOUM1153</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Update on Darfur Security and Humanitarian Access - May 15, 2006</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 146.6740)" 
+                id="06KHARTOUM985" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06KHARTOUM985
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06DOHA558">06DOHA558</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/11/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA562">06DOHA562</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DOHA562.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/12/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">U/S JOSEPH MEETING ON IRAN WITH MINISTER OF STATE FOR FOREIGN AFFAIRS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MOSCOW3860">06MOSCOW3860</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MOSCOW3935">06MOSCOW3935</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE59562">06STATE59562</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW3979">06MOSCOW3979</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MOSCOW3979.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INCREASING DIPLOMATIC PRESSURE ON IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA309">06BRATISLAVA309</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BRATISLAVA309.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAKIA SUPPORTS CHAPTER VII RESOLUTION ON IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1491">06LIMA1491</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06LIMA1491.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INCREASING DIPLOMATIC PRESSURE ON IRAN (PERU)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA311">06BRATISLAVA311</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BRATISLAVA311.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAKIA RELEASES STRONG STATEMENT ON IRANIAN NUCLEAR PROGRAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ATHENS1057">06ATHENS1057</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ATHENS1057.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GREECE SUPPORTS INCREASING DIPLOMATIC PRESSURE ON IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUENOSAIRES886">06BUENOSAIRES886</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BUENOSAIRES886.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARGENTINA ON PRESSURING IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM640">06DARESSALAAM640</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DARESSALAAM640.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TANZANIA GIVES IRAN BENEFIT OF THE DOUBT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM641">06DARESSALAAM641</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DARESSALAAM641.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TANZANIA GIVES IRAN BENEFIT OF THE DOUBT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DOHA616">06DOHA616</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DOHA616.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">INCREASING DIPLOMATIC PRESSURE ON IRAN: QATAR'S VIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1511">06LIMA1511</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06LIMA1511.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INCREASING DIPLOMATIC PRESSURE ON IRAN (PERU)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW4265">06MOSCOW4265</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MOSCOW4265.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S RADEMAKER'S APRIL 12 MEETING WITH DVBR DIRECTOR ANTONOV</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-29.4437" y1="103.6983" 
+                  x2="133.0985" y2="86.9281" class="btwns0"/>
+        
+            <line x1="-149.2601" y1="12.2154" 
+                  x2="-345.7567" y2="-33.5838" class="btwns0"/>
+        
+            <line x1="-149.2601" y1="12.2154" 
+                  x2="133.3490" y2="83.4574" class="btwns3"/>
+        
+            <line x1="390.0000" y1="23.5588" 
+                  x2="152.7415" y2="83.4541" class="btwns0"/>
+        
+            <line x1="306.9591" y1="218.9952" 
+                  x2="150.8088" y2="92.2053" class="btwns0"/>
+        
+            <line x1="258.3288" y1="-39.2405" 
+                  x2="149.8211" y2="78.5469" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="246.1559" 
+                  x2="-239.0801" y2="287.3659" class="btwns0"/>
+        
+            <line x1="-229.4333" y1="290.0000" 
+                  x2="-55.9696" y2="233.7904" class="btwns3"/>
+        
+            <line x1="-46.4565" y1="230.7078" 
+                  x2="135.0999" y2="91.9735" class="btwns7"/>
+        
+            <line x1="158.4040" y1="253.0356" 
+                  x2="143.9608" y2="95.8598" class="btwns0"/>
+        
+            <line x1="389.0666" y1="129.8016" 
+                  x2="152.8902" y2="87.6584" class="btwns0"/>
+        
+            <line x1="115.7984" y1="-244.3721" 
+                  x2="42.4318" y2="-123.9515" class="btwns3"/>
+        
+            <line x1="115.7984" y1="-244.3721" 
+                  x2="256.0773" y2="-287.0871" class="btwns0"/>
+        
+            <line x1="-135.5482" y1="-210.3508" 
+                  x2="28.4648" y2="-120.2273" class="btwns0"/>
+        
+            <line x1="37.2288" y1="-115.4116" 
+                  x2="138.3930" y2="77.0501" class="btwns10"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-29.4437 103.6983)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-149.2601 12.2154)" 
+                class="vertice degree1 btwns1 authority1 BRATISLAVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-355.4956 -35.8538)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 23.5588)" 
+                class="vertice degree0 btwns0 authority0 BUENOSAIRES">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(306.9591 218.9952)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(258.3288 -39.2405)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 246.1559)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-229.4333 290.0000)" 
+                class="vertice degree1 btwns1 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-46.4565 230.7078)" 
+                class="vertice degree1 btwns2 authority1 DOHA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(158.4040 253.0356)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(389.0666 129.8016)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(115.7984 -244.3721)" 
+                class="vertice degree1 btwns1 authority1 MOSCOW">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-135.5482 -210.3508)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(37.2288 -115.4116)" 
+                class="vertice degree2 btwns4 authority2 MOSCOW">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(265.6437 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(143.0457 85.9018)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-29.4437 103.6983)" 
+                id="06ATHENS1057" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ATHENS1057.html">06ATHENS1057</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GREECE SUPPORTS INCREASING DIPLOMATIC PRESSURE ON IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-149.2601 12.2154)" 
+                id="06BRATISLAVA309" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BRATISLAVA309.html">06BRATISLAVA309</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SLOVAKIA SUPPORTS CHAPTER VII RESOLUTION ON IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-355.4956 -35.8538)" 
+                id="06BRATISLAVA311" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BRATISLAVA311.html">06BRATISLAVA311</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA RELEASES STRONG STATEMENT ON IRANIAN NUCLEAR PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 23.5588)" 
+                id="06BUENOSAIRES886" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BUENOSAIRES886.html">06BUENOSAIRES886</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARGENTINA ON PRESSURING IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(306.9591 218.9952)" 
+                id="06DARESSALAAM640" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DARESSALAAM640.html">06DARESSALAAM640</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TANZANIA GIVES IRAN BENEFIT OF THE DOUBT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(258.3288 -39.2405)" 
+                id="06DARESSALAAM641" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DARESSALAAM641.html">06DARESSALAAM641</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TANZANIA GIVES IRAN BENEFIT OF THE DOUBT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 246.1559)" 
+                id="06DOHA558" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06DOHA558
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-229.4333 290.0000)" 
+                id="06DOHA562" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DOHA562.html">06DOHA562</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>U/S JOSEPH MEETING ON IRAN WITH MINISTER OF STATE FOR FOREIGN AFFAIRS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-46.4565 230.7078)" 
+                id="06DOHA616" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DOHA616.html">06DOHA616</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>INCREASING DIPLOMATIC PRESSURE ON IRAN: QATAR'S VIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(158.4040 253.0356)" 
+                id="06LIMA1491" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06LIMA1491.html">06LIMA1491</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INCREASING DIPLOMATIC PRESSURE ON IRAN (PERU)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(389.0666 129.8016)" 
+                id="06LIMA1511" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06LIMA1511.html">06LIMA1511</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INCREASING DIPLOMATIC PRESSURE ON IRAN (PERU)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(115.7984 -244.3721)" 
+                id="06MOSCOW3860" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06MOSCOW3860
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-135.5482 -210.3508)" 
+                id="06MOSCOW3935" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MOSCOW3935
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(37.2288 -115.4116)" 
+                id="06MOSCOW3979" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MOSCOW3979.html">06MOSCOW3979</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>INCREASING DIPLOMATIC PRESSURE ON IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(265.6437 -290.0000)" 
+                id="06MOSCOW4265" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MOSCOW4265.html">06MOSCOW4265</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A/S RADEMAKER'S APRIL 12 MEETING WITH DVBR DIRECTOR ANTONOV</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(143.0457 85.9018)" 
+                id="06STATE59562" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE59562
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

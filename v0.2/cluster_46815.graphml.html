@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE180">06SANJOSE180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06SANJOSE180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COSTA RICAN VOTING PROCEDURES FOR FEBRUARY 5</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE193">06SANJOSE193</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06SANJOSE193.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ARIAS LIKELY TO WIN PRESIDENCY, BUT WITHOUT MAJORITY IN THE LEGISLATURE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE227">06SANJOSE227</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06SANJOSE227.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/31/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARIAS FIRST-ROUND VICTORY ASSURED ON FEBRUARY 5; HIS SUPPORT ESPECIALLY STRONG WITH THE OLD, THE LESS EDUCATED, AND THE LOW INCOME</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE270">06SANJOSE270</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE270.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARIAS'S LEAD DECLINING IN FINAL DAYS BEFORE ELECTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE283">06SANJOSE283</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE283.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ARIAS MAINTAINS SLIGHT LEAD THE DAY AFTER THE FEBRUARY 5 ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE304">06SANJOSE304</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE304.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOW VOTE COUNT DELAYS ELECTION RESULTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE305">06SANJOSE305</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE305.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VOTER DISAFFECTION WITH POLITICAL CLASS LEADS TO TIGHT PRESIDENTIAL RACE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE319">06SANJOSE319</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE319.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/10/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COSTA RICA CONTINUES TO STUMBLE TOWARD ELECTION RESULTS; ARIAS WIDENS HIS LEAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE331">06SANJOSE331</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE331.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/10/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTION RESULTS EMBOLDEN ANTI-CAFTA-DR FORCES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE359">06SANJOSE359</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE359.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COSTA RICANS PATIENTLY AWAIT ELECTION RESULTS, BUT POSSIBILITY OF TROUBLE AHEAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE410">06SANJOSE410</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE410.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOLIS ALLEGES "SERIOUS ANOMALIES AND VIOLATIONS" IN THE VOTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE434">06SANJOSE434</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06SANJOSE434.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARIAS WINS FINAL COUNT FOR PRESIDENCY, BUT WINNER NOT YET OFFICIALLY DECLARED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE525">06SANJOSE525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06SANJOSE525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOLIS "ACCEPTS" THAT ARIAS WILL BE NEXT PRESIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE617">06SANJOSE617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06SANJOSE617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IN LETTER TO SOLIS, ARIAS CALLS FOR NATIONAL DIALOG</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-250.9242" y1="-259.5862" 
+                  x2="-344.1288" y2="-181.3289" class="btwns0"/>
+        
+            <line x1="-351.7872" y1="-174.8986" 
+                  x2="-386.7829" y2="-71.9016" class="btwns3"/>
+        
+            <line x1="-390.0000" y1="-62.4332" 
+                  x2="-294.6204" y2="30.2880" class="btwns5"/>
+        
+            <line x1="-287.4501" y1="37.2584" 
+                  x2="-138.4832" y2="127.8481" class="btwns7"/>
+        
+            <line x1="-129.9390" y1="133.0440" 
+                  x2="-284.4950" y2="196.1689" class="btwns0"/>
+        
+            <line x1="-129.9390" y1="133.0440" 
+                  x2="-26.8901" y2="237.4296" class="btwns3"/>
+        
+            <line x1="-129.9390" y1="133.0440" 
+                  x2="70.6244" y2="84.1659" class="btwns10"/>
+        
+            <line x1="-19.8647" y1="244.5461" 
+                  x2="127.8763" y2="287.2247" class="btwns0"/>
+        
+            <line x1="80.3401" y1="81.7982" 
+                  x2="267.9861" y2="62.2202" class="btwns9"/>
+        
+            <line x1="277.9321" y1="61.1825" 
+                  x2="382.2116" y2="-22.7958" class="btwns7"/>
+        
+            <line x1="390.0000" y1="-29.0680" 
+                  x2="348.3754" y2="-135.0894" class="btwns5"/>
+        
+            <line x1="344.7209" y1="-144.3977" 
+                  x2="230.8531" y2="-224.8898" class="btwns3"/>
+        
+            <line x1="222.6873" y1="-230.6621" 
+                  x2="94.9672" y2="-286.0230" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-250.9242 -259.5862)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-351.7872 -174.8986)" 
+                class="vertice degree3 btwns2 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -62.4332)" 
+                class="vertice degree3 btwns3 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-287.4501 37.2584)" 
+                class="vertice degree3 btwns5 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-129.9390 133.0440)" 
+                class="vertice degree10 btwns10 authority10 SANJOSE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-293.7527 199.9500)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-19.8647 244.5461)" 
+                class="vertice degree3 btwns2 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(80.3401 81.7982)" 
+                class="vertice degree3 btwns7 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(137.4834 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(277.9321 61.1825)" 
+                class="vertice degree3 btwns6 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -29.0680)" 
+                class="vertice degree3 btwns5 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(344.7209 -144.3977)" 
+                class="vertice degree3 btwns3 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(222.6873 -230.6621)" 
+                class="vertice degree3 btwns2 authority3 SANJOSE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(85.7920 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-250.9242 -259.5862)" 
+                id="06SANJOSE180" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06SANJOSE180.html">06SANJOSE180</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COSTA RICAN VOTING PROCEDURES FOR FEBRUARY 5</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-351.7872 -174.8986)" 
+                id="06SANJOSE193" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06SANJOSE193.html">06SANJOSE193</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARIAS LIKELY TO WIN PRESIDENCY, BUT WITHOUT MAJORITY IN THE LEGISLATURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -62.4332)" 
+                id="06SANJOSE227" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06SANJOSE227.html">06SANJOSE227</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARIAS FIRST-ROUND VICTORY ASSURED ON FEBRUARY 5; HIS SUPPORT ESPECIALLY STRONG WITH THE OLD, THE LESS EDUCATED, AND THE LOW INCOME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-287.4501 37.2584)" 
+                id="06SANJOSE270" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE270.html">06SANJOSE270</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARIAS'S LEAD DECLINING IN FINAL DAYS BEFORE ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-129.9390 133.0440)" 
+                id="06SANJOSE283" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE283.html">06SANJOSE283</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ARIAS MAINTAINS SLIGHT LEAD THE DAY AFTER THE FEBRUARY 5 ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-293.7527 199.9500)" 
+                id="06SANJOSE304" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE304.html">06SANJOSE304</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOW VOTE COUNT DELAYS ELECTION RESULTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-19.8647 244.5461)" 
+                id="06SANJOSE305" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE305.html">06SANJOSE305</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>VOTER DISAFFECTION WITH POLITICAL CLASS LEADS TO TIGHT PRESIDENTIAL RACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(80.3401 81.7982)" 
+                id="06SANJOSE319" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE319.html">06SANJOSE319</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>COSTA RICA CONTINUES TO STUMBLE TOWARD ELECTION RESULTS; ARIAS WIDENS HIS LEAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(137.4834 290.0000)" 
+                id="06SANJOSE331" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE331.html">06SANJOSE331</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ELECTION RESULTS EMBOLDEN ANTI-CAFTA-DR FORCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(277.9321 61.1825)" 
+                id="06SANJOSE359" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE359.html">06SANJOSE359</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>COSTA RICANS PATIENTLY AWAIT ELECTION RESULTS, BUT POSSIBILITY OF TROUBLE AHEAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -29.0680)" 
+                id="06SANJOSE410" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE410.html">06SANJOSE410</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SOLIS ALLEGES "SERIOUS ANOMALIES AND VIOLATIONS" IN THE VOTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(344.7209 -144.3977)" 
+                id="06SANJOSE434" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06SANJOSE434.html">06SANJOSE434</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARIAS WINS FINAL COUNT FOR PRESIDENCY, BUT WINNER NOT YET OFFICIALLY DECLARED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(222.6873 -230.6621)" 
+                id="06SANJOSE525" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06SANJOSE525.html">06SANJOSE525</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SOLIS "ACCEPTS" THAT ARIAS WILL BE NEXT PRESIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(85.7920 -290.0000)" 
+                id="06SANJOSE617" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06SANJOSE617.html">06SANJOSE617</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IN LETTER TO SOLIS, ARIAS CALLS FOR NATIONAL DIALOG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

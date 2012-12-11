@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE772">08STATE772</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/04/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08ANKARA16">08ANKARA16</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/04/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN14">08BERLIN14</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08BERLIN14.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/04/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) GERMANY WILL INVESTIGATE SHIPMENT OF PROLIFERATION CONCERN DESTINED FOR PAKISTAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SINGAPORE13">08SINGAPORE13</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08SINGAPORE13.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/05/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) SHIPMENT OF PROLIFERATION CONCERN DESTINED FOR PAKISTAN, TRANSSHIPPING SINGAPORE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE1198">08STATE1198</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/05/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA33">08ANKARA33</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08ANKARA33.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/08/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TURKEY: INSUFFICIENT TIME TO RECALL SHIPMENT TO PAKISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SINGAPORE40">08SINGAPORE40</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08SINGAPORE40.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/11/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GOS "EXPLAINS" DECISION NOT TO DETAIN PAKISTAN-BOUND SHIPMENT OF PROLIFERATION CONCERN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE3474">08STATE3474</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/11/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE3747">08STATE3747</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/12/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA74">08ANKARA74</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08ANKARA74.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/14/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TURKEY: CONSIDERING ACTION ON PAKISTAN SHIPMENT, CONCERNED ABOUT SHORT LEAD TIME</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA92">08ANKARA92</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08ANKARA92.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TURKEY ASSERTS INFORMATION ON PAKISTAN SHIPMENT INCORRECT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE79656">08STATE79656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08STATE79656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) RESPONSE TO TURKEY ON SHIPMENT OF PROLIFERATION CONCERN.</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA1340">08ANKARA1340</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ANKARA1340.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) SHIPMENT OF PROLIFERATION CONCERN DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE2430">09STATE2430</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09STATE2430.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/09/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRANIAN FIRM SEEKING COMPUTER NUMERICAL CONTROLLER FOR USE WITH FILAMENT WINDING MACHINE (S)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BERLIN39">09BERLIN39</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BERLIN39.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/13/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) DEMARCHE DELIVERED: IRANIAN FIRM SEEKS GERMAN CONTROLLERS FOR FILAMENT WINDING MACHINE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-86.0415" 
+                  x2="225.8769" y2="-101.8373" class="btwns4"/>
+        
+            <line x1="163.6842" y1="290.0000" 
+                  x2="98.6354" y2="160.3202" class="btwns2"/>
+        
+            <line x1="163.6842" y1="290.0000" 
+                  x2="62.8592" y2="209.1323" class="btwns2"/>
+        
+            <line x1="-141.6885" y1="-78.3737" 
+                  x2="-12.4896" y2="-143.6302" class="btwns2"/>
+        
+            <line x1="-141.6885" y1="-78.3737" 
+                  x2="-38.1445" y2="37.6044" class="btwns2"/>
+        
+            <line x1="75.7013" y1="-290.0000" 
+                  x2="1.3142" y2="-156.8683" class="btwns5"/>
+        
+            <line x1="75.7013" y1="-290.0000" 
+                  x2="210.6223" y2="-257.5055" class="btwns1"/>
+        
+            <line x1="-3.5635" y1="-148.1386" 
+                  x2="-142.4864" y2="-255.8357" class="btwns4"/>
+        
+            <line x1="-3.5635" y1="-148.1386" 
+                  x2="-30.0543" y2="35.1668" class="btwns10"/>
+        
+            <line x1="-3.5635" y1="-148.1386" 
+                  x2="206.1297" y2="-104.8184" class="btwns5"/>
+        
+            <line x1="-88.7670" y1="183.3867" 
+                  x2="84.3014" y2="153.1052" class="btwns2"/>
+        
+            <line x1="-88.7670" y1="183.3867" 
+                  x2="45.1490" y2="201.5328" class="btwns2"/>
+        
+            <line x1="-88.7670" y1="183.3867" 
+                  x2="-35.3107" y2="54.3031" class="btwns6"/>
+        
+            <line x1="-88.7670" y1="183.3867" 
+                  x2="-262.2849" y2="189.6400" class="btwns9"/>
+        
+            <line x1="94.1517" y1="151.3817" 
+                  x2="61.1051" y2="194.9108" class="btwns0"/>
+        
+            <line x1="94.1517" y1="151.3817" 
+                  x2="199.2455" y2="85.1830" class="btwns3"/>
+        
+            <line x1="94.1517" y1="151.3817" 
+                  x2="-23.8510" y2="51.5238" class="btwns2"/>
+        
+            <line x1="55.0584" y1="202.8755" 
+                  x2="199.9206" y2="86.1283" class="btwns3"/>
+        
+            <line x1="55.0584" y1="202.8755" 
+                  x2="-26.6762" y2="53.8321" class="btwns2"/>
+        
+            <line x1="207.7067" y1="79.8532" 
+                  x2="215.4735" y2="-92.8054" class="btwns7"/>
+        
+            <line x1="220.3443" y1="-255.1640" 
+                  x2="216.2130" y2="-112.7911" class="btwns4"/>
+        
+            <line x1="-272.2785" y1="190.0001" 
+                  x2="-381.8300" y2="112.6782" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -86.0415)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(163.6842 290.0000)" 
+                class="vertice degree2 btwns0 authority2 ANKARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-141.6885 -78.3737)" 
+                class="vertice degree2 btwns0 authority2 ANKARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(75.7013 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 ANKARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-3.5635 -148.1386)" 
+                class="vertice degree10 btwns10 authority9 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-88.7670 183.3867)" 
+                class="vertice degree7 btwns7 authority7 BERLIN">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(94.1517 151.3817)" 
+                class="vertice degree10 btwns3 authority10 SINGAPORE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(55.0584 202.8755)" 
+                class="vertice degree10 btwns3 authority10 SINGAPORE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(207.7067 79.8532)" 
+                class="vertice degree5 btwns4 authority5 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-150.3897 -261.9626)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(220.3443 -255.1640)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-31.4846 45.0640)" 
+                class="vertice degree10 btwns8 authority9 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(215.9229 -102.7953)" 
+                class="vertice degree7 btwns7 authority7 STATE">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-272.2785 190.0001)" 
+                class="vertice degree2 btwns4 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 106.9118)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -86.0415)" 
+                id="08ANKARA1340" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ANKARA1340.html">08ANKARA1340</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(S) SHIPMENT OF PROLIFERATION CONCERN DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(163.6842 290.0000)" 
+                id="08ANKARA16" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08ANKARA16
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-141.6885 -78.3737)" 
+                id="08ANKARA33" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08ANKARA33.html">08ANKARA33</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKEY: INSUFFICIENT TIME TO RECALL SHIPMENT TO PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(75.7013 -290.0000)" 
+                id="08ANKARA74" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08ANKARA74.html">08ANKARA74</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKEY: CONSIDERING ACTION ON PAKISTAN SHIPMENT, CONCERNED ABOUT SHORT LEAD TIME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-3.5635 -148.1386)" 
+                id="08ANKARA92" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08ANKARA92.html">08ANKARA92</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TURKEY ASSERTS INFORMATION ON PAKISTAN SHIPMENT INCORRECT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-88.7670 183.3867)" 
+                id="08BERLIN14" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>01/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BERLIN14.html">08BERLIN14</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>(S) GERMANY WILL INVESTIGATE SHIPMENT OF PROLIFERATION CONCERN DESTINED FOR PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(94.1517 151.3817)" 
+                id="08SINGAPORE13" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08SINGAPORE13.html">08SINGAPORE13</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>(S) SHIPMENT OF PROLIFERATION CONCERN DESTINED FOR PAKISTAN, TRANSSHIPPING SINGAPORE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(55.0584 202.8755)" 
+                id="08SINGAPORE40" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08SINGAPORE40.html">08SINGAPORE40</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GOS "EXPLAINS" DECISION NOT TO DETAIN PAKISTAN-BOUND SHIPMENT OF PROLIFERATION CONCERN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(207.7067 79.8532)" 
+                id="08STATE1198" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    08STATE1198
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-150.3897 -261.9626)" 
+                id="08STATE3474" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08STATE3474
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(220.3443 -255.1640)" 
+                id="08STATE3747" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08STATE3747
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-31.4846 45.0640)" 
+                id="08STATE772" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE772
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(215.9229 -102.7953)" 
+                id="08STATE79656" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>07/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08STATE79656.html">08STATE79656</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>(S) RESPONSE TO TURKEY ON SHIPMENT OF PROLIFERATION CONCERN.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-272.2785 190.0001)" 
+                id="09BERLIN39" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BERLIN39.html">09BERLIN39</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>(S) DEMARCHE DELIVERED: IRANIAN FIRM SEEKS GERMAN CONTROLLERS FOR FILAMENT WINDING MACHINE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 106.9118)" 
+                id="09STATE2430" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09STATE2430.html">09STATE2430</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRANIAN FIRM SEEKING COMPUTER NUMERICAL CONTROLLER FOR USE WITH FILAMENT WINDING MACHINE (S)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

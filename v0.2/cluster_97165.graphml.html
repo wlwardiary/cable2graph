@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIJING2299">09BEIJING2299</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/11/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE85673">09STATE85673</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/18/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIJING2439">09BEIJING2439</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/25/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2441">09BEIJING2441</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09BEIJING2441.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/25/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMBASSADOR MEETS MOFCOM CHEN TO DISCUSS TIRES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2525">09BEIJING2525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHINA/G-20: FOUR WANTS, ONE DON'T WANT, AND A DON'T KNOW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2626">09BEIJING2626</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2626.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MEDIA REACTION: U.S. TARIFFS ON CHINESE TIRE IMPORTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2630">09BEIJING2630</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2630.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRC REACTS TO U.S. TIRE SAFEGUARDS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2656">09BEIJING2656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EU ON TIRES CASE; CHINESE REACTIONS DAY TWO</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2660">09BEIJING2660</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2660.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR BADER AND FM YANG DISCUSS THE PRESIDENT'S CHINA TRIP, TRADE FRICTION, TAIWAN, IRAN, AF/PAK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2671">09BEIJING2671</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2671.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/17/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TIRE SAFEGUARD CASE: PRC RELEASES AD/CVD PETITION AGAINST U.S. POULTRY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SHANGHAI397">09SHANGHAI397</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09SHANGHAI397.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EAST CHINA TIRE MAKER "DISAPPOINTED" WITH U.S. SAFEGUARDS DECISION; IMPACT UNCERTAIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2690">09BEIJING2690</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09BEIJING2690.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TIRE CASE: SOY BEANS NEXT?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SHANGHAI399">09SHANGHAI399</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09SHANGHAI399.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SHANGHAI WTO CENTER CALLS U.S. "IRRESPONSIBLE" FOR IMPOSING TIRE IMPORT SAFEGUARDS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING3290">09BEIJING3290</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09BEIJING3290.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DIALOGUE ON TRADE REMEDIES: USTR GENERAL COUNSEL MEETS MOFCOM VM ZHONG SHAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-86.6918" y1="-164.5903" 
+                  x2="-147.3289" y2="48.6149" class="btwns0"/>
+        
+            <line x1="-86.6918" y1="-164.5903" 
+                  x2="-129.8399" y2="-76.2828" class="btwns1"/>
+        
+            <line x1="-86.6918" y1="-164.5903" 
+                  x2="-32.5354" y2="-46.0139" class="btwns0"/>
+        
+            <line x1="-86.6918" y1="-164.5903" 
+                  x2="93.1408" y2="4.3977" class="btwns2"/>
+        
+            <line x1="-86.6918" y1="-164.5903" 
+                  x2="9.7486" y2="82.1741" class="btwns0"/>
+        
+            <line x1="-149.1207" y1="171.6053" 
+                  x2="-149.9813" y2="68.2331" class="btwns0"/>
+        
+            <line x1="-149.1207" y1="171.6053" 
+                  x2="-134.8521" y2="-57.3174" class="btwns1"/>
+        
+            <line x1="-149.1207" y1="171.6053" 
+                  x2="-33.3918" y2="-28.2638" class="btwns0"/>
+        
+            <line x1="-149.1207" y1="171.6053" 
+                  x2="92.0154" y2="16.6517" class="btwns2"/>
+        
+            <line x1="-149.1207" y1="171.6053" 
+                  x2="4.4194" y2="95.9099" class="btwns0"/>
+        
+            <line x1="-150.0645" y1="58.2335" 
+                  x2="-135.4815" y2="-57.3766" class="btwns1"/>
+        
+            <line x1="-150.0645" y1="58.2335" 
+                  x2="-36.2585" y2="-30.7578" class="btwns0"/>
+        
+            <line x1="-150.0645" y1="58.2335" 
+                  x2="90.5996" y2="13.0893" class="btwns2"/>
+        
+            <line x1="-150.0645" y1="58.2335" 
+                  x2="3.5894" y2="89.4944" class="btwns0"/>
+        
+            <line x1="-150.0645" y1="58.2335" 
+                  x2="-48.1320" y2="198.7889" class="btwns0"/>
+        
+            <line x1="104.4399" y1="-151.2629" 
+                  x2="-124.7967" y2="-70.6167" class="btwns1"/>
+        
+            <line x1="104.4399" y1="-151.2629" 
+                  x2="-20.8025" y2="-43.4420" class="btwns1"/>
+        
+            <line x1="104.4399" y1="-151.2629" 
+                  x2="100.6749" y2="1.2487" class="btwns3"/>
+        
+            <line x1="104.4399" y1="-151.2629" 
+                  x2="16.9006" y2="82.1250" class="btwns1"/>
+        
+            <line x1="9.0989" y1="-290.0000" 
+                  x2="-128.8180" y2="-75.7070" class="btwns2"/>
+        
+            <line x1="9.0989" y1="-290.0000" 
+                  x2="-26.9160" y2="-46.8098" class="btwns1"/>
+        
+            <line x1="9.0989" y1="-290.0000" 
+                  x2="97.5268" y2="1.6758" class="btwns4"/>
+        
+            <line x1="-134.2300" y1="-67.2980" 
+                  x2="-37.9929" y2="-39.6765" class="btwns0"/>
+        
+            <line x1="-134.2300" y1="-67.2980" 
+                  x2="90.9453" y2="8.0716" class="btwns5"/>
+        
+            <line x1="-134.2300" y1="-67.2980" 
+                  x2="6.5799" y2="84.1641" class="btwns1"/>
+        
+            <line x1="-134.2300" y1="-67.2980" 
+                  x2="-381.3084" y2="-207.8781" class="btwns10"/>
+        
+            <line x1="-134.2300" y1="-67.2980" 
+                  x2="-45.4413" y2="197.4033" class="btwns1"/>
+        
+            <line x1="-28.3810" y1="-36.9177" 
+                  x2="91.0615" y2="7.7433" class="btwns2"/>
+        
+            <line x1="-28.3810" y1="-36.9177" 
+                  x2="10.2953" y2="81.9785" class="btwns0"/>
+        
+            <line x1="-28.3810" y1="-36.9177" 
+                  x2="-41.6927" y2="196.9003" class="btwns0"/>
+        
+            <line x1="186.5565" y1="290.0000" 
+                  x2="103.3802" y2="20.8000" class="btwns5"/>
+        
+            <line x1="186.5565" y1="290.0000" 
+                  x2="19.9623" y2="99.0238" class="btwns3"/>
+        
+            <line x1="100.4281" y1="11.2456" 
+                  x2="20.7410" y2="84.7099" class="btwns1"/>
+        
+            <line x1="100.4281" y1="11.2456" 
+                  x2="380.1459" y2="59.5644" class="btwns9"/>
+        
+            <line x1="100.4281" y1="11.2456" 
+                  x2="369.8402" y2="-108.9196" class="btwns9"/>
+        
+            <line x1="100.4281" y1="11.2456" 
+                  x2="-36.3685" y2="198.8048" class="btwns2"/>
+        
+            <line x1="13.3887" y1="91.4880" 
+                  x2="-37.9174" y2="197.8769" class="btwns0"/>
+        
+            <line x1="390.0000" y1="61.2666" 
+                  x2="379.6045" y2="-103.0130" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-86.6918 -164.5903)" 
+                class="vertice degree3 btwns0 authority3 BEIJING">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-149.1207 171.6053)" 
+                class="vertice degree3 btwns0 authority3 BEIJING">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-150.0645 58.2335)" 
+                class="vertice degree5 btwns0 authority5 BEIJING">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(104.4399 -151.2629)" 
+                class="vertice degree2 btwns0 authority2 BEIJING">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(9.0989 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-134.2300 -67.2980)" 
+                class="vertice degree8 btwns5 authority8 BEIJING">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-28.3810 -36.9177)" 
+                class="vertice degree7 btwns1 authority7 BEIJING">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(186.5565 290.0000)" 
+                class="vertice degree0 btwns0 authority1 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(100.4281 11.2456)" 
+                class="vertice degree10 btwns10 authority10 BEIJING">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(13.3887 91.4880)" 
+                class="vertice degree7 btwns1 authority7 BEIJING">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -212.8233)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 61.2666)" 
+                class="vertice degree0 btwns0 authority0 SHANGHAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(378.9730 -112.9931)" 
+                class="vertice degree0 btwns0 authority0 SHANGHAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-42.2612 206.8842)" 
+                class="vertice degree3 btwns0 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-86.6918 -164.5903)" 
+                id="09BEIJING2299" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    09BEIJING2299
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-149.1207 171.6053)" 
+                id="09BEIJING2439" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    09BEIJING2439
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-150.0645 58.2335)" 
+                id="09BEIJING2441" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09BEIJING2441.html">09BEIJING2441</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR MEETS MOFCOM CHEN TO DISCUSS TIRES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(104.4399 -151.2629)" 
+                id="09BEIJING2525" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2525.html">09BEIJING2525</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHINA/G-20: FOUR WANTS, ONE DON'T WANT, AND A DON'T KNOW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(9.0989 -290.0000)" 
+                id="09BEIJING2626" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2626.html">09BEIJING2626</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>MEDIA REACTION: U.S. TARIFFS ON CHINESE TIRE IMPORTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-134.2300 -67.2980)" 
+                id="09BEIJING2630" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>09/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2630.html">09BEIJING2630</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>PRC REACTS TO U.S. TIRE SAFEGUARDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-28.3810 -36.9177)" 
+                id="09BEIJING2656" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>09/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2656.html">09BEIJING2656</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>EU ON TIRES CASE; CHINESE REACTIONS DAY TWO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.5565 290.0000)" 
+                id="09BEIJING2660" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2660.html">09BEIJING2660</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR BADER AND FM YANG DISCUSS THE PRESIDENT'S CHINA TRIP, TRADE FRICTION, TAIWAN, IRAN, AF/PAK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.4281 11.2456)" 
+                id="09BEIJING2671" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2671.html">09BEIJING2671</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TIRE SAFEGUARD CASE: PRC RELEASES AD/CVD PETITION AGAINST U.S. POULTRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(13.3887 91.4880)" 
+                id="09BEIJING2690" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>09/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09BEIJING2690.html">09BEIJING2690</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>TIRE CASE: SOY BEANS NEXT?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -212.8233)" 
+                id="09BEIJING3290" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09BEIJING3290.html">09BEIJING3290</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DIALOGUE ON TRADE REMEDIES: USTR GENERAL COUNSEL MEETS MOFCOM VM ZHONG SHAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 61.2666)" 
+                id="09SHANGHAI397" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09SHANGHAI397.html">09SHANGHAI397</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EAST CHINA TIRE MAKER "DISAPPOINTED" WITH U.S. SAFEGUARDS DECISION; IMPACT UNCERTAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(378.9730 -112.9931)" 
+                id="09SHANGHAI399" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09SHANGHAI399.html">09SHANGHAI399</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SHANGHAI WTO CENTER CALLS U.S. "IRRESPONSIBLE" FOR IMPOSING TIRE IMPORT SAFEGUARDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-42.2612 206.8842)" 
+                id="09STATE85673" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    09STATE85673
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

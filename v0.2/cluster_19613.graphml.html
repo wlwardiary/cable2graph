@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LJUBLJANA400">05LJUBLJANA400</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05LJUBLJANA400.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VWP BIOMETRIC PASSPORT REQUIREMENTS: SLOVENES EXPECT NO PROBLEMS COMPLYING.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BRUSSELS2312">05BRUSSELS2312</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05BRUSSELS2312.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EU REACTION TO VWP BIOMETRIC REQUIREMENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE111324">05STATE111324</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/20/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE125862">05STATE125862</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/08/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA2332">05VIENNA2332</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05VIENNA2332.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/12/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISA-WAIVER PROGRAM: PASSPORT-RELATED REQUIREMENTS FOR VWP TRAVELERS AND PARTICIPATING COUNTRIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA2344">05VIENNA2344</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05VIENNA2344.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/12/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISA-WAIVER PROGRAM: PASSPORT-RELATED REQUIREMENTS FOR VWP TRAVELERS AND PARTICIPATING COUNTRIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05CANBERRA1253">05CANBERRA1253</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05CANBERRA1253.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA'S LOST AND STOLEN PASSPORTS REPORTING PROCEDURES AND LEGISLATION UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA2646">05VIENNA2646</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05VIENNA2646.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/05/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRIA'S VISA WAIVER PROGRAM CERTIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE162157">05STATE162157</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/05/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA2987">05VIENNA2987</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05VIENNA2987.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VWP BIOMETRIC CERTIFICATION  DEMARCHES DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05ROME3038">05ROME3038</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/12/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05PARIS6169">05PARIS6169</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/12/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA3064">05VIENNA3064</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05VIENNA3064.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISA WAIVER PROGRAM: AUSTRIA REQUESTS EXTENSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA3321">05VIENNA3321</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05VIENNA3321.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/07/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Austrian Response to DHS letter on VWP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA3383">05VIENNA3383</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05VIENNA3383.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISA WAIVER PROGRAM: AUSTRIA PLANS TO EXTEND THE VALIDITY OF MACHINE-READABLE PASSPORTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA3424">05VIENNA3424</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05VIENNA3424.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VISA WAIVER PROGRAM: AUSTRIA HAS NEW PROPOSAL FOR FOIL TO MEET LEVEL 1 COMPLIANCE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="139.5509" 
+                  x2="-194.8421" y2="158.0746" class="btwns1"/>
+        
+            <line x1="207.7667" y1="290.0000" 
+                  x2="199.4367" y2="155.0504" class="btwns1"/>
+        
+            <line x1="-280.4906" y1="273.8598" 
+                  x2="-191.2849" y2="166.7049" class="btwns1"/>
+        
+            <line x1="-350.7459" y1="-90.8412" 
+                  x2="-153.7033" y2="-111.9420" class="btwns1"/>
+        
+            <line x1="-261.1251" y1="-214.4139" 
+                  x2="-151.3269" y2="-119.5447" class="btwns1"/>
+        
+            <line x1="-184.8869" y1="159.0195" 
+                  x2="-3.8244" y2="43.5222" class="btwns5"/>
+        
+            <line x1="-184.8869" y1="159.0195" 
+                  x2="-13.7923" y2="209.7633" class="btwns1"/>
+        
+            <line x1="198.8207" y1="145.0694" 
+                  x2="365.4204" y2="74.3806" class="btwns0"/>
+        
+            <line x1="198.8207" y1="145.0694" 
+                  x2="380.5784" y2="209.7293" class="btwns1"/>
+        
+            <line x1="198.8207" y1="145.0694" 
+                  x2="236.7991" y2="17.3756" class="btwns0"/>
+        
+            <line x1="198.8207" y1="145.0694" 
+                  x2="13.3665" y2="42.9672" class="btwns4"/>
+        
+            <line x1="198.8207" y1="145.0694" 
+                  x2="5.2837" y2="209.4502" class="btwns1"/>
+        
+            <line x1="-7.9077" y1="-225.7258" 
+                  x2="127.7754" y2="-285.9435" class="btwns1"/>
+        
+            <line x1="-7.9077" y1="-225.7258" 
+                  x2="-136.0643" y2="-119.3922" class="btwns4"/>
+        
+            <line x1="374.6260" y1="70.4746" 
+                  x2="248.7195" y2="12.0026" class="btwns0"/>
+        
+            <line x1="239.6498" y1="7.7906" 
+                  x2="379.7561" y2="-91.7731" class="btwns1"/>
+        
+            <line x1="239.6498" y1="7.7906" 
+                  x2="14.5240" y2="36.8636" class="btwns3"/>
+        
+            <line x1="-143.7602" y1="-113.0068" 
+                  x2="-2.3986" y2="31.0078" class="btwns10"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 139.5509)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(207.7667 290.0000)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-280.4906 273.8598)" 
+                class="vertice degree0 btwns0 authority0 LJUBLJANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-350.7459 -90.8412)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-261.1251 -214.4139)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-184.8869 159.0195)" 
+                class="vertice degree6 btwns4 authority5 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(198.8207 145.0694)" 
+                class="vertice degree10 btwns6 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-7.9077 -225.7258)" 
+                class="vertice degree2 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(374.6260 70.4746)" 
+                class="vertice degree2 btwns0 authority2 VIENNA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 213.0811)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(239.6498 7.7906)" 
+                class="vertice degree6 btwns2 authority6 VIENNA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(136.9157 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-143.7602 -113.0068)" 
+                class="vertice degree6 btwns7 authority5 VIENNA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(387.9075 -97.5658)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(4.6064 38.1443)" 
+                class="vertice degree6 btwns10 authority6 VIENNA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-4.2051 212.6067)" 
+                class="vertice degree2 btwns0 authority2 VIENNA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 139.5509)" 
+                id="05BRUSSELS2312" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05BRUSSELS2312.html">05BRUSSELS2312</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EU REACTION TO VWP BIOMETRIC REQUIREMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(207.7667 290.0000)" 
+                id="05CANBERRA1253" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05CANBERRA1253.html">05CANBERRA1253</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA'S LOST AND STOLEN PASSPORTS REPORTING PROCEDURES AND LEGISLATION UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-280.4906 273.8598)" 
+                id="05LJUBLJANA400" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05LJUBLJANA400.html">05LJUBLJANA400</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VWP BIOMETRIC PASSPORT REQUIREMENTS: SLOVENES EXPECT NO PROBLEMS COMPLYING.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-350.7459 -90.8412)" 
+                id="05PARIS6169" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05PARIS6169
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-261.1251 -214.4139)" 
+                id="05ROME3038" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ROME3038
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-184.8869 159.0195)" 
+                id="05STATE111324" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    05STATE111324
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(198.8207 145.0694)" 
+                id="05STATE125862" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE125862
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-7.9077 -225.7258)" 
+                id="05STATE162157" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05STATE162157
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(374.6260 70.4746)" 
+                id="05VIENNA2332" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05VIENNA2332.html">05VIENNA2332</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VISA-WAIVER PROGRAM: PASSPORT-RELATED REQUIREMENTS FOR VWP TRAVELERS AND PARTICIPATING COUNTRIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 213.0811)" 
+                id="05VIENNA2344" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05VIENNA2344.html">05VIENNA2344</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VISA-WAIVER PROGRAM: PASSPORT-RELATED REQUIREMENTS FOR VWP TRAVELERS AND PARTICIPATING COUNTRIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(239.6498 7.7906)" 
+                id="05VIENNA2646" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05VIENNA2646.html">05VIENNA2646</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>AUSTRIA'S VISA WAIVER PROGRAM CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.9157 -290.0000)" 
+                id="05VIENNA2987" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05VIENNA2987.html">05VIENNA2987</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VWP BIOMETRIC CERTIFICATION  DEMARCHES DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-143.7602 -113.0068)" 
+                id="05VIENNA3064" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05VIENNA3064.html">05VIENNA3064</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>VISA WAIVER PROGRAM: AUSTRIA REQUESTS EXTENSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(387.9075 -97.5658)" 
+                id="05VIENNA3321" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05VIENNA3321.html">05VIENNA3321</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Austrian Response to DHS letter on VWP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(4.6064 38.1443)" 
+                id="05VIENNA3383" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05VIENNA3383.html">05VIENNA3383</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>VISA WAIVER PROGRAM: AUSTRIA PLANS TO EXTEND THE VALIDITY OF MACHINE-READABLE PASSPORTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.2051 212.6067)" 
+                id="05VIENNA3424" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05VIENNA3424.html">05VIENNA3424</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VISA WAIVER PROGRAM: AUSTRIA HAS NEW PROPOSAL FOR FOIL TO MEET LEVEL 1 COMPLIANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

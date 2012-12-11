@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09SECSTATE33655">09SECSTATE33655</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE13440">08STATE13440</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/08/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08YEREVAN657">08YEREVAN657</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/18/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE97802">08STATE97802</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08STATE97802.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">(S) 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE134490">08STATE134490</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08STATE134490.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/24/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) LETTER FROM DEPUTY SECRETARY NEGROPONTE REGARDING 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08YEREVAN1040">08YEREVAN1040</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/27/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN1051">08YEREVAN1051</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08YEREVAN1051.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">HARSH REACTION FROM GOAM TO DEPUTY SECRETARY'S LETTER ON ARMENIAN ARMS TRANSFER TO IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN20">09YEREVAN20</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09YEREVAN20.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/14/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">(S/NF) CONSTRUCTIVE TALKS ON EXPORT CONTROL ISSUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN25">09YEREVAN25</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09YEREVAN25.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) MAHLEY DELEGATION MEETS FOREIGN MINISTER ON IRAN ARMS TRANSFER/EXPORT CONTROL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09YEREVAN62">09YEREVAN62</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/03/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE17311">09STATE17311</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09STATE17311.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) LETTER FROM SECRETARY CLINTON REGARDING 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN (S/ES:200903425)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE33655">09STATE33655</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09STATE33655.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/07/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">US-ARMENIA JOINT ACTION PLAN:  SIGNING AND IMPLEMENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN313">09YEREVAN313</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09YEREVAN313.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">INITIAL MEETING OF US-ARMENIA EXPORT CONTROL WORKING GROUP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN434">09YEREVAN434</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09YEREVAN434.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SARGSIAN SETS OCTOBER AS DEADLINE FOR TURKEY RAPPROCHEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN436">09YEREVAN436</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09YEREVAN436.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ARMENIA AGREES TO REVISE EXPORT CONTROL DECREES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN534">09YEREVAN534</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09YEREVAN534.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/03/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">STATUS REPORT ON ARMENIA'S FULFILLMENT OF JOINT ACTION PLAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN565">09YEREVAN565</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09YEREVAN565.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LEGAL CONSULTATIONS ON MUNITIONS AND DUAL-USE EXPORT CONTROL SYSTEMS, YEREVAN, ARMENIA, JULY 27 - 31, 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN607">09YEREVAN607</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09YEREVAN607.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ARMENIAN EXPORT CONTROL: LOOKING AHEAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN649">09YEREVAN649</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09YEREVAN649.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/17/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ARMENIA'S PARLIAMENT PASSES FOUR LAWS RELATED TO MUNITIONS EXPORT CONTROLS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09YEREVAN657">09YEREVAN657</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/20/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09YEREVAN701">09YEREVAN701</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09YEREVAN701.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/02/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">PRESIDENT SIGNS MUNITIONS EXPORT CONTROL LAWS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-193.5111" y1="-288.3363" 
+                  x2="-226.1797" y2="-176.6037" class="btwns2"/>
+        
+            <line x1="-48.0483" y1="181.9274" 
+                  x2="-28.7911" y2="280.1867" class="btwns2"/>
+        
+            <line x1="-48.0483" y1="181.9274" 
+                  x2="-140.1407" y2="20.2560" class="btwns7"/>
+        
+            <line x1="-48.0483" y1="181.9274" 
+                  x2="61.8570" y2="254.7015" class="btwns2"/>
+        
+            <line x1="-26.8679" y1="290.0000" 
+                  x2="60.6346" y2="263.1553" class="btwns0"/>
+        
+            <line x1="-168.6243" y1="-33.5939" 
+                  x2="-149.7116" y2="2.6987" class="btwns0"/>
+        
+            <line x1="-168.6243" y1="-33.5939" 
+                  x2="-264.3809" y2="61.9187" class="btwns0"/>
+        
+            <line x1="-168.6243" y1="-33.5939" 
+                  x2="-149.8776" y2="51.9866" class="btwns0"/>
+        
+            <line x1="-168.6243" y1="-33.5939" 
+                  x2="-264.4434" y2="-5.9145" class="btwns0"/>
+        
+            <line x1="-168.6243" y1="-33.5939" 
+                  x2="-5.6610" y2="-15.0014" class="btwns2"/>
+        
+            <line x1="-145.0903" y1="11.5668" 
+                  x2="-224.7337" y2="-157.9547" class="btwns7"/>
+        
+            <line x1="-145.0903" y1="11.5668" 
+                  x2="-262.3565" y2="64.8444" class="btwns2"/>
+        
+            <line x1="-145.0903" y1="11.5668" 
+                  x2="-147.2111" y2="51.7689" class="btwns0"/>
+        
+            <line x1="-145.0903" y1="11.5668" 
+                  x2="-264.1149" y2="-2.0063" class="btwns1"/>
+        
+            <line x1="-145.0903" y1="11.5668" 
+                  x2="-5.5835" y2="-12.1892" class="btwns10"/>
+        
+            <line x1="314.7567" y1="-226.6894" 
+                  x2="289.4511" y2="-118.2640" class="btwns1"/>
+        
+            <line x1="314.7567" y1="-226.6894" 
+                  x2="239.1819" y2="-172.2291" class="btwns1"/>
+        
+            <line x1="-228.9860" y1="-167.0055" 
+                  x2="-335.6784" y2="-228.9352" class="btwns2"/>
+        
+            <line x1="-271.4609" y1="68.9808" 
+                  x2="-157.7208" y2="62.3381" class="btwns0"/>
+        
+            <line x1="-271.4609" y1="68.9808" 
+                  x2="-273.6917" y2="6.8543" class="btwns0"/>
+        
+            <line x1="-271.4609" y1="68.9808" 
+                  x2="-381.3398" y2="132.4224" class="btwns2"/>
+        
+            <line x1="-147.7379" y1="61.7550" 
+                  x2="-265.1558" y2="1.4305" class="btwns0"/>
+        
+            <line x1="-147.7379" y1="61.7550" 
+                  x2="-4.6787" y2="-9.4138" class="btwns2"/>
+        
+            <line x1="4.2746" y1="-13.8678" 
+                  x2="136.3781" y2="-83.2144" class="btwns6"/>
+        
+            <line x1="4.2746" y1="-13.8678" 
+                  x2="197.8218" y2="-21.7597" class="btwns8"/>
+        
+            <line x1="309.2076" y1="89.0089" 
+                  x2="214.5520" y2="-14.7785" class="btwns2"/>
+        
+            <line x1="145.2323" y1="-87.8623" 
+                  x2="200.9161" y2="-29.4077" class="btwns0"/>
+        
+            <line x1="145.2323" y1="-87.8623" 
+                  x2="277.2826" y2="-107.0852" class="btwns1"/>
+        
+            <line x1="145.2323" y1="-87.8623" 
+                  x2="223.6904" y2="-159.6331" class="btwns3"/>
+        
+            <line x1="207.8135" y1="-22.1671" 
+                  x2="280.4117" y2="-101.1628" class="btwns2"/>
+        
+            <line x1="207.8135" y1="-22.1671" 
+                  x2="229.4769" y2="-156.5103" class="btwns3"/>
+        
+            <line x1="390.0000" y1="-127.8111" 
+                  x2="297.0069" y2="-110.3692" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-127.8111" 
+                  x2="240.7868" y2="-164.0243" class="btwns1"/>
+        
+            <line x1="287.1783" y1="-108.5257" 
+                  x2="238.0307" y2="-159.2041" class="btwns0"/>
+        
+            <line x1="231.0689" y1="-166.3827" 
+                  x2="155.8194" y2="-281.6269" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-193.5111 -288.3363)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-48.0483 181.9274)" 
+                class="vertice degree3 btwns3 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-26.8679 290.0000)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-168.6243 -33.5939)" 
+                class="vertice degree6 btwns0 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-145.0903 11.5668)" 
+                class="vertice degree10 btwns10 authority10 YEREVAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(70.1948 260.2224)" 
+                class="vertice degree1 btwns0 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(314.7567 -226.6894)" 
+                class="vertice degree1 btwns0 authority1 SECSTATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-228.9860 -167.0055)" 
+                class="vertice degree3 btwns3 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-271.4609 68.9808)" 
+                class="vertice degree6 btwns1 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-147.7379 61.7550)" 
+                class="vertice degree6 btwns0 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-274.0506 -3.1393)" 
+                class="vertice degree5 btwns0 authority5 YEREVAN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(4.2746 -13.8678)" 
+                class="vertice degree6 btwns9 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(309.2076 89.0089)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(145.2323 -87.8623)" 
+                class="vertice degree5 btwns3 authority5 YEREVAN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(207.8135 -22.1671)" 
+                class="vertice degree6 btwns5 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -127.8111)" 
+                class="vertice degree1 btwns0 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(287.1783 -108.5257)" 
+                class="vertice degree6 btwns1 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 137.4226)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(231.0689 -166.3827)" 
+                class="vertice degree8 btwns3 authority8 YEREVAN">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-344.3270 -233.9553)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(150.3521 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-193.5111 -288.3363)" 
+                id="08STATE13440" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08STATE13440
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-48.0483 181.9274)" 
+                id="08STATE134490" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08STATE134490.html">08STATE134490</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>(S) LETTER FROM DEPUTY SECRETARY NEGROPONTE REGARDING 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.8679 290.0000)" 
+                id="08STATE97802" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08STATE97802.html">08STATE97802</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>(S) 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.6243 -33.5939)" 
+                id="08YEREVAN1040" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>12/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    08YEREVAN1040
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-145.0903 11.5668)" 
+                id="08YEREVAN1051" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08YEREVAN1051.html">08YEREVAN1051</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>HARSH REACTION FROM GOAM TO DEPUTY SECRETARY'S LETTER ON ARMENIAN ARMS TRANSFER TO IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(70.1948 260.2224)" 
+                id="08YEREVAN657" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08YEREVAN657
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(314.7567 -226.6894)" 
+                id="09SECSTATE33655" 
+                class="labels">
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    09SECSTATE33655
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-228.9860 -167.0055)" 
+                id="09STATE17311" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE17311.html">09STATE17311</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>(S) LETTER FROM SECRETARY CLINTON REGARDING 2003 ARMENIAN ARMS PROCUREMENT FOR IRAN (S/ES:200903425)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-271.4609 68.9808)" 
+                id="09STATE33655" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09STATE33655.html">09STATE33655</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>US-ARMENIA JOINT ACTION PLAN:  SIGNING AND IMPLEMENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-147.7379 61.7550)" 
+                id="09YEREVAN20" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09YEREVAN20.html">09YEREVAN20</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>(S/NF) CONSTRUCTIVE TALKS ON EXPORT CONTROL ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-274.0506 -3.1393)" 
+                id="09YEREVAN25" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09YEREVAN25.html">09YEREVAN25</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>(S) MAHLEY DELEGATION MEETS FOREIGN MINISTER ON IRAN ARMS TRANSFER/EXPORT CONTROL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(4.2746 -13.8678)" 
+                id="09YEREVAN313" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09YEREVAN313.html">09YEREVAN313</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>INITIAL MEETING OF US-ARMENIA EXPORT CONTROL WORKING GROUP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(309.2076 89.0089)" 
+                id="09YEREVAN434" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09YEREVAN434.html">09YEREVAN434</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SARGSIAN SETS OCTOBER AS DEADLINE FOR TURKEY RAPPROCHEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(145.2323 -87.8623)" 
+                id="09YEREVAN436" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09YEREVAN436.html">09YEREVAN436</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ARMENIA AGREES TO REVISE EXPORT CONTROL DECREES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(207.8135 -22.1671)" 
+                id="09YEREVAN534" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09YEREVAN534.html">09YEREVAN534</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>STATUS REPORT ON ARMENIA'S FULFILLMENT OF JOINT ACTION PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -127.8111)" 
+                id="09YEREVAN565" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09YEREVAN565.html">09YEREVAN565</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LEGAL CONSULTATIONS ON MUNITIONS AND DUAL-USE EXPORT CONTROL SYSTEMS, YEREVAN, ARMENIA, JULY 27 - 31, 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(287.1783 -108.5257)" 
+                id="09YEREVAN607" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09YEREVAN607.html">09YEREVAN607</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ARMENIAN EXPORT CONTROL: LOOKING AHEAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 137.4226)" 
+                id="09YEREVAN62" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09YEREVAN62
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(231.0689 -166.3827)" 
+                id="09YEREVAN649" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>09/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09YEREVAN649.html">09YEREVAN649</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>ARMENIA'S PARLIAMENT PASSES FOUR LAWS RELATED TO MUNITIONS EXPORT CONTROLS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-344.3270 -233.9553)" 
+                id="09YEREVAN657" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09YEREVAN657
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(150.3521 -290.0000)" 
+                id="09YEREVAN701" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09YEREVAN701.html">09YEREVAN701</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENT SIGNS MUNITIONS EXPORT CONTROL LAWS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE71071">07STATE71071</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/24/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ROME1122">07ROME1122</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ROME1122.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY ON SYRIA'S SHAM PRESIDENTIAL "REFERENDUM"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07HELSINKI394">07HELSINKI394</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07HELSINKI394.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FINNISH RESPONSE: SYRIA'S SHAM PRESIDENTIAL "REFERENDUM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07NICOSIA451">07NICOSIA451</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07NICOSIA451.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CYPRUS CLAIMS "NO TIME" TO TAKE STANCE ON SYRIA'S "REFERENDUM"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRATISLAVA314">07BRATISLAVA314</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRATISLAVA314.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAKIA WILL JOIN ANY EU STATEMENT ON SYRIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS1734">07BRUSSELS1734</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRUSSELS1734.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EU ON SYRIA'S PRESIDENTIAL REFERENDUM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TALLINN344">07TALLINN344</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TALLINN344.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA HAS NO PLANS TO COMMENT ON SYRIAN ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE609">07PRAGUE609</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PRAGUE609.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECHS AGREE THAT UPCOMING SYRIAN ELECTION WILL NOT BE DEMOCRATIC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2202">07PARIS2202</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PARIS2202.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">STAYING IN SYNCH WITH FRANCE ON SYRIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MADRID1035">07MADRID1035</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07MADRID1035.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPAIN ON SYRIA REFERENDUM</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-45.5468" 
+                  x2="10.3997" y2="7.2405" class="btwns5"/>
+        
+            <line x1="-340.1986" y1="159.7570" 
+                  x2="-8.6459" y2="12.6730" class="btwns5"/>
+        
+            <line x1="-131.8811" y1="290.0000" 
+                  x2="-3.7620" y2="17.6665" class="btwns5"/>
+        
+            <line x1="252.1562" y1="-221.1050" 
+                  x2="7.8806" y2="1.8760" class="btwns5"/>
+        
+            <line x1="-256.1647" y1="-218.2601" 
+                  x2="-6.9974" y2="1.9949" class="btwns5"/>
+        
+            <line x1="344.6250" y1="155.6541" 
+                  x2="9.6908" y2="12.5469" class="btwns5"/>
+        
+            <line x1="-2.6643" y1="-290.0000" 
+                  x2="0.3892" y2="-1.3816" class="btwns5"/>
+        
+            <line x1="138.7848" y1="288.0471" 
+                  x2="4.9305" y2="17.5803" class="btwns5"/>
+        
+            <line x1="0.4950" y1="8.6179" 
+                  x2="-380.0792" y2="-39.5749" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -45.5468)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-340.1986 159.7570)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-131.8811 290.0000)" 
+                class="vertice degree0 btwns0 authority0 HELSINKI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(252.1562 -221.1050)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-256.1647 -218.2601)" 
+                class="vertice degree0 btwns0 authority0 NICOSIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(344.6250 155.6541)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-2.6643 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(138.7848 288.0471)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(0.4950 8.6179)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -40.8311)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -45.5468)" 
+                id="07BRATISLAVA314" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRATISLAVA314.html">07BRATISLAVA314</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA WILL JOIN ANY EU STATEMENT ON SYRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-340.1986 159.7570)" 
+                id="07BRUSSELS1734" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRUSSELS1734.html">07BRUSSELS1734</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EU ON SYRIA'S PRESIDENTIAL REFERENDUM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-131.8811 290.0000)" 
+                id="07HELSINKI394" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HELSINKI394.html">07HELSINKI394</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FINNISH RESPONSE: SYRIA'S SHAM PRESIDENTIAL "REFERENDUM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(252.1562 -221.1050)" 
+                id="07MADRID1035" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07MADRID1035.html">07MADRID1035</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN ON SYRIA REFERENDUM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-256.1647 -218.2601)" 
+                id="07NICOSIA451" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07NICOSIA451.html">07NICOSIA451</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CYPRUS CLAIMS "NO TIME" TO TAKE STANCE ON SYRIA'S "REFERENDUM"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(344.6250 155.6541)" 
+                id="07PARIS2202" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PARIS2202.html">07PARIS2202</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>STAYING IN SYNCH WITH FRANCE ON SYRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-2.6643 -290.0000)" 
+                id="07PRAGUE609" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PRAGUE609.html">07PRAGUE609</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECHS AGREE THAT UPCOMING SYRIAN ELECTION WILL NOT BE DEMOCRATIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(138.7848 288.0471)" 
+                id="07ROME1122" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ROME1122.html">07ROME1122</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY ON SYRIA'S SHAM PRESIDENTIAL "REFERENDUM"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(0.4950 8.6179)" 
+                id="07STATE71071" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE71071
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -40.8311)" 
+                id="07TALLINN344" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TALLINN344.html">07TALLINN344</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA HAS NO PLANS TO COMMENT ON SYRIAN ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09MOSCOW3298">09MOSCOW3298</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW4772">07MOSCOW4772</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07MOSCOW4772.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/28/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">YABLOKO PARTY LAUNCHES PARTY LIST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08MOSCOW909">08MOSCOW909</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/02/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW1818">08MOSCOW1818</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08MOSCOW1818.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">YABLOKO TURNS OVER A NEW LEAF</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08MOSCOW3288">08MOSCOW3288</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/12/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW155">09MOSCOW155</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09MOSCOW155.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOSCOW GOVERNMENT COPES WITH THE GLOBAL ECONOMIC CRISIS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW816">09MOSCOW816</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MOSCOW816.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/01/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOSCOW'S SOCIAL MOVEMENTS, DISJOINTED AND INEFFECTIVE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW951">09MOSCOW951</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MOSCOW951.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/14/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MOSCOW CITY DUMA POSTPONES ELECTIONS TO 2010</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW1060">09MOSCOW1060</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MOSCOW1060.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEBTS AND LEADERSHIP WOES FORCE YABLOKO TO THINK SMALLER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW1742">09MOSCOW1742</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09MOSCOW1742.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">YAVLINSKIY'S POLICY RECOMMENDATIONS FOR THE OBAMA-MEDVEDEV SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW1743">09MOSCOW1743</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09MOSCOW1743.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOSCOW CITY DUMA AMENDMENTS FAVOR A UNITED RUSSIA LANDSLIDE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW2006">09MOSCOW2006</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09MOSCOW2006.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOSCOW'S CRISIS SITUATION DETERIORATES FURTHER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW2046">09MOSCOW2046</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09MOSCOW2046.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOSCOW'S LEVELS - AND LEVERS - OF POWER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW2340">09MOSCOW2340</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09MOSCOW2340.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOSCOW CITY DUMA ELECTIONS: STILL EARLY, BUT ALREADY UNFAIR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09MOSCOW2634">09MOSCOW2634</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/23/09</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="221.1083" y1="-241.4037" 
+                  x2="211.1083" y2="-241.4037" class="btwns0"/>
+        
+            <line x1="221.1083" y1="-241.4037" 
+                  x2="67.1047" y2="-200.7225" class="btwns2"/>
+        
+            <line x1="57.4363" y1="-198.1685" 
+                  x2="-42.1379" y2="-283.4932" class="btwns2"/>
+        
+            <line x1="57.4363" y1="-198.1685" 
+                  x2="-3.7693" y2="-68.7693" class="btwns7"/>
+        
+            <line x1="-221.3519" y1="-109.9850" 
+                  x2="-17.7786" y2="-62.0228" class="btwns5"/>
+        
+            <line x1="-221.3519" y1="-109.9850" 
+                  x2="-380.1025" y2="-132.8929" class="btwns2"/>
+        
+            <line x1="-8.0451" y1="-59.7295" 
+                  x2="-102.3127" y2="59.8264" class="btwns10"/>
+        
+            <line x1="-8.0451" y1="-59.7295" 
+                  x2="206.5373" y2="1.1284" class="btwns8"/>
+        
+            <line x1="-197.9623" y1="190.0945" 
+                  x2="-262.9286" y2="281.8389" class="btwns2"/>
+        
+            <line x1="-197.9623" y1="190.0945" 
+                  x2="-368.0813" y2="145.3465" class="btwns2"/>
+        
+            <line x1="-197.9623" y1="190.0945" 
+                  x2="-57.7198" y2="271.4886" class="btwns2"/>
+        
+            <line x1="-197.9623" y1="190.0945" 
+                  x2="-114.4045" y2="75.7529" class="btwns8"/>
+        
+            <line x1="336.7006" y1="103.3733" 
+                  x2="340.6010" y2="209.1985" class="btwns2"/>
+        
+            <line x1="336.7006" y1="103.3733" 
+                  x2="385.2284" y2="13.9957" class="btwns0"/>
+        
+            <line x1="336.7006" y1="103.3733" 
+                  x2="223.8694" y2="10.2234" class="btwns4"/>
+        
+            <line x1="390.0000" y1="5.2075" 
+                  x2="226.1575" y2="3.9346" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(221.1083 -241.4037)" 
+                class="vertice degree6 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(57.4363 -198.1685)" 
+                class="vertice degree6 btwns3 authority6 MOSCOW">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-221.3519 -109.9850)" 
+                class="vertice degree3 btwns1 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-49.7314 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-8.0451 -59.7295)" 
+                class="vertice degree10 btwns10 authority10 MOSCOW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-197.9623 190.0945)" 
+                class="vertice degree10 btwns5 authority9 MOSCOW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -134.3211)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(336.7006 103.3733)" 
+                class="vertice degree6 btwns1 authority6 MOSCOW">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-268.7076 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(340.9693 219.1917)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 5.2075)" 
+                class="vertice degree3 btwns0 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-377.7523 142.8027)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-49.0709 276.5082)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-108.5043 67.6790)" 
+                class="vertice degree3 btwns5 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(216.1578 3.8569)" 
+                class="vertice degree6 btwns4 authority6 MOSCOW">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(221.1083 -241.4037)" 
+                id="07MOSCOW4772" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07MOSCOW4772.html">07MOSCOW4772</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>YABLOKO PARTY LAUNCHES PARTY LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(57.4363 -198.1685)" 
+                id="08MOSCOW1818" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08MOSCOW1818.html">08MOSCOW1818</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>YABLOKO TURNS OVER A NEW LEAF</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-221.3519 -109.9850)" 
+                id="08MOSCOW3288" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    08MOSCOW3288
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-49.7314 -290.0000)" 
+                id="08MOSCOW909" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08MOSCOW909
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-8.0451 -59.7295)" 
+                id="09MOSCOW1060" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MOSCOW1060.html">09MOSCOW1060</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEBTS AND LEADERSHIP WOES FORCE YABLOKO TO THINK SMALLER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-197.9623 190.0945)" 
+                id="09MOSCOW155" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09MOSCOW155.html">09MOSCOW155</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MOSCOW GOVERNMENT COPES WITH THE GLOBAL ECONOMIC CRISIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -134.3211)" 
+                id="09MOSCOW1742" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09MOSCOW1742.html">09MOSCOW1742</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>YAVLINSKIY'S POLICY RECOMMENDATIONS FOR THE OBAMA-MEDVEDEV SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(336.7006 103.3733)" 
+                id="09MOSCOW1743" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09MOSCOW1743.html">09MOSCOW1743</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MOSCOW CITY DUMA AMENDMENTS FAVOR A UNITED RUSSIA LANDSLIDE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-268.7076 290.0000)" 
+                id="09MOSCOW2006" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09MOSCOW2006.html">09MOSCOW2006</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOSCOW'S CRISIS SITUATION DETERIORATES FURTHER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(340.9693 219.1917)" 
+                id="09MOSCOW2046" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09MOSCOW2046.html">09MOSCOW2046</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOSCOW'S LEVELS - AND LEVERS - OF POWER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 5.2075)" 
+                id="09MOSCOW2340" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09MOSCOW2340.html">09MOSCOW2340</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MOSCOW CITY DUMA ELECTIONS: STILL EARLY, BUT ALREADY UNFAIR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-377.7523 142.8027)" 
+                id="09MOSCOW2634" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09MOSCOW2634
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-49.0709 276.5082)" 
+                id="09MOSCOW3298" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09MOSCOW3298
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-108.5043 67.6790)" 
+                id="09MOSCOW816" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MOSCOW816.html">09MOSCOW816</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MOSCOW'S SOCIAL MOVEMENTS, DISJOINTED AND INEFFECTIVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(216.1578 3.8569)" 
+                id="09MOSCOW951" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MOSCOW951.html">09MOSCOW951</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MOSCOW CITY DUMA POSTPONES ELECTIONS TO 2010</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE114687">05STATE114687</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/20/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05WELLINGTON491">05WELLINGTON491</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05WELLINGTON491.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/23/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND - RESPONSE TO REQUEST FOR LICENSING CONDITIONS IN TELECOMMUNICATIONS SECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VIENNA2118">05VIENNA2118</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05VIENNA2118.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/24/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR - AUSTRIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05OTTAWA1917">05OTTAWA1917</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05OTTAWA1917.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/24/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05KINGSTON1598">05KINGSTON1598</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05KINGSTON1598.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA498">05BRATISLAVA498</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05BRATISLAVA498.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/29/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAK LICENSING CONDITIONS IN TELECOMMUNICATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BUCHAREST1459">05BUCHAREST1459</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05BUCHAREST1459.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/29/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA: LICENSING CONDITIONS IN TELECOM SECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DUBLIN814">05DUBLIN814</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05DUBLIN814.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TELECOMMUNICATIONS LICENSING CONDITIONS: IRELAND</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PARIS4585">05PARIS4585</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05PARIS4585.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FRENCH RESPONSE TO LICENSING CONDITIONS IN THE TELCOMMUNICATIONS SECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DHAKA3074">05DHAKA3074</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05DHAKA3074.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/01/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR IN BANGLADESH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LJUBLJANA458">05LJUBLJANA458</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05LJUBLJANA458.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVENIA - LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO1183">05COLOMBO1183</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05COLOMBO1183.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR IN SRI LANKA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BRASILIA1894">05BRASILIA1894</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05BRASILIA1894.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BRAZIL - TELECOMMUNICATIONS LICENSING CONDITIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05TAIPEI3195">05TAIPEI3195</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05TAIPEI3195.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/01/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LICENSING CONDITIONS IN THE TELECOM SECTOR</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="342.2517" y1="-178.6513" 
+                  x2="12.4102" y2="-1.2099" class="btwns5"/>
+        
+            <line x1="389.6857" y1="-26.7269" 
+                  x2="13.5730" y2="2.7464" class="btwns5"/>
+        
+            <line x1="136.1790" y1="-153.7746" 
+                  x2="10.0481" y2="-4.1188" class="btwns5"/>
+        
+            <line x1="-356.3579" y1="84.7490" 
+                  x2="-6.1512" y2="5.7287" class="btwns5"/>
+        
+            <line x1="218.3908" y1="181.6426" 
+                  x2="11.3012" y2="9.9110" class="btwns5"/>
+        
+            <line x1="-300.5552" y1="-167.4558" 
+                  x2="-5.1134" y2="-1.3727" class="btwns5"/>
+        
+            <line x1="-278.4853" y1="209.0481" 
+                  x2="-4.4788" y2="9.4162" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="-46.5826" 
+                  x2="-6.3163" y2="2.2647" class="btwns5"/>
+        
+            <line x1="101.5995" y1="290.0000" 
+                  x2="6.8403" y2="12.9894" class="btwns5"/>
+        
+            <line x1="390.0000" y1="119.1114" 
+                  x2="13.1842" y2="6.3935" class="btwns5"/>
+        
+            <line x1="3.6036" y1="3.5276" 
+                  x2="-138.8871" y2="-242.5846" class="btwns5"/>
+        
+            <line x1="3.6036" y1="3.5276" 
+                  x2="-90.2664" y2="241.9463" class="btwns5"/>
+        
+            <line x1="3.6036" y1="3.5276" 
+                  x2="71.1183" y2="-280.2715" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(342.2517 -178.6513)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(389.6857 -26.7269)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(136.1790 -153.7746)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-356.3579 84.7490)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(218.3908 181.6426)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-300.5552 -167.4558)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-278.4853 209.0481)" 
+                class="vertice degree0 btwns0 authority0 KINGSTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -46.5826)" 
+                class="vertice degree0 btwns0 authority0 LJUBLJANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(101.5995 290.0000)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 119.1114)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(3.6036 3.5276)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-143.8976 -251.2388)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-93.9299 251.2511)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(73.4327 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(342.2517 -178.6513)" 
+                id="05BRASILIA1894" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05BRASILIA1894.html">05BRASILIA1894</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRAZIL - TELECOMMUNICATIONS LICENSING CONDITIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(389.6857 -26.7269)" 
+                id="05BRATISLAVA498" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05BRATISLAVA498.html">05BRATISLAVA498</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVAK LICENSING CONDITIONS IN TELECOMMUNICATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.1790 -153.7746)" 
+                id="05BUCHAREST1459" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05BUCHAREST1459.html">05BUCHAREST1459</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA: LICENSING CONDITIONS IN TELECOM SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-356.3579 84.7490)" 
+                id="05COLOMBO1183" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05COLOMBO1183.html">05COLOMBO1183</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR IN SRI LANKA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(218.3908 181.6426)" 
+                id="05DHAKA3074" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05DHAKA3074.html">05DHAKA3074</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR IN BANGLADESH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-300.5552 -167.4558)" 
+                id="05DUBLIN814" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/30/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05DUBLIN814.html">05DUBLIN814</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TELECOMMUNICATIONS LICENSING CONDITIONS: IRELAND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-278.4853 209.0481)" 
+                id="05KINGSTON1598" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05KINGSTON1598.html">05KINGSTON1598</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -46.5826)" 
+                id="05LJUBLJANA458" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05LJUBLJANA458.html">05LJUBLJANA458</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVENIA - LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(101.5995 290.0000)" 
+                id="05OTTAWA1917" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05OTTAWA1917.html">05OTTAWA1917</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 119.1114)" 
+                id="05PARIS4585" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/30/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05PARIS4585.html">05PARIS4585</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH RESPONSE TO LICENSING CONDITIONS IN THE TELCOMMUNICATIONS SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(3.6036 3.5276)" 
+                id="05STATE114687" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE114687
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-143.8976 -251.2388)" 
+                id="05TAIPEI3195" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05TAIPEI3195.html">05TAIPEI3195</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOM SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-93.9299 251.2511)" 
+                id="05VIENNA2118" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05VIENNA2118.html">05VIENNA2118</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LICENSING CONDITIONS IN THE TELECOMMUNICATIONS SECTOR - AUSTRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(73.4327 -290.0000)" 
+                id="05WELLINGTON491" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05WELLINGTON491.html">05WELLINGTON491</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND - RESPONSE TO REQUEST FOR LICENSING CONDITIONS IN TELECOMMUNICATIONS SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

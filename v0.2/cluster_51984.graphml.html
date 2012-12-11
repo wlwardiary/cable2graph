@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE58056">07SECSTATE58056</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE63345">07SECSTATE63345</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS1473">07BRUSSELS1473</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRUSSELS1473.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">BELGIANS OPPOSE BELARUS CANDIDACY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07FREETOWN289">07FREETOWN289</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07FREETOWN289.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FREETOWN DEMARCHE DELIVERED UN HUMAN RIGHTS COUNCIL CANDIDACY OF BELARUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ABUDHABI766">07ABUDHABI766</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ABUDHABI766.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ASSSESMENT OF UAE POSITION ON UN HUMAN RIGHTS COUNCIL ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS1549">07BRUSSELS1549</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRUSSELS1549.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">BELGIANS REMAIN STRONGLY AGAINST BELARUS CANDIDACY FOR UNHRC SEAT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07FREETOWN290">07FREETOWN290</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07FREETOWN290.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SIERRA LEONE: AMBASSADOR'S ASSESSMENT ON UN HUMAN RIGHTS COUNCIL (UNHRC) ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TBILISI1079">07TBILISI1079</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TBILISI1079.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: REQUEST FOR AMBASSADOR'S ASSESSMENT ON UNHRC ELECTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PORTAUPRINCE858">07PORTAUPRINCE858</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PORTAUPRINCE858.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">DEMARCHE DELIVERED: BELARUS CANDIDACY FOR HUMAN RIGHTS COUNCIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PORTOFSPAIN480">07PORTOFSPAIN480</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PORTOFSPAIN480.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOTT UNHCR VOTE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANAA884">07SANAA884</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07SANAA884.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S ASSESSMENT ON UNHRC ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BUDAPEST778">07BUDAPEST778</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BUDAPEST778.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UN HUMAN RIGHTS COUNCIL (UNHRC) ELECTION: HUNGARIAN VIEWS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PORTOFSPAIN489">07PORTOFSPAIN489</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PORTOFSPAIN489.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">T&T WILL SUPPORT BELARUS FOR THE HUMAN RIGHTS COUNCIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DOHA507">07DOHA507</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07DOHA507.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR INCLINED TO SUPPORT ALTERNATIVE TO BELARUS FOR HUMAN RIGHTS COUNCIL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BANDARSERIBEGAWAN149">07BANDARSERIBEGAWAN149</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BANDARSERIBEGAWAN149.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BRUNEI MAY HAVE FLEXIBILITY TO DROP SUPPORT FOR BELARUS UNHRC CANDIDACY AFTER FIRST ROUND</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="349.0117" y1="139.2285" 
+                  x2="29.2028" y2="186.6152" class="btwns0"/>
+        
+            <line x1="292.5446" y1="242.9073" 
+                  x2="29.1154" y2="190.0483" class="btwns0"/>
+        
+            <line x1="-206.4357" y1="91.6596" 
+                  x2="-188.1640" y2="-19.5577" class="btwns9"/>
+        
+            <line x1="-206.4357" y1="91.6596" 
+                  x2="10.1145" y2="184.1530" class="btwns8"/>
+        
+            <line x1="-186.5429" y1="-29.4254" 
+                  x2="-21.3119" y2="-159.9092" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="-116.7544" 
+                  x2="-23.3792" y2="-164.8072" class="btwns0"/>
+        
+            <line x1="-321.3638" y1="209.5586" 
+                  x2="9.3306" y2="188.7102" class="btwns0"/>
+        
+            <line x1="-67.0599" y1="290.0000" 
+                  x2="12.8456" y2="195.7100" class="btwns0"/>
+        
+            <line x1="109.9595" y1="-290.0000" 
+                  x2="-6.4063" y2="-173.1913" class="btwns0"/>
+        
+            <line x1="-363.3770" y1="-213.0051" 
+                  x2="-23.3753" y2="-167.4352" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-130.8104" 
+                  x2="-3.5020" y2="-165.2353" class="btwns0"/>
+        
+            <line x1="202.1108" y1="-68.4046" 
+                  x2="-4.3557" y2="-161.9788" class="btwns0"/>
+        
+            <line x1="-170.7114" y1="-283.4461" 
+                  x2="-21.4785" y2="-172.0873" class="btwns0"/>
+        
+            <line x1="-13.4640" y1="-166.1068" 
+                  x2="310.0525" y2="-225.2639" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(349.0117 139.2285)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(292.5446 242.9073)" 
+                class="vertice degree0 btwns0 authority0 BANDARSERIBEGAWAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-206.4357 91.6596)" 
+                class="vertice degree1 btwns6 authority1 BRUSSELS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-186.5429 -29.4254)" 
+                class="vertice degree1 btwns6 authority1 BRUSSELS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -116.7544)" 
+                class="vertice degree0 btwns0 authority0 BUDAPEST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-321.3638 209.5586)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-67.0599 290.0000)" 
+                class="vertice degree0 btwns0 authority0 FREETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(109.9595 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 FREETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-363.3770 -213.0051)" 
+                class="vertice degree0 btwns0 authority0 PORTAUPRINCE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -130.8104)" 
+                class="vertice degree0 btwns0 authority0 PORTOFSPAIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(202.1108 -68.4046)" 
+                class="vertice degree0 btwns0 authority0 PORTOFSPAIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-170.7114 -283.4461)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(19.3108 188.0810)" 
+                class="vertice degree5 btwns6 authority5 SECSTATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-13.4640 -166.1068)" 
+                class="vertice degree10 btwns10 authority10 SECSTATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(319.8894 -227.0627)" 
+                class="vertice degree0 btwns0 authority0 TBILISI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(349.0117 139.2285)" 
+                id="07ABUDHABI766" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ABUDHABI766.html">07ABUDHABI766</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ASSSESMENT OF UAE POSITION ON UN HUMAN RIGHTS COUNCIL ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(292.5446 242.9073)" 
+                id="07BANDARSERIBEGAWAN149" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BANDARSERIBEGAWAN149.html">07BANDARSERIBEGAWAN149</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRUNEI MAY HAVE FLEXIBILITY TO DROP SUPPORT FOR BELARUS UNHRC CANDIDACY AFTER FIRST ROUND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-206.4357 91.6596)" 
+                id="07BRUSSELS1473" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRUSSELS1473.html">07BRUSSELS1473</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BELGIANS OPPOSE BELARUS CANDIDACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-186.5429 -29.4254)" 
+                id="07BRUSSELS1549" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRUSSELS1549.html">07BRUSSELS1549</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BELGIANS REMAIN STRONGLY AGAINST BELARUS CANDIDACY FOR UNHRC SEAT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -116.7544)" 
+                id="07BUDAPEST778" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BUDAPEST778.html">07BUDAPEST778</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN HUMAN RIGHTS COUNCIL (UNHRC) ELECTION: HUNGARIAN VIEWS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-321.3638 209.5586)" 
+                id="07DOHA507" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07DOHA507.html">07DOHA507</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>QATAR INCLINED TO SUPPORT ALTERNATIVE TO BELARUS FOR HUMAN RIGHTS COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-67.0599 290.0000)" 
+                id="07FREETOWN289" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07FREETOWN289.html">07FREETOWN289</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FREETOWN DEMARCHE DELIVERED UN HUMAN RIGHTS COUNCIL CANDIDACY OF BELARUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(109.9595 -290.0000)" 
+                id="07FREETOWN290" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07FREETOWN290.html">07FREETOWN290</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SIERRA LEONE: AMBASSADOR'S ASSESSMENT ON UN HUMAN RIGHTS COUNCIL (UNHRC) ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-363.3770 -213.0051)" 
+                id="07PORTAUPRINCE858" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PORTAUPRINCE858.html">07PORTAUPRINCE858</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: BELARUS CANDIDACY FOR HUMAN RIGHTS COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -130.8104)" 
+                id="07PORTOFSPAIN480" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PORTOFSPAIN480.html">07PORTOFSPAIN480</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOTT UNHCR VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(202.1108 -68.4046)" 
+                id="07PORTOFSPAIN489" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PORTOFSPAIN489.html">07PORTOFSPAIN489</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>T&T WILL SUPPORT BELARUS FOR THE HUMAN RIGHTS COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-170.7114 -283.4461)" 
+                id="07SANAA884" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07SANAA884.html">07SANAA884</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S ASSESSMENT ON UNHRC ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(19.3108 188.0810)" 
+                id="07SECSTATE58056" 
+                class="labels">
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    07SECSTATE58056
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-13.4640 -166.1068)" 
+                id="07SECSTATE63345" 
+                class="labels">
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07SECSTATE63345
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(319.8894 -227.0627)" 
+                id="07TBILISI1079" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TBILISI1079.html">07TBILISI1079</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: REQUEST FOR AMBASSADOR'S ASSESSMENT ON UNHRC ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE211137">05STATE211137</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE217326">05STATE217326</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05THEHAGUE3136">05THEHAGUE3136</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05THEHAGUE3136.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NETHERLANDS/OSCE: DEMARCHE ON OSCE SCALES OF CONTRIBUTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ROME3880">05ROME3880</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ROME3880.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/23/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OSCE: ITALIANS FLEXIBLE ON BUDGET ISSUES, SEEKING MINISTERIAL DECLARATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ROME3885">05ROME3885</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ROME3885.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OSCE: ITALIANS FLEXIBLE ON BUDGET ISSUES, SEEKING MINISTERIAL DECLARATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ANKARA7061">05ANKARA7061</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ANKARA7061.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAC COMMUNIQUE/MOLDOVA: TURKS SUPPORT "EITHER" LANGUAGE, CLAIM TO BE SEEKING CONSENSUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PARIS8172">05PARIS8172</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05PARIS8172.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAC COMMUNIQUE: DESPITE RESERVATIONS, FRANCE IS OPEN TO COMPROMISE ON CFE PARAGRAPH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ROME3961">05ROME3961</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ROME3961.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY INSISTS IT IS FIRM ON PRESSURING RUSSIA ON ISTANBUL COMMITMENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05WARSAW3954">05WARSAW3954</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05WARSAW3954.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAC COMMUNIQUE:  POLAND SUPPORTS STRONG LANGUAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05THEHAGUE3221">05THEHAGUE3221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05THEHAGUE3221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/02/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NETHERLANDS/NATO: RESPONSE TO NAC COMMUNIQUE CFE LANGUAGE DEMARCHE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05OTTAWA3578">05OTTAWA3578</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05OTTAWA3578.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/02/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADA: CONCURS ON STRONG LANGUAGE FOR CFE/ISTANBUL PARA IN NAC COMMUNIQUE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-367.5557" y1="26.9141" 
+                  x2="-126.8924" y2="132.4995" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="172.6160" 
+                  x2="-127.6482" y2="137.8315" class="btwns2"/>
+        
+            <line x1="76.8661" y1="272.4811" 
+                  x2="-109.5376" y2="142.2445" class="btwns2"/>
+        
+            <line x1="-107.3068" y1="-191.0573" 
+                  x2="-57.7156" y2="-61.8029" class="btwns1"/>
+        
+            <line x1="-107.3068" y1="-191.0573" 
+                  x2="126.4623" y2="-158.6637" class="btwns0"/>
+        
+            <line x1="182.2237" y1="-290.0000" 
+                  x2="139.6335" y2="-166.7427" class="btwns2"/>
+        
+            <line x1="-54.1335" y1="-52.4665" 
+                  x2="127.6064" y2="-152.4702" class="btwns6"/>
+        
+            <line x1="-54.1335" y1="-52.4665" 
+                  x2="-114.5453" y2="127.0395" class="btwns10"/>
+        
+            <line x1="136.3676" y1="-157.2911" 
+                  x2="380.2458" y2="-102.1940" class="btwns2"/>
+        
+            <line x1="-117.7350" y1="136.5171" 
+                  x2="173.9917" y2="149.0128" class="btwns2"/>
+        
+            <line x1="-117.7350" y1="136.5171" 
+                  x2="-182.6845" y2="280.8805" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-367.5557 26.9141)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 172.6160)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(76.8661 272.4811)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-107.3068 -191.0573)" 
+                class="vertice degree2 btwns0 authority2 ROME">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(182.2237 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-54.1335 -52.4665)" 
+                class="vertice degree4 btwns6 authority4 ROME">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(136.3676 -157.2911)" 
+                class="vertice degree6 btwns4 authority5 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-117.7350 136.5171)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -99.9903)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(183.9825 149.4407)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-186.7874 290.0000)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-367.5557 26.9141)" 
+                id="05ANKARA7061" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ANKARA7061.html">05ANKARA7061</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NAC COMMUNIQUE/MOLDOVA: TURKS SUPPORT "EITHER" LANGUAGE, CLAIM TO BE SEEKING CONSENSUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 172.6160)" 
+                id="05OTTAWA3578" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05OTTAWA3578.html">05OTTAWA3578</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADA: CONCURS ON STRONG LANGUAGE FOR CFE/ISTANBUL PARA IN NAC COMMUNIQUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(76.8661 272.4811)" 
+                id="05PARIS8172" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05PARIS8172.html">05PARIS8172</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NAC COMMUNIQUE: DESPITE RESERVATIONS, FRANCE IS OPEN TO COMPROMISE ON CFE PARAGRAPH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-107.3068 -191.0573)" 
+                id="05ROME3880" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ROME3880.html">05ROME3880</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>OSCE: ITALIANS FLEXIBLE ON BUDGET ISSUES, SEEKING MINISTERIAL DECLARATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(182.2237 -290.0000)" 
+                id="05ROME3885" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ROME3885.html">05ROME3885</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OSCE: ITALIANS FLEXIBLE ON BUDGET ISSUES, SEEKING MINISTERIAL DECLARATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-54.1335 -52.4665)" 
+                id="05ROME3961" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ROME3961.html">05ROME3961</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ITALY INSISTS IT IS FIRM ON PRESSURING RUSSIA ON ISTANBUL COMMITMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.3676 -157.2911)" 
+                id="05STATE211137" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    05STATE211137
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-117.7350 136.5171)" 
+                id="05STATE217326" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE217326
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -99.9903)" 
+                id="05THEHAGUE3136" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05THEHAGUE3136.html">05THEHAGUE3136</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/OSCE: DEMARCHE ON OSCE SCALES OF CONTRIBUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(183.9825 149.4407)" 
+                id="05THEHAGUE3221" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05THEHAGUE3221.html">05THEHAGUE3221</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/NATO: RESPONSE TO NAC COMMUNIQUE CFE LANGUAGE DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-186.7874 290.0000)" 
+                id="05WARSAW3954" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05WARSAW3954.html">05WARSAW3954</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NAC COMMUNIQUE:  POLAND SUPPORTS STRONG LANGUAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

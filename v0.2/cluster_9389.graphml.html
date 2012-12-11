@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04ROME2381">04ROME2381</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/18/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04MADRID3418">04MADRID3418</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/10/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04MADRID3625">04MADRID3625</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04MADRID3625.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER AT POST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04STATE201391">04STATE201391</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/26/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04BRASILIA2453">04BRASILIA2453</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04BRASILIA2453.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/28/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BRASILIA TERRORISM FINANCE COORDINATION OFFICER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04MANAMA1495">04MANAMA1495</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04MANAMA1495.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY MANAMA - TFCO RESPONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA5597">04ANKARA5597</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04ANKARA5597.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER (TFCO) AT EMBASSY ANKARA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04AMMAN8110">04AMMAN8110</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04AMMAN8110.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/30/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER - JORDAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04THEHAGUE2496">04THEHAGUE2496</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04THEHAGUE2496.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/30/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY THE HAGUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04HANOI2744">04HANOI2744</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/05/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04WELLINGTON847">04WELLINGTON847</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/10/04WELLINGTON847.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/07/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY WELLINGTON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04MAPUTO1364">04MAPUTO1364</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/10/04MAPUTO1364.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/13/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CORRECTED COPY: EMBASSY MAPUTO TERRORIST FINANCE COORDINATION OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04HANOI2860">04HANOI2860</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/10/04HANOI2860.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VIETNAM: TERRORIST FINANCE COORDINATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04WELLINGTON932">04WELLINGTON932</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04WELLINGTON932.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/09/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY WELLINGTON</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-179.8481" y1="-47.6134" 
+                  x2="-36.3294" y2="77.4571" class="btwns0"/>
+        
+            <line x1="48.3222" y1="290.0000" 
+                  x2="-25.2842" y2="93.3922" class="btwns0"/>
+        
+            <line x1="135.0910" y1="195.3782" 
+                  x2="-20.5190" y2="89.6470" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="253.8673" 
+                  x2="-247.6525" y2="201.4012" class="btwns0"/>
+        
+            <line x1="-238.2695" y1="197.9429" 
+                  x2="-37.5754" y2="88.8043" class="btwns10"/>
+        
+            <line x1="227.0913" y1="-216.6136" 
+                  x2="129.2801" y2="-97.0762" class="btwns0"/>
+        
+            <line x1="122.9474" y1="-89.3369" 
+                  x2="-22.2042" y2="76.5021" class="btwns10"/>
+        
+            <line x1="220.7494" y1="79.9342" 
+                  x2="380.0826" y2="100.5443" class="btwns0"/>
+        
+            <line x1="220.7494" y1="79.9342" 
+                  x2="-18.7917" y2="83.8630" class="btwns10"/>
+        
+            <line x1="-88.9999" y1="267.4259" 
+                  x2="-31.9096" y2="93.5280" class="btwns0"/>
+        
+            <line x1="-28.7904" y1="84.0270" 
+                  x2="-234.3628" y2="54.6500" class="btwns0"/>
+        
+            <line x1="-28.7904" y1="84.0270" 
+                  x2="-76.8098" y2="-134.3152" class="btwns10"/>
+        
+            <line x1="-78.9577" y1="-144.0818" 
+                  x2="-142.6768" y2="-280.9345" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-179.8481 -47.6134)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(48.3222 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(135.0910 195.3782)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 253.8673)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-238.2695 197.9429)" 
+                class="vertice degree1 btwns1 authority1 HANOI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(227.0913 -216.6136)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(122.9474 -89.3369)" 
+                class="vertice degree1 btwns1 authority1 MADRID">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(220.7494 79.9342)" 
+                class="vertice degree1 btwns1 authority1 MANAMA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-88.9999 267.4259)" 
+                class="vertice degree0 btwns0 authority0 MAPUTO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 101.8271)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-28.7904 84.0270)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-244.2622 53.2353)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-78.9577 -144.0818)" 
+                class="vertice degree1 btwns1 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-146.8977 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-179.8481 -47.6134)" 
+                id="04AMMAN8110" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/30/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04AMMAN8110.html">04AMMAN8110</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER - JORDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(48.3222 290.0000)" 
+                id="04ANKARA5597" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/29/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04ANKARA5597.html">04ANKARA5597</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER (TFCO) AT EMBASSY ANKARA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(135.0910 195.3782)" 
+                id="04BRASILIA2453" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/28/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04BRASILIA2453.html">04BRASILIA2453</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRASILIA TERRORISM FINANCE COORDINATION OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 253.8673)" 
+                id="04HANOI2744" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04HANOI2744
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-238.2695 197.9429)" 
+                id="04HANOI2860" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04HANOI2860.html">04HANOI2860</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>VIETNAM: TERRORIST FINANCE COORDINATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(227.0913 -216.6136)" 
+                id="04MADRID3418" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/10/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04MADRID3418
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(122.9474 -89.3369)" 
+                id="04MADRID3625" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04MADRID3625.html">04MADRID3625</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER AT POST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(220.7494 79.9342)" 
+                id="04MANAMA1495" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/29/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04MANAMA1495.html">04MANAMA1495</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>EMBASSY MANAMA - TFCO RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-88.9999 267.4259)" 
+                id="04MAPUTO1364" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/13/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04MAPUTO1364.html">04MAPUTO1364</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CORRECTED COPY: EMBASSY MAPUTO TERRORIST FINANCE COORDINATION OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 101.8271)" 
+                id="04ROME2381" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/18/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ROME2381
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-28.7904 84.0270)" 
+                id="04STATE201391" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/26/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    04STATE201391
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-244.2622 53.2353)" 
+                id="04THEHAGUE2496" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/30/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04THEHAGUE2496.html">04THEHAGUE2496</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY THE HAGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-78.9577 -144.0818)" 
+                id="04WELLINGTON847" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/07/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/10/04WELLINGTON847.html">04WELLINGTON847</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY WELLINGTON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-146.8977 -290.0000)" 
+                id="04WELLINGTON932" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/09/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04WELLINGTON932.html">04WELLINGTON932</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE COORDINATION OFFICER AT EMBASSY WELLINGTON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

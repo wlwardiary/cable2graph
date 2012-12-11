@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#01STATE96522">01STATE96522</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#02BEIJING9353">02BEIJING9353</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE187212">07STATE187212</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BEIJING20020">06BEIJING20020</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/20/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE2129">07STATE2129</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/07/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE2921">07STATE2921</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/09/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07BEIJING427">07BEIJING427</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/19/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE100698">07STATE100698</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/19/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BEIJING4898">07BEIJING4898</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07BEIJING4898.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHARGE PROTESTS PRC INTERFERENCE WITH U.S. NAVAL ACTIVITY IN CHINA'S EEZ</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE43018">08STATE43018</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08STATE43018.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/23/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">USN ACTIVITIES IN CHINA'S EXCLUSIVE ECONOMIC ZONE (EEZ)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING1656">08BEIJING1656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BEIJING1656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRC TOLD TO REFRAIN FROM INTERFERING WITH U.S. NAVAL ACTIVITY IN CHINA'S EEZ</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE50464">08STATE50464</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/13/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE120864">08STATE120864</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08STATE120864.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WARNING CHINA ON HARASSMENT OF U.S. NAVY VESSELS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING4254">08BEIJING4254</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08BEIJING4254.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/18/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHINA WARNED ON HARASSMENT OF U.S. NAVY VESSELS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="230.2190" y1="-259.0334" 
+                  x2="89.4062" y2="-59.8727" class="btwns9"/>
+        
+            <line x1="390.0000" y1="-25.0345" 
+                  x2="93.5954" y2="-50.8401" class="btwns9"/>
+        
+            <line x1="58.7722" y1="-290.0000" 
+                  x2="82.5954" y2="-61.6535" class="btwns9"/>
+        
+            <line x1="163.0792" y1="155.7383" 
+                  x2="167.6390" y2="280.0067" class="btwns2"/>
+        
+            <line x1="163.0792" y1="155.7383" 
+                  x2="87.2095" y2="-42.3689" class="btwns10"/>
+        
+            <line x1="168.0057" y1="290.0000" 
+                  x2="-19.1508" y2="161.0748" class="btwns5"/>
+        
+            <line x1="168.0057" y1="290.0000" 
+                  x2="298.8103" y2="154.6517" class="btwns2"/>
+        
+            <line x1="-27.3860" y1="155.4019" 
+                  x2="-195.7575" y2="28.2674" class="btwns2"/>
+        
+            <line x1="-27.3860" y1="155.4019" 
+                  x2="-159.2160" y2="94.5174" class="btwns2"/>
+        
+            <line x1="-27.3860" y1="155.4019" 
+                  x2="78.9086" y2="-42.8939" class="btwns6"/>
+        
+            <line x1="-178.4023" y1="-82.7338" 
+                  x2="-201.3919" y2="12.5206" class="btwns0"/>
+        
+            <line x1="-178.4023" y1="-82.7338" 
+                  x2="-168.8776" y2="80.3416" class="btwns0"/>
+        
+            <line x1="-178.4023" y1="-82.7338" 
+                  x2="73.7024" y2="-52.8833" class="btwns6"/>
+        
+            <line x1="353.6079" y1="-161.0802" 
+                  x2="92.9014" y2="-55.4623" class="btwns9"/>
+        
+            <line x1="-115.4172" y1="-248.5107" 
+                  x2="76.5220" y2="-58.7383" class="btwns9"/>
+        
+            <line x1="305.7597" y1="147.4609" 
+                  x2="91.0784" y2="-45.0316" class="btwns10"/>
+        
+            <line x1="-203.7380" y1="22.2415" 
+                  x2="-172.9122" y2="81.4546" class="btwns0"/>
+        
+            <line x1="-203.7380" y1="22.2415" 
+                  x2="73.9486" y2="-49.2154" class="btwns9"/>
+        
+            <line x1="-203.7380" y1="22.2415" 
+                  x2="-381.0782" y2="112.0251" class="btwns4"/>
+        
+            <line x1="-168.2945" y1="90.3246" 
+                  x2="74.9221" y2="-46.7964" class="btwns9"/>
+        
+            <line x1="-168.2945" y1="90.3246" 
+                  x2="-380.0692" y2="115.3676" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(230.2190 -259.0334)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -25.0345)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(58.7722 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(163.0792 155.7383)" 
+                class="vertice degree1 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(168.0057 290.0000)" 
+                class="vertice degree2 btwns0 authority1 BEIJING">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-27.3860 155.4019)" 
+                class="vertice degree3 btwns0 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-178.4023 -82.7338)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(353.6079 -161.0802)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-115.4172 -248.5107)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(305.7597 147.4609)" 
+                class="vertice degree1 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-203.7380 22.2415)" 
+                class="vertice degree4 btwns0 authority4 BEIJING">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-168.2945 90.3246)" 
+                class="vertice degree4 btwns0 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(83.6331 -51.7075)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 116.5420)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(230.2190 -259.0334)" 
+                id="01STATE96522" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    01STATE96522
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -25.0345)" 
+                id="02BEIJING9353" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    02BEIJING9353
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(58.7722 -290.0000)" 
+                id="06BEIJING20020" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BEIJING20020
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(163.0792 155.7383)" 
+                id="07BEIJING427" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07BEIJING427
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(168.0057 290.0000)" 
+                id="07BEIJING4898" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07BEIJING4898.html">07BEIJING4898</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHARGE PROTESTS PRC INTERFERENCE WITH U.S. NAVAL ACTIVITY IN CHINA'S EEZ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-27.3860 155.4019)" 
+                id="07STATE100698" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07STATE100698
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-178.4023 -82.7338)" 
+                id="07STATE187212" 
+                class="labels">
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07STATE187212
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(353.6079 -161.0802)" 
+                id="07STATE2129" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE2129
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-115.4172 -248.5107)" 
+                id="07STATE2921" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE2921
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(305.7597 147.4609)" 
+                id="08BEIJING1656" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BEIJING1656.html">08BEIJING1656</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRC TOLD TO REFRAIN FROM INTERFERING WITH U.S. NAVAL ACTIVITY IN CHINA'S EEZ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-203.7380 22.2415)" 
+                id="08BEIJING4254" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08BEIJING4254.html">08BEIJING4254</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CHINA WARNED ON HARASSMENT OF U.S. NAVY VESSELS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.2945 90.3246)" 
+                id="08STATE120864" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08STATE120864.html">08STATE120864</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>WARNING CHINA ON HARASSMENT OF U.S. NAVY VESSELS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(83.6331 -51.7075)" 
+                id="08STATE43018" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08STATE43018.html">08STATE43018</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>USN ACTIVITIES IN CHINA'S EXCLUSIVE ECONOMIC ZONE (EEZ)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 116.5420)" 
+                id="08STATE50464" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08STATE50464
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

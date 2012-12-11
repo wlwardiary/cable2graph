@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE45783">09STATE45783</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/05/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KINSHASA450">09KINSHASA450</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09KINSHASA450.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/07/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED:  ENCOURAGING POLITICAL DIALOGUE IN MADAGASCAR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09GABORONE371">09GABORONE371</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09GABORONE371.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOB ON MADAGASCAR DEMARCHE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09GABORONE372">09GABORONE372</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09GABORONE372.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SADC: "DRIVE-BY DEMARCHE" DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09WINDHOEK184">09WINDHOEK184</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/24/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ANTANANARIVO428">09ANTANANARIVO428</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO428.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MADAGASCAR: IMPASSE IN THE NEGOTIATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ANTANANARIVO435">09ANTANANARIVO435</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO435.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RAVALOMANANA'S RUMORED RETURN WITH MERCENARIES: ANOTHER MALAGASY FAIRYTALE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ANTANANARIVO439">09ANTANANARIVO439</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO439.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/16/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MADAGASCAR:  TIME TO RE-ENGAGE WITH THE FRENCH?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ANTANANARIVO444">09ANTANANARIVO444</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO444.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/17/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MADAGASCAR: SADC POSITION MUST CHANGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE63557">09STATE63557</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09STATE63557.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SADC DEMARCHE ON MADAGASCAR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MBABANE149">09MBABANE149</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09MBABANE149.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SWAZI FM REQUESTS COMMITMENT FOR INTERNATIONAL ASSISTANCE REF MADAGASCAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09GABORONE488">09GABORONE488</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09GABORONE488.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED: SADC SUMMIT ON MADAGASCAR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KINSHASA580">09KINSHASA580</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09KINSHASA580.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DRC RESPONSE:  SADC DEMARCHE ON MADAGASCAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09WINDHOEK221">09WINDHOEK221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09WINDHOEK221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: SADC DEMARCHE ON MADAGASCAR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MASERU203">09MASERU203</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09MASERU203.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LESOTHO NOT RULING OUT MILITARY INTERVENTION IN MADAGASCAR</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="12.7219" y1="-174.3268" 
+                  x2="137.5269" y2="-240.9748" class="btwns2"/>
+        
+            <line x1="12.7219" y1="-174.3268" 
+                  x2="-45.2830" y2="-281.2108" class="btwns2"/>
+        
+            <line x1="12.7219" y1="-174.3268" 
+                  x2="-48.9469" y2="-11.0321" class="btwns7"/>
+        
+            <line x1="-52.4799" y1="-1.6770" 
+                  x2="-48.3423" y2="109.8374" class="btwns1"/>
+        
+            <line x1="-52.4799" y1="-1.6770" 
+                  x2="-247.1708" y2="6.2177" class="btwns9"/>
+        
+            <line x1="-52.4799" y1="-1.6770" 
+                  x2="80.5950" y2="141.2580" class="btwns10"/>
+        
+            <line x1="-324.7055" y1="137.0840" 
+                  x2="-383.6459" y2="65.4574" class="btwns0"/>
+        
+            <line x1="-324.7055" y1="137.0840" 
+                  x2="-261.7602" y2="15.5033" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="57.7357" 
+                  x2="-266.4956" y2="10.2139" class="btwns2"/>
+        
+            <line x1="182.1858" y1="25.0236" 
+                  x2="93.4955" y2="140.6426" class="btwns2"/>
+        
+            <line x1="-313.3703" y1="-123.4485" 
+                  x2="-261.1294" y2="-2.5567" class="btwns2"/>
+        
+            <line x1="-12.8401" y1="290.0000" 
+                  x2="81.6260" y2="156.7353" class="btwns2"/>
+        
+            <line x1="148.8257" y1="288.6877" 
+                  x2="91.4237" y2="157.7358" class="btwns2"/>
+        
+            <line x1="-47.9715" y1="119.8306" 
+                  x2="77.6272" y2="146.5000" class="btwns1"/>
+        
+            <line x1="87.4091" y1="148.5770" 
+                  x2="264.9827" y2="141.8309" class="btwns5"/>
+        
+            <line x1="390.0000" y1="64.6534" 
+                  x2="283.2922" y2="135.8985" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(12.7219 -174.3268)" 
+                class="vertice degree4 btwns4 authority3 ANTANANARIVO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(146.3479 -245.6854)" 
+                class="vertice degree0 btwns0 authority0 ANTANANARIVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-50.0528 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANTANANARIVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-52.4799 -1.6770)" 
+                class="vertice degree6 btwns10 authority6 ANTANANARIVO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-324.7055 137.0840)" 
+                class="vertice degree2 btwns0 authority2 GABORONE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 57.7357)" 
+                class="vertice degree2 btwns0 authority2 GABORONE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(182.1858 25.0236)" 
+                class="vertice degree0 btwns0 authority0 GABORONE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-313.3703 -123.4485)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-12.8401 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(148.8257 288.6877)" 
+                class="vertice degree0 btwns0 authority0 MASERU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-47.9715 119.8306)" 
+                class="vertice degree2 btwns0 authority2 MBABANE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-257.1626 6.6228)" 
+                class="vertice degree6 btwns5 authority5 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(87.4091 148.5770)" 
+                class="vertice degree10 btwns8 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 64.6534)" 
+                class="vertice degree0 btwns0 authority0 WINDHOEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(274.9755 141.4513)" 
+                class="vertice degree2 btwns2 authority1 WINDHOEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(12.7219 -174.3268)" 
+                id="09ANTANANARIVO428" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO428.html">09ANTANANARIVO428</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>MADAGASCAR: IMPASSE IN THE NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.3479 -245.6854)" 
+                id="09ANTANANARIVO435" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO435.html">09ANTANANARIVO435</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RAVALOMANANA'S RUMORED RETURN WITH MERCENARIES: ANOTHER MALAGASY FAIRYTALE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-50.0528 -290.0000)" 
+                id="09ANTANANARIVO439" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO439.html">09ANTANANARIVO439</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MADAGASCAR:  TIME TO RE-ENGAGE WITH THE FRENCH?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-52.4799 -1.6770)" 
+                id="09ANTANANARIVO444" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ANTANANARIVO444.html">09ANTANANARIVO444</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MADAGASCAR: SADC POSITION MUST CHANGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-324.7055 137.0840)" 
+                id="09GABORONE371" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09GABORONE371.html">09GABORONE371</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOB ON MADAGASCAR DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 57.7357)" 
+                id="09GABORONE372" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09GABORONE372.html">09GABORONE372</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SADC: "DRIVE-BY DEMARCHE" DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(182.1858 25.0236)" 
+                id="09GABORONE488" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09GABORONE488.html">09GABORONE488</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: SADC SUMMIT ON MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-313.3703 -123.4485)" 
+                id="09KINSHASA450" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09KINSHASA450.html">09KINSHASA450</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED:  ENCOURAGING POLITICAL DIALOGUE IN MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-12.8401 290.0000)" 
+                id="09KINSHASA580" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09KINSHASA580.html">09KINSHASA580</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DRC RESPONSE:  SADC DEMARCHE ON MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(148.8257 288.6877)" 
+                id="09MASERU203" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09MASERU203.html">09MASERU203</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LESOTHO NOT RULING OUT MILITARY INTERVENTION IN MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-47.9715 119.8306)" 
+                id="09MBABANE149" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09MBABANE149.html">09MBABANE149</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SWAZI FM REQUESTS COMMITMENT FOR INTERNATIONAL ASSISTANCE REF MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-257.1626 6.6228)" 
+                id="09STATE45783" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    09STATE45783
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(87.4091 148.5770)" 
+                id="09STATE63557" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09STATE63557.html">09STATE63557</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SADC DEMARCHE ON MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 64.6534)" 
+                id="09WINDHOEK184" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09WINDHOEK184
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(274.9755 141.4513)" 
+                id="09WINDHOEK221" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09WINDHOEK221.html">09WINDHOEK221</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: SADC DEMARCHE ON MADAGASCAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

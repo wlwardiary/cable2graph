@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MANAMA549">06MANAMA549</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/04/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA646">06MANAMA646</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MANAMA646.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MINISTER DISCUSSES ELECTION ISSUES WITH AMBASSADOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA766">06MANAMA766</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06MANAMA766.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COR PRESIDENT AND FOREIGN AFFAIRS CHAIRMAN DISCUSS LEGISLATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO3901">06CAIRO3901</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06CAIRO3901.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SCENESETTER FOR ATTORNEY GENERAL GONZALES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1156">06MANAMA1156</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06MANAMA1156.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COURT RULES CHARGES AGAINST SUNNI EXTREMIST CELL UNCONSTITUTIONAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MANAMA1339">06MANAMA1339</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/24/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1391">06MANAMA1391</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06MANAMA1391.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/31/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFLE01:  GOB CONDEMNS QANA BOMBING, PUBLIC ACTIVE YET ORDERLY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1414">06MANAMA1414</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1414.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFLE01:  ACTIVITIES IN SUPPORT OF LEBANON INCREASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1458">06MANAMA1458</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1458.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/07/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFLE01:  DEPUTY PM PLEADS FOR U.S. TO PLAY ROLE OF "HONEST BROKER" IN LEBANON CRISIS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1469">06MANAMA1469</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1469.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FINANCIAL CRIMES LAW ESTABLISHES EXEMPTION FOR FUNDING "FREEDOM FIGHTERS"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1473">06MANAMA1473</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1473.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/09/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFLE01:  BAHRAINIS RALLY, RAISE MONEY IN SUPPORT OF LEBANON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1507">06MANAMA1507</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1507.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BAHRAIN'S FIRST COUNTER-TERRORISM LAW ENTERS INTO FORCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1513">06MANAMA1513</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1513.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BAHRAINIS REACT WITH JOY AND RELIEF TO END OF HOSTILITIES IN LEBANON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1550">06MANAMA1550</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1550.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FINANCIAL CRIMES LAW ENACTED AMID BOOM IN LEBANON FUNDRAISING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1559">06MANAMA1559</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1559.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/23/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BAHRAINIS RAISE FUNDS FOR LEBANON; HIZBALLAH SYMBOLS REMAIN VISIBLE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1574">06MANAMA1574</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1574.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRIME MINISTER STRESSES IMPORTANCE OF VISIBILITY OF BILATERAL RELATIONSHIP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1596">06MANAMA1596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CROWN PRINCE STRESSES IMPORTANCE OF IDEAS IN WAR ON TERROR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1599">06MANAMA1599</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06MANAMA1599.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">KING STRESSES IMPORTANCE OF U.S. ROLE IN REGIONAL STABILITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1634">06MANAMA1634</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06MANAMA1634.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">SCENESETTER FOR CROWN PRINCE'S SEPTEMBER 12 VISIT TO WASHINGTON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MANAMA1733">06MANAMA1733</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/01/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1755">06MANAMA1755</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06MANAMA1755.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TREASURY DELEGATION DISCUSSES NEW MONEY LAUNDERING/TERROR FINANCING LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1954">06MANAMA1954</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06MANAMA1954.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AS EXPECTED, COURT FINDS ALLEGED TERRORIST CELL MEMBERS NOT GUILTY</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="3.0270" 
+                  x2="195.9734" y2="-57.1306" class="btwns1"/>
+        
+            <line x1="186.4220" y1="-60.0921" 
+                  x2="218.9527" y2="3.1632" class="btwns4"/>
+        
+            <line x1="186.4220" y1="-60.0921" 
+                  x2="82.4852" y2="-55.6682" class="btwns0"/>
+        
+            <line x1="186.4220" y1="-60.0921" 
+                  x2="-11.6433" y2="-125.7087" class="btwns2"/>
+        
+            <line x1="-203.1596" y1="290.0000" 
+                  x2="-218.8223" y2="214.5204" class="btwns0"/>
+        
+            <line x1="-203.1596" y1="290.0000" 
+                  x2="-239.2021" y2="178.8231" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="144.8691" 
+                  x2="-378.8112" y2="206.5270" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="144.8691" 
+                  x2="-230.2812" y2="201.3928" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="144.8691" 
+                  x2="-252.1518" y2="167.6780" class="btwns0"/>
+        
+            <line x1="-377.0257" y1="216.3663" 
+                  x2="-230.8265" y2="205.4721" class="btwns0"/>
+        
+            <line x1="-377.0257" y1="216.3663" 
+                  x2="-251.7268" y2="172.6075" class="btwns0"/>
+        
+            <line x1="-260.8898" y1="85.1124" 
+                  x2="-224.0281" y2="195.2461" class="btwns0"/>
+        
+            <line x1="-260.8898" y1="85.1124" 
+                  x2="-244.4435" y2="159.5460" class="btwns0"/>
+        
+            <line x1="-260.8898" y1="85.1124" 
+                  x2="-145.6590" y2="126.8200" class="btwns0"/>
+        
+            <line x1="169.5127" y1="148.7412" 
+                  x2="219.8510" y2="21.3563" class="btwns10"/>
+        
+            <line x1="169.5127" y1="148.7412" 
+                  x2="-12.1400" y2="195.1979" class="btwns7"/>
+        
+            <line x1="169.5127" y1="148.7412" 
+                  x2="171.6436" y2="237.4606" class="btwns1"/>
+        
+            <line x1="-220.8541" y1="204.7290" 
+                  x2="-237.1089" y2="177.8661" class="btwns0"/>
+        
+            <line x1="-220.8541" y1="204.7290" 
+                  x2="-31.8219" y2="198.0297" class="btwns3"/>
+        
+            <line x1="-220.8541" y1="204.7290" 
+                  x2="-143.7605" y2="136.8327" class="btwns0"/>
+        
+            <line x1="223.5261" y1="12.0561" 
+                  x2="314.2256" y2="-109.8248" class="btwns5"/>
+        
+            <line x1="223.5261" y1="12.0561" 
+                  x2="81.6285" y2="-51.1728" class="btwns3"/>
+        
+            <line x1="-242.2860" y1="169.3105" 
+                  x2="-31.7464" y2="196.3994" class="btwns3"/>
+        
+            <line x1="-242.2860" y1="169.3105" 
+                  x2="-145.6387" y2="133.6823" class="btwns0"/>
+        
+            <line x1="-21.8282" y1="197.6756" 
+                  x2="-31.8282" y2="197.6756" class="btwns0"/>
+        
+            <line x1="-21.8282" y1="197.6756" 
+                  x2="-127.6413" y2="135.3016" class="btwns1"/>
+        
+            <line x1="-21.8282" y1="197.6756" 
+                  x2="162.1985" y2="244.9687" class="btwns1"/>
+        
+            <line x1="385.7044" y1="-195.3285" 
+                  x2="375.7044" y2="-195.3285" class="btwns0"/>
+        
+            <line x1="385.7044" y1="-195.3285" 
+                  x2="326.6520" y2="-125.4836" class="btwns1"/>
+        
+            <line x1="385.7044" y1="-195.3285" 
+                  x2="261.8698" y2="-224.6199" class="btwns0"/>
+        
+            <line x1="320.1956" y1="-117.8472" 
+                  x2="257.4320" y2="-218.4378" class="btwns3"/>
+        
+            <line x1="114.0484" y1="-290.0000" 
+                  x2="104.0484" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="114.0484" y1="-290.0000" 
+                  x2="243.0424" y2="-231.0767" class="btwns1"/>
+        
+            <line x1="252.1384" y1="-226.9217" 
+                  x2="242.1384" y2="-226.9217" class="btwns0"/>
+        
+            <line x1="318.7667" y1="288.0775" 
+                  x2="181.5220" y2="250.1231" class="btwns1"/>
+        
+            <line x1="171.8837" y1="247.4577" 
+                  x2="161.8837" y2="247.4577" class="btwns0"/>
+        
+            <line x1="72.4943" y1="-55.2430" 
+                  x2="-13.2746" y2="-122.6730" class="btwns2"/>
+        
+            <line x1="-199.3838" y1="-184.4764" 
+                  x2="-335.8273" y2="-195.2100" class="btwns1"/>
+        
+            <line x1="-199.3838" y1="-184.4764" 
+                  x2="-30.6820" y2="-131.8323" class="btwns3"/>
+        
+            <line x1="-21.1360" y1="-128.8535" 
+                  x2="-31.1360" y2="-128.8535" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 3.0270)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(186.4220 -60.0921)" 
+                class="vertice degree5 btwns3 authority4 MANAMA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-203.1596 290.0000)" 
+                class="vertice degree1 btwns0 authority1 MANAMA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 144.8691)" 
+                class="vertice degree3 btwns0 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-377.0257 216.3663)" 
+                class="vertice degree3 btwns0 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-260.8898 85.1124)" 
+                class="vertice degree3 btwns0 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(169.5127 148.7412)" 
+                class="vertice degree3 btwns8 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-220.8541 204.7290)" 
+                class="vertice degree10 btwns2 authority10 MANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(223.5261 12.0561)" 
+                class="vertice degree5 btwns10 authority4 MANAMA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-242.2860 169.3105)" 
+                class="vertice degree10 btwns2 authority10 MANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-21.8282 197.6756)" 
+                class="vertice degree10 btwns7 authority7 MANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-136.2560 130.2234)" 
+                class="vertice degree5 btwns0 authority5 MANAMA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(385.7044 -195.3285)" 
+                class="vertice degree5 btwns0 authority1 MANAMA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(320.1956 -117.8472)" 
+                class="vertice degree3 btwns4 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(114.0484 -290.0000)" 
+                class="vertice degree3 btwns0 authority0 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(252.1384 -226.9217)" 
+                class="vertice degree6 btwns1 authority3 MANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(318.7667 288.0775)" 
+                class="vertice degree0 btwns0 authority0 MANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(171.8837 247.4577)" 
+                class="vertice degree6 btwns1 authority3 MANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(72.4943 -55.2430)" 
+                class="vertice degree3 btwns1 authority3 MANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-199.3838 -184.4764)" 
+                class="vertice degree1 btwns1 authority1 MANAMA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-345.7965 -195.9943)" 
+                class="vertice degree0 btwns0 authority0 MANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-21.1360 -128.8535)" 
+                class="vertice degree6 btwns2 authority3 MANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 3.0270)" 
+                id="06CAIRO3901" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06CAIRO3901.html">06CAIRO3901</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SCENESETTER FOR ATTORNEY GENERAL GONZALES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.4220 -60.0921)" 
+                id="06MANAMA1156" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06MANAMA1156.html">06MANAMA1156</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>COURT RULES CHARGES AGAINST SUNNI EXTREMIST CELL UNCONSTITUTIONAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-203.1596 290.0000)" 
+                id="06MANAMA1339" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06MANAMA1339
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 144.8691)" 
+                id="06MANAMA1391" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06MANAMA1391.html">06MANAMA1391</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFLE01:  GOB CONDEMNS QANA BOMBING, PUBLIC ACTIVE YET ORDERLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-377.0257 216.3663)" 
+                id="06MANAMA1414" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1414.html">06MANAMA1414</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFLE01:  ACTIVITIES IN SUPPORT OF LEBANON INCREASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-260.8898 85.1124)" 
+                id="06MANAMA1458" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1458.html">06MANAMA1458</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFLE01:  DEPUTY PM PLEADS FOR U.S. TO PLAY ROLE OF "HONEST BROKER" IN LEBANON CRISIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(169.5127 148.7412)" 
+                id="06MANAMA1469" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1469.html">06MANAMA1469</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>FINANCIAL CRIMES LAW ESTABLISHES EXEMPTION FOR FUNDING "FREEDOM FIGHTERS"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-220.8541 204.7290)" 
+                id="06MANAMA1473" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1473.html">06MANAMA1473</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TFLE01:  BAHRAINIS RALLY, RAISE MONEY IN SUPPORT OF LEBANON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(223.5261 12.0561)" 
+                id="06MANAMA1507" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1507.html">06MANAMA1507</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BAHRAIN'S FIRST COUNTER-TERRORISM LAW ENTERS INTO FORCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-242.2860 169.3105)" 
+                id="06MANAMA1513" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1513.html">06MANAMA1513</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>BAHRAINIS REACT WITH JOY AND RELIEF TO END OF HOSTILITIES IN LEBANON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-21.8282 197.6756)" 
+                id="06MANAMA1550" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1550.html">06MANAMA1550</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FINANCIAL CRIMES LAW ENACTED AMID BOOM IN LEBANON FUNDRAISING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-136.2560 130.2234)" 
+                id="06MANAMA1559" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1559.html">06MANAMA1559</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BAHRAINIS RAISE FUNDS FOR LEBANON; HIZBALLAH SYMBOLS REMAIN VISIBLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(385.7044 -195.3285)" 
+                id="06MANAMA1574" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1574.html">06MANAMA1574</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRIME MINISTER STRESSES IMPORTANCE OF VISIBILITY OF BILATERAL RELATIONSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(320.1956 -117.8472)" 
+                id="06MANAMA1596" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1596.html">06MANAMA1596</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CROWN PRINCE STRESSES IMPORTANCE OF IDEAS IN WAR ON TERROR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(114.0484 -290.0000)" 
+                id="06MANAMA1599" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06MANAMA1599.html">06MANAMA1599</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>KING STRESSES IMPORTANCE OF U.S. ROLE IN REGIONAL STABILITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(252.1384 -226.9217)" 
+                id="06MANAMA1634" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06MANAMA1634.html">06MANAMA1634</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SCENESETTER FOR CROWN PRINCE'S SEPTEMBER 12 VISIT TO WASHINGTON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(318.7667 288.0775)" 
+                id="06MANAMA1733" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MANAMA1733
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(171.8837 247.4577)" 
+                id="06MANAMA1755" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06MANAMA1755.html">06MANAMA1755</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TREASURY DELEGATION DISCUSSES NEW MONEY LAUNDERING/TERROR FINANCING LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(72.4943 -55.2430)" 
+                id="06MANAMA1954" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MANAMA1954.html">06MANAMA1954</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AS EXPECTED, COURT FINDS ALLEGED TERRORIST CELL MEMBERS NOT GUILTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-199.3838 -184.4764)" 
+                id="06MANAMA549" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06MANAMA549
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-345.7965 -195.9943)" 
+                id="06MANAMA646" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MANAMA646.html">06MANAMA646</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MINISTER DISCUSSES ELECTION ISSUES WITH AMBASSADOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-21.1360 -128.8535)" 
+                id="06MANAMA766" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MANAMA766.html">06MANAMA766</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>COR PRESIDENT AND FOREIGN AFFAIRS CHAIRMAN DISCUSS LEGISLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

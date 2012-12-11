@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE21218">08STATE21218</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08STATE21218.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE REQUEST ON ETHIOPIA-ERITREA: FUTURE OF UN PRESENCE, POSSIBLE TARGETED SANCTIONS ON ERITREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA430">08JAKARTA430</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08JAKARTA430.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNSC -- GOI ON ERITREA/UN AND SOMALIA PIRACY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING787">08BEIJING787</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BEIJING787.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIA-ERITREA: FUTURE OF UN PRESENCE, POSSIBLE TARGETED SANCTIONS ON ERITREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ROME268">08ROME268</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ROME268.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY: ERITREAN BEHAVIOR UNACCEPTABLE, BUT MORE WORK NEEDED TO RESOLVE BORDER DISPUTE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW617">08MOSCOW617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08MOSCOW617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNMEE DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08PANAMA195">08PANAMA195</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PANAMA195.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PANAMA:  ETHIOPIA-ERITREA DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08PARIS404">08PARIS404</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PARIS404.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNMEE:  FRANCE AGREES WITH U.S. BUT CAN'T IDENTIFY LEVERAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK211">08USUNNEWYORK211</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08USUNNEWYORK211.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TIME TO EUTHANIZE UNMEE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB234">08ZAGREB234</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ZAGREB234.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NO RESPONSE TO DEMARCHE ON ETHIOPIA-ERITREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANJOSE189">08SANJOSE189</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08SANJOSE189.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED ON ETHIOPIA-ERITREA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="87.3962" 
+                  x2="19.1061" y2="0.2608" class="btwns5"/>
+        
+            <line x1="194.9451" y1="-263.0673" 
+                  x2="15.1653" y2="-10.1766" class="btwns5"/>
+        
+            <line x1="-44.0515" y1="290.0000" 
+                  x2="7.5717" y2="7.8105" class="btwns5"/>
+        
+            <line x1="-75.9791" y1="-290.0000" 
+                  x2="6.5295" y2="-11.6140" class="btwns5"/>
+        
+            <line x1="-286.1572" y1="196.3446" 
+                  x2="1.0682" y2="3.5470" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="9.8473" 
+                  x2="-0.6244" y2="-1.7291" class="btwns5"/>
+        
+            <line x1="378.8278" y1="-113.9737" 
+                  x2="18.9415" y2="-4.9261" class="btwns5"/>
+        
+            <line x1="9.3712" y1="-2.0263" 
+                  x2="-297.9513" y2="-177.0695" class="btwns5"/>
+        
+            <line x1="9.3712" y1="-2.0263" 
+                  x2="216.4963" y2="239.4192" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 87.3962)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(194.9451 -263.0673)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-44.0515 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-75.9791 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-286.1572 196.3446)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 9.8473)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(378.8278 -113.9737)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(9.3712 -2.0263)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-306.6407 -182.0188)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(223.0073 247.0091)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 87.3962)" 
+                id="08BEIJING787" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BEIJING787.html">08BEIJING787</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ETHIOPIA-ERITREA: FUTURE OF UN PRESENCE, POSSIBLE TARGETED SANCTIONS ON ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(194.9451 -263.0673)" 
+                id="08JAKARTA430" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08JAKARTA430.html">08JAKARTA430</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNSC -- GOI ON ERITREA/UN AND SOMALIA PIRACY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-44.0515 290.0000)" 
+                id="08MOSCOW617" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08MOSCOW617.html">08MOSCOW617</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNMEE DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-75.9791 -290.0000)" 
+                id="08PANAMA195" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PANAMA195.html">08PANAMA195</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PANAMA:  ETHIOPIA-ERITREA DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-286.1572 196.3446)" 
+                id="08PARIS404" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PARIS404.html">08PARIS404</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNMEE:  FRANCE AGREES WITH U.S. BUT CAN'T IDENTIFY LEVERAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 9.8473)" 
+                id="08ROME268" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ROME268.html">08ROME268</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY: ERITREAN BEHAVIOR UNACCEPTABLE, BUT MORE WORK NEEDED TO RESOLVE BORDER DISPUTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(378.8278 -113.9737)" 
+                id="08SANJOSE189" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08SANJOSE189.html">08SANJOSE189</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON ETHIOPIA-ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(9.3712 -2.0263)" 
+                id="08STATE21218" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08STATE21218.html">08STATE21218</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST ON ETHIOPIA-ERITREA: FUTURE OF UN PRESENCE, POSSIBLE TARGETED SANCTIONS ON ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-306.6407 -182.0188)" 
+                id="08USUNNEWYORK211" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08USUNNEWYORK211.html">08USUNNEWYORK211</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TIME TO EUTHANIZE UNMEE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(223.0073 247.0091)" 
+                id="08ZAGREB234" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ZAGREB234.html">08ZAGREB234</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NO RESPONSE TO DEMARCHE ON ETHIOPIA-ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

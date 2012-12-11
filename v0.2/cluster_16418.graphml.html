@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05SECSTATE182626">05SECSTATE182626</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05PARIS5713">05PARIS5713</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/24/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE168722">05STATE168722</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/05/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE172323">05STATE172323</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/05/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05NDJAMENA1412">05NDJAMENA1412</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05NDJAMENA1412.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WEIGHING IN WITH THE DARFUR REBELS: SLM CONFERENCE PLANS MOVE FORWARD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PARIS6434">05PARIS6434</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05PARIS6434.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH EFFORTS TO BOLSTER ABUJA TALKS ON DARFUR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3374">05ADDISABABA3374</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05ADDISABABA3374.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/23/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ETHIOPIA: WEIGHING IN WITH THE DARFUR REBELS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE182626">05STATE182626</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/28/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05OTTAWA2928">05OTTAWA2928</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05OTTAWA2928.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CANADA INTERESTED IN COOPERATING ON DARFUR WOMEN'S PROJECTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05NDJAMENA1487">05NDJAMENA1487</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05NDJAMENA1487.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHAD PROTESTS CROSS-BORDER ATTACK FROM SUDAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PARIS6887">05PARIS6887</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05PARIS6887.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH ILL AT EASE ON DARFUR, CHAD, AND THE AFRICAN UNION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05THEHAGUE2694">05THEHAGUE2694</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05THEHAGUE2694.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NETHERLANDS: DEMARCHE ON CESSATION OF VIOLENCE IN DARFUR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PARIS6938">05PARIS6938</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05PARIS6938.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/11/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PDAS VOLKER HEARS FRENCH VIEWS ON AFRICA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE200777">05STATE200777</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/18/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05OTTAWA3293">05OTTAWA3293</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05OTTAWA3293.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/04/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADIANS INVITED TO NAIROBI; GOC FUNDING POSSIBLE FOR DARFUR</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-6.7878" 
+                  x2="-280.5006" y2="-103.3565" class="btwns2"/>
+        
+            <line x1="-371.1351" y1="-208.0708" 
+                  x2="-280.0728" y2="-117.0407" class="btwns2"/>
+        
+            <line x1="148.0195" y1="262.9589" 
+                  x2="5.6434" y2="202.3002" class="btwns4"/>
+        
+            <line x1="148.0195" y1="262.9589" 
+                  x2="281.2237" y2="253.2265" class="btwns2"/>
+        
+            <line x1="237.7709" y1="-264.7865" 
+                  x2="282.3572" y2="-157.2391" class="btwns0"/>
+        
+            <line x1="237.7709" y1="-264.7865" 
+                  x2="129.3843" y2="-191.9226" class="btwns1"/>
+        
+            <line x1="286.1869" y1="-148.0015" 
+                  x2="130.8260" y2="-184.0814" class="btwns4"/>
+        
+            <line x1="286.1869" y1="-148.0015" 
+                  x2="382.9037" y2="-51.9734" class="btwns2"/>
+        
+            <line x1="-98.4534" y1="-290.0000" 
+                  x2="-75.2030" y2="-146.6915" class="btwns2"/>
+        
+            <line x1="-73.6015" y1="-136.8206" 
+                  x2="-40.8763" y2="27.1006" class="btwns10"/>
+        
+            <line x1="-73.6015" y1="-136.8206" 
+                  x2="-263.0900" y2="-111.3053" class="btwns6"/>
+        
+            <line x1="-73.6015" y1="-136.8206" 
+                  x2="111.3939" y2="-183.8783" class="btwns8"/>
+        
+            <line x1="-3.5564" y1="198.3807" 
+                  x2="-36.7793" y2="46.6756" class="btwns9"/>
+        
+            <line x1="-3.5564" y1="198.3807" 
+                  x2="-124.6131" y2="282.4840" class="btwns4"/>
+        
+            <line x1="-132.8257" y1="288.1896" 
+                  x2="-266.8712" y2="289.8743" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -6.7878)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-371.1351 -208.0708)" 
+                class="vertice degree0 btwns0 authority0 NDJAMENA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(148.0195 262.9589)" 
+                class="vertice degree3 btwns1 authority3 NDJAMENA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(237.7709 -264.7865)" 
+                class="vertice degree3 btwns0 authority3 OTTAWA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(286.1869 -148.0015)" 
+                class="vertice degree6 btwns1 authority6 OTTAWA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-98.4534 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-73.6015 -136.8206)" 
+                class="vertice degree10 btwns10 authority10 PARIS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-3.5564 198.3807)" 
+                class="vertice degree6 btwns6 authority6 PARIS">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-38.9185 36.9071)" 
+                class="vertice degree3 btwns6 authority3 PARIS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-132.8257 288.1896)" 
+                class="vertice degree3 btwns1 authority3 SECSTATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-273.0005 -109.9708)" 
+                class="vertice degree6 btwns3 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(121.0852 -186.3435)" 
+                class="vertice degree6 btwns4 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(291.1971 252.4978)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -44.9277)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-276.8704 290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -6.7878)" 
+                id="05ADDISABABA3374" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05ADDISABABA3374.html">05ADDISABABA3374</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ETHIOPIA: WEIGHING IN WITH THE DARFUR REBELS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-371.1351 -208.0708)" 
+                id="05NDJAMENA1412" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05NDJAMENA1412.html">05NDJAMENA1412</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>WEIGHING IN WITH THE DARFUR REBELS: SLM CONFERENCE PLANS MOVE FORWARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(148.0195 262.9589)" 
+                id="05NDJAMENA1487" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05NDJAMENA1487.html">05NDJAMENA1487</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CHAD PROTESTS CROSS-BORDER ATTACK FROM SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(237.7709 -264.7865)" 
+                id="05OTTAWA2928" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05OTTAWA2928.html">05OTTAWA2928</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CANADA INTERESTED IN COOPERATING ON DARFUR WOMEN'S PROJECTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(286.1869 -148.0015)" 
+                id="05OTTAWA3293" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05OTTAWA3293.html">05OTTAWA3293</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>CANADIANS INVITED TO NAIROBI; GOC FUNDING POSSIBLE FOR DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-98.4534 -290.0000)" 
+                id="05PARIS5713" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05PARIS5713
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-73.6015 -136.8206)" 
+                id="05PARIS6434" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05PARIS6434.html">05PARIS6434</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FRENCH EFFORTS TO BOLSTER ABUJA TALKS ON DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-3.5564 198.3807)" 
+                id="05PARIS6887" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05PARIS6887.html">05PARIS6887</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>FRENCH ILL AT EASE ON DARFUR, CHAD, AND THE AFRICAN UNION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-38.9185 36.9071)" 
+                id="05PARIS6938" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05PARIS6938.html">05PARIS6938</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PDAS VOLKER HEARS FRENCH VIEWS ON AFRICA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-132.8257 288.1896)" 
+                id="05SECSTATE182626" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05SECSTATE182626
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-273.0005 -109.9708)" 
+                id="05STATE168722" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    05STATE168722
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(121.0852 -186.3435)" 
+                id="05STATE172323" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    05STATE172323
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(291.1971 252.4978)" 
+                id="05STATE182626" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/28/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE182626
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -44.9277)" 
+                id="05STATE200777" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE200777
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-276.8704 290.0000)" 
+                id="05THEHAGUE2694" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05THEHAGUE2694.html">05THEHAGUE2694</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS: DEMARCHE ON CESSATION OF VIOLENCE IN DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

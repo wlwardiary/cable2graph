@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE183434">06STATE183434</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/06/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUDHABI4221">06ABUDHABI4221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ABUDHABI4221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IMO DEMARCHE DELIVERED TO UAEG</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANAMA1927">06MANAMA1927</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06MANAMA1927.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BAHRAIN:  INTERNATIONAL MARITIME ORGANIZATION'S MARITIME SAFETY COMMITTEE MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRIDGETOWN1989">06BRIDGETOWN1989</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BRIDGETOWN1989.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON IMO'S MARITIME SAFETY COMMITTEE MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06GEORGETOWN1208">06GEORGETOWN1208</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06GEORGETOWN1208.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/15/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED IN ADVANCE OF IMO MARITIME SAFETY COMMITTEE MEETING (GUYANA)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAKU1666">06BAKU1666</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BAKU1666.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON INTERNATIONAL MARITIME ORGANIZATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MADRID2927">06MADRID2927</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06MADRID2927.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SPAIN STILL DISAGREES WITH IMO MSC PROPOSALS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRAGUE1432">06PRAGUE1432</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06PRAGUE1432.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CZECH REPUBLIC: UNLIKELY ATTENDANCE AT INTERNATIONAL MARITIME ORGANIZATION SAFETY COMM MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON917">06WELLINGTON917</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06WELLINGTON917.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED REGARDING INT'L MARITIME ORGANIZATION'S UPCOMING MARITIME SAFETY COMMITTEE MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06CASABLANCA1308">06CASABLANCA1308</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06CASABLANCA1308.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED ON MARITIME SAFETY ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA3391">06VIENNA3391</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06VIENNA3391.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRIA WILL NOT ATTEND NOVEMBER 29 MEETING OF THE MARITIME ORGANIZATION'S SAFETY COMMITTEE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PARAMARIBO755">06PARAMARIBO755</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06PARAMARIBO755.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ADVANCE OF INT'L MARITIME ORGANIZATION'S MARITIME SAFETY COMM MEETING STARTING 29 NOVEMBER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM1880">06DARESSALAAM1880</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06DARESSALAAM1880.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TANZANIAN DELEGATION TO ATTEND IMO MARITIME SAFETY COMMITTEE MEETING IN ISTANBUL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LJUBLJANA791">06LJUBLJANA791</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06LJUBLJANA791.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVENES HAVE SELECT INTERESTS IN INT'L MARITIME ORGANIZATION (IMO)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06COTONOU1201">06COTONOU1201</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06COTONOU1201.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BENIN: IMO DEMARCHE DELIVERED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-195.3549" y1="-159.8689" 
+                  x2="-22.8004" y2="-7.0569" class="btwns5"/>
+        
+            <line x1="-137.8907" y1="290.0000" 
+                  x2="-19.2024" y2="8.7860" class="btwns5"/>
+        
+            <line x1="-359.2341" y1="162.2462" 
+                  x2="-24.3538" y2="3.8487" class="btwns5"/>
+        
+            <line x1="64.5830" y1="271.5550" 
+                  x2="-12.4955" y2="9.1675" class="btwns5"/>
+        
+            <line x1="-376.9843" y1="-140.6715" 
+                  x2="-24.6376" y2="-4.0425" class="btwns5"/>
+        
+            <line x1="-140.2782" y1="-290.0000" 
+                  x2="-19.2763" y2="-9.6086" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="10.1333" 
+                  x2="-25.3100" y2="-0.1453" class="btwns5"/>
+        
+            <line x1="-166.6427" y1="149.3796" 
+                  x2="-22.4207" y2="6.6082" class="btwns5"/>
+        
+            <line x1="208.9342" y1="-85.4311" 
+                  x2="-5.9633" y2="-3.9716" class="btwns5"/>
+        
+            <line x1="331.1569" y1="103.8381" 
+                  x2="-5.7382" y2="2.4546" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-42.3170" 
+                  x2="-5.3670" y2="-1.4551" class="btwns5"/>
+        
+            <line x1="61.4313" y1="-273.6385" 
+                  x2="-12.6097" y2="-10.0544" class="btwns5"/>
+        
+            <line x1="-15.3140" y1="-0.4271" 
+                  x2="224.4211" y2="211.2167" class="btwns5"/>
+        
+            <line x1="-15.3140" y1="-0.4271" 
+                  x2="249.0614" y2="-219.4075" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-195.3549 -159.8689)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-137.8907 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-359.2341 162.2462)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(64.5830 271.5550)" 
+                class="vertice degree0 btwns0 authority0 CASABLANCA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-376.9843 -140.6715)" 
+                class="vertice degree0 btwns0 authority0 COTONOU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-140.2782 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 10.1333)" 
+                class="vertice degree0 btwns0 authority0 GEORGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-166.6427 149.3796)" 
+                class="vertice degree0 btwns0 authority0 LJUBLJANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(208.9342 -85.4311)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(331.1569 103.8381)" 
+                class="vertice degree0 btwns0 authority0 MANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -42.3170)" 
+                class="vertice degree0 btwns0 authority0 PARAMARIBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(61.4313 -273.6385)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-15.3140 -0.4271)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(231.9177 217.8349)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(256.7627 -225.7864)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-195.3549 -159.8689)" 
+                id="06ABUDHABI4221" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ABUDHABI4221.html">06ABUDHABI4221</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IMO DEMARCHE DELIVERED TO UAEG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-137.8907 290.0000)" 
+                id="06BAKU1666" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BAKU1666.html">06BAKU1666</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON INTERNATIONAL MARITIME ORGANIZATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-359.2341 162.2462)" 
+                id="06BRIDGETOWN1989" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BRIDGETOWN1989.html">06BRIDGETOWN1989</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON IMO'S MARITIME SAFETY COMMITTEE MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(64.5830 271.5550)" 
+                id="06CASABLANCA1308" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06CASABLANCA1308.html">06CASABLANCA1308</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON MARITIME SAFETY ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-376.9843 -140.6715)" 
+                id="06COTONOU1201" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06COTONOU1201.html">06COTONOU1201</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BENIN: IMO DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-140.2782 -290.0000)" 
+                id="06DARESSALAAM1880" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06DARESSALAAM1880.html">06DARESSALAAM1880</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TANZANIAN DELEGATION TO ATTEND IMO MARITIME SAFETY COMMITTEE MEETING IN ISTANBUL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 10.1333)" 
+                id="06GEORGETOWN1208" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06GEORGETOWN1208.html">06GEORGETOWN1208</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED IN ADVANCE OF IMO MARITIME SAFETY COMMITTEE MEETING (GUYANA)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-166.6427 149.3796)" 
+                id="06LJUBLJANA791" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06LJUBLJANA791.html">06LJUBLJANA791</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVENES HAVE SELECT INTERESTS IN INT'L MARITIME ORGANIZATION (IMO)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(208.9342 -85.4311)" 
+                id="06MADRID2927" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MADRID2927.html">06MADRID2927</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN STILL DISAGREES WITH IMO MSC PROPOSALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(331.1569 103.8381)" 
+                id="06MANAMA1927" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MANAMA1927.html">06MANAMA1927</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BAHRAIN:  INTERNATIONAL MARITIME ORGANIZATION'S MARITIME SAFETY COMMITTEE MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -42.3170)" 
+                id="06PARAMARIBO755" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06PARAMARIBO755.html">06PARAMARIBO755</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ADVANCE OF INT'L MARITIME ORGANIZATION'S MARITIME SAFETY COMM MEETING STARTING 29 NOVEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(61.4313 -273.6385)" 
+                id="06PRAGUE1432" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06PRAGUE1432.html">06PRAGUE1432</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECH REPUBLIC: UNLIKELY ATTENDANCE AT INTERNATIONAL MARITIME ORGANIZATION SAFETY COMM MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-15.3140 -0.4271)" 
+                id="06STATE183434" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE183434
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(231.9177 217.8349)" 
+                id="06VIENNA3391" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06VIENNA3391.html">06VIENNA3391</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRIA WILL NOT ATTEND NOVEMBER 29 MEETING OF THE MARITIME ORGANIZATION'S SAFETY COMMITTEE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(256.7627 -225.7864)" 
+                id="06WELLINGTON917" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06WELLINGTON917.html">06WELLINGTON917</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED REGARDING INT'L MARITIME ORGANIZATION'S UPCOMING MARITIME SAFETY COMMITTEE MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

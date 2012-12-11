@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE15507">08STATE15507</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/14/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08GUATEMALA170">08GUATEMALA170</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08GUATEMALA170.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/19/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN HUMAN RIGHTS COUNCIL: UNIVERSAL PERIODIC REVIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAMAKO204">08BAMAKO204</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08BAMAKO204.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UN HUMAN RIGHTS COUNCIL UNIVERSAL PERIODIC REVIEW RESPONSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MANILA506">08MANILA506</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08MANILA506.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PHILIPPINES: NGO PARTICIPATION IN HUMAN RIGHTS UNIVERSAL PERIODIC REVIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA405">08JAKARTA405</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08JAKARTA405.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HUMAN RIGHTS -- CIVIL SOCIETY PARTICIPATES IN UN REVIEW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV462">08TELAVIV462</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08TELAVIV462.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAELI NGOS WELCOME OPPORTUNITY TO PARTICIPATE IN UNIVERSAL PERIODIC REVIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ABUJA2200">08ABUJA2200</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08ABUJA2200.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NIGERIA: UNIVERSAL PERIODIC REVIEW PREPARATIONS UNDERWAY; GOVERNMENT AND CIVIL SOCIETY COLLABORATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ABUJA2296">08ABUJA2296</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08ABUJA2296.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NIGERIA: ICE ATTACHE REACHES OUT TO ANTI-TIP ORGANIZATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE124036">08STATE124036</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/23/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08GUATEMALA1503">08GUATEMALA1503</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08GUATEMALA1503.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GUATEMALA: UN DEMOCRACY FUND INVITATION FOR GRANT PROPOSALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA2209">08JAKARTA2209</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08JAKARTA2209.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/05/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MISSION DELIVERS UNDEF PROPOSAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE130829">08STATE130829</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/12/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STOCKHOLM833">08STOCKHOLM833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08STOCKHOLM833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SWEDEN INDICATES CONTINUED SUPPORT FOR UN DEMOCRACY FUND</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ABUJA2432">08ABUJA2432</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08ABUJA2432.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NIGERIA: UN UNIVERSAL PERIODIC REVIEW PREPARATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08NDJAMENA584">08NDJAMENA584</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08NDJAMENA584.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/17/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CHAD - UN'S UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA1567">08OTTAWA1567</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08OTTAWA1567.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/18/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CANADA'S UN UNIVERSAL PERIODIC REVIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MONTEVIDEO716">08MONTEVIDEO716</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08MONTEVIDEO716.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">URUGUAY PREPARING FOR UNIVERSAL PERIODIC REVIEW BY HUMAN RIGHTS COUNCIL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DJIBOUTI1036">08DJIBOUTI1036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08DJIBOUTI1036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DJIBOUTI PARTICIPATION IN HUMAN RIGHTS REVIEW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SANAA28">09SANAA28</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09SANAA28.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">YEMEN'S CIVIL SOCIETY URGED TO JOIN IN THE UN'S UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS FOR 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KUALALUMPUR29">09KUALALUMPUR29</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09KUALALUMPUR29.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/15/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MALAYSIAN CIVIL SOCIETY ENGAGED IN UPR PROCESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW150">09MOSCOW150</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09MOSCOW150.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIA TAKING UNITED NATIONS HUMAN RIGHTS REVIEW VERY SERIOUSLY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRATISLAVA57">09BRATISLAVA57</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09BRATISLAVA57.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAKIA'S UPR PROCESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09LISBON162">09LISBON162</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09LISBON162.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PORTUGUESE FOLLOW GERMAN STRATEGY FOR UN UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="132.9492" y1="175.3812" 
+                  x2="124.5787" y2="280.0318" class="btwns0"/>
+        
+            <line x1="132.9492" y1="175.3812" 
+                  x2="-14.4080" y2="135.3151" class="btwns9"/>
+        
+            <line x1="132.9492" y1="175.3812" 
+                  x2="265.7719" y2="82.7353" class="btwns7"/>
+        
+            <line x1="-24.0577" y1="132.6913" 
+                  x2="-218.2011" y2="84.6886" class="btwns10"/>
+        
+            <line x1="291.5085" y1="189.4563" 
+                  x2="275.5146" y2="86.8949" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="91.6471" 
+                  x2="-237.8921" y2="82.8648" class="btwns0"/>
+        
+            <line x1="-151.1887" y1="-256.6872" 
+                  x2="-49.8330" y2="-203.5280" class="btwns0"/>
+        
+            <line x1="199.8774" y1="-8.7693" 
+                  x2="267.4370" y2="69.4466" class="btwns0"/>
+        
+            <line x1="100.1210" y1="-219.0467" 
+                  x2="-31.0777" y2="-200.2979" class="btwns0"/>
+        
+            <line x1="307.5226" y1="-50.9090" 
+                  x2="276.5106" y2="67.3415" class="btwns0"/>
+        
+            <line x1="390.0000" y1="14.7760" 
+                  x2="282.7860" y2="72.2873" class="btwns0"/>
+        
+            <line x1="-300.1403" y1="-13.1206" 
+                  x2="-233.9448" y2="74.3155" class="btwns0"/>
+        
+            <line x1="-137.3054" y1="139.5137" 
+                  x2="-219.4539" y2="87.6284" class="btwns0"/>
+        
+            <line x1="-351.0012" y1="168.8419" 
+                  x2="-236.0889" y2="88.0403" class="btwns0"/>
+        
+            <line x1="-40.9771" y1="-198.8833" 
+                  x2="-0.8142" y2="-281.0165" class="btwns0"/>
+        
+            <line x1="-40.9771" y1="-198.8833" 
+                  x2="-106.7165" y2="-79.5191" class="btwns5"/>
+        
+            <line x1="-227.9087" y1="82.2884" 
+                  x2="-218.8167" y2="-32.8898" class="btwns0"/>
+        
+            <line x1="-227.9087" y1="82.2884" 
+                  x2="-266.7700" y2="209.4330" class="btwns0"/>
+        
+            <line x1="-227.9087" y1="82.2884" 
+                  x2="-380.7473" y2="5.4225" class="btwns0"/>
+        
+            <line x1="-227.9087" y1="82.2884" 
+                  x2="-117.5932" y2="-62.7993" class="btwns6"/>
+        
+            <line x1="-227.9087" y1="82.2884" 
+                  x2="-168.9646" y2="216.8866" class="btwns0"/>
+        
+            <line x1="273.9738" y1="77.0143" 
+                  x2="378.5908" y2="121.4987" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(132.9492 175.3812)" 
+                class="vertice degree2 btwns6 authority2 ABUJA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(123.7814 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-24.0577 132.6913)" 
+                class="vertice degree1 btwns6 authority1 ABUJA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(291.5085 189.4563)" 
+                class="vertice degree0 btwns0 authority0 BAMAKO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 91.6471)" 
+                class="vertice degree0 btwns0 authority0 DJIBOUTI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-151.1887 -256.6872)" 
+                class="vertice degree0 btwns0 authority0 GUATEMALA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(199.8774 -8.7693)" 
+                class="vertice degree0 btwns0 authority0 GUATEMALA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(100.1210 -219.0467)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(307.5226 -50.9090)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 14.7760)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-300.1403 -13.1206)" 
+                class="vertice degree0 btwns0 authority0 MONTEVIDEO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-137.3054 139.5137)" 
+                class="vertice degree0 btwns0 authority0 NDJAMENA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-351.0012 168.8419)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-40.9771 -198.8833)" 
+                class="vertice degree3 btwns3 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-227.9087 82.2884)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(273.9738 77.0143)" 
+                class="vertice degree5 btwns5 authority5 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(3.5786 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STOCKHOLM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(387.7934 125.4117)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-218.0298 -42.8588)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-269.6930 218.9963)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-389.6811 0.9295)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-111.5407 -70.7597)" 
+                class="vertice degree1 btwns3 authority1 MOSCOW">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-164.9532 226.0467)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(132.9492 175.3812)" 
+                id="08ABUJA2200" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08ABUJA2200.html">08ABUJA2200</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NIGERIA: UNIVERSAL PERIODIC REVIEW PREPARATIONS UNDERWAY; GOVERNMENT AND CIVIL SOCIETY COLLABORATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(123.7814 290.0000)" 
+                id="08ABUJA2296" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08ABUJA2296.html">08ABUJA2296</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NIGERIA: ICE ATTACHE REACHES OUT TO ANTI-TIP ORGANIZATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-24.0577 132.6913)" 
+                id="08ABUJA2432" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08ABUJA2432.html">08ABUJA2432</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NIGERIA: UN UNIVERSAL PERIODIC REVIEW PREPARATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(291.5085 189.4563)" 
+                id="08BAMAKO204" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BAMAKO204.html">08BAMAKO204</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN HUMAN RIGHTS COUNCIL UNIVERSAL PERIODIC REVIEW RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 91.6471)" 
+                id="08DJIBOUTI1036" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08DJIBOUTI1036.html">08DJIBOUTI1036</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DJIBOUTI PARTICIPATION IN HUMAN RIGHTS REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-151.1887 -256.6872)" 
+                id="08GUATEMALA1503" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08GUATEMALA1503.html">08GUATEMALA1503</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GUATEMALA: UN DEMOCRACY FUND INVITATION FOR GRANT PROPOSALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(199.8774 -8.7693)" 
+                id="08GUATEMALA170" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08GUATEMALA170.html">08GUATEMALA170</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN HUMAN RIGHTS COUNCIL: UNIVERSAL PERIODIC REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.1210 -219.0467)" 
+                id="08JAKARTA2209" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08JAKARTA2209.html">08JAKARTA2209</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MISSION DELIVERS UNDEF PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(307.5226 -50.9090)" 
+                id="08JAKARTA405" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08JAKARTA405.html">08JAKARTA405</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMAN RIGHTS -- CIVIL SOCIETY PARTICIPATES IN UN REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 14.7760)" 
+                id="08MANILA506" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08MANILA506.html">08MANILA506</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PHILIPPINES: NGO PARTICIPATION IN HUMAN RIGHTS UNIVERSAL PERIODIC REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-300.1403 -13.1206)" 
+                id="08MONTEVIDEO716" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08MONTEVIDEO716.html">08MONTEVIDEO716</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>URUGUAY PREPARING FOR UNIVERSAL PERIODIC REVIEW BY HUMAN RIGHTS COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-137.3054 139.5137)" 
+                id="08NDJAMENA584" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08NDJAMENA584.html">08NDJAMENA584</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHAD - UN'S UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-351.0012 168.8419)" 
+                id="08OTTAWA1567" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08OTTAWA1567.html">08OTTAWA1567</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADA'S UN UNIVERSAL PERIODIC REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-40.9771 -198.8833)" 
+                id="08STATE124036" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    08STATE124036
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-227.9087 82.2884)" 
+                id="08STATE130829" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE130829
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(273.9738 77.0143)" 
+                id="08STATE15507" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    08STATE15507
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(3.5786 -290.0000)" 
+                id="08STOCKHOLM833" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08STOCKHOLM833.html">08STOCKHOLM833</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SWEDEN INDICATES CONTINUED SUPPORT FOR UN DEMOCRACY FUND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(387.7934 125.4117)" 
+                id="08TELAVIV462" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08TELAVIV462.html">08TELAVIV462</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ISRAELI NGOS WELCOME OPPORTUNITY TO PARTICIPATE IN UNIVERSAL PERIODIC REVIEW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-218.0298 -42.8588)" 
+                id="09BRATISLAVA57" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09BRATISLAVA57.html">09BRATISLAVA57</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA'S UPR PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-269.6930 218.9963)" 
+                id="09KUALALUMPUR29" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09KUALALUMPUR29.html">09KUALALUMPUR29</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MALAYSIAN CIVIL SOCIETY ENGAGED IN UPR PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-389.6811 0.9295)" 
+                id="09LISBON162" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09LISBON162.html">09LISBON162</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGUESE FOLLOW GERMAN STRATEGY FOR UN UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.5407 -70.7597)" 
+                id="09MOSCOW150" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09MOSCOW150.html">09MOSCOW150</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>RUSSIA TAKING UNITED NATIONS HUMAN RIGHTS REVIEW VERY SERIOUSLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-164.9532 226.0467)" 
+                id="09SANAA28" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09SANAA28.html">09SANAA28</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>YEMEN'S CIVIL SOCIETY URGED TO JOIN IN THE UN'S UNIVERSAL PERIODIC REVIEW OF HUMAN RIGHTS FOR 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

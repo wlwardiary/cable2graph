@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE28363">08STATE28363</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/18/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA278">08CANBERRA278</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08CANBERRA278.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRALIA GROUP: REQUEST FOR SUMMARY OF U.S. PROPOSALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN359">08BERLIN359</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BERLIN359.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA GROUP: U.S. PROPOSAL FOR REVISION TO ANIMAL PATHOGEN CONTROL GROUP -- DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08VIENNA439">08VIENNA439</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08VIENNA439.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/31/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA GROUP: AUSTRIAN RESPONSE TO U.S. PROPOSAL FOR REVISION TO ANIMAL PATHOGEN CONTROL LIST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE32895">08STATE32895</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08STATE32895.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/31/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRALIA GROUP: U.S.-UK PROPOSAL FOR REVISION TO THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN412">08BERLIN412</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BERLIN412.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRALIA GROUP MESSAGE DELIVERED: U.S.-UK PROPOSAL FOR REVISION TO THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08HELSINKI146">08HELSINKI146</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08HELSINKI146.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FINLAND: AUSTRALIA GROUP PROPOSALS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ANKARA631">08ANKARA631</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ANKARA631.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TURKEY:  U.S. AUSTRALIA GROUP PROPOSALS ON DUAL-USE BIO EQUIPMENT AND ANIMAL PATHOGEN CONTROL LIST REVISIONS DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08THEHAGUE314">08THEHAGUE314</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08THEHAGUE314.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRALIA GROUP: DUTCH RESPONSE TO PLENARY NON-PAPERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ATHENS503">08ATHENS503</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ATHENS503.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRALIA GROUP: GREEKS TO REVIEW U.S.-UK PROPOSAL ON DUAL-USE REVISIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ROME456">08ROME456</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ROME456.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA GROUP: GOI EXPECTS TO SUPPORT USG PROPOSALS REGARDING THE ANIMAL PATHOGEN CONTROL LIST AND THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB299">08ZAGREB299</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ZAGREB299.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA GROUP: GOC RESPONSE TO DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST PROPOSAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB300">08ZAGREB300</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08ZAGREB300.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIA GROUP: GOC RESPONSE TO ANIMAL PATHOGEN CONTROL LIST PROPOSAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-325.7475" y1="49.9246" 
+                  x2="-55.7827" y2="144.8806" class="btwns0"/>
+        
+            <line x1="290.6935" y1="-255.8552" 
+                  x2="85.1603" y2="-177.0923" class="btwns0"/>
+        
+            <line x1="264.3794" y1="222.6513" 
+                  x2="-36.6244" y2="150.5288" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-129.0347" 
+                  x2="85.7237" y2="-172.1122" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="159.9501" 
+                  x2="-56.3433" y2="148.5405" class="btwns0"/>
+        
+            <line x1="17.0441" y1="-19.2074" 
+                  x2="-42.8078" y2="138.8468" class="btwns10"/>
+        
+            <line x1="17.0441" y1="-19.2074" 
+                  x2="72.2628" y2="-164.1690" class="btwns9"/>
+        
+            <line x1="-248.8453" y1="-190.3851" 
+                  x2="65.8359" y2="-174.0329" class="btwns0"/>
+        
+            <line x1="-46.3492" y1="148.1987" 
+                  x2="38.9132" y2="281.5745" class="btwns0"/>
+        
+            <line x1="-46.3492" y1="148.1987" 
+                  x2="-226.0359" y2="257.9933" class="btwns0"/>
+        
+            <line x1="-46.3492" y1="148.1987" 
+                  x2="275.5397" y2="109.6750" class="btwns0"/>
+        
+            <line x1="75.8224" y1="-173.5139" 
+                  x2="-55.4129" y2="-283.5742" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-325.7475 49.9246)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(290.6935 -255.8552)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(264.3794 222.6513)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.0347)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 159.9501)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(17.0441 -19.2074)" 
+                class="vertice degree1 btwns6 authority1 HELSINKI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-248.8453 -190.3851)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-46.3492 148.1987)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(75.8224 -173.5139)" 
+                class="vertice degree6 btwns7 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(44.2994 290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-234.5690 263.2073)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-63.0750 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(285.4689 108.4867)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-325.7475 49.9246)" 
+                id="08ANKARA631" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ANKARA631.html">08ANKARA631</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKEY:  U.S. AUSTRALIA GROUP PROPOSALS ON DUAL-USE BIO EQUIPMENT AND ANIMAL PATHOGEN CONTROL LIST REVISIONS DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(290.6935 -255.8552)" 
+                id="08ATHENS503" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ATHENS503.html">08ATHENS503</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: GREEKS TO REVIEW U.S.-UK PROPOSAL ON DUAL-USE REVISIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(264.3794 222.6513)" 
+                id="08BERLIN359" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BERLIN359.html">08BERLIN359</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: U.S. PROPOSAL FOR REVISION TO ANIMAL PATHOGEN CONTROL GROUP -- DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -129.0347)" 
+                id="08BERLIN412" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BERLIN412.html">08BERLIN412</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP MESSAGE DELIVERED: U.S.-UK PROPOSAL FOR REVISION TO THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 159.9501)" 
+                id="08CANBERRA278" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08CANBERRA278.html">08CANBERRA278</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: REQUEST FOR SUMMARY OF U.S. PROPOSALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(17.0441 -19.2074)" 
+                id="08HELSINKI146" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08HELSINKI146.html">08HELSINKI146</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>FINLAND: AUSTRALIA GROUP PROPOSALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-248.8453 -190.3851)" 
+                id="08ROME456" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ROME456.html">08ROME456</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: GOI EXPECTS TO SUPPORT USG PROPOSALS REGARDING THE ANIMAL PATHOGEN CONTROL LIST AND THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-46.3492 148.1987)" 
+                id="08STATE28363" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE28363
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(75.8224 -173.5139)" 
+                id="08STATE32895" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08STATE32895.html">08STATE32895</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: U.S.-UK PROPOSAL FOR REVISION TO THE DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(44.2994 290.0000)" 
+                id="08THEHAGUE314" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08THEHAGUE314.html">08THEHAGUE314</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: DUTCH RESPONSE TO PLENARY NON-PAPERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-234.5690 263.2073)" 
+                id="08VIENNA439" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08VIENNA439.html">08VIENNA439</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: AUSTRIAN RESPONSE TO U.S. PROPOSAL FOR REVISION TO ANIMAL PATHOGEN CONTROL LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-63.0750 -290.0000)" 
+                id="08ZAGREB299" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ZAGREB299.html">08ZAGREB299</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: GOC RESPONSE TO DUAL-USE BIOLOGICAL EQUIPMENT CONTROL LIST PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(285.4689 108.4867)" 
+                id="08ZAGREB300" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08ZAGREB300.html">08ZAGREB300</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA GROUP: GOC RESPONSE TO ANIMAL PATHOGEN CONTROL LIST PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

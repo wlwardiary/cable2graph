@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI2999">04NEWDELHI2999</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI4391">04NEWDELHI4391</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI5201">04NEWDELHI5201</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI969">04NEWDELHI969</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI5978">04NEWDELHI5978</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI6554">04NEWDELHI6554</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI6707">04NEWDELHI6707</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04NEWDELHI6787">04NEWDELHI6787</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI6983">04NEWDELHI6983</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04NEWDELHI6983.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INDIA ENCOURAGES DEMOCRACY IN BURMA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI7053">04NEWDELHI7053</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04NEWDELHI7053.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LOOKING AHEAD TO ASEAN: INDIA ENGAGES EAST ASIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI7078">04NEWDELHI7078</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04NEWDELHI7078.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TOWARDS AN INDIA-EU STRATEGIC PARTNERSHIP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04THEHAGUE2924">04THEHAGUE2924</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04THEHAGUE2924.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/12/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NETHERLANDS/EU/INDIA: "NEW PARTNERSHIP" HAS LITTLE SUBSTANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04BRUSSELS4994">04BRUSSELS4994</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04BRUSSELS4994.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/24/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S ROCCA DISCUSSES SOUTH ASIA WITH EU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI7675">04NEWDELHI7675</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04NEWDELHI7675.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FOR INDIA UN PANEL REPORT IS ONLY A START</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI7733">04NEWDELHI7733</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04NEWDELHI7733.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PUTIN VISIT: FROM RUSSIA WITH TOUGH LOVE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04NEWDELHI8263">04NEWDELHI8263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04NEWDELHI8263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SARAN: UN MUST REFLECT CONCERNS OF DEVELOPING COUNTRIES TO REMAIN RELEVANT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-33.4080" 
+                  x2="-273.8406" y2="37.6650" class="btwns0"/>
+        
+            <line x1="-278.7962" y1="171.7964" 
+                  x2="-104.1177" y2="146.6907" class="btwns0"/>
+        
+            <line x1="49.0617" y1="19.3625" 
+                  x2="-86.7075" y2="138.6672" class="btwns10"/>
+        
+            <line x1="49.0617" y1="19.3625" 
+                  x2="196.7171" y2="-78.6841" class="btwns9"/>
+        
+            <line x1="390.0000" y1="-88.7316" 
+                  x2="215.0448" y2="-84.4599" class="btwns0"/>
+        
+            <line x1="-153.3117" y1="-206.7286" 
+                  x2="15.4245" y2="-185.2462" class="btwns0"/>
+        
+            <line x1="-159.7010" y1="263.4338" 
+                  x2="-99.0664" y2="154.0149" class="btwns0"/>
+        
+            <line x1="-3.2646" y1="-290.0000" 
+                  x2="22.7391" y2="-193.6379" class="btwns0"/>
+        
+            <line x1="276.6362" y1="-192.2592" 
+                  x2="210.5712" y2="-92.5520" class="btwns0"/>
+        
+            <line x1="66.4339" y1="259.3838" 
+                  x2="219.5396" y2="288.1533" class="btwns0"/>
+        
+            <line x1="66.4339" y1="259.3838" 
+                  x2="-86.0668" y2="151.0590" class="btwns2"/>
+        
+            <line x1="-94.2194" y1="145.2681" 
+                  x2="57.3531" y2="152.5151" class="btwns0"/>
+        
+            <line x1="-94.2194" y1="145.2681" 
+                  x2="-256.7297" y2="48.0191" class="btwns2"/>
+        
+            <line x1="205.0478" y1="-84.2159" 
+                  x2="34.0874" y2="-179.1293" class="btwns4"/>
+        
+            <line x1="205.0478" y1="-84.2159" 
+                  x2="332.7111" y2="11.5343" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -33.4080)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-278.7962 171.7964)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(49.0617 19.3625)" 
+                class="vertice degree2 btwns7 authority2 NEWDELHI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -88.7316)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-153.3117 -206.7286)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-159.7010 263.4338)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-3.2646 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(276.6362 -192.2592)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(66.4339 259.3838)" 
+                class="vertice degree2 btwns1 authority1 NEWDELHI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(229.3676 290.0000)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-94.2194 145.2681)" 
+                class="vertice degree10 btwns10 authority10 NEWDELHI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(205.0478 -84.2159)" 
+                class="vertice degree8 btwns8 authority7 NEWDELHI">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(25.3445 -183.9832)" 
+                class="vertice degree4 btwns3 authority3 NEWDELHI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(340.7111 17.5344)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(67.3417 152.9927)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-265.3106 42.8842)" 
+                class="vertice degree2 btwns1 authority1 THEHAGUE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -33.4080)" 
+                id="04BRUSSELS4994" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/24/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04BRUSSELS4994.html">04BRUSSELS4994</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A/S ROCCA DISCUSSES SOUTH ASIA WITH EU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-278.7962 171.7964)" 
+                id="04NEWDELHI2999" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI2999
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(49.0617 19.3625)" 
+                id="04NEWDELHI4391" 
+                class="labels">
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    04NEWDELHI4391
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -88.7316)" 
+                id="04NEWDELHI5201" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI5201
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-153.3117 -206.7286)" 
+                id="04NEWDELHI5978" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI5978
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-159.7010 263.4338)" 
+                id="04NEWDELHI6554" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI6554
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-3.2646 -290.0000)" 
+                id="04NEWDELHI6707" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI6707
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(276.6362 -192.2592)" 
+                id="04NEWDELHI6787" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI6787
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(66.4339 259.3838)" 
+                id="04NEWDELHI6983" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/02/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04NEWDELHI6983.html">04NEWDELHI6983</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>INDIA ENCOURAGES DEMOCRACY IN BURMA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(229.3676 290.0000)" 
+                id="04NEWDELHI7053" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04NEWDELHI7053.html">04NEWDELHI7053</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LOOKING AHEAD TO ASEAN: INDIA ENGAGES EAST ASIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-94.2194 145.2681)" 
+                id="04NEWDELHI7078" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04NEWDELHI7078.html">04NEWDELHI7078</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TOWARDS AN INDIA-EU STRATEGIC PARTNERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(205.0478 -84.2159)" 
+                id="04NEWDELHI7675" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>12/03/04</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04NEWDELHI7675.html">04NEWDELHI7675</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>FOR INDIA UN PANEL REPORT IS ONLY A START</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(25.3445 -183.9832)" 
+                id="04NEWDELHI7733" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/07/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04NEWDELHI7733.html">04NEWDELHI7733</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PUTIN VISIT: FROM RUSSIA WITH TOUGH LOVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(340.7111 17.5344)" 
+                id="04NEWDELHI8263" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04NEWDELHI8263.html">04NEWDELHI8263</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SARAN: UN MUST REFLECT CONCERNS OF DEVELOPING COUNTRIES TO REMAIN RELEVANT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(67.3417 152.9927)" 
+                id="04NEWDELHI969" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04NEWDELHI969
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-265.3106 42.8842)" 
+                id="04THEHAGUE2924" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/12/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04THEHAGUE2924.html">04THEHAGUE2924</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/EU/INDIA: "NEW PARTNERSHIP" HAS LITTLE SUBSTANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

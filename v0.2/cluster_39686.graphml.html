@@ -1,0 +1,2423 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 550.0000;
+    var width = 1200;
+    var height = 1100;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06KABUL106">06KABUL106</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/09/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL559">06KABUL559</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL559.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/GHAZNI:NAWA, GHAZNI'S LOST DISTRICT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL662">06KABUL662</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL662.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/KABUL: PROVINCIAL SECURITY ASSESSMENTS DESIGNED TO DISRUPT SPRING OFFENSIVE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL725">06KABUL725</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL725.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ISAF RESPONSE TO ANTI-CARTOON RIOTS: "RESTRAINT," RELIANCE ON ANP, AND GAPS IN CAPABILITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06KABUL746">06KABUL746</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/20/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL838">06KABUL838</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL838.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QALAT VISIT: FOCUS ON SECURITY, POLICE, AND ROADS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL840">06KABUL840</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL840.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MAIMANA REVISED - A STEP AWAY FROM DISASTER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL852">06KABUL852</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KABUL852.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/GHAZNI - GOVERNOR CONSIDERS SUPPORTING NEW ARMED GROUPS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1089">06KABUL1089</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1089.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLICE REFORM: REGIONAL COMMANDS AND RAPID REACTION FORCE TO MEET NEAR-TERM CHALLENGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1133">06KABUL1133</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1133.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOA PROPOSES AUXILIARY POLICE, REQUESTS USG FUNDING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1211">06KABUL1211</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1211.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW GOVERNOR OR URUZGAN PROVINCE TAKES OFFICE WITHOUT INCIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE46197">06STATE46197</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/19/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1324">06KABUL1324</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1324.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">1267 SANCTIONS LIST MONITORING TEAM WILL URGE CASE OF URUZGAN GOVERNOR MONIB</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1328">06KABUL1328</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1328.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/TARIN KOWT - NEW GOVERNOR OF URUZGAN PROVINCE OFF TO A GOOD START</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1341">06KABUL1341</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1341.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">1267 SANCTIONS LIST MONITORING TEAM WILL URGE CASE OF URUZGAN GOVERNOR MONIB</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1358">06KABUL1358</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KABUL1358.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRT/MAZAR-E SHARIF  DOSTUM PRESIDES OVER WEAPONS TURNOVER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1545">06KABUL1545</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06KABUL1545.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PROGRESS ON UN 1267 SANCTIONS DELISTING REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1669">06KABUL1669</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06KABUL1669.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRT/TARIN KOWT - SECURITY PROGRAMS GETTING TRACTION IN URUZGAN PROVINCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06KABUL1670">06KABUL1670</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/12/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1714">06KABUL1714</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06KABUL1714.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KARZAI NERVOUS ON PROVINCIAL SECURITY: RESURRECTS IDEA OF AUXILIARY POLICE, SWIPES AT PAKISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL1884">06KABUL1884</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06KABUL1884.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PROPOSED POLICE PROGRAM CHANGES TO MEET THREAT CONDITIONS IN KEY PROVINCES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2149">06KABUL2149</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KABUL2149.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">A COURSE OF ACTION TO REBALANCE THE ANP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2151">06KABUL2151</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KABUL2151.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">A COURSE OF ACTION TO REBALANCE THE ANP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2154">06KABUL2154</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KABUL2154.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">A COURSE OF ACTION TO REBALANCE THE ANP CORRECTED VERSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2178">06KABUL2178</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KABUL2178.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT/TARIN KOWT: GOVERNOR MONIB'S TENUOUS GRASP ON URUZGAN PROVINCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2424">06KABUL2424</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KABUL2424.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/TARIN KOWT - URUZGAN'S DEVELOPING INSTITUTIONS - LAYING THE GROUNDWORK FOR GOVERNABILITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2703">06KABUL2703</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06KABUL2703.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRT/GARDEZ  SECURITY WITHOUT GOVERNMENT CONTROL: VISIT TO A REMOT DISTRICT IN LOGAR PROVINCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2786">06KABUL2786</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06KABUL2786.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOHAQEQ, FAHIM CONCERNED OVER MILITIAS. FAHIM STRENGTH OVERRATED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL2970">06KABUL2970</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06KABUL2970.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NDS DIRECTOR SALEH ON INSURGENCY - CAUSES AND SOLUTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4001">06KABUL4001</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4001.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAG APPROVES AUXILIARY POLICE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4232">06KABUL4232</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4232.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AFGHAN POLICE REFORM:  CIVIL ORDER MAINTENANCE - CONSTABULARY FORCE CONCEPT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4233">06KABUL4233</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4233.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/ASADABAD - EAST AFGHAN MILITIA FORCES HERE TO STAY?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4245">06KABUL4245</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4245.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUXILIARY POLICE ASSESSMENT TEAM BEGINS WORK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4326">06KABUL4326</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4326.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/MEHTARLAM - THE AFGHAN NATIONAL POLICE AND PROVINCIAL INSECURITY IN LAGHMAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL4327">06KABUL4327</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06KABUL4327.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT/MEHTARLAM - THE AFGHAN NATIONAL POLICE AND PROVINCIAL INSECURITY IN LAGHMAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07USUNNEWYORK173">07USUNNEWYORK173</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07USUNNEWYORK173.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MAKING TALIBAN SANCTIONS RELEVANT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07STATE36625">07STATE36625</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07STATE36625.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNSCR 1267: UPDATING TALIBAN NAMES ON THE CONSOLIDATED LIST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW1413">07MOSCOW1413</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07MOSCOW1413.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIA TO REVIEW TALIBAN LIST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KABUL1353">07KABUL1353</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KABUL1353.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GOVERNMENT OF AFGHANISTAN EFFORTS TO UPDATE UNSCR 1267</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KABUL2300">07KABUL2300</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07KABUL2300.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOA ADDITIONS TO UN1267 LIST NOT IMMINENT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="1100" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,550.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-206.7200" y1="276.6265" 
+                  x2="-143.5027" y2="211.8090" class="btwns0"/>
+        
+            <line x1="-136.5206" y1="204.6501" 
+                  x2="-14.9091" y2="162.0403" class="btwns3"/>
+        
+            <line x1="-136.5206" y1="204.6501" 
+                  x2="-123.1742" y2="297.3647" class="btwns1"/>
+        
+            <line x1="-136.5206" y1="204.6501" 
+                  x2="-114.5016" y2="96.0920" class="btwns2"/>
+        
+            <line x1="-136.5206" y1="204.6501" 
+                  x2="-251.0963" y2="208.2753" class="btwns1"/>
+        
+            <line x1="-5.4716" y1="158.7337" 
+                  x2="107.0478" y2="89.0960" class="btwns4"/>
+        
+            <line x1="-27.1218" y1="-210.9817" 
+                  x2="-131.3763" y2="-177.4534" class="btwns7"/>
+        
+            <line x1="-27.1218" y1="-210.9817" 
+                  x2="-68.7994" y2="-159.0427" class="btwns0"/>
+        
+            <line x1="-27.1218" y1="-210.9817" 
+                  x2="76.5048" y2="-245.4778" class="btwns8"/>
+        
+            <line x1="-390.0000" y1="-20.0390" 
+                  x2="-347.0050" y2="-88.0250" class="btwns0"/>
+        
+            <line x1="-140.8961" y1="-174.3918" 
+                  x2="-246.4995" y2="-156.7503" class="btwns7"/>
+        
+            <line x1="-140.8961" y1="-174.3918" 
+                  x2="-84.4918" y2="-154.5602" class="btwns0"/>
+        
+            <line x1="-324.3003" y1="-178.2552" 
+                  x2="-265.8283" y2="-158.3283" class="btwns0"/>
+        
+            <line x1="-324.3003" y1="-178.2552" 
+                  x2="-339.5836" y2="-106.2587" class="btwns0"/>
+        
+            <line x1="-324.3003" y1="-178.2552" 
+                  x2="-262.0416" y2="-235.9366" class="btwns0"/>
+        
+            <line x1="-214.2281" y1="100.1464" 
+                  x2="-122.4222" y2="87.6412" class="btwns0"/>
+        
+            <line x1="-256.3629" y1="-155.1026" 
+                  x2="-333.4189" y2="-102.1409" class="btwns1"/>
+        
+            <line x1="-256.3629" y1="-155.1026" 
+                  x2="-254.8950" y2="-232.7347" class="btwns4"/>
+        
+            <line x1="237.6030" y1="-43.1377" 
+                  x2="159.4427" y2="-53.1767" class="btwns0"/>
+        
+            <line x1="115.5510" y1="83.8334" 
+                  x2="147.1383" y2="-44.7394" class="btwns7"/>
+        
+            <line x1="115.5510" y1="83.8334" 
+                  x2="215.2911" y2="134.4014" class="btwns7"/>
+        
+            <line x1="149.5241" y1="-54.4506" 
+                  x2="257.1261" y2="-107.5234" class="btwns0"/>
+        
+            <line x1="149.5241" y1="-54.4506" 
+                  x2="205.2347" y2="-143.9885" class="btwns0"/>
+        
+            <line x1="149.5241" y1="-54.4506" 
+                  x2="125.7105" y2="-153.0412" class="btwns10"/>
+        
+            <line x1="149.5241" y1="-54.4506" 
+                  x2="23.3308" y2="7.2420" class="btwns4"/>
+        
+            <line x1="123.3627" y1="-162.7616" 
+                  x2="89.9831" y2="-239.4668" class="btwns9"/>
+        
+            <line x1="85.9929" y1="-248.6362" 
+                  x2="156.4118" y2="-303.4218" class="btwns0"/>
+        
+            <line x1="390.0000" y1="39.2247" 
+                  x2="341.5848" y2="102.4205" class="btwns0"/>
+        
+            <line x1="268.4175" y1="78.3797" 
+                  x2="230.1073" y2="130.8472" class="btwns0"/>
+        
+            <line x1="335.5033" y1="110.3586" 
+                  x2="233.8964" y2="136.4373" class="btwns1"/>
+        
+            <line x1="200.2278" y1="242.3589" 
+                  x2="135.2878" y2="305.7834" class="btwns2"/>
+        
+            <line x1="200.2278" y1="242.3589" 
+                  x2="221.9516" y2="148.6650" class="btwns4"/>
+        
+            <line x1="200.2278" y1="242.3589" 
+                  x2="261.9535" y2="272.7218" class="btwns0"/>
+        
+            <line x1="128.1337" y1="312.7705" 
+                  x2="55.5808" y2="334.8007" class="btwns0"/>
+        
+            <line x1="128.1337" y1="312.7705" 
+                  x2="121.3849" y2="380.0499" class="btwns0"/>
+        
+            <line x1="-347.9537" y1="197.3658" 
+                  x2="-271.0088" y2="207.3098" class="btwns0"/>
+        
+            <line x1="-121.7494" y1="307.2626" 
+                  x2="-123.6494" y2="377.0759" class="btwns0"/>
+        
+            <line x1="-180.2502" y1="27.6076" 
+                  x2="-120.0718" y2="79.7436" class="btwns0"/>
+        
+            <line x1="14.3469" y1="11.6340" 
+                  x2="-103.8954" y2="81.2196" class="btwns3"/>
+        
+            <line x1="-64.1293" y1="-361.9463" 
+                  x2="10.9139" y2="-386.8503" class="btwns0"/>
+        
+            <line x1="-64.1293" y1="-361.9463" 
+                  x2="-154.6927" y2="-319.7056" class="btwns1"/>
+        
+            <line x1="-182.6427" y1="-381.1892" 
+                  x2="-166.5179" y2="-325.0894" class="btwns0"/>
+        
+            <line x1="-163.7554" y1="-315.4785" 
+                  x2="-246.8967" y2="-248.9790" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-206.7200 276.6265)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-136.5206 204.6501)" 
+                class="vertice degree8 btwns4 authority7 KABUL">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-5.4716 158.7337)" 
+                class="vertice degree2 btwns2 authority2 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-27.1218 -210.9817)" 
+                class="vertice degree4 btwns6 authority3 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -20.0390)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-140.8961 -174.3918)" 
+                class="vertice degree4 btwns5 authority4 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-324.3003 -178.2552)" 
+                class="vertice degree4 btwns0 authority4 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-214.2281 100.1464)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-256.3629 -155.1026)" 
+                class="vertice degree6 btwns5 authority6 KABUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-75.0579 -151.2433)" 
+                class="vertice degree2 btwns0 authority2 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(237.6030 -43.1377)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(115.5510 83.8334)" 
+                class="vertice degree4 btwns7 authority4 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(149.5241 -54.4506)" 
+                class="vertice degree10 btwns10 authority10 KABUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(266.0945 -111.9469)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(210.5176 -152.4791)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(123.3627 -162.7616)" 
+                class="vertice degree2 btwns7 authority2 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(85.9929 -248.6362)" 
+                class="vertice degree4 btwns7 authority3 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(164.3045 -309.5622)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 39.2247)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(268.4175 78.3797)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(335.5033 110.3586)" 
+                class="vertice degree2 btwns0 authority1 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(200.2278 242.3589)" 
+                class="vertice degree4 btwns3 authority3 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(128.1337 312.7705)" 
+                class="vertice degree4 btwns1 authority3 KABUL">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(224.2103 138.9234)" 
+                class="vertice degree6 btwns5 authority5 KABUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(270.9266 277.1357)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(46.0122 337.7061)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(120.3868 390.0000)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-347.9537 197.3658)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-121.7494 307.2626)" 
+                class="vertice degree2 btwns0 authority1 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-180.2502 27.6076)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(14.3469 11.6340)" 
+                class="vertice degree2 btwns2 authority2 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-123.9215 387.0722)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-112.5137 86.2915)" 
+                class="vertice degree6 btwns3 authority5 KABUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-261.0913 208.5915)" 
+                class="vertice degree2 btwns0 authority1 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-341.6601 -96.4767)" 
+                class="vertice degree4 btwns0 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="24" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-64.1293 -361.9463)" 
+                class="vertice degree2 btwns0 authority1 KABUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(20.4049 -390.0000)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-182.6427 -381.1892)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-163.7554 -315.4785)" 
+                class="vertice degree4 btwns2 authority3 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-254.7060 -242.7329)" 
+                class="vertice degree4 btwns3 authority4 USUNNEWYORK">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-206.7200 276.6265)" 
+                id="06KABUL106" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06KABUL106
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-136.5206 204.6501)" 
+                id="06KABUL1089" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1089.html">06KABUL1089</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>POLICE REFORM: REGIONAL COMMANDS AND RAPID REACTION FORCE TO MEET NEAR-TERM CHALLENGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-5.4716 158.7337)" 
+                id="06KABUL1133" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1133.html">06KABUL1133</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOA PROPOSES AUXILIARY POLICE, REQUESTS USG FUNDING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-27.1218 -210.9817)" 
+                id="06KABUL1211" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1211.html">06KABUL1211</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>NEW GOVERNOR OR URUZGAN PROVINCE TAKES OFFICE WITHOUT INCIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -20.0390)" 
+                id="06KABUL1324" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1324.html">06KABUL1324</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>1267 SANCTIONS LIST MONITORING TEAM WILL URGE CASE OF URUZGAN GOVERNOR MONIB</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-140.8961 -174.3918)" 
+                id="06KABUL1328" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1328.html">06KABUL1328</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PRT/TARIN KOWT - NEW GOVERNOR OF URUZGAN PROVINCE OFF TO A GOOD START</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-324.3003 -178.2552)" 
+                id="06KABUL1341" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1341.html">06KABUL1341</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>1267 SANCTIONS LIST MONITORING TEAM WILL URGE CASE OF URUZGAN GOVERNOR MONIB</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-214.2281 100.1464)" 
+                id="06KABUL1358" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KABUL1358.html">06KABUL1358</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/MAZAR-E SHARIF  DOSTUM PRESIDES OVER WEAPONS TURNOVER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-256.3629 -155.1026)" 
+                id="06KABUL1545" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06KABUL1545.html">06KABUL1545</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PROGRESS ON UN 1267 SANCTIONS DELISTING REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-75.0579 -151.2433)" 
+                id="06KABUL1669" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06KABUL1669.html">06KABUL1669</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRT/TARIN KOWT - SECURITY PROGRAMS GETTING TRACTION IN URUZGAN PROVINCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(237.6030 -43.1377)" 
+                id="06KABUL1670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06KABUL1670
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(115.5510 83.8334)" 
+                id="06KABUL1714" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>04/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06KABUL1714.html">06KABUL1714</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>KARZAI NERVOUS ON PROVINCIAL SECURITY: RESURRECTS IDEA OF AUXILIARY POLICE, SWIPES AT PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(149.5241 -54.4506)" 
+                id="06KABUL1884" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06KABUL1884.html">06KABUL1884</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PROPOSED POLICE PROGRAM CHANGES TO MEET THREAT CONDITIONS IN KEY PROVINCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(266.0945 -111.9469)" 
+                id="06KABUL2149" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KABUL2149.html">06KABUL2149</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A COURSE OF ACTION TO REBALANCE THE ANP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.5176 -152.4791)" 
+                id="06KABUL2151" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KABUL2151.html">06KABUL2151</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A COURSE OF ACTION TO REBALANCE THE ANP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(123.3627 -162.7616)" 
+                id="06KABUL2154" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KABUL2154.html">06KABUL2154</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>A COURSE OF ACTION TO REBALANCE THE ANP CORRECTED VERSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(85.9929 -248.6362)" 
+                id="06KABUL2178" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KABUL2178.html">06KABUL2178</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PRT/TARIN KOWT: GOVERNOR MONIB'S TENUOUS GRASP ON URUZGAN PROVINCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.3045 -309.5622)" 
+                id="06KABUL2424" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KABUL2424.html">06KABUL2424</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/TARIN KOWT - URUZGAN'S DEVELOPING INSTITUTIONS - LAYING THE GROUNDWORK FOR GOVERNABILITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 39.2247)" 
+                id="06KABUL2703" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06KABUL2703.html">06KABUL2703</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/GARDEZ  SECURITY WITHOUT GOVERNMENT CONTROL: VISIT TO A REMOT DISTRICT IN LOGAR PROVINCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(268.4175 78.3797)" 
+                id="06KABUL2786" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06KABUL2786.html">06KABUL2786</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOHAQEQ, FAHIM CONCERNED OVER MILITIAS. FAHIM STRENGTH OVERRATED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(335.5033 110.3586)" 
+                id="06KABUL2970" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06KABUL2970.html">06KABUL2970</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NDS DIRECTOR SALEH ON INSURGENCY - CAUSES AND SOLUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(200.2278 242.3589)" 
+                id="06KABUL4001" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4001.html">06KABUL4001</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PAG APPROVES AUXILIARY POLICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(128.1337 312.7705)" 
+                id="06KABUL4232" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4232.html">06KABUL4232</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AFGHAN POLICE REFORM:  CIVIL ORDER MAINTENANCE - CONSTABULARY FORCE CONCEPT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(224.2103 138.9234)" 
+                id="06KABUL4233" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4233.html">06KABUL4233</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PRT/ASADABAD - EAST AFGHAN MILITIA FORCES HERE TO STAY?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(270.9266 277.1357)" 
+                id="06KABUL4245" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4245.html">06KABUL4245</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUXILIARY POLICE ASSESSMENT TEAM BEGINS WORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(46.0122 337.7061)" 
+                id="06KABUL4326" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4326.html">06KABUL4326</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/MEHTARLAM - THE AFGHAN NATIONAL POLICE AND PROVINCIAL INSECURITY IN LAGHMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(120.3868 390.0000)" 
+                id="06KABUL4327" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06KABUL4327.html">06KABUL4327</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/MEHTARLAM - THE AFGHAN NATIONAL POLICE AND PROVINCIAL INSECURITY IN LAGHMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-347.9537 197.3658)" 
+                id="06KABUL559" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL559.html">06KABUL559</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT/GHAZNI:NAWA, GHAZNI'S LOST DISTRICT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-121.7494 307.2626)" 
+                id="06KABUL662" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL662.html">06KABUL662</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRT/KABUL: PROVINCIAL SECURITY ASSESSMENTS DESIGNED TO DISRUPT SPRING OFFENSIVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-180.2502 27.6076)" 
+                id="06KABUL725" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL725.html">06KABUL725</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ISAF RESPONSE TO ANTI-CARTOON RIOTS: "RESTRAINT," RELIANCE ON ANP, AND GAPS IN CAPABILITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(14.3469 11.6340)" 
+                id="06KABUL746" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06KABUL746
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-123.9215 387.0722)" 
+                id="06KABUL838" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL838.html">06KABUL838</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>QALAT VISIT: FOCUS ON SECURITY, POLICE, AND ROADS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.5137 86.2915)" 
+                id="06KABUL840" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL840.html">06KABUL840</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MAIMANA REVISED - A STEP AWAY FROM DISASTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-261.0913 208.5915)" 
+                id="06KABUL852" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KABUL852.html">06KABUL852</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRT/GHAZNI - GOVERNOR CONSIDERS SUPPORTING NEW ARMED GROUPS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-341.6601 -96.4767)" 
+                id="06STATE46197" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                
+                    06STATE46197
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-64.1293 -361.9463)" 
+                id="07KABUL1353" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KABUL1353.html">07KABUL1353</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOVERNMENT OF AFGHANISTAN EFFORTS TO UPDATE UNSCR 1267</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(20.4049 -390.0000)" 
+                id="07KABUL2300" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07KABUL2300.html">07KABUL2300</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOA ADDITIONS TO UN1267 LIST NOT IMMINENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-182.6427 -381.1892)" 
+                id="07MOSCOW1413" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07MOSCOW1413.html">07MOSCOW1413</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIA TO REVIEW TALIBAN LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-163.7554 -315.4785)" 
+                id="07STATE36625" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07STATE36625.html">07STATE36625</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>UNSCR 1267: UPDATING TALIBAN NAMES ON THE CONSOLIDATED LIST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-254.7060 -242.7329)" 
+                id="07USUNNEWYORK173" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07USUNNEWYORK173.html">07USUNNEWYORK173</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>MAKING TALIBAN SANCTIONS RELEVANT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

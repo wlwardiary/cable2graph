@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE51778">06STATE51778</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/31/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUDHABI1341">06ABUDHABI1341</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ABUDHABI1341.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/05/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUDAN: LEVERAGING UN TROOP CONTRIBUTING COUNTRIES TOWARDS DARFUR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO1848">06TOKYO1848</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06TOKYO1848.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JAPAN "CAREFULLY CONSIDERING" CONTRIBUTION TO DARFUR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SUVA138">06SUVA138</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06SUVA138.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/07/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FIJI, TONGA CONTRIBUTIONS TOWARD UN PEACEKEEPING OPERATIONS IN DARFUR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06HANOI817">06HANOI817</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06HANOI817.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VIETNAM: NO COMMENT ON DARFUR PKO NOW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RABAT640">06RABAT640</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06RABAT640.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOROCCO: LEVERAGING UN TROOP CONTRIBUTING COUNTRIES TOWARDS DARFUR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06HANOI823">06HANOI823</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06HANOI823.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VIETNAM'S EVENTUAL PKO PARTICIPATION LIKELY, BUT NOT IN TIME FOR DARFUR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM599">06DARESSALAAM599</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DARESSALAAM599.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/12/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TANZANIA SUPPORTS REHAT BUT CONCERNED ABOUT SUDANESE RESISTANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUDHABI1531">06ABUDHABI1531</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ABUDHABI1531.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UAE CONFIRMS SUPPORT FOR SUDAN, AU MISSION IN DARFUR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06AMMAN2737">06AMMAN2737</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06AMMAN2737.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DARFUR TROOP CONTRIBUTION DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DAKAR985">06DAKAR985</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DAKAR985.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUDAN: LEVERAGING MORE SENEGALESE TROOPS TOWARDS DARFUR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06AMMAN3112">06AMMAN3112</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06AMMAN3112.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/01/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FOLLOW UP TO DARFUR TROOP CONTRIBUTION DEMARCHE - JORDAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-334.1721" y1="175.2847" 
+                  x2="-92.3585" y2="14.7801" class="btwns5"/>
+        
+            <line x1="161.3392" y1="212.3444" 
+                  x2="-76.3234" y2="15.6262" class="btwns5"/>
+        
+            <line x1="201.3529" y1="-171.3672" 
+                  x2="381.5347" y2="-284.6765" class="btwns5"/>
+        
+            <line x1="201.3529" y1="-171.3672" 
+                  x2="-75.5770" y2="3.9020" class="btwns10"/>
+        
+            <line x1="-4.8092" y1="-254.5525" 
+                  x2="-81.1508" y2="-0.3276" class="btwns5"/>
+        
+            <line x1="206.0220" y1="40.8562" 
+                  x2="-74.0857" y2="10.3332" class="btwns5"/>
+        
+            <line x1="-20.1237" y1="290.0000" 
+                  x2="-155.3317" y2="282.5049" class="btwns0"/>
+        
+            <line x1="-20.1237" y1="290.0000" 
+                  x2="-81.8075" y2="19.0005" class="btwns4"/>
+        
+            <line x1="-165.3164" y1="281.9514" 
+                  x2="-86.8835" y2="18.8332" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="0.8706" 
+                  x2="-94.0231" y2="8.9762" class="btwns5"/>
+        
+            <line x1="-84.0268" y1="9.2499" 
+                  x2="-323.8682" y2="-162.0499" class="btwns5"/>
+        
+            <line x1="-84.0268" y1="9.2499" 
+                  x2="-184.2228" y2="-271.7651" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-334.1721 175.2847)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(161.3392 212.3444)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(201.3529 -171.3672)" 
+                class="vertice degree1 btwns1 authority1 AMMAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-4.8092 -254.5525)" 
+                class="vertice degree0 btwns0 authority0 DAKAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(206.0220 40.8562)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-20.1237 290.0000)" 
+                class="vertice degree1 btwns0 authority1 HANOI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-165.3164 281.9514)" 
+                class="vertice degree1 btwns0 authority1 HANOI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 0.8706)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-84.0268 9.2499)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-332.0057 -167.8619)" 
+                class="vertice degree0 btwns0 authority0 SUVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-187.5812 -281.1843)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-334.1721 175.2847)" 
+                id="06ABUDHABI1341" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ABUDHABI1341.html">06ABUDHABI1341</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SUDAN: LEVERAGING UN TROOP CONTRIBUTING COUNTRIES TOWARDS DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(161.3392 212.3444)" 
+                id="06ABUDHABI1531" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ABUDHABI1531.html">06ABUDHABI1531</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UAE CONFIRMS SUPPORT FOR SUDAN, AU MISSION IN DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(201.3529 -171.3672)" 
+                id="06AMMAN2737" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06AMMAN2737.html">06AMMAN2737</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DARFUR TROOP CONTRIBUTION DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -290.0000)" 
+                id="06AMMAN3112" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06AMMAN3112.html">06AMMAN3112</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FOLLOW UP TO DARFUR TROOP CONTRIBUTION DEMARCHE - JORDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.8092 -254.5525)" 
+                id="06DAKAR985" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DAKAR985.html">06DAKAR985</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SUDAN: LEVERAGING MORE SENEGALESE TROOPS TOWARDS DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(206.0220 40.8562)" 
+                id="06DARESSALAAM599" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DARESSALAAM599.html">06DARESSALAAM599</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TANZANIA SUPPORTS REHAT BUT CONCERNED ABOUT SUDANESE RESISTANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.1237 290.0000)" 
+                id="06HANOI817" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06HANOI817.html">06HANOI817</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>VIETNAM: NO COMMENT ON DARFUR PKO NOW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-165.3164 281.9514)" 
+                id="06HANOI823" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06HANOI823.html">06HANOI823</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>VIETNAM'S EVENTUAL PKO PARTICIPATION LIKELY, BUT NOT IN TIME FOR DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 0.8706)" 
+                id="06RABAT640" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06RABAT640.html">06RABAT640</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOROCCO: LEVERAGING UN TROOP CONTRIBUTING COUNTRIES TOWARDS DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-84.0268 9.2499)" 
+                id="06STATE51778" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE51778
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-332.0057 -167.8619)" 
+                id="06SUVA138" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06SUVA138.html">06SUVA138</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FIJI, TONGA CONTRIBUTIONS TOWARD UN PEACEKEEPING OPERATIONS IN DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-187.5812 -281.1843)" 
+                id="06TOKYO1848" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06TOKYO1848.html">06TOKYO1848</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPAN "CAREFULLY CONSIDERING" CONTRIBUTION TO DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

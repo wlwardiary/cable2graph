@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE86139">09STATE86139</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09STATE86139.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE REQUEST: INVITING ARF MEMBERS TO SEPT 16-18 ARF DISASTER RELIEF DIALOGUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CANBERRA770">09CANBERRA770</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09CANBERRA770.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/19/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AUSTRALIAN ATTENDEES TO ARF DISASTER RELIEF DIALOGUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW2180">09MOSCOW2180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09MOSCOW2180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED:  ARF DISASTER RELIEF DIALOGUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING2454">09BEIJING2454</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09BEIJING2454.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRC WILL ATTEND SEPTEMBER 16-18 ARF DISASTER RELIEF DIALOGUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09JAKARTA1414">09JAKARTA1414</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09JAKARTA1414.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ASEAN REGIONAL FORUM DISASTER RELIEF DIALOGUE -- INDONESIA ON BOARD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09USEUBRUSSELS1182">09USEUBRUSSELS1182</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09USEUBRUSSELS1182.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARF DISASTER RELIEF DIALOGUE DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09OTTAWA654">09OTTAWA654</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09OTTAWA654.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CANADA WILL ATTEND ARF INTER-SESSIONAL MEETING ON DISASTER RELIEF</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA843">09DHAKA843</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09DHAKA843.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BANGLADESH ATTENDING ARF DISASTER MANAGEMENT DIALOGUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DILI228">09DILI228</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09DILI228.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE REPLY: ARF DISASTER RELIEF DIALOGUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE111350">09STATE111350</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09STATE111350.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">(U) ARF ADVANCES DISASTER RELIEF INITIATIVES AT ANNUAL RELIEF CONFERENCE, SEPT 16-18</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE120631">09STATE120631</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09STATE120631.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/23/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ARF BEGINS PREPARATIONS FOR INTER-SESSIONAL YEAR, VISION STATEMENT IMPLEMENTATION PLAN DISCUSSED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="370.6722" y1="134.3383" 
+                  x2="100.0938" y2="6.0691" class="btwns0"/>
+        
+            <line x1="229.5792" y1="275.1927" 
+                  x2="95.5773" y2="10.7059" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-60.4868" 
+                  x2="100.8476" y2="-0.2538" class="btwns0"/>
+        
+            <line x1="76.5284" y1="-290.0000" 
+                  x2="90.5604" y2="-8.2021" class="btwns0"/>
+        
+            <line x1="-119.4259" y1="-229.1549" 
+                  x2="84.3216" y2="-5.6053" class="btwns0"/>
+        
+            <line x1="275.0783" y1="-227.1369" 
+                  x2="97.3230" y2="-6.0085" class="btwns0"/>
+        
+            <line x1="-205.4251" y1="-57.8246" 
+                  x2="81.2539" y2="-0.1856" class="btwns0"/>
+        
+            <line x1="-194.8668" y1="173.7287" 
+                  x2="-381.4094" y2="284.8812" class="btwns0"/>
+        
+            <line x1="-194.8668" y1="173.7287" 
+                  x2="82.4879" y2="6.9390" class="btwns10"/>
+        
+            <line x1="91.0577" y1="1.7855" 
+                  x2="29.2380" y2="269.2145" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(370.6722 134.3383)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(229.5792 275.1927)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -60.4868)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(76.5284 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DILI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-119.4259 -229.1549)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(275.0783 -227.1369)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-205.4251 -57.8246)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-194.8668 173.7287)" 
+                class="vertice degree1 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(91.0577 1.7855)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(26.9858 278.9576)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(370.6722 134.3383)" 
+                id="09BEIJING2454" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09BEIJING2454.html">09BEIJING2454</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRC WILL ATTEND SEPTEMBER 16-18 ARF DISASTER RELIEF DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(229.5792 275.1927)" 
+                id="09CANBERRA770" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09CANBERRA770.html">09CANBERRA770</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIAN ATTENDEES TO ARF DISASTER RELIEF DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -60.4868)" 
+                id="09DHAKA843" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09DHAKA843.html">09DHAKA843</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BANGLADESH ATTENDING ARF DISASTER MANAGEMENT DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(76.5284 -290.0000)" 
+                id="09DILI228" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09DILI228.html">09DILI228</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REPLY: ARF DISASTER RELIEF DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-119.4259 -229.1549)" 
+                id="09JAKARTA1414" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09JAKARTA1414.html">09JAKARTA1414</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ASEAN REGIONAL FORUM DISASTER RELIEF DIALOGUE -- INDONESIA ON BOARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(275.0783 -227.1369)" 
+                id="09MOSCOW2180" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09MOSCOW2180.html">09MOSCOW2180</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED:  ARF DISASTER RELIEF DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-205.4251 -57.8246)" 
+                id="09OTTAWA654" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09OTTAWA654.html">09OTTAWA654</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADA WILL ATTEND ARF INTER-SESSIONAL MEETING ON DISASTER RELIEF</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-194.8668 173.7287)" 
+                id="09STATE111350" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09STATE111350.html">09STATE111350</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>(U) ARF ADVANCES DISASTER RELIEF INITIATIVES AT ANNUAL RELIEF CONFERENCE, SEPT 16-18</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                id="09STATE120631" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09STATE120631.html">09STATE120631</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARF BEGINS PREPARATIONS FOR INTER-SESSIONAL YEAR, VISION STATEMENT IMPLEMENTATION PLAN DISCUSSED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(91.0577 1.7855)" 
+                id="09STATE86139" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09STATE86139.html">09STATE86139</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST: INVITING ARF MEMBERS TO SEPT 16-18 ARF DISASTER RELIEF DIALOGUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(26.9858 278.9576)" 
+                id="09USEUBRUSSELS1182" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09USEUBRUSSELS1182.html">09USEUBRUSSELS1182</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARF DISASTER RELIEF DIALOGUE DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

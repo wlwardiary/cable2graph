@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08SECSTATE131870">08SECSTATE131870</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09MONTREAL31">09MONTREAL31</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SANTODOMINGO96">09SANTODOMINGO96</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09SANTODOMINGO96.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FY 2009 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SANTODOMINGO104">09SANTODOMINGO104</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09SANTODOMINGO104.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FY 2009 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK134">09USUNNEWYORK134</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09USUNNEWYORK134.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FY2009 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE120274">09STATE120274</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09STATE120274.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FY 2010 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO2919">09TOKYO2919</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09TOKYO2919.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">2010 PEDOPHILIA CERTIFICATION: JAPAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BERLIN1610">09BERLIN1610</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09BERLIN1610.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EMBASSY BERLIN RESPONSE TO FY 2010 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SANTODOMINGO1341">09SANTODOMINGO1341</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09SANTODOMINGO1341.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/23/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FY 2010 Pedophilia Certification</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10UNVIEVIENNA12">10UNVIEVIENNA12</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10UNVIEVIENNA12.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/20/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FY 2010 PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10UNROME7">10UNROME7</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10UNROME7.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">RESPONSE TO FY 2010 ANTI-PEDOPHILIA CERTIFICATION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="188.7842" y1="166.0333" 
+                  x2="380.4151" y2="109.0269" class="btwns0"/>
+        
+            <line x1="188.7842" y1="166.0333" 
+                  x2="67.7309" y2="283.0498" class="btwns0"/>
+        
+            <line x1="188.7842" y1="166.0333" 
+                  x2="50.4453" y2="43.7645" class="btwns7"/>
+        
+            <line x1="-182.1614" y1="-290.0000" 
+                  x2="-135.3596" y2="-125.0220" class="btwns0"/>
+        
+            <line x1="37.5235" y1="-273.2576" 
+                  x2="-125.2994" y2="-122.2027" class="btwns0"/>
+        
+            <line x1="-366.2975" y1="-186.2095" 
+                  x2="-142.2007" y2="-118.3016" class="btwns0"/>
+        
+            <line x1="-132.6305" y1="-115.4016" 
+                  x2="134.0471" y2="-152.1266" class="btwns0"/>
+        
+            <line x1="-132.6305" y1="-115.4016" 
+                  x2="35.4034" y2="30.5836" class="btwns10"/>
+        
+            <line x1="-132.6305" y1="-115.4016" 
+                  x2="-239.8385" y2="56.5485" class="btwns0"/>
+        
+            <line x1="-132.6305" y1="-115.4016" 
+                  x2="-380.4781" y2="-35.8768" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(188.7842 166.0333)" 
+                class="vertice degree3 btwns4 authority3 SECSTATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-182.1614 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(37.5235 -273.2576)" 
+                class="vertice degree0 btwns0 authority0 MONTREAL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 106.1756)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-366.2975 -186.2095)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(60.5409 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-132.6305 -115.4016)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(143.9536 -153.4909)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(42.9524 37.1421)" 
+                class="vertice degree1 btwns5 authority1 USUNNEWYORK">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-245.1292 65.0343)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -32.8216)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(188.7842 166.0333)" 
+                id="08SECSTATE131870" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    08SECSTATE131870
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-182.1614 -290.0000)" 
+                id="09BERLIN1610" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09BERLIN1610.html">09BERLIN1610</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY BERLIN RESPONSE TO FY 2010 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(37.5235 -273.2576)" 
+                id="09MONTREAL31" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09MONTREAL31
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 106.1756)" 
+                id="09SANTODOMINGO104" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09SANTODOMINGO104.html">09SANTODOMINGO104</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FY 2009 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-366.2975 -186.2095)" 
+                id="09SANTODOMINGO1341" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09SANTODOMINGO1341.html">09SANTODOMINGO1341</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FY 2010 Pedophilia Certification</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(60.5409 290.0000)" 
+                id="09SANTODOMINGO96" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09SANTODOMINGO96.html">09SANTODOMINGO96</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FY 2009 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-132.6305 -115.4016)" 
+                id="09STATE120274" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09STATE120274.html">09STATE120274</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FY 2010 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(143.9536 -153.4909)" 
+                id="09TOKYO2919" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09TOKYO2919.html">09TOKYO2919</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2010 PEDOPHILIA CERTIFICATION: JAPAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(42.9524 37.1421)" 
+                id="09USUNNEWYORK134" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09USUNNEWYORK134.html">09USUNNEWYORK134</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>FY2009 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.1292 65.0343)" 
+                id="10UNROME7" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/22/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10UNROME7.html">10UNROME7</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RESPONSE TO FY 2010 ANTI-PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -32.8216)" 
+                id="10UNVIEVIENNA12" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/20/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10UNVIEVIENNA12.html">10UNVIEVIENNA12</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FY 2010 PEDOPHILIA CERTIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

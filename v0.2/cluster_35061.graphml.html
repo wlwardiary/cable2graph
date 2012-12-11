@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE146343">06STATE146343</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/03/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SKOPJE848">06SKOPJE848</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SKOPJE848.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MACEDONIA SUPPORTS IMPROVED SERBIA-ICTY COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA746">06BRATISLAVA746</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BRATISLAVA746.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAK FM DELIVERS BLUNT MESSAGES TO SERBS AND KOSOVARS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06HELSINKI909">06HELSINKI909</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06HELSINKI909.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FINLAND ON SERBIA'S ICTY COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA2688">06VIENNA2688</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06VIENNA2688.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE TO AUSTRIA ON SERBIA'S ICTY COOPERATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LISBON1920">06LISBON1920</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06LISBON1920.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PORTUGAL SUPPORTS INCREASED PRESSURE REGARDING ICTY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PARIS6042">06PARIS6042</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06PARIS6042.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH AGREE WITH U.S. ON SERBIA'S NEED TO COOPERATE WITH THE ICTY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ROME2535">06ROME2535</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06ROME2535.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ICTY: ITALY CAUTIOUSLY SUPPORTS INCREASED PRESSURE ON BELGRADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PRAGUE1100">06PRAGUE1100</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06PRAGUE1100.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CZECHS REQUEST CLARIFICATION OF U.S. POSITION ON SERBIAN ICTY COMPLIANCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RIGA719">06RIGA719</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06RIGA719.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LATVIA FIRM ON NEED FOR FULL SERBIAN COOPERATION WITH ICTY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN833">06TALLINN833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06TALLINN833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ESTONIA ON SERBIA'S ICTY COOPERATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST1451">06BUCHAREST1451</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BUCHAREST1451.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROMANIAN VIEWS ON SERBIA, ICTY AND PFP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06THEHAGUE2044">06THEHAGUE2044</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06THEHAGUE2044.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NETHERLANDS/ICTY/SERBIA: DEL PONTE, GONL URGE CONSISTENT MESSAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06USNATO602">06USNATO602</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06USNATO602.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR NULAND'S MEETING WITH SERBIAN AMBASSADOR MILINKOVIC</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="363.4057" y1="-121.8329" 
+                  x2="353.4057" y2="-121.8329" class="btwns0"/>
+        
+            <line x1="363.4057" y1="-121.8329" 
+                  x2="51.1427" y2="-50.1044" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="290.0000" 
+                  x2="-232.1742" y2="167.5745" class="btwns5"/>
+        
+            <line x1="-331.4598" y1="-119.7136" 
+                  x2="31.5772" y2="-49.7578" class="btwns5"/>
+        
+            <line x1="-258.5248" y1="8.1249" 
+                  x2="31.5663" y2="-46.0306" class="btwns5"/>
+        
+            <line x1="97.5975" y1="-277.9239" 
+                  x2="43.7696" y2="-57.5800" class="btwns5"/>
+        
+            <line x1="-224.2727" y1="161.4453" 
+                  x2="33.5415" y2="-41.6770" class="btwns10"/>
+        
+            <line x1="-6.9655" y1="148.4525" 
+                  x2="39.0046" y2="-38.1560" class="btwns5"/>
+        
+            <line x1="-171.1891" y1="-179.0567" 
+                  x2="32.8865" y2="-53.1174" class="btwns5"/>
+        
+            <line x1="164.5605" y1="197.8058" 
+                  x2="45.8782" y2="-38.9262" class="btwns5"/>
+        
+            <line x1="41.3965" y1="-47.8657" 
+                  x2="380.1013" y2="0.7237" class="btwns5"/>
+        
+            <line x1="41.3965" y1="-47.8657" 
+                  x2="-92.3015" y2="-281.3223" class="btwns5"/>
+        
+            <line x1="41.3965" y1="-47.8657" 
+                  x2="289.7791" y2="102.7189" class="btwns5"/>
+        
+            <line x1="41.3965" y1="-47.8657" 
+                  x2="258.1943" y2="-221.8578" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(363.4057 -121.8329)" 
+                class="vertice degree1 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-331.4598 -119.7136)" 
+                class="vertice degree0 btwns0 authority0 HELSINKI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-258.5248 8.1249)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(97.5975 -277.9239)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-224.2727 161.4453)" 
+                class="vertice degree0 btwns1 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-6.9655 148.4525)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-171.1891 -179.0567)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(164.5605 197.8058)" 
+                class="vertice degree0 btwns0 authority0 SKOPJE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(41.3965 -47.8657)" 
+                class="vertice degree10 btwns9 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 2.1438)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-97.2712 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(298.3303 107.9032)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(265.9933 -228.1169)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(363.4057 -121.8329)" 
+                id="06BRATISLAVA746" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BRATISLAVA746.html">06BRATISLAVA746</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SLOVAK FM DELIVERS BLUNT MESSAGES TO SERBS AND KOSOVARS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                id="06BUCHAREST1451" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BUCHAREST1451.html">06BUCHAREST1451</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIAN VIEWS ON SERBIA, ICTY AND PFP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-331.4598 -119.7136)" 
+                id="06HELSINKI909" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06HELSINKI909.html">06HELSINKI909</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FINLAND ON SERBIA'S ICTY COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-258.5248 8.1249)" 
+                id="06LISBON1920" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06LISBON1920.html">06LISBON1920</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL SUPPORTS INCREASED PRESSURE REGARDING ICTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(97.5975 -277.9239)" 
+                id="06PARIS6042" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06PARIS6042.html">06PARIS6042</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH AGREE WITH U.S. ON SERBIA'S NEED TO COOPERATE WITH THE ICTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-224.2727 161.4453)" 
+                id="06PRAGUE1100" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06PRAGUE1100.html">06PRAGUE1100</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECHS REQUEST CLARIFICATION OF U.S. POSITION ON SERBIAN ICTY COMPLIANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-6.9655 148.4525)" 
+                id="06RIGA719" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06RIGA719.html">06RIGA719</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATVIA FIRM ON NEED FOR FULL SERBIAN COOPERATION WITH ICTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-171.1891 -179.0567)" 
+                id="06ROME2535" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ROME2535.html">06ROME2535</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ICTY: ITALY CAUTIOUSLY SUPPORTS INCREASED PRESSURE ON BELGRADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.5605 197.8058)" 
+                id="06SKOPJE848" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SKOPJE848.html">06SKOPJE848</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MACEDONIA SUPPORTS IMPROVED SERBIA-ICTY COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(41.3965 -47.8657)" 
+                id="06STATE146343" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE146343
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 2.1438)" 
+                id="06TALLINN833" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06TALLINN833.html">06TALLINN833</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA ON SERBIA'S ICTY COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-97.2712 -290.0000)" 
+                id="06THEHAGUE2044" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06THEHAGUE2044.html">06THEHAGUE2044</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/ICTY/SERBIA: DEL PONTE, GONL URGE CONSISTENT MESSAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(298.3303 107.9032)" 
+                id="06USNATO602" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06USNATO602.html">06USNATO602</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR NULAND'S MEETING WITH SERBIAN AMBASSADOR MILINKOVIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(265.9933 -228.1169)" 
+                id="06VIENNA2688" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06VIENNA2688.html">06VIENNA2688</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE TO AUSTRIA ON SERBIA'S ICTY COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

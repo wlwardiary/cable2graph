@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06WARSAW76">06WARSAW76</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/19/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW111">06WARSAW111</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06WARSAW111.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BUDGET IS PASSED; ELECTIONS STILL POSSIBLE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW134">06WARSAW134</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06WARSAW134.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CIVIC PLATFORM AND LAW AND JUSTICE INSIDERS SEE EARLY ELECTIONS AS INCREASINGLY LIKELY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW177">06WARSAW177</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06WARSAW177.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLISH GOVERNING PARTY SIGNS COOPERATION ACCORD WITH PROTEST PARTIES, EARLY ELECTIONS SEEN LESS LIKELY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW240">06WARSAW240</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06WARSAW240.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Poland's Stabilization Pact - What it means for the Economy</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW381">06WARSAW381</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06WARSAW381.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INFIGHTING CONTINUES AMONG STABILIZATION PACT PARTIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW497">06WARSAW497</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06WARSAW497.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLISH DEFENSE TRANSFORMATION AT A STRATEGIC CROSSROADS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW504">06WARSAW504</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06WARSAW504.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POLAND MOVES TO ACCELERATES MILITARY MODERNIZATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW1171">06WARSAW1171</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06WARSAW1171.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLISH MILITARY INTELLIGENCE REFORM: CASTING OUT SIN WHILE MAINTAINING CAPABILITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW1798">06WARSAW1798</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06WARSAW1798.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW DEPUTY DEFMINS: MACIEREWICZ STIRS UP CONTROVERSY, WHILE WINID GETS TO WORK</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="100.5364" 
+                  x2="289.6779" y2="-9.1081" class="btwns4"/>
+        
+            <line x1="390.0000" y1="100.5364" 
+                  x2="338.9582" y2="216.6750" class="btwns0"/>
+        
+            <line x1="-234.6305" y1="169.0069" 
+                  x2="-173.9083" y2="281.2054" class="btwns0"/>
+        
+            <line x1="-234.6305" y1="169.0069" 
+                  x2="-192.8913" y2="30.1061" class="btwns4"/>
+        
+            <line x1="282.9274" y1="-16.4859" 
+                  x2="59.3428" y2="-54.9597" class="btwns8"/>
+        
+            <line x1="49.4876" y1="-56.6555" 
+                  x2="77.9683" y2="-191.3642" class="btwns4"/>
+        
+            <line x1="49.4876" y1="-56.6555" 
+                  x2="-180.4955" y2="17.4618" class="btwns10"/>
+        
+            <line x1="80.0368" y1="-201.1479" 
+                  x2="-41.9348" y2="-284.3641" class="btwns0"/>
+        
+            <line x1="-190.0134" y1="20.5292" 
+                  x2="-380.3704" y2="-32.7731" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 100.5364)" 
+                class="vertice degree5 btwns3 authority4 WARSAW">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-234.6305 169.0069)" 
+                class="vertice degree5 btwns3 authority4 WARSAW">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(282.9274 -16.4859)" 
+                class="vertice degree5 btwns5 authority5 WARSAW">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(49.4876 -56.6555)" 
+                class="vertice degree10 btwns10 authority10 WARSAW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-169.1486 290.0000)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(80.0368 -201.1479)" 
+                class="vertice degree5 btwns3 authority4 WARSAW">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-50.1954 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-190.0134 20.5292)" 
+                class="vertice degree10 btwns7 authority9 WARSAW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -35.4695)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(334.9347 225.8298)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 100.5364)" 
+                id="06WARSAW111" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06WARSAW111.html">06WARSAW111</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BUDGET IS PASSED; ELECTIONS STILL POSSIBLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-234.6305 169.0069)" 
+                id="06WARSAW1171" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06WARSAW1171.html">06WARSAW1171</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>POLISH MILITARY INTELLIGENCE REFORM: CASTING OUT SIN WHILE MAINTAINING CAPABILITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(282.9274 -16.4859)" 
+                id="06WARSAW134" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06WARSAW134.html">06WARSAW134</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CIVIC PLATFORM AND LAW AND JUSTICE INSIDERS SEE EARLY ELECTIONS AS INCREASINGLY LIKELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(49.4876 -56.6555)" 
+                id="06WARSAW177" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06WARSAW177.html">06WARSAW177</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POLISH GOVERNING PARTY SIGNS COOPERATION ACCORD WITH PROTEST PARTIES, EARLY ELECTIONS SEEN LESS LIKELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-169.1486 290.0000)" 
+                id="06WARSAW1798" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06WARSAW1798.html">06WARSAW1798</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW DEPUTY DEFMINS: MACIEREWICZ STIRS UP CONTROVERSY, WHILE WINID GETS TO WORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(80.0368 -201.1479)" 
+                id="06WARSAW240" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06WARSAW240.html">06WARSAW240</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>Poland's Stabilization Pact - What it means for the Economy</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-50.1954 -290.0000)" 
+                id="06WARSAW381" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06WARSAW381.html">06WARSAW381</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INFIGHTING CONTINUES AMONG STABILIZATION PACT PARTIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-190.0134 20.5292)" 
+                id="06WARSAW497" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06WARSAW497.html">06WARSAW497</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POLISH DEFENSE TRANSFORMATION AT A STRATEGIC CROSSROADS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -35.4695)" 
+                id="06WARSAW504" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06WARSAW504.html">06WARSAW504</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND MOVES TO ACCELERATES MILITARY MODERNIZATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(334.9347 225.8298)" 
+                id="06WARSAW76" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06WARSAW76
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

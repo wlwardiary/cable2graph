@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE60300">08STATE60300</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08STATE60300.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NGO COMMITTEE -- INSTRUCTIONS FOR ACTION ON SEVERAL NGO APPLICATIONS.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK516">08USUNNEWYORK516</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08USUNNEWYORK516.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN ECOSOC COMMITTEE ON NGOS: THE HUMAN RIGHTS FOUNDATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE66840">08STATE66840</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08STATE66840.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN/ECOSOC COMMITTEE ON NGOS -- ACTION ON THE HUMAN RIGHTS FOUNDATION.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE70801">08STATE70801</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08STATE70801.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/01/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE REQUEST ON HUMAN RIGHTS FOUNDATION -- UPCOMING ACTION AT ECOSOC JULY 2008.</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CHISINAU707">08CHISINAU707</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08CHISINAU707.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOLDOVA RECEIVES DEMARCHE ON HUMAN RIGHTS FOUNDATION-UPCOMING ACTION AT ECOSOC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ATHENS965">08ATHENS965</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08ATHENS965.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GREECE: HUMAN RIGHTS FOUNDATION DEMARCHE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08LILONGWE388">08LILONGWE388</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08LILONGWE388.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/08/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MALAWI: DEMARCHE DELIVERED ON HUMAN RIGHTS FOUNDATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO1877">08TOKYO1877</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08TOKYO1877.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/08/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CUBA LOBBYING JAPAN TO REJECT HRF APPLICATION TO ECOSOC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08USUNNEWYORK612">08USUNNEWYORK612</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08USUNNEWYORK612.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/10/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN ECONOMIC AND SOCIAL COUNCIL: COMMITTEE ON NGOS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SEOUL1391">08SEOUL1391</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08SEOUL1391.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROKG INCLINED TO SUPPORT REVISITING HRF ECOSOC APPLICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANSALVADOR836">08SANSALVADOR836</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08SANSALVADOR836.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TALKING POINTS ON HUMAN RIGHTS FOUNDATION DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08LONDON1850">08LONDON1850</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08LONDON1850.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/14/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">HMG SUPPORTS REFERRING THE HUMAN RIGHTS FOUNDATION BACK TO COMMITTEE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA962">08OTTAWA962</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08OTTAWA962.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/16/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CANADA REQUESTS INFORMATION ON ECOSOC AND HUMAN RIGHTS FOUNDATION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-348.8793" y1="-158.7853" 
+                  x2="-103.1706" y2="-43.3850" class="btwns5"/>
+        
+            <line x1="-41.0059" y1="-290.0000" 
+                  x2="-92.0479" y2="-48.9170" class="btwns5"/>
+        
+            <line x1="-332.6818" y1="131.3422" 
+                  x2="-102.2554" y2="-33.3198" class="btwns5"/>
+        
+            <line x1="-184.0154" y1="209.9693" 
+                  x2="-97.5137" y2="-29.7276" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="-10.3623" 
+                  x2="-104.0723" y2="-38.1660" class="btwns5"/>
+        
+            <line x1="124.0083" y1="-236.3253" 
+                  x2="-86.7011" y2="-45.8399" class="btwns5"/>
+        
+            <line x1="189.8228" y1="-99.5678" 
+                  x2="-84.3383" y2="-41.2156" class="btwns5"/>
+        
+            <line x1="228.7219" y1="290.0000" 
+                  x2="381.1527" y2="209.6939" class="btwns0"/>
+        
+            <line x1="228.7219" y1="290.0000" 
+                  x2="184.9718" y2="131.9320" class="btwns1"/>
+        
+            <line x1="228.7219" y1="290.0000" 
+                  x2="52.9456" y2="190.3289" class="btwns2"/>
+        
+            <line x1="390.0000" y1="205.0328" 
+                  x2="191.5943" y2="125.9951" class="btwns4"/>
+        
+            <line x1="-94.1192" y1="-39.1338" 
+                  x2="-212.1537" y2="-256.1858" class="btwns5"/>
+        
+            <line x1="-94.1192" y1="-39.1338" 
+                  x2="173.6690" y2="117.2514" class="btwns10"/>
+        
+            <line x1="-94.1192" y1="-39.1338" 
+                  x2="39.0004" y2="176.8831" class="btwns5"/>
+        
+            <line x1="182.3043" y1="122.2943" 
+                  x2="53.3417" y2="181.2393" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-348.8793 -158.7853)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-41.0059 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 CHISINAU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-332.6818 131.3422)" 
+                class="vertice degree0 btwns0 authority0 LILONGWE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-184.0154 209.9693)" 
+                class="vertice degree0 btwns0 authority0 LONDON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -10.3623)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(124.0083 -236.3253)" 
+                class="vertice degree0 btwns0 authority0 SANSALVADOR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(189.8228 -99.5678)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(228.7219 290.0000)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 205.0328)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-94.1192 -39.1338)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-216.9310 -264.9708)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(182.3043 122.2943)" 
+                class="vertice degree3 btwns2 authority3 USUNNEWYORK">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(44.2467 185.3964)" 
+                class="vertice degree2 btwns0 authority2 USUNNEWYORK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-348.8793 -158.7853)" 
+                id="08ATHENS965" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08ATHENS965.html">08ATHENS965</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GREECE: HUMAN RIGHTS FOUNDATION DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-41.0059 -290.0000)" 
+                id="08CHISINAU707" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08CHISINAU707.html">08CHISINAU707</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOLDOVA RECEIVES DEMARCHE ON HUMAN RIGHTS FOUNDATION-UPCOMING ACTION AT ECOSOC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-332.6818 131.3422)" 
+                id="08LILONGWE388" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08LILONGWE388.html">08LILONGWE388</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MALAWI: DEMARCHE DELIVERED ON HUMAN RIGHTS FOUNDATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-184.0154 209.9693)" 
+                id="08LONDON1850" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08LONDON1850.html">08LONDON1850</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HMG SUPPORTS REFERRING THE HUMAN RIGHTS FOUNDATION BACK TO COMMITTEE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -10.3623)" 
+                id="08OTTAWA962" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08OTTAWA962.html">08OTTAWA962</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADA REQUESTS INFORMATION ON ECOSOC AND HUMAN RIGHTS FOUNDATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(124.0083 -236.3253)" 
+                id="08SANSALVADOR836" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08SANSALVADOR836.html">08SANSALVADOR836</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TALKING POINTS ON HUMAN RIGHTS FOUNDATION DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(189.8228 -99.5678)" 
+                id="08SEOUL1391" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08SEOUL1391.html">08SEOUL1391</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG INCLINED TO SUPPORT REVISITING HRF ECOSOC APPLICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(228.7219 290.0000)" 
+                id="08STATE60300" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08STATE60300.html">08STATE60300</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NGO COMMITTEE -- INSTRUCTIONS FOR ACTION ON SEVERAL NGO APPLICATIONS.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 205.0328)" 
+                id="08STATE66840" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08STATE66840.html">08STATE66840</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>UN/ECOSOC COMMITTEE ON NGOS -- ACTION ON THE HUMAN RIGHTS FOUNDATION.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-94.1192 -39.1338)" 
+                id="08STATE70801" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08STATE70801.html">08STATE70801</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST ON HUMAN RIGHTS FOUNDATION -- UPCOMING ACTION AT ECOSOC JULY 2008.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-216.9310 -264.9708)" 
+                id="08TOKYO1877" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08TOKYO1877.html">08TOKYO1877</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CUBA LOBBYING JAPAN TO REJECT HRF APPLICATION TO ECOSOC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(182.3043 122.2943)" 
+                id="08USUNNEWYORK516" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08USUNNEWYORK516.html">08USUNNEWYORK516</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>UN ECOSOC COMMITTEE ON NGOS: THE HUMAN RIGHTS FOUNDATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(44.2467 185.3964)" 
+                id="08USUNNEWYORK612" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08USUNNEWYORK612.html">08USUNNEWYORK612</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UN ECONOMIC AND SOCIAL COUNCIL: COMMITTEE ON NGOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05REFA:STATE100368">05REFA:STATE100368</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05REFB:STATE102449">05REFB:STATE102449</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05REFC:STATE109147">05REFC:STATE109147</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05REFD:KINSHASA977">05REFD:KINSHASA977</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05REFE:STATE109242">05REFE:STATE109242</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05REFF:STATE110046">05REFF:STATE110046</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05REFG:STATE111637">05REFG:STATE111637</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05REFH:STATE111657">05REFH:STATE111657</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05REFI:STATE114051">05REFI:STATE114051</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05KINSHASA1033">05KINSHASA1033</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05KINSHASA1033.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/23/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CONGO/B:  DELIVERY OF DEMARCHES AND TIP REPORT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="-58.9686" y2="280.3036" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="203.3570" y2="248.7834" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="380.3216" y2="-95.3435" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="-289.5983" y2="182.6443" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="-380.0002" y2="-1.9537" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="209.1528" y2="-245.5209" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="-285.1941" y2="-185.3361" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="-52.5355" y2="-280.2511" class="btwns5"/>
+        
+            <line x1="11.6011" y1="0.5036" 
+                  x2="378.2024" y2="100.8923" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(11.6011 0.5036)" 
+                class="vertice degree10 btwns10 authority10 KINSHASA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-61.4141 290.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(209.4696 256.6978)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -97.8594)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-298.1554 187.8189)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -2.0164)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(215.4138 -253.3182)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-293.6697 -190.6431)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-54.7626 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(387.8473 103.5335)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(11.6011 0.5036)" 
+                id="05KINSHASA1033" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05KINSHASA1033.html">05KINSHASA1033</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CONGO/B:  DELIVERY OF DEMARCHES AND TIP REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-61.4141 290.0000)" 
+                id="05REFA:STATE100368" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFA:STATE100368
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(209.4696 256.6978)" 
+                id="05REFB:STATE102449" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFB:STATE102449
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -97.8594)" 
+                id="05REFC:STATE109147" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFC:STATE109147
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-298.1554 187.8189)" 
+                id="05REFD:KINSHASA977" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFD:KINSHASA977
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -2.0164)" 
+                id="05REFE:STATE109242" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFE:STATE109242
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(215.4138 -253.3182)" 
+                id="05REFF:STATE110046" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFF:STATE110046
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-293.6697 -190.6431)" 
+                id="05REFG:STATE111637" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFG:STATE111637
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-54.7626 -290.0000)" 
+                id="05REFH:STATE111657" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFH:STATE111657
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(387.8473 103.5335)" 
+                id="05REFI:STATE114051" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05REFI:STATE114051
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

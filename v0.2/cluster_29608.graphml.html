@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06A:SECSTATE148157">06A:SECSTATE148157</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE148157">06SECSTATE148157</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06SEOUL3062">06SEOUL3062</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/04/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3104">06SEOUL3104</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3104.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S SEP 6 MEETING WITH DEFENSE MINISTER YOON</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3109">06SEOUL3109</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3109.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MAINTAINING THE MOMENTUM ON LEBANON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06SEOUL3132">06SEOUL3132</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/12/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06NEWDELHI6423">06NEWDELHI6423</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06NEWDELHI6423.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEBANON DEMARCHE: GOI FIRM ON PEACEKEEPING VERSUS PEACE ENFORCING IN LEBANON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON727">06WELLINGTON727</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06WELLINGTON727.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW ZEALAND'S UNIFIL CONTRIBUTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3222">06SEOUL3222</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3222.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPCON TRANSFER ISSUE DOMINANT DURING OSD NORTHEAST ASIA DIRECTOR HILL'S VISIT TO SEOUL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3249">06SEOUL3249</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3249.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR VERSHBOW DISCUSSES OPCON WITH GNP PARLIAMENTARY VICE SPEAKER LEE SANG-DEUK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3286">06SEOUL3286</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3286.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">SECURITY POLICY INITIATIVE (SPI) 10: OPCON AND MORE OPCON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3311">06SEOUL3311</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3311.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEFENSE MINISTER YOON ON OPCON, JIKDO RANGE, AND BASE RETURNS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON760">06WELLINGTON760</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06WELLINGTON760.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MORE ON NEW ZEALAND'S UNIFIL CONTRIBUTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON761">06WELLINGTON761</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06WELLINGTON761.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MORE ON NEW ZEALAND'S UNIFIL CONTRIBUTIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="17.5254" y1="-290.0000" 
+                  x2="101.8405" y2="-212.3773" class="btwns0"/>
+        
+            <line x1="109.1975" y1="-205.6042" 
+                  x2="79.3212" y2="-96.3537" class="btwns3"/>
+        
+            <line x1="76.6834" y1="-86.7079" 
+                  x2="-134.7212" y2="-97.8126" class="btwns10"/>
+        
+            <line x1="76.6834" y1="-86.7079" 
+                  x2="231.6781" y2="7.5297" class="btwns5"/>
+        
+            <line x1="-297.0233" y1="-171.4693" 
+                  x2="-153.7222" y2="-102.6655" class="btwns0"/>
+        
+            <line x1="-206.7841" y1="23.1663" 
+                  x2="-149.2571" y2="-89.4321" class="btwns10"/>
+        
+            <line x1="-206.7841" y1="23.1663" 
+                  x2="-209.6773" y2="156.5894" class="btwns9"/>
+        
+            <line x1="-129.7329" y1="290.0000" 
+                  x2="-204.4469" y2="174.9733" class="btwns0"/>
+        
+            <line x1="-18.1485" y1="204.0958" 
+                  x2="-200.0801" y2="168.5069" class="btwns0"/>
+        
+            <line x1="-339.7465" y1="238.9292" 
+                  x2="-218.6299" y2="171.4539" class="btwns0"/>
+        
+            <line x1="-209.8941" y1="166.5871" 
+                  x2="-380.5843" y2="105.5301" class="btwns0"/>
+        
+            <line x1="240.2227" y1="12.7249" 
+                  x2="380.1597" y2="-12.5891" class="btwns0"/>
+        
+            <line x1="240.2227" y1="12.7249" 
+                  x2="293.9607" y2="124.6201" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(17.5254 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(109.1975 -205.6042)" 
+                class="vertice degree2 btwns2 authority2 NEWDELHI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(76.6834 -86.7079)" 
+                class="vertice degree5 btwns9 authority4 SECSTATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-297.0233 -171.4693)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-206.7841 23.1663)" 
+                class="vertice degree2 btwns8 authority2 SEOUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-144.7074 -98.3372)" 
+                class="vertice degree5 btwns10 authority5 SEOUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-129.7329 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-18.1485 204.0958)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-339.7465 238.9292)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-209.8941 166.5871)" 
+                class="vertice degree10 btwns8 authority10 SEOUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 102.1620)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(240.2227 12.7249)" 
+                class="vertice degree5 btwns4 authority4 WELLINGTON">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -14.3691)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(298.2898 133.6344)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(17.5254 -290.0000)" 
+                id="06A:SECSTATE148157" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06A:SECSTATE148157
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(109.1975 -205.6042)" 
+                id="06NEWDELHI6423" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06NEWDELHI6423.html">06NEWDELHI6423</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LEBANON DEMARCHE: GOI FIRM ON PEACEKEEPING VERSUS PEACE ENFORCING IN LEBANON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(76.6834 -86.7079)" 
+                id="06SECSTATE148157" 
+                class="labels">
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06SECSTATE148157
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-297.0233 -171.4693)" 
+                id="06SEOUL3062" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06SEOUL3062
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-206.7841 23.1663)" 
+                id="06SEOUL3104" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3104.html">06SEOUL3104</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S SEP 6 MEETING WITH DEFENSE MINISTER YOON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-144.7074 -98.3372)" 
+                id="06SEOUL3109" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3109.html">06SEOUL3109</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>MAINTAINING THE MOMENTUM ON LEBANON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-129.7329 290.0000)" 
+                id="06SEOUL3132" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06SEOUL3132
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-18.1485 204.0958)" 
+                id="06SEOUL3222" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3222.html">06SEOUL3222</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OPCON TRANSFER ISSUE DOMINANT DURING OSD NORTHEAST ASIA DIRECTOR HILL'S VISIT TO SEOUL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-339.7465 238.9292)" 
+                id="06SEOUL3249" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3249.html">06SEOUL3249</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR VERSHBOW DISCUSSES OPCON WITH GNP PARLIAMENTARY VICE SPEAKER LEE SANG-DEUK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.8941 166.5871)" 
+                id="06SEOUL3286" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3286.html">06SEOUL3286</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SECURITY POLICY INITIATIVE (SPI) 10: OPCON AND MORE OPCON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 102.1620)" 
+                id="06SEOUL3311" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3311.html">06SEOUL3311</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEFENSE MINISTER YOON ON OPCON, JIKDO RANGE, AND BASE RETURNS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(240.2227 12.7249)" 
+                id="06WELLINGTON727" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06WELLINGTON727.html">06WELLINGTON727</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND'S UNIFIL CONTRIBUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -14.3691)" 
+                id="06WELLINGTON760" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06WELLINGTON760.html">06WELLINGTON760</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MORE ON NEW ZEALAND'S UNIFIL CONTRIBUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(298.2898 133.6344)" 
+                id="06WELLINGTON761" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06WELLINGTON761.html">06WELLINGTON761</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MORE ON NEW ZEALAND'S UNIFIL CONTRIBUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

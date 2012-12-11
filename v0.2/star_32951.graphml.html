@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE196015">06STATE196015</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/04/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BELMOPAN56">06BELMOPAN56</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BELMOPAN56.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TERRORIST FINANCE:  DOMESTIC USG DESIGNATIONS DELIVERED TO BELIZE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BANDARSERIBEGAWAN625">06BANDARSERIBEGAWAN625</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BANDARSERIBEGAWAN625.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06COTONOU1203">06COTONOU1203</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06COTONOU1203.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE: USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI- BORDER AREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRIDGETOWN2177">06BRIDGETOWN2177</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BRIDGETOWN2177.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON TERRORIST FINANCE:  DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN  THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KUALALUMPUR2263">06KUALALUMPUR2263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KUALALUMPUR2263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ACTION REQUEST: TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA3532">06VIENNA3532</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06VIENNA3532.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA - AUSTRIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DUBLIN1415">06DUBLIN1415</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06DUBLIN1415.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORISM FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06EFTOKABUL5893">06EFTOKABUL5893</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06EFTOKABUL5893.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE - DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PARAMARIBO794">06PARAMARIBO794</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06PARAMARIBO794.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ROME3386">06ROME3386</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06ROME3386.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TERRORISM FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07THEHAGUE87">07THEHAGUE87</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07THEHAGUE87.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/18/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TERRORIST FINANCE: DUTCH TO MONITOR DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="50.2158" 
+                  x2="-9.0556" y2="7.7248" class="btwns5"/>
+        
+            <line x1="390.0000" y1="46.4953" 
+                  x2="10.8306" y2="7.6358" class="btwns5"/>
+        
+            <line x1="114.4504" y1="287.5995" 
+                  x2="4.6300" y2="15.8876" class="btwns5"/>
+        
+            <line x1="-214.3172" y1="-238.7378" 
+                  x2="-5.7113" y2="-0.9016" class="btwns5"/>
+        
+            <line x1="-297.9602" y1="201.4363" 
+                  x2="-7.4944" y2="12.0774" class="btwns5"/>
+        
+            <line x1="-362.9045" y1="-114.8083" 
+                  x2="-8.6028" y2="3.4502" class="btwns5"/>
+        
+            <line x1="363.7855" y1="-118.3597" 
+                  x2="10.3378" y2="3.3602" class="btwns5"/>
+        
+            <line x1="-1.6909" y1="-290.0000" 
+                  x2="0.7960" y2="-3.3833" class="btwns5"/>
+        
+            <line x1="-108.6207" y1="290.0000" 
+                  x2="-2.7217" y2="15.9441" class="btwns5"/>
+        
+            <line x1="0.8827" y1="6.6163" 
+                  x2="205.4725" y2="-233.0378" class="btwns5"/>
+        
+            <line x1="0.8827" y1="6.6163" 
+                  x2="296.4205" y2="194.5732" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 50.2158)" 
+                class="vertice degree0 btwns0 authority0 BANDARSERIBEGAWAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 46.4953)" 
+                class="vertice degree0 btwns0 authority0 BELMOPAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(114.4504 287.5995)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-214.3172 -238.7378)" 
+                class="vertice degree0 btwns0 authority0 COTONOU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-297.9602 201.4363)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-362.9045 -114.8083)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(363.7855 -118.3597)" 
+                class="vertice degree0 btwns0 authority0 KUALALUMPUR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-1.6909 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARAMARIBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-108.6207 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(0.8827 6.6163)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(211.9653 -240.6433)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(304.8586 199.9396)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 50.2158)" 
+                id="06BANDARSERIBEGAWAN625" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BANDARSERIBEGAWAN625.html">06BANDARSERIBEGAWAN625</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 46.4953)" 
+                id="06BELMOPAN56" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BELMOPAN56.html">06BELMOPAN56</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE:  DOMESTIC USG DESIGNATIONS DELIVERED TO BELIZE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(114.4504 287.5995)" 
+                id="06BRIDGETOWN2177" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BRIDGETOWN2177.html">06BRIDGETOWN2177</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON TERRORIST FINANCE:  DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN  THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-214.3172 -238.7378)" 
+                id="06COTONOU1203" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06COTONOU1203.html">06COTONOU1203</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI- BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-297.9602 201.4363)" 
+                id="06DUBLIN1415" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06DUBLIN1415.html">06DUBLIN1415</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-362.9045 -114.8083)" 
+                id="06EFTOKABUL5893" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06EFTOKABUL5893.html">06EFTOKABUL5893</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE - DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(363.7855 -118.3597)" 
+                id="06KUALALUMPUR2263" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KUALALUMPUR2263.html">06KUALALUMPUR2263</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ACTION REQUEST: TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-1.6909 -290.0000)" 
+                id="06PARAMARIBO794" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06PARAMARIBO794.html">06PARAMARIBO794</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-108.6207 290.0000)" 
+                id="06ROME3386" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ROME3386.html">06ROME3386</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORISM FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(0.8827 6.6163)" 
+                id="06STATE196015" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE196015
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(211.9653 -240.6433)" 
+                id="06VIENNA3532" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06VIENNA3532.html">06VIENNA3532</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA - AUSTRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(304.8586 199.9396)" 
+                id="07THEHAGUE87" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07THEHAGUE87.html">07THEHAGUE87</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TERRORIST FINANCE: DUTCH TO MONITOR DOMESTIC USG DESIGNATION OF HIZBALLAH-RELATED INDIVIDUALS/ENTITIES IN THE TRI-BORDER AREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

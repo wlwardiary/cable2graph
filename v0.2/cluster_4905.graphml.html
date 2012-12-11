@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE278584">03STATE278584</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/02/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA6198">03ANKARA6198</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/10/03ANKARA6198.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/02/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MFA CAUCASUS OFFICIAL ON ARMENIA, GEORGIA, AZERBAIJAN:  PLANS, FEARS, AND HOPES.</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE286070">03STATE286070</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/07/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA6398">03ANKARA6398</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/10/03ANKARA6398.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/14/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY HITCHES ARMENIA POLICY TO NAGORNO-KARABAKH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ANKARA7419">03ANKARA7419</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/12/03ANKARA7419.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MFA CAUCASUS OFFICIAL ON THE THREAT OF SECESSION IN GEORGIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA317">04ANKARA317</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/01/04ANKARA317.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/19/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BREAKTHROUGHS BETWEEN TURKEY AND ARMENIA APPEAR UNLIKELY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA1036">04ANKARA1036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/02/04ANKARA1036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIAN FM JAPARIDZE'S FIRST VISIT TO TURKEY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA2457">04ANKARA2457</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/05/04ANKARA2457.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/04</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">AMBASSADOR'S APRIL 30 MEETING WITH FM ABDULLAH GUL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA2522">04ANKARA2522</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/05/04ANKARA2522.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY/ARMENIA:  STALEMATE STRANGLING GOODWILL MEASURES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ISTANBUL798">04ISTANBUL798</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/05/04ISTANBUL798.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/20/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKISH-ARMENIAN RAPPROCHEMENT: NO LIGHT AT THE END OF THE TUNNEL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ISTANBUL1960">05ISTANBUL1960</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ISTANBUL1960.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIAN ARCHBISHOP ON KATHOLIKOS VISIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN557">06YEREVAN557</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06YEREVAN557.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIAN KATHOLIKOS PLANS OUTREACH TO TURKEY, AZERBAIJAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-85.9210" y1="179.0142" 
+                  x2="-209.2656" y2="50.8668" class="btwns6"/>
+        
+            <line x1="-85.9210" y1="179.0142" 
+                  x2="83.5474" y2="231.6049" class="btwns0"/>
+        
+            <line x1="-85.9210" y1="179.0142" 
+                  x2="-135.8158" y2="281.0171" class="btwns0"/>
+        
+            <line x1="-216.2004" y1="43.6620" 
+                  x2="-340.4297" y2="-59.3181" class="btwns0"/>
+        
+            <line x1="-216.2004" y1="43.6620" 
+                  x2="-380.3491" y2="88.2130" class="btwns0"/>
+        
+            <line x1="-216.2004" y1="43.6620" 
+                  x2="-53.3551" y2="-38.7807" class="btwns10"/>
+        
+            <line x1="390.0000" y1="54.3707" 
+                  x2="314.7016" y2="-40.2704" class="btwns0"/>
+        
+            <line x1="308.4756" y1="-48.0958" 
+                  x2="146.4305" y2="-109.7934" class="btwns3"/>
+        
+            <line x1="-44.4333" y1="-43.2975" 
+                  x2="127.7556" y2="-109.7512" class="btwns9"/>
+        
+            <line x1="137.0849" y1="-113.3517" 
+                  x2="76.8480" y2="-227.6935" class="btwns3"/>
+        
+            <line x1="72.1871" y1="-236.5409" 
+                  x2="-69.6283" y2="-286.6674" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-85.9210 179.0142)" 
+                class="vertice degree6 btwns5 authority6 ANKARA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-216.2004 43.6620)" 
+                class="vertice degree10 btwns10 authority10 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(93.0981 234.5687)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-348.1285 -65.7000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 90.8323)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-140.2098 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 54.3707)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(308.4756 -48.0958)" 
+                class="vertice degree3 btwns2 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-44.4333 -43.2975)" 
+                class="vertice degree3 btwns8 authority3 ANKARA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(137.0849 -113.3517)" 
+                class="vertice degree6 btwns8 authority6 ISTANBUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(72.1871 -236.5409)" 
+                class="vertice degree3 btwns2 authority3 ISTANBUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-79.0566 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-85.9210 179.0142)" 
+                id="03ANKARA6198" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/02/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/10/03ANKARA6198.html">03ANKARA6198</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MFA CAUCASUS OFFICIAL ON ARMENIA, GEORGIA, AZERBAIJAN:  PLANS, FEARS, AND HOPES.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-216.2004 43.6620)" 
+                id="03ANKARA6398" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/14/03</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/10/03ANKARA6398.html">03ANKARA6398</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TURKEY HITCHES ARMENIA POLICY TO NAGORNO-KARABAKH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(93.0981 234.5687)" 
+                id="03ANKARA7419" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/03/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/12/03ANKARA7419.html">03ANKARA7419</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MFA CAUCASUS OFFICIAL ON THE THREAT OF SECESSION IN GEORGIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-348.1285 -65.7000)" 
+                id="03STATE278584" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/02/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03STATE278584
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 90.8323)" 
+                id="03STATE286070" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/07/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03STATE286070
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-140.2098 290.0000)" 
+                id="04ANKARA1036" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/02/04ANKARA1036.html">04ANKARA1036</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GEORGIAN FM JAPARIDZE'S FIRST VISIT TO TURKEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 54.3707)" 
+                id="04ANKARA2457" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/03/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04ANKARA2457.html">04ANKARA2457</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S APRIL 30 MEETING WITH FM ABDULLAH GUL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(308.4756 -48.0958)" 
+                id="04ANKARA2522" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04ANKARA2522.html">04ANKARA2522</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TURKEY/ARMENIA:  STALEMATE STRANGLING GOODWILL MEASURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-44.4333 -43.2975)" 
+                id="04ANKARA317" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/19/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/01/04ANKARA317.html">04ANKARA317</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>BREAKTHROUGHS BETWEEN TURKEY AND ARMENIA APPEAR UNLIKELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(137.0849 -113.3517)" 
+                id="04ISTANBUL798" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/20/04</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04ISTANBUL798.html">04ISTANBUL798</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TURKISH-ARMENIAN RAPPROCHEMENT: NO LIGHT AT THE END OF THE TUNNEL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(72.1871 -236.5409)" 
+                id="05ISTANBUL1960" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ISTANBUL1960.html">05ISTANBUL1960</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIAN ARCHBISHOP ON KATHOLIKOS VISIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-79.0566 -290.0000)" 
+                id="06YEREVAN557" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06YEREVAN557.html">06YEREVAN557</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARMENIAN KATHOLIKOS PLANS OUTREACH TO TURKEY, AZERBAIJAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

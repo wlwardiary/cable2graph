@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE8647">07STATE8647</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/24/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE10667">07STATE10667</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/27/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ANKARA180">07ANKARA180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07ANKARA180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE: TURKEY MAKES NEW FLANK ENTITLEMENT OFFER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE16790">07STATE16790</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/10/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS362">07ATHENS362</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ATHENS362.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE ENTITLEMENTS: GREEK COUNTER-PROPOSAL ON MOU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE26852">07STATE26852</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/04/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE28280">07STATE28280</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/06/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ANKARA514">07ANKARA514</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ANKARA514.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CFE FLANK ENTITLEMENTS: CROSS-GROUP STATIONING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS481">07ATHENS481</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ATHENS481.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE: GREEK UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07OTTAWA432">07OTTAWA432</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07OTTAWA432.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATO: CANADA SUPPORTS U.S. POSITION ON CROSS-GROUP STATIONING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BUCHAREST268">07BUCHAREST268</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BUCHAREST268.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE CROSS-GROUP STATIONING LANGUAGE: OPTION ONE BEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SOFIA372">07SOFIA372</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07SOFIA372.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BULGARIA ON CFE TRANSFERS - CURB YOUR ENTHUSIASM</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-236.1041" y1="290.0000" 
+                  x2="-83.8607" y2="189.1135" class="btwns2"/>
+        
+            <line x1="3.5955" y1="-279.9169" 
+                  x2="-135.9950" y2="-134.3614" class="btwns2"/>
+        
+            <line x1="321.0955" y1="143.4798" 
+                  x2="138.6460" y2="34.3352" class="btwns2"/>
+        
+            <line x1="321.0955" y1="143.4798" 
+                  x2="198.4265" y2="199.3049" class="btwns0"/>
+        
+            <line x1="130.0643" y1="29.2015" 
+                  x2="-67.5285" y2="177.5848" class="btwns5"/>
+        
+            <line x1="130.0643" y1="29.2015" 
+                  x2="186.1049" y2="193.9796" class="btwns2"/>
+        
+            <line x1="130.0643" y1="29.2015" 
+                  x2="249.7486" y2="-129.5971" class="btwns2"/>
+        
+            <line x1="130.0643" y1="29.2015" 
+                  x2="-134.2390" y2="-122.1741" class="btwns10"/>
+        
+            <line x1="130.0643" y1="29.2015" 
+                  x2="380.1929" y2="-20.6513" class="btwns2"/>
+        
+            <line x1="-224.9944" y1="-290.0000" 
+                  x2="-147.4172" y2="-136.0740" class="btwns2"/>
+        
+            <line x1="-341.9846" y1="-7.0568" 
+                  x2="-151.4792" y2="-121.9786" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-158.9657" 
+                  x2="-152.8347" y2="-128.4213" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-236.1041 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(3.5955 -279.9169)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(321.0955 143.4798)" 
+                class="vertice degree2 btwns0 authority2 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(130.0643 29.2015)" 
+                class="vertice degree10 btwns10 authority10 ATHENS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-224.9944 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-341.9846 -7.0568)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -158.9657)" 
+                class="vertice degree0 btwns0 authority0 SOFIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-75.5248 183.5896)" 
+                class="vertice degree2 btwns2 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(189.3247 203.4470)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(255.7674 -137.5829)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-142.9166 -127.1440)" 
+                class="vertice degree8 btwns7 authority7 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -22.6060)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-236.1041 290.0000)" 
+                id="07ANKARA180" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ANKARA180.html">07ANKARA180</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE: TURKEY MAKES NEW FLANK ENTITLEMENT OFFER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(3.5955 -279.9169)" 
+                id="07ANKARA514" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ANKARA514.html">07ANKARA514</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE FLANK ENTITLEMENTS: CROSS-GROUP STATIONING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(321.0955 143.4798)" 
+                id="07ATHENS362" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ATHENS362.html">07ATHENS362</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CFE ENTITLEMENTS: GREEK COUNTER-PROPOSAL ON MOU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(130.0643 29.2015)" 
+                id="07ATHENS481" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ATHENS481.html">07ATHENS481</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CFE: GREEK UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-224.9944 -290.0000)" 
+                id="07BUCHAREST268" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BUCHAREST268.html">07BUCHAREST268</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE CROSS-GROUP STATIONING LANGUAGE: OPTION ONE BEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-341.9846 -7.0568)" 
+                id="07OTTAWA432" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07OTTAWA432.html">07OTTAWA432</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NATO: CANADA SUPPORTS U.S. POSITION ON CROSS-GROUP STATIONING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -158.9657)" 
+                id="07SOFIA372" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07SOFIA372.html">07SOFIA372</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BULGARIA ON CFE TRANSFERS - CURB YOUR ENTHUSIASM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-75.5248 183.5896)" 
+                id="07STATE10667" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07STATE10667
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(189.3247 203.4470)" 
+                id="07STATE16790" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07STATE16790
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(255.7674 -137.5829)" 
+                id="07STATE26852" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE26852
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-142.9166 -127.1440)" 
+                id="07STATE28280" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    07STATE28280
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -22.6060)" 
+                id="07STATE8647" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE8647
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

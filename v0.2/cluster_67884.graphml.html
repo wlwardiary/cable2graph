@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1550">07SANAA1550</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/09/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1577">07SANAA1577</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/15/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANAA1586">07SANAA1586</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SANAA1586.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">YEMEN: GOVERNMENT INTIMIDATING JOURNALISTS TO CURB SAADA REPORTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1625">07SANAA1625</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/30/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1656">07SANAA1656</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/30/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANAA1693">07SANAA1693</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SANAA1693.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DETAINED PROTEST LEADER TRANSFERRED TO SANAA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1831">07SANAA1831</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/25/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1856">07SANAA1856</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/30/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SANAA1878">07SANAA1878</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANAA1910">07SANAA1910</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SANAA1910.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ROYG FORCES KILL SEVEN IN SOUTH YEMEN IN SEPERATE INCIDENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANAA2052">07SANAA2052</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07SANAA2052.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROYG TRIES NEW PRESS CONTROL TECHNIQUE -- BEGGING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANAA2168">07SANAA2168</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07SANAA2168.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRELIMINARY REPORTS:  ROYG FORCES OPEN FIRE ON A CROWD; ONE DEAD, TWO INJURED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANAA2169">07SANAA2169</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07SANAA2169.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DETERIORATING STANDARDS 40 YEARS AFTER SOUTH YEMEN INDEPENDENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANAA2171">07SANAA2171</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07SANAA2171.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRELIMINARY REPORTS:  ROYG FORCES OPEN FIRE ON A CROWD; ONE DEAD, TWO INJURED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANAA2180">07SANAA2180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07SANAA2180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMONSTRATIONS IN SOUTHERN YEMEN: BUSINESS AS USUAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-257.6958" y1="-290.0000" 
+                  x2="-153.6029" y2="-252.5243" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-3.1815" 
+                  x2="-330.4321" y2="92.1565" class="btwns0"/>
+        
+            <line x1="-325.1333" y1="100.6372" 
+                  x2="-204.1254" y2="168.9407" class="btwns3"/>
+        
+            <line x1="-146.8438" y1="290.0000" 
+                  x2="-191.5586" y2="183.0819" class="btwns0"/>
+        
+            <line x1="-60.0348" y1="-142.2501" 
+                  x2="-138.0078" y2="-241.2801" class="btwns3"/>
+        
+            <line x1="-60.0348" y1="-142.2501" 
+                  x2="46.3495" y2="-25.5896" class="btwns6"/>
+        
+            <line x1="-71.7429" y1="87.4558" 
+                  x2="-187.2193" y2="168.1292" class="btwns8"/>
+        
+            <line x1="-71.7429" y1="87.4558" 
+                  x2="45.4547" y2="-11.7401" class="btwns10"/>
+        
+            <line x1="173.7062" y1="-142.0606" 
+                  x2="170.6368" y2="-264.7450" class="btwns0"/>
+        
+            <line x1="173.7062" y1="-142.0606" 
+                  x2="60.0644" y2="-25.3648" class="btwns8"/>
+        
+            <line x1="173.7062" y1="-142.0606" 
+                  x2="307.6303" y2="-107.9332" class="btwns3"/>
+        
+            <line x1="200.7069" y1="238.0421" 
+                  x2="151.3639" y2="131.5754" class="btwns0"/>
+        
+            <line x1="147.1590" y1="122.5025" 
+                  x2="58.6457" y2="-9.8874" class="btwns3"/>
+        
+            <line x1="317.3206" y1="-105.4639" 
+                  x2="383.9962" y2="-16.6520" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-257.6958 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -3.1815)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-325.1333 100.6372)" 
+                class="vertice degree3 btwns1 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-146.8438 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-60.0348 -142.2501)" 
+                class="vertice degree3 btwns3 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-144.1940 -249.1370)" 
+                class="vertice degree3 btwns1 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-71.7429 87.4558)" 
+                class="vertice degree3 btwns5 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(173.7062 -142.0606)" 
+                class="vertice degree6 btwns4 authority6 SANAA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(200.7069 238.0421)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(147.1590 122.5025)" 
+                class="vertice degree3 btwns1 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-195.4170 173.8562)" 
+                class="vertice degree6 btwns4 authority6 SANAA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(170.3867 -274.7419)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(53.0877 -18.2006)" 
+                class="vertice degree10 btwns10 authority10 SANAA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(317.3206 -105.4639)" 
+                class="vertice degree3 btwns1 authority3 SANAA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -8.6549)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-257.6958 -290.0000)" 
+                id="07SANAA1550" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SANAA1550
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -3.1815)" 
+                id="07SANAA1577" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SANAA1577
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-325.1333 100.6372)" 
+                id="07SANAA1586" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SANAA1586.html">07SANAA1586</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>YEMEN: GOVERNMENT INTIMIDATING JOURNALISTS TO CURB SAADA REPORTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-146.8438 290.0000)" 
+                id="07SANAA1625" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SANAA1625
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-60.0348 -142.2501)" 
+                id="07SANAA1656" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07SANAA1656
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-144.1940 -249.1370)" 
+                id="07SANAA1693" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SANAA1693.html">07SANAA1693</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>DETAINED PROTEST LEADER TRANSFERRED TO SANAA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-71.7429 87.4558)" 
+                id="07SANAA1831" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07SANAA1831
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(173.7062 -142.0606)" 
+                id="07SANAA1856" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    07SANAA1856
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(200.7069 238.0421)" 
+                id="07SANAA1878" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SANAA1878
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(147.1590 122.5025)" 
+                id="07SANAA1910" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SANAA1910.html">07SANAA1910</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ROYG FORCES KILL SEVEN IN SOUTH YEMEN IN SEPERATE INCIDENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-195.4170 173.8562)" 
+                id="07SANAA2052" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07SANAA2052.html">07SANAA2052</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ROYG TRIES NEW PRESS CONTROL TECHNIQUE -- BEGGING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(170.3867 -274.7419)" 
+                id="07SANAA2168" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07SANAA2168.html">07SANAA2168</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRELIMINARY REPORTS:  ROYG FORCES OPEN FIRE ON A CROWD; ONE DEAD, TWO INJURED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(53.0877 -18.2006)" 
+                id="07SANAA2169" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07SANAA2169.html">07SANAA2169</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DETERIORATING STANDARDS 40 YEARS AFTER SOUTH YEMEN INDEPENDENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(317.3206 -105.4639)" 
+                id="07SANAA2171" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07SANAA2171.html">07SANAA2171</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PRELIMINARY REPORTS:  ROYG FORCES OPEN FIRE ON A CROWD; ONE DEAD, TWO INJURED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -8.6549)" 
+                id="07SANAA2180" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07SANAA2180.html">07SANAA2180</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMONSTRATIONS IN SOUTHERN YEMEN: BUSINESS AS USUAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

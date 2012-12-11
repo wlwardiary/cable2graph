@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BAGHDAD757">06BAGHDAD757</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/09/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD981">06BAGHDAD981</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06BAGHDAD981.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/25/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS DISCUSSES MILITIA DEATH SQUADS, RECENT MILITARY OPERATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1022">06BAGHDAD1022</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06BAGHDAD1022.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MCNS APPROVES PLAN TO ADDRESS MILITIA PROBLEM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1023">06BAGHDAD1023</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06BAGHDAD1023.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PM JAFARI SAYS INVESTIGATION INTO MARCH 26 BAGHDAD RAID NECESSARY TO REBUILD IRAQIS' TRUST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1055">06BAGHDAD1055</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1055.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/01/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">FALL-OUT FROM IRAQI SPECIAL FORCES RAID NEAR SADR CITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1137">06BAGHDAD1137</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1137.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SHIA INDEPENDENT MEMBERS DISCUSS GOVERNMENT FORMATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1141">06BAGHDAD1141</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1141.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS MEETS TO APPROVE MILITIA ACTION PLAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1169">06BAGHDAD1169</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1169.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS DISCUSSES ATTACK ON BURATHA MOSQUE AND SECURITY IN BAGHDAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1196">06BAGHDAD1196</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1196.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS TO REVIEW SECURITY PLANS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1247">06BAGHDAD1247</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1247.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">MCNS DISCUSSES BAGHDAD SECURITY, MILITIAS, EMERGENCY RESPONSE PLAN, POLITICAL INTELLIGENCE, FORMATION OF COUNTERTERRORISM BRIGADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1316">06BAGHDAD1316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06BAGHDAD1316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/23/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BAGHDAD PC CHAIRMAN PUSHES FOR PROJECTS AND POLITICAL SUPPORT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD1495">06BAGHDAD1495</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BAGHDAD1495.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MCNS: MILITIAS AND IRAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="225.6723" y1="-165.0069" 
+                  x2="232.7008" y2="-10.8024" class="btwns2"/>
+        
+            <line x1="225.6723" y1="-165.0069" 
+                  x2="346.8379" y2="-123.6222" class="btwns0"/>
+        
+            <line x1="-323.1188" y1="163.8461" 
+                  x2="-209.3844" y2="39.7526" class="btwns2"/>
+        
+            <line x1="-202.6278" y1="32.3806" 
+                  x2="-380.3376" y2="-15.0064" class="btwns2"/>
+        
+            <line x1="-202.6278" y1="32.3806" 
+                  x2="20.6414" y2="127.4343" class="btwns10"/>
+        
+            <line x1="-202.6278" y1="32.3806" 
+                  x2="-196.1995" y2="-140.1848" class="btwns5"/>
+        
+            <line x1="233.1561" y1="-0.8127" 
+                  x2="38.2265" y2="125.9013" class="btwns9"/>
+        
+            <line x1="233.1561" y1="-0.8127" 
+                  x2="381.4827" y2="90.4376" class="btwns2"/>
+        
+            <line x1="233.1561" y1="-0.8127" 
+                  x2="349.1269" y2="-113.4236" class="btwns2"/>
+        
+            <line x1="-22.1662" y1="290.0000" 
+                  x2="110.5522" y2="278.3808" class="btwns0"/>
+        
+            <line x1="-22.1662" y1="290.0000" 
+                  x2="26.7271" y2="140.8539" class="btwns2"/>
+        
+            <line x1="120.5141" y1="277.5086" 
+                  x2="35.1139" y2="139.8491" class="btwns2"/>
+        
+            <line x1="-195.8272" y1="-150.1779" 
+                  x2="-156.4259" y2="-280.4284" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(225.6723 -165.0069)" 
+                class="vertice degree3 btwns0 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-323.1188 163.8461)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-202.6278 32.3806)" 
+                class="vertice degree10 btwns8 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -17.5829)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(233.1561 -0.8127)" 
+                class="vertice degree10 btwns6 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-22.1662 290.0000)" 
+                class="vertice degree3 btwns0 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(120.5141 277.5086)" 
+                class="vertice degree3 btwns0 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.8422 131.3514)" 
+                class="vertice degree10 btwns10 authority10 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-195.8272 -150.1779)" 
+                class="vertice degree3 btwns2 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 95.6774)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-153.5305 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(356.3011 -120.3899)" 
+                class="vertice degree3 btwns0 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(225.6723 -165.0069)" 
+                id="06BAGHDAD1022" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD1022.html">06BAGHDAD1022</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MCNS APPROVES PLAN TO ADDRESS MILITIA PROBLEM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-323.1188 163.8461)" 
+                id="06BAGHDAD1023" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD1023.html">06BAGHDAD1023</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PM JAFARI SAYS INVESTIGATION INTO MARCH 26 BAGHDAD RAID NECESSARY TO REBUILD IRAQIS' TRUST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-202.6278 32.3806)" 
+                id="06BAGHDAD1055" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1055.html">06BAGHDAD1055</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FALL-OUT FROM IRAQI SPECIAL FORCES RAID NEAR SADR CITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -17.5829)" 
+                id="06BAGHDAD1137" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1137.html">06BAGHDAD1137</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SHIA INDEPENDENT MEMBERS DISCUSS GOVERNMENT FORMATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(233.1561 -0.8127)" 
+                id="06BAGHDAD1141" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1141.html">06BAGHDAD1141</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MCNS MEETS TO APPROVE MILITIA ACTION PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-22.1662 290.0000)" 
+                id="06BAGHDAD1169" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1169.html">06BAGHDAD1169</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MCNS DISCUSSES ATTACK ON BURATHA MOSQUE AND SECURITY IN BAGHDAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(120.5141 277.5086)" 
+                id="06BAGHDAD1196" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1196.html">06BAGHDAD1196</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MCNS TO REVIEW SECURITY PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(29.8422 131.3514)" 
+                id="06BAGHDAD1247" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1247.html">06BAGHDAD1247</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MCNS DISCUSSES BAGHDAD SECURITY, MILITIAS, EMERGENCY RESPONSE PLAN, POLITICAL INTELLIGENCE, FORMATION OF COUNTERTERRORISM BRIGADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-195.8272 -150.1779)" 
+                id="06BAGHDAD1316" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06BAGHDAD1316.html">06BAGHDAD1316</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>BAGHDAD PC CHAIRMAN PUSHES FOR PROJECTS AND POLITICAL SUPPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 95.6774)" 
+                id="06BAGHDAD1495" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BAGHDAD1495.html">06BAGHDAD1495</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MCNS: MILITIAS AND IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-153.5305 -290.0000)" 
+                id="06BAGHDAD757" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BAGHDAD757
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(356.3011 -120.3899)" 
+                id="06BAGHDAD981" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BAGHDAD981.html">06BAGHDAD981</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MCNS DISCUSSES MILITIA DEATH SQUADS, RECENT MILITARY OPERATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

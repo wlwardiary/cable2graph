@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08DHAKA1114">08DHAKA1114</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/25/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA120">09DHAKA120</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09DHAKA120.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PARLIAMENT VOTES FOR BANGLADESH WAR CRIMES TRIBUNAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA233">09DHAKA233</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09DHAKA233.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BANGLADESH: SOME UNREGULATED MADRASSAS OPEN TO GOVERNMENT OVERSIGHT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA235">09DHAKA235</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09DHAKA235.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EDUCATION MINISTER LOOKS TO CURRICULUM AND VOCATIONAL EDUCATION REFORM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA239">09DHAKA239</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09DHAKA239.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EDUCATION REFORM: FOR QAWMI MADRASAS TOO?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA345">09DHAKA345</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09DHAKA345.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOVT SAYS WAR CRIMES TRIAL PROCESS BEGINS APRIL 8. DOES WAR CRIMES LEGISLATION MEET INTERNATIONAL STANDARDS?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA394">09DHAKA394</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09DHAKA394.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BANGLADESH'S NEW ATTORNEY GENERAL OUTLINES AGENDA:  BDR MUTINY, WAR CRIMES, AND INTERNATIONAL COOPERATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA419">09DHAKA419</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09DHAKA419.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WHAT DO BANGLADESH'S DEOBANDI QAWMI MADRASAS WANT? (1 OF 3)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA431">09DHAKA431</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09DHAKA431.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/30/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE GOB SAYS IT IS SERIOUS ABOUT QAWMI MADRASA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA443">09DHAKA443</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09DHAKA443.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ISLAMIC PARTIES AND THE QAWMI MADRASA COMMUNITY (3 OF 3)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA474">09DHAKA474</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09DHAKA474.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTANI AND FRENCH ENVOYS CRITICIZE UN INVOLVEMENT IN BANGLADESH WAR CRIMES PROCESS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA475">09DHAKA475</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09DHAKA475.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BANGLADESH'S AHLE HADITH QAWMI MADRASAS: FEW AND SEPARATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DHAKA617">09DHAKA617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09DHAKA617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/17/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S BLAKE OUTLINES NEW AREAS OF COOPERATION FOR BANGLADESH FOREIGN MINISTER</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="199.7871" 
+                  x2="147.3666" y2="144.3325" class="btwns6"/>
+        
+            <line x1="-256.1142" y1="-163.1694" 
+                  x2="-380.9003" y2="-106.3042" class="btwns0"/>
+        
+            <line x1="-256.1142" y1="-163.1694" 
+                  x2="-165.0399" y2="-282.0615" class="btwns6"/>
+        
+            <line x1="-256.1142" y1="-163.1694" 
+                  x2="-342.6441" y2="-36.3479" class="btwns0"/>
+        
+            <line x1="-256.1142" y1="-163.1694" 
+                  x2="-110.2407" y2="-60.8705" class="btwns10"/>
+        
+            <line x1="116.6529" y1="290.0000" 
+                  x2="136.2144" y2="152.0054" class="btwns6"/>
+        
+            <line x1="-121.1068" y1="235.3167" 
+                  x2="128.2099" y2="145.4939" class="btwns6"/>
+        
+            <line x1="137.6180" y1="142.1044" 
+                  x2="215.0564" y2="23.2945" class="btwns6"/>
+        
+            <line x1="137.6180" y1="142.1044" 
+                  x2="93.9281" y2="28.6479" class="btwns6"/>
+        
+            <line x1="137.6180" y1="142.1044" 
+                  x2="145.6933" y2="-37.8061" class="btwns6"/>
+        
+            <line x1="-390.0000" y1="-102.1574" 
+                  x2="-353.1877" y2="-36.8004" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-102.1574" 
+                  x2="-111.9226" y2="-56.7407" class="btwns4"/>
+        
+            <line x1="220.5168" y1="14.9169" 
+                  x2="100.3288" y2="18.9782" class="btwns0"/>
+        
+            <line x1="220.5168" y1="14.9169" 
+                  x2="153.7867" y2="-41.3498" class="btwns0"/>
+        
+            <line x1="220.5168" y1="14.9169" 
+                  x2="328.1475" y2="-68.0071" class="btwns1"/>
+        
+            <line x1="220.5168" y1="14.9169" 
+                  x2="-92.2811" y2="-53.0068" class="btwns7"/>
+        
+            <line x1="90.3345" y1="19.3159" 
+                  x2="139.7480" y2="-40.1071" class="btwns0"/>
+        
+            <line x1="90.3345" y1="19.3159" 
+                  x2="326.7218" y2="-70.5566" class="btwns1"/>
+        
+            <line x1="90.3345" y1="19.3159" 
+                  x2="-92.7272" y2="-51.5201" class="btwns7"/>
+        
+            <line x1="146.1418" y1="-47.7961" 
+                  x2="326.1637" y2="-72.7379" class="btwns1"/>
+        
+            <line x1="146.1418" y1="-47.7961" 
+                  x2="-92.0577" y2="-54.8335" class="btwns7"/>
+        
+            <line x1="-348.2802" y1="-28.0874" 
+                  x2="-111.9936" y2="-54.0372" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 199.7871)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-256.1142 -163.1694)" 
+                class="vertice degree6 btwns3 authority5 DHAKA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(116.6529 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-121.1068 235.3167)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(137.6180 142.1044)" 
+                class="vertice degree10 btwns9 authority9 DHAKA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -102.1574)" 
+                class="vertice degree4 btwns0 authority3 DHAKA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-158.9588 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(220.5168 14.9169)" 
+                class="vertice degree8 btwns3 authority8 DHAKA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(90.3345 19.3159)" 
+                class="vertice degree8 btwns3 authority8 DHAKA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(146.1418 -47.7961)" 
+                class="vertice degree8 btwns3 authority8 DHAKA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-348.2802 -28.0874)" 
+                class="vertice degree4 btwns0 authority3 DHAKA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(336.0691 -74.1103)" 
+                class="vertice degree4 btwns0 authority4 DHAKA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-102.0534 -55.1288)" 
+                class="vertice degree10 btwns10 authority10 DHAKA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 199.7871)" 
+                id="08DHAKA1114" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08DHAKA1114
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-256.1142 -163.1694)" 
+                id="09DHAKA120" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09DHAKA120.html">09DHAKA120</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PARLIAMENT VOTES FOR BANGLADESH WAR CRIMES TRIBUNAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(116.6529 290.0000)" 
+                id="09DHAKA233" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09DHAKA233.html">09DHAKA233</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BANGLADESH: SOME UNREGULATED MADRASSAS OPEN TO GOVERNMENT OVERSIGHT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-121.1068 235.3167)" 
+                id="09DHAKA235" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09DHAKA235.html">09DHAKA235</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EDUCATION MINISTER LOOKS TO CURRICULUM AND VOCATIONAL EDUCATION REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(137.6180 142.1044)" 
+                id="09DHAKA239" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09DHAKA239.html">09DHAKA239</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>EDUCATION REFORM: FOR QAWMI MADRASAS TOO?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -102.1574)" 
+                id="09DHAKA345" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>04/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09DHAKA345.html">09DHAKA345</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>GOVT SAYS WAR CRIMES TRIAL PROCESS BEGINS APRIL 8. DOES WAR CRIMES LEGISLATION MEET INTERNATIONAL STANDARDS?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-158.9588 -290.0000)" 
+                id="09DHAKA394" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09DHAKA394.html">09DHAKA394</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BANGLADESH'S NEW ATTORNEY GENERAL OUTLINES AGENDA:  BDR MUTINY, WAR CRIMES, AND INTERNATIONAL COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(220.5168 14.9169)" 
+                id="09DHAKA419" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>04/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09DHAKA419.html">09DHAKA419</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>WHAT DO BANGLADESH'S DEOBANDI QAWMI MADRASAS WANT? (1 OF 3)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(90.3345 19.3159)" 
+                id="09DHAKA431" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>04/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09DHAKA431.html">09DHAKA431</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>THE GOB SAYS IT IS SERIOUS ABOUT QAWMI MADRASA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.1418 -47.7961)" 
+                id="09DHAKA443" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>05/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09DHAKA443.html">09DHAKA443</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>ISLAMIC PARTIES AND THE QAWMI MADRASA COMMUNITY (3 OF 3)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-348.2802 -28.0874)" 
+                id="09DHAKA474" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09DHAKA474.html">09DHAKA474</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PAKISTANI AND FRENCH ENVOYS CRITICIZE UN INVOLVEMENT IN BANGLADESH WAR CRIMES PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(336.0691 -74.1103)" 
+                id="09DHAKA475" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09DHAKA475.html">09DHAKA475</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>BANGLADESH'S AHLE HADITH QAWMI MADRASAS: FEW AND SEPARATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-102.0534 -55.1288)" 
+                id="09DHAKA617" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09DHAKA617.html">09DHAKA617</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>A/S BLAKE OUTLINES NEW AREAS OF COOPERATION FOR BANGLADESH FOREIGN MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

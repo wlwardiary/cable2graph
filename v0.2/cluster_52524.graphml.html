@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI1023">07TAIPEI1023</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TAIPEI1023.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRANK HSIEH WINS DPP PRESIDENTIAL PRIMARY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI1040">07TAIPEI1040</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TAIPEI1040.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FACTION SUPPORTING PREMIER SU LOSES OUT IN DPP LEGISLATIVE PRIMARY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI1066">07TAIPEI1066</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07TAIPEI1066.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEGISLATORS FACE SHAKE-OUT AS REFORMS KICK-IN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI1066">07AITTAIPEI1066</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/12/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI2511">07TAIPEI2511</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07TAIPEI2511.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANDIDATES COMPETE TO SURVIVE UNDER NEW LEGISLATIVE ELECTION SYSTEM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI2517">07TAIPEI2517</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07TAIPEI2517.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BATTLE FOR LEGISLATIVE SEATS HEATS UP AS REGISTRATION PERIOD CLOSES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI2511">07AITTAIPEI2511</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI2517">07AITTAIPEI2517</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI40">08TAIPEI40</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08TAIPEI40.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SMALL PARTIES STRUGGLE TO SURVIVE UNDER TAIWAN'S NEW LEGISLATIVE ELECTION SYSTEM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI40">08AITTAIPEI40</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/10/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI43">08AITTAIPEI43</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/10/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI43">08TAIPEI43</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08TAIPEI43.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/11/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DPP HOPING TO MINIMIZE EXPECTED SETBACK IN JANUARY 12 LEGISLATIVE ELECTIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-66.9347" 
+                  x2="187.3439" y2="-69.1303" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-66.9347" 
+                  x2="273.2306" y2="-138.3333" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-66.9347" 
+                  x2="-2.2376" y2="-130.0393" class="btwns2"/>
+        
+            <line x1="98.2549" y1="-224.4984" 
+                  x2="172.8055" y2="-78.1491" class="btwns0"/>
+        
+            <line x1="98.2549" y1="-224.4984" 
+                  x2="255.7062" y2="-147.9235" class="btwns0"/>
+        
+            <line x1="98.2549" y1="-224.4984" 
+                  x2="-4.4591" y2="-138.0663" class="btwns2"/>
+        
+            <line x1="274.5072" y1="-279.5737" 
+                  x2="265.4182" y2="-153.5240" class="btwns1"/>
+        
+            <line x1="274.5072" y1="-279.5737" 
+                  x2="-3.2246" y2="-136.2145" class="btwns2"/>
+        
+            <line x1="-79.7197" y1="290.0000" 
+                  x2="106.1142" y2="212.2382" class="btwns5"/>
+        
+            <line x1="115.3391" y1="208.3780" 
+                  x2="136.7865" y2="45.8150" class="btwns10"/>
+        
+            <line x1="138.0945" y1="35.9009" 
+                  x2="173.8471" y2="-59.8701" class="btwns1"/>
+        
+            <line x1="138.0945" y1="35.9009" 
+                  x2="258.9342" y2="-135.3788" class="btwns2"/>
+        
+            <line x1="138.0945" y1="35.9009" 
+                  x2="-5.4350" y2="-124.1822" class="btwns7"/>
+        
+            <line x1="177.3445" y1="-69.2386" 
+                  x2="257.0822" y2="-137.0704" class="btwns0"/>
+        
+            <line x1="177.3445" y1="-69.2386" 
+                  x2="-2.6124" y2="-128.4999" class="btwns1"/>
+        
+            <line x1="264.6990" y1="-143.5499" 
+                  x2="-2.1199" y2="-132.0580" class="btwns1"/>
+        
+            <line x1="-321.8316" y1="-10.1439" 
+                  x2="-21.4201" y2="-127.9762" class="btwns5"/>
+        
+            <line x1="-237.2358" y1="-290.0000" 
+                  x2="-20.2895" y2="-137.3815" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="-152.7433" 
+                  x2="-22.0950" y2="-132.1856" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -66.9347)" 
+                class="vertice degree2 btwns0 authority2 AITTAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(98.2549 -224.4984)" 
+                class="vertice degree2 btwns0 authority2 AITTAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(274.5072 -279.5737)" 
+                class="vertice degree1 btwns0 authority1 AITTAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-79.7197 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(115.3391 208.3780)" 
+                class="vertice degree1 btwns3 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(138.0945 35.9009)" 
+                class="vertice degree3 btwns5 authority3 TAIPEI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(177.3445 -69.2386)" 
+                class="vertice degree5 btwns0 authority5 TAIPEI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(264.6990 -143.5499)" 
+                class="vertice degree6 btwns1 authority6 TAIPEI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-321.8316 -10.1439)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-237.2358 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -152.7433)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-12.1106 -131.6277)" 
+                class="vertice degree10 btwns10 authority9 TAIPEI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -66.9347)" 
+                id="07AITTAIPEI1066" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07AITTAIPEI1066
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(98.2549 -224.4984)" 
+                id="07AITTAIPEI2511" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07AITTAIPEI2511
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(274.5072 -279.5737)" 
+                id="07AITTAIPEI2517" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07AITTAIPEI2517
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-79.7197 290.0000)" 
+                id="07TAIPEI1023" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TAIPEI1023.html">07TAIPEI1023</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRANK HSIEH WINS DPP PRESIDENTIAL PRIMARY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(115.3391 208.3780)" 
+                id="07TAIPEI1040" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TAIPEI1040.html">07TAIPEI1040</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>FACTION SUPPORTING PREMIER SU LOSES OUT IN DPP LEGISLATIVE PRIMARY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(138.0945 35.9009)" 
+                id="07TAIPEI1066" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07TAIPEI1066.html">07TAIPEI1066</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LEGISLATORS FACE SHAKE-OUT AS REFORMS KICK-IN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(177.3445 -69.2386)" 
+                id="07TAIPEI2511" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07TAIPEI2511.html">07TAIPEI2511</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CANDIDATES COMPETE TO SURVIVE UNDER NEW LEGISLATIVE ELECTION SYSTEM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(264.6990 -143.5499)" 
+                id="07TAIPEI2517" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07TAIPEI2517.html">07TAIPEI2517</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BATTLE FOR LEGISLATIVE SEATS HEATS UP AS REGISTRATION PERIOD CLOSES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-321.8316 -10.1439)" 
+                id="08AITTAIPEI40" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08AITTAIPEI40
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-237.2358 -290.0000)" 
+                id="08AITTAIPEI43" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08AITTAIPEI43
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -152.7433)" 
+                id="08TAIPEI40" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TAIPEI40.html">08TAIPEI40</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SMALL PARTIES STRUGGLE TO SURVIVE UNDER TAIWAN'S NEW LEGISLATIVE ELECTION SYSTEM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-12.1106 -131.6277)" 
+                id="08TAIPEI43" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TAIPEI43.html">08TAIPEI43</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DPP HOPING TO MINIMIZE EXPECTED SETBACK IN JANUARY 12 LEGISLATIVE ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

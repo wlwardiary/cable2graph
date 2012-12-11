@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN244">07BERLIN244</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BERLIN244.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/07/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JANUARY 23 MEETING OF G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN376">07BERLIN376</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BERLIN376.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">G-8 NONPROLIFERATION DIRECTORS GROUP MEETING, BERLIN, JANUARY 22, 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN535">07BERLIN535</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BERLIN535.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FEBRUARY 27-28 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN791">07BERLIN791</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BERLIN791.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MARCH 29 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN834">07BERLIN834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BERLIN834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SECOND G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MARCH 30, 2007</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN835">07BERLIN835</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BERLIN835.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SECOND G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MARCH 30, 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN845">07BERLIN845</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BERLIN845.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">APRIL 23 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP (GPWG) IN BERLIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07STATE60637">07STATE60637</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07STATE60637.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OUTREACH REQUEST ON U.S. PROPOSAL  TO EXPAND AND</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07STATE60916">07STATE60916</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07STATE60916.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: CANADA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07STATE60917">07STATE60917</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07STATE60917.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: CANADA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07STATE60918">07STATE60918</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07STATE60918.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND THE  G8 GLOBAL PARTNERSHIP: UK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07STATE60919">07STATE60919</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07STATE60919.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: JAPAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN964">07BERLIN964</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BERLIN964.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GERMAN REACTION USG PROPOSAL TO EXPAND AND EXTEND THE G-8 GLOBAL PARTNERSHIP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN965">07BERLIN965</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BERLIN965.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GERMAN REACTION USG PROPOSAL TO EXPAND AND EXTEND THE G-8 GLOBAL PARTNERSHIP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN1019">07BERLIN1019</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BERLIN1019.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THIRD G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MAY 14, 2007</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="63.1756" y1="176.7621" 
+                  x2="65.3972" y2="280.0023" class="btwns1"/>
+        
+            <line x1="63.1756" y1="176.7621" 
+                  x2="-136.2005" y2="85.6760" class="btwns2"/>
+        
+            <line x1="63.1756" y1="176.7621" 
+                  x2="94.1733" y2="97.4200" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="68.4092" 
+                  x2="-360.5240" y2="145.1197" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="68.4092" 
+                  x2="-155.2819" y2="80.9855" class="btwns2"/>
+        
+            <line x1="65.6123" y1="290.0000" 
+                  x2="-105.9181" y2="241.1284" class="btwns1"/>
+        
+            <line x1="-356.9372" y1="154.4543" 
+                  x2="-154.7506" y2="84.7786" class="btwns2"/>
+        
+            <line x1="-145.2962" y1="81.5205" 
+                  x2="87.8159" y2="87.8348" class="btwns2"/>
+        
+            <line x1="-145.2962" y1="81.5205" 
+                  x2="-117.3993" y2="228.5635" class="btwns3"/>
+        
+            <line x1="-145.2962" y1="81.5205" 
+                  x2="-137.7724" y2="-128.9065" class="btwns10"/>
+        
+            <line x1="-137.4151" y1="-138.9001" 
+                  x2="173.5784" y2="-172.5882" class="btwns6"/>
+        
+            <line x1="-137.4151" y1="-138.9001" 
+                  x2="-305.3599" y2="-242.9774" class="btwns2"/>
+        
+            <line x1="-137.4151" y1="-138.9001" 
+                  x2="-115.7356" y2="-280.1158" class="btwns2"/>
+        
+            <line x1="-137.4151" y1="-138.9001" 
+                  x2="11.0051" y2="-121.2734" class="btwns2"/>
+        
+            <line x1="-137.4151" y1="-138.9001" 
+                  x2="-379.1155" y2="-135.5132" class="btwns2"/>
+        
+            <line x1="308.4710" y1="-267.8859" 
+                  x2="191.5046" y2="-179.6859" class="btwns2"/>
+        
+            <line x1="390.0000" y1="-105.2865" 
+                  x2="193.0132" y2="-170.5215" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(63.1756 176.7621)" 
+                class="vertice degree4 btwns0 authority4 BERLIN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 68.4092)" 
+                class="vertice degree2 btwns0 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(65.6123 290.0000)" 
+                class="vertice degree2 btwns0 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-356.9372 154.4543)" 
+                class="vertice degree2 btwns0 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-145.2962 81.5205)" 
+                class="vertice degree10 btwns8 authority10 BERLIN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(97.8122 88.1056)" 
+                class="vertice degree2 btwns0 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-115.5354 238.3883)" 
+                class="vertice degree2 btwns0 authority2 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-137.4151 -138.9001)" 
+                class="vertice degree10 btwns10 authority9 BERLIN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(308.4710 -267.8859)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -105.2865)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(183.5202 -173.6652)" 
+                class="vertice degree4 btwns3 authority3 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-313.8600 -248.2450)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-114.2182 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(20.9353 -120.0941)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-389.1145 -135.3731)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(63.1756 176.7621)" 
+                id="07BERLIN1019" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BERLIN1019.html">07BERLIN1019</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>THIRD G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MAY 14, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 68.4092)" 
+                id="07BERLIN244" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BERLIN244.html">07BERLIN244</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JANUARY 23 MEETING OF G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(65.6123 290.0000)" 
+                id="07BERLIN376" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BERLIN376.html">07BERLIN376</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>G-8 NONPROLIFERATION DIRECTORS GROUP MEETING, BERLIN, JANUARY 22, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-356.9372 154.4543)" 
+                id="07BERLIN535" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BERLIN535.html">07BERLIN535</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>FEBRUARY 27-28 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-145.2962 81.5205)" 
+                id="07BERLIN791" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BERLIN791.html">07BERLIN791</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MARCH 29 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP IN BERLIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(97.8122 88.1056)" 
+                id="07BERLIN834" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BERLIN834.html">07BERLIN834</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SECOND G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MARCH 30, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-115.5354 238.3883)" 
+                id="07BERLIN835" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BERLIN835.html">07BERLIN835</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SECOND G-8 NONPROLIFERATION DIRECTORS' GROUP (NPDG) MEETING IN BERLIN, MARCH 30, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-137.4151 -138.9001)" 
+                id="07BERLIN845" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BERLIN845.html">07BERLIN845</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>APRIL 23 MEETING OF THE G-8 GLOBAL PARTNERSHIP WORKING GROUP (GPWG) IN BERLIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(308.4710 -267.8859)" 
+                id="07BERLIN964" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BERLIN964.html">07BERLIN964</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMAN REACTION USG PROPOSAL TO EXPAND AND EXTEND THE G-8 GLOBAL PARTNERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -105.2865)" 
+                id="07BERLIN965" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BERLIN965.html">07BERLIN965</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMAN REACTION USG PROPOSAL TO EXPAND AND EXTEND THE G-8 GLOBAL PARTNERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(183.5202 -173.6652)" 
+                id="07STATE60637" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07STATE60637.html">07STATE60637</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>OUTREACH REQUEST ON U.S. PROPOSAL  TO EXPAND AND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-313.8600 -248.2450)" 
+                id="07STATE60916" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07STATE60916.html">07STATE60916</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: CANADA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-114.2182 -290.0000)" 
+                id="07STATE60917" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07STATE60917.html">07STATE60917</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: CANADA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(20.9353 -120.0941)" 
+                id="07STATE60918" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07STATE60918.html">07STATE60918</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND THE  G8 GLOBAL PARTNERSHIP: UK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-389.1145 -135.3731)" 
+                id="07STATE60919" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07STATE60919.html">07STATE60919</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OUTREACH REQUEST ON U.S. PROPOSAL TO EXPAND AND EXTEND  THE G8 GLOBAL PARTNERSHIP: JAPAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

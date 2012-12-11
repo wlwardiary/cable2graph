@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2397">02HARARE2397</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2397.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/04/02</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Zimbabwe May Scrap Fuel Support</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#02HARARE2471">02HARARE2471</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/12/02</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#02HARARE2473">02HARARE2473</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/12/02</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#02HARARE2487">02HARARE2487</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/13/02</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#02HARARE2495">02HARARE2495</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/14/02</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2529">02HARARE2529</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2529.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/15/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLOFF AND UN OFFICER DETAINED, THREATENED BY WAR VETERANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2544">02HARARE2544</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2544.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/18/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">U.S. OIL FIRMS COULD GET SQUEEZED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2624">02HARARE2624</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2624.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PROPOSAL TO PRESS THE GOZ MORE EFFECTIVELY TO COOPERATE ON FOOD ASSISTANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2625">02HARARE2625</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2625.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/02</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IDPS--FEAR AND LOATHING IN ZIMBABWE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2628">02HARARE2628</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2628.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MFA OFFICIAL DISCUSSES GILMAN SHOOTING, MELFORT DETENTION, AND EXPROPRIATION OF AMCIT PROPERTY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#02HARARE2676">02HARARE2676</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/21/02</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2689">02HARARE2689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FURTHER DEVELOPMENT ON DETENTION OF US/UN STAFF IN MELFORT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2715">02HARARE2715</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/11/02HARARE2715.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/26/02</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOZ IDENTIFIES SHOOTER IN GILMAN CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2809">02HARARE2809</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/12/02HARARE2809.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/17/02</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Almost No Fuel</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HARARE2835">02HARARE2835</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/12/02HARARE2835.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/02</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Harare's Fuel Lines: It's Not Pretty</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03HARARE16">03HARARE16</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/01/03HARARE16.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/06/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Update on Expropriation of U.S. Assets</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-380.4046" y1="-171.8677" 
+                  x2="-226.3900" y2="-180.6758" class="btwns2"/>
+        
+            <line x1="263.9122" y1="190.3712" 
+                  x2="215.4527" y2="65.8066" class="btwns2"/>
+        
+            <line x1="390.0000" y1="96.1539" 
+                  x2="221.5881" y2="58.6601" class="btwns2"/>
+        
+            <line x1="83.8479" y1="123.8420" 
+                  x2="-44.1112" y2="71.7338" class="btwns1"/>
+        
+            <line x1="83.8479" y1="123.8420" 
+                  x2="202.9778" y2="61.1443" class="btwns0"/>
+        
+            <line x1="375.2782" y1="-26.5854" 
+                  x2="220.7418" y2="51.9562" class="btwns2"/>
+        
+            <line x1="-211.2481" y1="176.2396" 
+                  x2="-380.0112" y2="184.2198" class="btwns2"/>
+        
+            <line x1="-211.2481" y1="176.2396" 
+                  x2="-171.2901" y2="280.6604" class="btwns2"/>
+        
+            <line x1="-211.2481" y1="176.2396" 
+                  x2="-61.6195" y2="73.6183" class="btwns6"/>
+        
+            <line x1="-211.2481" y1="176.2396" 
+                  x2="-230.4413" y2="91.7861" class="btwns0"/>
+        
+            <line x1="-216.4063" y1="-181.2468" 
+                  x2="-91.6336" y2="-256.5142" class="btwns4"/>
+        
+            <line x1="-216.4063" y1="-181.2468" 
+                  x2="-154.3334" y2="-73.6999" class="btwns8"/>
+        
+            <line x1="-53.3727" y1="67.9623" 
+                  x2="-222.6881" y2="81.2523" class="btwns1"/>
+        
+            <line x1="-53.3727" y1="67.9623" 
+                  x2="201.8364" y2="56.9193" class="btwns9"/>
+        
+            <line x1="-53.3727" y1="67.9623" 
+                  x2="-143.4835" y2="-56.9294" class="btwns10"/>
+        
+            <line x1="232.6147" y1="-78.6765" 
+                  x2="213.3472" y2="46.6032" class="btwns2"/>
+        
+            <line x1="-83.0709" y1="-261.6795" 
+                  x2="59.9031" y2="-288.1777" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-380.4046 -171.8677)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(263.9122 190.3712)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 96.1539)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(83.8479 123.8420)" 
+                class="vertice degree2 btwns0 authority2 HARARE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(375.2782 -26.5854)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-211.2481 176.2396)" 
+                class="vertice degree6 btwns3 authority6 HARARE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-216.4063 -181.2468)" 
+                class="vertice degree4 btwns5 authority3 HARARE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 184.6921)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-167.7162 290.0000)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-53.3727 67.9623)" 
+                class="vertice degree8 btwns10 authority8 HARARE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(232.6147 -78.6765)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-232.6575 82.0348)" 
+                class="vertice degree2 btwns0 authority2 HARARE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(211.8271 56.4870)" 
+                class="vertice degree10 btwns6 authority10 HARARE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-83.0709 -261.6795)" 
+                class="vertice degree2 btwns1 authority1 HARARE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(69.7356 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-149.3346 -65.0389)" 
+                class="vertice degree2 btwns5 authority2 HARARE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-380.4046 -171.8677)" 
+                id="02HARARE2397" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/04/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2397.html">02HARARE2397</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Zimbabwe May Scrap Fuel Support</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(263.9122 190.3712)" 
+                id="02HARARE2471" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/12/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    02HARARE2471
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 96.1539)" 
+                id="02HARARE2473" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/12/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    02HARARE2473
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(83.8479 123.8420)" 
+                id="02HARARE2487" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/13/02</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    02HARARE2487
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(375.2782 -26.5854)" 
+                id="02HARARE2495" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/14/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    02HARARE2495
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-211.2481 176.2396)" 
+                id="02HARARE2529" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/15/02</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2529.html">02HARARE2529</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>POLOFF AND UN OFFICER DETAINED, THREATENED BY WAR VETERANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-216.4063 -181.2468)" 
+                id="02HARARE2544" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/18/02</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2544.html">02HARARE2544</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>U.S. OIL FIRMS COULD GET SQUEEZED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 184.6921)" 
+                id="02HARARE2624" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2624.html">02HARARE2624</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PROPOSAL TO PRESS THE GOZ MORE EFFECTIVELY TO COOPERATE ON FOOD ASSISTANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-167.7162 290.0000)" 
+                id="02HARARE2625" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2625.html">02HARARE2625</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IDPS--FEAR AND LOATHING IN ZIMBABWE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-53.3727 67.9623)" 
+                id="02HARARE2628" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>11/21/02</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2628.html">02HARARE2628</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>MFA OFFICIAL DISCUSSES GILMAN SHOOTING, MELFORT DETENTION, AND EXPROPRIATION OF AMCIT PROPERTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(232.6147 -78.6765)" 
+                id="02HARARE2676" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    02HARARE2676
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-232.6575 82.0348)" 
+                id="02HARARE2689" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/25/02</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2689.html">02HARARE2689</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>FURTHER DEVELOPMENT ON DETENTION OF US/UN STAFF IN MELFORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(211.8271 56.4870)" 
+                id="02HARARE2715" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/26/02</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/11/02HARARE2715.html">02HARARE2715</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GOZ IDENTIFIES SHOOTER IN GILMAN CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-83.0709 -261.6795)" 
+                id="02HARARE2809" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/17/02</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/12/02HARARE2809.html">02HARARE2809</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Almost No Fuel</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(69.7356 -290.0000)" 
+                id="02HARARE2835" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/19/02</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/12/02HARARE2835.html">02HARARE2835</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Harare's Fuel Lines: It's Not Pretty</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-149.3346 -65.0389)" 
+                id="03HARARE16" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/06/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/01/03HARARE16.html">03HARARE16</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Update on Expropriation of U.S. Assets</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

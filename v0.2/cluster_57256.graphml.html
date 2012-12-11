@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE57912">07STATE57912</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/30/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE59536">07STATE59536</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/03/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07LONDON1703">07LONDON1703</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07LONDON1703.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">HMG TO REVIEW CITES DOCUMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07WARSAW1072">07WARSAW1072</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07WARSAW1072.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CITES DEMARCHES DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MADRID853">07MADRID853</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07MADRID853.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SPAIN ON U.S. CITES COP 14 PRIORITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PHNOMPENH654">07PHNOMPENH654</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PHNOMPENH654.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CAMBODIAN RESPONSE TO CITES DEMARCHE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07COLOMBO689">07COLOMBO689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07COLOMBO689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SRI LANKA - NO RESPONSE TO US PROPOSALS ON SPECIES LISTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07HANOI869">07HANOI869</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07HANOI869.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VIETNAM'S PREPARATIONS FOR CITES COP 14</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINGSTON706">07KINGSTON706</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KINGSTON706.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAMAICA: PREPARING FOR CITES CONFERENCE OF PARTIES 14</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07RIGA339">07RIGA339</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07RIGA339.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LATVIAN RESPONSE TO CITES COP 14 PROPOSALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07OTTAWA891">07OTTAWA891</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07OTTAWA891.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CANADA: CITES COP 14 PREPARATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANTODOMINGO1128">07SANTODOMINGO1128</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07SANTODOMINGO1128.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CITES: AWAITING DOMINICAN RESPONSE FOR US PROPOSALS ON SPECIES LISTINGS -- LYNX, SAWFISH, CORAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07DARESSALAAM693">07DARESSALAAM693</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07DARESSALAAM693.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CITES DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DAKAR1051">07DAKAR1051</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07DAKAR1051.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CITES COP 14 PREPARATION: SENEGAL POSITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KUWAIT774">07KUWAIT774</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07KUWAIT774.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED:  CITES COP 14 DELIBERATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07NICOSIA422">07NICOSIA422</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07NICOSIA422.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CYPRUS: CITES COP 14 PREPARATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BUENOSAIRES963">07BUENOSAIRES963</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BUENOSAIRES963.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARGENTINA AND CITES COP 14</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRIDGETOWN622">07BRIDGETOWN622</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRIDGETOWN622.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON CITES COP 14 PREPARATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07WARSAW1178">07WARSAW1178</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07WARSAW1178.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POLAND - RESPONSE TO CITES DEMARCHES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-9.5946" 
+                  x2="-193.8762" y2="46.9711" class="btwns0"/>
+        
+            <line x1="-30.5019" y1="116.5665" 
+                  x2="-175.0965" y2="53.7280" class="btwns0"/>
+        
+            <line x1="-368.9840" y1="109.5856" 
+                  x2="-193.7810" y2="52.8243" class="btwns0"/>
+        
+            <line x1="-11.3455" y1="236.8200" 
+                  x2="-177.4800" y2="57.0857" class="btwns0"/>
+        
+            <line x1="-331.8373" y1="-106.7973" 
+                  x2="-191.1273" y2="42.4658" class="btwns0"/>
+        
+            <line x1="286.2290" y1="-284.8058" 
+                  x2="252.9536" y2="-115.2142" class="btwns0"/>
+        
+            <line x1="159.6583" y1="-290.0000" 
+                  x2="246.5922" y2="-114.3635" class="btwns0"/>
+        
+            <line x1="-113.8213" y1="290.0000" 
+                  x2="-181.4542" y2="59.3383" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-154.8259" 
+                  x2="260.4501" y2="-108.7521" class="btwns0"/>
+        
+            <line x1="-264.0250" y1="-192.3985" 
+                  x2="-187.3963" y2="40.2442" class="btwns0"/>
+        
+            <line x1="57.7403" y1="-35.0985" 
+                  x2="-174.8309" y2="46.4340" class="btwns10"/>
+        
+            <line x1="57.7403" y1="-35.0985" 
+                  x2="241.6306" y2="-101.9832" class="btwns9"/>
+        
+            <line x1="-100.0772" y1="-91.9630" 
+                  x2="-179.1601" y2="41.1451" class="btwns0"/>
+        
+            <line x1="-149.0290" y1="-204.1509" 
+                  x2="-182.8931" y2="39.8372" class="btwns0"/>
+        
+            <line x1="-317.9217" y1="217.8212" 
+                  x2="-190.4918" y2="57.5693" class="btwns0"/>
+        
+            <line x1="-219.0375" y1="269.8665" 
+                  x2="-185.8280" y2="59.6198" class="btwns0"/>
+        
+            <line x1="251.0282" y1="-105.4013" 
+                  x2="285.3308" y2="88.8124" class="btwns0"/>
+        
+            <line x1="251.0282" y1="-105.4013" 
+                  x2="376.8512" y2="7.4361" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -9.5946)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-30.5019 116.5665)" 
+                class="vertice degree0 btwns0 authority0 BUENOSAIRES">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-368.9840 109.5856)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-11.3455 236.8200)" 
+                class="vertice degree0 btwns0 authority0 DAKAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-331.8373 -106.7973)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(286.2290 -284.8058)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(159.6583 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 KINGSTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-113.8213 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KUWAIT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -154.8259)" 
+                class="vertice degree0 btwns0 authority0 LONDON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-264.0250 -192.3985)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(57.7403 -35.0985)" 
+                class="vertice degree0 btwns5 authority0 NICOSIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-100.0772 -91.9630)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-149.0290 -204.1509)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-317.9217 217.8212)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-219.0375 269.8665)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-184.2678 49.7423)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(251.0282 -105.4013)" 
+                class="vertice degree4 btwns5 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="24" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(287.0701 98.6600)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(384.2959 14.1125)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -9.5946)" 
+                id="07BRIDGETOWN622" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRIDGETOWN622.html">07BRIDGETOWN622</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON CITES COP 14 PREPARATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-30.5019 116.5665)" 
+                id="07BUENOSAIRES963" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BUENOSAIRES963.html">07BUENOSAIRES963</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARGENTINA AND CITES COP 14</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-368.9840 109.5856)" 
+                id="07COLOMBO689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07COLOMBO689.html">07COLOMBO689</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKA - NO RESPONSE TO US PROPOSALS ON SPECIES LISTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-11.3455 236.8200)" 
+                id="07DAKAR1051" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07DAKAR1051.html">07DAKAR1051</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CITES COP 14 PREPARATION: SENEGAL POSITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-331.8373 -106.7973)" 
+                id="07DARESSALAAM693" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07DARESSALAAM693.html">07DARESSALAAM693</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CITES DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(286.2290 -284.8058)" 
+                id="07HANOI869" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07HANOI869.html">07HANOI869</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VIETNAM'S PREPARATIONS FOR CITES COP 14</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(159.6583 -290.0000)" 
+                id="07KINGSTON706" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KINGSTON706.html">07KINGSTON706</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAMAICA: PREPARING FOR CITES CONFERENCE OF PARTIES 14</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-113.8213 290.0000)" 
+                id="07KUWAIT774" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07KUWAIT774.html">07KUWAIT774</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED:  CITES COP 14 DELIBERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -154.8259)" 
+                id="07LONDON1703" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07LONDON1703.html">07LONDON1703</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HMG TO REVIEW CITES DOCUMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-264.0250 -192.3985)" 
+                id="07MADRID853" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07MADRID853.html">07MADRID853</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN ON U.S. CITES COP 14 PRIORITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(57.7403 -35.0985)" 
+                id="07NICOSIA422" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07NICOSIA422.html">07NICOSIA422</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CYPRUS: CITES COP 14 PREPARATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-100.0772 -91.9630)" 
+                id="07OTTAWA891" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07OTTAWA891.html">07OTTAWA891</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CANADA: CITES COP 14 PREPARATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-149.0290 -204.1509)" 
+                id="07PHNOMPENH654" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PHNOMPENH654.html">07PHNOMPENH654</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CAMBODIAN RESPONSE TO CITES DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-317.9217 217.8212)" 
+                id="07RIGA339" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07RIGA339.html">07RIGA339</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATVIAN RESPONSE TO CITES COP 14 PROPOSALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-219.0375 269.8665)" 
+                id="07SANTODOMINGO1128" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07SANTODOMINGO1128.html">07SANTODOMINGO1128</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CITES: AWAITING DOMINICAN RESPONSE FOR US PROPOSALS ON SPECIES LISTINGS -- LYNX, SAWFISH, CORAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-184.2678 49.7423)" 
+                id="07STATE57912" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE57912
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(251.0282 -105.4013)" 
+                id="07STATE59536" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                
+                    07STATE59536
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(287.0701 98.6600)" 
+                id="07WARSAW1072" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07WARSAW1072.html">07WARSAW1072</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CITES DEMARCHES DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(384.2959 14.1125)" 
+                id="07WARSAW1178" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07WARSAW1178.html">07WARSAW1178</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND - RESPONSE TO CITES DEMARCHES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

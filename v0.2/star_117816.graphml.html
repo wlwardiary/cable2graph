@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10STATE17143">10STATE17143</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10STATE17143.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">REQUEST FOR POST TO IDENTIFY TELECOMMUNICATIONS POLICY OFFICERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10PORTMORESBY42">10PORTMORESBY42</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10PORTMORESBY42.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">REQUEST FOR POST TO IDENTIFY TELECOMMUNICATIONS POLICY OFFICERS - PORT MORESBY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10WINDHOEK164">10WINDHOEK164</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10WINDHOEK164.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Embassy Windhoek Contact for ICT Issues</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10ASHGABAT240">10ASHGABAT240</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10ASHGABAT240.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TURKMENISTAN: EMBASSY TELECOMMUNICATIONS POLICY OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10BAKU135">10BAKU135</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10BAKU135.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AZERBAIJAN: OUR TELECOMS OFFICER IS SELIM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10MASERU62">10MASERU62</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10MASERU62.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LESOTHO:  POST CONTACT ON ICT ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TALLINN80">10TALLINN80</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TALLINN80.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Embassy Tallinn's Telecommunications Policy Officer</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10BAMAKO114">10BAMAKO114</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10BAMAKO114.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MALI'S TELECOMMUNICATIONS POLICY OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10BRIDGETOWN196">10BRIDGETOWN196</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10BRIDGETOWN196.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TELECOMMUNICATIONS OFFICER FOR BARBADOS AND THE EASTERN CARIBBEAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10MONROVIA240">10MONROVIA240</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10MONROVIA240.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MONROVIA IDENTIFIES ICT POLICY OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10OSLO108">10OSLO108</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10OSLO108.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY OSLO'S TELECOMMUNICATIONS POLICY OFFICER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10MBABANE76">10MBABANE76</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10MBABANE76.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Swaziland: Telecommunications Policy Officer Designation</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TOKYO388">10TOKYO388</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TOKYO388.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Telecommunications Policy Officer - Japan</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10CHENNAI44">10CHENNAI44</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10CHENNAI44.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CHENNAI RESPONSE: TELECOMMUNICATIONS POLICY OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10GABORONE174">10GABORONE174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10GABORONE174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TELECOMMUNICATIONS POLICY OFFICER FOR BOTSWANA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10KYIV299">10KYIV299</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10KYIV299.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KYIV TELECOMMUNICATIONS POLICY OFFICERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10BELGRADE336">10BELGRADE336</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10BELGRADE336.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELGRADE DESIGNATION OF TELECOMMUNICATION POLICY OFFICER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10JERUSALEM354">10JERUSALEM354</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10JERUSALEM354.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CONGEN JERUSALEM ICT OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10LAPAZ370">10LAPAZ370</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10LAPAZ370.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BOLIVIA - Telcom Officer</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10RABAT171">10RABAT171</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10RABAT171.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY RABAT TELECOMMUNICATIONS POLICY OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10KABUL725">10KABUL725</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10KABUL725.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Afghanistan: Telecommunications Policy Officer</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10CAIRO263">10CAIRO263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10CAIRO263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Designation of Telecommunications Policy Officer</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-329.2501" y1="140.2789" 
+                  x2="-7.4012" y2="2.7210" class="btwns5"/>
+        
+            <line x1="-280.2208" y1="-207.3512" 
+                  x2="-6.2790" y2="-7.1103" class="btwns5"/>
+        
+            <line x1="-348.7531" y1="-101.8480" 
+                  x2="-7.8175" y2="-3.9685" class="btwns5"/>
+        
+            <line x1="-133.3886" y1="-149.8438" 
+                  x2="-4.9342" y2="-8.6070" class="btwns5"/>
+        
+            <line x1="-112.9235" y1="162.8374" 
+                  x2="-3.9366" y2="6.9859" class="btwns5"/>
+        
+            <line x1="9.5222" y1="-290.0000" 
+                  x2="2.0617" y2="-11.2055" class="btwns5"/>
+        
+            <line x1="390.0000" y1="31.8454" 
+                  x2="11.7581" y2="-0.3607" class="btwns5"/>
+        
+            <line x1="113.9178" y1="160.0816" 
+                  x2="7.5021" y2="7.0018" class="btwns5"/>
+        
+            <line x1="234.0078" y1="-1.9232" 
+                  x2="11.7942" y2="-1.2398" class="btwns5"/>
+        
+            <line x1="362.8944" y1="-94.4749" 
+                  x2="11.4765" y2="-3.7099" class="btwns5"/>
+        
+            <line x1="-139.3698" y1="-279.6706" 
+                  x2="-2.7274" y2="-10.1285" class="btwns5"/>
+        
+            <line x1="324.4813" y1="140.5745" 
+                  x2="10.9494" y2="2.8136" class="btwns5"/>
+        
+            <line x1="-233.9867" y1="16.2057" 
+                  x2="-8.1786" y2="-0.4725" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="19.3770" 
+                  x2="-8.1920" y2="-0.6844" class="btwns5"/>
+        
+            <line x1="80.9180" y1="289.5013" 
+                  x2="4.4204" y2="8.4399" class="btwns5"/>
+        
+            <line x1="167.1800" y1="-276.7963" 
+                  x2="6.9399" y2="-9.7836" class="btwns5"/>
+        
+            <line x1="106.9360" y1="-161.2994" 
+                  x2="7.2838" y2="-9.5676" class="btwns5"/>
+        
+            <line x1="-235.0272" y1="239.7515" 
+                  x2="-5.2153" y2="5.9230" class="btwns5"/>
+        
+            <line x1="1.7942" y1="-1.2091" 
+                  x2="277.7265" y2="-186.2227" class="btwns5"/>
+        
+            <line x1="1.7942" y1="-1.2091" 
+                  x2="-71.0790" y2="280.3191" class="btwns5"/>
+        
+            <line x1="1.7942" y1="-1.2091" 
+                  x2="231.5053" y2="232.0265" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-329.2501 140.2789)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-280.2208 -207.3512)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-348.7531 -101.8480)" 
+                class="vertice degree0 btwns0 authority0 BAMAKO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-133.3886 -149.8438)" 
+                class="vertice degree0 btwns0 authority0 BELGRADE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-112.9235 162.8374)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(9.5222 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.8454)" 
+                class="vertice degree0 btwns0 authority0 CHENNAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(113.9178 160.0816)" 
+                class="vertice degree0 btwns0 authority0 GABORONE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(234.0078 -1.9232)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(362.8944 -94.4749)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-139.3698 -279.6706)" 
+                class="vertice degree0 btwns0 authority0 KYIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(324.4813 140.5745)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-233.9867 16.2057)" 
+                class="vertice degree0 btwns0 authority0 MASERU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 19.3770)" 
+                class="vertice degree0 btwns0 authority0 MBABANE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(80.9180 289.5013)" 
+                class="vertice degree0 btwns0 authority0 MONROVIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(167.1800 -276.7963)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(106.9360 -161.2994)" 
+                class="vertice degree0 btwns0 authority0 PORTMORESBY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-235.0272 239.7515)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(1.7942 -1.2091)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(286.0323 -191.7917)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-73.5849 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(238.5224 239.1512)" 
+                class="vertice degree0 btwns0 authority0 WINDHOEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-329.2501 140.2789)" 
+                id="10ASHGABAT240" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10ASHGABAT240.html">10ASHGABAT240</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: EMBASSY TELECOMMUNICATIONS POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-280.2208 -207.3512)" 
+                id="10BAKU135" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10BAKU135.html">10BAKU135</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AZERBAIJAN: OUR TELECOMS OFFICER IS SELIM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-348.7531 -101.8480)" 
+                id="10BAMAKO114" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10BAMAKO114.html">10BAMAKO114</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MALI'S TELECOMMUNICATIONS POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-133.3886 -149.8438)" 
+                id="10BELGRADE336" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10BELGRADE336.html">10BELGRADE336</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGRADE DESIGNATION OF TELECOMMUNICATION POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.9235 162.8374)" 
+                id="10BRIDGETOWN196" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10BRIDGETOWN196.html">10BRIDGETOWN196</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TELECOMMUNICATIONS OFFICER FOR BARBADOS AND THE EASTERN CARIBBEAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(9.5222 -290.0000)" 
+                id="10CAIRO263" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10CAIRO263.html">10CAIRO263</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Designation of Telecommunications Policy Officer</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.8454)" 
+                id="10CHENNAI44" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10CHENNAI44.html">10CHENNAI44</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHENNAI RESPONSE: TELECOMMUNICATIONS POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(113.9178 160.0816)" 
+                id="10GABORONE174" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10GABORONE174.html">10GABORONE174</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TELECOMMUNICATIONS POLICY OFFICER FOR BOTSWANA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(234.0078 -1.9232)" 
+                id="10JERUSALEM354" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10JERUSALEM354.html">10JERUSALEM354</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CONGEN JERUSALEM ICT OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(362.8944 -94.4749)" 
+                id="10KABUL725" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10KABUL725.html">10KABUL725</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Afghanistan: Telecommunications Policy Officer</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-139.3698 -279.6706)" 
+                id="10KYIV299" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10KYIV299.html">10KYIV299</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KYIV TELECOMMUNICATIONS POLICY OFFICERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(324.4813 140.5745)" 
+                id="10LAPAZ370" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10LAPAZ370.html">10LAPAZ370</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOLIVIA - Telcom Officer</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-233.9867 16.2057)" 
+                id="10MASERU62" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10MASERU62.html">10MASERU62</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LESOTHO:  POST CONTACT ON ICT ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 19.3770)" 
+                id="10MBABANE76" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10MBABANE76.html">10MBABANE76</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Swaziland: Telecommunications Policy Officer Designation</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(80.9180 289.5013)" 
+                id="10MONROVIA240" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10MONROVIA240.html">10MONROVIA240</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MONROVIA IDENTIFIES ICT POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(167.1800 -276.7963)" 
+                id="10OSLO108" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10OSLO108.html">10OSLO108</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY OSLO'S TELECOMMUNICATIONS POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(106.9360 -161.2994)" 
+                id="10PORTMORESBY42" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10PORTMORESBY42.html">10PORTMORESBY42</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>REQUEST FOR POST TO IDENTIFY TELECOMMUNICATIONS POLICY OFFICERS - PORT MORESBY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-235.0272 239.7515)" 
+                id="10RABAT171" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10RABAT171.html">10RABAT171</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY RABAT TELECOMMUNICATIONS POLICY OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.7942 -1.2091)" 
+                id="10STATE17143" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/24/10</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10STATE17143.html">10STATE17143</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>REQUEST FOR POST TO IDENTIFY TELECOMMUNICATIONS POLICY OFFICERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(286.0323 -191.7917)" 
+                id="10TALLINN80" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TALLINN80.html">10TALLINN80</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Embassy Tallinn's Telecommunications Policy Officer</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-73.5849 290.0000)" 
+                id="10TOKYO388" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TOKYO388.html">10TOKYO388</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Telecommunications Policy Officer - Japan</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.5224 239.1512)" 
+                id="10WINDHOEK164" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10WINDHOEK164.html">10WINDHOEK164</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Embassy Windhoek Contact for ICT Issues</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

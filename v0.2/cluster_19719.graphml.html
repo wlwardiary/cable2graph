@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BUCHAREST2177">05BUCHAREST2177</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BUCHAREST2185">05BUCHAREST2185</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BUCHAREST2205">05BUCHAREST2205</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BUCHAREST2239">05BUCHAREST2239</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BUCHAREST2302">06BUCHAREST2302</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BUCHAREST79">06BUCHAREST79</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BUCHAREST310">06BUCHAREST310</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/25/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST409">06BUCHAREST409</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06BUCHAREST409.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROMANIA HOLDS REGIONAL MINISTERIAL ON AVIAN FLU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BUCHAREST523">06BUCHAREST523</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/26/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST811">06BUCHAREST811</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BUCHAREST811.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AVIAN INFLUENZA - OUTBREAK IN ROMANIAN COMMERCIAL POULTRY FARMS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST834">06BUCHAREST834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BUCHAREST834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AVIAN INFLUENZA EXPLODES ACROSS SEVEN ROMANIAN COUNTIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST843">06BUCHAREST843</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BUCHAREST843.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AVIAN INFLUENZA OUTBREAK UNFOLDS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST847">06BUCHAREST847</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BUCHAREST847.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AVIAN INFLUENZA SPREADS TO BUCHAREST, OTHER MAJOR CITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST869">06BUCHAREST869</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BUCHAREST869.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AVIAN INFLUENZA UPDATE IN BUCHAREST - CONFUSION AND RECRIMINATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST913">06BUCHAREST913</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BUCHAREST913.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MORE AVIAN INFLUENZA CASES DISCOVERED THROUGHOUT ROMANIA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="175.1680" y1="259.9749" 
+                  x2="-25.3483" y2="81.5625" class="btwns8"/>
+        
+            <line x1="335.8526" y1="172.6916" 
+                  x2="-23.1533" y2="77.4787" class="btwns8"/>
+        
+            <line x1="390.0000" y1="45.8934" 
+                  x2="-22.8426" y2="74.2304" class="btwns8"/>
+        
+            <line x1="-282.9038" y1="253.4287" 
+                  x2="-40.9583" y2="80.7250" class="btwns8"/>
+        
+            <line x1="-47.9832" y1="290.0000" 
+                  x2="-33.5224" y2="84.8904" class="btwns8"/>
+        
+            <line x1="104.7632" y1="-155.8394" 
+                  x2="284.4448" y2="-284.1875" class="btwns8"/>
+        
+            <line x1="104.7632" y1="-155.8394" 
+                  x2="-143.4342" y2="-103.1963" class="btwns2"/>
+        
+            <line x1="104.7632" y1="-155.8394" 
+                  x2="-42.9698" y2="-68.9433" class="btwns2"/>
+        
+            <line x1="104.7632" y1="-155.8394" 
+                  x2="-27.6980" y2="66.3260" class="btwns10"/>
+        
+            <line x1="87.9310" y1="-24.9988" 
+                  x2="-143.6804" y2="-98.1112" class="btwns1"/>
+        
+            <line x1="87.9310" y1="-24.9988" 
+                  x2="-41.9562" y2="-61.1893" class="btwns1"/>
+        
+            <line x1="87.9310" y1="-24.9988" 
+                  x2="-175.5824" y2="21.6797" class="btwns1"/>
+        
+            <line x1="87.9310" y1="-24.9988" 
+                  x2="-25.1147" y2="68.5402" class="btwns4"/>
+        
+            <line x1="-360.8856" y1="-113.6022" 
+                  x2="-163.1986" y2="-101.7213" class="btwns2"/>
+        
+            <line x1="-360.8856" y1="-113.6022" 
+                  x2="-41.4896" y2="69.9329" class="btwns5"/>
+        
+            <line x1="-153.2166" y1="-101.1214" 
+                  x2="-60.9785" y2="-67.3147" class="btwns0"/>
+        
+            <line x1="-153.2166" y1="-101.1214" 
+                  x2="-182.9251" y2="13.7425" class="btwns1"/>
+        
+            <line x1="-153.2166" y1="-101.1214" 
+                  x2="-38.4644" y2="66.6610" class="btwns3"/>
+        
+            <line x1="-153.2166" y1="-101.1214" 
+                  x2="-320.6355" y2="-7.7171" class="btwns1"/>
+        
+            <line x1="-51.5893" y1="-63.8734" 
+                  x2="-177.0533" y2="17.9608" class="btwns1"/>
+        
+            <line x1="-51.5893" y1="-63.8734" 
+                  x2="-34.1594" y2="65.0054" class="btwns4"/>
+        
+            <line x1="-51.5893" y1="-63.8734" 
+                  x2="-319.6012" y2="-4.9908" class="btwns1"/>
+        
+            <line x1="-185.4291" y1="23.4240" 
+                  x2="-42.2943" y2="71.7182" class="btwns4"/>
+        
+            <line x1="-185.4291" y1="23.4240" 
+                  x2="-319.5308" y2="-1.0496" class="btwns0"/>
+        
+            <line x1="-185.4291" y1="23.4240" 
+                  x2="-380.7590" y2="104.1977" class="btwns1"/>
+        
+            <line x1="-32.8192" y1="74.9152" 
+                  x2="-42.8192" y2="74.9152" class="btwns0"/>
+        
+            <line x1="-32.8192" y1="74.9152" 
+                  x2="-319.6953" y2="-0.3086" class="btwns4"/>
+        
+            <line x1="-32.8192" y1="74.9152" 
+                  x2="-380.0427" y2="107.0962" class="btwns5"/>
+        
+            <line x1="-329.3683" y1="-2.8450" 
+                  x2="-339.3683" y2="-2.8450" class="btwns0"/>
+        
+            <line x1="-329.3683" y1="-2.8450" 
+                  x2="-385.2017" y2="99.2454" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(175.1680 259.9749)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(335.8526 172.6916)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.8934)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-282.9038 253.4287)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-47.9832 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(104.7632 -155.8394)" 
+                class="vertice degree2 btwns2 authority2 BUCHAREST">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(292.5820 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(87.9310 -24.9988)" 
+                class="vertice degree2 btwns0 authority2 BUCHAREST">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-360.8856 -113.6022)" 
+                class="vertice degree0 btwns0 authority1 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-153.2166 -101.1214)" 
+                class="vertice degree4 btwns0 authority5 BUCHAREST">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-51.5893 -63.8734)" 
+                class="vertice degree3 btwns0 authority4 BUCHAREST">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-185.4291 23.4240)" 
+                class="vertice degree3 btwns0 authority4 BUCHAREST">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-32.8192 74.9152)" 
+                class="vertice degree10 btwns9 authority10 BUCHAREST">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-329.3683 -2.8450)" 
+                class="vertice degree4 btwns0 authority3 BUCHAREST">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.0191)" 
+                class="vertice degree1 btwns0 authority1 BUCHAREST">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(175.1680 259.9749)" 
+                id="05BUCHAREST2177" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BUCHAREST2177
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(335.8526 172.6916)" 
+                id="05BUCHAREST2185" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BUCHAREST2185
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.8934)" 
+                id="05BUCHAREST2205" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BUCHAREST2205
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-282.9038 253.4287)" 
+                id="05BUCHAREST2239" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BUCHAREST2239
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-47.9832 290.0000)" 
+                id="06BUCHAREST2302" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BUCHAREST2302
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(104.7632 -155.8394)" 
+                id="06BUCHAREST310" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BUCHAREST310
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(292.5820 -290.0000)" 
+                id="06BUCHAREST409" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BUCHAREST409.html">06BUCHAREST409</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA HOLDS REGIONAL MINISTERIAL ON AVIAN FLU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(87.9310 -24.9988)" 
+                id="06BUCHAREST523" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BUCHAREST523
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-360.8856 -113.6022)" 
+                id="06BUCHAREST79" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BUCHAREST79
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-153.2166 -101.1214)" 
+                id="06BUCHAREST811" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BUCHAREST811.html">06BUCHAREST811</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AVIAN INFLUENZA - OUTBREAK IN ROMANIAN COMMERCIAL POULTRY FARMS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-51.5893 -63.8734)" 
+                id="06BUCHAREST834" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BUCHAREST834.html">06BUCHAREST834</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AVIAN INFLUENZA EXPLODES ACROSS SEVEN ROMANIAN COUNTIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-185.4291 23.4240)" 
+                id="06BUCHAREST843" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BUCHAREST843.html">06BUCHAREST843</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AVIAN INFLUENZA OUTBREAK UNFOLDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-32.8192 74.9152)" 
+                id="06BUCHAREST847" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BUCHAREST847.html">06BUCHAREST847</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AVIAN INFLUENZA SPREADS TO BUCHAREST, OTHER MAJOR CITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-329.3683 -2.8450)" 
+                id="06BUCHAREST869" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BUCHAREST869.html">06BUCHAREST869</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AVIAN INFLUENZA UPDATE IN BUCHAREST - CONFUSION AND RECRIMINATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.0191)" 
+                id="06BUCHAREST913" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BUCHAREST913.html">06BUCHAREST913</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>MORE AVIAN INFLUENZA CASES DISCOVERED THROUGHOUT ROMANIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

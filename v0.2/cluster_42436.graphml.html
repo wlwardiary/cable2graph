@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE128831">07SECSTATE128831</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE133348">07SECSTATE133348</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MADRID1848">06MADRID1848</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/22/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MADRID2793">06MADRID2793</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/01/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07MADRID142">07MADRID142</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/27/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07MADRID1725">07MADRID1725</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/08/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MADRID1806">07MADRID1806</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07MADRID1806.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CONGEN BARCELONA ACTION ON ROSALINI CASE AND EMBASSY APPROACH TO MINISTRY OF CULTURE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MADRID1808">07MADRID1808</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07MADRID1808.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SPAIN COUNTRY CLEARANCE FOR S/CT AMBASSADOR DAILEY AND DELEGATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MADRID1848">07MADRID1848</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07MADRID1848.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SPAIN COUNTRY CLEARANCE FOR NSF: J SILVERTHORNE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MADRID1950">07MADRID1950</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07MADRID1950.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/09/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY ASKS MINISTRY OF INDUSTRY, TOURISM AND TRADE CHIEF OF STAFF ABOUT ROSALINI CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MADRID430">08MADRID430</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08MADRID430.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/16/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROSALINI CASE UPDATE - CRIMINAL CASE DROPPED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-55.0488" 
+                  x2="252.6200" y2="-141.9936" class="btwns2"/>
+        
+            <line x1="135.3874" y1="-4.2408" 
+                  x2="238.1183" y2="-139.3804" class="btwns0"/>
+        
+            <line x1="135.3874" y1="-4.2408" 
+                  x2="-39.3819" y2="-104.0137" class="btwns3"/>
+        
+            <line x1="101.7276" y1="-160.7528" 
+                  x2="234.2141" y2="-148.2787" class="btwns0"/>
+        
+            <line x1="101.7276" y1="-160.7528" 
+                  x2="-38.6151" y2="-112.2387" class="btwns3"/>
+        
+            <line x1="-158.7425" y1="-290.0000" 
+                  x2="-53.2825" y2="-117.5034" class="btwns2"/>
+        
+            <line x1="244.1700" y1="-147.3413" 
+                  x2="106.6070" y2="-275.2575" class="btwns0"/>
+        
+            <line x1="-70.2061" y1="124.5663" 
+                  x2="-49.0101" y2="-99.0162" class="btwns10"/>
+        
+            <line x1="-70.2061" y1="124.5663" 
+                  x2="-44.9978" y2="280.1288" class="btwns2"/>
+        
+            <line x1="-251.6538" y1="-76.2176" 
+                  x2="-57.9394" y2="-107.3831" class="btwns10"/>
+        
+            <line x1="-251.6538" y1="-76.2176" 
+                  x2="-380.9222" y2="-16.4893" class="btwns2"/>
+        
+            <line x1="-48.0663" y1="-108.9716" 
+                  x2="92.8018" y2="-274.4525" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -55.0488)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(135.3874 -4.2408)" 
+                class="vertice degree2 btwns1 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(101.7276 -160.7528)" 
+                class="vertice degree2 btwns1 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-158.7425 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(244.1700 -147.3413)" 
+                class="vertice degree6 btwns3 authority6 MADRID">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-70.2061 124.5663)" 
+                class="vertice degree2 btwns2 authority1 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-251.6538 -76.2176)" 
+                class="vertice degree2 btwns2 authority1 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-48.0663 -108.9716)" 
+                class="vertice degree10 btwns10 authority10 MADRID">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-43.3982 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SECSTATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -12.2949)" 
+                class="vertice degree0 btwns0 authority0 SECSTATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(99.2839 -282.0671)" 
+                class="vertice degree2 btwns1 authority2 MADRID">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -55.0488)" 
+                id="06MADRID1848" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MADRID1848
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(135.3874 -4.2408)" 
+                id="06MADRID2793" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06MADRID2793
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(101.7276 -160.7528)" 
+                id="07MADRID142" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    07MADRID142
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-158.7425 -290.0000)" 
+                id="07MADRID1725" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07MADRID1725
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(244.1700 -147.3413)" 
+                id="07MADRID1806" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07MADRID1806.html">07MADRID1806</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>CONGEN BARCELONA ACTION ON ROSALINI CASE AND EMBASSY APPROACH TO MINISTRY OF CULTURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-70.2061 124.5663)" 
+                id="07MADRID1808" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07MADRID1808.html">07MADRID1808</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SPAIN COUNTRY CLEARANCE FOR S/CT AMBASSADOR DAILEY AND DELEGATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.6538 -76.2176)" 
+                id="07MADRID1848" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07MADRID1848.html">07MADRID1848</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SPAIN COUNTRY CLEARANCE FOR NSF: J SILVERTHORNE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-48.0663 -108.9716)" 
+                id="07MADRID1950" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07MADRID1950.html">07MADRID1950</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>EMBASSY ASKS MINISTRY OF INDUSTRY, TOURISM AND TRADE CHIEF OF STAFF ABOUT ROSALINI CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-43.3982 290.0000)" 
+                id="07SECSTATE128831" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SECSTATE128831
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -12.2949)" 
+                id="07SECSTATE133348" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SECSTATE133348
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(99.2839 -282.0671)" 
+                id="08MADRID430" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08MADRID430.html">08MADRID430</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ROSALINI CASE UPDATE - CRIMINAL CASE DROPPED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

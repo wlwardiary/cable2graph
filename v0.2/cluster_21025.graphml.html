@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05DOHA324">05DOHA324</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05DOHA337">05DOHA337</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05DOHA561">05DOHA561</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05DOHA203">05DOHA203</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/23/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA910">05DOHA910</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05DOHA910.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOVERNMENT OF QATAR AGREES TO LEASE PROPERTY FOR CONSTRUCTION OF CHURCHES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1226">05DOHA1226</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05DOHA1226.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/04/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DIALOGUE OF RELIGIONS CONFERENCE: AMIR WELCOMES PARTICIPATION OF JEWS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1657">05DOHA1657</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05DOHA1657.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">COMBATING EXTREMISM: QATAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05DOHA1856">05DOHA1856</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05DOHA1856.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RELIGIOUS FREEDOM: THE DISCUSSION THAT DID NOT TAKE PLACE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DOHA670">06DOHA670</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06DOHA670.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FOURTH INTERFAITH DIALOGUE: AN "ACADEMIC" EXERCISE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ASMARA316">07ASMARA316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ASMARA316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALI MPS IN ERITREA DISCUSS VIEWS AND FUTURE PLANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ADDISABABA953">07ADDISABABA953</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ADDISABABA953.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA: HAWIYE CLAN MANEUVERS FOR ASCENDANCY WITHIN TFG</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ASMARA375">07ASMARA375</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ASMARA375.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALI OPPOSITION IN ERITREA; HANGING OUT AND SPEAKING UP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE90990">07STATE90990</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/29/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DOHA709">07DOHA709</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07DOHA709.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIS MEET IN QATAR, REJECT RECONCILIATION CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ASMARA603">07ASMARA603</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ASMARA603.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIS IN ERITREA PLAN CONFERENCE AND EXPRESS DESIRE TO ENGAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ASMARA698">07ASMARA698</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ASMARA698.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALI PARLIMENTARIANS SAY ASMARA CONFERENCE IS ON</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="320.2795" y1="0.6602" 
+                  x2="169.5507" y2="79.5583" class="btwns4"/>
+        
+            <line x1="320.2795" y1="0.6602" 
+                  x2="384.1217" y2="-87.2016" class="btwns2"/>
+        
+            <line x1="160.6910" y1="84.1959" 
+                  x2="152.5839" y2="-21.1605" class="btwns2"/>
+        
+            <line x1="160.6910" y1="84.1959" 
+                  x2="-34.5126" y2="67.1767" class="btwns9"/>
+        
+            <line x1="160.6910" y1="84.1959" 
+                  x2="284.6609" y2="149.5222" class="btwns2"/>
+        
+            <line x1="160.6910" y1="84.1959" 
+                  x2="100.4130" y2="200.8021" class="btwns4"/>
+        
+            <line x1="1.1823" y1="290.0000" 
+                  x2="88.1964" y2="216.1559" class="btwns2"/>
+        
+            <line x1="-44.4748" y1="66.3081" 
+                  x2="-222.9419" y2="34.0739" class="btwns10"/>
+        
+            <line x1="-282.8656" y1="149.2932" 
+                  x2="-236.7180" y2="41.4896" class="btwns2"/>
+        
+            <line x1="134.6043" y1="-290.0000" 
+                  x2="5.4369" y2="-278.9508" class="btwns2"/>
+        
+            <line x1="-4.5267" y1="-278.0985" 
+                  x2="-124.2720" y2="-220.4613" class="btwns4"/>
+        
+            <line x1="-133.2825" y1="-216.1243" 
+                  x2="-227.0041" y2="-118.5978" class="btwns6"/>
+        
+            <line x1="-233.9331" y1="-111.3875" 
+                  x2="-243.9331" y2="-111.3875" class="btwns0"/>
+        
+            <line x1="-233.9331" y1="-111.3875" 
+                  x2="-344.7383" y2="-165.6853" class="btwns2"/>
+        
+            <line x1="-233.9331" y1="-111.3875" 
+                  x2="-232.8628" y2="22.2968" class="btwns8"/>
+        
+            <line x1="-232.7827" y1="32.2965" 
+                  x2="-242.7827" y2="32.2965" class="btwns0"/>
+        
+            <line x1="-232.7827" y1="32.2965" 
+                  x2="-380.0191" y2="41.4091" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(320.2795 0.6602)" 
+                class="vertice degree2 btwns2 authority2 DOHA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(160.6910 84.1959)" 
+                class="vertice degree8 btwns10 authority10 DOHA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(1.1823 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(151.8166 -31.1310)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-44.4748 66.3081)" 
+                class="vertice degree2 btwns8 authority2 DOHA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-282.8656 149.2932)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(293.5077 154.1840)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(95.8209 209.6854)" 
+                class="vertice degree2 btwns2 authority2 DOHA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -95.2915)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(134.6043 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-4.5267 -278.0985)" 
+                class="vertice degree2 btwns2 authority2 ASMARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-133.2825 -216.1243)" 
+                class="vertice degree2 btwns3 authority2 ASMARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-233.9331 -111.3875)" 
+                class="vertice degree8 btwns7 authority5 ASMARA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-353.7181 -170.0857)" 
+                class="vertice degree0 btwns0 authority0 ASMARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-232.7827 32.2965)" 
+                class="vertice degree10 btwns10 authority8 DOHA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 42.0269)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(320.2795 0.6602)" 
+                id="05DOHA1226" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05DOHA1226.html">05DOHA1226</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DIALOGUE OF RELIGIONS CONFERENCE: AMIR WELCOMES PARTICIPATION OF JEWS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(160.6910 84.1959)" 
+                id="05DOHA1657" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>09/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05DOHA1657.html">05DOHA1657</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>COMBATING EXTREMISM: QATAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.1823 290.0000)" 
+                id="05DOHA1856" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05DOHA1856.html">05DOHA1856</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RELIGIOUS FREEDOM: THE DISCUSSION THAT DID NOT TAKE PLACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(151.8166 -31.1310)" 
+                id="05DOHA203" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/23/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05DOHA203
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-44.4748 66.3081)" 
+                id="05DOHA324" 
+                class="labels">
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05DOHA324
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-282.8656 149.2932)" 
+                id="05DOHA337" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05DOHA337
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(293.5077 154.1840)" 
+                id="05DOHA561" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05DOHA561
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(95.8209 209.6854)" 
+                id="05DOHA910" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05DOHA910.html">05DOHA910</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOVERNMENT OF QATAR AGREES TO LEASE PROPERTY FOR CONSTRUCTION OF CHURCHES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -95.2915)" 
+                id="06DOHA670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06DOHA670.html">06DOHA670</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FOURTH INTERFAITH DIALOGUE: AN "ACADEMIC" EXERCISE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(134.6043 -290.0000)" 
+                id="07ADDISABABA953" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ADDISABABA953.html">07ADDISABABA953</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA: HAWIYE CLAN MANEUVERS FOR ASCENDANCY WITHIN TFG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.5267 -278.0985)" 
+                id="07ASMARA316" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ASMARA316.html">07ASMARA316</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOMALI MPS IN ERITREA DISCUSS VIEWS AND FUTURE PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-133.2825 -216.1243)" 
+                id="07ASMARA375" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ASMARA375.html">07ASMARA375</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOMALI OPPOSITION IN ERITREA; HANGING OUT AND SPEAKING UP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-233.9331 -111.3875)" 
+                id="07ASMARA603" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>07/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ASMARA603.html">07ASMARA603</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>SOMALIS IN ERITREA PLAN CONFERENCE AND EXPRESS DESIRE TO ENGAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-353.7181 -170.0857)" 
+                id="07ASMARA698" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ASMARA698.html">07ASMARA698</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALI PARLIMENTARIANS SAY ASMARA CONFERENCE IS ON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-232.7827 32.2965)" 
+                id="07DOHA709" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07DOHA709.html">07DOHA709</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SOMALIS MEET IN QATAR, REJECT RECONCILIATION CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 42.0269)" 
+                id="07STATE90990" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE90990
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

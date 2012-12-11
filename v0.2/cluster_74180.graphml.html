@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08SECSTATE77758">08SECSTATE77758</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08SECSTATE99746">08SECSTATE99746</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAKU701">08BAKU701</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08BAKU701.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DEMARCHE ON IAEA BOARD OF GOVERNORS MESA SEAT DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN2225">08AMMAN2225</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08AMMAN2225.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JORDAN ON IAEA BOG: FOCUSING ON ARAB GROUP PROCESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08RIYADH1153">08RIYADH1153</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08RIYADH1153.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/27/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">SAUDIS SUPPORT KAZAKHSTAN OVER SYRIA FOR IAEA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08CAIRO1606">08CAIRO1606</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/29/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN2262">08AMMAN2262</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08AMMAN2262.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IAEA BOG: JORDAN MFA BELIEVES THAT SYRIA HAS ARAB LEAGUE ENDORSEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAKU714">08BAKU714</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08BAKU714.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/31/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE ON IAEA BOARD OF GOVERNORS SEAT DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN2328">08AMMAN2328</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08AMMAN2328.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IAEA BOG: JORDAN CANNOT THROW ITS HAT INTO THE RING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TASHKENT1077">08TASHKENT1077</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TASHKENT1077.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">UZBEKISTAN: PREPARING FOR GC VOTE ON MESA GROUP SEAT ON IAEA BOARD OF GOVERNORS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08LILONGWE555">08LILONGWE555</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08LILONGWE555.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MALAWI: DEMARCHE DELIVERED ON MESA GROUP SEAT ON IAEA BOARD OF GOVERNORS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08LJUBLJANA436">08LJUBLJANA436</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08LJUBLJANA436.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/22/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVENIA NOTES SYRIA'S "BAD TRACK RECORD" PRIOR TO IAEA BOARD VOTE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08AMMAN2717">08AMMAN2717</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08AMMAN2717.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GC VOTE ON IAEA BOG MESA SEAT: DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08RIGA586">08RIGA586</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08RIGA586.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/23/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IAEA BOARD OF GOVERNORS: LATVIA UNDERSTANDS CONCERNS ABOUT IRAN AND SYRIA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-291.1269" y1="99.1602" 
+                  x2="-209.3942" y2="-23.4497" class="btwns1"/>
+        
+            <line x1="-291.1269" y1="99.1602" 
+                  x2="-140.0756" y2="150.0007" class="btwns0"/>
+        
+            <line x1="-203.8475" y1="-31.7704" 
+                  x2="-258.4914" y2="-186.3973" class="btwns2"/>
+        
+            <line x1="-203.8475" y1="-31.7704" 
+                  x2="-14.2302" y2="-120.1746" class="btwns10"/>
+        
+            <line x1="-203.8475" y1="-31.7704" 
+                  x2="-380.3801" y2="-81.8804" class="btwns2"/>
+        
+            <line x1="-203.8475" y1="-31.7704" 
+                  x2="-90.0820" y2="45.5150" class="btwns1"/>
+        
+            <line x1="-203.8475" y1="-31.7704" 
+                  x2="-134.2801" y2="143.8932" class="btwns5"/>
+        
+            <line x1="-5.1668" y1="-124.4002" 
+                  x2="201.6764" y2="-146.1971" class="btwns9"/>
+        
+            <line x1="37.5362" y1="247.3802" 
+                  x2="-71.0269" y2="286.6021" class="btwns0"/>
+        
+            <line x1="37.5362" y1="247.3802" 
+                  x2="-121.8737" y2="158.0780" class="btwns2"/>
+        
+            <line x1="-80.4319" y1="290.0000" 
+                  x2="-127.1553" y2="162.5794" class="btwns2"/>
+        
+            <line x1="292.0685" y1="6.8486" 
+                  x2="216.2493" y2="-138.3804" class="btwns2"/>
+        
+            <line x1="302.1027" y1="-260.3225" 
+                  x2="217.8691" y2="-155.0531" class="btwns2"/>
+        
+            <line x1="113.4025" y1="-290.0000" 
+                  x2="205.9531" y2="-155.4835" class="btwns2"/>
+        
+            <line x1="-81.8102" y1="51.1343" 
+                  x2="-126.2850" y2="144.1686" class="btwns0"/>
+        
+            <line x1="211.6214" y1="-147.2451" 
+                  x2="380.3517" y2="-101.2725" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-291.1269 99.1602)" 
+                class="vertice degree2 btwns0 authority2 AMMAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-203.8475 -31.7704)" 
+                class="vertice degree10 btwns10 authority10 AMMAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-261.8234 -195.8259)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-5.1668 -124.4002)" 
+                class="vertice degree2 btwns7 authority2 AMMAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(37.5362 247.3802)" 
+                class="vertice degree2 btwns0 authority2 BAKU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-80.4319 290.0000)" 
+                class="vertice degree2 btwns0 authority2 BAKU">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -84.6111)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(292.0685 6.8486)" 
+                class="vertice degree0 btwns0 authority0 LILONGWE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(302.1027 -260.3225)" 
+                class="vertice degree0 btwns0 authority0 LJUBLJANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(113.4025 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-81.8102 51.1343)" 
+                class="vertice degree2 btwns0 authority2 RIYADH">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-130.5980 153.1907)" 
+                class="vertice degree8 btwns4 authority8 SECSTATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(211.6214 -147.2451)" 
+                class="vertice degree8 btwns7 authority7 SECSTATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -98.6437)" 
+                class="vertice degree0 btwns0 authority0 TASHKENT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-291.1269 99.1602)" 
+                id="08AMMAN2225" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08AMMAN2225.html">08AMMAN2225</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JORDAN ON IAEA BOG: FOCUSING ON ARAB GROUP PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-203.8475 -31.7704)" 
+                id="08AMMAN2262" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08AMMAN2262.html">08AMMAN2262</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IAEA BOG: JORDAN MFA BELIEVES THAT SYRIA HAS ARAB LEAGUE ENDORSEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-261.8234 -195.8259)" 
+                id="08AMMAN2328" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08AMMAN2328.html">08AMMAN2328</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IAEA BOG: JORDAN CANNOT THROW ITS HAT INTO THE RING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-5.1668 -124.4002)" 
+                id="08AMMAN2717" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08AMMAN2717.html">08AMMAN2717</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GC VOTE ON IAEA BOG MESA SEAT: DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(37.5362 247.3802)" 
+                id="08BAKU701" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08BAKU701.html">08BAKU701</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON IAEA BOARD OF GOVERNORS MESA SEAT DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-80.4319 290.0000)" 
+                id="08BAKU714" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08BAKU714.html">08BAKU714</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE ON IAEA BOARD OF GOVERNORS SEAT DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -84.6111)" 
+                id="08CAIRO1606" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08CAIRO1606
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(292.0685 6.8486)" 
+                id="08LILONGWE555" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08LILONGWE555.html">08LILONGWE555</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MALAWI: DEMARCHE DELIVERED ON MESA GROUP SEAT ON IAEA BOARD OF GOVERNORS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(302.1027 -260.3225)" 
+                id="08LJUBLJANA436" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08LJUBLJANA436.html">08LJUBLJANA436</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVENIA NOTES SYRIA'S "BAD TRACK RECORD" PRIOR TO IAEA BOARD VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(113.4025 -290.0000)" 
+                id="08RIGA586" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08RIGA586.html">08RIGA586</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IAEA BOARD OF GOVERNORS: LATVIA UNDERSTANDS CONCERNS ABOUT IRAN AND SYRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-81.8102 51.1343)" 
+                id="08RIYADH1153" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08RIYADH1153.html">08RIYADH1153</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SAUDIS SUPPORT KAZAKHSTAN OVER SYRIA FOR IAEA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-130.5980 153.1907)" 
+                id="08SECSTATE77758" 
+                class="labels">
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    08SECSTATE77758
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(211.6214 -147.2451)" 
+                id="08SECSTATE99746" 
+                class="labels">
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    08SECSTATE99746
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -98.6437)" 
+                id="08TASHKENT1077" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TASHKENT1077.html">08TASHKENT1077</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UZBEKISTAN: PREPARING FOR GC VOTE ON MESA GROUP SEAT ON IAEA BOARD OF GOVERNORS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

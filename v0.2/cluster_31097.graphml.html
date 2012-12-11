@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE195763">06STATE195763</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/04/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL4193">06SEOUL4193</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06SEOUL4193.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ROKG TO SUPPORT HRC RESOLUTION ON SUDAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KIGALI1176">06KIGALI1176</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KIGALI1176.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOR DEMARCHED ON HRC SUDAN SPECIAL SESSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANSALVADOR2914">06SANSALVADOR2914</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06SANSALVADOR2914.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EL SALVADOR TO CO-SPONSOR FINNISH RESOLUTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM1922">06DARESSALAAM1922</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06DARESSALAAM1922.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UN HUMAN RIGHTS COUNCIL: TANZANIA SUPPORTS PEACE EFFORTS FOR DARFUR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06COLOMBO2045">06COLOMBO2045</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06COLOMBO2045.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SRI LANKA: PROBABLE "YES" ON SUDAN SPECIAL SESSION RESOLUTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06NASSAU1811">06NASSAU1811</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06NASSAU1811.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: UNHRC SPECIAL SESSION ON SUDAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAKU1806">06BAKU1806</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BAKU1806.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED ON UN HUMAN RIGHTS COUNCIL'S SPECIAL SESSION ON SUDAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MEXICO6861">06MEXICO6861</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06MEXICO6861.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED ON SPECIAL SESSION ON SUDAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06QUITO3006">06QUITO3006</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06QUITO3006.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/06</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">HUMAN RIGHTS COUNCIL: ECUADOR FAVORS EU SUDAN RESOLUTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06COLOMBO2054">06COLOMBO2054</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06COLOMBO2054.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HRC: SRI LANKA WILL NOT SUPPORT EXPERT MISSION TO SUDAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RABAT2255">06RABAT2255</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06RABAT2255.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UN HUMAN RIGHTS COUNCIL:  SPECIAL SESSION ON SUDAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06AMMAN8854">06AMMAN8854</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06GENEVA3143">06GENEVA3143</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06GENEVA3143.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JORDANIAN PERMREP ISSUES PRESS RELEASE ON DARFUR REMARKS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="119.5052" 
+                  x2="201.0635" y2="52.6328" class="btwns0"/>
+        
+            <line x1="-360.0483" y1="28.7793" 
+                  x2="-98.8107" y2="-87.9430" class="btwns0"/>
+        
+            <line x1="-72.1781" y1="140.8589" 
+                  x2="-95.3227" y2="280.1353" class="btwns0"/>
+        
+            <line x1="-72.1781" y1="140.8589" 
+                  x2="-88.9312" y2="-82.0505" class="btwns10"/>
+        
+            <line x1="128.6719" y1="-62.2276" 
+                  x2="-79.7724" y2="-90.6704" class="btwns0"/>
+        
+            <line x1="191.6365" y1="49.2962" 
+                  x2="-80.7447" y2="-87.5335" class="btwns10"/>
+        
+            <line x1="-193.1245" y1="50.8321" 
+                  x2="-95.5456" y2="-83.9229" class="btwns0"/>
+        
+            <line x1="218.6813" y1="-162.2382" 
+                  x2="-79.9302" y2="-94.2426" class="btwns0"/>
+        
+            <line x1="-55.3700" y1="-290.0000" 
+                  x2="-87.9730" y2="-101.8755" class="btwns0"/>
+        
+            <line x1="-219.6776" y1="-265.8901" 
+                  x2="-95.6687" y2="-100.0313" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-85.3282" 
+                  x2="-99.6781" y2="-91.7996" class="btwns0"/>
+        
+            <line x1="-347.5401" y1="-192.8892" 
+                  x2="-98.9935" y2="-95.6653" class="btwns0"/>
+        
+            <line x1="100.5803" y1="-249.3125" 
+                  x2="-81.9733" y2="-98.3941" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 119.5052)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-360.0483 28.7793)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-72.1781 140.8589)" 
+                class="vertice degree1 btwns1 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-96.9620 290.0000)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(128.6719 -62.2276)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(191.6365 49.2962)" 
+                class="vertice degree1 btwns1 authority0 GENEVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-193.1245 50.8321)" 
+                class="vertice degree0 btwns0 authority0 KIGALI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(218.6813 -162.2382)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-55.3700 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 NASSAU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-219.6776 -265.8901)" 
+                class="vertice degree0 btwns0 authority0 QUITO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -85.3282)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-347.5401 -192.8892)" 
+                class="vertice degree0 btwns0 authority0 SANSALVADOR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(100.5803 -249.3125)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-89.6806 -92.0224)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 119.5052)" 
+                id="06AMMAN8854" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06AMMAN8854
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-360.0483 28.7793)" 
+                id="06BAKU1806" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BAKU1806.html">06BAKU1806</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON UN HUMAN RIGHTS COUNCIL'S SPECIAL SESSION ON SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-72.1781 140.8589)" 
+                id="06COLOMBO2045" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06COLOMBO2045.html">06COLOMBO2045</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA: PROBABLE "YES" ON SUDAN SPECIAL SESSION RESOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-96.9620 290.0000)" 
+                id="06COLOMBO2054" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06COLOMBO2054.html">06COLOMBO2054</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HRC: SRI LANKA WILL NOT SUPPORT EXPERT MISSION TO SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(128.6719 -62.2276)" 
+                id="06DARESSALAAM1922" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06DARESSALAAM1922.html">06DARESSALAAM1922</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN HUMAN RIGHTS COUNCIL: TANZANIA SUPPORTS PEACE EFFORTS FOR DARFUR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(191.6365 49.2962)" 
+                id="06GENEVA3143" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06GENEVA3143.html">06GENEVA3143</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JORDANIAN PERMREP ISSUES PRESS RELEASE ON DARFUR REMARKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-193.1245 50.8321)" 
+                id="06KIGALI1176" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KIGALI1176.html">06KIGALI1176</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOR DEMARCHED ON HRC SUDAN SPECIAL SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(218.6813 -162.2382)" 
+                id="06MEXICO6861" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06MEXICO6861.html">06MEXICO6861</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON SPECIAL SESSION ON SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-55.3700 -290.0000)" 
+                id="06NASSAU1811" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06NASSAU1811.html">06NASSAU1811</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: UNHRC SPECIAL SESSION ON SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-219.6776 -265.8901)" 
+                id="06QUITO3006" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06QUITO3006.html">06QUITO3006</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMAN RIGHTS COUNCIL: ECUADOR FAVORS EU SUDAN RESOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -85.3282)" 
+                id="06RABAT2255" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06RABAT2255.html">06RABAT2255</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UN HUMAN RIGHTS COUNCIL:  SPECIAL SESSION ON SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-347.5401 -192.8892)" 
+                id="06SANSALVADOR2914" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06SANSALVADOR2914.html">06SANSALVADOR2914</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EL SALVADOR TO CO-SPONSOR FINNISH RESOLUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.5803 -249.3125)" 
+                id="06SEOUL4193" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06SEOUL4193.html">06SEOUL4193</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG TO SUPPORT HRC RESOLUTION ON SUDAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-89.6806 -92.0224)" 
+                id="06STATE195763" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE195763
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BEIJING4272">05BEIJING4272</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO457">05COLOMBO457</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05COLOMBO457.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">(SBU) SRI LANKA - EARTHQUAKE AND TSUNAMIS:  USAID/DART SITREP #17</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO464">05COLOMBO464</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05COLOMBO464.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA RELIEF TO RECONSTRUCTION UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO497">05COLOMBO497</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05COLOMBO497.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/08/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA RELIEF TO RECONSTRUCTION UPDATE (MARCH 8, 2005)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05COLOMBO512">05COLOMBO512</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/10/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO542">05COLOMBO542</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05COLOMBO542.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA AND MALDIVES TSUNAMI RELIEF AND RECONSTRUCTION UPDATE (MARCH 16)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO615">05COLOMBO615</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05COLOMBO615.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA:  ELECTRICITY, FUEL STRIKES AVERTED AFTER RESTRUCTURING PLANS PUT ON HOLD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO659">05COLOMBO659</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05COLOMBO659.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA:  UNIVERSITY EDUCATION:  SO MANY STRIKES, SO FEW DEGREES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO811">05COLOMBO811</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05COLOMBO811.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SRI LANKA - EARTHQUAKE AND TSUNAMIS: USAID/DART SITREP #21 - VISIT TO JAFFNA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO813">05COLOMBO813</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05COLOMBO813.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TSUNAMI AID AND STATUARY:  CHINESE PREMIER'S VISIT HIGH ON OPTICS; THIN ON SUBSTANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO826">05COLOMBO826</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05COLOMBO826.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SRI LANKA - EARTHQUAKE AND TSUNAMIS: USAID/DART SITREP #22 - VISIT TO SOUTH COAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO833">05COLOMBO833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05COLOMBO833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKAN POST-TSUNAMI RECONSTRUCTION UPDATE (MAY 04, 2005)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO868">05COLOMBO868</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05COLOMBO868.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKAN POST-TSUNAMI RECONSTRUCTION UPDATE (MAY 11, 2005)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO872">05COLOMBO872</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05COLOMBO872.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA DEFERS FATE OF GOVERNMENT OWNED ELECTRIC MONOPOLY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05COLOMBO934">05COLOMBO934</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05COLOMBO934.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/20/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKAN DEVELOPMENT FORUM EXCEEDS EXPECTATIONS BUT FOLLOW-UP CRITICAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="124.5263" y1="277.2483" 
+                  x2="142.7825" y2="152.9699" class="btwns0"/>
+        
+            <line x1="-79.3535" y1="-290.0000" 
+                  x2="-199.8518" y2="-235.1310" class="btwns0"/>
+        
+            <line x1="-208.9527" y1="-230.9869" 
+                  x2="-316.3661" y2="-151.9403" class="btwns2"/>
+        
+            <line x1="-324.4203" y1="-146.0132" 
+                  x2="-384.9173" y2="-43.5093" class="btwns5"/>
+        
+            <line x1="-363.3466" y1="85.4156" 
+                  x2="-387.8371" y2="-25.1341" class="btwns7"/>
+        
+            <line x1="-363.3466" y1="85.4156" 
+                  x2="-248.0808" y2="173.9534" class="btwns8"/>
+        
+            <line x1="-240.1503" y1="180.0450" 
+                  x2="-273.8098" y2="280.5180" class="btwns0"/>
+        
+            <line x1="-240.1503" y1="180.0450" 
+                  x2="-63.7822" y2="170.2624" class="btwns10"/>
+        
+            <line x1="114.9400" y1="-115.1881" 
+                  x2="217.5432" y2="-24.3555" class="btwns0"/>
+        
+            <line x1="144.2358" y1="143.0761" 
+                  x2="220.5411" y2="-8.7914" class="btwns7"/>
+        
+            <line x1="144.2358" y1="143.0761" 
+                  x2="-43.8867" y2="168.3757" class="btwns10"/>
+        
+            <line x1="144.2358" y1="143.0761" 
+                  x2="286.4727" y2="196.7442" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-6.6305" 
+                  x2="235.0082" y2="-17.0558" class="btwns0"/>
+        
+            <line x1="225.0307" y1="-17.7270" 
+                  x2="289.1947" y2="-136.5672" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(124.5263 277.2483)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-79.3535 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-208.9527 -230.9869)" 
+                class="vertice degree3 btwns2 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-324.4203 -146.0132)" 
+                class="vertice degree3 btwns4 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-363.3466 85.4156)" 
+                class="vertice degree3 btwns7 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -34.8973)" 
+                class="vertice degree3 btwns5 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-240.1503 180.0450)" 
+                class="vertice degree6 btwns9 authority6 COLOMBO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-276.9864 290.0000)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(114.9400 -115.1881)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(144.2358 143.0761)" 
+                class="vertice degree10 btwns10 authority10 COLOMBO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -6.6305)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(225.0307 -17.7270)" 
+                class="vertice degree10 btwns6 authority9 COLOMBO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(293.9456 -145.3665)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-53.7975 169.7085)" 
+                class="vertice degree3 btwns8 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(295.8289 200.2744)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(124.5263 277.2483)" 
+                id="05BEIJING4272" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BEIJING4272
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-79.3535 -290.0000)" 
+                id="05COLOMBO457" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05COLOMBO457.html">05COLOMBO457</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(SBU) SRI LANKA - EARTHQUAKE AND TSUNAMIS:  USAID/DART SITREP #17</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-208.9527 -230.9869)" 
+                id="05COLOMBO464" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05COLOMBO464.html">05COLOMBO464</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA RELIEF TO RECONSTRUCTION UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-324.4203 -146.0132)" 
+                id="05COLOMBO497" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05COLOMBO497.html">05COLOMBO497</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA RELIEF TO RECONSTRUCTION UPDATE (MARCH 8, 2005)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-363.3466 85.4156)" 
+                id="05COLOMBO512" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05COLOMBO512
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -34.8973)" 
+                id="05COLOMBO542" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05COLOMBO542.html">05COLOMBO542</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA AND MALDIVES TSUNAMI RELIEF AND RECONSTRUCTION UPDATE (MARCH 16)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-240.1503 180.0450)" 
+                id="05COLOMBO615" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05COLOMBO615.html">05COLOMBO615</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SRI LANKA:  ELECTRICITY, FUEL STRIKES AVERTED AFTER RESTRUCTURING PLANS PUT ON HOLD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-276.9864 290.0000)" 
+                id="05COLOMBO659" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05COLOMBO659.html">05COLOMBO659</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKA:  UNIVERSITY EDUCATION:  SO MANY STRIKES, SO FEW DEGREES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(114.9400 -115.1881)" 
+                id="05COLOMBO811" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05COLOMBO811.html">05COLOMBO811</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKA - EARTHQUAKE AND TSUNAMIS: USAID/DART SITREP #21 - VISIT TO JAFFNA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(144.2358 143.0761)" 
+                id="05COLOMBO813" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05COLOMBO813.html">05COLOMBO813</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TSUNAMI AID AND STATUARY:  CHINESE PREMIER'S VISIT HIGH ON OPTICS; THIN ON SUBSTANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -6.6305)" 
+                id="05COLOMBO826" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05COLOMBO826.html">05COLOMBO826</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKA - EARTHQUAKE AND TSUNAMIS: USAID/DART SITREP #22 - VISIT TO SOUTH COAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(225.0307 -17.7270)" 
+                id="05COLOMBO833" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05COLOMBO833.html">05COLOMBO833</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SRI LANKAN POST-TSUNAMI RECONSTRUCTION UPDATE (MAY 04, 2005)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(293.9456 -145.3665)" 
+                id="05COLOMBO868" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05COLOMBO868.html">05COLOMBO868</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKAN POST-TSUNAMI RECONSTRUCTION UPDATE (MAY 11, 2005)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-53.7975 169.7085)" 
+                id="05COLOMBO872" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05COLOMBO872.html">05COLOMBO872</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA DEFERS FATE OF GOVERNMENT OWNED ELECTRIC MONOPOLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(295.8289 200.2744)" 
+                id="05COLOMBO934" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05COLOMBO934.html">05COLOMBO934</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SRI LANKAN DEVELOPMENT FORUM EXCEEDS EXPECTATIONS BUT FOLLOW-UP CRITICAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

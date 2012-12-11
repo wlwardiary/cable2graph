@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE116867">09STATE116867</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/12/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE130765">09STATE130765</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/23/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NOUAKCHOTT815">09NOUAKCHOTT815</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09NOUAKCHOTT815.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/27/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MAURITANIAN LAW AND PRACTICE RELATED TO SEXUAL ORIENTATION AND GENDER IDENTITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI1427">09DJIBOUTI1427</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09DJIBOUTI1427.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DJIBOUTI - NO ANTI-HOMOSEXUAL LEGISLATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MASERU445">09MASERU445</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09MASERU445.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LESOTHO:  HOMOSEXUALITY NOT LEGISLATED, BUT CULTURAL TABOOS REMAIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09HARARE1009">09HARARE1009</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09HARARE1009.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ZIMBABWE RESPONSE TO REQUEST FOR INFORMATION ON HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PRETORIA2670">09PRETORIA2670</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09PRETORIA2670.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRETORIA RESPONSE: RIGHTS VIS-A-VIS SEXUAL ORIENTATION, GENDER IDENTITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ADDISABABA3027">09ADDISABABA3027</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09ADDISABABA3027.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ETHIOPIA: HUMAN RIGHTS TRENDS REGARDING SEXUAL ORIENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PORTLOUIS419">09PORTLOUIS419</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09PORTLOUIS419.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SEYCHELLES: CONSTITUTION INTERPRETED TO PROTECT HOMOSEXUAL RIGHTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09PORTLOUIS421">09PORTLOUIS421</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09PORTLOUIS421.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MAURITIUS: HOMOSEXUALITY NOT LEGISLATED, BUT RELIGIOUS OPPOSITION EXISTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09WINDHOEK514">09WINDHOEK514</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09WINDHOEK514.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Namibia: Human Rights Trends Pertaining to Sexual Orientation</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DARESSALAAM905">09DARESSALAAM905</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09DARESSALAAM905.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">HOMOSEXUALS STIGMATIZED, MARGINALIZED IN TANZANIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KINSHASA1162">09KINSHASA1162</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09KINSHASA1162.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">REQUEST FOR INFORMATION ON HUMAN RIGHTS TRENDS IN             AFRICA PERTAINING TO SEXUAL ORIENTATION AND GENDER             IDENTITY:  DEMOCRATIC REPUBLIC OF THE CONGO</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09GABORONE1052">09GABORONE1052</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09GABORONE1052.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NIAMEY1021">09NIAMEY1021</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09NIAMEY1021.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Response:  Information on Human Rights Trends Pertaining to Sexual Orientation and Gender Identity</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ANTANANARIVO890">09ANTANANARIVO890</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09ANTANANARIVO890.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MADAGASCAR AND COMOROS: POLICIES AND ATTITUDES ON SEXUAL ORIENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NDJAMENA634">09NDJAMENA634</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09NDJAMENA634.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHAD:  HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BANGUI276">09BANGUI276</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09BANGUI276.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CENTRAL AFRICAN REPUBLIC: LAWS AND SOCIAL VIEWS ON SEXUAL ORIENTATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KIGALI896">09KIGALI896</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09KIGALI896.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TRENDS IN RWANDA PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09FREETOWN519">09FREETOWN519</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09FREETOWN519.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/31/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SEXUAL ORIENTATION IN SIERRA LEONE: QUIETLY IN THE CLOSET</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10KHARTOUM6">10KHARTOUM6</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10KHARTOUM6.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/03/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SUDAN: HUMAN RIGHTS TRENDS REGARDING SEXUAL ORIENTATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#10STATE788">10STATE788</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/06/10</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10NIAMEY57">10NIAMEY57</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10NIAMEY57.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/21/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Niger: Same Sex Demarche Delivered</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#10ALGIERS73">10ALGIERS73</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/24/10</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#10ABUDHABI154">10ABUDHABI154</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/30/10</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10DILI26">10DILI26</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10DILI26.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TIMOR-LESTE: SAME-SEX DOMESTIC PARTNER ACCREDITATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10MUSCAT70">10MUSCAT70</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10MUSCAT70.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OMAN: SAME-SEX DOMESTIC PARTNER ACCREDITATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10COPENHAGEN67">10COPENHAGEN67</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10COPENHAGEN67.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SAME-SEX DOMESTIC PARTNERS:  DENMARK WILLING TO GRANT DIPLOMATIC OR OFFICIAL STATUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10ALGIERS161">10ALGIERS161</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10ALGIERS161.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/21/10</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Same-Sex Domestic Partner Accreditation - Algeria</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10GABORONE173">10GABORONE173</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10GABORONE173.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ACCREDITATION OF SAME-SEX DOMESTIC PARTNERS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="79.6998" 
+                  x2="-201.3011" y2="89.0057" class="btwns0"/>
+        
+            <line x1="-308.8575" y1="108.2790" 
+                  x2="-201.1880" y2="91.0761" class="btwns0"/>
+        
+            <line x1="-121.7960" y1="-104.0191" 
+                  x2="-187.9325" y2="80.0871" class="btwns0"/>
+        
+            <line x1="-195.2263" y1="-35.9737" 
+                  x2="-191.6250" y2="79.5032" class="btwns0"/>
+        
+            <line x1="-26.9149" y1="231.3390" 
+                  x2="-183.7419" y2="96.0308" class="btwns0"/>
+        
+            <line x1="-359.3364" y1="179.5694" 
+                  x2="-200.1268" y2="94.2229" class="btwns0"/>
+        
+            <line x1="41.3731" y1="93.3685" 
+                  x2="-181.3147" y2="89.6646" class="btwns10"/>
+        
+            <line x1="41.3731" y1="93.3685" 
+                  x2="180.9145" y2="72.7658" class="btwns9"/>
+        
+            <line x1="-300.2941" y1="248.2507" 
+                  x2="-196.9729" y2="97.7426" class="btwns0"/>
+        
+            <line x1="-52.1162" y1="39.0118" 
+                  x2="-181.9125" y2="86.0887" class="btwns0"/>
+        
+            <line x1="-47.6405" y1="144.9609" 
+                  x2="-181.9843" y2="93.0996" class="btwns0"/>
+        
+            <line x1="-204.8367" y1="290.0000" 
+                  x2="-191.9862" y2="99.4756" class="btwns0"/>
+        
+            <line x1="-300.2458" y1="-92.2906" 
+                  x2="-196.4533" y2="80.9205" class="btwns0"/>
+        
+            <line x1="-212.5288" y1="-120.7523" 
+                  x2="-192.3172" y2="79.5488" class="btwns0"/>
+        
+            <line x1="-119.5998" y1="209.8997" 
+                  x2="-186.1960" y2="98.0898" class="btwns0"/>
+        
+            <line x1="-109.1320" y1="287.9416" 
+                  x2="-187.4871" y2="98.7374" class="btwns0"/>
+        
+            <line x1="-224.5876" y1="206.8567" 
+                  x2="-194.0410" y2="99.1191" class="btwns0"/>
+        
+            <line x1="-83.9690" y1="-34.2681" 
+                  x2="-184.7612" y2="81.9438" class="btwns0"/>
+        
+            <line x1="317.2990" y1="261.6423" 
+                  x2="322.0547" y2="151.5914" class="btwns0"/>
+        
+            <line x1="-191.3133" y1="89.4983" 
+                  x2="-364.7189" y2="-4.1767" class="btwns0"/>
+        
+            <line x1="-191.3133" y1="89.4983" 
+                  x2="-286.2878" y2="-4.7152" class="btwns0"/>
+        
+            <line x1="300.6095" y1="-252.5918" 
+                  x2="332.3296" y2="-157.2618" class="btwns0"/>
+        
+            <line x1="179.5992" y1="-177.4359" 
+                  x2="108.7012" y2="-281.7299" class="btwns0"/>
+        
+            <line x1="179.5992" y1="-177.4359" 
+                  x2="278.0113" y2="-30.1241" class="btwns1"/>
+        
+            <line x1="322.4865" y1="141.6007" 
+                  x2="285.8832" y2="-12.0810" class="btwns1"/>
+        
+            <line x1="390.0000" y1="32.0308" 
+                  x2="292.4895" y2="-17.2951" class="btwns0"/>
+        
+            <line x1="190.8073" y1="71.3052" 
+                  x2="276.5087" y2="-14.7243" class="btwns8"/>
+        
+            <line x1="335.4868" y1="-147.7732" 
+                  x2="287.3771" y2="-31.0543" class="btwns1"/>
+        
+            <line x1="253.2282" y1="-95.3818" 
+                  x2="279.7541" y2="-31.0538" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 79.6998)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-308.8575 108.2790)" 
+                class="vertice degree0 btwns0 authority0 ANTANANARIVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-121.7960 -104.0191)" 
+                class="vertice degree0 btwns0 authority0 BANGUI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-195.2263 -35.9737)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-26.9149 231.3390)" 
+                class="vertice degree0 btwns0 authority0 DJIBOUTI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-359.3364 179.5694)" 
+                class="vertice degree0 btwns0 authority0 FREETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(41.3731 93.3685)" 
+                class="vertice degree0 btwns5 authority0 GABORONE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-300.2941 248.2507)" 
+                class="vertice degree0 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-52.1162 39.0118)" 
+                class="vertice degree0 btwns0 authority0 KIGALI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-47.6405 144.9609)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-204.8367 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MASERU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-300.2458 -92.2906)" 
+                class="vertice degree0 btwns0 authority0 NDJAMENA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-212.5288 -120.7523)" 
+                class="vertice degree0 btwns0 authority0 NIAMEY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-119.5998 209.8997)" 
+                class="vertice degree0 btwns0 authority0 NOUAKCHOTT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-109.1320 287.9416)" 
+                class="vertice degree0 btwns0 authority0 PORTLOUIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-224.5876 206.8567)" 
+                class="vertice degree0 btwns0 authority0 PORTLOUIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-83.9690 -34.2681)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(317.2990 261.6423)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-191.3133 89.4983)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-373.5172 -8.9296)" 
+                class="vertice degree0 btwns0 authority0 WINDHOEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(300.6095 -252.5918)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(179.5992 -177.4359)" 
+                class="vertice degree0 btwns0 authority0 ALGIERS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(103.0793 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ALGIERS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(322.4865 141.6007)" 
+                class="vertice degree0 btwns0 authority0 COPENHAGEN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 32.0308)" 
+                class="vertice degree0 btwns0 authority0 DILI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(190.8073 71.3052)" 
+                class="vertice degree0 btwns5 authority0 GABORONE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-293.3873 -11.7578)" 
+                class="vertice degree0 btwns0 authority0 KHARTOUM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(335.4868 -147.7732)" 
+                class="vertice degree0 btwns0 authority0 MUSCAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(253.2282 -95.3818)" 
+                class="vertice degree0 btwns0 authority0 NIAMEY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(283.5663 -21.8089)" 
+                class="vertice degree2 btwns5 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 79.6998)" 
+                id="09ADDISABABA3027" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ADDISABABA3027.html">09ADDISABABA3027</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ETHIOPIA: HUMAN RIGHTS TRENDS REGARDING SEXUAL ORIENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-308.8575 108.2790)" 
+                id="09ANTANANARIVO890" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ANTANANARIVO890.html">09ANTANANARIVO890</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MADAGASCAR AND COMOROS: POLICIES AND ATTITUDES ON SEXUAL ORIENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-121.7960 -104.0191)" 
+                id="09BANGUI276" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09BANGUI276.html">09BANGUI276</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CENTRAL AFRICAN REPUBLIC: LAWS AND SOCIAL VIEWS ON SEXUAL ORIENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-195.2263 -35.9737)" 
+                id="09DARESSALAAM905" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09DARESSALAAM905.html">09DARESSALAAM905</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HOMOSEXUALS STIGMATIZED, MARGINALIZED IN TANZANIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.9149 231.3390)" 
+                id="09DJIBOUTI1427" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09DJIBOUTI1427.html">09DJIBOUTI1427</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DJIBOUTI - NO ANTI-HOMOSEXUAL LEGISLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-359.3364 179.5694)" 
+                id="09FREETOWN519" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09FREETOWN519.html">09FREETOWN519</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SEXUAL ORIENTATION IN SIERRA LEONE: QUIETLY IN THE CLOSET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(41.3731 93.3685)" 
+                id="09GABORONE1052" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09GABORONE1052.html">09GABORONE1052</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-300.2941 248.2507)" 
+                id="09HARARE1009" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09HARARE1009.html">09HARARE1009</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ZIMBABWE RESPONSE TO REQUEST FOR INFORMATION ON HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-52.1162 39.0118)" 
+                id="09KIGALI896" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09KIGALI896.html">09KIGALI896</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TRENDS IN RWANDA PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-47.6405 144.9609)" 
+                id="09KINSHASA1162" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09KINSHASA1162.html">09KINSHASA1162</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>REQUEST FOR INFORMATION ON HUMAN RIGHTS TRENDS IN             AFRICA PERTAINING TO SEXUAL ORIENTATION AND GENDER             IDENTITY:  DEMOCRATIC REPUBLIC OF THE CONGO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-204.8367 290.0000)" 
+                id="09MASERU445" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09MASERU445.html">09MASERU445</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LESOTHO:  HOMOSEXUALITY NOT LEGISLATED, BUT CULTURAL TABOOS REMAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-300.2458 -92.2906)" 
+                id="09NDJAMENA634" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/31/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09NDJAMENA634.html">09NDJAMENA634</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHAD:  HUMAN RIGHTS TRENDS PERTAINING TO SEXUAL ORIENTATION AND GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-212.5288 -120.7523)" 
+                id="09NIAMEY1021" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09NIAMEY1021.html">09NIAMEY1021</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Response:  Information on Human Rights Trends Pertaining to Sexual Orientation and Gender Identity</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-119.5998 209.8997)" 
+                id="09NOUAKCHOTT815" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09NOUAKCHOTT815.html">09NOUAKCHOTT815</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MAURITANIAN LAW AND PRACTICE RELATED TO SEXUAL ORIENTATION AND GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-109.1320 287.9416)" 
+                id="09PORTLOUIS419" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09PORTLOUIS419.html">09PORTLOUIS419</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SEYCHELLES: CONSTITUTION INTERPRETED TO PROTECT HOMOSEXUAL RIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-224.5876 206.8567)" 
+                id="09PORTLOUIS421" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09PORTLOUIS421.html">09PORTLOUIS421</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MAURITIUS: HOMOSEXUALITY NOT LEGISLATED, BUT RELIGIOUS OPPOSITION EXISTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-83.9690 -34.2681)" 
+                id="09PRETORIA2670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09PRETORIA2670.html">09PRETORIA2670</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRETORIA RESPONSE: RIGHTS VIS-A-VIS SEXUAL ORIENTATION, GENDER IDENTITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(317.2990 261.6423)" 
+                id="09STATE116867" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE116867
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-191.3133 89.4983)" 
+                id="09STATE130765" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    09STATE130765
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-373.5172 -8.9296)" 
+                id="09WINDHOEK514" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09WINDHOEK514.html">09WINDHOEK514</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Namibia: Human Rights Trends Pertaining to Sexual Orientation</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.6095 -252.5918)" 
+                id="10ABUDHABI154" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/30/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    10ABUDHABI154
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(179.5992 -177.4359)" 
+                id="10ALGIERS161" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/21/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10ALGIERS161.html">10ALGIERS161</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Same-Sex Domestic Partner Accreditation - Algeria</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(103.0793 -290.0000)" 
+                id="10ALGIERS73" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/24/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    10ALGIERS73
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(322.4865 141.6007)" 
+                id="10COPENHAGEN67" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/04/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10COPENHAGEN67.html">10COPENHAGEN67</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SAME-SEX DOMESTIC PARTNERS:  DENMARK WILLING TO GRANT DIPLOMATIC OR OFFICIAL STATUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 32.0308)" 
+                id="10DILI26" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10DILI26.html">10DILI26</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TIMOR-LESTE: SAME-SEX DOMESTIC PARTNER ACCREDITATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(190.8073 71.3052)" 
+                id="10GABORONE173" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10GABORONE173.html">10GABORONE173</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ACCREDITATION OF SAME-SEX DOMESTIC PARTNERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-293.3873 -11.7578)" 
+                id="10KHARTOUM6" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/03/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10KHARTOUM6.html">10KHARTOUM6</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SUDAN: HUMAN RIGHTS TRENDS REGARDING SEXUAL ORIENTATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(335.4868 -147.7732)" 
+                id="10MUSCAT70" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10MUSCAT70.html">10MUSCAT70</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OMAN: SAME-SEX DOMESTIC PARTNER ACCREDITATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(253.2282 -95.3818)" 
+                id="10NIAMEY57" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/21/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10NIAMEY57.html">10NIAMEY57</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Niger: Same Sex Demarche Delivered</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(283.5663 -21.8089)" 
+                id="10STATE788" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/06/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    10STATE788
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

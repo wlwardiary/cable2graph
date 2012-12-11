@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE87778">05STATE87778</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04STATE239087">04STATE239087</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/12/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE11642">09STATE11642</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/09/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE117720">09STATE117720</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/14/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09OTTAWA839">09OTTAWA839</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09OTTAWA839.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SEARCH FOR NEXT HEAD OF UN OFFICE OF INTERNAL OVERSIGHT SERVICES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09PRETORIA2385">09PRETORIA2385</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09PRETORIA2385.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRETORIA RESPONSE ON CANDIDATES FOR HEAD OF UN/OIOS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09LIMA1689">09LIMA1689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09LIMA1689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/09</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">Potential Peruvian OIOS Candidate</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ADDISABABA2852">09ADDISABABA2852</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09ADDISABABA2852.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OIOS: ETHIOPIAN DOING DUE DILIGENCE ON OWN "CANDIDATE"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ADDISABABA2855">09ADDISABABA2855</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09ADDISABABA2855.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OIOS: ETHIOPIAN DOING DUE DILIGENCE ON OWN "CANDIDATE"</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09UNESCOPARISFR1651">09UNESCOPARISFR1651</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09UNESCOPARISFR1651.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">APPLICANT FOR DIRECTOR OF UN OFFICE OF INTERNAL OVERSIGHT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ADDISABABA2909">09ADDISABABA2909</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09ADDISABABA2909.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIA ON CANDIDATE FOR OIOS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#10STATE16301">10STATE16301</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/23/10</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#10STATE16709">10STATE16709</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/23/10</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10PRETORIA385">10PRETORIA385</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10PRETORIA385.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRETORIA RESPONSE ON SOUTH AFRICA'S UN/OIOS NOMINEE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10OTTAWA83">10OTTAWA83</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10OTTAWA83.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADIAN AUDITOR GENERAL DECLINES OIOS NOMINATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10PRETORIA392">10PRETORIA392</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10PRETORIA392.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRETORIA INTERVIEW WITH UN/OIOS CANDIDATE S.A.FAKIE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="233.6947" y1="290.0000" 
+                  x2="196.0013" y2="126.5896" class="btwns3"/>
+        
+            <line x1="390.0000" y1="48.9253" 
+                  x2="203.2036" y2="113.5748" class="btwns3"/>
+        
+            <line x1="-68.3819" y1="-290.0000" 
+                  x2="9.3379" y2="-117.4011" class="btwns3"/>
+        
+            <line x1="190.2343" y1="-239.3920" 
+                  x2="99.5973" y2="-281.1557" class="btwns0"/>
+        
+            <line x1="190.2343" y1="-239.3920" 
+                  x2="21.4760" y2="-114.2397" class="btwns2"/>
+        
+            <line x1="90.5151" y1="-285.3406" 
+                  x2="17.4349" y2="-117.4519" class="btwns2"/>
+        
+            <line x1="-185.6958" y1="-208.7302" 
+                  x2="4.5153" y2="-112.7865" class="btwns3"/>
+        
+            <line x1="193.7536" y1="116.8455" 
+                  x2="362.8578" y2="190.5772" class="btwns3"/>
+        
+            <line x1="193.7536" y1="116.8455" 
+                  x2="19.6951" y2="-100.4777" class="btwns10"/>
+        
+            <line x1="193.7536" y1="116.8455" 
+                  x2="40.8322" y2="246.9787" class="btwns3"/>
+        
+            <line x1="-189.9846" y1="-31.2073" 
+                  x2="4.0925" y2="-104.7398" class="btwns3"/>
+        
+            <line x1="-189.9846" y1="-31.2073" 
+                  x2="-272.2285" y2="123.4459" class="btwns1"/>
+        
+            <line x1="-189.9846" y1="-31.2073" 
+                  x2="-178.6918" y2="53.5444" class="btwns0"/>
+        
+            <line x1="13.4438" y1="-108.2829" 
+                  x2="211.5417" y2="-111.3430" class="btwns3"/>
+        
+            <line x1="13.4438" y1="-108.2829" 
+                  x2="-169.9383" y2="56.7670" class="btwns6"/>
+        
+            <line x1="33.2165" y1="253.4595" 
+                  x2="-144.8103" y2="232.6429" class="btwns2"/>
+        
+            <line x1="-276.9239" y1="132.2750" 
+                  x2="-185.5970" y2="69.1431" class="btwns0"/>
+        
+            <line x1="-276.9239" y1="132.2750" 
+                  x2="-380.9379" y2="83.7423" class="btwns0"/>
+        
+            <line x1="-276.9239" y1="132.2750" 
+                  x2="-162.5059" y2="225.1781" class="btwns0"/>
+        
+            <line x1="-177.3711" y1="63.4568" 
+                  x2="-380.0284" y2="78.7609" class="btwns2"/>
+        
+            <line x1="-177.3711" y1="63.4568" 
+                  x2="-156.0774" y2="221.5710" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(233.6947 290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 48.9253)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-68.3819 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(190.2343 -239.3920)" 
+                class="vertice degree1 btwns0 authority1 ADDISABABA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(90.5151 -285.3406)" 
+                class="vertice degree1 btwns0 authority1 ADDISABABA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-185.6958 -208.7302)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(193.7536 116.8455)" 
+                class="vertice degree5 btwns6 authority5 OTTAWA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-189.9846 -31.2073)" 
+                class="vertice degree2 btwns0 authority3 PRETORIA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(372.0244 194.5740)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(13.4438 -108.2829)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(221.5405 -111.4974)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(33.2165 253.4595)" 
+                class="vertice degree1 btwns0 authority1 OTTAWA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-276.9239 132.2750)" 
+                class="vertice degree4 btwns0 authority4 PRETORIA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-177.3711 63.4568)" 
+                class="vertice degree5 btwns3 authority5 PRETORIA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 79.5140)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-154.7427 231.4815)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(233.6947 290.0000)" 
+                id="04STATE239087" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/12/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04STATE239087
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 48.9253)" 
+                id="05STATE87778" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE87778
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-68.3819 -290.0000)" 
+                id="09ADDISABABA2852" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ADDISABABA2852.html">09ADDISABABA2852</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OIOS: ETHIOPIAN DOING DUE DILIGENCE ON OWN "CANDIDATE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(190.2343 -239.3920)" 
+                id="09ADDISABABA2855" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ADDISABABA2855.html">09ADDISABABA2855</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>OIOS: ETHIOPIAN DOING DUE DILIGENCE ON OWN "CANDIDATE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(90.5151 -285.3406)" 
+                id="09ADDISABABA2909" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09ADDISABABA2909.html">09ADDISABABA2909</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ETHIOPIA ON CANDIDATE FOR OIOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-185.6958 -208.7302)" 
+                id="09LIMA1689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09LIMA1689.html">09LIMA1689</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Potential Peruvian OIOS Candidate</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(193.7536 116.8455)" 
+                id="09OTTAWA839" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09OTTAWA839.html">09OTTAWA839</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SEARCH FOR NEXT HEAD OF UN OFFICE OF INTERNAL OVERSIGHT SERVICES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-189.9846 -31.2073)" 
+                id="09PRETORIA2385" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09PRETORIA2385.html">09PRETORIA2385</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRETORIA RESPONSE ON CANDIDATES FOR HEAD OF UN/OIOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(372.0244 194.5740)" 
+                id="09STATE11642" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE11642
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(13.4438 -108.2829)" 
+                id="09STATE117720" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    09STATE117720
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(221.5405 -111.4974)" 
+                id="09UNESCOPARISFR1651" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09UNESCOPARISFR1651.html">09UNESCOPARISFR1651</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>APPLICANT FOR DIRECTOR OF UN OFFICE OF INTERNAL OVERSIGHT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(33.2165 253.4595)" 
+                id="10OTTAWA83" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10OTTAWA83.html">10OTTAWA83</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CANADIAN AUDITOR GENERAL DECLINES OIOS NOMINATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-276.9239 132.2750)" 
+                id="10PRETORIA385" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10PRETORIA385.html">10PRETORIA385</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PRETORIA RESPONSE ON SOUTH AFRICA'S UN/OIOS NOMINEE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-177.3711 63.4568)" 
+                id="10PRETORIA392" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/26/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10PRETORIA392.html">10PRETORIA392</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRETORIA INTERVIEW WITH UN/OIOS CANDIDATE S.A.FAKIE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 79.5140)" 
+                id="10STATE16301" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/23/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    10STATE16301
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-154.7427 231.4815)" 
+                id="10STATE16709" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/23/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    10STATE16709
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

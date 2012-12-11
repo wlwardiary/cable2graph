@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW2502">06MOSCOW2502</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06MOSCOW2502.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">G8 NGO FORUM OFFERS GOR A CHANCE TO BOOST ITS IMAGE, INDEPENDENT ACTIVISTS A CHANCE TO VOICE THEIR CONCERNS.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW3190">06MOSCOW3190</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06MOSCOW3190.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CIVIL SOCIETY COUNCIL CHAIR PAMFILOVA DISCUSSES NGO LEGISLATION AND G8 SUMMIT PLANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW5454">06MOSCOW5454</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06MOSCOW5454.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">HELSINKI COMMISSION STAFFDEL MEETS WITH MFA NGO DEPARTMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW5998">06MOSCOW5998</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06MOSCOW5998.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CIVIL SOCIETY GEARS UP FOR THE G8 SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW6839">06MOSCOW6839</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06MOSCOW6839.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AN ARRAY OF CIVIL SOCIETY EVENTS AROUND THE G8 SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW7124">06MOSCOW7124</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06MOSCOW7124.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PUTIN MEETS WITH NGO REPRESENTATIVES AS PART OF CIVIL G8</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MOSCOW7670">06MOSCOW7670</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/19/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW7956">06MOSCOW7956</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06MOSCOW7956.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POST-MORTEM ON G8-RELATED NGO EVENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW11834">06MOSCOW11834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06MOSCOW11834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HUMAN RIGHTS OMBUDSMAN GIVEN ADDITIONAL POWERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW13172">06MOSCOW13172</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06MOSCOW13172.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HARD TIMES FOR RUSSIA'S HUMAN RIGHTS COMMUNITY</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-138.6018" y1="290.0000" 
+                  x2="48.3520" y2="242.2574" class="btwns3"/>
+        
+            <line x1="58.0410" y1="239.7831" 
+                  x2="48.0410" y2="239.7831" class="btwns0"/>
+        
+            <line x1="58.0410" y1="239.7831" 
+                  x2="177.9956" y2="112.6783" class="btwns6"/>
+        
+            <line x1="-199.4325" y1="-109.4424" 
+                  x2="-381.3199" y2="-5.3937" class="btwns3"/>
+        
+            <line x1="-199.4325" y1="-109.4424" 
+                  x2="-366.3981" y2="-194.1975" class="btwns3"/>
+        
+            <line x1="-199.4325" y1="-109.4424" 
+                  x2="-32.9530" y2="-233.8137" class="btwns6"/>
+        
+            <line x1="-199.4325" y1="-109.4424" 
+                  x2="-7.3533" y2="-7.5029" class="btwns10"/>
+        
+            <line x1="-24.9418" y1="-239.7987" 
+                  x2="163.3239" y2="-287.5419" class="btwns3"/>
+        
+            <line x1="1.4799" y1="-2.8150" 
+                  x2="176.2470" y2="100.3232" class="btwns9"/>
+        
+            <line x1="390.0000" y1="51.1636" 
+                  x2="194.5269" y2="102.8494" class="btwns3"/>
+        
+            <line x1="184.8592" y1="105.4057" 
+                  x2="174.8592" y2="105.4057" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-138.6018 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(58.0410 239.7831)" 
+                class="vertice degree7 btwns3 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-199.4325 -109.4424)" 
+                class="vertice degree7 btwns10 authority10 MOSCOW">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -0.4282)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-375.3151 -198.7239)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-24.9418 -239.7987)" 
+                class="vertice degree2 btwns3 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(173.0171 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(1.4799 -2.8150)" 
+                class="vertice degree2 btwns8 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 51.1636)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(184.8592 105.4057)" 
+                class="vertice degree10 btwns8 authority7 MOSCOW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-138.6018 290.0000)" 
+                id="06MOSCOW11834" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06MOSCOW11834.html">06MOSCOW11834</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMAN RIGHTS OMBUDSMAN GIVEN ADDITIONAL POWERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(58.0410 239.7831)" 
+                id="06MOSCOW13172" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06MOSCOW13172.html">06MOSCOW13172</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>HARD TIMES FOR RUSSIA'S HUMAN RIGHTS COMMUNITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-199.4325 -109.4424)" 
+                id="06MOSCOW2502" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>03/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MOSCOW2502.html">06MOSCOW2502</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>G8 NGO FORUM OFFERS GOR A CHANCE TO BOOST ITS IMAGE, INDEPENDENT ACTIVISTS A CHANCE TO VOICE THEIR CONCERNS.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -0.4282)" 
+                id="06MOSCOW3190" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MOSCOW3190.html">06MOSCOW3190</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CIVIL SOCIETY COUNCIL CHAIR PAMFILOVA DISCUSSES NGO LEGISLATION AND G8 SUMMIT PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-375.3151 -198.7239)" 
+                id="06MOSCOW5454" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MOSCOW5454.html">06MOSCOW5454</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HELSINKI COMMISSION STAFFDEL MEETS WITH MFA NGO DEPARTMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-24.9418 -239.7987)" 
+                id="06MOSCOW5998" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06MOSCOW5998.html">06MOSCOW5998</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CIVIL SOCIETY GEARS UP FOR THE G8 SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(173.0171 -290.0000)" 
+                id="06MOSCOW6839" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06MOSCOW6839.html">06MOSCOW6839</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AN ARRAY OF CIVIL SOCIETY EVENTS AROUND THE G8 SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.4799 -2.8150)" 
+                id="06MOSCOW7124" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06MOSCOW7124.html">06MOSCOW7124</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PUTIN MEETS WITH NGO REPRESENTATIVES AS PART OF CIVIL G8</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 51.1636)" 
+                id="06MOSCOW7670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MOSCOW7670
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(184.8592 105.4057)" 
+                id="06MOSCOW7956" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06MOSCOW7956.html">06MOSCOW7956</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POST-MORTEM ON G8-RELATED NGO EVENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

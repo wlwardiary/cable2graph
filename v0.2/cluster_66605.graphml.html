@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2003">07PARIS2003</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PARIS2003.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENT SARKOZY TAKES ON FRANCE'S WORK ETHIC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2089">07PARIS2089</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PARIS2089.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SARKOZY'S TAX CUTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2741">07PARIS2741</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07PARIS2741.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FRENCH TAX REFORM PACKAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2791">07PARIS2791</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07PARIS2791.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/28/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FRENCH GDP GROWTH REMAINS MODERATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS2825">07PARIS2825</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07PARIS2825.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/29/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOVERNMENT SELLS ADDITIONAL 2.5 PERCENT STAKE IN FRANCE TELECOM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS3319">07PARIS3319</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07PARIS3319.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FRANCE REOPENS MONETARY DEBATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS3401">07PARIS3401</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07PARIS3401.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/13/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FRENCH BUDGET DEVELOPMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS3741">07PARIS3741</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07PARIS3741.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOF PUTS GROWTH FRONT AND CENTER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS4273">07PARIS4273</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07PARIS4273.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FRENCH NATIONAL STATISTICAL AGENCY REVISES DOWNWARD 2007 GDP GROWTH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS4315">07PARIS4315</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07PARIS4315.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THE SARKOZY ECONOMIC AGENDA - REFORM OF GOODS AND SERVICES MARKETS: "WORK MORE TO EARN MORE"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS4327">07PARIS4327</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07PARIS4327.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THE SARKOZY ECONOMIC AGENDA - LABOR MARKET REFORM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS4349">07PARIS4349</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07PARIS4349.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/25/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THE SARKOZY ECONOMIC AGENDA: FISCAL ADJUSTMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS4483">07PARIS4483</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07PARIS4483.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FRENCH TRADE MINISTER NOVELLI'S VISIT TO WASHINGTON: KEY POINTS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="118.5416" y1="-250.6805" 
+                  x2="3.5081" y2="-286.9900" class="btwns0"/>
+        
+            <line x1="118.5416" y1="-250.6805" 
+                  x2="-5.7232" y2="-152.2628" class="btwns2"/>
+        
+            <line x1="-6.0281" y1="-290.0000" 
+                  x2="-13.0397" y2="-156.0405" class="btwns2"/>
+        
+            <line x1="-13.5624" y1="-146.0542" 
+                  x2="206.2380" y2="-60.0031" class="btwns7"/>
+        
+            <line x1="-13.5624" y1="-146.0542" 
+                  x2="-189.2142" y2="-216.8977" class="btwns2"/>
+        
+            <line x1="-13.5624" y1="-146.0542" 
+                  x2="-189.8694" y2="-26.7234" class="btwns10"/>
+        
+            <line x1="215.5498" y1="-56.3576" 
+                  x2="380.1843" y2="-88.4107" class="btwns2"/>
+        
+            <line x1="215.5498" y1="-56.3576" 
+                  x2="317.1776" y2="59.3321" class="btwns2"/>
+        
+            <line x1="-198.1508" y1="-21.1182" 
+                  x2="-380.0252" y2="-34.0471" class="btwns2"/>
+        
+            <line x1="-198.1508" y1="-21.1182" 
+                  x2="-181.4343" y2="127.6681" class="btwns8"/>
+        
+            <line x1="112.6253" y1="290.0000" 
+                  x2="-48.3484" y2="250.0408" class="btwns2"/>
+        
+            <line x1="-58.0539" y1="247.6316" 
+                  x2="-209.3159" y2="252.7909" class="btwns0"/>
+        
+            <line x1="-58.0539" y1="247.6316" 
+                  x2="-172.8846" y2="144.2948" class="btwns4"/>
+        
+            <line x1="-219.3100" y1="253.1318" 
+                  x2="-183.5158" y2="147.0804" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(118.5416 -250.6805)" 
+                class="vertice degree2 btwns0 authority2 PARIS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-6.0281 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 PARIS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-13.5624 -146.0542)" 
+                class="vertice degree10 btwns10 authority10 PARIS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(215.5498 -56.3576)" 
+                class="vertice degree5 btwns4 authority4 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-198.4884 -220.6381)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -90.3217)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-198.1508 -21.1182)" 
+                class="vertice degree5 btwns8 authority5 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(112.6253 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(323.7773 66.8450)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-58.0539 247.6316)" 
+                class="vertice degree5 btwns2 authority4 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-219.3100 253.1318)" 
+                class="vertice degree2 btwns0 authority2 PARIS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -34.7562)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-180.3178 137.6056)" 
+                class="vertice degree5 btwns5 authority5 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(118.5416 -250.6805)" 
+                id="07PARIS2003" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PARIS2003.html">07PARIS2003</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRESIDENT SARKOZY TAKES ON FRANCE'S WORK ETHIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-6.0281 -290.0000)" 
+                id="07PARIS2089" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PARIS2089.html">07PARIS2089</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SARKOZY'S TAX CUTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-13.5624 -146.0542)" 
+                id="07PARIS2741" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07PARIS2741.html">07PARIS2741</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FRENCH TAX REFORM PACKAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(215.5498 -56.3576)" 
+                id="07PARIS2791" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07PARIS2791.html">07PARIS2791</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>FRENCH GDP GROWTH REMAINS MODERATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-198.4884 -220.6381)" 
+                id="07PARIS2825" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07PARIS2825.html">07PARIS2825</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOVERNMENT SELLS ADDITIONAL 2.5 PERCENT STAKE IN FRANCE TELECOM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -90.3217)" 
+                id="07PARIS3319" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07PARIS3319.html">07PARIS3319</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRANCE REOPENS MONETARY DEBATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-198.1508 -21.1182)" 
+                id="07PARIS3401" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07PARIS3401.html">07PARIS3401</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>FRENCH BUDGET DEVELOPMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(112.6253 290.0000)" 
+                id="07PARIS3741" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07PARIS3741.html">07PARIS3741</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOF PUTS GROWTH FRONT AND CENTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(323.7773 66.8450)" 
+                id="07PARIS4273" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07PARIS4273.html">07PARIS4273</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH NATIONAL STATISTICAL AGENCY REVISES DOWNWARD 2007 GDP GROWTH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-58.0539 247.6316)" 
+                id="07PARIS4315" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07PARIS4315.html">07PARIS4315</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>THE SARKOZY ECONOMIC AGENDA - REFORM OF GOODS AND SERVICES MARKETS: "WORK MORE TO EARN MORE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-219.3100 253.1318)" 
+                id="07PARIS4327" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07PARIS4327.html">07PARIS4327</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>THE SARKOZY ECONOMIC AGENDA - LABOR MARKET REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -34.7562)" 
+                id="07PARIS4349" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07PARIS4349.html">07PARIS4349</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE SARKOZY ECONOMIC AGENDA: FISCAL ADJUSTMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-180.3178 137.6056)" 
+                id="07PARIS4483" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07PARIS4483.html">07PARIS4483</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>FRENCH TRADE MINISTER NOVELLI'S VISIT TO WASHINGTON: KEY POINTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

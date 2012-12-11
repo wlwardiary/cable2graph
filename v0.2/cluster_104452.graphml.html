@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE39754">09STATE39754</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09STATE39754.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">INFO REQUEST FOR UNSC DRC SANCTIONS COMMITTEE LISTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KIGALI287">09KIGALI287</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09KIGALI287.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/08/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RWANDAN RESPONSE: SANCTIONS COMMITTEE INFO REQUEST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KIGALI292">09KIGALI292</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09KIGALI292.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RWANDAN RESPONSE: SANCTIONS COMMITTEE INFO REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE66735">09STATE66735</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09STATE66735.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE67910">09STATE67910</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09STATE67910.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">UNSC LIBERIA SANCTIONS COMMITTEE: INFO REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KIGALI409">09KIGALI409</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09KIGALI409.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/09/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RWANDA: UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PARIS982">09PARIS982</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09PARIS982.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/21/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNSC LIBERIA AND DRC SANCTIONS:  FRENCH HAVE NO INFO</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MONROVIA540">09MONROVIA540</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09MONROVIA540.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNSC LIBERIA SANCTIONS COMMITTEE: INFO REPSONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KINSHASA716">09KINSHASA716</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09KINSHASA716.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC RESPONSE: UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE79316">09STATE79316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09STATE79316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">UNSC DRC SANCTIONS COMMITTEE DELISTING PROPOSAL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="371.8717" y1="290.0000" 
+                  x2="317.9752" y2="16.6341" class="btwns5"/>
+        
+            <line x1="319.4150" y1="-287.1571" 
+                  x2="316.1556" y2="-3.1764" class="btwns0"/>
+        
+            <line x1="319.4150" y1="-287.1571" 
+                  x2="145.1714" y2="-74.0838" class="btwns1"/>
+        
+            <line x1="319.4150" y1="-287.1571" 
+                  x2="195.5997" y2="-239.6216" class="btwns0"/>
+        
+            <line x1="-16.5790" y1="213.3127" 
+                  x2="133.9832" y2="-57.6018" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-133.1651" 
+                  x2="320.7122" y2="-2.0189" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-133.1651" 
+                  x2="148.5048" y2="-68.9138" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-133.1651" 
+                  x2="195.1906" y2="-231.5301" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-97.7285" 
+                  x2="-275.7059" y2="-281.5082" class="btwns5"/>
+        
+            <line x1="-40.4134" y1="-277.4109" 
+                  x2="132.3677" y2="-73.9648" class="btwns7"/>
+        
+            <line x1="-40.4134" y1="-277.4109" 
+                  x2="-260.4398" y2="-289.4535" class="btwns10"/>
+        
+            <line x1="-40.4134" y1="-277.4109" 
+                  x2="176.4266" y2="-237.8330" class="btwns5"/>
+        
+            <line x1="316.0409" y1="6.8230" 
+                  x2="148.0840" y2="-62.5262" class="btwns3"/>
+        
+            <line x1="316.0409" y1="6.8230" 
+                  x2="190.9770" y2="-227.2177" class="btwns2"/>
+        
+            <line x1="138.8410" y1="-66.3427" 
+                  x2="183.5725" y2="-226.4065" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(371.8717 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KIGALI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(319.4150 -287.1571)" 
+                class="vertice degree4 btwns0 authority4 KIGALI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-16.5790 213.3127)" 
+                class="vertice degree0 btwns0 authority0 KIGALI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -133.1651)" 
+                class="vertice degree4 btwns0 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -97.7285)" 
+                class="vertice degree0 btwns0 authority0 MONROVIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-40.4134 -277.4109)" 
+                class="vertice degree4 btwns9 authority4 PARIS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(316.0409 6.8230)" 
+                class="vertice degree8 btwns5 authority8 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(138.8410 -66.3427)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-270.4249 -290.0000)" 
+                class="vertice degree2 btwns5 authority1 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(186.2640 -236.0374)" 
+                class="vertice degree8 btwns4 authority8 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(371.8717 290.0000)" 
+                id="09KIGALI287" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09KIGALI287.html">09KIGALI287</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RWANDAN RESPONSE: SANCTIONS COMMITTEE INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(319.4150 -287.1571)" 
+                id="09KIGALI292" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09KIGALI292.html">09KIGALI292</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>RWANDAN RESPONSE: SANCTIONS COMMITTEE INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-16.5790 213.3127)" 
+                id="09KIGALI409" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09KIGALI409.html">09KIGALI409</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RWANDA: UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -133.1651)" 
+                id="09KINSHASA716" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09KINSHASA716.html">09KINSHASA716</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>DRC RESPONSE: UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -97.7285)" 
+                id="09MONROVIA540" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09MONROVIA540.html">09MONROVIA540</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNSC LIBERIA SANCTIONS COMMITTEE: INFO REPSONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-40.4134 -277.4109)" 
+                id="09PARIS982" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09PARIS982.html">09PARIS982</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>UNSC LIBERIA AND DRC SANCTIONS:  FRENCH HAVE NO INFO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(316.0409 6.8230)" 
+                id="09STATE39754" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>04/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09STATE39754.html">09STATE39754</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>INFO REQUEST FOR UNSC DRC SANCTIONS COMMITTEE LISTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(138.8410 -66.3427)" 
+                id="09STATE66735" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09STATE66735.html">09STATE66735</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UNSC DRC SANCTIONS COMMITTEE INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-270.4249 -290.0000)" 
+                id="09STATE67910" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09STATE67910.html">09STATE67910</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UNSC LIBERIA SANCTIONS COMMITTEE: INFO REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.2640 -236.0374)" 
+                id="09STATE79316" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>07/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09STATE79316.html">09STATE79316</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>UNSC DRC SANCTIONS COMMITTEE DELISTING PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

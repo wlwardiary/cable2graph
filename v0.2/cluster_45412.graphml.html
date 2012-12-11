@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH526">06PHNOMPENH526</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06PHNOMPENH526.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CAMBODIA: FACTORY MONITORING PROJECT PREPARES FOR INDEPENDENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH655">06PHNOMPENH655</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06PHNOMPENH655.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/07/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA:  GARMENT SECTOR STRIKES RISE SHARPLY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH814">06PHNOMPENH814</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06PHNOMPENH814.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA:  WORKERS MARCH DESPITE POLICE INTERVENTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH998">06PHNOMPENH998</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06PHNOMPENH998.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIAN LABOR REACTION TO NEW LABOR MINISTER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PHNOMPENH1035">06PHNOMPENH1035</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/28/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH1048">06PHNOMPENH1048</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1048.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PROMISING CAMBODIAN UNION'S DECLINE HIGHLIGHTS COMMON UNION FAILINGS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH1124">06PHNOMPENH1124</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1124.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIAN GARMENT SECTOR WORRIED ABOUT DRAMATIC INCREASE IN LABOR UNREST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH1174">06PHNOMPENH1174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA:  AMBASSADOR URGES RESTRAINT IN GARMENT SECTOR; JULY 3 GENERAL STRIKE LOOMS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PHNOMPENH1176">06PHNOMPENH1176</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1176.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA:  GARMENT MANUFACTURERS BLAME UNIONS FOR LABOR PROBLEMS; EMBASSY URGES COMPROMISE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PHNOMPENH662">07PHNOMPENH662</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07PHNOMPENH662.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA:  PROPOSED NIGHT SHIFT WAGE DECREASE RANKLES UNION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PHNOMPENH788">07PHNOMPENH788</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07PHNOMPENH788.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CAMBODIA'S STRIKES WANE, BUT CONTENTIOUS LABOR ISSUES LOOM</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="315.0107" y1="110.7416" 
+                  x2="128.1380" y2="-4.7006" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="42.4260" 
+                  x2="-181.1211" y2="26.2967" class="btwns5"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="109.6305" y2="-9.9562" class="btwns0"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="61.6299" y2="153.9484" class="btwns10"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="238.3433" y2="-160.5376" class="btwns10"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="-161.2244" y2="24.3156" class="btwns10"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="380.0108" y2="-22.0940" class="btwns5"/>
+        
+            <line x1="119.6305" y1="-9.9562" 
+                  x2="-61.1608" y2="-150.5763" class="btwns10"/>
+        
+            <line x1="58.2939" y1="163.3755" 
+                  x2="3.6996" y2="280.9304" class="btwns5"/>
+        
+            <line x1="244.5343" y1="-168.3906" 
+                  x2="319.2264" y2="-281.6519" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-22.5596" 
+                  x2="380.0000" y2="-22.5596" class="btwns0"/>
+        
+            <line x1="-220.7566" y1="-259.5424" 
+                  x2="-77.3319" y2="-162.3266" class="btwns5"/>
+        
+            <line x1="-69.0542" y1="-156.7158" 
+                  x2="-79.0542" y2="-156.7158" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(315.0107 110.7416)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 42.4260)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(119.6305 -9.9562)" 
+                class="vertice degree10 btwns10 authority10 PHNOMPENH">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(58.2939 163.3755)" 
+                class="vertice degree1 btwns2 authority2 PHNOMPENH">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-0.5125 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(244.5343 -168.3906)" 
+                class="vertice degree1 btwns2 authority2 PHNOMPENH">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(324.7317 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-171.1508 25.5268)" 
+                class="vertice degree1 btwns2 authority2 PHNOMPENH">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -22.5596)" 
+                class="vertice degree2 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-220.7566 -259.5424)" 
+                class="vertice degree0 btwns0 authority0 PHNOMPENH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-69.0542 -156.7158)" 
+                class="vertice degree4 btwns2 authority2 PHNOMPENH">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(315.0107 110.7416)" 
+                id="06PHNOMPENH1035" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PHNOMPENH1035
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 42.4260)" 
+                id="06PHNOMPENH1048" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1048.html">06PHNOMPENH1048</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PROMISING CAMBODIAN UNION'S DECLINE HIGHLIGHTS COMMON UNION FAILINGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(119.6305 -9.9562)" 
+                id="06PHNOMPENH1124" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1124.html">06PHNOMPENH1124</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CAMBODIAN GARMENT SECTOR WORRIED ABOUT DRAMATIC INCREASE IN LABOR UNREST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(58.2939 163.3755)" 
+                id="06PHNOMPENH1174" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1174.html">06PHNOMPENH1174</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CAMBODIA:  AMBASSADOR URGES RESTRAINT IN GARMENT SECTOR; JULY 3 GENERAL STRIKE LOOMS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-0.5125 290.0000)" 
+                id="06PHNOMPENH1176" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PHNOMPENH1176.html">06PHNOMPENH1176</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CAMBODIA:  GARMENT MANUFACTURERS BLAME UNIONS FOR LABOR PROBLEMS; EMBASSY URGES COMPROMISE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(244.5343 -168.3906)" 
+                id="06PHNOMPENH526" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06PHNOMPENH526.html">06PHNOMPENH526</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CAMBODIA: FACTORY MONITORING PROJECT PREPARES FOR INDEPENDENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(324.7317 -290.0000)" 
+                id="06PHNOMPENH655" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06PHNOMPENH655.html">06PHNOMPENH655</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CAMBODIA:  GARMENT SECTOR STRIKES RISE SHARPLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-171.1508 25.5268)" 
+                id="06PHNOMPENH814" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06PHNOMPENH814.html">06PHNOMPENH814</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CAMBODIA:  WORKERS MARCH DESPITE POLICE INTERVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -22.5596)" 
+                id="06PHNOMPENH998" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06PHNOMPENH998.html">06PHNOMPENH998</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CAMBODIAN LABOR REACTION TO NEW LABOR MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-220.7566 -259.5424)" 
+                id="07PHNOMPENH662" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07PHNOMPENH662.html">07PHNOMPENH662</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CAMBODIA:  PROPOSED NIGHT SHIFT WAGE DECREASE RANKLES UNION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-69.0542 -156.7158)" 
+                id="07PHNOMPENH788" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07PHNOMPENH788.html">07PHNOMPENH788</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CAMBODIA'S STRIKES WANE, BUT CONTENTIOUS LABOR ISSUES LOOM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

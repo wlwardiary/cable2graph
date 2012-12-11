@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD367">08BAGHDAD367</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08BAGHDAD367.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/07/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT-WASIT; MEETING WITH REPRESENTATIVES OF THE SADRIST TREND IN WASIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD748">08BAGHDAD748</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BAGHDAD748.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: PRT INCREASES SADRIST ENGAGEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08BAGHDAD824">08BAGHDAD824</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/18/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD842">08BAGHDAD842</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BAGHDAD842.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: STATUS OF SADRIST CEASEFIRE IN KUT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD952">08BAGHDAD952</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BAGHDAD952.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: POLITICAL MOTIVES BEHIND RECENT ISF ACTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1029">08BAGHDAD1029</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BAGHDAD1029.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: 3ID DEP CG DISCUSSES WASIT SECURITY WITH ISF AND CIVILIAN OFFICIALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1040">08BAGHDAD1040</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BAGHDAD1040.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/05/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT-WASIT: MID-LEVEL SADRISTS REENGAGE OVER DETAINEE RELEASE PROGRAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1056">08BAGHDAD1056</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BAGHDAD1056.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRT WASIT: LOCAL LEADERS ASSESS RECENT VIOLENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1383">08BAGHDAD1383</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BAGHDAD1383.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: BLOOD BAG DONATION FURTHERS SADRIST ENGAGEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1455">08BAGHDAD1455</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BAGHDAD1455.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: SADRIST PC MEMBER PREDICTS CHANGE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD1523">08BAGHDAD1523</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BAGHDAD1523.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRT WASIT: GEN CARDON DISCUSSES SECURITY WITH SADRIST PC MEMBER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BAGHDAD2910">08BAGHDAD2910</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/09/08</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-191.4703" y1="290.0000" 
+                  x2="-307.2041" y2="176.0198" class="btwns1"/>
+        
+            <line x1="-191.4703" y1="290.0000" 
+                  x2="-193.8951" y2="171.6577" class="btwns1"/>
+        
+            <line x1="213.0135" y1="31.5028" 
+                  x2="325.0221" y2="-101.8539" class="btwns4"/>
+        
+            <line x1="213.0135" y1="31.5028" 
+                  x2="-99.2798" y2="73.2584" class="btwns10"/>
+        
+            <line x1="213.0135" y1="31.5028" 
+                  x2="381.5436" y2="137.8753" class="btwns2"/>
+        
+            <line x1="213.0135" y1="31.5028" 
+                  x2="185.5620" y2="-94.4781" class="btwns4"/>
+        
+            <line x1="331.4536" y1="-109.5112" 
+                  x2="160.5554" y2="-217.1952" class="btwns2"/>
+        
+            <line x1="331.4536" y1="-109.5112" 
+                  x2="193.4266" y2="-104.6042" class="btwns0"/>
+        
+            <line x1="-274.7123" y1="28.6637" 
+                  x2="-118.8277" y2="71.9104" class="btwns1"/>
+        
+            <line x1="-274.7123" y1="28.6637" 
+                  x2="-311.6122" y2="159.3791" class="btwns0"/>
+        
+            <line x1="-274.7123" y1="28.6637" 
+                  x2="-199.2833" y2="153.1081" class="btwns0"/>
+        
+            <line x1="-109.1916" y1="74.5837" 
+                  x2="-305.2450" y2="164.8218" class="btwns2"/>
+        
+            <line x1="-109.1916" y1="74.5837" 
+                  x2="-187.1185" y2="154.5002" class="btwns2"/>
+        
+            <line x1="-109.1916" y1="74.5837" 
+                  x2="-380.0093" y2="86.2478" class="btwns1"/>
+        
+            <line x1="-314.3290" y1="169.0030" 
+                  x2="-204.0813" y2="162.2694" class="btwns0"/>
+        
+            <line x1="-314.3290" y1="169.0030" 
+                  x2="-383.2327" y2="94.0405" class="btwns0"/>
+        
+            <line x1="-59.5021" y1="-290.0000" 
+                  x2="142.5676" y2="-225.5643" class="btwns2"/>
+        
+            <line x1="-194.0999" y1="161.6598" 
+                  x2="-380.6607" y2="90.2528" class="btwns0"/>
+        
+            <line x1="152.0949" y1="-222.5262" 
+                  x2="180.8718" y2="-113.9153" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-191.4703 290.0000)" 
+                class="vertice degree2 btwns0 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(213.0135 31.5028)" 
+                class="vertice degree7 btwns10 authority7 BAGHDAD">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(331.4536 -109.5112)" 
+                class="vertice degree5 btwns2 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-274.7123 28.6637)" 
+                class="vertice degree5 btwns0 authority5 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-109.1916 74.5837)" 
+                class="vertice degree10 btwns8 authority10 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-314.3290 169.0030)" 
+                class="vertice degree10 btwns1 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-59.5021 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-194.0999 161.6598)" 
+                class="vertice degree10 btwns1 authority9 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 86.6781)" 
+                class="vertice degree5 btwns0 authority5 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 143.2128)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(152.0949 -222.5262)" 
+                class="vertice degree5 btwns2 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(183.4330 -104.2489)" 
+                class="vertice degree5 btwns2 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-191.4703 290.0000)" 
+                id="08BAGHDAD1029" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BAGHDAD1029.html">08BAGHDAD1029</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PRT WASIT: 3ID DEP CG DISCUSSES WASIT SECURITY WITH ISF AND CIVILIAN OFFICIALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(213.0135 31.5028)" 
+                id="08BAGHDAD1040" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>04/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BAGHDAD1040.html">08BAGHDAD1040</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>PRT-WASIT: MID-LEVEL SADRISTS REENGAGE OVER DETAINEE RELEASE PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(331.4536 -109.5112)" 
+                id="08BAGHDAD1056" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BAGHDAD1056.html">08BAGHDAD1056</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRT WASIT: LOCAL LEADERS ASSESS RECENT VIOLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-274.7123 28.6637)" 
+                id="08BAGHDAD1383" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BAGHDAD1383.html">08BAGHDAD1383</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRT WASIT: BLOOD BAG DONATION FURTHERS SADRIST ENGAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-109.1916 74.5837)" 
+                id="08BAGHDAD1455" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BAGHDAD1455.html">08BAGHDAD1455</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PRT WASIT: SADRIST PC MEMBER PREDICTS CHANGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-314.3290 169.0030)" 
+                id="08BAGHDAD1523" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BAGHDAD1523.html">08BAGHDAD1523</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PRT WASIT: GEN CARDON DISCUSSES SECURITY WITH SADRIST PC MEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-59.5021 -290.0000)" 
+                id="08BAGHDAD2910" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BAGHDAD2910
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-194.0999 161.6598)" 
+                id="08BAGHDAD367" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08BAGHDAD367.html">08BAGHDAD367</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PRT-WASIT; MEETING WITH REPRESENTATIVES OF THE SADRIST TREND IN WASIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 86.6781)" 
+                id="08BAGHDAD748" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BAGHDAD748.html">08BAGHDAD748</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRT WASIT: PRT INCREASES SADRIST ENGAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 143.2128)" 
+                id="08BAGHDAD824" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BAGHDAD824
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(152.0949 -222.5262)" 
+                id="08BAGHDAD842" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BAGHDAD842.html">08BAGHDAD842</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRT WASIT: STATUS OF SADRIST CEASEFIRE IN KUT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(183.4330 -104.2489)" 
+                id="08BAGHDAD952" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BAGHDAD952.html">08BAGHDAD952</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PRT WASIT: POLITICAL MOTIVES BEHIND RECENT ISF ACTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD4672">05BAGHDAD4672</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD4716">05BAGHDAD4716</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD4745">05BAGHDAD4745</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05AMMAN9295">05AMMAN9295</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05AMMAN9295.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DETAINEE ABUSE: ICRC ON DETENTION FACILITY ACCESS, SADDAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD4800">05BAGHDAD4800</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD4800.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/05</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">UPDATED STATUS OF IRAQ DETAINEE ABUSE INVESTIGATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BAGHDAD4921">05BAGHDAD4921</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/09/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD5020">05BAGHDAD5020</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD5020.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">BUNKER INVESTIGATION FALTERS, NATIONWIDE INSPECTIONS GATHER STEAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD5024">05BAGHDAD5024</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD5024.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/16/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQ: DEMARCHE ON THREATS TO MINISTRY OF INTERIOR INSPECTION PERSONNEL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD5074">05BAGHDAD5074</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD5074.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DECEMBER 17 VISIT TO THE BUNKER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD5090">05BAGHDAD5090</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD5090.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DPM SHAWAYS EXPRESSES MISTRUST OF THE UIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD5160">05BAGHDAD5160</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05BAGHDAD5160.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DECEMBER 22 MEETING WITH IRAQI INTERIOR MINISTER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BAGHDAD293">06BAGHDAD293</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06BAGHDAD293.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UPDATE ON DETAINEE FACILITY INSPECTIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-238.8816" y1="282.0176" 
+                  x2="-72.6529" y2="289.5475" class="btwns2"/>
+        
+            <line x1="-62.6632" y1="290.0000" 
+                  x2="108.2547" y2="230.3001" class="btwns5"/>
+        
+            <line x1="299.0403" y1="241.2324" 
+                  x2="127.6648" y2="227.7849" class="btwns2"/>
+        
+            <line x1="91.5151" y1="83.0088" 
+                  x2="115.9066" y2="217.1639" class="btwns9"/>
+        
+            <line x1="91.5151" y1="83.0088" 
+                  x2="15.0654" y2="-54.7693" class="btwns10"/>
+        
+            <line x1="218.7820" y1="-118.5631" 
+                  x2="19.8824" y2="-66.0654" class="btwns5"/>
+        
+            <line x1="218.7820" y1="-118.5631" 
+                  x2="380.0080" y2="-112.1193" class="btwns2"/>
+        
+            <line x1="10.2135" y1="-63.5134" 
+                  x2="-112.4822" y2="-160.3340" class="btwns3"/>
+        
+            <line x1="10.2135" y1="-63.5134" 
+                  x2="-203.0286" y2="-60.4974" class="btwns3"/>
+        
+            <line x1="-120.3324" y1="-166.5287" 
+                  x2="-206.4509" y2="-67.8890" class="btwns0"/>
+        
+            <line x1="-120.3324" y1="-166.5287" 
+                  x2="-115.3970" y2="-280.0094" class="btwns2"/>
+        
+            <line x1="-213.0276" y1="-60.3560" 
+                  x2="-380.4148" y2="-10.5825" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-238.8816 282.0176)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-62.6632 290.0000)" 
+                class="vertice degree3 btwns2 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(299.0403 241.2324)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(91.5151 83.0088)" 
+                class="vertice degree3 btwns7 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(117.6954 227.0026)" 
+                class="vertice degree6 btwns6 authority6 BAGHDAD">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(218.7820 -118.5631)" 
+                class="vertice degree3 btwns2 authority3 BAGHDAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(10.2135 -63.5134)" 
+                class="vertice degree10 btwns10 authority10 BAGHDAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-120.3324 -166.5287)" 
+                class="vertice degree6 btwns2 authority6 BAGHDAD">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-213.0276 -60.3560)" 
+                class="vertice degree6 btwns2 authority6 BAGHDAD">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-114.9625 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -7.7323)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -111.7199)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-238.8816 282.0176)" 
+                id="05AMMAN9295" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05AMMAN9295.html">05AMMAN9295</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DETAINEE ABUSE: ICRC ON DETENTION FACILITY ACCESS, SADDAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-62.6632 290.0000)" 
+                id="05BAGHDAD4672" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05BAGHDAD4672
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(299.0403 241.2324)" 
+                id="05BAGHDAD4716" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BAGHDAD4716
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(91.5151 83.0088)" 
+                id="05BAGHDAD4745" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05BAGHDAD4745
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(117.6954 227.0026)" 
+                id="05BAGHDAD4800" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>12/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD4800.html">05BAGHDAD4800</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UPDATED STATUS OF IRAQ DETAINEE ABUSE INVESTIGATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(218.7820 -118.5631)" 
+                id="05BAGHDAD4921" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05BAGHDAD4921
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(10.2135 -63.5134)" 
+                id="05BAGHDAD5020" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD5020.html">05BAGHDAD5020</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>BUNKER INVESTIGATION FALTERS, NATIONWIDE INSPECTIONS GATHER STEAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-120.3324 -166.5287)" 
+                id="05BAGHDAD5024" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>12/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD5024.html">05BAGHDAD5024</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>IRAQ: DEMARCHE ON THREATS TO MINISTRY OF INTERIOR INSPECTION PERSONNEL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-213.0276 -60.3560)" 
+                id="05BAGHDAD5074" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>12/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD5074.html">05BAGHDAD5074</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>DECEMBER 17 VISIT TO THE BUNKER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-114.9625 -290.0000)" 
+                id="05BAGHDAD5090" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD5090.html">05BAGHDAD5090</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DPM SHAWAYS EXPRESSES MISTRUST OF THE UIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -7.7323)" 
+                id="05BAGHDAD5160" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05BAGHDAD5160.html">05BAGHDAD5160</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DECEMBER 22 MEETING WITH IRAQI INTERIOR MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -111.7199)" 
+                id="06BAGHDAD293" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06BAGHDAD293.html">06BAGHDAD293</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UPDATE ON DETAINEE FACILITY INSPECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

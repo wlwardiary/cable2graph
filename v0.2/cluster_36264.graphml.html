@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06LIMA1653">06LIMA1653</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/30/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1681">06LIMA1681</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1681.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHAVEZ FUELS MORE CONTRETEMPS WITH PERU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CARACAS1174">06CARACAS1174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06CARACAS1174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TAKING THE BAIT:  CHAVEZ CREATES ANOTHER INTERNATIONAL ROW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1752">06LIMA1752</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1752.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FOREIGN MINISTER MAURTUA'S MESSAGE TO OAS MEMBER STATE AMBASSADORS ON VENEZUELA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1807">06LIMA1807</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1807.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/10/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HUMALA CAMPAIGN ALLEGES U.S. SUPPORTS GARCIA AND BEHIND ATTEMPTS TO UNDERCUT THE UPP CANDIDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1852">06LIMA1852</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1852.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">HUMALA VISA ISSUE FOCUSES ATTENTION ON HIS ROLE IN ANDAHUAYLAS UPRISING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1887">06LIMA1887</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1887.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GARCIA MAINTAINS COMFORTABLE LEAD OVER HUMALA IN APOYO POLL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA1974">06LIMA1974</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA1974.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VIEWS FROM THE CAMPAIGN TRAIL:  ALL EYES ON THE PRESIDENTIAL DEBATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA2039">06LIMA2039</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA2039.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THE GARCIA-HUMALA DEBATE: THE TWO TALK PAST EACH OTHER TO THEIR TARGET AUDIENCES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA2057">06LIMA2057</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA2057.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HUMALA'S FRAUD CLAIMS STIR CONCERN OVER POST-ELECTION DISTURBANCES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA2066">06LIMA2066</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA2066.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HUMALA'S IMAGE CONSULTANT ON DEBATE, CAMPAIGN STRATEGY FOR THE STRETCH RUN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LIMA2096">06LIMA2096</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA2096.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LATEST (PRE-DEBATE) POLLS SHOW GARCIA MAINTAINING HIS LEAD OVER HUMALA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA2146">06LIMA2146</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LIMA2146.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LATEST APOYO POLLING INDICATES GARCIA'S LEAD OVER HUMALA NARROWING TO FOUR POINTS WITH UNDER A WEEK TO GO</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="99.5590" 
+                  x2="-400.0000" y2="99.5590" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="99.5590" 
+                  x2="-273.4398" y2="17.1933" class="btwns2"/>
+        
+            <line x1="-362.8751" y1="-111.0895" 
+                  x2="-271.5041" y2="3.6010" class="btwns2"/>
+        
+            <line x1="-265.2730" y1="11.4223" 
+                  x2="-191.2461" y2="-119.0835" class="btwns2"/>
+        
+            <line x1="-265.2730" y1="11.4223" 
+                  x2="-188.2117" y2="162.8075" class="btwns8"/>
+        
+            <line x1="-183.6752" y1="171.7193" 
+                  x2="-77.6230" y2="282.7681" class="btwns9"/>
+        
+            <line x1="-70.7165" y1="290.0000" 
+                  x2="90.7373" y2="285.7157" class="btwns10"/>
+        
+            <line x1="100.7338" y1="285.4504" 
+                  x2="189.5688" y2="165.6434" class="btwns10"/>
+        
+            <line x1="195.5249" y1="157.6107" 
+                  x2="251.0645" y2="-0.6070" class="btwns9"/>
+        
+            <line x1="254.3767" y1="-10.0425" 
+                  x2="381.6372" y2="73.3938" class="btwns2"/>
+        
+            <line x1="254.3767" y1="-10.0425" 
+                  x2="356.2728" y2="-109.0434" class="btwns2"/>
+        
+            <line x1="254.3767" y1="-10.0425" 
+                  x2="161.7695" y2="-157.1998" class="btwns5"/>
+        
+            <line x1="156.4433" y1="-165.6634" 
+                  x2="83.7185" y2="-281.5302" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 99.5590)" 
+                class="vertice degree6 btwns0 authority0 CARACAS">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-362.8751 -111.0895)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-265.2730 11.4223)" 
+                class="vertice degree10 btwns8 authority10 LIMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-186.3123 -127.7816)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-183.6752 171.7193)" 
+                class="vertice degree3 btwns8 authority3 LIMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-70.7165 290.0000)" 
+                class="vertice degree3 btwns9 authority3 LIMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(100.7338 285.4504)" 
+                class="vertice degree3 btwns9 authority3 LIMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(195.5249 157.6107)" 
+                class="vertice degree3 btwns9 authority3 LIMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(254.3767 -10.0425)" 
+                class="vertice degree10 btwns10 authority9 LIMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 78.8768)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(363.4450 -116.0119)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(156.4433 -165.6634)" 
+                class="vertice degree3 btwns2 authority3 LIMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(78.4023 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 99.5590)" 
+                id="06CARACAS1174" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06CARACAS1174.html">06CARACAS1174</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TAKING THE BAIT:  CHAVEZ CREATES ANOTHER INTERNATIONAL ROW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-362.8751 -111.0895)" 
+                id="06LIMA1653" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06LIMA1653
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-265.2730 11.4223)" 
+                id="06LIMA1681" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1681.html">06LIMA1681</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CHAVEZ FUELS MORE CONTRETEMPS WITH PERU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-186.3123 -127.7816)" 
+                id="06LIMA1752" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1752.html">06LIMA1752</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FOREIGN MINISTER MAURTUA'S MESSAGE TO OAS MEMBER STATE AMBASSADORS ON VENEZUELA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-183.6752 171.7193)" 
+                id="06LIMA1807" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1807.html">06LIMA1807</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>HUMALA CAMPAIGN ALLEGES U.S. SUPPORTS GARCIA AND BEHIND ATTEMPTS TO UNDERCUT THE UPP CANDIDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-70.7165 290.0000)" 
+                id="06LIMA1852" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1852.html">06LIMA1852</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>HUMALA VISA ISSUE FOCUSES ATTENTION ON HIS ROLE IN ANDAHUAYLAS UPRISING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(100.7338 285.4504)" 
+                id="06LIMA1887" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1887.html">06LIMA1887</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>GARCIA MAINTAINS COMFORTABLE LEAD OVER HUMALA IN APOYO POLL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(195.5249 157.6107)" 
+                id="06LIMA1974" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA1974.html">06LIMA1974</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>VIEWS FROM THE CAMPAIGN TRAIL:  ALL EYES ON THE PRESIDENTIAL DEBATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(254.3767 -10.0425)" 
+                id="06LIMA2039" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA2039.html">06LIMA2039</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>THE GARCIA-HUMALA DEBATE: THE TWO TALK PAST EACH OTHER TO THEIR TARGET AUDIENCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 78.8768)" 
+                id="06LIMA2057" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA2057.html">06LIMA2057</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMALA'S FRAUD CLAIMS STIR CONCERN OVER POST-ELECTION DISTURBANCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(363.4450 -116.0119)" 
+                id="06LIMA2066" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA2066.html">06LIMA2066</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HUMALA'S IMAGE CONSULTANT ON DEBATE, CAMPAIGN STRATEGY FOR THE STRETCH RUN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(156.4433 -165.6634)" 
+                id="06LIMA2096" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA2096.html">06LIMA2096</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LATEST (PRE-DEBATE) POLLS SHOW GARCIA MAINTAINING HIS LEAD OVER HUMALA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(78.4023 -290.0000)" 
+                id="06LIMA2146" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LIMA2146.html">06LIMA2146</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATEST APOYO POLLING INDICATES GARCIA'S LEAD OVER HUMALA NARROWING TO FOUR POINTS WITH UNDER A WEEK TO GO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

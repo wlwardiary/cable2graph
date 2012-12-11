@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08ISLAMABAD2209">08ISLAMABAD2209</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/24/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08LAHORE221">08LAHORE221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08LAHORE221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/24/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NAWAZ INELIGIBLE TO CONTEST ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ISLAMABAD2218">08ISLAMABAD2218</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08ISLAMABAD2218.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/25/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUNE 26 BY-ELECTIONS IN PAKISTAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09LAHORE9">09LAHORE9</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09LAHORE9.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">THE BATTLE TO CONTROL THE PUNJAB</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD141">09ISLAMABAD141</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09ISLAMABAD141.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONSEQUENCES OF A ZARDARI-NAWAZ SHOWDOWN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09LAHORE11">09LAHORE11</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09LAHORE11.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PUNJAB CHIEF MINISTER THREATENS "OPEN WAR" IF NAWAZ IS DISQUALIFIED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD182">09ISLAMABAD182</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09ISLAMABAD182.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">A PRIMER: PAKISTAN'S SENATE ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD239">09ISLAMABAD239</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09ISLAMABAD239.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTAN'S GOVERNMENT STABILIZES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09LAHORE34">09LAHORE34</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/16/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD378">09ISLAMABAD378</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09ISLAMABAD378.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLITICAL UPDATE: ZARDARI CONSOLIDATES POWER INSIDE AND OUT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD415">09ISLAMABAD415</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09ISLAMABAD415.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SHARIFS DISQUALIFIED FROM OFFICE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD429">09ISLAMABAD429</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09ISLAMABAD429.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMONSTRATIONS AND POLITICAL MANEUVERING CONTINUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09LAHORE35">09LAHORE35</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09LAHORE35.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PUNJAB GOVERNOR TAKES OVER WHILE PROTESTS CONTINUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD439">09ISLAMABAD439</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09ISLAMABAD439.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMONSTRATIONS CONTINUE IN PUNJAB</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD441">09ISLAMABAD441</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD441.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLITICAL TURMOIL, GOING NOWHERE FAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD477">09ISLAMABAD477</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD477.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NO CONTEST: PAKISTAN'S SENATE ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09ISLAMABAD488">09ISLAMABAD488</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/05/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KARACHI74">09KARACHI74</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09KARACHI74.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SINDH - MQM HOLDS RALLY TO SUPPORT PPP, OFFER ASSISTANCE TO PML-N</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09LAHORE41">09LAHORE41</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09LAHORE41.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">(S) SHAHBAZ SHARIF OPEN TO NEGOTIATIONS WITH PRESIDENT ZARDARI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD495">09ISLAMABAD495</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD495.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ZARDARI-NAWAZ RECONCILIATION: PLEAS FOR U.S. INTERVENTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD506">09ISLAMABAD506</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD506.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PM GILANI STAYS ABOVE THE FRAY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD508">09ISLAMABAD508</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD508.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PML-N: "WE WON'T BE FOOLED AGAIN."</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD514">09ISLAMABAD514</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD514.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LAWYERS: "OUR MARCH HAS BEGUN."</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD515">09ISLAMABAD515</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD515.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LITTLE MOVEMENT ON RECONCILIATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE23170">09STATE23170</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09STATE23170.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/09</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ACTION REQUEST: DE-ESCALATING THE POLITICAL CRISIS IN PAKISTAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD516">09ISLAMABAD516</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD516.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">LITTLE MOVEMENT ON RECONCILIATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ABUDHABI241">09ABUDHABI241</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ABUDHABI241.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UAE: STRESSING THE URGENCY OF PAKISTAN'S POLITICAL SITUATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD528">09ISLAMABAD528</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09ISLAMABAD528.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PUNJAB GOVERNOR TASEER: A FIZZLE FROM A BANG</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ISLAMABAD1141">09ISLAMABAD1141</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09ISLAMABAD1141.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUPREME COURT DECLARES THE SHARIFS ELIGIBLE AGAIN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="126.0019" y1="290.0000" 
+                  x2="156.4993" y2="223.9811" class="btwns1"/>
+        
+            <line x1="160.6929" y1="214.9030" 
+                  x2="153.5633" y2="113.8079" class="btwns3"/>
+        
+            <line x1="152.8598" y1="103.8327" 
+                  x2="115.6207" y2="-40.0738" class="btwns4"/>
+        
+            <line x1="-107.5942" y1="152.0448" 
+                  x2="-116.5777" y2="37.0991" class="btwns1"/>
+        
+            <line x1="206.0448" y1="-81.7898" 
+                  x2="191.5398" y2="-141.7370" class="btwns0"/>
+        
+            <line x1="206.0448" y1="-81.7898" 
+                  x2="278.1380" y2="-17.7855" class="btwns0"/>
+        
+            <line x1="206.0448" y1="-81.7898" 
+                  x2="122.5696" y2="-53.0139" class="btwns1"/>
+        
+            <line x1="206.0448" y1="-81.7898" 
+                  x2="131.3304" y2="-128.3495" class="btwns0"/>
+        
+            <line x1="206.0448" y1="-81.7898" 
+                  x2="251.7613" y2="-113.2342" class="btwns0"/>
+        
+            <line x1="189.1880" y1="-151.4566" 
+                  x2="119.1053" y2="-57.7626" class="btwns1"/>
+        
+            <line x1="189.1880" y1="-151.4566" 
+                  x2="132.5012" y2="-136.2321" class="btwns0"/>
+        
+            <line x1="189.1880" y1="-151.4566" 
+                  x2="250.9147" y2="-123.0784" class="btwns0"/>
+        
+            <line x1="390.0000" y1="38.4705" 
+                  x2="294.6477" y2="-6.8534" class="btwns1"/>
+        
+            <line x1="390.0000" y1="38.4705" 
+                  x2="347.4002" y2="77.2591" class="btwns0"/>
+        
+            <line x1="361.6032" y1="-89.3289" 
+                  x2="292.5858" y2="-18.3175" class="btwns0"/>
+        
+            <line x1="361.6032" y1="-89.3289" 
+                  x2="269.6021" y2="-116.1067" class="btwns0"/>
+        
+            <line x1="285.6161" y1="-11.1464" 
+                  x2="122.8741" y2="-47.5708" class="btwns4"/>
+        
+            <line x1="285.6161" y1="-11.1464" 
+                  x2="335.0430" y2="75.3102" class="btwns1"/>
+        
+            <line x1="113.1155" y1="-49.7549" 
+                  x2="23.6298" y2="-180.8830" class="btwns4"/>
+        
+            <line x1="113.1155" y1="-49.7549" 
+                  x2="106.6653" y2="21.7299" class="btwns1"/>
+        
+            <line x1="113.1155" y1="-49.7549" 
+                  x2="121.6915" y2="-123.7049" class="btwns1"/>
+        
+            <line x1="113.1155" y1="-49.7549" 
+                  x2="250.9529" y2="-114.6421" class="btwns1"/>
+        
+            <line x1="113.1155" y1="-49.7549" 
+                  x2="-107.8708" y2="23.9650" class="btwns10"/>
+        
+            <line x1="17.9930" y1="-189.1429" 
+                  x2="-105.5982" y2="-208.4095" class="btwns1"/>
+        
+            <line x1="17.9930" y1="-189.1429" 
+                  x2="34.9349" y2="-280.1688" class="btwns1"/>
+        
+            <line x1="-115.4789" y1="-209.9498" 
+                  x2="-146.9982" y2="-110.5613" class="btwns1"/>
+        
+            <line x1="-115.4789" y1="-209.9498" 
+                  x2="-161.4889" y2="-279.7341" class="btwns1"/>
+        
+            <line x1="-150.0212" y1="-101.0291" 
+                  x2="-214.6564" y2="-47.5323" class="btwns0"/>
+        
+            <line x1="-150.0212" y1="-101.0291" 
+                  x2="-119.8267" y2="17.4393" class="btwns1"/>
+        
+            <line x1="-235.1444" y1="225.1729" 
+                  x2="-236.2410" y2="128.3173" class="btwns1"/>
+        
+            <line x1="-236.3542" y1="118.3180" 
+                  x2="-285.2785" y2="54.4653" class="btwns0"/>
+        
+            <line x1="-236.3542" y1="118.3180" 
+                  x2="-210.1632" y2="50.5904" class="btwns0"/>
+        
+            <line x1="-236.3542" y1="118.3180" 
+                  x2="-335.9765" y2="122.7877" class="btwns0"/>
+        
+            <line x1="-236.3542" y1="118.3180" 
+                  x2="-125.2944" y2="33.2120" class="btwns3"/>
+        
+            <line x1="-222.3600" y1="-41.1562" 
+                  x2="-208.4396" y2="31.4424" class="btwns0"/>
+        
+            <line x1="-222.3600" y1="-41.1562" 
+                  x2="-333.3636" y2="-50.2440" class="btwns1"/>
+        
+            <line x1="-222.3600" y1="-41.1562" 
+                  x2="-125.7401" y2="21.6777" class="btwns2"/>
+        
+            <line x1="-291.3605" y1="46.5274" 
+                  x2="-338.6298" y2="-42.2335" class="btwns1"/>
+        
+            <line x1="-291.3605" y1="46.5274" 
+                  x2="-340.1671" y2="115.0893" class="btwns0"/>
+        
+            <line x1="-291.3605" y1="46.5274" 
+                  x2="-127.2954" y2="28.2374" class="btwns2"/>
+        
+            <line x1="-206.5564" y1="41.2635" 
+                  x2="-127.2337" y2="28.6945" class="btwns1"/>
+        
+            <line x1="-38.9822" y1="109.9808" 
+                  x2="-110.4848" y2="34.3941" class="btwns1"/>
+        
+            <line x1="-343.3302" y1="-51.0600" 
+                  x2="-384.9386" y2="-121.9588" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(126.0019 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(160.6929 214.9030)" 
+                class="vertice degree1 btwns1 authority1 ISLAMABAD">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(152.8598 103.8327)" 
+                class="vertice degree1 btwns2 authority1 LAHORE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-107.5942 152.0448)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(206.0448 -81.7898)" 
+                class="vertice degree5 btwns0 authority5 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(189.1880 -151.4566)" 
+                class="vertice degree3 btwns0 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 38.4705)" 
+                class="vertice degree1 btwns0 authority1 ISLAMABAD">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(361.6032 -89.3289)" 
+                class="vertice degree1 btwns0 authority1 ISLAMABAD">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(285.6161 -11.1464)" 
+                class="vertice degree5 btwns2 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(113.1155 -49.7549)" 
+                class="vertice degree10 btwns10 authority10 ISLAMABAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(17.9930 -189.1429)" 
+                class="vertice degree2 btwns2 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-115.4789 -209.9498)" 
+                class="vertice degree2 btwns1 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-150.0212 -101.0291)" 
+                class="vertice degree2 btwns0 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(340.0061 83.9916)" 
+                class="vertice degree1 btwns0 authority1 ISLAMABAD">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-235.1444 225.1729)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-236.3542 118.3180)" 
+                class="vertice degree5 btwns1 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-222.3600 -41.1562)" 
+                class="vertice degree3 btwns1 authority3 ISLAMABAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-291.3605 46.5274)" 
+                class="vertice degree3 btwns1 authority3 ISLAMABAD">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-206.5564 41.2635)" 
+                class="vertice degree2 btwns0 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-38.9822 109.9808)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-343.3302 -51.0600)" 
+                class="vertice degree2 btwns1 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -130.5833)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(105.7666 31.6894)" 
+                class="vertice degree0 btwns0 authority0 KARACHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(122.8435 -133.6383)" 
+                class="vertice degree2 btwns0 authority2 LAHORE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(36.7647 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 LAHORE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-166.9933 -288.0828)" 
+                class="vertice degree0 btwns0 authority0 LAHORE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-345.9664 123.2360)" 
+                class="vertice degree1 btwns0 authority1 LAHORE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(260.0005 -118.9013)" 
+                class="vertice degree3 btwns0 authority3 LAHORE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-117.3569 27.1295)" 
+                class="vertice degree8 btwns7 authority8 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(126.0019 290.0000)" 
+                id="08ISLAMABAD2209" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08ISLAMABAD2209
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(160.6929 214.9030)" 
+                id="08ISLAMABAD2218" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08ISLAMABAD2218.html">08ISLAMABAD2218</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JUNE 26 BY-ELECTIONS IN PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(152.8598 103.8327)" 
+                id="08LAHORE221" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08LAHORE221.html">08LAHORE221</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NAWAZ INELIGIBLE TO CONTEST ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-107.5942 152.0448)" 
+                id="09ABUDHABI241" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ABUDHABI241.html">09ABUDHABI241</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UAE: STRESSING THE URGENCY OF PAKISTAN'S POLITICAL SITUATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(206.0448 -81.7898)" 
+                id="09ISLAMABAD1141" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09ISLAMABAD1141.html">09ISLAMABAD1141</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SUPREME COURT DECLARES THE SHARIFS ELIGIBLE AGAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(189.1880 -151.4566)" 
+                id="09ISLAMABAD141" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09ISLAMABAD141.html">09ISLAMABAD141</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CONSEQUENCES OF A ZARDARI-NAWAZ SHOWDOWN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 38.4705)" 
+                id="09ISLAMABAD182" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09ISLAMABAD182.html">09ISLAMABAD182</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>A PRIMER: PAKISTAN'S SENATE ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(361.6032 -89.3289)" 
+                id="09ISLAMABAD239" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09ISLAMABAD239.html">09ISLAMABAD239</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PAKISTAN'S GOVERNMENT STABILIZES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(285.6161 -11.1464)" 
+                id="09ISLAMABAD378" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09ISLAMABAD378.html">09ISLAMABAD378</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>POLITICAL UPDATE: ZARDARI CONSOLIDATES POWER INSIDE AND OUT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(113.1155 -49.7549)" 
+                id="09ISLAMABAD415" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09ISLAMABAD415.html">09ISLAMABAD415</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SHARIFS DISQUALIFIED FROM OFFICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(17.9930 -189.1429)" 
+                id="09ISLAMABAD429" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09ISLAMABAD429.html">09ISLAMABAD429</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DEMONSTRATIONS AND POLITICAL MANEUVERING CONTINUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-115.4789 -209.9498)" 
+                id="09ISLAMABAD439" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09ISLAMABAD439.html">09ISLAMABAD439</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DEMONSTRATIONS CONTINUE IN PUNJAB</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-150.0212 -101.0291)" 
+                id="09ISLAMABAD441" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD441.html">09ISLAMABAD441</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>POLITICAL TURMOIL, GOING NOWHERE FAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(340.0061 83.9916)" 
+                id="09ISLAMABAD477" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD477.html">09ISLAMABAD477</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NO CONTEST: PAKISTAN'S SENATE ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-235.1444 225.1729)" 
+                id="09ISLAMABAD488" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09ISLAMABAD488
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-236.3542 118.3180)" 
+                id="09ISLAMABAD495" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD495.html">09ISLAMABAD495</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ZARDARI-NAWAZ RECONCILIATION: PLEAS FOR U.S. INTERVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-222.3600 -41.1562)" 
+                id="09ISLAMABAD506" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD506.html">09ISLAMABAD506</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PM GILANI STAYS ABOVE THE FRAY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-291.3605 46.5274)" 
+                id="09ISLAMABAD508" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD508.html">09ISLAMABAD508</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PML-N: "WE WON'T BE FOOLED AGAIN."</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-206.5564 41.2635)" 
+                id="09ISLAMABAD514" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD514.html">09ISLAMABAD514</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LAWYERS: "OUR MARCH HAS BEGUN."</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-38.9822 109.9808)" 
+                id="09ISLAMABAD515" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD515.html">09ISLAMABAD515</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LITTLE MOVEMENT ON RECONCILIATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-343.3302 -51.0600)" 
+                id="09ISLAMABAD516" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD516.html">09ISLAMABAD516</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LITTLE MOVEMENT ON RECONCILIATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -130.5833)" 
+                id="09ISLAMABAD528" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09ISLAMABAD528.html">09ISLAMABAD528</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PUNJAB GOVERNOR TASEER: A FIZZLE FROM A BANG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(105.7666 31.6894)" 
+                id="09KARACHI74" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09KARACHI74.html">09KARACHI74</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SINDH - MQM HOLDS RALLY TO SUPPORT PPP, OFFER ASSISTANCE TO PML-N</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(122.8435 -133.6383)" 
+                id="09LAHORE11" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09LAHORE11.html">09LAHORE11</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PUNJAB CHIEF MINISTER THREATENS "OPEN WAR" IF NAWAZ IS DISQUALIFIED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(36.7647 -290.0000)" 
+                id="09LAHORE34" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09LAHORE34
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-166.9933 -288.0828)" 
+                id="09LAHORE35" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09LAHORE35.html">09LAHORE35</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PUNJAB GOVERNOR TAKES OVER WHILE PROTESTS CONTINUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-345.9664 123.2360)" 
+                id="09LAHORE41" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09LAHORE41.html">09LAHORE41</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>(S) SHAHBAZ SHARIF OPEN TO NEGOTIATIONS WITH PRESIDENT ZARDARI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(260.0005 -118.9013)" 
+                id="09LAHORE9" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09LAHORE9.html">09LAHORE9</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>THE BATTLE TO CONTROL THE PUNJAB</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-117.3569 27.1295)" 
+                id="09STATE23170" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09STATE23170.html">09STATE23170</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>ACTION REQUEST: DE-ESCALATING THE POLITICAL CRISIS IN PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

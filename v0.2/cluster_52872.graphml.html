@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE41602">07STATE41602</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/01/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB329">07ZAGREB329</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ZAGREB329.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CENTCOM INVITATION TO CONFERENCE ON IRAQ DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BAKU375">07BAKU375</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BAKU375.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/05/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INVITATION FOR CENTCOM CONFERENCE IN IRAQ DELIVERED TO AZERBAIJAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07OSLO339">07OSLO339</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07OSLO339.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CENTCOM CONFERENCE INVITATION DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE54923">07STATE54923</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/25/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07AMMAN1803">07AMMAN1803</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07AMMAN1803.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">INVITATION TO THE COALITION CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07OSLO436">07OSLO436</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07OSLO436.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NORWEGIAN CENTCOM LIAISON WILL ATTEND CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07LUXEMBOURG156">07LUXEMBOURG156</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07LUXEMBOURG156.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LUXEMBOURG REPRESENTATION AT THE COALITION CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO932">07SARAJEVO932</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07SARAJEVO932.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">BOSNIA: NEW MINISTER OF DEFENSE TO ATTEND COALITION CONFERENCE; BOSNIAN IED CAPABILITIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07WARSAW976">07WARSAW976</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07WARSAW976.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLAND: DELIVERY OF INVITATION TO THE COALITION CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANTODOMINGO1023">07SANTODOMINGO1023</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07SANTODOMINGO1023.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COALITION CONFERENCE: NAVY CHIEF WILL REPRESENT DOMINICAN REPUBLIC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07STATE75561">07STATE75561</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07STATE75561.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUCCESSFUL CENTCOM COALITION CONFERENCE IN TAMPA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07WARSAW2323">07WARSAW2323</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/06/07</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="130.1386" y1="-173.6187" 
+                  x2="-123.4744" y2="-139.5875" class="btwns0"/>
+        
+            <line x1="390.0000" y1="41.0859" 
+                  x2="198.6659" y2="121.9043" class="btwns0"/>
+        
+            <line x1="29.5174" y1="-276.3063" 
+                  x2="-125.7565" y2="-144.7226" class="btwns0"/>
+        
+            <line x1="327.4068" y1="215.0842" 
+                  x2="197.8490" y2="131.2289" class="btwns0"/>
+        
+            <line x1="-252.6211" y1="12.1720" 
+                  x2="-139.5972" y2="-130.4208" class="btwns0"/>
+        
+            <line x1="-177.5844" y1="-290.0000" 
+                  x2="-136.1821" y2="-147.8586" class="btwns0"/>
+        
+            <line x1="-353.8928" y1="-200.4129" 
+                  x2="-143.0105" y2="-140.9706" class="btwns0"/>
+        
+            <line x1="189.4540" y1="125.7954" 
+                  x2="54.2247" y2="4.1269" class="btwns9"/>
+        
+            <line x1="189.4540" y1="125.7954" 
+                  x2="10.3705" y2="235.4004" class="btwns3"/>
+        
+            <line x1="-133.3855" y1="-138.2576" 
+                  x2="38.8028" y2="-8.5776" class="btwns10"/>
+        
+            <line x1="-133.3855" y1="-138.2576" 
+                  x2="-380.3441" y2="-71.7377" class="btwns0"/>
+        
+            <line x1="-189.4455" y1="290.0000" 
+                  x2="-7.8415" y2="243.1201" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(130.1386 -173.6187)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 41.0859)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(29.5174 -276.3063)" 
+                class="vertice degree0 btwns0 authority0 LUXEMBOURG">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(327.4068 215.0842)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-252.6211 12.1720)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-177.5844 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-353.8928 -200.4129)" 
+                class="vertice degree0 btwns0 authority0 SARAJEVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(189.4540 125.7954)" 
+                class="vertice degree5 btwns7 authority4 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-133.3855 -138.2576)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(46.7908 -2.5616)" 
+                class="vertice degree1 btwns6 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-189.4455 290.0000)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -69.1368)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(1.8411 240.6206)" 
+                class="vertice degree1 btwns2 authority1 ZAGREB">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(130.1386 -173.6187)" 
+                id="07AMMAN1803" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07AMMAN1803.html">07AMMAN1803</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INVITATION TO THE COALITION CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 41.0859)" 
+                id="07BAKU375" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BAKU375.html">07BAKU375</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INVITATION FOR CENTCOM CONFERENCE IN IRAQ DELIVERED TO AZERBAIJAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(29.5174 -276.3063)" 
+                id="07LUXEMBOURG156" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07LUXEMBOURG156.html">07LUXEMBOURG156</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LUXEMBOURG REPRESENTATION AT THE COALITION CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(327.4068 215.0842)" 
+                id="07OSLO339" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07OSLO339.html">07OSLO339</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CENTCOM CONFERENCE INVITATION DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-252.6211 12.1720)" 
+                id="07OSLO436" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07OSLO436.html">07OSLO436</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NORWEGIAN CENTCOM LIAISON WILL ATTEND CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-177.5844 -290.0000)" 
+                id="07SANTODOMINGO1023" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07SANTODOMINGO1023.html">07SANTODOMINGO1023</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COALITION CONFERENCE: NAVY CHIEF WILL REPRESENT DOMINICAN REPUBLIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-353.8928 -200.4129)" 
+                id="07SARAJEVO932" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07SARAJEVO932.html">07SARAJEVO932</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOSNIA: NEW MINISTER OF DEFENSE TO ATTEND COALITION CONFERENCE; BOSNIAN IED CAPABILITIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(189.4540 125.7954)" 
+                id="07STATE41602" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    07STATE41602
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-133.3855 -138.2576)" 
+                id="07STATE54923" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE54923
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(46.7908 -2.5616)" 
+                id="07STATE75561" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07STATE75561.html">07STATE75561</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SUCCESSFUL CENTCOM COALITION CONFERENCE IN TAMPA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-189.4455 290.0000)" 
+                id="07WARSAW2323" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07WARSAW2323
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -69.1368)" 
+                id="07WARSAW976" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07WARSAW976.html">07WARSAW976</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND: DELIVERY OF INVITATION TO THE COALITION CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.8411 240.6206)" 
+                id="07ZAGREB329" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ZAGREB329.html">07ZAGREB329</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CENTCOM INVITATION TO CONFERENCE ON IRAQ DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

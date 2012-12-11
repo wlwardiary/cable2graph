@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN179">08YEREVAN179</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN179.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA SITREP: VIOLENT PROTESTS AFTER DAWN RAID DRIVES DEMONSTRATORS FROM SQUARE INTO THE STREETS; RIOT ERUPTS IN FRONT OF FRENCH AND ITALIAN EMBASSIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN186">08YEREVAN186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA SITREP: ARMY CALLED IN TO RESTORE ORDER; STATE OF EMERGENCY DECLARED; 8 DEAD; EX-PRESIDENT UNDER DE FACTO HOUSE ARREST; CALM IN CAPITAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN187">08YEREVAN187</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN187.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARMENIA DECLARES STATE OF EMERGENCY AFTER CRACKDOWN ON ELECTION DEMONSTRATORS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN190">08YEREVAN190</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN190.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRESIDENCY PROVIDES OFFICIAL VERSION OF YEREVAN RIOTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN194">08YEREVAN194</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN194.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HOW THE STATE OF EMERGENCY IS AFFECTING NGOS AND USG ASSISTANCE PROGRAMS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN199">08YEREVAN199</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN199.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ARMENIAN SUPREME ALLEGES FIXED DECISION AGAINST LTP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN200">08YEREVAN200</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN200.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIAN GOVERNMENT CRACKDOWN INTENSIFIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08YEREVAN207">08YEREVAN207</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN226">08YEREVAN226</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN226.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA'S CONSTITUTIONAL COURT UPHOLDS PRESIDENTIAL ELECTION RESULT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN227">08YEREVAN227</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN227.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOAM RATCHETS UP THE PRESSURE UNDER STATE OF EMERGENCY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN249">08YEREVAN249</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN249.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FUGITIVE MP'S PRESS SECRETARY VISITS EMBASSY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN267">08YEREVAN267</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08YEREVAN267.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNEASY SEMI-CALM SETS IN; ALL SIDES AWAIT APRIL 9 INAUGURATION AND THE NEXT CHAPTER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN304">08YEREVAN304</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08YEREVAN304.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/09/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CLOUDINESS SURROUNDING ARMENIA'S MARCH 1-2 DEATH TOLL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08YEREVAN363">08YEREVAN363</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08YEREVAN363.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DAS BRYZA WARNS OF MCC SUSPENSION IN DISCUSSIONS OF ARMENIA'S POLITICAL CRISIS WITH GOVERNMENT AND OPPOSITION FIGURES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-91.5619" y1="12.7203" 
+                  x2="-120.7953" y2="-54.1305" class="btwns0"/>
+        
+            <line x1="-91.5619" y1="12.7203" 
+                  x2="14.3876" y2="-130.7121" class="btwns2"/>
+        
+            <line x1="-91.5619" y1="12.7203" 
+                  x2="-245.9377" y2="-3.3374" class="btwns1"/>
+        
+            <line x1="-124.8018" y1="-63.2928" 
+                  x2="11.4569" y2="-134.1423" class="btwns2"/>
+        
+            <line x1="-124.8018" y1="-63.2928" 
+                  x2="-246.7631" y2="-8.4718" class="btwns1"/>
+        
+            <line x1="-227.7724" y1="-143.2620" 
+                  x2="-380.1960" y2="-173.8955" class="btwns2"/>
+        
+            <line x1="-227.7724" y1="-143.2620" 
+                  x2="10.3308" y2="-138.9372" class="btwns5"/>
+        
+            <line x1="-227.7724" y1="-143.2620" 
+                  x2="-253.9003" y2="-14.1732" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-10.8791" 
+                  x2="380.0000" y2="-10.8791" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-10.8791" 
+                  x2="222.7441" y2="-6.4230" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-175.8659" 
+                  x2="-400.0000" y2="-175.8659" class="btwns0"/>
+        
+            <line x1="102.2927" y1="250.8492" 
+                  x2="-38.5501" y2="287.4827" class="btwns2"/>
+        
+            <line x1="102.2927" y1="250.8492" 
+                  x2="206.3078" y2="154.0186" class="btwns5"/>
+        
+            <line x1="212.7477" y1="-6.1567" 
+                  x2="213.5698" y2="137.2050" class="btwns7"/>
+        
+            <line x1="212.7477" y1="-6.1567" 
+                  x2="28.5634" y2="-133.0813" class="btwns10"/>
+        
+            <line x1="119.5034" y1="-285.0991" 
+                  x2="25.9391" y2="-147.0338" class="btwns2"/>
+        
+            <line x1="218.9120" y1="-188.5188" 
+                  x2="30.0292" y2="-141.1863" class="btwns2"/>
+        
+            <line x1="20.3292" y1="-138.7556" 
+                  x2="-44.6042" y2="-280.9041" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-91.5619 12.7203)" 
+                class="vertice degree3 btwns0 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-124.8018 -63.2928)" 
+                class="vertice degree3 btwns0 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-227.7724 -143.2620)" 
+                class="vertice degree3 btwns2 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -10.8791)" 
+                class="vertice degree3 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -175.8659)" 
+                class="vertice degree3 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(102.2927 250.8492)" 
+                class="vertice degree1 btwns2 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(212.7477 -6.1567)" 
+                class="vertice degree3 btwns6 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(119.5034 -285.0991)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-48.2281 290.0000)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(213.6271 147.2048)" 
+                class="vertice degree1 btwns3 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(218.9120 -188.5188)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(20.3292 -138.7556)" 
+                class="vertice degree10 btwns10 authority10 YEREVAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-255.8841 -4.3720)" 
+                class="vertice degree3 btwns0 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-48.7592 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-91.5619 12.7203)" 
+                id="08YEREVAN179" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN179.html">08YEREVAN179</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIA SITREP: VIOLENT PROTESTS AFTER DAWN RAID DRIVES DEMONSTRATORS FROM SQUARE INTO THE STREETS; RIOT ERUPTS IN FRONT OF FRENCH AND ITALIAN EMBASSIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-124.8018 -63.2928)" 
+                id="08YEREVAN186" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN186.html">08YEREVAN186</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIA SITREP: ARMY CALLED IN TO RESTORE ORDER; STATE OF EMERGENCY DECLARED; 8 DEAD; EX-PRESIDENT UNDER DE FACTO HOUSE ARREST; CALM IN CAPITAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-227.7724 -143.2620)" 
+                id="08YEREVAN187" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN187.html">08YEREVAN187</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIA DECLARES STATE OF EMERGENCY AFTER CRACKDOWN ON ELECTION DEMONSTRATORS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -10.8791)" 
+                id="08YEREVAN190" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN190.html">08YEREVAN190</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PRESIDENCY PROVIDES OFFICIAL VERSION OF YEREVAN RIOTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -175.8659)" 
+                id="08YEREVAN194" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN194.html">08YEREVAN194</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>HOW THE STATE OF EMERGENCY IS AFFECTING NGOS AND USG ASSISTANCE PROGRAMS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(102.2927 250.8492)" 
+                id="08YEREVAN199" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN199.html">08YEREVAN199</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ARMENIAN SUPREME ALLEGES FIXED DECISION AGAINST LTP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(212.7477 -6.1567)" 
+                id="08YEREVAN200" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN200.html">08YEREVAN200</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIAN GOVERNMENT CRACKDOWN INTENSIFIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(119.5034 -285.0991)" 
+                id="08YEREVAN207" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08YEREVAN207
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-48.2281 290.0000)" 
+                id="08YEREVAN226" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN226.html">08YEREVAN226</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARMENIA'S CONSTITUTIONAL COURT UPHOLDS PRESIDENTIAL ELECTION RESULT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(213.6271 147.2048)" 
+                id="08YEREVAN227" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN227.html">08YEREVAN227</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GOAM RATCHETS UP THE PRESSURE UNDER STATE OF EMERGENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(218.9120 -188.5188)" 
+                id="08YEREVAN249" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN249.html">08YEREVAN249</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FUGITIVE MP'S PRESS SECRETARY VISITS EMBASSY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(20.3292 -138.7556)" 
+                id="08YEREVAN267" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08YEREVAN267.html">08YEREVAN267</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UNEASY SEMI-CALM SETS IN; ALL SIDES AWAIT APRIL 9 INAUGURATION AND THE NEXT CHAPTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-255.8841 -4.3720)" 
+                id="08YEREVAN304" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08YEREVAN304.html">08YEREVAN304</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CLOUDINESS SURROUNDING ARMENIA'S MARCH 1-2 DEATH TOLL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-48.7592 -290.0000)" 
+                id="08YEREVAN363" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08YEREVAN363.html">08YEREVAN363</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DAS BRYZA WARNS OF MCC SUSPENSION IN DISCUSSIONS OF ARMENIA'S POLITICAL CRISIS WITH GOVERNMENT AND OPPOSITION FIGURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

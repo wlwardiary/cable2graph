@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05SEOUL355">05SEOUL355</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05SEOUL371">05SEOUL371</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05SEOUL444">05SEOUL444</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05VIENTIANE106">05VIENTIANE106</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05VIENTIANE128">05VIENTIANE128</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05VIENTIANE97">05VIENTIANE97</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BANGKOK608">05BANGKOK608</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05BANGKOK608.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/24/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THAI MFA AND THE NORTH KOREAN IN VIENTIANE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BANGKOK656">05BANGKOK656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05BANGKOK656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE13599">05STATE13599</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/25/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BANGKOK690">05BANGKOK690</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05BANGKOK690.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ICRC AND NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BANGKOK802">05BANGKOK802</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05BANGKOK802.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/31/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR-FM SURAKIART ON NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="204.3321" y1="-152.6396" 
+                  x2="185.5393" y2="19.6105" class="btwns6"/>
+        
+            <line x1="204.3321" y1="-152.6396" 
+                  x2="179.6275" y2="-280.1825" class="btwns1"/>
+        
+            <line x1="184.4548" y1="29.5515" 
+                  x2="35.8513" y2="150.3963" class="btwns1"/>
+        
+            <line x1="184.4548" y1="29.5515" 
+                  x2="307.7349" y2="151.9911" class="btwns1"/>
+        
+            <line x1="184.4548" y1="29.5515" 
+                  x2="-35.1333" y2="26.2849" class="btwns7"/>
+        
+            <line x1="184.4548" y1="29.5515" 
+                  x2="380.2190" y2="-12.1066" class="btwns1"/>
+        
+            <line x1="28.0928" y1="156.7055" 
+                  x2="-49.5496" y2="281.5090" class="btwns1"/>
+        
+            <line x1="28.0928" y1="156.7055" 
+                  x2="-40.2407" y2="34.8582" class="btwns0"/>
+        
+            <line x1="-241.4605" y1="-60.2996" 
+                  x2="-263.7526" y2="-194.1570" class="btwns1"/>
+        
+            <line x1="-241.4605" y1="-60.2996" 
+                  x2="-54.2844" y2="22.1068" class="btwns10"/>
+        
+            <line x1="-241.4605" y1="-60.2996" 
+                  x2="-381.2742" y2="17.9681" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(204.3321 -152.6396)" 
+                class="vertice degree2 btwns3 authority2 BANGKOK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(184.4548 29.5515)" 
+                class="vertice degree10 btwns10 authority10 BANGKOK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(28.0928 156.7055)" 
+                class="vertice degree5 btwns3 authority5 BANGKOK">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-241.4605 -60.2996)" 
+                class="vertice degree5 btwns5 authority4 BANGKOK">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(314.8301 159.0380)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-54.8319 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-265.3953 -204.0211)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-45.1322 26.1362)" 
+                class="vertice degree5 btwns7 authority5 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -14.1879)" 
+                class="vertice degree0 btwns0 authority0 VIENTIANE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 22.8528)" 
+                class="vertice degree0 btwns0 authority0 VIENTIANE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(177.7259 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 VIENTIANE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(204.3321 -152.6396)" 
+                id="05BANGKOK608" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05BANGKOK608.html">05BANGKOK608</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>THAI MFA AND THE NORTH KOREAN IN VIENTIANE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(184.4548 29.5515)" 
+                id="05BANGKOK656" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05BANGKOK656.html">05BANGKOK656</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(28.0928 156.7055)" 
+                id="05BANGKOK690" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05BANGKOK690.html">05BANGKOK690</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ICRC AND NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-241.4605 -60.2996)" 
+                id="05BANGKOK802" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/31/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05BANGKOK802.html">05BANGKOK802</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>AMBASSADOR-FM SURAKIART ON NORTH KOREAN ASYLUM SEEKER IN VIENTIANE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(314.8301 159.0380)" 
+                id="05SEOUL355" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05SEOUL355
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-54.8319 290.0000)" 
+                id="05SEOUL371" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05SEOUL371
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-265.3953 -204.0211)" 
+                id="05SEOUL444" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05SEOUL444
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-45.1322 26.1362)" 
+                id="05STATE13599" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    05STATE13599
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -14.1879)" 
+                id="05VIENTIANE106" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05VIENTIANE106
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 22.8528)" 
+                id="05VIENTIANE128" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05VIENTIANE128
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(177.7259 -290.0000)" 
+                id="05VIENTIANE97" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05VIENTIANE97
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

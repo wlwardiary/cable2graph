@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE53614">06STATE53614</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/31/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06OSLO554">06OSLO554</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/04/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STOCKHOLM450">08STOCKHOLM450</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/21/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08LISBON1628">08LISBON1628</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/10/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STOCKHOLM510">08STOCKHOLM510</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08STOCKHOLM510.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/17/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EUROPEAN COURT TO REVIEW SWEDEN'S SNOOP LAW; RUSSIA A TARGET OF LAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE101569">08STATE101569</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/23/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STOCKHOLM648">08STOCKHOLM648</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08STOCKHOLM648.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/26/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">STOCKHOLM ON HSPD-6 TERRORIST SCREENING INFORMATION EXCHANGE NEGOTIATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08OSLO557">08OSLO557</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/15/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2876">08TOKYO2876</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08TOKYO2876.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/15/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">(SBU) Delivery of Demarche to GOJ on proposal to exchange terrorist screening information pursuant to Homeland Security Presidential Directive 6 (HSPD-6)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08LISBON2648">08LISBON2648</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08LISBON2648.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/16/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">(SBU) Portuguese interim response to demarche on sharing terrorist screening information pursuant to HSPD-6</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STOCKHOLM704">08STOCKHOLM704</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08STOCKHOLM704.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SWEDISH SCENESETTER FOR HSPD-6 NEGOTIATING TEAM VISIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STOCKHOLM748">08STOCKHOLM748</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08STOCKHOLM748.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">HSPD-6 TEAM VISITS TO DISCUSS TERRORIST SCREENING INFORMATION EXCHANGE WITH SWEDEN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08REYKJAVIK275">08REYKJAVIK275</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08REYKJAVIK275.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ICELAND: CONSIDERING RESPONSE TO PROPOSAL FOR TERRORIST SCREENING INFORMATION EXCHANGE PURSUANT TO HSPD-6</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08OSLO665">08OSLO665</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08OSLO665.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">VISITING TEAM ADVANCES HSPD-6 IN NORWAY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DUBLIN3">09DUBLIN3</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DUBLIN3.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/06/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MEETING WITH THE IRISH REGARDING HOMELAND SECURITY PRESIDENTIAL DIRECTIVE 6</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09OSLO644">09OSLO644</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09OSLO644.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NORWAY: AGREEMENT REACHED ON HSPD-6 TEXT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="267.7874" y1="-216.7263" 
+                  x2="109.8872" y2="-146.9748" class="btwns2"/>
+        
+            <line x1="272.3391" y1="-94.2306" 
+                  x2="110.3600" y2="-140.2037" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-55.3726" 
+                  x2="-274.0699" y2="-5.3194" class="btwns2"/>
+        
+            <line x1="-264.8891" y1="-1.3556" 
+                  x2="-84.7347" y2="38.6973" class="btwns4"/>
+        
+            <line x1="135.0711" y1="-290.0000" 
+                  x2="103.0133" y2="-152.6723" class="btwns2"/>
+        
+            <line x1="100.7400" y1="-142.9341" 
+                  x2="-68.0628" y2="33.6392" class="btwns10"/>
+        
+            <line x1="100.7400" y1="-142.9341" 
+                  x2="-10.4051" y2="-251.6574" class="btwns2"/>
+        
+            <line x1="-116.9742" y1="206.4237" 
+                  x2="-77.4321" y2="50.5605" class="btwns2"/>
+        
+            <line x1="-74.9731" y1="40.8676" 
+                  x2="71.9516" y2="163.0265" class="btwns10"/>
+        
+            <line x1="-74.9731" y1="40.8676" 
+                  x2="-221.5651" y2="137.9151" class="btwns2"/>
+        
+            <line x1="-74.9731" y1="40.8676" 
+                  x2="-132.4411" y2="-83.2737" class="btwns2"/>
+        
+            <line x1="390.0000" y1="182.0933" 
+                  x2="251.5694" y2="198.7643" class="btwns2"/>
+        
+            <line x1="390.0000" y1="182.0933" 
+                  x2="317.7289" y2="276.3262" class="btwns0"/>
+        
+            <line x1="241.6411" y1="199.9599" 
+                  x2="89.4679" y2="171.2723" class="btwns5"/>
+        
+            <line x1="241.6411" y1="199.9599" 
+                  x2="305.2548" y2="276.5678" class="btwns1"/>
+        
+            <line x1="241.6411" y1="199.9599" 
+                  x2="168.6497" y2="282.5086" class="btwns0"/>
+        
+            <line x1="79.6410" y1="169.4197" 
+                  x2="156.3842" y2="281.7432" class="btwns3"/>
+        
+            <line x1="311.6432" y1="284.2612" 
+                  x2="172.0182" y2="289.6167" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(267.7874 -216.7263)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(272.3391 -94.2306)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -55.3726)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-264.8891 -1.3556)" 
+                class="vertice degree2 btwns1 authority1 LISBON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(135.0711 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(100.7400 -142.9341)" 
+                class="vertice degree8 btwns5 authority7 OSLO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-116.9742 206.4237)" 
+                class="vertice degree0 btwns0 authority0 REYKJAVIK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-74.9731 40.8676)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 182.0933)" 
+                class="vertice degree2 btwns0 authority2 STOCKHOLM">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(241.6411 199.9599)" 
+                class="vertice degree6 btwns2 authority6 STOCKHOLM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(79.6410 169.4197)" 
+                class="vertice degree4 btwns5 authority4 STOCKHOLM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(311.6432 284.2612)" 
+                class="vertice degree4 btwns0 authority4 STOCKHOLM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(162.0256 290.0000)" 
+                class="vertice degree4 btwns0 authority4 STOCKHOLM">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-229.9034 143.4352)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-136.6421 -92.3485)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-17.5536 -258.6502)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(267.7874 -216.7263)" 
+                id="06OSLO554" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06OSLO554
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(272.3391 -94.2306)" 
+                id="06STATE53614" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE53614
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -55.3726)" 
+                id="08LISBON1628" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08LISBON1628
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-264.8891 -1.3556)" 
+                id="08LISBON2648" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08LISBON2648.html">08LISBON2648</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>(SBU) Portuguese interim response to demarche on sharing terrorist screening information pursuant to HSPD-6</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(135.0711 -290.0000)" 
+                id="08OSLO557" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08OSLO557
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(100.7400 -142.9341)" 
+                id="08OSLO665" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>12/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08OSLO665.html">08OSLO665</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>VISITING TEAM ADVANCES HSPD-6 IN NORWAY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-116.9742 206.4237)" 
+                id="08REYKJAVIK275" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08REYKJAVIK275.html">08REYKJAVIK275</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ICELAND: CONSIDERING RESPONSE TO PROPOSAL FOR TERRORIST SCREENING INFORMATION EXCHANGE PURSUANT TO HSPD-6</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-74.9731 40.8676)" 
+                id="08STATE101569" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE101569
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 182.0933)" 
+                id="08STOCKHOLM450" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08STOCKHOLM450
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(241.6411 199.9599)" 
+                id="08STOCKHOLM510" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08STOCKHOLM510.html">08STOCKHOLM510</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>EUROPEAN COURT TO REVIEW SWEDEN'S SNOOP LAW; RUSSIA A TARGET OF LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(79.6410 169.4197)" 
+                id="08STOCKHOLM648" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>09/26/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08STOCKHOLM648.html">08STOCKHOLM648</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>STOCKHOLM ON HSPD-6 TERRORIST SCREENING INFORMATION EXCHANGE NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(311.6432 284.2612)" 
+                id="08STOCKHOLM704" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08STOCKHOLM704.html">08STOCKHOLM704</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SWEDISH SCENESETTER FOR HSPD-6 NEGOTIATING TEAM VISIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(162.0256 290.0000)" 
+                id="08STOCKHOLM748" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08STOCKHOLM748.html">08STOCKHOLM748</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>HSPD-6 TEAM VISITS TO DISCUSS TERRORIST SCREENING INFORMATION EXCHANGE WITH SWEDEN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-229.9034 143.4352)" 
+                id="08TOKYO2876" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08TOKYO2876.html">08TOKYO2876</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(SBU) Delivery of Demarche to GOJ on proposal to exchange terrorist screening information pursuant to Homeland Security Presidential Directive 6 (HSPD-6)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-136.6421 -92.3485)" 
+                id="09DUBLIN3" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DUBLIN3.html">09DUBLIN3</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MEETING WITH THE IRISH REGARDING HOMELAND SECURITY PRESIDENTIAL DIRECTIVE 6</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-17.5536 -258.6502)" 
+                id="09OSLO644" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09OSLO644.html">09OSLO644</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NORWAY: AGREEMENT REACHED ON HSPD-6 TEXT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ324">06LAPAZ324</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06LAPAZ324.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LLOYD PILOTS ON STRIKE, NO RESOLUTION IN SIGHT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ351">06LAPAZ351</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06LAPAZ351.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/10/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOB INTERVENES TO END LLOYD PILOTS' STRIKE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ406">06LAPAZ406</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06LAPAZ406.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECONOMIC PLANNING MINISTER VAGUE ON PLANS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ417">06LAPAZ417</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06LAPAZ417.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MINISTER OF PRESIDENCY ON COCA, ERADICATION, AND BILATERAL RELATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ567">06LAPAZ567</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06LAPAZ567.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BOLIVIAN NATIONAL AIRLINE FIGHTS FOR SURVIVAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ816">06LAPAZ816</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06LAPAZ816.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LLOYD LIMPS ALONG</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ870">06LAPAZ870</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06LAPAZ870.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOB ENDS LLOYD INTERVENTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ901">06LAPAZ901</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06LAPAZ901.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUDICIARY RESISTS MAS ATTACKS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ902">06LAPAZ902</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06LAPAZ902.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LLOYD EMPLOYEES BLOCK RUNWAYS, DEMAND GOB INTERVENTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1283">06LAPAZ1283</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1283.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOW START FOR CONSTITUENT ASSEMBLY CAMPAIGNS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1317">06LAPAZ1317</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1317.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPOSITION PROSPECTS ARE WEAK FOR THE CONSTITUENT ASSEMBLY ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1322">06LAPAZ1322</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1322.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MAS HAS STRONG ADVANTAGE ENTERING THE CONSTITUENT ASSEMBLY CAMPAIGN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1357">06LAPAZ1357</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1357.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JUDICIAL BRANCH STANDS TALL AGAINST EXECUTIVE PRESSURE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1414">06LAPAZ1414</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1414.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEJA VU--IS MORALES FOLLOWING THE CHAVEZ MODEL?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1418">06LAPAZ1418</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06LAPAZ1418.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOLIVIA IN CHAVEZ' EMBRACE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1466">06LAPAZ1466</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06LAPAZ1466.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BOLIVIA FORMALLY REQUESTS ATPDEA AND GSP EXTENSIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1516">06LAPAZ1516</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06LAPAZ1516.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMBASSADOR'S MEETING WITH DORIA MEDINA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ1597">06LAPAZ1597</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06LAPAZ1597.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COUNTDOWN TO CONSTITUENT ASSEMBLY ELECTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CARACAS2693">06CARACAS2693</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06CARACAS2693.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE BOLIVARIAN PLAYBOOK: WRITING A CONSTITUTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06LAPAZ3356">06LAPAZ3356</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LAPAZ3370">06LAPAZ3370</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06LAPAZ3370.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BOLIVIA REACTS ENTHUSIASTICALLY TO ATPDEA EXTENSION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="282.3368" y1="-78.5715" 
+                  x2="380.3372" y2="-52.4576" class="btwns1"/>
+        
+            <line x1="282.3368" y1="-78.5715" 
+                  x2="142.1535" y2="-75.6070" class="btwns3"/>
+        
+            <line x1="36.1559" y1="-24.9664" 
+                  x2="-21.3069" y2="-77.9634" class="btwns0"/>
+        
+            <line x1="36.1559" y1="-24.9664" 
+                  x2="123.3029" y2="-70.7451" class="btwns1"/>
+        
+            <line x1="-28.6579" y1="-84.7430" 
+                  x2="122.1726" y2="-75.9758" class="btwns3"/>
+        
+            <line x1="-28.6579" y1="-84.7430" 
+                  x2="-153.5825" y2="-93.2893" class="btwns1"/>
+        
+            <line x1="166.9357" y1="63.6865" 
+                  x2="134.5817" y2="-65.6943" class="btwns10"/>
+        
+            <line x1="166.9357" y1="63.6865" 
+                  x2="144.6333" y2="180.5927" class="btwns9"/>
+        
+            <line x1="132.1557" y1="-75.3956" 
+                  x2="111.0097" y2="-203.6481" class="btwns7"/>
+        
+            <line x1="109.3829" y1="-213.5149" 
+                  x2="-3.0675" y2="-277.2930" class="btwns4"/>
+        
+            <line x1="109.3829" y1="-213.5149" 
+                  x2="193.6030" y2="-270.0926" class="btwns1"/>
+        
+            <line x1="-11.7659" y1="-282.2264" 
+                  x2="-134.3323" y2="-289.4145" class="btwns3"/>
+        
+            <line x1="-307.9902" y1="228.5162" 
+                  x2="-258.9679" y2="163.0096" class="btwns1"/>
+        
+            <line x1="-257.3897" y1="-258.2347" 
+                  x2="-153.9425" y2="-287.2955" class="btwns1"/>
+        
+            <line x1="-252.9763" y1="155.0033" 
+                  x2="-329.7623" y2="73.4133" class="btwns3"/>
+        
+            <line x1="-252.9763" y1="155.0033" 
+                  x2="-142.7149" y2="211.1163" class="btwns6"/>
+        
+            <line x1="-336.6157" y1="66.1311" 
+                  x2="-384.6801" y2="-10.3708" class="btwns1"/>
+        
+            <line x1="-133.8026" y1="215.6518" 
+                  x2="-11.6290" y2="227.6592" class="btwns7"/>
+        
+            <line x1="-1.6770" y1="228.6373" 
+                  x2="133.0921" y2="192.9737" class="btwns8"/>
+        
+            <line x1="142.7594" y1="190.4155" 
+                  x2="146.2993" y2="280.0078" class="btwns1"/>
+        
+            <line x1="142.7594" y1="190.4155" 
+                  x2="262.3846" y2="196.0112" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(282.3368 -78.5715)" 
+                class="vertice degree2 btwns1 authority2 CARACAS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -49.8828)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(36.1559 -24.9664)" 
+                class="vertice degree2 btwns0 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-28.6579 -84.7430)" 
+                class="vertice degree5 btwns1 authority5 LAPAZ">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(166.9357 63.6865)" 
+                class="vertice degree2 btwns7 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(132.1557 -75.3956)" 
+                class="vertice degree10 btwns10 authority10 LAPAZ">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(109.3829 -213.5149)" 
+                class="vertice degree5 btwns5 authority4 LAPAZ">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-11.7659 -282.2264)" 
+                class="vertice degree2 btwns2 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(201.9038 -275.6690)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-163.5592 -93.9718)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-307.9902 228.5162)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-257.3897 -258.2347)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-144.3151 -290.0000)" 
+                class="vertice degree2 btwns1 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-252.9763 155.0033)" 
+                class="vertice degree5 btwns4 authority4 LAPAZ">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-336.6157 66.1311)" 
+                class="vertice degree2 btwns1 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -18.8383)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-133.8026 215.6518)" 
+                class="vertice degree2 btwns4 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-1.6770 228.6373)" 
+                class="vertice degree2 btwns5 authority2 LAPAZ">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(142.7594 190.4155)" 
+                class="vertice degree7 btwns8 authority7 LAPAZ">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(146.6941 290.0000)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(272.3737 196.4784)" 
+                class="vertice degree0 btwns0 authority0 LAPAZ">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(282.3368 -78.5715)" 
+                id="06CARACAS2693" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06CARACAS2693.html">06CARACAS2693</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>THE BOLIVARIAN PLAYBOOK: WRITING A CONSTITUTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -49.8828)" 
+                id="06LAPAZ1283" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1283.html">06LAPAZ1283</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOW START FOR CONSTITUENT ASSEMBLY CAMPAIGNS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(36.1559 -24.9664)" 
+                id="06LAPAZ1317" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1317.html">06LAPAZ1317</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>OPPOSITION PROSPECTS ARE WEAK FOR THE CONSTITUENT ASSEMBLY ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-28.6579 -84.7430)" 
+                id="06LAPAZ1322" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1322.html">06LAPAZ1322</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>MAS HAS STRONG ADVANTAGE ENTERING THE CONSTITUENT ASSEMBLY CAMPAIGN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(166.9357 63.6865)" 
+                id="06LAPAZ1357" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1357.html">06LAPAZ1357</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JUDICIAL BRANCH STANDS TALL AGAINST EXECUTIVE PRESSURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(132.1557 -75.3956)" 
+                id="06LAPAZ1414" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1414.html">06LAPAZ1414</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>DEJA VU--IS MORALES FOLLOWING THE CHAVEZ MODEL?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(109.3829 -213.5149)" 
+                id="06LAPAZ1418" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06LAPAZ1418.html">06LAPAZ1418</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BOLIVIA IN CHAVEZ' EMBRACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-11.7659 -282.2264)" 
+                id="06LAPAZ1466" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06LAPAZ1466.html">06LAPAZ1466</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BOLIVIA FORMALLY REQUESTS ATPDEA AND GSP EXTENSIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(201.9038 -275.6690)" 
+                id="06LAPAZ1516" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06LAPAZ1516.html">06LAPAZ1516</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S MEETING WITH DORIA MEDINA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-163.5592 -93.9718)" 
+                id="06LAPAZ1597" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06LAPAZ1597.html">06LAPAZ1597</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COUNTDOWN TO CONSTITUENT ASSEMBLY ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-307.9902 228.5162)" 
+                id="06LAPAZ324" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06LAPAZ324.html">06LAPAZ324</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LLOYD PILOTS ON STRIKE, NO RESOLUTION IN SIGHT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-257.3897 -258.2347)" 
+                id="06LAPAZ3356" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06LAPAZ3356
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-144.3151 -290.0000)" 
+                id="06LAPAZ3370" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06LAPAZ3370.html">06LAPAZ3370</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BOLIVIA REACTS ENTHUSIASTICALLY TO ATPDEA EXTENSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-252.9763 155.0033)" 
+                id="06LAPAZ351" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06LAPAZ351.html">06LAPAZ351</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GOB INTERVENES TO END LLOYD PILOTS' STRIKE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-336.6157 66.1311)" 
+                id="06LAPAZ406" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06LAPAZ406.html">06LAPAZ406</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ECONOMIC PLANNING MINISTER VAGUE ON PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -18.8383)" 
+                id="06LAPAZ417" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06LAPAZ417.html">06LAPAZ417</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MINISTER OF PRESIDENCY ON COCA, ERADICATION, AND BILATERAL RELATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-133.8026 215.6518)" 
+                id="06LAPAZ567" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06LAPAZ567.html">06LAPAZ567</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BOLIVIAN NATIONAL AIRLINE FIGHTS FOR SURVIVAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-1.6770 228.6373)" 
+                id="06LAPAZ816" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06LAPAZ816.html">06LAPAZ816</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LLOYD LIMPS ALONG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(142.7594 190.4155)" 
+                id="06LAPAZ870" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>03/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06LAPAZ870.html">06LAPAZ870</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>GOB ENDS LLOYD INTERVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.6941 290.0000)" 
+                id="06LAPAZ901" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06LAPAZ901.html">06LAPAZ901</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JUDICIARY RESISTS MAS ATTACKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(272.3737 196.4784)" 
+                id="06LAPAZ902" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06LAPAZ902.html">06LAPAZ902</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LLOYD EMPLOYEES BLOCK RUNWAYS, DEMAND GOB INTERVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

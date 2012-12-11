@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE101996">09STATE101996</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/30/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09LISBON524">09LISBON524</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09LISBON524.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/01/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PORTUGAL: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BUCHAREST675">09BUCHAREST675</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09BUCHAREST675.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STOCKHOLM630">09STOCKHOLM630</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09STOCKHOLM630.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MARINE SCIENTIFIC RESEARCH POC IN SWEDEN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NICOSIA646">09NICOSIA646</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09NICOSIA646.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/07/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CYPRUS: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09COLOMBO959">09COLOMBO959</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09COLOMBO959.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POST CONTACTS FOR MARINE SCIENTIFIC RESEARCH FOR SRI LANKA AND THE MALDIVES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ROME1173">09ROME1173</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09ROME1173.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POCS FOR MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS IN ITALY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ATHENS1601">09ATHENS1601</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09ATHENS1601.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GREECE: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BRASILIA1298">09BRASILIA1298</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BRASILIA1298.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BRAZIL: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS: UPDATED INFORMATION - 2009</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09RABAT933">09RABAT933</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09RABAT933.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MOROCCAN MARINE SCIENTIFIC RESEARCH AUTHORIZATION PROCEDURES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="51.7410" y1="-290.0000" 
+                  x2="-8.7761" y2="-8.8206" class="btwns5"/>
+        
+            <line x1="-217.4381" y1="-251.4304" 
+                  x2="-17.2137" y2="-6.7831" class="btwns5"/>
+        
+            <line x1="291.6129" y1="-192.3233" 
+                  x2="-2.4535" y2="-4.4287" class="btwns5"/>
+        
+            <line x1="300.6600" y1="186.1623" 
+                  x2="-2.2845" y2="6.0656" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="-94.7795" 
+                  x2="-20.5759" y2="-1.4928" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-4.2254" 
+                  x2="-0.8811" y2="0.8263" class="btwns5"/>
+        
+            <line x1="-384.9544" y1="106.7442" 
+                  x2="-20.5028" y2="3.6768" class="btwns5"/>
+        
+            <line x1="-204.9771" y1="258.7235" 
+                  x2="-16.8955" y2="8.9441" class="btwns5"/>
+        
+            <line x1="-10.8802" y1="0.9556" 
+                  x2="63.2730" y2="280.3347" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(51.7410 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-217.4381 -251.4304)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(291.6129 -192.3233)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(300.6600 186.1623)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -94.7795)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -4.2254)" 
+                class="vertice degree0 btwns0 authority0 NICOSIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-384.9544 106.7442)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-204.9771 258.7235)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-10.8802 0.9556)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(65.8384 290.0000)" 
+                class="vertice degree0 btwns0 authority0 STOCKHOLM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(51.7410 -290.0000)" 
+                id="09ATHENS1601" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ATHENS1601.html">09ATHENS1601</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GREECE: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-217.4381 -251.4304)" 
+                id="09BRASILIA1298" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BRASILIA1298.html">09BRASILIA1298</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRAZIL: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS: UPDATED INFORMATION - 2009</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(291.6129 -192.3233)" 
+                id="09BUCHAREST675" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09BUCHAREST675.html">09BUCHAREST675</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.6600 186.1623)" 
+                id="09COLOMBO959" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09COLOMBO959.html">09COLOMBO959</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POST CONTACTS FOR MARINE SCIENTIFIC RESEARCH FOR SRI LANKA AND THE MALDIVES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -94.7795)" 
+                id="09LISBON524" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09LISBON524.html">09LISBON524</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -4.2254)" 
+                id="09NICOSIA646" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09NICOSIA646.html">09NICOSIA646</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CYPRUS: MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-384.9544 106.7442)" 
+                id="09RABAT933" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09RABAT933.html">09RABAT933</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOROCCAN MARINE SCIENTIFIC RESEARCH AUTHORIZATION PROCEDURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-204.9771 258.7235)" 
+                id="09ROME1173" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09ROME1173.html">09ROME1173</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POCS FOR MARINE SCIENTIFIC RESEARCH AUTHORIZATIONS IN ITALY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.8802 0.9556)" 
+                id="09STATE101996" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    09STATE101996
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(65.8384 290.0000)" 
+                id="09STOCKHOLM630" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09STOCKHOLM630.html">09STOCKHOLM630</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MARINE SCIENTIFIC RESEARCH POC IN SWEDEN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

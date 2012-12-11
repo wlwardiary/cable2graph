@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07STATE19366">07STATE19366</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07STATE19366.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BEIJING1130">07BEIJING1130</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BEIJING1130.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHINA INFORMED OF ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER EO 13382</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MADRID299">07MADRID299</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07MADRID299.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPAIN ON DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07VILNIUS123">07VILNIUS123</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07VILNIUS123.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/22/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES DELIVERED TO GOL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN360">07BERLIN360</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BERLIN360.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GERMANY NOTIFIED OF ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TALLINN117">07TALLINN117</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07TALLINN117.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ESTONIA: NEW OFAC IRAN DESIGNATIONS DELIVERED ? NO IMMEDIATE RESPONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ROME373">07ROME373</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ROME373.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ITALY: ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07THEHAGUE343">07THEHAGUE343</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07THEHAGUE343.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DUTCH VIEWS ON ADDITIONAL IRANIAN DESIGNATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07VIENNA477">07VIENNA477</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07VIENNA477.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ADDITIONAL DESIGNATION OF IRANIAN ENTITIES UNDER E.O. 13382 - AUSTRIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BUCHAREST209">07BUCHAREST209</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07BUCHAREST209.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA RECEIVES ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW842">07MOSCOW842</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07MOSCOW842.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RUSSIA: ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS722">07BRUSSELS722</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07BRUSSELS722.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELGIUM: DEMARCHE DELIVERED ON ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-72.2503" 
+                  x2="-15.6768" y2="-2.3214" class="btwns5"/>
+        
+            <line x1="-251.8433" y1="230.4977" 
+                  x2="-13.1369" y2="6.3601" class="btwns5"/>
+        
+            <line x1="-375.1051" y1="93.1333" 
+                  x2="-15.5402" y2="1.9725" class="btwns5"/>
+        
+            <line x1="-273.2489" y1="-213.1608" 
+                  x2="-13.6733" y2="-6.7097" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-12.5538" 
+                  x2="4.1485" y2="-0.7898" class="btwns5"/>
+        
+            <line x1="142.7713" y1="-272.6719" 
+                  x2="-1.0545" y2="-9.2619" class="btwns5"/>
+        
+            <line x1="-45.3816" y1="290.0000" 
+                  x2="-7.1954" y2="9.4236" class="btwns5"/>
+        
+            <line x1="-5.8468" y1="-0.4850" 
+                  x2="305.2037" y2="-163.7418" class="btwns5"/>
+        
+            <line x1="-5.8468" y1="-0.4850" 
+                  x2="-75.2346" y2="-280.2940" class="btwns5"/>
+        
+            <line x1="-5.8468" y1="-0.4850" 
+                  x2="320.0703" y2="142.3876" class="btwns5"/>
+        
+            <line x1="-5.8468" y1="-0.4850" 
+                  x2="168.0253" y2="255.6136" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -72.2503)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-251.8433 230.4977)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-375.1051 93.1333)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-273.2489 -213.1608)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -12.5538)" 
+                class="vertice degree0 btwns0 authority0 MADRID">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(142.7713 -272.6719)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-45.3816 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-5.8468 -0.4850)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(314.0582 -168.3891)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-77.6415 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(329.2289 146.4024)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(173.6423 263.8870)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -72.2503)" 
+                id="07BEIJING1130" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BEIJING1130.html">07BEIJING1130</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHINA INFORMED OF ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER EO 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.8433 230.4977)" 
+                id="07BERLIN360" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BERLIN360.html">07BERLIN360</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY NOTIFIED OF ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-375.1051 93.1333)" 
+                id="07BRUSSELS722" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07BRUSSELS722.html">07BRUSSELS722</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGIUM: DEMARCHE DELIVERED ON ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-273.2489 -213.1608)" 
+                id="07BUCHAREST209" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07BUCHAREST209.html">07BUCHAREST209</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA RECEIVES ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -12.5538)" 
+                id="07MADRID299" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07MADRID299.html">07MADRID299</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPAIN ON DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(142.7713 -272.6719)" 
+                id="07MOSCOW842" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07MOSCOW842.html">07MOSCOW842</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIA: ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-45.3816 290.0000)" 
+                id="07ROME373" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ROME373.html">07ROME373</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY: ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-5.8468 -0.4850)" 
+                id="07STATE19366" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07STATE19366.html">07STATE19366</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES UNDER E.O. 13382</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(314.0582 -168.3891)" 
+                id="07TALLINN117" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07TALLINN117.html">07TALLINN117</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA: NEW OFAC IRAN DESIGNATIONS DELIVERED ? NO IMMEDIATE RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-77.6415 -290.0000)" 
+                id="07THEHAGUE343" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07THEHAGUE343.html">07THEHAGUE343</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DUTCH VIEWS ON ADDITIONAL IRANIAN DESIGNATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(329.2289 146.4024)" 
+                id="07VIENNA477" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07VIENNA477.html">07VIENNA477</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ADDITIONAL DESIGNATION OF IRANIAN ENTITIES UNDER E.O. 13382 - AUSTRIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(173.6423 263.8870)" 
+                id="07VILNIUS123" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07VILNIUS123.html">07VILNIUS123</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ADDITIONAL DESIGNATIONS OF IRANIAN ENTITIES DELIVERED TO GOL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

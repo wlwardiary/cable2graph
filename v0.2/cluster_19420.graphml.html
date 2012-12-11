@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05SECSTATE157172">05SECSTATE157172</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE11460">06STATE11460</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05OTTAWA2658">05OTTAWA2658</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05OTTAWA2658.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE RESPONSE, OTTAWA: STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BRASILIA2463">05BRASILIA2463</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05BRASILIA2463.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BRAZIL NOT AS CONCERNED ABOUT SAICM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DHAKA358">06DHAKA358</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06DHAKA358.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/24/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BANGLADESH: DEMARCHE DELIVERED FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICAL MANAGEMENT (SAICM)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANJOSE197">06SANJOSE197</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06SANJOSE197.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COSTA RICA: SAICM DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06AMMAN664">06AMMAN664</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06AMMAN664.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Jordan: Points on SAICM Chemicals Management Delivered</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KATHMANDU279">06KATHMANDU279</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06KATHMANDU279.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED: FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06CAIRO553">06CAIRO553</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06CAIRO553.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EGYPT: DEMARCHE ON FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN129">06YEREVAN129</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06YEREVAN129.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/31/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED: ARMENIA TRYING TO ENGAGE ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LIMA401">06LIMA401</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06LIMA401.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PERU: SAICM DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINGSTON204">06KINGSTON204</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06KINGSTON204.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED: INTERNATIONAL CHEMICALS MANAGEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRASILIA235">06BRASILIA235</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06BRASILIA235.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Brazil: Demarche on SAICM Issues</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM295">06DARESSALAAM295</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06DARESSALAAM295.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SAICM: TANZANIAN DELEGATION TO DUBAI CONFERENCE UNDERSTANDS USG POSITIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="309.1815" y1="117.7323" 
+                  x2="385.9417" y2="-55.1330" class="btwns4"/>
+        
+            <line x1="309.1815" y1="117.7323" 
+                  x2="119.3570" y2="95.1819" class="btwns7"/>
+        
+            <line x1="367.7588" y1="-259.0449" 
+                  x2="388.8655" y2="-74.2079" class="btwns0"/>
+        
+            <line x1="-50.3114" y1="-272.5658" 
+                  x2="-156.8789" y2="-5.0615" class="btwns0"/>
+        
+            <line x1="109.4268" y1="94.0022" 
+                  x2="-151.0905" y2="7.3835" class="btwns10"/>
+        
+            <line x1="-320.3340" y1="-208.7052" 
+                  x2="-166.5811" y2="-3.7706" class="btwns0"/>
+        
+            <line x1="-372.6772" y1="113.7009" 
+                  x2="-169.4659" y2="8.8150" class="btwns0"/>
+        
+            <line x1="-282.0703" y1="250.8077" 
+                  x2="-164.9995" y2="13.1987" class="btwns0"/>
+        
+            <line x1="16.7563" y1="-114.6445" 
+                  x2="-152.2733" y2="-1.3396" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-58.5707" 
+                  x2="-170.2249" y2="1.5883" class="btwns0"/>
+        
+            <line x1="-195.2678" y1="-290.0000" 
+                  x2="-161.7506" y2="-5.7028" class="btwns0"/>
+        
+            <line x1="-142.8200" y1="290.0000" 
+                  x2="-159.9595" y2="14.2092" class="btwns0"/>
+        
+            <line x1="-160.5798" y1="4.2284" 
+                  x2="-20.1440" y2="226.5567" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(309.1815 117.7323)" 
+                class="vertice degree1 btwns3 authority1 BRASILIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(367.7588 -259.0449)" 
+                class="vertice degree0 btwns0 authority0 OTTAWA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -64.2725)" 
+                class="vertice degree1 btwns1 authority1 SECSTATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-50.3114 -272.5658)" 
+                class="vertice degree0 btwns0 authority0 AMMAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(109.4268 94.0022)" 
+                class="vertice degree1 btwns4 authority1 BRASILIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-320.3340 -208.7052)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-372.6772 113.7009)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-282.0703 250.8077)" 
+                class="vertice degree0 btwns0 authority0 DHAKA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(16.7563 -114.6445)" 
+                class="vertice degree0 btwns0 authority0 KATHMANDU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -58.5707)" 
+                class="vertice degree0 btwns0 authority0 KINGSTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-195.2678 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-142.8200 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANJOSE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-160.5798 4.2284)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-14.8036 235.0113)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(309.1815 117.7323)" 
+                id="05BRASILIA2463" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05BRASILIA2463.html">05BRASILIA2463</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BRAZIL NOT AS CONCERNED ABOUT SAICM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(367.7588 -259.0449)" 
+                id="05OTTAWA2658" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05OTTAWA2658.html">05OTTAWA2658</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE RESPONSE, OTTAWA: STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -64.2725)" 
+                id="05SECSTATE157172" 
+                class="labels">
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05SECSTATE157172
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-50.3114 -272.5658)" 
+                id="06AMMAN664" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06AMMAN664.html">06AMMAN664</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Jordan: Points on SAICM Chemicals Management Delivered</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(109.4268 94.0022)" 
+                id="06BRASILIA235" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06BRASILIA235.html">06BRASILIA235</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>Brazil: Demarche on SAICM Issues</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-320.3340 -208.7052)" 
+                id="06CAIRO553" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06CAIRO553.html">06CAIRO553</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EGYPT: DEMARCHE ON FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-372.6772 113.7009)" 
+                id="06DARESSALAAM295" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06DARESSALAAM295.html">06DARESSALAAM295</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SAICM: TANZANIAN DELEGATION TO DUBAI CONFERENCE UNDERSTANDS USG POSITIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-282.0703 250.8077)" 
+                id="06DHAKA358" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06DHAKA358.html">06DHAKA358</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BANGLADESH: DEMARCHE DELIVERED FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICAL MANAGEMENT (SAICM)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(16.7563 -114.6445)" 
+                id="06KATHMANDU279" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06KATHMANDU279.html">06KATHMANDU279</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: FINAL NEGOTIATIONS ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -58.5707)" 
+                id="06KINGSTON204" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06KINGSTON204.html">06KINGSTON204</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: INTERNATIONAL CHEMICALS MANAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-195.2678 -290.0000)" 
+                id="06LIMA401" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06LIMA401.html">06LIMA401</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PERU: SAICM DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-142.8200 290.0000)" 
+                id="06SANJOSE197" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06SANJOSE197.html">06SANJOSE197</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COSTA RICA: SAICM DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-160.5798 4.2284)" 
+                id="06STATE11460" 
+                class="labels">
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE11460
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-14.8036 235.0113)" 
+                id="06YEREVAN129" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06YEREVAN129.html">06YEREVAN129</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: ARMENIA TRYING TO ENGAGE ON STRATEGIC APPROACH TO INTERNATIONAL CHEMICALS MANAGEMENT (SAICM)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

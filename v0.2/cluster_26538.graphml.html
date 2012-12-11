@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06CAPETOWN293">06CAPETOWN293</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05RABAT1636">05RABAT1636</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/14/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05RABAT2311">05RABAT2311</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/19/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RABAT151">06RABAT151</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06RABAT151.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LIBERALIZATION OF MOROCCO'S ELECTRICITY SECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PRETORIA1332">06PRETORIA1332</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/05/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RABAT732">06RABAT732</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06RABAT732.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTRICITY (IS) NOT STATIC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06RABAT1111">06RABAT1111</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06RABAT1111.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MOROCCO ECONOMIC HIGHLIGHTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06PRETORIA2751">06PRETORIA2751</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PRETORIA3659">06PRETORIA3659</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/30/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MOSCOW9690">06MOSCOW9690</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/03/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06RABAT1643">06RABAT1643</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06RABAT1643.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FURTHER ON MOROCCO'S NUCLEAR ENERGY PLANS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RABAT1706">06RABAT1706</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06RABAT1706.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/13/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PUTIN VISIT ACCENTUATES BILATERAL COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BRASILIA2021">06BRASILIA2021</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/22/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PRETORIA4074">06PRETORIA4074</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06PRETORIA4074.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INDIAN PM VISITING SOUTH AFRICA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06RABAT2205">06RABAT2205</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06RABAT2205.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NATURAL GAS AND RENEWABLE ENERGY AT CENTER OF MOROCCAN ENERGY POLICY</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-40.3280" y1="254.1362" 
+                  x2="-200.1779" y2="287.9315" class="btwns2"/>
+        
+            <line x1="-40.3280" y1="254.1362" 
+                  x2="159.4558" y2="174.5926" class="btwns4"/>
+        
+            <line x1="233.5142" y1="273.9414" 
+                  x2="284.2905" y2="139.7076" class="btwns1"/>
+        
+            <line x1="233.5142" y1="273.9414" 
+                  x2="174.0679" y2="179.3601" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-124.5623" 
+                  x2="-209.7123" y2="-156.6270" class="btwns2"/>
+        
+            <line x1="-2.9067" y1="-256.0239" 
+                  x2="-190.9074" y2="-162.8198" class="btwns4"/>
+        
+            <line x1="-2.9067" y1="-256.0239" 
+                  x2="164.1054" y2="-175.7227" class="btwns4"/>
+        
+            <line x1="331.5242" y1="-252.6744" 
+                  x2="182.0148" y2="-175.9549" class="btwns2"/>
+        
+            <line x1="-259.2448" y1="-290.0000" 
+                  x2="-203.9790" y2="-167.4934" class="btwns2"/>
+        
+            <line x1="-296.1061" y1="-6.8076" 
+                  x2="-205.2271" y2="-149.9360" class="btwns2"/>
+        
+            <line x1="-12.5300" y1="-135.1573" 
+                  x2="-189.9428" y2="-157.1480" class="btwns4"/>
+        
+            <line x1="-12.5300" y1="-135.1573" 
+                  x2="163.3030" y2="-169.4739" class="btwns4"/>
+        
+            <line x1="-199.8668" y1="-158.3781" 
+                  x2="-209.8668" y2="-158.3781" class="btwns0"/>
+        
+            <line x1="287.8285" y1="130.3544" 
+                  x2="234.9620" y2="11.9559" class="btwns3"/>
+        
+            <line x1="287.8285" y1="130.3544" 
+                  x2="380.9091" y2="173.0098" class="btwns1"/>
+        
+            <line x1="287.8285" y1="130.3544" 
+                  x2="178.2130" y2="167.6709" class="btwns0"/>
+        
+            <line x1="230.8848" y1="2.8248" 
+                  x2="176.2652" y2="-161.8976" class="btwns10"/>
+        
+            <line x1="230.8848" y1="2.8248" 
+                  x2="172.2143" y2="161.5141" class="btwns6"/>
+        
+            <line x1="390.0000" y1="177.1758" 
+                  x2="178.7425" y2="171.1774" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-40.3280 254.1362)" 
+                class="vertice degree1 btwns2 authority2 RABAT">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(233.5142 273.9414)" 
+                class="vertice degree1 btwns0 authority2 RABAT">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -124.5623)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-2.9067 -256.0239)" 
+                class="vertice degree1 btwns3 authority2 CAPETOWN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(331.5242 -252.6744)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-259.2448 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-296.1061 -6.8076)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-12.5300 -135.1573)" 
+                class="vertice degree1 btwns3 authority2 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-199.8668 -158.3781)" 
+                class="vertice degree10 btwns6 authority10 PRETORIA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-209.9617 290.0000)" 
+                class="vertice degree0 btwns0 authority0 RABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(287.8285 130.3544)" 
+                class="vertice degree5 btwns1 authority7 RABAT">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(230.8848 2.8248)" 
+                class="vertice degree3 btwns8 authority4 RABAT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(173.1178 -171.3894)" 
+                class="vertice degree5 btwns10 authority7 RABAT">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 177.1758)" 
+                class="vertice degree1 btwns0 authority2 RABAT">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(168.7465 170.8936)" 
+                class="vertice degree6 btwns6 authority9 RABAT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-40.3280 254.1362)" 
+                id="05RABAT1636" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05RABAT1636
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(233.5142 273.9414)" 
+                id="05RABAT2311" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05RABAT2311
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -124.5623)" 
+                id="06BRASILIA2021" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BRASILIA2021
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-2.9067 -256.0239)" 
+                id="06CAPETOWN293" 
+                class="labels">
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06CAPETOWN293
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(331.5242 -252.6744)" 
+                id="06MOSCOW9690" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MOSCOW9690
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-259.2448 -290.0000)" 
+                id="06PRETORIA1332" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PRETORIA1332
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-296.1061 -6.8076)" 
+                id="06PRETORIA2751" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PRETORIA2751
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-12.5300 -135.1573)" 
+                id="06PRETORIA3659" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06PRETORIA3659
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-199.8668 -158.3781)" 
+                id="06PRETORIA4074" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06PRETORIA4074.html">06PRETORIA4074</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>INDIAN PM VISITING SOUTH AFRICA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.9617 290.0000)" 
+                id="06RABAT1111" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06RABAT1111.html">06RABAT1111</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOROCCO ECONOMIC HIGHLIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(287.8285 130.3544)" 
+                id="06RABAT151" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06RABAT151.html">06RABAT151</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>LIBERALIZATION OF MOROCCO'S ELECTRICITY SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(230.8848 2.8248)" 
+                id="06RABAT1643" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06RABAT1643.html">06RABAT1643</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>FURTHER ON MOROCCO'S NUCLEAR ENERGY PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(173.1178 -171.3894)" 
+                id="06RABAT1706" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06RABAT1706.html">06RABAT1706</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PUTIN VISIT ACCENTUATES BILATERAL COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 177.1758)" 
+                id="06RABAT2205" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06RABAT2205.html">06RABAT2205</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NATURAL GAS AND RENEWABLE ENERGY AT CENTER OF MOROCCAN ENERGY POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.7465 170.8936)" 
+                id="06RABAT732" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06RABAT732.html">06RABAT732</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ELECTRICITY (IS) NOT STATIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,1754 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE116608">06SECSTATE116608</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06USNATO170">06USNATO170</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06USNATO569">06USNATO569</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE27201">06STATE27201</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/20/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06OSLO210">06OSLO210</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/24/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA1043">06ANKARA1043</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ANKARA1043.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TURKEY TO CONSIDER CFE FLANK ENTITLEMENT REQUEST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA1069">06ANKARA1069</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ANKARA1069.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKISH PRESS DOUBTS U.S. INTENTIONS IN BLACK SEA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE58715">06STATE58715</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA2120">06ANKARA2120</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ANKARA2120.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY REVIEWING CFE ENTITLEMENT REQUEST POSITIVELY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06OSLO498">06OSLO498</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06OSLO498.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RESPONSES TO CFE ENTITLEMENT QUESTIONS DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ATHENS1091">06ATHENS1091</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ATHENS1091.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE REVIEWING TECHNICAL IMPLICATIONS OF CFE TREATY FLANK EQUIPMENT ENTITLEMENTS TRANSFERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE68577">06STATE68577</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/03/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE110161">06STATE110161</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/04/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE116608">06STATE116608</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/16/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06OSLO902">06OSLO902</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06OSLO902.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE EQUIPMENT ENTITLEMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ATHENS1946">06ATHENS1946</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06ATHENS1946.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE TRANSFERS: GOG REQUESTS DC DELEGATION TO VISIT ATHENS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ATHENS1947">06ATHENS1947</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06ATHENS1947.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE TRANSFERS: GOG REQUESTS DC DELEGATION TO VISIT ATHENS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA4310">06ANKARA4310</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06ANKARA4310.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/26/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY: FOLLOW-UP ON CFE EQUIPMENT FLANK ENTITLEMENT TRANSFER PLANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06OSLO996">06OSLO996</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06OSLO996.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE EQUIPMENT ENTITLEMENT TRANSFERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA4834">06ANKARA4834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06ANKARA4834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE: TURKEY SUPPORTS FLANK ENTITLEMENT TRANSFER REQUEST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE139266">06STATE139266</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/23/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06OSLO1060">06OSLO1060</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06OSLO1060.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CFE ENTITLEMENT ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA5019">06ANKARA5019</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06ANKARA5019.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY DOES NOT REQUIRE FOLLOW-UP CONSULTATIONS ON CFE ENTITLEMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE158840">06STATE158840</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/23/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST1576">06BUCHAREST1576</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BUCHAREST1576.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROMANIA ON CFE ENTITLEMENT TRANSFERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SOFIA1451">06SOFIA1451</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06SOFIA1451.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BULGARIA: CFE ENTITLEMENT TRANSFERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST1637">06BUCHAREST1637</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BUCHAREST1637.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROMANIA TO APPROACH GREEKS ON CFE ENTITLEMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BUCHAREST1652">06BUCHAREST1652</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BUCHAREST1652.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROMANIA ON OPEN SKIES TREATY GUIDANCE AND CFE CROSS-GROUP STATIONING, OTHER ISSUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA6491">06ANKARA6491</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ANKARA6491.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY STILL WEIGHING CFE TRANSFERS FOR ACVS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07OSLO376">07OSLO376</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07OSLO376.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NORWEGIANS REPLY TO CFE DEMARCHE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="197.9777" y1="58.6400" 
+                  x2="164.9760" y2="152.5953" class="btwns1"/>
+        
+            <line x1="197.9777" y1="58.6400" 
+                  x2="300.0850" y2="26.8174" class="btwns0"/>
+        
+            <line x1="197.9777" y1="58.6400" 
+                  x2="87.5075" y2="-9.3020" class="btwns2"/>
+        
+            <line x1="197.9777" y1="58.6400" 
+                  x2="161.0683" y2="86.6665" class="btwns0"/>
+        
+            <line x1="309.6321" y1="23.8419" 
+                  x2="268.8673" y2="-42.9586" class="btwns0"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="121.9204" y2="-86.4569" class="btwns1"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="-25.6442" y2="-107.6826" class="btwns3"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="-120.8777" y2="-17.8394" class="btwns10"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="147.4192" y2="84.4871" class="btwns3"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="253.8525" y2="-49.5325" class="btwns3"/>
+        
+            <line x1="78.9896" y1="-14.5408" 
+                  x2="17.2795" y2="46.3424" class="btwns1"/>
+        
+            <line x1="104.4631" y1="-290.0000" 
+                  x2="192.9783" y2="-273.8828" class="btwns1"/>
+        
+            <line x1="104.4631" y1="-290.0000" 
+                  x2="4.9112" y2="-284.1512" class="btwns2"/>
+        
+            <line x1="322.4652" y1="-130.8354" 
+                  x2="269.6128" y2="-59.5285" class="btwns1"/>
+        
+            <line x1="-284.4430" y1="-222.4565" 
+                  x2="-185.3746" y2="-191.1234" class="btwns1"/>
+        
+            <line x1="-33.1136" y1="-114.3316" 
+                  x2="-166.9567" y2="-183.5160" class="btwns2"/>
+        
+            <line x1="-268.1695" y1="66.0237" 
+                  x2="-323.1247" y2="131.4434" class="btwns1"/>
+        
+            <line x1="-268.1695" y1="66.0237" 
+                  x2="-356.1817" y2="6.7674" class="btwns1"/>
+        
+            <line x1="-268.1695" y1="66.0237" 
+                  x2="-205.2570" y2="151.2969" class="btwns4"/>
+        
+            <line x1="-268.1695" y1="66.0237" 
+                  x2="-139.4057" y2="-12.7842" class="btwns7"/>
+        
+            <line x1="-268.1695" y1="66.0237" 
+                  x2="-380.0126" y2="71.6509" class="btwns1"/>
+        
+            <line x1="-120.1496" y1="232.9288" 
+                  x2="-191.9954" y2="166.1519" class="btwns3"/>
+        
+            <line x1="-120.1496" y1="232.9288" 
+                  x2="-157.6575" y2="282.0520" class="btwns1"/>
+        
+            <line x1="-120.1496" y1="232.9288" 
+                  x2="-31.1468" y2="270.3960" class="btwns1"/>
+        
+            <line x1="-90.4995" y1="-224.2052" 
+                  x2="-151.8713" y2="-127.9409" class="btwns4"/>
+        
+            <line x1="-90.4995" y1="-224.2052" 
+                  x2="-13.2837" y2="-277.8585" class="btwns3"/>
+        
+            <line x1="320.7549" y1="219.3113" 
+                  x2="268.4879" y2="172.4283" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-56.9145" 
+                  x2="273.6489" y2="-51.9233" class="btwns1"/>
+        
+            <line x1="-229.6890" y1="-68.9194" 
+                  x2="-165.4457" y2="-113.7832" class="btwns0"/>
+        
+            <line x1="-229.6890" y1="-68.9194" 
+                  x2="-139.7657" y2="-22.5848" class="btwns0"/>
+        
+            <line x1="-157.2470" y1="-119.5087" 
+                  x2="-133.3909" y2="-27.6831" class="btwns5"/>
+        
+            <line x1="153.1041" y1="92.7140" 
+                  x2="252.7617" y2="160.1469" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(197.9777 58.6400)" 
+                class="vertice degree5 btwns1 authority5 ANKARA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(161.6620 162.0302)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(309.6321 23.8419)" 
+                class="vertice degree1 btwns0 authority1 ANKARA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(78.9896 -14.5408)" 
+                class="vertice degree10 btwns10 authority10 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(127.0462 -95.0433)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(104.4631 -290.0000)" 
+                class="vertice degree1 btwns1 authority1 ANKARA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(202.8166 -272.0914)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(322.4652 -130.8354)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-284.4430 -222.4565)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-33.1136 -114.3316)" 
+                class="vertice degree1 btwns1 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-268.1695 66.0237)" 
+                class="vertice degree6 btwns6 authority6 BUCHAREST">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-329.5569 139.1003)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-120.1496 232.9288)" 
+                class="vertice degree3 btwns2 authority3 BUCHAREST">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-90.4995 -224.2052)" 
+                class="vertice degree1 btwns2 authority1 OSLO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(320.7549 219.3113)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -56.9145)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-229.6890 -68.9194)" 
+                class="vertice degree1 btwns0 authority1 OSLO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-157.2470 -119.5087)" 
+                class="vertice degree3 btwns3 authority3 OSLO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-175.8401 -188.1079)" 
+                class="vertice degree1 btwns1 authority1 SECSTATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-364.4768 1.1826)" 
+                class="vertice degree0 btwns0 authority0 SOFIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-199.3201 159.3439)" 
+                class="vertice degree1 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-130.8763 -18.0044)" 
+                class="vertice degree5 btwns9 authority5 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-5.0716 -283.5647)" 
+                class="vertice degree1 btwns1 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-163.7262 290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(153.1041 92.7140)" 
+                class="vertice degree3 btwns1 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(263.6581 -51.4947)" 
+                class="vertice degree5 btwns2 authority4 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-21.9302 274.2759)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(10.1609 53.3656)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 72.1534)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(261.0439 165.7510)" 
+                class="vertice degree1 btwns1 authority1 OSLO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(197.9777 58.6400)" 
+                id="06ANKARA1043" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1043.html">06ANKARA1043</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>TURKEY TO CONSIDER CFE FLANK ENTITLEMENT REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(161.6620 162.0302)" 
+                id="06ANKARA1069" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ANKARA1069.html">06ANKARA1069</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKISH PRESS DOUBTS U.S. INTENTIONS IN BLACK SEA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(309.6321 23.8419)" 
+                id="06ANKARA2120" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ANKARA2120.html">06ANKARA2120</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TURKEY REVIEWING CFE ENTITLEMENT REQUEST POSITIVELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(78.9896 -14.5408)" 
+                id="06ANKARA4310" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ANKARA4310.html">06ANKARA4310</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TURKEY: FOLLOW-UP ON CFE EQUIPMENT FLANK ENTITLEMENT TRANSFER PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(127.0462 -95.0433)" 
+                id="06ANKARA4834" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ANKARA4834.html">06ANKARA4834</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE: TURKEY SUPPORTS FLANK ENTITLEMENT TRANSFER REQUEST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(104.4631 -290.0000)" 
+                id="06ANKARA5019" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ANKARA5019.html">06ANKARA5019</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TURKEY DOES NOT REQUIRE FOLLOW-UP CONSULTATIONS ON CFE ENTITLEMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(202.8166 -272.0914)" 
+                id="06ANKARA6491" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ANKARA6491.html">06ANKARA6491</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKEY STILL WEIGHING CFE TRANSFERS FOR ACVS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(322.4652 -130.8354)" 
+                id="06ATHENS1091" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ATHENS1091.html">06ATHENS1091</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GREECE REVIEWING TECHNICAL IMPLICATIONS OF CFE TREATY FLANK EQUIPMENT ENTITLEMENTS TRANSFERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-284.4430 -222.4565)" 
+                id="06ATHENS1946" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ATHENS1946.html">06ATHENS1946</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE TRANSFERS: GOG REQUESTS DC DELEGATION TO VISIT ATHENS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-33.1136 -114.3316)" 
+                id="06ATHENS1947" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ATHENS1947.html">06ATHENS1947</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CFE TRANSFERS: GOG REQUESTS DC DELEGATION TO VISIT ATHENS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-268.1695 66.0237)" 
+                id="06BUCHAREST1576" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BUCHAREST1576.html">06BUCHAREST1576</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ROMANIA ON CFE ENTITLEMENT TRANSFERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-329.5569 139.1003)" 
+                id="06BUCHAREST1637" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BUCHAREST1637.html">06BUCHAREST1637</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA TO APPROACH GREEKS ON CFE ENTITLEMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-120.1496 232.9288)" 
+                id="06BUCHAREST1652" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BUCHAREST1652.html">06BUCHAREST1652</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ROMANIA ON OPEN SKIES TREATY GUIDANCE AND CFE CROSS-GROUP STATIONING, OTHER ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-90.4995 -224.2052)" 
+                id="06OSLO1060" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06OSLO1060.html">06OSLO1060</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CFE ENTITLEMENT ISSUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(320.7549 219.3113)" 
+                id="06OSLO210" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06OSLO210
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -56.9145)" 
+                id="06OSLO498" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06OSLO498.html">06OSLO498</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RESPONSES TO CFE ENTITLEMENT QUESTIONS DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-229.6890 -68.9194)" 
+                id="06OSLO902" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06OSLO902.html">06OSLO902</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CFE EQUIPMENT ENTITLEMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-157.2470 -119.5087)" 
+                id="06OSLO996" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06OSLO996.html">06OSLO996</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CFE EQUIPMENT ENTITLEMENT TRANSFERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-175.8401 -188.1079)" 
+                id="06SECSTATE116608" 
+                class="labels">
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06SECSTATE116608
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-364.4768 1.1826)" 
+                id="06SOFIA1451" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06SOFIA1451.html">06SOFIA1451</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BULGARIA: CFE ENTITLEMENT TRANSFERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-199.3201 159.3439)" 
+                id="06STATE110161" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06STATE110161
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-130.8763 -18.0044)" 
+                id="06STATE116608" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06STATE116608
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-5.0716 -283.5647)" 
+                id="06STATE139266" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06STATE139266
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-163.7262 290.0000)" 
+                id="06STATE158840" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE158840
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(153.1041 92.7140)" 
+                id="06STATE27201" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06STATE27201
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(263.6581 -51.4947)" 
+                id="06STATE58715" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06STATE58715
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-21.9302 274.2759)" 
+                id="06STATE68577" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE68577
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(10.1609 53.3656)" 
+                id="06USNATO170" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06USNATO170
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 72.1534)" 
+                id="06USNATO569" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06USNATO569
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(261.0439 165.7510)" 
+                id="07OSLO376" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07OSLO376.html">07OSLO376</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NORWEGIANS REPLY TO CFE DEMARCHE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

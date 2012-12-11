@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE102464">06STATE102464</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/22/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2108">06SEOUL2108</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL2108.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INVITATION TO AFGHANISTAN PRT EFFECTIVENESS CONFERENCE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06OSLO828">06OSLO828</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06OSLO828.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/28/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INVITATION DELIVERED-AFGHANISTAN PROVINCIAL RECONSTRUCTION TEAM (PRT) CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ZAGREB786">06ZAGREB786</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ZAGREB786.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CROATIAN GOVERNMENT WELCOMES INVITATION TO JULY 20-21 PRT CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON508">06WELLINGTON508</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06WELLINGTON508.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NEW ZEALAND RESPONDS TO INVITATION TO AFGHANISTAN PRT EFFECTIVENESS CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE112030">06STATE112030</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06RIGA535">06RIGA535</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06RIGA535.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Afghanistan PRT Conference: Latvia</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06OSLO863">06OSLO863</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06OSLO863.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/10/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">AFGHANISTAN PROVINCIAL RECONSTRUCTION TEAM (PRT) EFFECTIVENESS CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2351">06SEOUL2351</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06SEOUL2351.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROKG RESPONSE TO AFGHANISTAN PRT CONFERENCE          INVITATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RIGA561">06RIGA561</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06RIGA561.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/17/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Afghanistan PRT Conference: Latvia - updated attendance</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ALMATY2607">06ALMATY2607</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06ALMATY2607.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/20/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: ATTENDANCE AT BUDAPEST PRT CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06OSLO1228">06OSLO1228</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06OSLO1228.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRT EFFECTIVENESS CONFERENCE: INTERIM NORWEGIAN RESPONSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON775">06WELLINGTON775</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06WELLINGTON775.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ENHANCING THE EFFECTIVENESS OF PROVINCIAL RECONSTRUCTION TEAMS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE165328">06STATE165328</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/05/06</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-98.7814" y1="-290.0000" 
+                  x2="-0.6796" y2="-174.9452" class="btwns3"/>
+        
+            <line x1="-390.0000" y1="117.6589" 
+                  x2="-304.8353" y2="217.9764" class="btwns3"/>
+        
+            <line x1="385.7181" y1="182.5902" 
+                  x2="219.5575" y2="117.5969" class="btwns3"/>
+        
+            <line x1="135.4147" y1="-282.9467" 
+                  x2="13.2711" y2="-173.9924" class="btwns3"/>
+        
+            <line x1="168.1038" y1="-62.5557" 
+                  x2="74.7113" y2="-16.6189" class="btwns0"/>
+        
+            <line x1="168.1038" y1="-62.5557" 
+                  x2="207.9224" y2="104.2276" class="btwns5"/>
+        
+            <line x1="168.1038" y1="-62.5557" 
+                  x2="14.2098" y2="-161.9118" class="btwns4"/>
+        
+            <line x1="65.7380" y1="-12.2052" 
+                  x2="202.7115" y2="107.3775" class="btwns5"/>
+        
+            <line x1="65.7380" y1="-12.2052" 
+                  x2="9.4122" y2="-158.0076" class="btwns4"/>
+        
+            <line x1="390.0000" y1="23.8437" 
+                  x2="219.1842" y2="109.4728" class="btwns3"/>
+        
+            <line x1="-198.2148" y1="-151.7851" 
+                  x2="-4.1625" y2="-166.5757" class="btwns3"/>
+        
+            <line x1="210.2446" y1="113.9542" 
+                  x2="37.5333" y2="231.7820" class="btwns10"/>
+        
+            <line x1="210.2446" y1="113.9542" 
+                  x2="233.8508" y2="271.0316" class="btwns3"/>
+        
+            <line x1="-298.3635" y1="225.5997" 
+                  x2="-154.3515" y2="286.1255" class="btwns5"/>
+        
+            <line x1="29.2726" y1="237.4176" 
+                  x2="-135.5583" y2="287.1134" class="btwns8"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-98.7814 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ALMATY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 117.6589)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(385.7181 182.5902)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(135.4147 -282.9467)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(168.1038 -62.5557)" 
+                class="vertice degree4 btwns2 authority4 RIGA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(65.7380 -12.2052)" 
+                class="vertice degree4 btwns2 authority4 RIGA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 23.8437)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-198.2148 -151.7851)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(210.2446 113.9542)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(5.8086 -167.3357)" 
+                class="vertice degree8 btwns5 authority7 STATE">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="28" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-298.3635 225.5997)" 
+                class="vertice degree2 btwns2 authority1 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.2726 237.4176)" 
+                class="vertice degree2 btwns5 authority2 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-145.1326 290.0000)" 
+                class="vertice degree2 btwns3 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(235.3370 280.9206)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-98.7814 -290.0000)" 
+                id="06ALMATY2607" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06ALMATY2607.html">06ALMATY2607</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: ATTENDANCE AT BUDAPEST PRT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 117.6589)" 
+                id="06OSLO1228" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06OSLO1228.html">06OSLO1228</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRT EFFECTIVENESS CONFERENCE: INTERIM NORWEGIAN RESPONSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(385.7181 182.5902)" 
+                id="06OSLO828" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06OSLO828.html">06OSLO828</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INVITATION DELIVERED-AFGHANISTAN PROVINCIAL RECONSTRUCTION TEAM (PRT) CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(135.4147 -282.9467)" 
+                id="06OSLO863" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06OSLO863.html">06OSLO863</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AFGHANISTAN PROVINCIAL RECONSTRUCTION TEAM (PRT) EFFECTIVENESS CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.1038 -62.5557)" 
+                id="06RIGA535" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06RIGA535.html">06RIGA535</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Afghanistan PRT Conference: Latvia</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(65.7380 -12.2052)" 
+                id="06RIGA561" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06RIGA561.html">06RIGA561</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Afghanistan PRT Conference: Latvia - updated attendance</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 23.8437)" 
+                id="06SEOUL2108" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL2108.html">06SEOUL2108</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INVITATION TO AFGHANISTAN PRT EFFECTIVENESS CONFERENCE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-198.2148 -151.7851)" 
+                id="06SEOUL2351" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06SEOUL2351.html">06SEOUL2351</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG RESPONSE TO AFGHANISTAN PRT CONFERENCE          INVITATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.2446 113.9542)" 
+                id="06STATE102464" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE102464
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(5.8086 -167.3357)" 
+                id="06STATE112030" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                
+                    06STATE112030
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-298.3635 225.5997)" 
+                id="06STATE165328" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06STATE165328
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(29.2726 237.4176)" 
+                id="06WELLINGTON508" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06WELLINGTON508.html">06WELLINGTON508</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND RESPONDS TO INVITATION TO AFGHANISTAN PRT EFFECTIVENESS CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-145.1326 290.0000)" 
+                id="06WELLINGTON775" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06WELLINGTON775.html">06WELLINGTON775</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ENHANCING THE EFFECTIVENESS OF PROVINCIAL RECONSTRUCTION TEAMS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(235.3370 280.9206)" 
+                id="06ZAGREB786" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ZAGREB786.html">06ZAGREB786</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CROATIAN GOVERNMENT WELCOMES INVITATION TO JULY 20-21 PRT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

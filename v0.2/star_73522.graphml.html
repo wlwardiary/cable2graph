@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE24262">08STATE24262</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/07/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING871">08BEIJING871</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08BEIJING871.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/10/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRC/LEBANON: PRC UNAWARE OF MARCH 14 CONVENTION, WANTS TO PLAY HELPFUL ROLE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08JAKARTA484">08JAKARTA484</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08JAKARTA484.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BEIRUT CONFERENCE -- URGING INDONESIAN ATTENDANCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ATHENS369">08ATHENS369</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ATHENS369.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEBANON: GREECE UNLIKELY TO ATTEND MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08LUXEMBOURG65">08LUXEMBOURG65</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08LUXEMBOURG65.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LUXEMBOURG WILL NOT ATTEND MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ACCRA337">08ACCRA337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ACCRA337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GHANA: DEMARCHE ON MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08PARIS452">08PARIS452</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PARIS452.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/11/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FRENCH ATTENDANCE AT MARCH 14 CONFERENCE IN BEIRUT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO664">08TOKYO664</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO664.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JAPANESE AMBASSADOR TO ATTEND MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SOFIA144">08SOFIA144</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08SOFIA144.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BULGARIA TO CONSIDER U.S. VIEWS ON MARCH 14TH CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ROME316">08ROME316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ROME316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ITALY: FIRST SECRETARY WILL ATTEND MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08PRAGUE174">08PRAGUE174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08PRAGUE174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CZECH DCM WILL ATTEND MARCH 14 BEIRUT CONFERENCE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="311.0988" y1="-184.2269" 
+                  x2="9.1154" y2="-5.3380" class="btwns5"/>
+        
+            <line x1="-321.3652" y1="-171.7904" 
+                  x2="-8.3132" y2="-4.9447" class="btwns5"/>
+        
+            <line x1="323.2548" y1="171.8431" 
+                  x2="9.3357" y2="4.4635" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-7.7840" 
+                  x2="10.5098" y2="-0.4350" class="btwns5"/>
+        
+            <line x1="-309.4450" y1="183.5916" 
+                  x2="-8.0893" y2="4.8598" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="7.4534" 
+                  x2="-9.4864" y2="-0.0444" class="btwns5"/>
+        
+            <line x1="130.1729" y1="284.0983" 
+                  x2="4.6608" y2="8.8573" class="btwns5"/>
+        
+            <line x1="-110.7543" y1="290.0000" 
+                  x2="-3.0678" y2="9.0960" class="btwns5"/>
+        
+            <line x1="111.8539" y1="-290.0000" 
+                  x2="4.0986" y2="-9.5759" class="btwns5"/>
+        
+            <line x1="0.5117" y1="-0.2414" 
+                  x2="-125.3243" y2="-276.2397" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(311.0988 -184.2269)" 
+                class="vertice degree0 btwns0 authority0 ACCRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-321.3652 -171.7904)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(323.2548 171.8431)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -7.7840)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-309.4450 183.5916)" 
+                class="vertice degree0 btwns0 authority0 LUXEMBOURG">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 7.4534)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(130.1729 284.0983)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-110.7543 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(111.8539 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SOFIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(0.5117 -0.2414)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-129.4727 -285.3386)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(311.0988 -184.2269)" 
+                id="08ACCRA337" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ACCRA337.html">08ACCRA337</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GHANA: DEMARCHE ON MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-321.3652 -171.7904)" 
+                id="08ATHENS369" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ATHENS369.html">08ATHENS369</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEBANON: GREECE UNLIKELY TO ATTEND MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(323.2548 171.8431)" 
+                id="08BEIJING871" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08BEIJING871.html">08BEIJING871</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRC/LEBANON: PRC UNAWARE OF MARCH 14 CONVENTION, WANTS TO PLAY HELPFUL ROLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -7.7840)" 
+                id="08JAKARTA484" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08JAKARTA484.html">08JAKARTA484</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BEIRUT CONFERENCE -- URGING INDONESIAN ATTENDANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-309.4450 183.5916)" 
+                id="08LUXEMBOURG65" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08LUXEMBOURG65.html">08LUXEMBOURG65</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LUXEMBOURG WILL NOT ATTEND MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 7.4534)" 
+                id="08PARIS452" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PARIS452.html">08PARIS452</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH ATTENDANCE AT MARCH 14 CONFERENCE IN BEIRUT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(130.1729 284.0983)" 
+                id="08PRAGUE174" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08PRAGUE174.html">08PRAGUE174</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECH DCM WILL ATTEND MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-110.7543 290.0000)" 
+                id="08ROME316" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ROME316.html">08ROME316</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ITALY: FIRST SECRETARY WILL ATTEND MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(111.8539 -290.0000)" 
+                id="08SOFIA144" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08SOFIA144.html">08SOFIA144</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BULGARIA TO CONSIDER U.S. VIEWS ON MARCH 14TH CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(0.5117 -0.2414)" 
+                id="08STATE24262" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE24262
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-129.4727 -285.3386)" 
+                id="08TOKYO664" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO664.html">08TOKYO664</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPANESE AMBASSADOR TO ATTEND MARCH 14 BEIRUT CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

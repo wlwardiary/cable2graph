@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05MANILA1519">05MANILA1519</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/02/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MANILA607">06MANILA607</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/11/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MANILA635">06MANILA635</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/11/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MANILA1189">06MANILA1189</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/16/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1219">06MANILA1219</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06MANILA1219.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LIKELY POSTPONEMENT OF ARRAIGNMENT OF MARINES IN ALLEGED RAPE CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1366">06MANILA1366</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06MANILA1366.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JUDGE IN ALLEGED RAPE CASE RECUSES HIMSELF ON EVE OF MARINES' ARRAIGNMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1519">06MANILA1519</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MANILA1519.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW VENUE, JUDGE ANNOUNCED IN ALLEGED RAPE CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1714">06MANILA1714</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MANILA1714.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LIKELY REDUCTION OF CHARGES FOR 3 MARINES IN ALLEGED RAPE CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1841">06MANILA1841</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MANILA1841.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HANDLING THE MARINE "RAPE" CASE -- NEXT STEPS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1866">06MANILA1866</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06MANILA1866.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COURT REJECTS DOJ MOTION TO DOWNGRADE CHARGES, INDICTS FOUR US MARINES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA1968">06MANILA1968</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06MANILA1968.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MARINE CASE UPDATE 5/5/06</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MANILA2085">06MANILA2085</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06MANILA2085.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MARINE CASE UPDATE 5/16/06</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="159.9026" 
+                  x2="-258.7305" y2="59.4798" class="btwns2"/>
+        
+            <line x1="390.0000" y1="73.7977" 
+                  x2="272.3761" y2="107.9091" class="btwns0"/>
+        
+            <line x1="390.0000" y1="73.7977" 
+                  x2="242.5673" y2="-40.6541" class="btwns1"/>
+        
+            <line x1="262.7718" y1="110.6944" 
+                  x2="236.4249" y2="-36.9418" class="btwns4"/>
+        
+            <line x1="262.7718" y1="110.6944" 
+                  x2="199.5705" y2="280.6273" class="btwns2"/>
+        
+            <line x1="262.7718" y1="110.6944" 
+                  x2="360.4670" y2="-64.3228" class="btwns0"/>
+        
+            <line x1="234.6681" y1="-46.7863" 
+                  x2="89.6508" y2="-167.3500" class="btwns9"/>
+        
+            <line x1="234.6681" y1="-46.7863" 
+                  x2="355.5373" y2="-71.0837" class="btwns1"/>
+        
+            <line x1="81.9612" y1="-173.7430" 
+                  x2="-79.8103" y2="-81.4026" class="btwns10"/>
+        
+            <line x1="-88.4951" y1="-76.4453" 
+                  x2="-242.9797" y2="47.1564" class="btwns9"/>
+        
+            <line x1="-196.3589" y1="240.5689" 
+                  x2="-247.9957" y2="63.0060" class="btwns2"/>
+        
+            <line x1="-250.7881" y1="53.4038" 
+                  x2="-318.4150" y2="-120.2823" class="btwns5"/>
+        
+            <line x1="-322.0433" y1="-129.6009" 
+                  x2="-276.6268" y2="-280.4247" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 159.9026)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 73.7977)" 
+                class="vertice degree3 btwns0 authority3 MANILA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(262.7718 110.6944)" 
+                class="vertice degree10 btwns3 authority9 MANILA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(234.6681 -46.7863)" 
+                class="vertice degree10 btwns8 authority10 MANILA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(81.9612 -173.7430)" 
+                class="vertice degree3 btwns9 authority3 MANILA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-88.4951 -76.4453)" 
+                class="vertice degree3 btwns9 authority3 MANILA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-196.3589 240.5689)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-250.7881 53.4038)" 
+                class="vertice degree10 btwns10 authority9 MANILA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-322.0433 -129.6009)" 
+                class="vertice degree3 btwns3 authority3 MANILA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-273.7435 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(196.0845 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(365.3411 -73.0545)" 
+                class="vertice degree3 btwns0 authority3 MANILA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 159.9026)" 
+                id="05MANILA1519" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05MANILA1519
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 73.7977)" 
+                id="06MANILA1189" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06MANILA1189
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(262.7718 110.6944)" 
+                id="06MANILA1219" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MANILA1219.html">06MANILA1219</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>LIKELY POSTPONEMENT OF ARRAIGNMENT OF MARINES IN ALLEGED RAPE CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(234.6681 -46.7863)" 
+                id="06MANILA1366" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06MANILA1366.html">06MANILA1366</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JUDGE IN ALLEGED RAPE CASE RECUSES HIMSELF ON EVE OF MARINES' ARRAIGNMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(81.9612 -173.7430)" 
+                id="06MANILA1519" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MANILA1519.html">06MANILA1519</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NEW VENUE, JUDGE ANNOUNCED IN ALLEGED RAPE CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-88.4951 -76.4453)" 
+                id="06MANILA1714" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MANILA1714.html">06MANILA1714</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LIKELY REDUCTION OF CHARGES FOR 3 MARINES IN ALLEGED RAPE CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-196.3589 240.5689)" 
+                id="06MANILA1841" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MANILA1841.html">06MANILA1841</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HANDLING THE MARINE "RAPE" CASE -- NEXT STEPS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-250.7881 53.4038)" 
+                id="06MANILA1866" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06MANILA1866.html">06MANILA1866</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>COURT REJECTS DOJ MOTION TO DOWNGRADE CHARGES, INDICTS FOUR US MARINES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-322.0433 -129.6009)" 
+                id="06MANILA1968" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MANILA1968.html">06MANILA1968</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MARINE CASE UPDATE 5/5/06</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-273.7435 -290.0000)" 
+                id="06MANILA2085" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06MANILA2085.html">06MANILA2085</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MARINE CASE UPDATE 5/16/06</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(196.0845 290.0000)" 
+                id="06MANILA607" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06MANILA607
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(365.3411 -73.0545)" 
+                id="06MANILA635" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06MANILA635
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

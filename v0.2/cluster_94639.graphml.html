@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09AMMAN227">09AMMAN227</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/27/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN333">09AMMAN333</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09AMMAN333.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN345">09AMMAN345</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09AMMAN345.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE10820">09STATE10820</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09STATE10820.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD "PORT PHYSICAL SECURITY/PORT VULNERABILITY" COURSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE11221">09STATE11221</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09STATE11221.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/06/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN388">09AMMAN388</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09AMMAN388.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/11/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE13701">09STATE13701</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09STATE13701.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE (AMMAN 0388)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN457">09AMMAN457</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09AMMAN457.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/18/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN512">09AMMAN512</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09AMMAN512.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09AMMAN556">09AMMAN556</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09AMMAN556.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/01/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE19468">09STATE19468</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09STATE19468.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE (AMMAN 0457, 0512, 0556)</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="78.4524" y2="62.8079" class="btwns2"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="-31.2725" y2="76.6767" class="btwns2"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="68.5722" y2="-37.2667" class="btwns1"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="-154.7536" y2="-77.5395" class="btwns2"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="-72.0873" y2="-135.1820" class="btwns2"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="-187.5602" y2="-0.8911" class="btwns2"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="381.9168" y2="-284.1125" class="btwns10"/>
+        
+            <line x1="139.0645" y1="-107.2284" 
+                  x2="291.1304" y2="49.3712" class="btwns2"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="-28.1216" y2="82.9773" class="btwns0"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="62.7924" y2="-20.3097" class="btwns0"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="-156.2052" y2="-71.2625" class="btwns1"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="-75.9873" y2="-128.5046" class="btwns1"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="-187.3844" y2="4.6963" class="btwns1"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="26.9575" y2="280.2574" class="btwns4"/>
+        
+            <line x1="75.0947" y1="72.2273" 
+                  x2="288.1215" y2="57.2468" class="btwns1"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="54.9049" y2="-22.6831" class="btwns0"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="-158.5099" y2="-68.6826" class="btwns1"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="-80.0469" y2="-126.6872" class="btwns1"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="-188.1770" y2="6.7797" class="btwns1"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="21.7881" y2="280.4343" class="btwns4"/>
+        
+            <line x1="-38.0678" y1="84.0132" 
+                  x2="288.1301" y2="57.3597" class="btwns1"/>
+        
+            <line x1="61.4745" y1="-30.2224" 
+                  x2="-154.9062" y2="-74.5282" class="btwns0"/>
+        
+            <line x1="61.4745" y1="-30.2224" 
+                  x2="-73.9651" y2="-130.5423" class="btwns0"/>
+        
+            <line x1="61.4745" y1="-30.2224" 
+                  x2="-187.1467" y2="0.9601" class="btwns0"/>
+        
+            <line x1="61.4745" y1="-30.2224" 
+                  x2="288.7082" y2="53.1026" class="btwns1"/>
+        
+            <line x1="-164.7029" y1="-76.5341" 
+                  x2="-90.0969" y2="-130.6246" class="btwns0"/>
+        
+            <line x1="-164.7029" y1="-76.5341" 
+                  x2="-193.2671" y2="-7.0445" class="btwns0"/>
+        
+            <line x1="-164.7029" y1="-76.5341" 
+                  x2="-380.6050" y2="-155.2535" class="btwns2"/>
+        
+            <line x1="-82.0008" y1="-136.4944" 
+                  x2="-190.6840" y2="-5.4916" class="btwns0"/>
+        
+            <line x1="-82.0008" y1="-136.4944" 
+                  x2="-380.0258" y2="-157.9606" class="btwns2"/>
+        
+            <line x1="-197.0690" y1="2.2046" 
+                  x2="-382.3199" y2="-152.2746" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(139.0645 -107.2284)" 
+                class="vertice degree10 btwns10 authority9 AMMAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(75.0947 72.2273)" 
+                class="vertice degree10 btwns5 authority10 AMMAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-38.0678 84.0132)" 
+                class="vertice degree10 btwns5 authority10 AMMAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(61.4745 -30.2224)" 
+                class="vertice degree8 btwns1 authority8 AMMAN">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-164.7029 -76.5341)" 
+                class="vertice degree8 btwns2 authority8 AMMAN">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-82.0008 -136.4944)" 
+                class="vertice degree8 btwns2 authority8 AMMAN">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-197.0690 2.2046)" 
+                class="vertice degree8 btwns2 authority8 AMMAN">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(24.7031 290.0000)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(298.0969 56.5453)" 
+                class="vertice degree4 btwns0 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -158.6790)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(139.0645 -107.2284)" 
+                id="09AMMAN227" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    09AMMAN227
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(75.0947 72.2273)" 
+                id="09AMMAN333" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09AMMAN333.html">09AMMAN333</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-38.0678 84.0132)" 
+                id="09AMMAN345" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09AMMAN345.html">09AMMAN345</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(61.4745 -30.2224)" 
+                id="09AMMAN388" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>02/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09AMMAN388.html">09AMMAN388</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-164.7029 -76.5341)" 
+                id="09AMMAN457" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>02/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09AMMAN457.html">09AMMAN457</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-82.0008 -136.4944)" 
+                id="09AMMAN512" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>02/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09AMMAN512.html">09AMMAN512</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-197.0690 2.2046)" 
+                id="09AMMAN556" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09AMMAN556.html">09AMMAN556</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING REQUEST FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -290.0000)" 
+                id="09STATE10820" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE10820.html">09STATE10820</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD "PORT PHYSICAL SECURITY/PORT VULNERABILITY" COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(24.7031 290.0000)" 
+                id="09STATE11221" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE11221.html">09STATE11221</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(298.0969 56.5453)" 
+                id="09STATE13701" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>02/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE13701.html">09STATE13701</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE (AMMAN 0388)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -158.6790)" 
+                id="09STATE19468" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09STATE19468.html">09STATE19468</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JORDAN LEAHY VETTING RESPONSE FOR U.S. COAST GUARD PORT SECURITY COURSE (AMMAN 0457, 0512, 0556)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

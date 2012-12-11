@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA2514">06VIENNA2514</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06VIENNA2514.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BLUE LANTERN PROGRAM: EMBASSY VIENNA POINT OF CONTACT AND PROCEEDURES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE137409">06STATE137409</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/23/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LONDON6199">06LONDON6199</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06LONDON6199.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/23/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LONDON BLUE LANTERN ACTION OFFICER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SOFIA1196">06SOFIA1196</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06SOFIA1196.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BULGARIA: BLUE LANTERN ACTION OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ULAANBAATAR648">06ULAANBAATAR648</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06ULAANBAATAR648.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/25/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ULAANBAATAR CONTACT FOR BLUE LANTERN PROGRAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06RIGA691">06RIGA691</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06RIGA691.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LATVIA: BLUE LANTERN END-USE CHECK ANNUAL UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SANAA2565">06SANAA2565</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SANAA2565.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/04/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">YEMEN: BLUE LANTERN CONTACT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRIDGETOWN1544">06BRIDGETOWN1544</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BRIDGETOWN1544.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/05/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BRIDGETOWN POC FOR BLUE LANTERN PROGRAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06GEORGETOWN933">06GEORGETOWN933</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06GEORGETOWN933.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/15/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BLUE LANTERN PROGRAM INFORMATION - GUYANA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MAPUTO1182">06MAPUTO1182</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06MAPUTO1182.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY MAPUTO BLUE LANTERN UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06RIYADH7498">06RIYADH7498</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06RIYADH7498.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/26/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POST'S BLUE LANTERN POINTS OF CONTACT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DARESSALAAM1594">06DARESSALAAM1594</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06DARESSALAAM1594.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TANZANIA: BLUE LANTERN POINT OF CONTACT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ASMARA851">06ASMARA851</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06ASMARA851.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/16/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ERITREA: BLUE LANTERN REPORT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06MEXICO5919">06MEXICO5919</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06MEXICO5919.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/18/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BLUE LANTERN OVERSIGHT OFFICER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KABUL5258">06KABUL5258</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06KABUL5258.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EMBASSY KABUL POC FOR BLUE LANTERN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-160.4634" y1="244.8793" 
+                  x2="-10.2258" y2="7.4867" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-58.8190" 
+                  x2="5.0162" y2="-2.4130" class="btwns5"/>
+        
+            <line x1="-49.8030" y1="-290.0000" 
+                  x2="-6.4140" y2="-10.8447" class="btwns5"/>
+        
+            <line x1="-368.3376" y1="51.1166" 
+                  x2="-14.7770" y2="0.4551" class="btwns5"/>
+        
+            <line x1="-111.9617" y1="-154.7646" 
+                  x2="-10.5921" y2="-9.1701" class="btwns5"/>
+        
+            <line x1="365.9488" y1="71.5939" 
+                  x2="4.9358" y2="0.9569" class="btwns5"/>
+        
+            <line x1="283.7300" y1="-162.2021" 
+                  x2="3.8519" y2="-5.8406" class="btwns5"/>
+        
+            <line x1="-319.4351" y1="173.4023" 
+                  x2="-13.6243" y2="3.8849" class="btwns5"/>
+        
+            <line x1="39.9885" y1="290.0000" 
+                  x2="-3.3541" y2="8.9199" class="btwns5"/>
+        
+            <line x1="290.6334" y1="207.9759" 
+                  x2="3.2871" y2="4.8098" class="btwns5"/>
+        
+            <line x1="101.0880" y1="155.3788" 
+                  x2="0.7324" y2="7.3145" class="btwns5"/>
+        
+            <line x1="-297.1111" y1="-210.8707" 
+                  x2="-13.0001" y2="-6.7972" class="btwns5"/>
+        
+            <line x1="-4.8781" y1="-0.9633" 
+                  x2="-380.1876" y2="-74.7053" class="btwns5"/>
+        
+            <line x1="-4.8781" y1="-0.9633" 
+                  x2="151.1990" y2="-246.8097" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-160.4634 244.8793)" 
+                class="vertice degree0 btwns0 authority0 ASMARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -58.8190)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-49.8030 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-368.3376 51.1166)" 
+                class="vertice degree0 btwns0 authority0 GEORGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-111.9617 -154.7646)" 
+                class="vertice degree0 btwns0 authority0 KABUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(365.9488 71.5939)" 
+                class="vertice degree0 btwns0 authority0 LONDON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(283.7300 -162.2021)" 
+                class="vertice degree0 btwns0 authority0 MAPUTO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-319.4351 173.4023)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(39.9885 290.0000)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(290.6334 207.9759)" 
+                class="vertice degree0 btwns0 authority0 RIYADH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(101.0880 155.3788)" 
+                class="vertice degree0 btwns0 authority0 SANAA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-297.1111 -210.8707)" 
+                class="vertice degree0 btwns0 authority0 SOFIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-4.8781 -0.9633)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -76.6333)" 
+                class="vertice degree0 btwns0 authority0 ULAANBAATAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(156.5587 -255.2521)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-160.4634 244.8793)" 
+                id="06ASMARA851" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06ASMARA851.html">06ASMARA851</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ERITREA: BLUE LANTERN REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -58.8190)" 
+                id="06BRIDGETOWN1544" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BRIDGETOWN1544.html">06BRIDGETOWN1544</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRIDGETOWN POC FOR BLUE LANTERN PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-49.8030 -290.0000)" 
+                id="06DARESSALAAM1594" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06DARESSALAAM1594.html">06DARESSALAAM1594</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TANZANIA: BLUE LANTERN POINT OF CONTACT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-368.3376 51.1166)" 
+                id="06GEORGETOWN933" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06GEORGETOWN933.html">06GEORGETOWN933</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BLUE LANTERN PROGRAM INFORMATION - GUYANA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.9617 -154.7646)" 
+                id="06KABUL5258" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06KABUL5258.html">06KABUL5258</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY KABUL POC FOR BLUE LANTERN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(365.9488 71.5939)" 
+                id="06LONDON6199" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06LONDON6199.html">06LONDON6199</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LONDON BLUE LANTERN ACTION OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(283.7300 -162.2021)" 
+                id="06MAPUTO1182" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06MAPUTO1182.html">06MAPUTO1182</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY MAPUTO BLUE LANTERN UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-319.4351 173.4023)" 
+                id="06MEXICO5919" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06MEXICO5919.html">06MEXICO5919</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BLUE LANTERN OVERSIGHT OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(39.9885 290.0000)" 
+                id="06RIGA691" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06RIGA691.html">06RIGA691</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LATVIA: BLUE LANTERN END-USE CHECK ANNUAL UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(290.6334 207.9759)" 
+                id="06RIYADH7498" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06RIYADH7498.html">06RIYADH7498</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POST'S BLUE LANTERN POINTS OF CONTACT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(101.0880 155.3788)" 
+                id="06SANAA2565" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SANAA2565.html">06SANAA2565</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>YEMEN: BLUE LANTERN CONTACT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-297.1111 -210.8707)" 
+                id="06SOFIA1196" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06SOFIA1196.html">06SOFIA1196</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BULGARIA: BLUE LANTERN ACTION OFFICER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.8781 -0.9633)" 
+                id="06STATE137409" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE137409
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -76.6333)" 
+                id="06ULAANBAATAR648" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06ULAANBAATAR648.html">06ULAANBAATAR648</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ULAANBAATAR CONTACT FOR BLUE LANTERN PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(156.5587 -255.2521)" 
+                id="06VIENNA2514" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06VIENNA2514.html">06VIENNA2514</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BLUE LANTERN PROGRAM: EMBASSY VIENNA POINT OF CONTACT AND PROCEEDURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

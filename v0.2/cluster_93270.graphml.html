@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON159">08WELLINGTON159</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08WELLINGTON159.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND LABOUR PARTY RETURNS NEW ZEALAND RAIL TO A STATE-OWNED ENTERPRISE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON163">08WELLINGTON163</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08WELLINGTON163.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/14/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND ECONOMY LOOMING AS MAIN ELECTION ISSUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON168">08WELLINGTON168</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08WELLINGTON168.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND'S 2008 BUDGET - TOO LITTLE, TOO LATE.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON174">08WELLINGTON174</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08WELLINGTON174.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NO POLLING DIVIDEND FOR LABOUR FROM 2008 BUDGET</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON225">08WELLINGTON225</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08WELLINGTON225.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NEW ZEALAND ECONOMY FACING RECESSION WHILE BATTLING INFLATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON226">08WELLINGTON226</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08WELLINGTON226.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NEW ZEALAND ECONOMY FACING RECESSION WHILE BATTLING INFLATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON230">08WELLINGTON230</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08WELLINGTON230.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RESERVE BANK OF NEW ZEALAND SEES RECESSION AS A MORE IMMEDIATE THREAT TO NEW ZEALND ECONOMY THAN INFLATION.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON296">08WELLINGTON296</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08WELLINGTON296.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RESERVE BANK ANNOUNCES SECOND REDUCTION IN OFFICIAL INTEREST RATE TO OVERCOME FEARS OF RECESSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON336">08WELLINGTON336</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08WELLINGTON336.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/14/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EFFECT OF GLOBAL FINANCIAL CRISIS ON NEW ZEALAND'S ECONOMY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON337">08WELLINGTON337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08WELLINGTON337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/14/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND'S GRIM PRE-ELECTION ECONOMIC FORECAST</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON357">08WELLINGTON357</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08WELLINGTON357.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/24/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW ZEALAND'S RESERVE BANK SLASHES KEY INTEREST RATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08WELLINGTON404">08WELLINGTON404</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08WELLINGTON404.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NEW ZEALAND SLASHES KEY INTEREST RATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09AUCKLAND11">09AUCKLAND11</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09AUCKLAND11.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/18/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">(U) NEW ZEALAND - AUCKLAND BANKERS KEEP THEIR FINGERS CROSSED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-221.8591" y1="63.1107" 
+                  x2="-203.4887" y2="-84.7826" class="btwns0"/>
+        
+            <line x1="-221.8591" y1="63.1107" 
+                  x2="-82.3954" y2="56.2702" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-14.3890" 
+                  x2="-211.4500" y2="-90.7731" class="btwns2"/>
+        
+            <line x1="-202.2560" y1="-94.7063" 
+                  x2="-210.4440" y2="-252.1509" class="btwns2"/>
+        
+            <line x1="-202.2560" y1="-94.7063" 
+                  x2="-18.9530" y2="-202.5330" class="btwns8"/>
+        
+            <line x1="-202.2560" y1="-94.7063" 
+                  x2="-361.7237" y2="-172.4054" class="btwns2"/>
+        
+            <line x1="-202.2560" y1="-94.7063" 
+                  x2="-78.9402" y2="48.2091" class="btwns9"/>
+        
+            <line x1="-10.3337" y1="-207.6032" 
+                  x2="136.4195" y2="-285.3200" class="btwns5"/>
+        
+            <line x1="145.2568" y1="-290.0000" 
+                  x2="292.3935" y2="-281.8670" class="btwns2"/>
+        
+            <line x1="270.5691" y1="121.1709" 
+                  x2="96.5431" y2="161.5576" class="btwns5"/>
+        
+            <line x1="270.5691" y1="121.1709" 
+                  x2="381.9988" y2="37.6331" class="btwns2"/>
+        
+            <line x1="-72.4074" y1="55.7803" 
+                  x2="78.5273" y2="158.2032" class="btwns10"/>
+        
+            <line x1="86.8020" y1="163.8183" 
+                  x2="29.9341" y2="281.0034" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-221.8591 63.1107)" 
+                class="vertice degree2 btwns0 authority2 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -14.3890)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-202.2560 -94.7063)" 
+                class="vertice degree10 btwns10 authority10 WELLINGTON">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-210.9633 -262.1374)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-10.3337 -207.6032)" 
+                class="vertice degree2 btwns4 authority2 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-370.7133 -176.7855)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(145.2568 -290.0000)" 
+                class="vertice degree2 btwns2 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(302.3783 -281.3151)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(270.5691 121.1709)" 
+                class="vertice degree2 btwns2 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-72.4074 55.7803)" 
+                class="vertice degree4 btwns6 authority4 WELLINGTON">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(86.8020 163.8183)" 
+                class="vertice degree4 btwns6 authority3 WELLINGTON">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(25.5682 290.0000)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.6347)" 
+                class="vertice degree0 btwns0 authority0 AUCKLAND">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-221.8591 63.1107)" 
+                id="08WELLINGTON159" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08WELLINGTON159.html">08WELLINGTON159</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND LABOUR PARTY RETURNS NEW ZEALAND RAIL TO A STATE-OWNED ENTERPRISE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -14.3890)" 
+                id="08WELLINGTON163" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08WELLINGTON163.html">08WELLINGTON163</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND ECONOMY LOOMING AS MAIN ELECTION ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-202.2560 -94.7063)" 
+                id="08WELLINGTON168" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08WELLINGTON168.html">08WELLINGTON168</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND'S 2008 BUDGET - TOO LITTLE, TOO LATE.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-210.9633 -262.1374)" 
+                id="08WELLINGTON174" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08WELLINGTON174.html">08WELLINGTON174</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NO POLLING DIVIDEND FOR LABOUR FROM 2008 BUDGET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.3337 -207.6032)" 
+                id="08WELLINGTON225" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08WELLINGTON225.html">08WELLINGTON225</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND ECONOMY FACING RECESSION WHILE BATTLING INFLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-370.7133 -176.7855)" 
+                id="08WELLINGTON226" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08WELLINGTON226.html">08WELLINGTON226</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND ECONOMY FACING RECESSION WHILE BATTLING INFLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(145.2568 -290.0000)" 
+                id="08WELLINGTON230" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08WELLINGTON230.html">08WELLINGTON230</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>RESERVE BANK OF NEW ZEALAND SEES RECESSION AS A MORE IMMEDIATE THREAT TO NEW ZEALND ECONOMY THAN INFLATION.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(302.3783 -281.3151)" 
+                id="08WELLINGTON296" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08WELLINGTON296.html">08WELLINGTON296</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RESERVE BANK ANNOUNCES SECOND REDUCTION IN OFFICIAL INTEREST RATE TO OVERCOME FEARS OF RECESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(270.5691 121.1709)" 
+                id="08WELLINGTON336" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08WELLINGTON336.html">08WELLINGTON336</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EFFECT OF GLOBAL FINANCIAL CRISIS ON NEW ZEALAND'S ECONOMY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-72.4074 55.7803)" 
+                id="08WELLINGTON337" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08WELLINGTON337.html">08WELLINGTON337</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND'S GRIM PRE-ELECTION ECONOMIC FORECAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(86.8020 163.8183)" 
+                id="08WELLINGTON357" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08WELLINGTON357.html">08WELLINGTON357</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND'S RESERVE BANK SLASHES KEY INTEREST RATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(25.5682 290.0000)" 
+                id="08WELLINGTON404" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08WELLINGTON404.html">08WELLINGTON404</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND SLASHES KEY INTEREST RATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 31.6347)" 
+                id="09AUCKLAND11" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09AUCKLAND11.html">09AUCKLAND11</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>(U) NEW ZEALAND - AUCKLAND BANKERS KEEP THEIR FINGERS CROSSED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

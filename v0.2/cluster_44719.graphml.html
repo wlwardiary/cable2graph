@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PANAMA219">06PANAMA219</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/05/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06PANAMA651">06PANAMA651</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE93460">06STATE93460</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/10/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1213">06PANAMA1213</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06PANAMA1213.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PANAMA & VENEZUELA TO SIGN ENERGY AGREEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PANAMA1251">06PANAMA1251</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/28/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1293">06PANAMA1293</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PANAMA1293.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TORRIJOS, URIBE AND CHAVEZ TO MEET REGARDING GAS PIPELINE AGREEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1294">06PANAMA1294</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PANAMA1294.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PANAMA TO HOST PRESIDENT FOX AT REGIONAL CENTAM CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1303">06PANAMA1303</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PANAMA1303.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/05/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CENTAM PRESIDENTS TO DISCUSS DEMOCRACY, IMMIGRATION, ECONOMICS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1359">06PANAMA1359</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06PANAMA1359.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PANAMA HOSTS SUMMIT ON REGIONAL INTEGRATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1518">06PANAMA1518</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06PANAMA1518.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOP DIVIDED ON REGIONAL ENERGY POLICY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA1999">06PANAMA1999</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06PANAMA1999.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOP SCHIZOPHRENIC ON VENEZUELAN FUEL IMPORTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA2005">06PANAMA2005</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06PANAMA2005.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/11/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PANAMA'S THREE WAY RACE FOR A CENTRAL AMERICAN REFINERY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PANAMA2412">06PANAMA2412</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06PANAMA2412.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">REFINERY, FUEL HUB AND BIOFUELS DEVELOPMENTS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-204.7402" y1="290.0000" 
+                  x2="-179.3255" y2="171.0892" class="btwns4"/>
+        
+            <line x1="-303.9714" y1="-67.0946" 
+                  x2="-51.4870" y2="9.3864" class="btwns1"/>
+        
+            <line x1="-303.9714" y1="-67.0946" 
+                  x2="-216.8438" y2="12.4342" class="btwns1"/>
+        
+            <line x1="-41.9164" y1="12.2855" 
+                  x2="213.2258" y2="-49.3399" class="btwns10"/>
+        
+            <line x1="-41.9164" y1="12.2855" 
+                  x2="-170.5130" y2="153.9067" class="btwns9"/>
+        
+            <line x1="175.9102" y1="-171.2981" 
+                  x2="380.3510" y2="-115.6529" class="btwns0"/>
+        
+            <line x1="175.9102" y1="-171.2981" 
+                  x2="219.2866" y2="-60.9940" class="btwns3"/>
+        
+            <line x1="175.9102" y1="-171.2981" 
+                  x2="-77.2748" y2="-140.4288" class="btwns7"/>
+        
+            <line x1="175.9102" y1="-171.2981" 
+                  x2="125.9353" y2="-280.9012" class="btwns4"/>
+        
+            <line x1="390.0000" y1="-113.0266" 
+                  x2="232.3335" y2="-55.1345" class="btwns0"/>
+        
+            <line x1="23.2497" y1="155.5083" 
+                  x2="-167.2396" y2="161.0208" class="btwns4"/>
+        
+            <line x1="23.2497" y1="155.5083" 
+                  x2="-200.8296" y2="24.2308" class="btwns5"/>
+        
+            <line x1="23.2497" y1="155.5083" 
+                  x2="242.8778" y2="219.9992" class="btwns4"/>
+        
+            <line x1="-177.2354" y1="161.3100" 
+                  x2="-380.3148" y2="109.1113" class="btwns1"/>
+        
+            <line x1="-209.4579" y1="19.1759" 
+                  x2="-93.3114" y2="-131.3024" class="btwns9"/>
+        
+            <line x1="-209.4579" y1="19.1759" 
+                  x2="-381.0001" y2="102.2627" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-204.7402 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-303.9714 -67.0946)" 
+                class="vertice degree3 btwns1 authority3 PANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-41.9164 12.2855)" 
+                class="vertice degree6 btwns9 authority6 PANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(175.9102 -171.2981)" 
+                class="vertice degree10 btwns8 authority9 PANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -113.0266)" 
+                class="vertice degree3 btwns0 authority3 PANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(222.9462 -51.6877)" 
+                class="vertice degree6 btwns6 authority6 PANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(23.2497 155.5083)" 
+                class="vertice degree6 btwns6 authority6 PANAMA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-177.2354 161.3100)" 
+                class="vertice degree10 btwns10 authority9 PANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-209.4579 19.1759)" 
+                class="vertice degree10 btwns9 authority10 PANAMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-87.2013 -139.2186)" 
+                class="vertice degree3 btwns6 authority3 PANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 106.6218)" 
+                class="vertice degree3 btwns1 authority3 PANAMA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(252.4727 222.8166)" 
+                class="vertice degree0 btwns0 authority0 PANAMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(121.7866 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-204.7402 290.0000)" 
+                id="06PANAMA1213" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06PANAMA1213.html">06PANAMA1213</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PANAMA & VENEZUELA TO SIGN ENERGY AGREEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-303.9714 -67.0946)" 
+                id="06PANAMA1251" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06PANAMA1251
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-41.9164 12.2855)" 
+                id="06PANAMA1293" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PANAMA1293.html">06PANAMA1293</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TORRIJOS, URIBE AND CHAVEZ TO MEET REGARDING GAS PIPELINE AGREEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(175.9102 -171.2981)" 
+                id="06PANAMA1294" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PANAMA1294.html">06PANAMA1294</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PANAMA TO HOST PRESIDENT FOX AT REGIONAL CENTAM CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -113.0266)" 
+                id="06PANAMA1303" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PANAMA1303.html">06PANAMA1303</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CENTAM PRESIDENTS TO DISCUSS DEMOCRACY, IMMIGRATION, ECONOMICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(222.9462 -51.6877)" 
+                id="06PANAMA1359" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06PANAMA1359.html">06PANAMA1359</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PANAMA HOSTS SUMMIT ON REGIONAL INTEGRATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(23.2497 155.5083)" 
+                id="06PANAMA1518" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06PANAMA1518.html">06PANAMA1518</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>GOP DIVIDED ON REGIONAL ENERGY POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-177.2354 161.3100)" 
+                id="06PANAMA1999" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06PANAMA1999.html">06PANAMA1999</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GOP SCHIZOPHRENIC ON VENEZUELAN FUEL IMPORTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.4579 19.1759)" 
+                id="06PANAMA2005" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06PANAMA2005.html">06PANAMA2005</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PANAMA'S THREE WAY RACE FOR A CENTRAL AMERICAN REFINERY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-87.2013 -139.2186)" 
+                id="06PANAMA219" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06PANAMA219
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 106.6218)" 
+                id="06PANAMA2412" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06PANAMA2412.html">06PANAMA2412</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>REFINERY, FUEL HUB AND BIOFUELS DEVELOPMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(252.4727 222.8166)" 
+                id="06PANAMA651" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PANAMA651
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(121.7866 -290.0000)" 
+                id="06STATE93460" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE93460
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

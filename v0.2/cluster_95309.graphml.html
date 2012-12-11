@@ -1,0 +1,1199 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1329">09ASHGABAT1329</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09ASHGABAT1329.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: RESPIRATORY ILLNESS APPEARS TO STRIKE AREA SCHOOLCHILDREN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1352">09ASHGABAT1352</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09ASHGABAT1352.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: HOSPITALS SWAMPED WITH SICK CHILDREN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1370">09ASHGABAT1370</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09ASHGABAT1370.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: FLU SPREADING TO ADULTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1890">09KYIV1890</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09KYIV1890.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE: "UNKNOWN FLU" OUTBREAK IN TERNOPIL REGION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1391">09ASHGABAT1391</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09ASHGABAT1391.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: REPORTS OF DEATHS CAUSED BY FLU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1893">09KYIV1893</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09KYIV1893.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE: AUTHORITIES CONFIRM H1N1 OUTBREAK, ANNOUNCE MEASURES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1404">09ASHGABAT1404</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09ASHGABAT1404.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: NUMBER OF DEATHS FROM FLU RISING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1900">09KYIV1900</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09KYIV1900.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE: DEATH TOLL AND PANIC RISING WHILE POLITICIANS TRADE ACCUSATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1911">09KYIV1911</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09KYIV1911.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/04/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE'S FLU LEVELS SIMILAR TO OTHER AFFECTED COUNTRIES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1421">09ASHGABAT1421</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09ASHGABAT1421.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: GOVERNMENT IN DENIAL ABOUT PRESENCE OF FLU</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1915">09KYIV1915</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09KYIV1915.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE: FIGHTING THE FLU WITH GARLIC AND ONION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRATISLAVA471">09BRATISLAVA471</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BRATISLAVA471.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAK OFFICIALS PLAY DOWN H1N1 THREAT BUT CLOSE BORDER CROSSINGS WITH UKRAINE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ASHGABAT1444">09ASHGABAT1444</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09ASHGABAT1444.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKMENISTAN: FIGHTING THE FLU WITH RASPBERRIES, HONEY, AND HORSERADISH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRATISLAVA475">09BRATISLAVA475</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BRATISLAVA475.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAKIA H1N1 UPDATE: 29 NEW CASES IN PAST WEEK, 1 DEATH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1990">09KYIV1990</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09KYIV1990.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UKRAINE: H1N1 UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRATISLAVA494">09BRATISLAVA494</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BRATISLAVA494.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAKIA H1N1 UPDATE: RATE OF INFECTION INCREASING, GOVERNMENT REMAINS LOW-KEY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BRATISLAVA513">09BRATISLAVA513</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09BRATISLAVA513.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SLOVAKIA H1N1 UPDATE: BORDERS WITH UKRAINE REOPENED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10BRATISLAVA80">10BRATISLAVA80</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10BRATISLAVA80.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAK PRIME MINISTER FICO ADVANCES H1N1 CONSPIRACY THEORY</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="65.9526" 
+                  x2="-378.8739" y2="-21.2495" class="btwns2"/>
+        
+            <line x1="-377.6082" y1="-31.1690" 
+                  x2="-342.6144" y2="-123.1564" class="btwns4"/>
+        
+            <line x1="-339.0588" y1="-132.5029" 
+                  x2="-272.2047" y2="-216.7221" class="btwns5"/>
+        
+            <line x1="-265.9873" y1="-224.5543" 
+                  x2="-161.0583" y2="-285.0079" class="btwns7"/>
+        
+            <line x1="-152.3935" y1="-290.0000" 
+                  x2="-23.5707" y2="-286.6341" class="btwns8"/>
+        
+            <line x1="-13.5741" y1="-286.3729" 
+                  x2="55.3492" y2="-194.7819" class="btwns9"/>
+        
+            <line x1="61.3621" y1="-186.7916" 
+                  x2="147.3827" y2="-64.1342" class="btwns10"/>
+        
+            <line x1="23.7023" y1="88.7664" 
+                  x2="-69.3186" y2="195.5011" class="btwns2"/>
+        
+            <line x1="23.7023" y1="88.7664" 
+                  x2="18.9007" y2="185.7298" class="btwns2"/>
+        
+            <line x1="23.7023" y1="88.7664" 
+                  x2="-87.7409" y2="126.7533" class="btwns1"/>
+        
+            <line x1="23.7023" y1="88.7664" 
+                  x2="146.4582" y2="-48.4930" class="btwns8"/>
+        
+            <line x1="-75.8888" y1="203.0399" 
+                  x2="8.4361" y2="196.4918" class="btwns0"/>
+        
+            <line x1="-75.8888" y1="203.0399" 
+                  x2="-94.4052" y2="139.5793" class="btwns0"/>
+        
+            <line x1="-75.8888" y1="203.0399" 
+                  x2="-25.4170" y2="281.5871" class="btwns0"/>
+        
+            <line x1="18.4061" y1="195.7175" 
+                  x2="-88.5132" y2="134.9225" class="btwns0"/>
+        
+            <line x1="18.4061" y1="195.7175" 
+                  x2="-16.2377" y2="280.7393" class="btwns0"/>
+        
+            <line x1="272.0244" y1="-155.5325" 
+                  x2="254.1873" y2="-95.6835" class="btwns0"/>
+        
+            <line x1="272.0244" y1="-155.5325" 
+                  x2="324.7637" y2="-60.7951" class="btwns0"/>
+        
+            <line x1="272.0244" y1="-155.5325" 
+                  x2="160.7908" y2="-62.3678" class="btwns1"/>
+        
+            <line x1="270.7515" y1="16.2877" 
+                  x2="253.1946" y2="-76.2752" class="btwns0"/>
+        
+            <line x1="270.7515" y1="16.2877" 
+                  x2="323.1010" y2="-44.4813" class="btwns0"/>
+        
+            <line x1="270.7515" y1="16.2877" 
+                  x2="161.6460" y2="-50.7139" class="btwns2"/>
+        
+            <line x1="270.7515" y1="16.2877" 
+                  x2="380.4124" y2="48.7969" class="btwns0"/>
+        
+            <line x1="251.3311" y1="-86.1001" 
+                  x2="320.4570" y2="-56.0450" class="btwns0"/>
+        
+            <line x1="251.3311" y1="-86.1001" 
+                  x2="162.6841" y2="-58.8820" class="btwns1"/>
+        
+            <line x1="329.6277" y1="-52.0577" 
+                  x2="163.1221" y2="-55.7266" class="btwns2"/>
+        
+            <line x1="329.6277" y1="-52.0577" 
+                  x2="384.9686" y2="42.9971" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 65.9526)" 
+                class="vertice degree0 btwns0 authority0 ASHGABAT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-377.6082 -31.1690)" 
+                class="vertice degree2 btwns1 authority1 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-339.0588 -132.5029)" 
+                class="vertice degree2 btwns3 authority1 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-265.9873 -224.5543)" 
+                class="vertice degree2 btwns4 authority1 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-152.3935 -290.0000)" 
+                class="vertice degree2 btwns5 authority1 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-13.5741 -286.3729)" 
+                class="vertice degree2 btwns6 authority1 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(61.3621 -186.7916)" 
+                class="vertice degree2 btwns6 authority2 ASHGABAT">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(23.7023 88.7664)" 
+                class="vertice degree6 btwns5 authority6 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-75.8888 203.0399)" 
+                class="vertice degree6 btwns0 authority5 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(18.4061 195.7175)" 
+                class="vertice degree6 btwns0 authority5 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-97.2062 129.9796)" 
+                class="vertice degree4 btwns0 authority4 BRATISLAVA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(272.0244 -155.5325)" 
+                class="vertice degree4 btwns0 authority4 KYIV">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(270.7515 16.2877)" 
+                class="vertice degree6 btwns0 authority6 KYIV">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(251.3311 -86.1001)" 
+                class="vertice degree6 btwns0 authority6 KYIV">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(329.6277 -52.0577)" 
+                class="vertice degree8 btwns0 authority8 KYIV">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(153.1245 -55.9469)" 
+                class="vertice degree10 btwns10 authority10 KYIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 51.6391)" 
+                class="vertice degree2 btwns0 authority2 KYIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-20.0111 290.0000)" 
+                class="vertice degree2 btwns0 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 65.9526)" 
+                id="09ASHGABAT1329" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09ASHGABAT1329.html">09ASHGABAT1329</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: RESPIRATORY ILLNESS APPEARS TO STRIKE AREA SCHOOLCHILDREN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-377.6082 -31.1690)" 
+                id="09ASHGABAT1352" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09ASHGABAT1352.html">09ASHGABAT1352</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: HOSPITALS SWAMPED WITH SICK CHILDREN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-339.0588 -132.5029)" 
+                id="09ASHGABAT1370" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09ASHGABAT1370.html">09ASHGABAT1370</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: FLU SPREADING TO ADULTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-265.9873 -224.5543)" 
+                id="09ASHGABAT1391" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09ASHGABAT1391.html">09ASHGABAT1391</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: REPORTS OF DEATHS CAUSED BY FLU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-152.3935 -290.0000)" 
+                id="09ASHGABAT1404" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ASHGABAT1404.html">09ASHGABAT1404</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: NUMBER OF DEATHS FROM FLU RISING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-13.5741 -286.3729)" 
+                id="09ASHGABAT1421" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ASHGABAT1421.html">09ASHGABAT1421</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: GOVERNMENT IN DENIAL ABOUT PRESENCE OF FLU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(61.3621 -186.7916)" 
+                id="09ASHGABAT1444" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09ASHGABAT1444.html">09ASHGABAT1444</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TURKMENISTAN: FIGHTING THE FLU WITH RASPBERRIES, HONEY, AND HORSERADISH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(23.7023 88.7664)" 
+                id="09BRATISLAVA471" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BRATISLAVA471.html">09BRATISLAVA471</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SLOVAK OFFICIALS PLAY DOWN H1N1 THREAT BUT CLOSE BORDER CROSSINGS WITH UKRAINE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-75.8888 203.0399)" 
+                id="09BRATISLAVA475" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BRATISLAVA475.html">09BRATISLAVA475</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA H1N1 UPDATE: 29 NEW CASES IN PAST WEEK, 1 DEATH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(18.4061 195.7175)" 
+                id="09BRATISLAVA494" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BRATISLAVA494.html">09BRATISLAVA494</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA H1N1 UPDATE: RATE OF INFECTION INCREASING, GOVERNMENT REMAINS LOW-KEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-97.2062 129.9796)" 
+                id="09BRATISLAVA513" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09BRATISLAVA513.html">09BRATISLAVA513</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA H1N1 UPDATE: BORDERS WITH UKRAINE REOPENED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(272.0244 -155.5325)" 
+                id="09KYIV1890" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09KYIV1890.html">09KYIV1890</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: "UNKNOWN FLU" OUTBREAK IN TERNOPIL REGION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(270.7515 16.2877)" 
+                id="09KYIV1893" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09KYIV1893.html">09KYIV1893</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: AUTHORITIES CONFIRM H1N1 OUTBREAK, ANNOUNCE MEASURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(251.3311 -86.1001)" 
+                id="09KYIV1900" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09KYIV1900.html">09KYIV1900</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: DEATH TOLL AND PANIC RISING WHILE POLITICIANS TRADE ACCUSATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(329.6277 -52.0577)" 
+                id="09KYIV1911" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>11/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09KYIV1911.html">09KYIV1911</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>UKRAINE'S FLU LEVELS SIMILAR TO OTHER AFFECTED COUNTRIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(153.1245 -55.9469)" 
+                id="09KYIV1915" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09KYIV1915.html">09KYIV1915</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: FIGHTING THE FLU WITH GARLIC AND ONION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 51.6391)" 
+                id="09KYIV1990" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09KYIV1990.html">09KYIV1990</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: H1N1 UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.0111 290.0000)" 
+                id="10BRATISLAVA80" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10BRATISLAVA80.html">10BRATISLAVA80</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SLOVAK PRIME MINISTER FICO ADVANCES H1N1 CONSPIRACY THEORY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

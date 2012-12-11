@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 550.0000;
+    var width = 1200;
+    var height = 1100;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07YEREVAN117">07YEREVAN117</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/02/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN133">07YEREVAN133</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07YEREVAN133.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATO REVIEW PLEASED WITH ARMENIA IPAP PROGRESS, BUT PLAN TO CIVILIANIZE MOD NEEDS WORK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN186">07YEREVAN186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07YEREVAN186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DASD MACDOUGALL'S MEETING WITH DEFMIN SARGSIAN, OUTGOING DEPUTY DEFMIN AGHABEKIAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN332">07YEREVAN332</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07YEREVAN332.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARMENIA CELEBRATES NATO WEEK (WITH A LITTLE HELP FROM ITS FRIENDS)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07USOSCE272">07USOSCE272</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/22/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN827">07YEREVAN827</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07YEREVAN827.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATO OFFICIAL UPBEAT ON ARMENIA'S IPAP PROGRESS AND COMMITMENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BAKU841">07BAKU841</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07BAKU841.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/05/07</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">AZERBAIJANI CONSIDERING CFE MORATORIUM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BUCHAREST825">07BUCHAREST825</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07BUCHAREST825.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROMANIA: STATEMENT ON RUSSIA'S CFE ANNOUNCEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07MOSCOW3451">07MOSCOW3451</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/16/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07USOSCE321">07USOSCE321</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/17/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BAKU903">07BAKU903</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07BAKU903.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AZERBAIJAN IN WAIT AND SEE MODE REGARDING RUSSIAN CFE SUSPENSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07RIGA533">07RIGA533</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07RIGA533.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/18/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">LATVIAN REACTION TO RUSSIAN CFE MOVES - PLANS, PLEASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN926">07YEREVAN926</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07YEREVAN926.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/20/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PRIME MINISTER UNDERSCORES COMMITMENT TO U.S. RELATIONSHIP IN PRIVATE DINNER WITH CDA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE103522">07STATE103522</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/26/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07USNATO433">07USNATO433</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07USNATO433.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NRC/CFE: RUSSIA WANTS COMPLETE ELIMINATION OF FLANK REGIME</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE107265">07STATE107265</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/01/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KYIV1897">07KYIV1897</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07KYIV1897.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/03/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UKRAINE: MISSILE DEFENSE COOPERATION AND CFE; DEBRIEF ON U.S.-RUSSIA EXPERTS' MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07USNATO445">07USNATO445</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07USNATO445.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATO/HLTF MEETING, JULY 26 2007 - THE WAY AHEAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07USNATO446">07USNATO446</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07USNATO446.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ALLIES APPRECIATE DAS KRAMER'S BRIEFING ON US/RUSSIA EXPERTS TALKS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE109573">07STATE109573</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/07/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE109669">07STATE109669</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/07/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07YEREVAN1015">07YEREVAN1015</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07YEREVAN1015.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA DISMAYED BY RUSSIAN POSITION ON CFE SUSPENSION, WORRIES OF SOUTH CAUCASUS ARMS RACE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE112010">07STATE112010</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/10/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BAKU1010">07BAKU1010</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07BAKU1010.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AZERBAIJANI OFFICIALS GRATEFUL FOR US TRANSPARENCY ON US-RUSSIAN MISSILE DEFENSE CONSULTATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE116194">07STATE116194</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/17/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07VILNIUS595">07VILNIUS595</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07VILNIUS595.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LITHUANIAN RESPONSE TO U.S. NON-PAPER ON ADAPTED CFE RATIFICATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRUSSELS2649">07BRUSSELS2649</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07BRUSSELS2649.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BELGIAN RESPONSE TO U.S. NON-PAPER ON CFE AND COMMENT ON NATIONAL PROCEDURES FOR ADAPTED CFE RATIFICATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07RIGA629">07RIGA629</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07RIGA629.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/07</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">LATVIA REMAINS CAUTIOUS ON PLANS FOR A/CFE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TALLINN544">07TALLINN544</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07TALLINN544.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA SUPPORTS U.S. NON-PAPER ON CFE RATIFICATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07LISBON2143">07LISBON2143</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07LISBON2143.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PORTUGAL SUPPORTS A/CFE PLANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PRAGUE970">07PRAGUE970</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07PRAGUE970.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CZECH REACTION TO U.S. NONPAPER ON CFE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRATISLAVA475">07BRATISLAVA475</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07BRATISLAVA475.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CFE DEMARCHE DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07REYKJAVIK248">07REYKJAVIK248</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07REYKJAVIK248.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ICELAND: TIMELINE ON ADAPTED CFE DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07VILNIUS629">07VILNIUS629</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07VILNIUS629.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">U.S.-BALTIC A/CFE MEETING IN VILNIUS, AUGUST 30</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE126948">07STATE126948</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/12/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS3808">07PARIS3808</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07PARIS3808.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/13/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S FRIED CFE TALKS WITH RUSSIA IN FRANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS3955">07PARIS3955</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07PARIS3955.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OVERVIEW OF FRENCH TREATY RATIFICATION PROCESS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07USNATO521">07USNATO521</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07USNATO521.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUBJECT:  HLTF: NATO ALLIES ENDORSE U.S. PARALLEL ACTIONS PROPOSAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07RIGA744">07RIGA744</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/06/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07RIGA850">07RIGA850</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07RIGA850.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LATVIA: DAS GARBER DISCUSSES VISA WAIVER, CFE, AND MISSILE DEFENSE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="1100" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,550.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="108.6691" y1="-311.6301" 
+                  x2="98.6691" y2="-311.6301" class="btwns0"/>
+        
+            <line x1="108.6691" y1="-311.6301" 
+                  x2="-0.0853" y2="-320.1936" class="btwns1"/>
+        
+            <line x1="108.6691" y1="-311.6301" 
+                  x2="45.3080" y2="-262.8596" class="btwns0"/>
+        
+            <line x1="108.6691" y1="-311.6301" 
+                  x2="201.3109" y2="-320.8885" class="btwns0"/>
+        
+            <line x1="302.2871" y1="-183.0617" 
+                  x2="197.8567" y2="-169.1538" class="btwns1"/>
+        
+            <line x1="302.2871" y1="-183.0617" 
+                  x2="380.0178" y2="-178.4195" class="btwns0"/>
+        
+            <line x1="187.9442" y1="-167.8337" 
+                  x2="177.9442" y2="-167.8337" class="btwns0"/>
+        
+            <line x1="187.9442" y1="-167.8337" 
+                  x2="56.5843" y2="-146.9508" class="btwns2"/>
+        
+            <line x1="194.6560" y1="207.0195" 
+                  x2="225.2056" y2="138.7447" class="btwns0"/>
+        
+            <line x1="370.6642" y1="82.4261" 
+                  x2="238.7754" y2="126.4506" class="btwns0"/>
+        
+            <line x1="-48.1756" y1="-119.9036" 
+                  x2="37.0504" y2="-142.7875" class="btwns0"/>
+        
+            <line x1="-98.4917" y1="-353.1093" 
+                  x2="-19.4533" y2="-324.3933" class="btwns0"/>
+        
+            <line x1="186.5979" y1="62.5086" 
+                  x2="223.9223" y2="121.1794" class="btwns0"/>
+        
+            <line x1="46.7083" y1="-145.3807" 
+                  x2="46.7582" y2="-51.6111" class="btwns9"/>
+        
+            <line x1="46.7083" y1="-145.3807" 
+                  x2="-54.6937" y2="-215.5193" class="btwns8"/>
+        
+            <line x1="20.6037" y1="390.0000" 
+                  x2="-5.4968" y2="327.3412" class="btwns0"/>
+        
+            <line x1="334.5691" y1="198.2771" 
+                  x2="237.6660" y2="135.0795" class="btwns0"/>
+        
+            <line x1="327.7215" y1="34.5908" 
+                  x2="236.4843" y2="122.6713" class="btwns0"/>
+        
+            <line x1="270.3337" y1="237.1405" 
+                  x2="232.8561" y2="138.9593" class="btwns0"/>
+        
+            <line x1="46.7635" y1="-41.6111" 
+                  x2="55.1559" y2="56.4490" class="btwns10"/>
+        
+            <line x1="56.0086" y1="66.4125" 
+                  x2="-87.9970" y2="60.1788" class="btwns1"/>
+        
+            <line x1="56.0086" y1="66.4125" 
+                  x2="219.8953" y2="126.1902" class="btwns9"/>
+        
+            <line x1="56.0086" y1="66.4125" 
+                  x2="-12.0077" y2="103.1663" class="btwns0"/>
+        
+            <line x1="-209.7870" y1="70.1783" 
+                  x2="-107.9444" y2="60.6754" class="btwns0"/>
+        
+            <line x1="-222.9542" y1="203.6434" 
+                  x2="-120.7622" y2="231.5892" class="btwns0"/>
+        
+            <line x1="-10.0544" y1="-320.9785" 
+                  x2="33.4799" y2="-381.8654" class="btwns0"/>
+        
+            <line x1="-10.0544" y1="-320.9785" 
+                  x2="-58.2361" y2="-230.0442" class="btwns3"/>
+        
+            <line x1="37.3837" y1="-256.7601" 
+                  x2="-53.4926" y2="-224.5488" class="btwns1"/>
+        
+            <line x1="114.5649" y1="306.9605" 
+                  x2="65.2432" y2="237.7639" class="btwns0"/>
+        
+            <line x1="229.2899" y1="129.6168" 
+                  x2="256.3247" y2="30.2458" class="btwns0"/>
+        
+            <line x1="229.2899" y1="129.6168" 
+                  x2="337.5868" y2="137.3751" class="btwns0"/>
+        
+            <line x1="229.2899" y1="129.6168" 
+                  x2="68.0563" y2="224.5471" class="btwns6"/>
+        
+            <line x1="-97.4544" y1="354.7942" 
+                  x2="-18.5739" y2="321.9536" class="btwns0"/>
+        
+            <line x1="-209.6199" y1="275.5429" 
+                  x2="-120.3380" y2="238.0949" class="btwns0"/>
+        
+            <line x1="-111.1163" y1="234.2270" 
+                  x2="49.4426" y2="229.8908" class="btwns2"/>
+        
+            <line x1="-9.3421" y1="318.1101" 
+                  x2="53.3020" y2="237.5162" class="btwns2"/>
+        
+            <line x1="-62.9180" y1="-221.2079" 
+                  x2="-72.9180" y2="-221.2079" class="btwns0"/>
+        
+            <line x1="-62.9180" y1="-221.2079" 
+                  x2="-204.4366" y2="-182.2518" class="btwns5"/>
+        
+            <line x1="-360.2602" y1="-22.3166" 
+                  x2="-302.0759" y2="-85.0035" class="btwns1"/>
+        
+            <line x1="-360.2602" y1="-22.3166" 
+                  x2="-386.1764" y2="40.3127" class="btwns0"/>
+        
+            <line x1="-295.2730" y1="-92.3329" 
+                  x2="-220.8899" y2="-172.2767" class="btwns2"/>
+        
+            <line x1="-312.5649" y1="-178.2407" 
+                  x2="-224.0771" y2="-179.4600" class="btwns0"/>
+        
+            <line x1="-214.0780" y1="-179.5978" 
+                  x2="-250.7043" y2="-242.1540" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(108.6691 -311.6301)" 
+                class="vertice degree4 btwns0 authority2 BAKU">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(302.2871 -183.0617)" 
+                class="vertice degree1 btwns0 authority1 BAKU">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(187.9442 -167.8337)" 
+                class="vertice degree3 btwns1 authority1 BAKU">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(194.6560 207.0195)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(370.6642 82.4261)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-48.1756 -119.9036)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-98.4917 -353.1093)" 
+                class="vertice degree0 btwns0 authority0 KYIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(186.5979 62.5086)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(46.7083 -145.3807)" 
+                class="vertice degree3 btwns9 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(20.6037 390.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(334.5691 198.2771)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(327.7215 34.5908)" 
+                class="vertice degree0 btwns0 authority0 PRAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(270.3337 237.1405)" 
+                class="vertice degree0 btwns0 authority0 REYKJAVIK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(46.7635 -41.6111)" 
+                class="vertice degree1 btwns8 authority1 RIGA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(56.0086 66.4125)" 
+                class="vertice degree3 btwns9 authority3 RIGA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-209.7870 70.1783)" 
+                class="vertice degree0 btwns0 authority0 RIGA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-97.9877 59.7463)" 
+                class="vertice degree1 btwns0 authority1 RIGA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-222.9542 203.6434)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-10.0544 -320.9785)" 
+                class="vertice degree3 btwns2 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(37.3837 -256.7601)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(114.5649 306.9605)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(211.2614 -321.8829)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(229.2899 129.6168)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-97.4544 354.7942)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(258.9499 20.5965)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-209.6199 275.5429)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-111.1163 234.2270)" 
+                class="vertice degree2 btwns1 authority2 unknown">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(39.2961 -390.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-9.3421 318.1101)" 
+                class="vertice degree2 btwns1 authority2 unknown">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -177.8234)" 
+                class="vertice degree0 btwns0 authority0 USOSCE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-20.8054 107.9203)" 
+                class="vertice degree0 btwns0 authority0 USOSCE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(347.5612 138.0896)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(59.4390 229.6208)" 
+                class="vertice degree3 btwns5 authority3 VILNIUS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-62.9180 -221.2079)" 
+                class="vertice degree5 btwns7 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-360.2602 -22.3166)" 
+                class="vertice degree1 btwns0 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-295.2730 -92.3329)" 
+                class="vertice degree1 btwns1 authority1 YEREVAN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 49.5528)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-312.5649 -178.2407)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-214.0780 -179.5978)" 
+                class="vertice degree3 btwns3 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-255.7570 -250.7836)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(108.6691 -311.6301)" 
+                id="07BAKU1010" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07BAKU1010.html">07BAKU1010</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AZERBAIJANI OFFICIALS GRATEFUL FOR US TRANSPARENCY ON US-RUSSIAN MISSILE DEFENSE CONSULTATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(302.2871 -183.0617)" 
+                id="07BAKU841" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07BAKU841.html">07BAKU841</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>AZERBAIJANI CONSIDERING CFE MORATORIUM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(187.9442 -167.8337)" 
+                id="07BAKU903" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07BAKU903.html">07BAKU903</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AZERBAIJAN IN WAIT AND SEE MODE REGARDING RUSSIAN CFE SUSPENSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(194.6560 207.0195)" 
+                id="07BRATISLAVA475" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07BRATISLAVA475.html">07BRATISLAVA475</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CFE DEMARCHE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(370.6642 82.4261)" 
+                id="07BRUSSELS2649" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07BRUSSELS2649.html">07BRUSSELS2649</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGIAN RESPONSE TO U.S. NON-PAPER ON CFE AND COMMENT ON NATIONAL PROCEDURES FOR ADAPTED CFE RATIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-48.1756 -119.9036)" 
+                id="07BUCHAREST825" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07BUCHAREST825.html">07BUCHAREST825</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROMANIA: STATEMENT ON RUSSIA'S CFE ANNOUNCEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-98.4917 -353.1093)" 
+                id="07KYIV1897" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07KYIV1897.html">07KYIV1897</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: MISSILE DEFENSE COOPERATION AND CFE; DEBRIEF ON U.S.-RUSSIA EXPERTS' MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.5979 62.5086)" 
+                id="07LISBON2143" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07LISBON2143.html">07LISBON2143</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL SUPPORTS A/CFE PLANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(46.7083 -145.3807)" 
+                id="07MOSCOW3451" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07MOSCOW3451
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(20.6037 390.0000)" 
+                id="07PARIS3808" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07PARIS3808.html">07PARIS3808</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A/S FRIED CFE TALKS WITH RUSSIA IN FRANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(334.5691 198.2771)" 
+                id="07PARIS3955" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07PARIS3955.html">07PARIS3955</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OVERVIEW OF FRENCH TREATY RATIFICATION PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(327.7215 34.5908)" 
+                id="07PRAGUE970" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07PRAGUE970.html">07PRAGUE970</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CZECH REACTION TO U.S. NONPAPER ON CFE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(270.3337 237.1405)" 
+                id="07REYKJAVIK248" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07REYKJAVIK248.html">07REYKJAVIK248</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ICELAND: TIMELINE ON ADAPTED CFE DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(46.7635 -41.6111)" 
+                id="07RIGA533" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07RIGA533.html">07RIGA533</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LATVIAN REACTION TO RUSSIAN CFE MOVES - PLANS, PLEASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(56.0086 66.4125)" 
+                id="07RIGA629" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07RIGA629.html">07RIGA629</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LATVIA REMAINS CAUTIOUS ON PLANS FOR A/CFE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.7870 70.1783)" 
+                id="07RIGA744" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07RIGA744
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-97.9877 59.7463)" 
+                id="07RIGA850" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07RIGA850.html">07RIGA850</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LATVIA: DAS GARBER DISCUSSES VISA WAIVER, CFE, AND MISSILE DEFENSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-222.9542 203.6434)" 
+                id="07STATE103522" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE103522
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-10.0544 -320.9785)" 
+                id="07STATE107265" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07STATE107265
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(37.3837 -256.7601)" 
+                id="07STATE109573" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07STATE109573
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(114.5649 306.9605)" 
+                id="07STATE109669" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE109669
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(211.2614 -321.8829)" 
+                id="07STATE112010" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE112010
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(229.2899 129.6168)" 
+                id="07STATE116194" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE116194
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-97.4544 354.7942)" 
+                id="07STATE126948" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE126948
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(258.9499 20.5965)" 
+                id="07TALLINN544" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07TALLINN544.html">07TALLINN544</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA SUPPORTS U.S. NON-PAPER ON CFE RATIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-209.6199 275.5429)" 
+                id="07USNATO433" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07USNATO433.html">07USNATO433</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NRC/CFE: RUSSIA WANTS COMPLETE ELIMINATION OF FLANK REGIME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-111.1163 234.2270)" 
+                id="07USNATO445" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07USNATO445.html">07USNATO445</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NATO/HLTF MEETING, JULY 26 2007 - THE WAY AHEAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(39.2961 -390.0000)" 
+                id="07USNATO446" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07USNATO446.html">07USNATO446</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ALLIES APPRECIATE DAS KRAMER'S BRIEFING ON US/RUSSIA EXPERTS TALKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-9.3421 318.1101)" 
+                id="07USNATO521" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07USNATO521.html">07USNATO521</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SUBJECT:  HLTF: NATO ALLIES ENDORSE U.S. PARALLEL ACTIONS PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -177.8234)" 
+                id="07USOSCE272" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07USOSCE272
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-20.8054 107.9203)" 
+                id="07USOSCE321" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07USOSCE321
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(347.5612 138.0896)" 
+                id="07VILNIUS595" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07VILNIUS595.html">07VILNIUS595</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LITHUANIAN RESPONSE TO U.S. NON-PAPER ON ADAPTED CFE RATIFICATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(59.4390 229.6208)" 
+                id="07VILNIUS629" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07VILNIUS629.html">07VILNIUS629</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>U.S.-BALTIC A/CFE MEETING IN VILNIUS, AUGUST 30</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-62.9180 -221.2079)" 
+                id="07YEREVAN1015" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07YEREVAN1015.html">07YEREVAN1015</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ARMENIA DISMAYED BY RUSSIAN POSITION ON CFE SUSPENSION, WORRIES OF SOUTH CAUCASUS ARMS RACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-360.2602 -22.3166)" 
+                id="07YEREVAN117" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07YEREVAN117
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-295.2730 -92.3329)" 
+                id="07YEREVAN133" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07YEREVAN133.html">07YEREVAN133</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NATO REVIEW PLEASED WITH ARMENIA IPAP PROGRESS, BUT PLAN TO CIVILIANIZE MOD NEEDS WORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 49.5528)" 
+                id="07YEREVAN186" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07YEREVAN186.html">07YEREVAN186</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DASD MACDOUGALL'S MEETING WITH DEFMIN SARGSIAN, OUTGOING DEPUTY DEFMIN AGHABEKIAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-312.5649 -178.2407)" 
+                id="07YEREVAN332" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07YEREVAN332.html">07YEREVAN332</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ARMENIA CELEBRATES NATO WEEK (WITH A LITTLE HELP FROM ITS FRIENDS)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-214.0780 -179.5978)" 
+                id="07YEREVAN827" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07YEREVAN827.html">07YEREVAN827</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NATO OFFICIAL UPBEAT ON ARMENIA'S IPAP PROGRESS AND COMMITMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-255.7570 -250.7836)" 
+                id="07YEREVAN926" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07YEREVAN926.html">07YEREVAN926</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRIME MINISTER UNDERSCORES COMMITMENT TO U.S. RELATIONSHIP IN PRIVATE DINNER WITH CDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1474">08TBILISI1474</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TBILISI1474.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/27/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 20: RUSSIA'S RECOGNITION SOBERS SAAKASHVILI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1482">08TBILISI1482</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TBILISI1482.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/29/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GEORGIA: SITREP 21: PARLIAMENT SAYS ALL RUSSIAN FORCES MUST LEAVE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1496">08TBILISI1496</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1496.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 22: HUMAN CHAIN SHOWS GEORGIAN UNITY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1506">08TBILISI1506</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1506.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/03/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 23: DOMESTIC POLITICIANS BEGIN TALKS, RUSSIAN DIPLOMATS DEPART</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1513">08TBILISI1513</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1513.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 24: GEORGIANS WELCOME VICE PRESIDENT CHENEY AND U.S. AID</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1523">08TBILISI1523</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1523.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 25: NO CONFIRMATION OF AN ABKHAZ WALL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1527">08TBILISI1527</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1527.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/08/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GEORGIA: SITREP 26: STORIES ABOUND IN ABKHAZIA, BUT LITTLE CONFIRMED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1530">08TBILISI1530</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1530.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/09/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GEORGIA: SITREP 27: SARKOZY IN TBILISI, OSCE MAKES NO PROGRESS WITH RUSSIANS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1550">08TBILISI1550</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1550.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">GEORGIA: SITREP 28: GEORGIAN POLICEMAN KILLED AT CHECKPOINT: RUSSIANS BEGIN WITHDRAWAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1554">08TBILISI1554</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1554.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">GEORGIA: SITREP 29: UN ASSISTANCE CONVOY GAINS ACCESS TO RUSSIAN-CONTROLLED AREAS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1571">08TBILISI1571</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1571.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GEORGIA: SITREP 30: OSSETIANS REFUSE ACCESS TO OSCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TBILISI1596">08TBILISI1596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TBILISI1596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">GEORGIA: SITREP 32: RUSSIAN PROPAGANDA LEAFLETS DISSEMINATED OVER ABKHAZIA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-198.7295" y1="122.9250" 
+                  x2="-334.9940" y2="68.4521" class="btwns0"/>
+        
+            <line x1="-198.7295" y1="122.9250" 
+                  x2="-213.6633" y2="-38.8471" class="btwns2"/>
+        
+            <line x1="-344.2796" y1="64.7401" 
+                  x2="-386.8280" y2="-62.4710" class="btwns0"/>
+        
+            <line x1="-344.2796" y1="64.7401" 
+                  x2="-222.1066" y2="-42.2178" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-71.9545" 
+                  x2="-281.5643" y2="-179.4727" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-71.9545" 
+                  x2="-224.4966" y2="-50.1132" class="btwns1"/>
+        
+            <line x1="-274.4632" y1="-186.5137" 
+                  x2="-218.5702" y2="-57.9753" class="btwns0"/>
+        
+            <line x1="-274.4632" y1="-186.5137" 
+                  x2="-100.1344" y2="-208.3758" class="btwns2"/>
+        
+            <line x1="-214.5825" y1="-48.8048" 
+                  x2="-96.3298" y2="-201.7098" class="btwns6"/>
+        
+            <line x1="-90.2121" y1="-209.6201" 
+                  x2="96.9583" y2="-286.2127" class="btwns10"/>
+        
+            <line x1="106.2134" y1="-290.0000" 
+                  x2="288.5332" y2="-236.6149" class="btwns9"/>
+        
+            <line x1="298.1302" y1="-233.8048" 
+                  x2="384.4728" y2="-103.6197" class="btwns8"/>
+        
+            <line x1="390.0000" y1="-95.2860" 
+                  x2="375.4635" y2="48.6634" class="btwns7"/>
+        
+            <line x1="374.4588" y1="58.6128" 
+                  x2="284.0681" y2="184.2656" class="btwns5"/>
+        
+            <line x1="278.2284" y1="192.3834" 
+                  x2="152.1313" y2="284.1172" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-198.7295 122.9250)" 
+                class="vertice degree2 btwns0 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-344.2796 64.7401)" 
+                class="vertice degree5 btwns0 authority5 TBILISI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -71.9545)" 
+                class="vertice degree5 btwns0 authority5 TBILISI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-274.4632 -186.5137)" 
+                class="vertice degree5 btwns1 authority5 TBILISI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-214.5825 -48.8048)" 
+                class="vertice degree10 btwns6 authority10 TBILISI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-90.2121 -209.6201)" 
+                class="vertice degree5 btwns10 authority5 TBILISI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(106.2134 -290.0000)" 
+                class="vertice degree2 btwns10 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(298.1302 -233.8048)" 
+                class="vertice degree2 btwns9 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -95.2860)" 
+                class="vertice degree2 btwns8 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(374.4588 58.6128)" 
+                class="vertice degree2 btwns6 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(278.2284 192.3834)" 
+                class="vertice degree2 btwns3 authority2 TBILISI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(144.0448 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TBILISI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-198.7295 122.9250)" 
+                id="08TBILISI1474" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TBILISI1474.html">08TBILISI1474</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 20: RUSSIA'S RECOGNITION SOBERS SAAKASHVILI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-344.2796 64.7401)" 
+                id="08TBILISI1482" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TBILISI1482.html">08TBILISI1482</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 21: PARLIAMENT SAYS ALL RUSSIAN FORCES MUST LEAVE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -71.9545)" 
+                id="08TBILISI1496" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1496.html">08TBILISI1496</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 22: HUMAN CHAIN SHOWS GEORGIAN UNITY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-274.4632 -186.5137)" 
+                id="08TBILISI1506" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1506.html">08TBILISI1506</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 23: DOMESTIC POLITICIANS BEGIN TALKS, RUSSIAN DIPLOMATS DEPART</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-214.5825 -48.8048)" 
+                id="08TBILISI1513" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1513.html">08TBILISI1513</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 24: GEORGIANS WELCOME VICE PRESIDENT CHENEY AND U.S. AID</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-90.2121 -209.6201)" 
+                id="08TBILISI1523" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1523.html">08TBILISI1523</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 25: NO CONFIRMATION OF AN ABKHAZ WALL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(106.2134 -290.0000)" 
+                id="08TBILISI1527" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1527.html">08TBILISI1527</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 26: STORIES ABOUND IN ABKHAZIA, BUT LITTLE CONFIRMED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(298.1302 -233.8048)" 
+                id="08TBILISI1530" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1530.html">08TBILISI1530</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 27: SARKOZY IN TBILISI, OSCE MAKES NO PROGRESS WITH RUSSIANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -95.2860)" 
+                id="08TBILISI1550" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1550.html">08TBILISI1550</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 28: GEORGIAN POLICEMAN KILLED AT CHECKPOINT: RUSSIANS BEGIN WITHDRAWAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(374.4588 58.6128)" 
+                id="08TBILISI1554" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1554.html">08TBILISI1554</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 29: UN ASSISTANCE CONVOY GAINS ACCESS TO RUSSIAN-CONTROLLED AREAS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(278.2284 192.3834)" 
+                id="08TBILISI1571" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1571.html">08TBILISI1571</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 30: OSSETIANS REFUSE ACCESS TO OSCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(144.0448 290.0000)" 
+                id="08TBILISI1596" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TBILISI1596.html">08TBILISI1596</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GEORGIA: SITREP 32: RUSSIAN PROPAGANDA LEAFLETS DISSEMINATED OVER ABKHAZIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

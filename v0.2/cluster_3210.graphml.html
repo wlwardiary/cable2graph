@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03DUBAI1149">03DUBAI1149</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#03RIYADH2221">03RIYADH2221</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03COLOMBO7">03COLOMBO7</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/02/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#03ABUDHABI1350">03ABUDHABI1350</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/20/03</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03ABUDHABI1352">03ABUDHABI1352</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/20/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1365">03ABUDHABI1365</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1365.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 3, MARCH 22</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1381">03ABUDHABI1381</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1381.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 4, MARCH 23</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1397">03ABUDHABI1397</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1397.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 5, MARCH 24</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1399">03ABUDHABI1399</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1399.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/03</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 5, MARCH 24</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1437">03ABUDHABI1437</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1437.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/25/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 6, MARCH 25</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1461">03ABUDHABI1461</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1461.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/26/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 7, MARCH 26</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1471">03ABUDHABI1471</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1471.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 8, MARCH 28</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1480">03ABUDHABI1480</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1480.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">TFIZ01 (EAC): ABU DHABI SITREP NO. 9, MARCH 29</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#03COLOMBO548">03COLOMBO548</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/01/03</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03AMMAN1953">03AMMAN1953</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03AMMAN1953.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/01/03</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TFIZO1: AMMAN SITREP 23 (4/01 2000 LOCAL)</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#03COLOMBO582">03COLOMBO582</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/03/03</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03COLOMBO583">03COLOMBO583</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03COLOMBO583.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COLOMBO EAC MEETING APRIL 4, 2003</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03COLOMBO596">03COLOMBO596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03COLOMBO596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/09/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">COLOMBO EAC MEETING APRIL 8, 2003</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE79964">03STATE79964</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE79984">03STATE79984</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/13/03</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI2013">03ABUDHABI2013</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03ABUDHABI2013.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/03</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQI SUNNI IMAM AL-KUBAYSI STIRS STRONG POSITIVE AND NEGATIVE EMOTIONS AMONGST EMIRATIS AND IRAQI EXPATS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI2654">03ABUDHABI2654</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/06/03ABUDHABI2654.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">(S/NF) INFORMATION ON IRAQI SUNNI CLERIC AHMED AL-KUBAYSI (C-NE3-00474)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI3265">03ABUDHABI3265</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/07/03ABUDHABI3265.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/03</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SHAYKH AL-KUBAYSI "MODERATES" TONE WITH LOCAL ARAB MEDIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03COLOMBO1348">03COLOMBO1348</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/08/03COLOMBO1348.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/02/03</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">AL HASHIMI, MAHMUD SHAKIR MAHMUD - DPOB 11/17/1952 (IRAQ)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI3856">03ABUDHABI3856</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/08/03ABUDHABI3856.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/23/03</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">UAEG DENIES BANKROLLING IRAQI SUNNI CLERIC AHMED AL-KUBAYSI</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="139.3954" y1="290.0000" 
+                  x2="186.3763" y2="209.1567" class="btwns1"/>
+        
+            <line x1="66.1174" y1="226.0909" 
+                  x2="181.6030" y2="202.5112" class="btwns1"/>
+        
+            <line x1="191.4008" y1="200.5107" 
+                  x2="284.6128" y2="108.8511" class="btwns5"/>
+        
+            <line x1="191.4008" y1="200.5107" 
+                  x2="277.1012" y2="226.8991" class="btwns1"/>
+        
+            <line x1="291.7430" y1="101.8397" 
+                  x2="381.6501" y2="42.5901" class="btwns1"/>
+        
+            <line x1="291.7430" y1="101.8397" 
+                  x2="258.2997" y2="24.5961" class="btwns7"/>
+        
+            <line x1="254.3266" y1="15.4193" 
+                  x2="149.5714" y2="4.9329" class="btwns8"/>
+        
+            <line x1="139.6211" y1="3.9369" 
+                  x2="27.7760" y2="-12.4655" class="btwns8"/>
+        
+            <line x1="17.8818" y1="-13.9165" 
+                  x2="57.0896" y2="-124.7811" class="btwns10"/>
+        
+            <line x1="17.8818" y1="-13.9165" 
+                  x2="-70.1609" y2="73.0646" class="btwns6"/>
+        
+            <line x1="60.4238" y1="-134.2089" 
+                  x2="134.4021" y2="-179.4109" class="btwns0"/>
+        
+            <line x1="60.4238" y1="-134.2089" 
+                  x2="75.4835" y2="-237.8919" class="btwns8"/>
+        
+            <line x1="142.9353" y1="-184.6248" 
+                  x2="84.1463" y2="-240.8748" class="btwns0"/>
+        
+            <line x1="-256.2316" y1="216.5572" 
+                  x2="-179.4917" y2="162.9913" class="btwns2"/>
+        
+            <line x1="-256.2316" y1="216.5572" 
+                  x2="-344.1788" y2="173.9773" class="btwns1"/>
+        
+            <line x1="-171.2918" y1="157.2676" 
+                  x2="-85.0041" y2="86.4374" class="btwns5"/>
+        
+            <line x1="-171.2918" y1="157.2676" 
+                  x2="-243.8654" y2="101.5944" class="btwns1"/>
+        
+            <line x1="200.0526" y1="-285.8216" 
+                  x2="86.4755" y2="-250.7393" class="btwns2"/>
+        
+            <line x1="200.0526" y1="-285.8216" 
+                  x2="294.6550" y2="-253.9887" class="btwns1"/>
+        
+            <line x1="-297.8157" y1="-197.7629" 
+                  x2="-270.7947" y2="-122.9441" class="btwns0"/>
+        
+            <line x1="-297.8157" y1="-197.7629" 
+                  x2="-187.7786" y2="-250.4813" class="btwns3"/>
+        
+            <line x1="-297.8157" y1="-197.7629" 
+                  x2="-381.5433" y2="-144.9227" class="btwns1"/>
+        
+            <line x1="-267.3979" y1="-113.5387" 
+                  x2="-195.6704" y2="-162.6541" class="btwns0"/>
+        
+            <line x1="-178.7602" y1="-254.8020" 
+                  x2="-60.0952" y2="-287.3545" class="btwns6"/>
+        
+            <line x1="-178.7602" y1="-254.8020" 
+                  x2="-186.4233" y2="-178.2543" class="btwns1"/>
+        
+            <line x1="-50.4515" y1="-290.0000" 
+                  x2="67.4286" y2="-250.9339" class="btwns7"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(139.3954 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(66.1174 226.0909)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(191.4008 200.5107)" 
+                class="vertice degree10 btwns3 authority9 ABUDHABI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(291.7430 101.8397)" 
+                class="vertice degree6 btwns5 authority6 ABUDHABI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 37.0874)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(254.3266 15.4193)" 
+                class="vertice degree3 btwns5 authority3 ABUDHABI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(139.6211 3.9369)" 
+                class="vertice degree3 btwns6 authority3 ABUDHABI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(17.8818 -13.9165)" 
+                class="vertice degree6 btwns10 authority6 ABUDHABI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(60.4238 -134.2089)" 
+                class="vertice degree6 btwns7 authority6 ABUDHABI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(142.9353 -184.6248)" 
+                class="vertice degree3 btwns0 authority3 ABUDHABI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-256.2316 216.5572)" 
+                class="vertice degree3 btwns1 authority3 ABUDHABI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-171.2918 157.2676)" 
+                class="vertice degree6 btwns3 authority6 ABUDHABI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-77.2747 80.0926)" 
+                class="vertice degree3 btwns4 authority3 ABUDHABI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-251.7997 95.5078)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(200.0526 -285.8216)" 
+                class="vertice degree3 btwns1 authority3 AMMAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-297.8157 -197.7629)" 
+                class="vertice degree6 btwns1 authority6 COLOMBO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-267.3979 -113.5387)" 
+                class="vertice degree3 btwns0 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-178.7602 -254.8020)" 
+                class="vertice degree6 btwns4 authority6 COLOMBO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-50.4515 -290.0000)" 
+                class="vertice degree3 btwns5 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-187.4194 -168.3040)" 
+                class="vertice degree3 btwns0 authority3 COLOMBO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -139.5857)" 
+                class="vertice degree0 btwns0 authority0 COLOMBO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(286.6583 229.8419)" 
+                class="vertice degree0 btwns0 authority0 DUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-353.1794 169.6196)" 
+                class="vertice degree0 btwns0 authority0 RIYADH">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(76.9209 -247.7881)" 
+                class="vertice degree10 btwns7 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(304.1328 -250.7995)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(139.3954 290.0000)" 
+                id="03ABUDHABI1350" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03ABUDHABI1350
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(66.1174 226.0909)" 
+                id="03ABUDHABI1352" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03ABUDHABI1352
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(191.4008 200.5107)" 
+                id="03ABUDHABI1365" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/22/03</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1365.html">03ABUDHABI1365</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 3, MARCH 22</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(291.7430 101.8397)" 
+                id="03ABUDHABI1381" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/23/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1381.html">03ABUDHABI1381</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 4, MARCH 23</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 37.0874)" 
+                id="03ABUDHABI1397" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/24/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1397.html">03ABUDHABI1397</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 5, MARCH 24</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(254.3266 15.4193)" 
+                id="03ABUDHABI1399" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/24/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1399.html">03ABUDHABI1399</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 5, MARCH 24</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(139.6211 3.9369)" 
+                id="03ABUDHABI1437" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/25/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1437.html">03ABUDHABI1437</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 6, MARCH 25</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(17.8818 -13.9165)" 
+                id="03ABUDHABI1461" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/26/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1461.html">03ABUDHABI1461</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 7, MARCH 26</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(60.4238 -134.2089)" 
+                id="03ABUDHABI1471" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/28/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1471.html">03ABUDHABI1471</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 8, MARCH 28</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(142.9353 -184.6248)" 
+                id="03ABUDHABI1480" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/29/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1480.html">03ABUDHABI1480</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFIZ01 (EAC): ABU DHABI SITREP NO. 9, MARCH 29</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-256.2316 216.5572)" 
+                id="03ABUDHABI2013" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/28/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03ABUDHABI2013.html">03ABUDHABI2013</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>IRAQI SUNNI IMAM AL-KUBAYSI STIRS STRONG POSITIVE AND NEGATIVE EMOTIONS AMONGST EMIRATIS AND IRAQI EXPATS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-171.2918 157.2676)" 
+                id="03ABUDHABI2654" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/04/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/06/03ABUDHABI2654.html">03ABUDHABI2654</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>(S/NF) INFORMATION ON IRAQI SUNNI CLERIC AHMED AL-KUBAYSI (C-NE3-00474)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-77.2747 80.0926)" 
+                id="03ABUDHABI3265" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/15/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/07/03ABUDHABI3265.html">03ABUDHABI3265</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SHAYKH AL-KUBAYSI "MODERATES" TONE WITH LOCAL ARAB MEDIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.7997 95.5078)" 
+                id="03ABUDHABI3856" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/23/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/08/03ABUDHABI3856.html">03ABUDHABI3856</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UAEG DENIES BANKROLLING IRAQI SUNNI CLERIC AHMED AL-KUBAYSI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(200.0526 -285.8216)" 
+                id="03AMMAN1953" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/01/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03AMMAN1953.html">03AMMAN1953</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TFIZO1: AMMAN SITREP 23 (4/01 2000 LOCAL)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-297.8157 -197.7629)" 
+                id="03COLOMBO1348" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/02/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/08/03COLOMBO1348.html">03COLOMBO1348</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>AL HASHIMI, MAHMUD SHAKIR MAHMUD - DPOB 11/17/1952 (IRAQ)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-267.3979 -113.5387)" 
+                id="03COLOMBO548" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/01/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    03COLOMBO548
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-178.7602 -254.8020)" 
+                id="03COLOMBO582" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/03/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    03COLOMBO582
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-50.4515 -290.0000)" 
+                id="03COLOMBO583" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/04/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03COLOMBO583.html">03COLOMBO583</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>COLOMBO EAC MEETING APRIL 4, 2003</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-187.4194 -168.3040)" 
+                id="03COLOMBO596" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/09/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03COLOMBO596.html">03COLOMBO596</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>COLOMBO EAC MEETING APRIL 8, 2003</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -139.5857)" 
+                id="03COLOMBO7" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/02/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03COLOMBO7
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(286.6583 229.8419)" 
+                id="03DUBAI1149" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03DUBAI1149
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-353.1794 169.6196)" 
+                id="03RIYADH2221" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03RIYADH2221
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(76.9209 -247.7881)" 
+                id="03STATE79964" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/13/03</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    03STATE79964
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(304.1328 -250.7995)" 
+                id="03STATE79984" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/13/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    03STATE79984
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

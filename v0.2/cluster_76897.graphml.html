@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE34994">08STATE34994</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/04/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE54208">08STATE54208</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/21/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08MONTEVIDEO315">08MONTEVIDEO315</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/29/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08PRETORIA1226">08PRETORIA1226</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08PRETORIA1226.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ACE Nomination from AMEMB Pretoria for Johnson & Johnson, South Africa</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08PRETORIA1227">08PRETORIA1227</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08PRETORIA1227.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ACE Nomination from AMEMB Pretoria for Eli Lilly and Company, South Africa</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CAIRO1191">08CAIRO1191</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08CAIRO1191.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/10/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">APACHE NOMINEE FOR CORPORATE EXCELLENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08BRASILIA829">08BRASILIA829</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/17/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE84836">08STATE84836</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/07/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MONTEVIDEO463">08MONTEVIDEO463</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08MONTEVIDEO463.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/15/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DUE DILIGENCE FOR URUGUAY'S NOMINATION FOR THE SECRETARY'S AWARD FOR CORPORATE EXCELLENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BEIJING3155">08BEIJING3155</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08BEIJING3155.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AWARD FOR CORPORATE EXCELLENCE (ACE) DUE DILIGENCE - CARGILL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BRASILIA1118">08BRASILIA1118</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08BRASILIA1118.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DUE DILIGENCE FOR BRASILIA NOMINEE GOOGLE EARTH OUTREACH FOR STATE'S 2008 ACE AWARD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MANILA1964">08MANILA1964</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08MANILA1964.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/19/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DUE DILIGENCE FOR DOLE NOMINATION FOR CORPORATE EXCELLENCE AWARD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08COLOMBO783">08COLOMBO783</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08COLOMBO783.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SRI LANKA: DUE DILIGENCE FOR THE SECRETARY OF STATE'S 2008 AWARD FOR CORPORATE EXCELLENCE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-7.8893" 
+                  x2="-206.9946" y2="-2.0001" class="btwns1"/>
+        
+            <line x1="-264.6616" y1="162.8010" 
+                  x2="-214.8760" y2="280.7866" class="btwns1"/>
+        
+            <line x1="-264.6616" y1="162.8010" 
+                  x2="-200.8041" y2="7.5696" class="btwns4"/>
+        
+            <line x1="260.1640" y1="-155.0275" 
+                  x2="230.2029" y2="-15.5977" class="btwns0"/>
+        
+            <line x1="260.1640" y1="-155.0275" 
+                  x2="126.6598" y2="-208.0797" class="btwns0"/>
+        
+            <line x1="29.4879" y1="-75.4464" 
+                  x2="218.6650" y2="-9.1290" class="btwns6"/>
+        
+            <line x1="29.4879" y1="-75.4464" 
+                  x2="111.9486" y2="-203.3676" class="btwns1"/>
+        
+            <line x1="29.4879" y1="-75.4464" 
+                  x2="-187.4914" y2="-4.7753" class="btwns10"/>
+        
+            <line x1="-89.5724" y1="115.8585" 
+                  x2="-190.2533" y2="5.7030" class="btwns1"/>
+        
+            <line x1="-251.7178" y1="-290.0000" 
+                  x2="-258.7296" y2="-171.7788" class="btwns1"/>
+        
+            <line x1="-259.3217" y1="-161.7963" 
+                  x2="-200.6269" y2="-10.9974" class="btwns4"/>
+        
+            <line x1="390.0000" y1="33.1924" 
+                  x2="237.8237" y2="-3.4782" class="btwns1"/>
+        
+            <line x1="240.1961" y1="150.6671" 
+                  x2="228.8725" y2="4.1494" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -7.8893)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-264.6616 162.8010)" 
+                class="vertice degree2 btwns2 authority2 BRASILIA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-210.9883 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(260.1640 -155.0275)" 
+                class="vertice degree2 btwns0 authority2 CAIRO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.4879 -75.4464)" 
+                class="vertice degree5 btwns7 authority5 COLOMBO">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-89.5724 115.8585)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-251.7178 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MONTEVIDEO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-259.3217 -161.7963)" 
+                class="vertice degree2 btwns2 authority2 MONTEVIDEO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 33.1924)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(240.1961 150.6671)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(228.1020 -5.8208)" 
+                class="vertice degree7 btwns5 authority7 STATE">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="27" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(117.3667 -211.7727)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-196.9998 -1.6784)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -7.8893)" 
+                id="08BEIJING3155" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08BEIJING3155.html">08BEIJING3155</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AWARD FOR CORPORATE EXCELLENCE (ACE) DUE DILIGENCE - CARGILL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-264.6616 162.8010)" 
+                id="08BRASILIA1118" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08BRASILIA1118.html">08BRASILIA1118</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DUE DILIGENCE FOR BRASILIA NOMINEE GOOGLE EARTH OUTREACH FOR STATE'S 2008 ACE AWARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-210.9883 290.0000)" 
+                id="08BRASILIA829" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BRASILIA829
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(260.1640 -155.0275)" 
+                id="08CAIRO1191" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08CAIRO1191.html">08CAIRO1191</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>APACHE NOMINEE FOR CORPORATE EXCELLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(29.4879 -75.4464)" 
+                id="08COLOMBO783" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08COLOMBO783.html">08COLOMBO783</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SRI LANKA: DUE DILIGENCE FOR THE SECRETARY OF STATE'S 2008 AWARD FOR CORPORATE EXCELLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-89.5724 115.8585)" 
+                id="08MANILA1964" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08MANILA1964.html">08MANILA1964</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DUE DILIGENCE FOR DOLE NOMINATION FOR CORPORATE EXCELLENCE AWARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-251.7178 -290.0000)" 
+                id="08MONTEVIDEO315" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08MONTEVIDEO315
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-259.3217 -161.7963)" 
+                id="08MONTEVIDEO463" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08MONTEVIDEO463.html">08MONTEVIDEO463</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DUE DILIGENCE FOR URUGUAY'S NOMINATION FOR THE SECRETARY'S AWARD FOR CORPORATE EXCELLENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 33.1924)" 
+                id="08PRETORIA1226" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08PRETORIA1226.html">08PRETORIA1226</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ACE Nomination from AMEMB Pretoria for Johnson & Johnson, South Africa</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(240.1961 150.6671)" 
+                id="08PRETORIA1227" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08PRETORIA1227.html">08PRETORIA1227</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ACE Nomination from AMEMB Pretoria for Eli Lilly and Company, South Africa</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(228.1020 -5.8208)" 
+                id="08STATE34994" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>04/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                
+                    08STATE34994
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(117.3667 -211.7727)" 
+                id="08STATE54208" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08STATE54208
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-196.9998 -1.6784)" 
+                id="08STATE84836" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE84836
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

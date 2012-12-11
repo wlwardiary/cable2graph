@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04ROME3850">04ROME3850</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/05/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#04ROME4109">04ROME4109</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/26/04</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ROME4268">04ROME4268</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04ROME4268.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/05/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TOUGH BARGAINING ON ITALIAN GOVERNMENT PORTFOLIOS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ROME4313">04ROME4313</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04ROME4313.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/09/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GIANFRANCO FINI:  ALMOST CERTAINLY ITALY'S NEXT FOREIGN MINISTER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ROME4426">04ROME4426</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04ROME4426.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/18/04</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GIANFRANCO FINI IS (FINALLY) ITALY,S NEW FOREIGN MINISTER; BIO INFORMATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04VATICAN4441">04VATICAN4441</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04VATICAN4441.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/19/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VATICAN URGES OSCE REP TO FOCUS ON CHRISTIAN DISCRIMINATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04VATICAN4517">04VATICAN4517</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/11/04VATICAN4517.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VATICAN HOLDS FIRM ON ADDING CHRISTIAN REFERENCE TO OSCE PERSONAL REP'S TITLE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04VATICAN4778">04VATICAN4778</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04VATICAN4778.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/17/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">VATICAN REJECTS PACIFISM, BUT DEBATE SIMMERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04VATICAN4838">04VATICAN4838</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04VATICAN4838.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EMBASSY CONFERENCE PROMOTES RELIGIOUS FREEDOM AS CENTRAL ELEMENT OF U.S. POLICY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04VATICAN4882">04VATICAN4882</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/12/04VATICAN4882.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/27/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">"OVERCOME EVIL WITH GOOD:"  POPE URGES GLOBAL SOLIDARITY TO PROMOTE PEACE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05VATICAN102">05VATICAN102</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05VATICAN102.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/13/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POPE ENCOURAGES DIALOGE OVER ARROGANCE; URGES FOCUS ON LIFE, FOOD, PEACE, AND FREEDOM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VATICAN130">05VATICAN130</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05VATICAN130.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/14/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ITALIAN EC MINISTER BUTTIGLIONE ADDRESSES SECULARISM, EU ISSUES, WITH VATICAN PRESS CORPS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-65.2848" y1="-223.3280" 
+                  x2="164.9913" y2="-183.0133" class="btwns3"/>
+        
+            <line x1="208.9582" y1="-290.0000" 
+                  x2="177.8358" y2="-190.8300" class="btwns3"/>
+        
+            <line x1="230.1897" y1="-60.5406" 
+                  x2="220.1897" y2="-60.5406" class="btwns0"/>
+        
+            <line x1="230.1897" y1="-60.5406" 
+                  x2="179.0084" y2="-172.1983" class="btwns6"/>
+        
+            <line x1="230.1897" y1="-60.5406" 
+                  x2="380.7851" y2="-124.0152" class="btwns2"/>
+        
+            <line x1="230.1897" y1="-60.5406" 
+                  x2="81.8023" y2="44.3576" class="btwns10"/>
+        
+            <line x1="174.8415" y1="-181.2888" 
+                  x2="164.8415" y2="-181.2888" class="btwns0"/>
+        
+            <line x1="174.8415" y1="-181.2888" 
+                  x2="380.2943" y2="-130.3076" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-127.8992" 
+                  x2="380.0000" y2="-127.8992" class="btwns0"/>
+        
+            <line x1="-200.8183" y1="52.7321" 
+                  x2="-380.4508" y2="-3.1102" class="btwns2"/>
+        
+            <line x1="-200.8183" y1="52.7321" 
+                  x2="-378.5300" y2="91.8266" class="btwns2"/>
+        
+            <line x1="-200.8183" y1="52.7321" 
+                  x2="63.6370" y2="50.2249" class="btwns7"/>
+        
+            <line x1="-390.0000" y1="-6.0787" 
+                  x2="-388.4667" y2="83.9765" class="btwns0"/>
+        
+            <line x1="117.0829" y1="290.0000" 
+                  x2="286.9962" y2="239.6344" class="btwns3"/>
+        
+            <line x1="296.5838" y1="236.7925" 
+                  x2="276.4167" y2="138.4509" class="btwns5"/>
+        
+            <line x1="274.4078" y1="128.6548" 
+                  x2="82.9496" y2="53.7725" class="btwns7"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-65.2848 -223.3280)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(208.9582 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(230.1897 -60.5406)" 
+                class="vertice degree8 btwns7 authority7 ROME">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(174.8415 -181.2888)" 
+                class="vertice degree10 btwns4 authority10 ROME">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -127.8992)" 
+                class="vertice degree6 btwns0 authority4 ROME">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-200.8183 52.7321)" 
+                class="vertice degree4 btwns4 authority6 VATICAN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -6.0787)" 
+                class="vertice degree2 btwns0 authority3 VATICAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(117.0829 290.0000)" 
+                class="vertice degree0 btwns0 authority0 VATICAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-388.2965 93.9751)" 
+                class="vertice degree2 btwns0 authority3 VATICAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(296.5838 236.7925)" 
+                class="vertice degree2 btwns2 authority2 VATICAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(274.4078 128.6548)" 
+                class="vertice degree2 btwns4 authority3 VATICAN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(73.6366 50.1301)" 
+                class="vertice degree4 btwns10 authority6 VATICAN">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-65.2848 -223.3280)" 
+                id="04ROME3850" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ROME3850
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(208.9582 -290.0000)" 
+                id="04ROME4109" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ROME4109
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(230.1897 -60.5406)" 
+                id="04ROME4268" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>11/05/04</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04ROME4268.html">04ROME4268</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>TOUGH BARGAINING ON ITALIAN GOVERNMENT PORTFOLIOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(174.8415 -181.2888)" 
+                id="04ROME4313" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/09/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04ROME4313.html">04ROME4313</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GIANFRANCO FINI:  ALMOST CERTAINLY ITALY'S NEXT FOREIGN MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -127.8992)" 
+                id="04ROME4426" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/18/04</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04ROME4426.html">04ROME4426</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>GIANFRANCO FINI IS (FINALLY) ITALY,S NEW FOREIGN MINISTER; BIO INFORMATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-200.8183 52.7321)" 
+                id="04VATICAN4441" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/19/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04VATICAN4441.html">04VATICAN4441</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>VATICAN URGES OSCE REP TO FOCUS ON CHRISTIAN DISCRIMINATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -6.0787)" 
+                id="04VATICAN4517" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/29/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/11/04VATICAN4517.html">04VATICAN4517</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>VATICAN HOLDS FIRM ON ADDING CHRISTIAN REFERENCE TO OSCE PERSONAL REP'S TITLE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(117.0829 290.0000)" 
+                id="04VATICAN4778" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/17/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04VATICAN4778.html">04VATICAN4778</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VATICAN REJECTS PACIFISM, BUT DEBATE SIMMERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-388.2965 93.9751)" 
+                id="04VATICAN4838" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04VATICAN4838.html">04VATICAN4838</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>EMBASSY CONFERENCE PROMOTES RELIGIOUS FREEDOM AS CENTRAL ELEMENT OF U.S. POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(296.5838 236.7925)" 
+                id="04VATICAN4882" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/27/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/12/04VATICAN4882.html">04VATICAN4882</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>"OVERCOME EVIL WITH GOOD:"  POPE URGES GLOBAL SOLIDARITY TO PROMOTE PEACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(274.4078 128.6548)" 
+                id="05VATICAN102" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05VATICAN102.html">05VATICAN102</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>POPE ENCOURAGES DIALOGE OVER ARROGANCE; URGES FOCUS ON LIFE, FOOD, PEACE, AND FREEDOM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(73.6366 50.1301)" 
+                id="05VATICAN130" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05VATICAN130.html">05VATICAN130</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ITALIAN EC MINISTER BUTTIGLIONE ADDRESSES SECULARISM, EU ISSUES, WITH VATICAN PRESS CORPS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

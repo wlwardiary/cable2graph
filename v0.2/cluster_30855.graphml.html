@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ALMATY3143">06ALMATY3143</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06ALMATY3143.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: SUPREME COURT DENIES HARE KRISHNA APPEAL ON EVE OF CONGRESS OF WORLD RELIGIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06STATE185480">06STATE185480</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06STATE185480.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/09/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE REQUEST: BN350 BILATERAL TALKS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06STATE185727">06STATE185727</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06STATE185727.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BN-350 SENIOR POLICY WORKING GROUP PROPOSAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06STATE185757">06STATE185757</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06STATE185757.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BN-350 SENIOR POLICY WORKING GROUP PROPOSAL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ASTANA651">06ASTANA651</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ASTANA651.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: AUTHORITIES EXECUTE SURPRISE DEMOLITION OF HARE KRISHNA HOMES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ASTANA668">06ASTANA668</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ASTANA668.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KAZAKHSTAN: AMBASSADOR'S NOVEMBER 25 MEETING WITH FM TOKAYEV</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ASTANA903">06ASTANA903</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06ASTANA903.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: NO PROGRESS IN HARE KRISHNA SITUATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ASTANA966">06ASTANA966</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06ASTANA966.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/28/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN READY FOR BN-350 TALKS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ASTANA232">07ASTANA232</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07ASTANA232.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: NO RESPITE IN CAMPAIGN AGAINST HARE KRISHNA PROPERTY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ASTANA1371">07ASTANA1371</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ASTANA1371.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: FUTURE OF HARE KRISHNA COMMUNE REMAINS PRECARIOUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ASTANA1705">07ASTANA1705</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ASTANA1705.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN: LOCAL GOVERNMENT DEMOLISHES HARE KRISHNA HOMES DESPITE ONGOING NEGOTIATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ASTANA1722">07ASTANA1722</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ASTANA1722.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CORRECTED COPY: KAZAKHSTAN: LOCAL GOVERNMENT DEMOLISHES HARE KRISHNA HOMES DESPITE ONGOING NEGOTIATIONS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="290.0000" 
+                  x2="-18.5508" y2="258.4280" class="btwns3"/>
+        
+            <line x1="-8.5868" y1="257.5811" 
+                  x2="109.4212" y2="164.4811" class="btwns1"/>
+        
+            <line x1="-8.5868" y1="257.5811" 
+                  x2="278.5630" y2="145.9087" class="btwns1"/>
+        
+            <line x1="-8.5868" y1="257.5811" 
+                  x2="-43.7288" y2="135.3312" class="btwns1"/>
+        
+            <line x1="-8.5868" y1="257.5811" 
+                  x2="380.0560" y2="216.2854" class="btwns1"/>
+        
+            <line x1="-8.5868" y1="257.5811" 
+                  x2="187.8931" y2="235.4312" class="btwns1"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="123.8294" y2="150.7374" class="btwns2"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="89.0479" y2="-148.0551" class="btwns10"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="281.7763" y2="134.3653" class="btwns2"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="-36.9214" y2="122.8197" class="btwns2"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="382.7806" y2="208.3092" class="btwns2"/>
+        
+            <line x1="214.1811" y1="46.7103" 
+                  x2="198.6985" y2="224.3487" class="btwns2"/>
+        
+            <line x1="117.2721" y1="158.2873" 
+                  x2="277.9267" y2="143.2181" class="btwns0"/>
+        
+            <line x1="117.2721" y1="158.2873" 
+                  x2="-36.6836" y2="127.6709" class="btwns0"/>
+        
+            <line x1="117.2721" y1="158.2873" 
+                  x2="380.2111" y2="213.1850" class="btwns0"/>
+        
+            <line x1="117.2721" y1="158.2873" 
+                  x2="190.5574" y2="227.4475" class="btwns0"/>
+        
+            <line x1="384.0458" y1="-228.3946" 
+                  x2="93.3677" y2="-158.7968" class="btwns3"/>
+        
+            <line x1="384.0458" y1="-228.3946" 
+                  x2="178.0577" y2="-287.2526" class="btwns0"/>
+        
+            <line x1="83.6426" y1="-156.4683" 
+                  x2="-273.7629" y2="-190.6320" class="btwns3"/>
+        
+            <line x1="83.6426" y1="-156.4683" 
+                  x2="163.0816" y2="-281.5584" class="btwns3"/>
+        
+            <line x1="287.8830" y1="142.2842" 
+                  x2="277.8830" y2="142.2842" class="btwns0"/>
+        
+            <line x1="287.8830" y1="142.2842" 
+                  x2="-36.5038" y2="126.2152" class="btwns0"/>
+        
+            <line x1="287.8830" y1="142.2842" 
+                  x2="381.8628" y2="209.4162" class="btwns0"/>
+        
+            <line x1="287.8830" y1="142.2842" 
+                  x2="204.8242" y2="227.1636" class="btwns0"/>
+        
+            <line x1="-46.4915" y1="125.7204" 
+                  x2="188.6921" y2="230.2494" class="btwns0"/>
+        
+            <line x1="390.0000" y1="215.2288" 
+                  x2="207.7812" y2="233.3228" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ALMATY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-8.5868 257.5811)" 
+                class="vertice degree7 btwns3 authority8 ASTANA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(214.1811 46.7103)" 
+                class="vertice degree7 btwns10 authority9 ASTANA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(117.2721 158.2873)" 
+                class="vertice degree7 btwns0 authority9 ASTANA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(384.0458 -228.3946)" 
+                class="vertice degree1 btwns0 authority1 ASTANA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(83.6426 -156.4683)" 
+                class="vertice degree4 btwns9 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-283.7176 -191.5836)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(168.4425 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(287.8830 142.2842)" 
+                class="vertice degree10 btwns0 authority10 ASTANA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-46.4915 125.7204)" 
+                class="vertice degree5 btwns0 authority7 ASTANA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 215.2288)" 
+                class="vertice degree5 btwns0 authority7 ASTANA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(197.8302 234.3109)" 
+                class="vertice degree7 btwns0 authority9 ASTANA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 290.0000)" 
+                id="06ALMATY3143" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06ALMATY3143.html">06ALMATY3143</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: SUPREME COURT DENIES HARE KRISHNA APPEAL ON EVE OF CONGRESS OF WORLD RELIGIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-8.5868 257.5811)" 
+                id="06ASTANA651" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>11/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ASTANA651.html">06ASTANA651</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: AUTHORITIES EXECUTE SURPRISE DEMOLITION OF HARE KRISHNA HOMES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(214.1811 46.7103)" 
+                id="06ASTANA668" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>11/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ASTANA668.html">06ASTANA668</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: AMBASSADOR'S NOVEMBER 25 MEETING WITH FM TOKAYEV</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(117.2721 158.2873)" 
+                id="06ASTANA903" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ASTANA903.html">06ASTANA903</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: NO PROGRESS IN HARE KRISHNA SITUATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(384.0458 -228.3946)" 
+                id="06ASTANA966" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ASTANA966.html">06ASTANA966</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN READY FOR BN-350 TALKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(83.6426 -156.4683)" 
+                id="06STATE185480" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06STATE185480.html">06STATE185480</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE REQUEST: BN350 BILATERAL TALKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-283.7176 -191.5836)" 
+                id="06STATE185727" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06STATE185727.html">06STATE185727</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BN-350 SENIOR POLICY WORKING GROUP PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.4425 -290.0000)" 
+                id="06STATE185757" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06STATE185757.html">06STATE185757</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BN-350 SENIOR POLICY WORKING GROUP PROPOSAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(287.8830 142.2842)" 
+                id="07ASTANA1371" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ASTANA1371.html">07ASTANA1371</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: FUTURE OF HARE KRISHNA COMMUNE REMAINS PRECARIOUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-46.4915 125.7204)" 
+                id="07ASTANA1705" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ASTANA1705.html">07ASTANA1705</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: LOCAL GOVERNMENT DEMOLISHES HARE KRISHNA HOMES DESPITE ONGOING NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 215.2288)" 
+                id="07ASTANA1722" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ASTANA1722.html">07ASTANA1722</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CORRECTED COPY: KAZAKHSTAN: LOCAL GOVERNMENT DEMOLISHES HARE KRISHNA HOMES DESPITE ONGOING NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(197.8302 234.3109)" 
+                id="07ASTANA232" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>01/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ASTANA232.html">07ASTANA232</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN: NO RESPITE IN CAMPAIGN AGAINST HARE KRISHNA PROPERTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

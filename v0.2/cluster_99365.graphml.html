@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09SECSTATE108957">09SECSTATE108957</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CANBERRA951">09CANBERRA951</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09CANBERRA951.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/09</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">SECRETARY CLINTON LETTER TO FOREIGN MINISTER SMITH (S/ES 200918636) DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09CANBERRA976">09CANBERRA976</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09CANBERRA976.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/09</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">ENVIRO MINISTER GARRETT UNHAPPY ABOUT U.S. WHALING MOVES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CANBERRA1099">09CANBERRA1099</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09CANBERRA1099.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/09</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">RUDD STEPS UP RHETORIC ON WHALING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA13">10CANBERRA13</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10CANBERRA13.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/06/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JAPANESE WHALING SHIP COLLIDES WITH, SINKS SEA SHEPHERD BOAT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA14">10CANBERRA14</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10CANBERRA14.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/06/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">CORRECTED COPY -- JAPANESE WHALING SHIP COLLIDES WITH, SINKS SEA SHEPHERD BOAT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA15">10CANBERRA15</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10CANBERRA15.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">WHALING COLLISION: AUSTRALIA WILL INVESTIGATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10WELLINGTON5">10WELLINGTON5</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10WELLINGTON5.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Japanese Whaling Vessel Collision With Sea Sheperd Boat -- New Zealand's Perspective</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA28">10CANBERRA28</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10CANBERRA28.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/12/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">WHALING UPDATE: RUDD TO RAISE WITH SECRETARY, MEDIA PUSH LIKELY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA55">10CANBERRA55</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10CANBERRA55.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">WHALING: AUSTRALIA TO STICK WITH NEGOTIATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA92">10CANBERRA92</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10CANBERRA92.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">GARRETT COOL TO WHALING DEAL, SEEKS MORE ON CORAL, RESEARCH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA93">10CANBERRA93</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10CANBERRA93.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">CORRECTED COPY -- GARRETT COOL TO WHALING DEAL, SEEKS MORE ON CORAL, RESEARCH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10CANBERRA118">10CANBERRA118</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10CANBERRA118.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/19/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">RUDD SAYS ZERO "COMMERCIAL" WHALING IN SOUTHERN OCEAN BY NOVEMBER OR ELSE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="-104.5607" y2="-168.5615" class="btwns10"/>
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="-37.9579" y2="36.3754" class="btwns7"/>
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="166.6432" y2="-199.9236" class="btwns3"/>
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="137.7278" y2="137.1048" class="btwns5"/>
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="262.3864" y2="59.7319" class="btwns3"/>
+        
+            <line x1="79.4282" y1="-44.1823" 
+                  x2="183.1513" y2="-30.6524" class="btwns3"/>
+        
+            <line x1="-289.9282" y1="-208.7973" 
+                  x2="-122.6593" y2="-176.0815" class="btwns3"/>
+        
+            <line x1="-289.9282" y1="-208.7973" 
+                  x2="-196.3727" y2="-283.7477" class="btwns0"/>
+        
+            <line x1="-112.8453" y1="-174.1620" 
+                  x2="-183.0967" y2="-281.6297" class="btwns3"/>
+        
+            <line x1="-46.2031" y1="42.0338" 
+                  x2="183.4847" y2="-26.4997" class="btwns1"/>
+        
+            <line x1="-46.2031" y1="42.0338" 
+                  x2="-229.6336" y2="118.8412" class="btwns7"/>
+        
+            <line x1="140.7893" y1="146.6247" 
+                  x2="262.6171" y2="69.9948" class="btwns1"/>
+        
+            <line x1="140.7893" y1="146.6247" 
+                  x2="109.4827" y2="280.2636" class="btwns3"/>
+        
+            <line x1="271.0818" y1="64.6705" 
+                  x2="381.9873" y2="-18.1421" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-24.1252" 
+                  x2="203.0637" y2="-29.0933" class="btwns2"/>
+        
+            <line x1="-238.8576" y1="122.7035" 
+                  x2="-380.3262" y2="159.7498" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(79.4282 -44.1823)" 
+                class="vertice degree10 btwns10 authority10 CANBERRA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-289.9282 -208.7973)" 
+                class="vertice degree2 btwns0 authority2 CANBERRA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-112.8453 -174.1620)" 
+                class="vertice degree4 btwns4 authority3 CANBERRA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-188.5683 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 SECSTATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-46.2031 42.0338)" 
+                class="vertice degree4 btwns4 authority4 CANBERRA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(171.5292 -208.6486)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(140.7893 146.6247)" 
+                class="vertice degree4 btwns2 authority4 CANBERRA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(271.0818 64.6705)" 
+                class="vertice degree4 btwns0 authority4 CANBERRA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -24.1252)" 
+                class="vertice degree2 btwns0 authority2 CANBERRA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(193.0673 -29.3589)" 
+                class="vertice degree4 btwns1 authority4 CANBERRA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-238.8576 122.7035)" 
+                class="vertice degree2 btwns2 authority1 CANBERRA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 162.2831)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(107.2019 290.0000)" 
+                class="vertice degree0 btwns0 authority0 WELLINGTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(79.4282 -44.1823)" 
+                id="09CANBERRA1099" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09CANBERRA1099.html">09CANBERRA1099</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>RUDD STEPS UP RHETORIC ON WHALING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-289.9282 -208.7973)" 
+                id="09CANBERRA951" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09CANBERRA951.html">09CANBERRA951</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SECRETARY CLINTON LETTER TO FOREIGN MINISTER SMITH (S/ES 200918636) DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.8453 -174.1620)" 
+                id="09CANBERRA976" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>10/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09CANBERRA976.html">09CANBERRA976</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ENVIRO MINISTER GARRETT UNHAPPY ABOUT U.S. WHALING MOVES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-188.5683 -290.0000)" 
+                id="09SECSTATE108957" 
+                class="labels">
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    09SECSTATE108957
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-46.2031 42.0338)" 
+                id="10CANBERRA118" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>02/19/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10CANBERRA118.html">10CANBERRA118</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>RUDD SAYS ZERO "COMMERCIAL" WHALING IN SOUTHERN OCEAN BY NOVEMBER OR ELSE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(171.5292 -208.6486)" 
+                id="10CANBERRA13" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/06/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10CANBERRA13.html">10CANBERRA13</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPANESE WHALING SHIP COLLIDES WITH, SINKS SEA SHEPHERD BOAT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(140.7893 146.6247)" 
+                id="10CANBERRA14" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/06/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10CANBERRA14.html">10CANBERRA14</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CORRECTED COPY -- JAPANESE WHALING SHIP COLLIDES WITH, SINKS SEA SHEPHERD BOAT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(271.0818 64.6705)" 
+                id="10CANBERRA15" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/07/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10CANBERRA15.html">10CANBERRA15</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>WHALING COLLISION: AUSTRALIA WILL INVESTIGATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -24.1252)" 
+                id="10CANBERRA28" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/12/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10CANBERRA28.html">10CANBERRA28</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>WHALING UPDATE: RUDD TO RAISE WITH SECRETARY, MEDIA PUSH LIKELY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(193.0673 -29.3589)" 
+                id="10CANBERRA55" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>01/22/10</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10CANBERRA55.html">10CANBERRA55</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>WHALING: AUSTRALIA TO STICK WITH NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-238.8576 122.7035)" 
+                id="10CANBERRA92" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/05/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10CANBERRA92.html">10CANBERRA92</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GARRETT COOL TO WHALING DEAL, SEEKS MORE ON CORAL, RESEARCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 162.2831)" 
+                id="10CANBERRA93" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10CANBERRA93.html">10CANBERRA93</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CORRECTED COPY -- GARRETT COOL TO WHALING DEAL, SEEKS MORE ON CORAL, RESEARCH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(107.2019 290.0000)" 
+                id="10WELLINGTON5" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10WELLINGTON5.html">10WELLINGTON5</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Japanese Whaling Vessel Collision With Sea Sheperd Boat -- New Zealand's Perspective</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

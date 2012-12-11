@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TELAVIV1698">07TELAVIV1698</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/12/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07TELAVIV3583">07TELAVIV3583</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/20/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV195">08TELAVIV195</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08TELAVIV195.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/24/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ISRAEL ENERGIZES ANTI-POLLUTION CAMPAIGN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV242">08TELAVIV242</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08TELAVIV242.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAEL AND PA FACE WORSENING WATER SITUATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV613">08TELAVIV613</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TELAVIV613.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EZRA OUTLINES ISRAEL'S ENVIRONMENTAL CHALLENGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV678">08TELAVIV678</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TELAVIV678.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Water and Waste: A Challenge to Israeli Policy</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV918">08TELAVIV918</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TELAVIV918.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAEL'S WATER POLICY OPTIONS DEBATED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV1211">08TELAVIV1211</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08TELAVIV1211.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/06/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAELI CABINET APPROVES EMERGENCY WATER PLAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV1636">08TELAVIV1636</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08TELAVIV1636.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/30/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Knesset Seeks Scapegoats for Water Crisis</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV1845">08TELAVIV1845</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TELAVIV1845.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAEL PASSES STRONG NEW ENVIRONMENTAL LEGISLATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08TELAVIV1978">08TELAVIV1978</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/29/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV1994">08TELAVIV1994</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TELAVIV1994.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">STATUS ON ISRAEL'S ACCESSION TO THE OECD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV2201">08TELAVIV2201</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TELAVIV2201.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAEL AT A TURNING POINT IN ENVIRONMENTAL MANAGEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV2586">08TELAVIV2586</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08TELAVIV2586.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">EPA Administrator Visits Israel</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV676">09TELAVIV676</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09TELAVIV676.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Environment Minister Criticized as OECD Assessment Approaches</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1809">09TELAVIV1809</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09TELAVIV1809.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOI SEEKS ENVIRONMENTAL LAW ASSISTANCE.</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-229.4589" 
+                  x2="289.0640" y2="-143.0103" class="btwns2"/>
+        
+            <line x1="-121.6046" y1="-290.0000" 
+                  x2="-101.8113" y2="-131.8327" class="btwns2"/>
+        
+            <line x1="324.4722" y1="-32.8488" 
+                  x2="244.5784" y2="-3.3492" class="btwns0"/>
+        
+            <line x1="324.4722" y1="-32.8488" 
+                  x2="285.3008" y2="-127.2687" class="btwns0"/>
+        
+            <line x1="324.4722" y1="-32.8488" 
+                  x2="151.2001" y2="-100.9075" class="btwns1"/>
+        
+            <line x1="235.1974" y1="0.1146" 
+                  x2="278.2610" y2="-127.0338" class="btwns0"/>
+        
+            <line x1="235.1974" y1="0.1146" 
+                  x2="148.5463" y2="-97.0985" class="btwns1"/>
+        
+            <line x1="-167.4365" y1="34.5865" 
+                  x2="-239.0007" y2="-112.1008" class="btwns1"/>
+        
+            <line x1="-167.4365" y1="34.5865" 
+                  x2="-250.3841" y2="162.6089" class="btwns4"/>
+        
+            <line x1="-167.4365" y1="34.5865" 
+                  x2="-272.4807" y2="-47.5554" class="btwns1"/>
+        
+            <line x1="-167.4365" y1="34.5865" 
+                  x2="-104.4987" y2="-112.7143" class="btwns6"/>
+        
+            <line x1="-167.4365" y1="34.5865" 
+                  x2="-28.8579" y2="173.3994" class="btwns4"/>
+        
+            <line x1="-243.3854" y1="-121.0882" 
+                  x2="-275.5472" y2="-62.4821" class="btwns0"/>
+        
+            <line x1="-243.3854" y1="-121.0882" 
+                  x2="-110.5694" y2="-121.8526" class="btwns1"/>
+        
+            <line x1="-243.3854" y1="-121.0882" 
+                  x2="-380.1493" y2="-144.9902" class="btwns1"/>
+        
+            <line x1="-249.5827" y1="290.0000" 
+                  x2="-255.2981" y2="180.9876" class="btwns2"/>
+        
+            <line x1="-280.3582" y1="-53.7154" 
+                  x2="-109.9196" y2="-118.3636" class="btwns1"/>
+        
+            <line x1="-280.3582" y1="-53.7154" 
+                  x2="-382.3738" y2="-140.2433" class="btwns1"/>
+        
+            <line x1="281.4689" y1="-136.5053" 
+                  x2="151.6404" y2="-106.7943" class="btwns3"/>
+        
+            <line x1="281.4689" y1="-136.5053" 
+                  x2="186.9102" y2="-231.3158" class="btwns0"/>
+        
+            <line x1="98.8575" y1="280.2918" 
+                  x2="-14.0878" y2="186.8509" class="btwns2"/>
+        
+            <line x1="-100.5696" y1="-121.9101" 
+                  x2="131.9179" y2="-105.2771" class="btwns10"/>
+        
+            <line x1="141.8924" y1="-104.5635" 
+                  x2="177.1201" y2="-228.7757" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -229.4589)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-121.6046 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(324.4722 -32.8488)" 
+                class="vertice degree5 btwns0 authority5 TELAVIV">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(235.1974 0.1146)" 
+                class="vertice degree5 btwns0 authority5 TELAVIV">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-167.4365 34.5865)" 
+                class="vertice degree10 btwns7 authority9 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-243.3854 -121.0882)" 
+                class="vertice degree7 btwns1 authority7 TELAVIV">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-249.5827 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-255.8217 171.0013)" 
+                class="vertice degree2 btwns2 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-280.3582 -53.7154)" 
+                class="vertice degree7 btwns1 authority7 TELAVIV">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(281.4689 -136.5053)" 
+                class="vertice degree10 btwns2 authority9 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(98.8575 280.2918)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-100.5696 -121.9101)" 
+                class="vertice degree10 btwns10 authority10 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(141.8924 -104.5635)" 
+                class="vertice degree10 btwns8 authority9 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.8486 -238.3963)" 
+                class="vertice degree2 btwns0 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-21.7928 180.4764)" 
+                class="vertice degree2 btwns2 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -146.7118)" 
+                class="vertice degree2 btwns0 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -229.4589)" 
+                id="07TELAVIV1698" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TELAVIV1698
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-121.6046 -290.0000)" 
+                id="07TELAVIV3583" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TELAVIV3583
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(324.4722 -32.8488)" 
+                id="08TELAVIV1211" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08TELAVIV1211.html">08TELAVIV1211</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ISRAELI CABINET APPROVES EMERGENCY WATER PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(235.1974 0.1146)" 
+                id="08TELAVIV1636" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08TELAVIV1636.html">08TELAVIV1636</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>Knesset Seeks Scapegoats for Water Crisis</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-167.4365 34.5865)" 
+                id="08TELAVIV1845" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TELAVIV1845.html">08TELAVIV1845</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ISRAEL PASSES STRONG NEW ENVIRONMENTAL LEGISLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-243.3854 -121.0882)" 
+                id="08TELAVIV195" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>01/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TELAVIV195.html">08TELAVIV195</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>ISRAEL ENERGIZES ANTI-POLLUTION CAMPAIGN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-249.5827 290.0000)" 
+                id="08TELAVIV1978" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08TELAVIV1978
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-255.8217 171.0013)" 
+                id="08TELAVIV1994" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TELAVIV1994.html">08TELAVIV1994</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>STATUS ON ISRAEL'S ACCESSION TO THE OECD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-280.3582 -53.7154)" 
+                id="08TELAVIV2201" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>09/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TELAVIV2201.html">08TELAVIV2201</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>ISRAEL AT A TURNING POINT IN ENVIRONMENTAL MANAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(281.4689 -136.5053)" 
+                id="08TELAVIV242" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08TELAVIV242.html">08TELAVIV242</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ISRAEL AND PA FACE WORSENING WATER SITUATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(98.8575 280.2918)" 
+                id="08TELAVIV2586" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08TELAVIV2586.html">08TELAVIV2586</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EPA Administrator Visits Israel</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-100.5696 -121.9101)" 
+                id="08TELAVIV613" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TELAVIV613.html">08TELAVIV613</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>EZRA OUTLINES ISRAEL'S ENVIRONMENTAL CHALLENGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(141.8924 -104.5635)" 
+                id="08TELAVIV678" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TELAVIV678.html">08TELAVIV678</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Water and Waste: A Challenge to Israeli Policy</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.8486 -238.3963)" 
+                id="08TELAVIV918" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TELAVIV918.html">08TELAVIV918</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ISRAEL'S WATER POLICY OPTIONS DEBATED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-21.7928 180.4764)" 
+                id="09TELAVIV1809" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09TELAVIV1809.html">09TELAVIV1809</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOI SEEKS ENVIRONMENTAL LAW ASSISTANCE.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -146.7118)" 
+                id="09TELAVIV676" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09TELAVIV676.html">09TELAVIV676</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Environment Minister Criticized as OECD Assessment Approaches</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

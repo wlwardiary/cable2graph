@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TELAVIV1845">07TELAVIV1845</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/20/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1276">07JERUSALEM1276</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07JERUSALEM1276.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA BANKS OPERATING NORMALLY BUT TAKING PRECAUTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1321">07JERUSALEM1321</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07JERUSALEM1321.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAZA CASH SHORTAGE MAY PREVENT PA SALARY PAYMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1334">07JERUSALEM1334</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07JERUSALEM1334.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ABU MAZEN EXEMPTS GAZANS FROM PA TAXES TO DENY HAMAS FUNDS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1346">07JERUSALEM1346</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07JERUSALEM1346.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/28/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AGREEMENT REACHED TO RESUME TRANSFER OF REVENUES BY ISRAEL TO THE PA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1372">07JERUSALEM1372</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07JERUSALEM1372.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CLEARANCE REVENUE TRANSFERS AND CASH SHIPMENTS TO GAZA RESUME</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV2097">07TELAVIV2097</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07TELAVIV2097.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/09/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ISRAELI NGO SUES TERRORISTS, TIES UP PA MONEY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1486">07JERUSALEM1486</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07JERUSALEM1486.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PALESTINIAN MONETARY AUTHORITY AND GAZA BANKS CONTINUE COUNTERMEASURES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1525">07JERUSALEM1525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07JERUSALEM1525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">HAMAS MONEY LAUNDERING SCHEME EXPLAINED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV2636">07TELAVIV2636</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07TELAVIV2636.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/30/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ISRAELI NGO SUES TERRORISTS, TIES UP PA MONEY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM1995">07JERUSALEM1995</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07JERUSALEM1995.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PALESTINIAN MONETARY AUTHORITY GOVERNOR OUTLINES BANKING SECTOR IMPROVEMENTS/NEEDS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07JERUSALEM2412">07JERUSALEM2412</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07JERUSALEM2412.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HAMAS AND TELECOM SERVICES IN GAZA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-31.3337" y1="158.9222" 
+                  x2="75.8331" y2="19.3802" class="btwns7"/>
+        
+            <line x1="-31.3337" y1="158.9222" 
+                  x2="-216.9429" y2="116.1836" class="btwns0"/>
+        
+            <line x1="-31.3337" y1="158.9222" 
+                  x2="27.8122" y2="281.0006" class="btwns0"/>
+        
+            <line x1="81.9241" y1="11.4492" 
+                  x2="260.0890" y2="22.2532" class="btwns7"/>
+        
+            <line x1="81.9241" y1="11.4492" 
+                  x2="-27.9494" y2="-140.2240" class="btwns10"/>
+        
+            <line x1="270.0707" y1="22.8585" 
+                  x2="381.5955" y2="-49.0473" class="btwns0"/>
+        
+            <line x1="-33.8159" y1="-148.3224" 
+                  x2="-190.4675" y2="-45.8935" class="btwns3"/>
+        
+            <line x1="-33.8159" y1="-148.3224" 
+                  x2="-155.9217" y2="-262.8231" class="btwns7"/>
+        
+            <line x1="-33.8159" y1="-148.3224" 
+                  x2="89.1688" y2="-263.3767" class="btwns0"/>
+        
+            <line x1="-198.8372" y1="-40.4209" 
+                  x2="-224.9123" y2="104.0986" class="btwns0"/>
+        
+            <line x1="-226.6879" y1="113.9397" 
+                  x2="-380.2193" y2="146.6300" class="btwns0"/>
+        
+            <line x1="-321.4160" y1="-290.0000" 
+                  x2="-173.1347" y2="-270.9383" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-31.3337 158.9222)" 
+                class="vertice degree6 btwns5 authority6 JERUSALEM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(81.9241 11.4492)" 
+                class="vertice degree6 btwns8 authority6 JERUSALEM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(270.0707 22.8585)" 
+                class="vertice degree3 btwns3 authority3 JERUSALEM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-33.8159 -148.3224)" 
+                class="vertice degree10 btwns10 authority10 JERUSALEM">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-198.8372 -40.4209)" 
+                class="vertice degree3 btwns2 authority3 JERUSALEM">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-226.6879 113.9397)" 
+                class="vertice degree6 btwns4 authority6 JERUSALEM">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-321.4160 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.7125)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -54.4661)" 
+                class="vertice degree0 btwns0 authority0 JERUSALEM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(32.1724 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-163.2163 -269.6633)" 
+                class="vertice degree3 btwns3 authority3 TELAVIV">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(96.4714 -270.2084)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-31.3337 158.9222)" 
+                id="07JERUSALEM1276" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07JERUSALEM1276.html">07JERUSALEM1276</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>GAZA BANKS OPERATING NORMALLY BUT TAKING PRECAUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(81.9241 11.4492)" 
+                id="07JERUSALEM1321" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07JERUSALEM1321.html">07JERUSALEM1321</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>GAZA CASH SHORTAGE MAY PREVENT PA SALARY PAYMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(270.0707 22.8585)" 
+                id="07JERUSALEM1334" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07JERUSALEM1334.html">07JERUSALEM1334</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ABU MAZEN EXEMPTS GAZANS FROM PA TAXES TO DENY HAMAS FUNDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-33.8159 -148.3224)" 
+                id="07JERUSALEM1346" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07JERUSALEM1346.html">07JERUSALEM1346</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AGREEMENT REACHED TO RESUME TRANSFER OF REVENUES BY ISRAEL TO THE PA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-198.8372 -40.4209)" 
+                id="07JERUSALEM1372" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07JERUSALEM1372.html">07JERUSALEM1372</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CLEARANCE REVENUE TRANSFERS AND CASH SHIPMENTS TO GAZA RESUME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-226.6879 113.9397)" 
+                id="07JERUSALEM1486" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07JERUSALEM1486.html">07JERUSALEM1486</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>PALESTINIAN MONETARY AUTHORITY AND GAZA BANKS CONTINUE COUNTERMEASURES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-321.4160 -290.0000)" 
+                id="07JERUSALEM1525" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07JERUSALEM1525.html">07JERUSALEM1525</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HAMAS MONEY LAUNDERING SCHEME EXPLAINED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.7125)" 
+                id="07JERUSALEM1995" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07JERUSALEM1995.html">07JERUSALEM1995</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PALESTINIAN MONETARY AUTHORITY GOVERNOR OUTLINES BANKING SECTOR IMPROVEMENTS/NEEDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -54.4661)" 
+                id="07JERUSALEM2412" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07JERUSALEM2412.html">07JERUSALEM2412</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HAMAS AND TELECOM SERVICES IN GAZA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(32.1724 290.0000)" 
+                id="07TELAVIV1845" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TELAVIV1845
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-163.2163 -269.6633)" 
+                id="07TELAVIV2097" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07TELAVIV2097.html">07TELAVIV2097</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ISRAELI NGO SUES TERRORISTS, TIES UP PA MONEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(96.4714 -270.2084)" 
+                id="07TELAVIV2636" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07TELAVIV2636.html">07TELAVIV2636</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ISRAELI NGO SUES TERRORISTS, TIES UP PA MONEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

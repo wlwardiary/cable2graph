@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05ASMARA1171">05ASMARA1171</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05ADDISABABA3711">05ADDISABABA3711</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/24/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3725">05ADDISABABA3725</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05ADDISABABA3725.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/28/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNITED NATIONS REQUESTS USG ASSISTANCE TO MONITOR AND RESOLVE ERITREA-ETHIOPIA CRISIS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3747">05ADDISABABA3747</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3747.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIA CALLS FOR UN SECURITY COUNCIL TO TAKE PEACE-ENFORCEMENT ACTION AGAINST ERITREA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3760">05ADDISABABA3760</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3760.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/03/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIA: MELES SAYS UNSC DRAFT RESOLUTION ON BORDER JEOPARDIZES PEACE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05ADDISABABA3769">05ADDISABABA3769</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/05/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3770">05ADDISABABA3770</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3770.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/07/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIA-ERITREA: UNMEE'S WITHDRAWAL COULD PROMPT ETHIOPIAN INTERVENTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3837">05ADDISABABA3837</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3837.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/12/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNSC MISSION TO ETHIOPIA-ERITREA BREAKS NO NEW GROUND</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3911">05ADDISABABA3911</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3911.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MELES MORE UPBEAT ON INTERNAL SITUATION AND E/E BORDER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA3930">05ADDISABABA3930</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05ADDISABABA3930.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ETHIOPIAN MILITARY OCCUPIES FORMER UNMEE OUTPOST IN TEMPORARY SECURITY ZONE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA4044">05ADDISABABA4044</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ADDISABABA4044.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ERITREAN UNMEE EJECTIONS: THE VIEW FROM ADDIS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA4046">05ADDISABABA4046</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ADDISABABA4046.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNMEE OFFICIALS AWAITING GUIDANCE ON ERITREA'S REQUEST TO EXPEL PEACEKEEPERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA4066">05ADDISABABA4066</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ADDISABABA4066.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MELES ON THE E/E BORDER - ETHIOPIA WILL RE-DEPLOY TO DECEMBER 2004 POSITIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05ADDISABABA4107">05ADDISABABA4107</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/17/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ADDISABABA4187">05ADDISABABA4187</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05ADDISABABA4187.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNMEE TRANSFERS STAFF TO ETHIOPIA TO AVERT SHOWDOWN WITH ERITREA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="252.6026" y1="145.5177" 
+                  x2="102.3017" y2="88.0590" class="btwns2"/>
+        
+            <line x1="92.9610" y1="84.4882" 
+                  x2="-96.8266" y2="59.3690" class="btwns4"/>
+        
+            <line x1="92.9610" y1="84.4882" 
+                  x2="2.1778" y2="12.7341" class="btwns1"/>
+        
+            <line x1="92.9610" y1="84.4882" 
+                  x2="-12.6240" y2="193.5335" class="btwns4"/>
+        
+            <line x1="92.9610" y1="84.4882" 
+                  x2="225.3722" y2="-22.8809" class="btwns10"/>
+        
+            <line x1="-106.7401" y1="58.0569" 
+                  x2="-14.5767" y2="11.0748" class="btwns0"/>
+        
+            <line x1="-106.7401" y1="58.0569" 
+                  x2="-269.4745" y2="81.6639" class="btwns3"/>
+        
+            <line x1="56.0152" y1="290.0000" 
+                  x2="-13.1183" y2="208.3495" class="btwns2"/>
+        
+            <line x1="-202.5847" y1="187.8627" 
+                  x2="-29.5556" y2="200.0170" class="btwns2"/>
+        
+            <line x1="-202.5847" y1="187.8627" 
+                  x2="-273.4593" y2="91.1651" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="5.5367" 
+                  x2="-287.5590" y2="77.3588" class="btwns2"/>
+        
+            <line x1="6.8239" y1="-208.8658" 
+                  x2="155.6626" y2="-149.3907" class="btwns6"/>
+        
+            <line x1="6.8239" y1="-208.8658" 
+                  x2="55.3873" y2="-281.6806" class="btwns2"/>
+        
+            <line x1="6.8239" y1="-208.8658" 
+                  x2="-147.4592" y2="-218.1630" class="btwns2"/>
+        
+            <line x1="164.9487" y1="-145.6801" 
+                  x2="228.0880" y2="-37.8095" class="btwns8"/>
+        
+            <line x1="390.0000" y1="-34.2756" 
+                  x2="243.1342" y2="-29.5039" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(252.6026 145.5177)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(92.9610 84.4882)" 
+                class="vertice degree10 btwns10 authority10 ADDISABABA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-106.7401 58.0569)" 
+                class="vertice degree5 btwns3 authority5 ADDISABABA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(56.0152 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-202.5847 187.8627)" 
+                class="vertice degree2 btwns0 authority2 ADDISABABA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-5.6675 6.5332)" 
+                class="vertice degree2 btwns0 authority2 ADDISABABA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-19.5801 200.7177)" 
+                class="vertice degree5 btwns3 authority4 ADDISABABA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 5.5367)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-279.3709 83.0996)" 
+                class="vertice degree5 btwns2 authority4 ADDISABABA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(6.8239 -208.8658)" 
+                class="vertice degree5 btwns4 authority4 ADDISABABA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(164.9487 -145.6801)" 
+                class="vertice degree2 btwns5 authority2 ADDISABABA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(60.9359 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -34.2756)" 
+                class="vertice degree0 btwns0 authority0 ADDISABABA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(233.1395 -29.1792)" 
+                class="vertice degree5 btwns8 authority4 ADDISABABA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-157.4411 -218.7645)" 
+                class="vertice degree0 btwns0 authority0 ASMARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(252.6026 145.5177)" 
+                id="05ADDISABABA3711" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ADDISABABA3711
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(92.9610 84.4882)" 
+                id="05ADDISABABA3725" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/28/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05ADDISABABA3725.html">05ADDISABABA3725</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UNITED NATIONS REQUESTS USG ASSISTANCE TO MONITOR AND RESOLVE ERITREA-ETHIOPIA CRISIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-106.7401 58.0569)" 
+                id="05ADDISABABA3747" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3747.html">05ADDISABABA3747</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ETHIOPIA CALLS FOR UN SECURITY COUNCIL TO TAKE PEACE-ENFORCEMENT ACTION AGAINST ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(56.0152 290.0000)" 
+                id="05ADDISABABA3760" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3760.html">05ADDISABABA3760</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ETHIOPIA: MELES SAYS UNSC DRAFT RESOLUTION ON BORDER JEOPARDIZES PEACE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-202.5847 187.8627)" 
+                id="05ADDISABABA3769" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    05ADDISABABA3769
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-5.6675 6.5332)" 
+                id="05ADDISABABA3770" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3770.html">05ADDISABABA3770</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ETHIOPIA-ERITREA: UNMEE'S WITHDRAWAL COULD PROMPT ETHIOPIAN INTERVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-19.5801 200.7177)" 
+                id="05ADDISABABA3837" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3837.html">05ADDISABABA3837</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>UNSC MISSION TO ETHIOPIA-ERITREA BREAKS NO NEW GROUND</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 5.5367)" 
+                id="05ADDISABABA3911" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3911.html">05ADDISABABA3911</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MELES MORE UPBEAT ON INTERNAL SITUATION AND E/E BORDER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-279.3709 83.0996)" 
+                id="05ADDISABABA3930" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05ADDISABABA3930.html">05ADDISABABA3930</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ETHIOPIAN MILITARY OCCUPIES FORMER UNMEE OUTPOST IN TEMPORARY SECURITY ZONE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(6.8239 -208.8658)" 
+                id="05ADDISABABA4044" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ADDISABABA4044.html">05ADDISABABA4044</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ERITREAN UNMEE EJECTIONS: THE VIEW FROM ADDIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.9487 -145.6801)" 
+                id="05ADDISABABA4046" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ADDISABABA4046.html">05ADDISABABA4046</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UNMEE OFFICIALS AWAITING GUIDANCE ON ERITREA'S REQUEST TO EXPEL PEACEKEEPERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(60.9359 -290.0000)" 
+                id="05ADDISABABA4066" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ADDISABABA4066.html">05ADDISABABA4066</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MELES ON THE E/E BORDER - ETHIOPIA WILL RE-DEPLOY TO DECEMBER 2004 POSITIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -34.2756)" 
+                id="05ADDISABABA4107" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ADDISABABA4107
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(233.1395 -29.1792)" 
+                id="05ADDISABABA4187" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05ADDISABABA4187.html">05ADDISABABA4187</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>UNMEE TRANSFERS STAFF TO ETHIOPIA TO AVERT SHOWDOWN WITH ERITREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-157.4411 -218.7645)" 
+                id="05ASMARA1171" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05ASMARA1171
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

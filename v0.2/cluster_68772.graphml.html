@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL975">07SEOUL975</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07SEOUL975.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GNP PRIMARY SCHEDULE - WORKING OUT THE DETAILS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL1418">07SEOUL1418</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07SEOUL1418.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEE MYUNG-BAK ADVISOR ON ECONOMIC ISSUES AND DPRK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL1670">07SEOUL1670</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07SEOUL1670.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEE MYUNG-BAK FOREIGN POLICY ADVISORS ON U.S.-ROK RELATIONS AND NORTH KOREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL1711">07SEOUL1711</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07SEOUL1711.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEE MYUNG-BAK: SMOOTH SAILING TILL DECEMBER?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2383">07SEOUL2383</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2383.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROH ANNOUNCES AUGUST 28-30 NORTH-SOUTH SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2410">07SEOUL2410</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2410.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROK-DPRK SUMMIT LIKELY TO BROADEN ECONOMIC COOPERATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2481">07SEOUL2481</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2481.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/17/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRESIDENT ROH SETS MODEST GOALS FOR SUMMIT IN NATIONAL DAY SPEECH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2529">07SEOUL2529</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2529.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/21/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROK-DPRK SUMMIT: FOREIGN AND UNIFICATION MINISTERS SAY DENUCLEARIZATION AND ECONOMIC COOPERATION GO TOGETHER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2573">07SEOUL2573</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2573.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEE MYUNG-BAK COMES OUT AGAINST OCTOBER SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2648">07SEOUL2648</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2648.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/31/07</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">ROKG INTERNAL WRANGLING OVER NLL, A NORTH-SOUTH SUMMIT ITEM?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2694">07SEOUL2694</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SEOUL2694.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUBJECT: NORTH-SOUTH SUMMIT: HOW IT CAME ABOUT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SEOUL2887">07SEOUL2887</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/19/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2906">07SEOUL2906</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SEOUL2906.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NSA BAEK: EXPECT NO SURPRISES FROM N-S SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2940">07SEOUL2940</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SEOUL2940.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FORMER UNIFICATION MINISTER JUNG SE-HYUN ON OCTOBER SUMMIT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2974">07SEOUL2974</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SEOUL2974.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/01/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUBJECT:  ISSUES TO WATCH AT THE ROK-DPRK SUMMIT, OCT. 2-4</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="186.3151" y1="219.3350" 
+                  x2="380.0104" y2="228.1879" class="btwns2"/>
+        
+            <line x1="186.3151" y1="219.3350" 
+                  x2="-16.7272" y2="286.8449" class="btwns5"/>
+        
+            <line x1="186.3151" y1="219.3350" 
+                  x2="179.5369" y2="66.5221" class="btwns8"/>
+        
+            <line x1="-26.2165" y1="290.0000" 
+                  x2="-221.0020" y2="288.8011" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-281.3004" 
+                  x2="-179.8832" y2="-262.5633" class="btwns2"/>
+        
+            <line x1="-169.9227" y1="-261.6751" 
+                  x2="-9.9530" y2="-288.3549" class="btwns0"/>
+        
+            <line x1="-169.9227" y1="-261.6751" 
+                  x2="34.7619" y2="-135.6575" class="btwns4"/>
+        
+            <line x1="154.0723" y1="-289.8605" 
+                  x2="9.9107" y2="-289.9909" class="btwns0"/>
+        
+            <line x1="154.0723" y1="-289.8605" 
+                  x2="48.9838" y2="-138.6268" class="btwns2"/>
+        
+            <line x1="-0.0893" y1="-290.0000" 
+                  x2="40.6551" y2="-140.0648" class="btwns1"/>
+        
+            <line x1="179.0938" y1="56.5319" 
+                  x2="49.1551" y2="-122.3244" class="btwns10"/>
+        
+            <line x1="311.6443" y1="-205.2020" 
+                  x2="52.9104" y2="-133.0992" class="btwns2"/>
+        
+            <line x1="317.4484" y1="-85.4371" 
+                  x2="53.1456" y2="-128.7959" class="btwns2"/>
+        
+            <line x1="-225.3872" y1="-124.6043" 
+                  x2="33.2798" y2="-130.1985" class="btwns2"/>
+        
+            <line x1="-213.0949" y1="-11.8306" 
+                  x2="34.2013" y2="-126.2166" class="btwns2"/>
+        
+            <line x1="-27.8351" y1="11.3119" 
+                  x2="38.7927" y2="-121.4768" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(186.3151 219.3350)" 
+                class="vertice degree2 btwns4 authority2 SEOUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 228.6444)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-26.2165 290.0000)" 
+                class="vertice degree1 btwns1 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -281.3004)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-169.9227 -261.6751)" 
+                class="vertice degree2 btwns1 authority2 SEOUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(154.0723 -289.8605)" 
+                class="vertice degree1 btwns0 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-0.0893 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 SEOUL">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.0938 56.5319)" 
+                class="vertice degree1 btwns5 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(311.6443 -205.2020)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(317.4484 -85.4371)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-225.3872 -124.6043)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-213.0949 -11.8306)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-27.8351 11.3119)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(43.2775 -130.4148)" 
+                class="vertice degree10 btwns10 authority10 SEOUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-231.0018 288.7396)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(186.3151 219.3350)" 
+                id="07SEOUL1418" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07SEOUL1418.html">07SEOUL1418</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LEE MYUNG-BAK ADVISOR ON ECONOMIC ISSUES AND DPRK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 228.6444)" 
+                id="07SEOUL1670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07SEOUL1670.html">07SEOUL1670</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEE MYUNG-BAK FOREIGN POLICY ADVISORS ON U.S.-ROK RELATIONS AND NORTH KOREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.2165 290.0000)" 
+                id="07SEOUL1711" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07SEOUL1711.html">07SEOUL1711</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LEE MYUNG-BAK: SMOOTH SAILING TILL DECEMBER?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -281.3004)" 
+                id="07SEOUL2383" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2383.html">07SEOUL2383</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROH ANNOUNCES AUGUST 28-30 NORTH-SOUTH SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-169.9227 -261.6751)" 
+                id="07SEOUL2410" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2410.html">07SEOUL2410</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ROK-DPRK SUMMIT LIKELY TO BROADEN ECONOMIC COOPERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(154.0723 -289.8605)" 
+                id="07SEOUL2481" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2481.html">07SEOUL2481</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRESIDENT ROH SETS MODEST GOALS FOR SUMMIT IN NATIONAL DAY SPEECH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-0.0893 -290.0000)" 
+                id="07SEOUL2529" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2529.html">07SEOUL2529</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ROK-DPRK SUMMIT: FOREIGN AND UNIFICATION MINISTERS SAY DENUCLEARIZATION AND ECONOMIC COOPERATION GO TOGETHER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.0938 56.5319)" 
+                id="07SEOUL2573" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2573.html">07SEOUL2573</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>LEE MYUNG-BAK COMES OUT AGAINST OCTOBER SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(311.6443 -205.2020)" 
+                id="07SEOUL2648" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2648.html">07SEOUL2648</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG INTERNAL WRANGLING OVER NLL, A NORTH-SOUTH SUMMIT ITEM?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(317.4484 -85.4371)" 
+                id="07SEOUL2694" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SEOUL2694.html">07SEOUL2694</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SUBJECT: NORTH-SOUTH SUMMIT: HOW IT CAME ABOUT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-225.3872 -124.6043)" 
+                id="07SEOUL2887" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SEOUL2887
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-213.0949 -11.8306)" 
+                id="07SEOUL2906" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SEOUL2906.html">07SEOUL2906</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NSA BAEK: EXPECT NO SURPRISES FROM N-S SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-27.8351 11.3119)" 
+                id="07SEOUL2940" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SEOUL2940.html">07SEOUL2940</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FORMER UNIFICATION MINISTER JUNG SE-HYUN ON OCTOBER SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(43.2775 -130.4148)" 
+                id="07SEOUL2974" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SEOUL2974.html">07SEOUL2974</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SUBJECT:  ISSUES TO WATCH AT THE ROK-DPRK SUMMIT, OCT. 2-4</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-231.0018 288.7396)" 
+                id="07SEOUL975" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07SEOUL975.html">07SEOUL975</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GNP PRIMARY SCHEDULE - WORKING OUT THE DETAILS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

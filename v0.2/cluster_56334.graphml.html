@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07GEORGETOWN294">07GEORGETOWN294</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/23/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE43123">07STATE43123</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/01/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRIDGETOWN416">07BRIDGETOWN416</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BRIDGETOWN416.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/10/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON U.S.-CARICOM MINISTERIAL/SUMMIT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINGSTON534">07KINGSTON534</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KINGSTON534.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/12/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAMAICA: US-CARICOM MINISTERIAL/SUMMIT, WASHINGTON DC, JUNE 19-21, 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PORTOFSPAIN362">07PORTOFSPAIN362</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07PORTOFSPAIN362.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">T&T TO BE WELL REPRESENTED AT US-CARICOM MINISTERIAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BRIDGETOWN449">07BRIDGETOWN449</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BRIDGETOWN449.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CARICOM SUMMIT RESPONSES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07GRENADA53">07GRENADA53</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07GRENADA53.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">CARICOM SUMMIT RESPONSE - GRENADA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07GEORGETOWN391">07GEORGETOWN391</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07GEORGETOWN391.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GUYANA-CARICOM ATTENDENCE AT THE CONFERENCE ON THE CARIBBEAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINGSTON584">07KINGSTON584</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07KINGSTON584.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JAMAICA: US-CARICOM MINISTERIAL/SUMMIT JUNE 19-21; PARTICIPATION, COMMENTS ON PROPOSED AGENDA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE68935">07STATE68935</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/18/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BRIDGETOWN658">07BRIDGETOWN658</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BRIDGETOWN658.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/24/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED ON CARIBBEAN CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07GEORGETOWN578">07GEORGETOWN578</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07GEORGETOWN578.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UPDATED GUYANA ATTENDENCE AT THE CONFERENCE OF THE CARIBBEAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07GEORGETOWN582">07GEORGETOWN582</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07GEORGETOWN582.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SECOND UPDATED GUYANA ATTENDANCE AT THE CONFERENCE OF THE CARIBBEAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BELMOPAN397">07BELMOPAN397</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07BELMOPAN397.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELIZE'S ATTENDANCE AT THE CONFERENCE ON THE CARIBBEAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-238.9893" 
+                  x2="227.5269" y2="-263.9426" class="btwns3"/>
+        
+            <line x1="-270.9710" y1="252.9387" 
+                  x2="-129.3168" y2="74.3152" class="btwns3"/>
+        
+            <line x1="160.6055" y1="153.3059" 
+                  x2="-113.5410" y2="69.4064" class="btwns3"/>
+        
+            <line x1="64.6688" y1="-135.9447" 
+                  x2="-116.3025" y2="59.1486" class="btwns10"/>
+        
+            <line x1="64.6688" y1="-135.9447" 
+                  x2="210.0108" y2="-258.9990" class="btwns7"/>
+        
+            <line x1="-328.0165" y1="-290.0000" 
+                  x2="-309.2830" y2="-138.0209" class="btwns1"/>
+        
+            <line x1="-328.0165" y1="-290.0000" 
+                  x2="-198.2627" y2="-174.3572" class="btwns1"/>
+        
+            <line x1="-308.0597" y1="-128.0960" 
+                  x2="-200.2716" y2="-164.5036" class="btwns0"/>
+        
+            <line x1="-308.0597" y1="-128.0960" 
+                  x2="-129.9928" y2="59.2320" class="btwns4"/>
+        
+            <line x1="-190.7974" y1="-167.7037" 
+                  x2="-125.8802" y2="56.8733" class="btwns4"/>
+        
+            <line x1="47.7519" y1="251.0911" 
+                  x2="-116.3109" y2="73.8192" class="btwns3"/>
+        
+            <line x1="-108.3190" y1="290.0000" 
+                  x2="-122.4432" y2="76.4582" class="btwns3"/>
+        
+            <line x1="-390.0000" y1="32.5530" 
+                  x2="-380.4929" y2="127.4951" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="32.5530" 
+                  x2="-133.0234" y2="65.2190" class="btwns3"/>
+        
+            <line x1="-379.4965" y1="137.4454" 
+                  x2="-132.7409" y2="69.1475" class="btwns3"/>
+        
+            <line x1="116.3920" y1="25.0865" 
+                  x2="-113.2493" y2="64.7769" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -238.9893)" 
+                class="vertice degree0 btwns0 authority0 BELMOPAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-270.9710 252.9387)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(160.6055 153.3059)" 
+                class="vertice degree0 btwns0 authority0 BRIDGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(64.6688 -135.9447)" 
+                class="vertice degree1 btwns3 authority1 BRIDGETOWN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-328.0165 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 GEORGETOWN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-308.0597 -128.0960)" 
+                class="vertice degree2 btwns0 authority2 GEORGETOWN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-190.7974 -167.7037)" 
+                class="vertice degree2 btwns0 authority2 GEORGETOWN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(47.7519 251.0911)" 
+                class="vertice degree0 btwns0 authority0 GEORGETOWN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-108.3190 290.0000)" 
+                class="vertice degree0 btwns0 authority0 GRENADA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 32.5530)" 
+                class="vertice degree1 btwns0 authority1 KINGSTON">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-379.4965 137.4454)" 
+                class="vertice degree1 btwns0 authority1 KINGSTON">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(116.3920 25.0865)" 
+                class="vertice degree0 btwns0 authority0 PORTOFSPAIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-123.1032 66.4800)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(217.6428 -265.4606)" 
+                class="vertice degree1 btwns1 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -238.9893)" 
+                id="07BELMOPAN397" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07BELMOPAN397.html">07BELMOPAN397</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELIZE'S ATTENDANCE AT THE CONFERENCE ON THE CARIBBEAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-270.9710 252.9387)" 
+                id="07BRIDGETOWN416" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BRIDGETOWN416.html">07BRIDGETOWN416</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON U.S.-CARICOM MINISTERIAL/SUMMIT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(160.6055 153.3059)" 
+                id="07BRIDGETOWN449" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BRIDGETOWN449.html">07BRIDGETOWN449</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CARICOM SUMMIT RESPONSES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(64.6688 -135.9447)" 
+                id="07BRIDGETOWN658" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BRIDGETOWN658.html">07BRIDGETOWN658</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON CARIBBEAN CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-328.0165 -290.0000)" 
+                id="07GEORGETOWN294" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07GEORGETOWN294
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-308.0597 -128.0960)" 
+                id="07GEORGETOWN391" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07GEORGETOWN391.html">07GEORGETOWN391</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GUYANA-CARICOM ATTENDENCE AT THE CONFERENCE ON THE CARIBBEAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-190.7974 -167.7037)" 
+                id="07GEORGETOWN578" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07GEORGETOWN578.html">07GEORGETOWN578</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UPDATED GUYANA ATTENDENCE AT THE CONFERENCE OF THE CARIBBEAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(47.7519 251.0911)" 
+                id="07GEORGETOWN582" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07GEORGETOWN582.html">07GEORGETOWN582</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SECOND UPDATED GUYANA ATTENDANCE AT THE CONFERENCE OF THE CARIBBEAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-108.3190 290.0000)" 
+                id="07GRENADA53" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07GRENADA53.html">07GRENADA53</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CARICOM SUMMIT RESPONSE - GRENADA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 32.5530)" 
+                id="07KINGSTON534" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KINGSTON534.html">07KINGSTON534</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JAMAICA: US-CARICOM MINISTERIAL/SUMMIT, WASHINGTON DC, JUNE 19-21, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-379.4965 137.4454)" 
+                id="07KINGSTON584" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07KINGSTON584.html">07KINGSTON584</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JAMAICA: US-CARICOM MINISTERIAL/SUMMIT JUNE 19-21; PARTICIPATION, COMMENTS ON PROPOSED AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(116.3920 25.0865)" 
+                id="07PORTOFSPAIN362" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07PORTOFSPAIN362.html">07PORTOFSPAIN362</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>T&T TO BE WELL REPRESENTED AT US-CARICOM MINISTERIAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-123.1032 66.4800)" 
+                id="07STATE43123" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE43123
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(217.6428 -265.4606)" 
+                id="07STATE68935" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07STATE68935
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

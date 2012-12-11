@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE4100">09STATE4100</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09STATE4100.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/15/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">USTR ANNOUNCES REVISIONS TO HORMONE BEEF SANCTIONED PRODUCTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09PARIS62">09PARIS62</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09PARIS62.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FRENCH MINAG RESPONDS TO RETALIATORY TARIFFS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PARIS69">09PARIS69</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09PARIS69.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ROQUEFORT REACTS TO US BEEF HORMONE SANCTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE4882">09STATE4882</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09STATE4882.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">USTR FILES FOR WTO CONSULTATIONS WITH EU ON POULTRY TREATED WITH PRTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ATHENS64">09ATHENS64</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09ATHENS64.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DEMARCHE DELIVERED: BEEF HORMONES CASE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09PARIS83">09PARIS83</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09PARIS83.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/21/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROQUEFORT CALLS ON EMBASSY PARIS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09LISBON59">09LISBON59</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09LISBON59.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PORTUGAL ON BEEF HORMONES RETALIATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STOCKHOLM60">09STOCKHOLM60</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09STOCKHOLM60.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SWEDES SOUR ABOUT U.S. TRADE SANCTIONS ON LINGONBERRIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09VIENNA107">09VIENNA107</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09VIENNA107.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/28/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRIA'S ECON MINISTRY FAVORS A NON-HORMONE BEEF SOLUTION, DAMAGE FOR INDUSTRY LIKELY TO BE LIMITED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BRUSSELS129">09BRUSSELS129</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BRUSSELS129.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELGIUM: GOVERNMENT FULLY SUPPORTS EU LINE AGAINST UPDATED U.S. BEEF HORMONE SANCTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09WARSAW97">09WARSAW97</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09WARSAW97.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BEEF HORMONES: POLES LOOKING FOR A DEAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09THEHAGUE75">09THEHAGUE75</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09THEHAGUE75.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NETHERLANDS: MIXED REACTION TO USG RETALIATION IN WTO BEEF HORMONES CASE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="123.8977" y1="205.3859" 
+                  x2="115.0158" y2="43.5401" class="btwns0"/>
+        
+            <line x1="307.0494" y1="169.1678" 
+                  x2="122.6441" y2="39.3127" class="btwns0"/>
+        
+            <line x1="-136.4419" y1="-0.9016" 
+                  x2="104.5609" y2="32.1946" class="btwns0"/>
+        
+            <line x1="-158.9314" y1="151.3911" 
+                  x2="-380.0844" y2="122.4805" class="btwns0"/>
+        
+            <line x1="-158.9314" y1="151.3911" 
+                  x2="-202.7104" y2="280.5294" class="btwns0"/>
+        
+            <line x1="-158.9314" y1="151.3911" 
+                  x2="105.2845" y2="37.5132" class="btwns10"/>
+        
+            <line x1="114.4679" y1="33.5551" 
+                  x2="132.6089" y2="-149.4843" class="btwns5"/>
+        
+            <line x1="114.4679" y1="33.5551" 
+                  x2="380.0311" y2="54.5520" class="btwns0"/>
+        
+            <line x1="114.4679" y1="33.5551" 
+                  x2="-58.1386" y2="-97.9544" class="btwns0"/>
+        
+            <line x1="114.4679" y1="33.5551" 
+                  x2="323.4648" y2="-62.1985" class="btwns0"/>
+        
+            <line x1="73.1076" y1="-290.0000" 
+                  x2="129.3916" y2="-168.5091" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(123.8977 205.3859)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(307.0494 169.1678)" 
+                class="vertice degree0 btwns0 authority0 BRUSSELS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-136.4419 -0.9016)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-158.9314 151.3911)" 
+                class="vertice degree2 btwns3 authority2 PARIS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 121.1843)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-205.9210 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(114.4679 33.5551)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(73.1076 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(133.5952 -159.4355)" 
+                class="vertice degree1 btwns1 authority1 STOCKHOLM">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 55.3402)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-66.0930 -104.0148)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(332.5561 -66.3638)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(123.8977 205.3859)" 
+                id="09ATHENS64" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09ATHENS64.html">09ATHENS64</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: BEEF HORMONES CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(307.0494 169.1678)" 
+                id="09BRUSSELS129" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BRUSSELS129.html">09BRUSSELS129</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELGIUM: GOVERNMENT FULLY SUPPORTS EU LINE AGAINST UPDATED U.S. BEEF HORMONE SANCTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-136.4419 -0.9016)" 
+                id="09LISBON59" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09LISBON59.html">09LISBON59</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL ON BEEF HORMONES RETALIATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-158.9314 151.3911)" 
+                id="09PARIS62" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09PARIS62.html">09PARIS62</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>FRENCH MINAG RESPONDS TO RETALIATORY TARIFFS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 121.1843)" 
+                id="09PARIS69" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09PARIS69.html">09PARIS69</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROQUEFORT REACTS TO US BEEF HORMONE SANCTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-205.9210 290.0000)" 
+                id="09PARIS83" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09PARIS83.html">09PARIS83</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROQUEFORT CALLS ON EMBASSY PARIS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(114.4679 33.5551)" 
+                id="09STATE4100" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09STATE4100.html">09STATE4100</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>USTR ANNOUNCES REVISIONS TO HORMONE BEEF SANCTIONED PRODUCTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(73.1076 -290.0000)" 
+                id="09STATE4882" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09STATE4882.html">09STATE4882</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>USTR FILES FOR WTO CONSULTATIONS WITH EU ON POULTRY TREATED WITH PRTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(133.5952 -159.4355)" 
+                id="09STOCKHOLM60" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09STOCKHOLM60.html">09STOCKHOLM60</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SWEDES SOUR ABOUT U.S. TRADE SANCTIONS ON LINGONBERRIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 55.3402)" 
+                id="09THEHAGUE75" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09THEHAGUE75.html">09THEHAGUE75</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS: MIXED REACTION TO USG RETALIATION IN WTO BEEF HORMONES CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-66.0930 -104.0148)" 
+                id="09VIENNA107" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09VIENNA107.html">09VIENNA107</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRIA'S ECON MINISTRY FAVORS A NON-HORMONE BEEF SOLUTION, DAMAGE FOR INDUSTRY LIKELY TO BE LIMITED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(332.5561 -66.3638)" 
+                id="09WARSAW97" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09WARSAW97.html">09WARSAW97</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BEEF HORMONES: POLES LOOKING FOR A DEAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

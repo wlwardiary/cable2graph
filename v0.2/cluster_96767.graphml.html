@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BANGKOK10900">09BANGKOK10900</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09SINGAPORE69110">09SINGAPORE69110</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE16255">09STATE16255</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/21/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BANGKOK456">09BANGKOK456</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09BANGKOK456.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">THAILAND: TRANSMITTAL OF NMFS LETTER ABOUT SWORDFISH EXPORTS TO US</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09JAKARTA317">09JAKARTA317</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09JAKARTA317.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INDONESIA: NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS DELIVERED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09LISBON118">09LISBON118</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09LISBON118.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PORTUGAL: USDOC/NOAA/NMFS LETTER TRANSMITTED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE17673">09STATE17673</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/25/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BOGOTA647">09BOGOTA647</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09BOGOTA647.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">COLOMBIA: TRANSMITTAL OF LETTER FROM ACTING NMFS ASSISTANT ADMINISTRATOR JAMES BALSIGER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SINGAPORE171">09SINGAPORE171</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09SINGAPORE171.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">REQUEST FOR TRANSMITTAL OF USDOC/NOAA/NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS TO THE UNITED STATES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MOSCOW498">09MOSCOW498</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09MOSCOW498.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/27/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">RUSSIAN RECEIPT OF USDOC/NOAA/NMFS LETTER ON MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PORTOFSPAIN85">09PORTOFSPAIN85</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09PORTOFSPAIN85.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SWORDFISH/MARINE MAMMAL CONSERVATION LETTER DELIVERED TO TRINIDAD AND TOBAGO</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09GRENADA14">09GRENADA14</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09GRENADA14.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">USDOC/NOAA/NMFS LETTER DELIVERED TO GOVERNMENT OF GRENADA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NEWDELHI433">09NEWDELHI433</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09NEWDELHI433.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/06/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">INDIA:  DELIVERY OF USDOC/NOAA/NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS TO THE US</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING656">09BEIJING656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09BEIJING656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHINESE COMMENTS ON NGOS'SWORDFISH PETITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BRASILIA305">09BRASILIA305</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09BRASILIA305.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BRAZIL: TRANSMITTAL OF USDOC/NOAA/NMFS LETTER RE SWORDFISH EXPORTS TO THE UNITED STATES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="232.6057" 
+                  x2="-244.5364" y2="119.2227" class="btwns3"/>
+        
+            <line x1="-236.6493" y1="113.0750" 
+                  x2="-27.6751" y2="-85.5462" class="btwns8"/>
+        
+            <line x1="268.8794" y1="19.3517" 
+                  x2="-11.0989" y2="-88.8312" class="btwns4"/>
+        
+            <line x1="268.8794" y1="19.3517" 
+                  x2="382.8650" y2="131.2864" class="btwns0"/>
+        
+            <line x1="-59.4740" y1="-290.0000" 
+                  x2="-22.3657" y2="-102.2457" class="btwns3"/>
+        
+            <line x1="290.3493" y1="-105.3309" 
+                  x2="-10.4354" y2="-92.8501" class="btwns3"/>
+        
+            <line x1="-224.4108" y1="-248.1314" 
+                  x2="-28.3759" y2="-98.5028" class="btwns3"/>
+        
+            <line x1="262.4783" y1="-211.0534" 
+                  x2="-11.2046" y2="-96.3022" class="btwns3"/>
+        
+            <line x1="114.1087" y1="-271.4539" 
+                  x2="-14.4190" y2="-100.4296" class="btwns3"/>
+        
+            <line x1="-152.9451" y1="9.7585" 
+                  x2="-28.3456" y2="-86.3287" class="btwns3"/>
+        
+            <line x1="-333.9357" y1="-161.0786" 
+                  x2="-30.1954" y2="-94.5743" class="btwns3"/>
+        
+            <line x1="-354.0830" y1="-47.0871" 
+                  x2="-30.3357" y2="-91.0887" class="btwns3"/>
+        
+            <line x1="146.1760" y1="128.6428" 
+                  x2="155.3576" y2="280.0183" class="btwns3"/>
+        
+            <line x1="146.1760" y1="128.6428" 
+                  x2="-14.4085" y2="-84.4493" class="btwns10"/>
+        
+            <line x1="146.1760" y1="128.6428" 
+                  x2="380.0078" y2="137.8976" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 232.6057)" 
+                class="vertice degree0 btwns0 authority0 BANGKOK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-236.6493 113.0750)" 
+                class="vertice degree1 btwns1 authority0 BANGKOK">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(268.8794 19.3517)" 
+                class="vertice degree1 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-59.4740 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BOGOTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(290.3493 -105.3309)" 
+                class="vertice degree0 btwns0 authority0 BRASILIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-224.4108 -248.1314)" 
+                class="vertice degree0 btwns0 authority0 GRENADA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(262.4783 -211.0534)" 
+                class="vertice degree0 btwns0 authority0 JAKARTA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(114.1087 -271.4539)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-152.9451 9.7585)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-333.9357 -161.0786)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-354.0830 -47.0871)" 
+                class="vertice degree0 btwns0 authority0 PORTOFSPAIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(146.1760 128.6428)" 
+                class="vertice degree2 btwns2 authority1 SINGAPORE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(155.9630 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SINGAPORE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-20.4268 -92.4355)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 138.2930)" 
+                class="vertice degree1 btwns0 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 232.6057)" 
+                id="09BANGKOK10900" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BANGKOK10900
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-236.6493 113.0750)" 
+                id="09BANGKOK456" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09BANGKOK456.html">09BANGKOK456</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>THAILAND: TRANSMITTAL OF NMFS LETTER ABOUT SWORDFISH EXPORTS TO US</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(268.8794 19.3517)" 
+                id="09BEIJING656" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09BEIJING656.html">09BEIJING656</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CHINESE COMMENTS ON NGOS'SWORDFISH PETITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-59.4740 -290.0000)" 
+                id="09BOGOTA647" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09BOGOTA647.html">09BOGOTA647</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COLOMBIA: TRANSMITTAL OF LETTER FROM ACTING NMFS ASSISTANT ADMINISTRATOR JAMES BALSIGER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(290.3493 -105.3309)" 
+                id="09BRASILIA305" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09BRASILIA305.html">09BRASILIA305</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BRAZIL: TRANSMITTAL OF USDOC/NOAA/NMFS LETTER RE SWORDFISH EXPORTS TO THE UNITED STATES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-224.4108 -248.1314)" 
+                id="09GRENADA14" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09GRENADA14.html">09GRENADA14</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>USDOC/NOAA/NMFS LETTER DELIVERED TO GOVERNMENT OF GRENADA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(262.4783 -211.0534)" 
+                id="09JAKARTA317" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09JAKARTA317.html">09JAKARTA317</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INDONESIA: NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(114.1087 -271.4539)" 
+                id="09LISBON118" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09LISBON118.html">09LISBON118</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL: USDOC/NOAA/NMFS LETTER TRANSMITTED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-152.9451 9.7585)" 
+                id="09MOSCOW498" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09MOSCOW498.html">09MOSCOW498</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIAN RECEIPT OF USDOC/NOAA/NMFS LETTER ON MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-333.9357 -161.0786)" 
+                id="09NEWDELHI433" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09NEWDELHI433.html">09NEWDELHI433</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INDIA:  DELIVERY OF USDOC/NOAA/NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS TO THE US</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-354.0830 -47.0871)" 
+                id="09PORTOFSPAIN85" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09PORTOFSPAIN85.html">09PORTOFSPAIN85</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SWORDFISH/MARINE MAMMAL CONSERVATION LETTER DELIVERED TO TRINIDAD AND TOBAGO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.1760 128.6428)" 
+                id="09SINGAPORE171" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09SINGAPORE171.html">09SINGAPORE171</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>REQUEST FOR TRANSMITTAL OF USDOC/NOAA/NMFS LETTER REGARDING MARINE MAMMAL CONSERVATION AND SWORDFISH EXPORTS TO THE UNITED STATES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(155.9630 290.0000)" 
+                id="09SINGAPORE69110" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09SINGAPORE69110
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-20.4268 -92.4355)" 
+                id="09STATE16255" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    09STATE16255
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 138.2930)" 
+                id="09STATE17673" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    09STATE17673
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

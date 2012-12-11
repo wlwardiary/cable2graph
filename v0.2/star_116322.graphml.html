@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK518">09USUNNEWYORK518</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09USUNNEWYORK518.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EU INITIATIVE TO ENLIST US SUPPORT REGARDING CHANGES TO REGULAR AND PEACEKEEPING SCALES OF ASSESSMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK562">09USUNNEWYORK562</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09USUNNEWYORK562.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FOLLOW UP ON G-7 INITIATIVE ON REGULAR AND PEACEKEEPING SCALES OF ASSESSMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK655">09USUNNEWYORK655</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09USUNNEWYORK655.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">G7 FOLLOW-UP MEETING ON UN REGULAR BUDGET SCALES OF ASSESSMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK663">09USUNNEWYORK663</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09USUNNEWYORK663.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/09/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">G-7 FOLLOW-UP MEETING ON UN PEACEKEEPING BUDGET SCALE OF ASSESSMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK746">09USUNNEWYORK746</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09USUNNEWYORK746.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">G-7 PLUS EU MEETING ON THE UN BUDGET SCALES OF ASSESSMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK843">09USUNNEWYORK843</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09USUNNEWYORK843.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/17/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">G7 AND EU MEETING ON THE SCALES OF ASSESSMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK917">09USUNNEWYORK917</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09USUNNEWYORK917.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/15/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">G77 OPPOSES CHANGES TO THE REGULAR BUDGET SCALES OF ASSESSMENT, BUT CALLS FOR CHANGE TO PEACEKEEPING SCALE OF ASSESSMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK1071">09USUNNEWYORK1071</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09USUNNEWYORK1071.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/25/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNGA/C-5: REGULAR BUDGET/PKO SCALES:  E.U. CONTINUES TO TARGET THE BRIC, G-77 ATTACKS THE CEILING, U.S. PROPOSES TO ELIMINATE CATEGORY C</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09USUNNEWYORK1122">09USUNNEWYORK1122</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09USUNNEWYORK1122.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/15/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UNGA/C-5: SCALES DEBATE FOR REGULAR BUDGET AND PKO CHURN ON WITH NO CONSENSUS IN SIGHT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10USUNNEWYORK5">10USUNNEWYORK5</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10USUNNEWYORK5.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNGA FIFTH COMMITTEE: US ACHIEVES OBJECTIVES IN SCALES OF ASSESSMENTS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="17.4437" 
+                  x2="-2.8873" y2="-3.1402" class="btwns5"/>
+        
+            <line x1="-315.3476" y1="-176.7903" 
+                  x2="-1.7119" y2="-8.4014" class="btwns5"/>
+        
+            <line x1="-89.7739" y1="-290.0000" 
+                  x2="3.8938" y2="-13.1437" class="btwns5"/>
+        
+            <line x1="390.0000" y1="77.1751" 
+                  x2="16.8829" y2="-1.6053" class="btwns5"/>
+        
+            <line x1="370.4979" y1="-124.0914" 
+                  x2="16.5910" y2="-6.8167" class="btwns5"/>
+        
+            <line x1="181.1910" y1="-269.2388" 
+                  x2="12.5811" y2="-12.0343" class="btwns5"/>
+        
+            <line x1="-278.8528" y1="201.8044" 
+                  x2="-1.0223" y2="2.1642" class="btwns5"/>
+        
+            <line x1="-33.7690" y1="290.0000" 
+                  x2="5.7203" y2="6.2334" class="btwns5"/>
+        
+            <line x1="230.4894" y1="240.8004" 
+                  x2="13.8442" y2="3.7110" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 17.4437)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-315.3476 -176.7903)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-89.7739 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 77.1751)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(370.4979 -124.0914)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(181.1910 -269.2388)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-278.8528 201.8044)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-33.7690 290.0000)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(230.4894 240.8004)" 
+                class="vertice degree0 btwns0 authority0 USUNNEWYORK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(7.0986 -3.6711)" 
+                class="vertice degree10 btwns10 authority10 USUNNEWYORK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 17.4437)" 
+                id="09USUNNEWYORK1071" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09USUNNEWYORK1071.html">09USUNNEWYORK1071</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNGA/C-5: REGULAR BUDGET/PKO SCALES:  E.U. CONTINUES TO TARGET THE BRIC, G-77 ATTACKS THE CEILING, U.S. PROPOSES TO ELIMINATE CATEGORY C</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-315.3476 -176.7903)" 
+                id="09USUNNEWYORK1122" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09USUNNEWYORK1122.html">09USUNNEWYORK1122</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNGA/C-5: SCALES DEBATE FOR REGULAR BUDGET AND PKO CHURN ON WITH NO CONSENSUS IN SIGHT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-89.7739 -290.0000)" 
+                id="09USUNNEWYORK518" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09USUNNEWYORK518.html">09USUNNEWYORK518</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EU INITIATIVE TO ENLIST US SUPPORT REGARDING CHANGES TO REGULAR AND PEACEKEEPING SCALES OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 77.1751)" 
+                id="09USUNNEWYORK562" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09USUNNEWYORK562.html">09USUNNEWYORK562</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FOLLOW UP ON G-7 INITIATIVE ON REGULAR AND PEACEKEEPING SCALES OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(370.4979 -124.0914)" 
+                id="09USUNNEWYORK655" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09USUNNEWYORK655.html">09USUNNEWYORK655</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>G7 FOLLOW-UP MEETING ON UN REGULAR BUDGET SCALES OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(181.1910 -269.2388)" 
+                id="09USUNNEWYORK663" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09USUNNEWYORK663.html">09USUNNEWYORK663</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>G-7 FOLLOW-UP MEETING ON UN PEACEKEEPING BUDGET SCALE OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-278.8528 201.8044)" 
+                id="09USUNNEWYORK746" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09USUNNEWYORK746.html">09USUNNEWYORK746</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>G-7 PLUS EU MEETING ON THE UN BUDGET SCALES OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-33.7690 290.0000)" 
+                id="09USUNNEWYORK843" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09USUNNEWYORK843.html">09USUNNEWYORK843</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>G7 AND EU MEETING ON THE SCALES OF ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(230.4894 240.8004)" 
+                id="09USUNNEWYORK917" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09USUNNEWYORK917.html">09USUNNEWYORK917</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>G77 OPPOSES CHANGES TO THE REGULAR BUDGET SCALES OF ASSESSMENT, BUT CALLS FOR CHANGE TO PEACEKEEPING SCALE OF ASSESSMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(7.0986 -3.6711)" 
+                id="10USUNNEWYORK5" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/07/10</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10USUNNEWYORK5.html">10USUNNEWYORK5</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UNGA FIFTH COMMITTEE: US ACHIEVES OBJECTIVES IN SCALES OF ASSESSMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

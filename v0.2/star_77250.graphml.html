@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1702">08BEIRUT1702</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/28/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1713">08BEIRUT1713</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/02/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1726">08BEIRUT1726</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/05/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1727">08BEIRUT1727</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/05/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1776">08BEIRUT1776</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/22/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIRUT1777">08BEIRUT1777</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/22/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIRUT20">09BEIRUT20</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BEIRUT20.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LEBANON: LEAHY VETTING FOR PARTICIPANTS IN INL'S LEBANON POLICE SUPERVISORY TRAINING PROGRAM BEGINNING JANUARY 2009. 1. (U) The following names and biographic information is provided regarding participants in the INL funded Lebanon Police Supervisory</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIRUT21">09BEIRUT21</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BEIRUT21.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/07/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LEBANON: LEAHY VETTING FOR PARTICIPANTS IN INL'S LEBANON POLICE BASIC CADET TRAINING PROGRAM BEGINNING JANUARY 2009.</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT26">09BEIRUT26</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/08/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT27">09BEIRUT27</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/08/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIRUT68">09BEIRUT68</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09BEIRUT68.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LEBANON: LEAHY VETTING FOR PARTICIPANTS IN THE DRUG ENFORCEMENT ADMINISTRATION TRAINING PROGRAM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT72">09BEIRUT72</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT76">09BEIRUT76</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/16/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT85">09BEIRUT85</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/21/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT115">09BEIRUT115</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/28/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09BEIRUT123">09BEIRUT123</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/29/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE11872">09STATE11872</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09STATE11872.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LEAHY VETTING FOR LEBANESE CANDIDATES FOR USG-SPONSORED TRAINING</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="281.8830" y1="-207.0465" 
+                  x2="-4.5727" y2="-7.7697" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="23.8512" 
+                  x2="-22.7582" y2="-1.3737" class="btwns5"/>
+        
+            <line x1="273.1985" y1="212.2485" 
+                  x2="-4.7793" y2="3.9378" class="btwns5"/>
+        
+            <line x1="39.1878" y1="290.0000" 
+                  x2="-11.0298" y2="7.7864" class="btwns5"/>
+        
+            <line x1="-161.7090" y1="269.3662" 
+                  x2="-17.5920" y2="6.7080" class="btwns5"/>
+        
+            <line x1="-185.7909" y1="132.0212" 
+                  x2="-20.6859" y2="4.0667" class="btwns5"/>
+        
+            <line x1="-138.2023" y1="-150.4956" 
+                  x2="-19.2357" y2="-9.6974" class="btwns5"/>
+        
+            <line x1="210.2818" y1="-82.7545" 
+                  x2="-3.3781" y2="-5.4608" class="btwns5"/>
+        
+            <line x1="108.4972" y1="167.2607" 
+                  x2="-6.9586" y2="6.0707" class="btwns5"/>
+        
+            <line x1="347.0817" y1="83.8508" 
+                  x2="-3.0550" y2="0.2631" class="btwns5"/>
+        
+            <line x1="-357.6514" y1="161.8406" 
+                  x2="-21.8136" y2="2.2334" class="btwns5"/>
+        
+            <line x1="-281.4145" y1="-228.1777" 
+                  x2="-20.4322" y2="-8.4987" class="btwns5"/>
+        
+            <line x1="108.5607" y1="-262.1075" 
+                  x2="-8.5532" y2="-11.1210" class="btwns5"/>
+        
+            <line x1="-70.2669" y1="-290.0000" 
+                  x2="-14.7395" y2="-11.8655" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-50.6561" 
+                  x2="-2.8537" y2="-3.2568" class="btwns5"/>
+        
+            <line x1="-374.7577" y1="-100.9306" 
+                  x2="-22.4283" y2="-4.6939" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(281.8830 -207.0465)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 23.8512)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(273.1985 212.2485)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(39.1878 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-161.7090 269.3662)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-185.7909 132.0212)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-138.2023 -150.4956)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(210.2818 -82.7545)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(108.4972 167.2607)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(347.0817 83.8508)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-357.6514 161.8406)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-281.4145 -228.1777)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(108.5607 -262.1075)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-70.2669 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -50.6561)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-374.7577 -100.9306)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-12.7817 -2.0590)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(281.8830 -207.0465)" 
+                id="08BEIRUT1702" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1702
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 23.8512)" 
+                id="08BEIRUT1713" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1713
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(273.1985 212.2485)" 
+                id="08BEIRUT1726" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1726
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(39.1878 290.0000)" 
+                id="08BEIRUT1727" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1727
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-161.7090 269.3662)" 
+                id="08BEIRUT1776" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1776
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-185.7909 132.0212)" 
+                id="08BEIRUT1777" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIRUT1777
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-138.2023 -150.4956)" 
+                id="09BEIRUT115" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT115
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(210.2818 -82.7545)" 
+                id="09BEIRUT123" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT123
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(108.4972 167.2607)" 
+                id="09BEIRUT20" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BEIRUT20.html">09BEIRUT20</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEBANON: LEAHY VETTING FOR PARTICIPANTS IN INL'S LEBANON POLICE SUPERVISORY TRAINING PROGRAM BEGINNING JANUARY 2009. 1. (U) The following names and biographic information is provided regarding participants in the INL funded Lebanon Police Supervisory</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(347.0817 83.8508)" 
+                id="09BEIRUT21" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/07/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BEIRUT21.html">09BEIRUT21</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEBANON: LEAHY VETTING FOR PARTICIPANTS IN INL'S LEBANON POLICE BASIC CADET TRAINING PROGRAM BEGINNING JANUARY 2009.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-357.6514 161.8406)" 
+                id="09BEIRUT26" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT26
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-281.4145 -228.1777)" 
+                id="09BEIRUT27" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT27
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(108.5607 -262.1075)" 
+                id="09BEIRUT68" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09BEIRUT68.html">09BEIRUT68</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEBANON: LEAHY VETTING FOR PARTICIPANTS IN THE DRUG ENFORCEMENT ADMINISTRATION TRAINING PROGRAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-70.2669 -290.0000)" 
+                id="09BEIRUT72" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT72
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -50.6561)" 
+                id="09BEIRUT76" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/16/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT76
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-374.7577 -100.9306)" 
+                id="09BEIRUT85" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/21/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09BEIRUT85
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-12.7817 -2.0590)" 
+                id="09STATE11872" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/09/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09STATE11872.html">09STATE11872</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>LEAHY VETTING FOR LEBANESE CANDIDATES FOR USG-SPONSORED TRAINING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

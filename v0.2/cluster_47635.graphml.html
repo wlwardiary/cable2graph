@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1090">06SEOUL1090</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06SEOUL1090.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">POLITICAL POSTURING TO DOMINATE ASSEMBLY APRIL SESSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1642">06SEOUL1642</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06SEOUL1642.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OUTLOOK FOR MAY 31 REGIONAL ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1713">06SEOUL1713</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06SEOUL1713.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GNP CHAIRWOMAN IN STABLE CONDITION AFTER ATTACK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1732">06SEOUL1732</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06SEOUL1732.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DAEJEON: RULING PARTY'S SOLE HOPE FOR VICTORY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06STATE85689">06STATE85689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06STATE85689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SECRETARY'S CONDOLENCE LETTER TO GNP CHAIRWOMAN PARK GEUN-HYE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1791">06SEOUL1791</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06SEOUL1791.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GNP LEAD WIDENS AFTER ATTACK ON PARK GEUN-HYE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1821">06SEOUL1821</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL1821.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OPPOSITION SWEEPS LOCAL ELECTIONS; URI CHAIR RESIGNS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1858">06SEOUL1858</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL1858.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KORUS FTA: AMBASSADOR'S MEETING WITH DEPUTY PRIME MINISTER HAN DUCK-SOO</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1920">06SEOUL1920</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL1920.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLITICAL FALLOUT FROM LOCAL ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1963">06SEOUL1963</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL1963.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KORUS FTA: SENIOR BLUE HOUSE OFFICIALS PLEDGE SUPPORT FOR THE FTA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL1964">06SEOUL1964</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06SEOUL1964.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPOSITION LEADER DISCUSSES ALLIANCE, FTA, DOMESTIC POLITICS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2190">06SEOUL2190</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06SEOUL2190.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOHN HAK-KYU, THE NEXT PRESIDENT OF KOREA? OUTGOING GYEONGGI PROVINCE GOVERNOR MAKES HIS CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2432">06SEOUL2432</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06SEOUL2432.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">2007 ROK PRESIDENTIAL ELECTIONS - ALREADY THE TALK OF THE TOWN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL2492">06SEOUL2492</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06SEOUL2492.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">2007 ROK POSSIBLE PRESIDENTAIL CANDIDATES PROFILED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL3217">06SEOUL3217</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06SEOUL3217.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOHN HAK-KYU: THINKING MAN'S PRESIDENTIAL CANDIDATE?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL4014">06SEOUL4014</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06SEOUL4014.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEE MYUNG-BAK: THE NEXT PRESIDENT OF KOREA?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06SEOUL4036">06SEOUL4036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06SEOUL4036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHUNG DONG-YOUNG: STILL HOPING TO BE KOREA'S NEXT PRESIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06SEOUL4209">06SEOUL4209</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/07/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL331">07SEOUL331</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07SEOUL331.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ROK PRESIDENTIAL CANDIDATE LEE MYUNG-BAK: CONSERVATIVE POLITICS, PROGRESSIVE HEART?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SEOUL516">07SEOUL516</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL592">07SEOUL592</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07SEOUL592.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRESIDENTIAL CANDIDATE CHUNG DONG-YOUNG DISCUSSES POLITICS, SIX PARTY TALKS AND FTA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL734">07SEOUL734</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07SEOUL734.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROK PRESIDENTIAL CANDIDATES: WHO IS SEEING DIMINISHING RETURNS?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2539">07SEOUL2539</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SEOUL2539.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GNP CANDIDATE LEE MYUNG-BAK TAKES AIM TOWARD DECEMBER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SEOUL2652">07SEOUL2652</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/31/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2800">07SEOUL2800</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SEOUL2800.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TOP POLITICAL ANALYST SAYS "LUCKY LEE" WILL WIN IN DECEMBER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL2960">07SEOUL2960</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07SEOUL2960.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/28/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ADVISOR SAYS GNP CANDIDATE LEE LACKS CLEAR FOREIGN POLICY VISION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL3575">07SEOUL3575</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07SEOUL3575.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">WHO IS PRESIDENT-ELECT LEE MYUNG-BAK?</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="4.7018" y1="-65.7384" 
+                  x2="93.3204" y2="-17.0399" class="btwns1"/>
+        
+            <line x1="246.0757" y1="-156.3305" 
+                  x2="130.6367" y2="-155.1964" class="btwns1"/>
+        
+            <line x1="246.0757" y1="-156.3305" 
+                  x2="320.7015" y2="-216.6029" class="btwns1"/>
+        
+            <line x1="246.0757" y1="-156.3305" 
+                  x2="188.5304" y2="-223.4386" class="btwns0"/>
+        
+            <line x1="246.0757" y1="-156.3305" 
+                  x2="264.7080" y2="-49.1773" class="btwns1"/>
+        
+            <line x1="120.6372" y1="-155.0982" 
+                  x2="175.7342" y2="-223.2531" class="btwns0"/>
+        
+            <line x1="120.6372" y1="-155.0982" 
+                  x2="103.3720" y2="-22.1406" class="btwns4"/>
+        
+            <line x1="120.6372" y1="-155.0982" 
+                  x2="56.2432" y2="-244.4947" class="btwns1"/>
+        
+            <line x1="266.4211" y1="-39.3251" 
+                  x2="332.1582" y2="47.2987" class="btwns2"/>
+        
+            <line x1="266.4211" y1="-39.3251" 
+                  x2="111.9510" y2="-13.8510" class="btwns5"/>
+        
+            <line x1="266.4211" y1="-39.3251" 
+                  x2="380.0602" y2="-51.8516" class="btwns1"/>
+        
+            <line x1="338.2034" y1="55.2646" 
+                  x2="366.1903" y2="127.0623" class="btwns1"/>
+        
+            <line x1="102.0843" y1="-12.2239" 
+                  x2="97.5973" y2="97.9592" class="btwns1"/>
+        
+            <line x1="102.0843" y1="-12.2239" 
+                  x2="-18.4986" y2="75.6562" class="btwns7"/>
+        
+            <line x1="97.1904" y1="107.9509" 
+                  x2="136.8623" y2="200.7767" class="btwns2"/>
+        
+            <line x1="97.1904" y1="107.9509" 
+                  x2="-16.8002" y2="83.6323" class="btwns1"/>
+        
+            <line x1="146.9403" y1="290.0000" 
+                  x2="141.5582" y2="219.9427" class="btwns1"/>
+        
+            <line x1="-26.5801" y1="81.5459" 
+                  x2="-205.6048" y2="127.8743" class="btwns10"/>
+        
+            <line x1="-201.1398" y1="54.1655" 
+                  x2="-213.4609" y2="120.5475" class="btwns1"/>
+        
+            <line x1="-360.4430" y1="113.3606" 
+                  x2="-225.2178" y2="129.2151" class="btwns1"/>
+        
+            <line x1="-118.7391" y1="213.2059" 
+                  x2="-207.6961" y2="136.8907" class="btwns1"/>
+        
+            <line x1="-319.1013" y1="-95.4089" 
+                  x2="-309.1325" y2="1.1615" class="btwns5"/>
+        
+            <line x1="-319.1013" y1="-95.4089" 
+                  x2="-282.8423" y2="-191.4748" class="btwns4"/>
+        
+            <line x1="-265.6672" y1="-290.0000" 
+                  x2="-277.7985" y2="-210.7155" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-193.7755" 
+                  x2="-289.2908" y2="-200.1945" class="btwns1"/>
+        
+            <line x1="-168.7138" y1="-247.9890" 
+                  x2="-270.1124" y2="-204.7529" class="btwns1"/>
+        
+            <line x1="-308.1057" y1="11.1086" 
+                  x2="-221.4275" y2="122.4877" class="btwns6"/>
+        
+            <line x1="-318.6233" y1="196.1421" 
+                  x2="-223.7224" y2="135.7484" class="btwns1"/>
+        
+            <line x1="-216.9186" y1="241.1806" 
+                  x2="-215.4332" y2="140.3785" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(4.7018 -65.7384)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(246.0757 -156.3305)" 
+                class="vertice degree5 btwns1 authority5 SEOUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(120.6372 -155.0982)" 
+                class="vertice degree5 btwns2 authority5 SEOUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(328.4811 -222.8861)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(182.0209 -231.0298)" 
+                class="vertice degree1 btwns0 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(266.4211 -39.3251)" 
+                class="vertice degree5 btwns4 authority5 SEOUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(338.2034 55.2646)" 
+                class="vertice degree1 btwns1 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(102.0843 -12.2239)" 
+                class="vertice degree6 btwns8 authority6 SEOUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(369.8221 136.3795)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -52.9472)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(97.1904 107.9509)" 
+                class="vertice degree3 btwns2 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(146.9403 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(140.7922 209.9721)" 
+                class="vertice degree1 btwns1 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-26.5801 81.5459)" 
+                class="vertice degree3 btwns8 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-201.1398 54.1655)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-360.4430 113.3606)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-118.7391 213.2059)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(50.3984 -252.6088)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-319.1013 -95.4089)" 
+                class="vertice degree1 btwns4 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-265.6672 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -193.7755)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-168.7138 -247.9890)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-308.1057 11.1086)" 
+                class="vertice degree1 btwns5 authority1 SEOUL">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-279.3110 -200.8306)" 
+                class="vertice degree5 btwns3 authority4 SEOUL">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-318.6233 196.1421)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-216.9186 241.1806)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-215.2859 130.3796)" 
+                class="vertice degree10 btwns10 authority10 SEOUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(4.7018 -65.7384)" 
+                id="06SEOUL1090" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06SEOUL1090.html">06SEOUL1090</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLITICAL POSTURING TO DOMINATE ASSEMBLY APRIL SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(246.0757 -156.3305)" 
+                id="06SEOUL1642" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06SEOUL1642.html">06SEOUL1642</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>OUTLOOK FOR MAY 31 REGIONAL ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(120.6372 -155.0982)" 
+                id="06SEOUL1713" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06SEOUL1713.html">06SEOUL1713</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GNP CHAIRWOMAN IN STABLE CONDITION AFTER ATTACK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(328.4811 -222.8861)" 
+                id="06SEOUL1732" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06SEOUL1732.html">06SEOUL1732</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DAEJEON: RULING PARTY'S SOLE HOPE FOR VICTORY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(182.0209 -231.0298)" 
+                id="06SEOUL1791" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06SEOUL1791.html">06SEOUL1791</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GNP LEAD WIDENS AFTER ATTACK ON PARK GEUN-HYE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(266.4211 -39.3251)" 
+                id="06SEOUL1821" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>06/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL1821.html">06SEOUL1821</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>OPPOSITION SWEEPS LOCAL ELECTIONS; URI CHAIR RESIGNS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(338.2034 55.2646)" 
+                id="06SEOUL1858" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL1858.html">06SEOUL1858</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>KORUS FTA: AMBASSADOR'S MEETING WITH DEPUTY PRIME MINISTER HAN DUCK-SOO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(102.0843 -12.2239)" 
+                id="06SEOUL1920" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL1920.html">06SEOUL1920</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>POLITICAL FALLOUT FROM LOCAL ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(369.8221 136.3795)" 
+                id="06SEOUL1963" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL1963.html">06SEOUL1963</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KORUS FTA: SENIOR BLUE HOUSE OFFICIALS PLEDGE SUPPORT FOR THE FTA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -52.9472)" 
+                id="06SEOUL1964" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06SEOUL1964.html">06SEOUL1964</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OPPOSITION LEADER DISCUSSES ALLIANCE, FTA, DOMESTIC POLITICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(97.1904 107.9509)" 
+                id="06SEOUL2190" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06SEOUL2190.html">06SEOUL2190</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SOHN HAK-KYU, THE NEXT PRESIDENT OF KOREA? OUTGOING GYEONGGI PROVINCE GOVERNOR MAKES HIS CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.9403 290.0000)" 
+                id="06SEOUL2432" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06SEOUL2432.html">06SEOUL2432</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>2007 ROK PRESIDENTIAL ELECTIONS - ALREADY THE TALK OF THE TOWN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(140.7922 209.9721)" 
+                id="06SEOUL2492" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06SEOUL2492.html">06SEOUL2492</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>2007 ROK POSSIBLE PRESIDENTAIL CANDIDATES PROFILED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-26.5801 81.5459)" 
+                id="06SEOUL3217" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06SEOUL3217.html">06SEOUL3217</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SOHN HAK-KYU: THINKING MAN'S PRESIDENTIAL CANDIDATE?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-201.1398 54.1655)" 
+                id="06SEOUL4014" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06SEOUL4014.html">06SEOUL4014</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEE MYUNG-BAK: THE NEXT PRESIDENT OF KOREA?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-360.4430 113.3606)" 
+                id="06SEOUL4036" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06SEOUL4036.html">06SEOUL4036</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHUNG DONG-YOUNG: STILL HOPING TO BE KOREA'S NEXT PRESIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-118.7391 213.2059)" 
+                id="06SEOUL4209" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06SEOUL4209
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(50.3984 -252.6088)" 
+                id="06STATE85689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06STATE85689.html">06STATE85689</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SECRETARY'S CONDOLENCE LETTER TO GNP CHAIRWOMAN PARK GEUN-HYE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-319.1013 -95.4089)" 
+                id="07SEOUL2539" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SEOUL2539.html">07SEOUL2539</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GNP CANDIDATE LEE MYUNG-BAK TAKES AIM TOWARD DECEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-265.6672 -290.0000)" 
+                id="07SEOUL2652" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SEOUL2652
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -193.7755)" 
+                id="07SEOUL2800" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SEOUL2800.html">07SEOUL2800</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TOP POLITICAL ANALYST SAYS "LUCKY LEE" WILL WIN IN DECEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.7138 -247.9890)" 
+                id="07SEOUL2960" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07SEOUL2960.html">07SEOUL2960</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ADVISOR SAYS GNP CANDIDATE LEE LACKS CLEAR FOREIGN POLICY VISION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-308.1057 11.1086)" 
+                id="07SEOUL331" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07SEOUL331.html">07SEOUL331</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ROK PRESIDENTIAL CANDIDATE LEE MYUNG-BAK: CONSERVATIVE POLITICS, PROGRESSIVE HEART?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-279.3110 -200.8306)" 
+                id="07SEOUL3575" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07SEOUL3575.html">07SEOUL3575</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>WHO IS PRESIDENT-ELECT LEE MYUNG-BAK?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-318.6233 196.1421)" 
+                id="07SEOUL516" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SEOUL516
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-216.9186 241.1806)" 
+                id="07SEOUL592" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07SEOUL592.html">07SEOUL592</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL CANDIDATE CHUNG DONG-YOUNG DISCUSSES POLITICS, SIX PARTY TALKS AND FTA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-215.2859 130.3796)" 
+                id="07SEOUL734" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07SEOUL734.html">07SEOUL734</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ROK PRESIDENTIAL CANDIDATES: WHO IS SEEING DIMINISHING RETURNS?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

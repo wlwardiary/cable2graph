@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08NAIROBI2032">08NAIROBI2032</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08NAIROBI2032.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/26/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Somalia - Clan Militias Battle to Control Kismayo</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI50">09DJIBOUTI50</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI50.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - TFG Parliament Convenes in Djibouti</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI59">09DJIBOUTI59</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI59.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia -  TFG Parliament Adds Seats for ARS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI60">09DJIBOUTI60</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI60.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia -  TFG Parliament Adds Seats for ARS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI61">09DJIBOUTI61</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI61.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/26/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia -  TFG Parliament Adds Seats for ARs</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI63">09DJIBOUTI63</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI63.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - Parliament Extends Deadline for Electing President by Five Days</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NAIROBI146">09NAIROBI146</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09NAIROBI146.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA - BAIDOA FALLS TO ISLAMISTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI87">09DJIBOUTI87</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI87.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - Stage Set for Unity Government Presidential Election</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI88">09DJIBOUTI88</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09DJIBOUTI88.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA  CAMPAIGN SPEECHES IDENTIFY FRONTRUNNERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09NAIROBI172">09NAIROBI172</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09NAIROBI172.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA - Sheikh Sharif Elected President</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09NAIROBI173">09NAIROBI173</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09NAIROBI173.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOMALIA - REACTION TO SHARIF'S ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI97">09DJIBOUTI97</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09DJIBOUTI97.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - TFG President Sheikh Sharif Considering PM Candidates</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI100">09DJIBOUTI100</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09DJIBOUTI100.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/08/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - Lobbying for PM Job Intensifies</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI105">09DJIBOUTI105</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09DJIBOUTI105.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/10/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMALIA - PRESIDENT TO RETURN TO DJIBOUTI, NAME PM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09DJIBOUTI108">09DJIBOUTI108</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09DJIBOUTI108.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/11/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Somalia - President Sharif Begins PM Candidate Interview Process</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="103.6353" 
+                  x2="-259.6391" y2="126.2078" class="btwns2"/>
+        
+            <line x1="390.0000" y1="89.5749" 
+                  x2="351.8596" y2="192.4896" class="btwns4"/>
+        
+            <line x1="390.0000" y1="89.5749" 
+                  x2="293.7090" y2="15.2782" class="btwns6"/>
+        
+            <line x1="348.3846" y1="201.8663" 
+                  x2="266.1510" y2="282.9777" class="btwns2"/>
+        
+            <line x1="-84.0434" y1="83.7968" 
+                  x2="-8.4904" y2="198.1990" class="btwns2"/>
+        
+            <line x1="-84.0434" y1="83.7968" 
+                  x2="-163.4076" y2="193.2494" class="btwns1"/>
+        
+            <line x1="-84.0434" y1="83.7968" 
+                  x2="-174.7430" y2="-40.9726" class="btwns4"/>
+        
+            <line x1="-84.0434" y1="83.7968" 
+                  x2="97.7748" y2="-1.9431" class="btwns10"/>
+        
+            <line x1="-84.0434" y1="83.7968" 
+                  x2="-240.1222" y2="125.3417" class="btwns4"/>
+        
+            <line x1="-169.2778" y1="201.3451" 
+                  x2="-242.3974" y2="134.6529" class="btwns0"/>
+        
+            <line x1="-180.6230" y1="-49.0612" 
+                  x2="-247.8752" y2="-143.3027" class="btwns2"/>
+        
+            <line x1="106.8196" y1="-6.2084" 
+                  x2="165.8941" y2="-121.7146" class="btwns6"/>
+        
+            <line x1="106.8196" y1="-6.2084" 
+                  x2="275.8285" y2="8.3133" class="btwns7"/>
+        
+            <line x1="170.4475" y1="-130.6178" 
+                  x2="166.8762" y2="-229.7701" class="btwns4"/>
+        
+            <line x1="166.5163" y1="-239.7637" 
+                  x2="53.8888" y2="-286.1890" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 103.6353)" 
+                class="vertice degree0 btwns0 authority0 NAIROBI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 89.5749)" 
+                class="vertice degree2 btwns3 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(348.3846 201.8663)" 
+                class="vertice degree2 btwns2 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(259.0315 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DJIBOUTI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-84.0434 83.7968)" 
+                class="vertice degree10 btwns9 authority10 DJIBOUTI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-2.9796 206.5435)" 
+                class="vertice degree0 btwns0 authority0 DJIBOUTI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-169.2778 201.3451)" 
+                class="vertice degree2 btwns0 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-180.6230 -49.0612)" 
+                class="vertice degree2 btwns2 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-253.6840 -151.4426)" 
+                class="vertice degree0 btwns0 authority0 DJIBOUTI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(106.8196 -6.2084)" 
+                class="vertice degree5 btwns10 authority5 DJIBOUTI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(170.4475 -130.6178)" 
+                class="vertice degree2 btwns3 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(285.7918 9.1694)" 
+                class="vertice degree2 btwns5 authority2 DJIBOUTI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-249.7858 127.9140)" 
+                class="vertice degree5 btwns2 authority5 NAIROBI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(166.5163 -239.7637)" 
+                class="vertice degree2 btwns2 authority2 NAIROBI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(44.6435 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 NAIROBI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 103.6353)" 
+                id="08NAIROBI2032" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/26/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08NAIROBI2032.html">08NAIROBI2032</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Somalia - Clan Militias Battle to Control Kismayo</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 89.5749)" 
+                id="09DJIBOUTI100" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09DJIBOUTI100.html">09DJIBOUTI100</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Somalia - Lobbying for PM Job Intensifies</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(348.3846 201.8663)" 
+                id="09DJIBOUTI105" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09DJIBOUTI105.html">09DJIBOUTI105</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOMALIA - PRESIDENT TO RETURN TO DJIBOUTI, NAME PM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(259.0315 290.0000)" 
+                id="09DJIBOUTI108" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09DJIBOUTI108.html">09DJIBOUTI108</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Somalia - President Sharif Begins PM Candidate Interview Process</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-84.0434 83.7968)" 
+                id="09DJIBOUTI50" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI50.html">09DJIBOUTI50</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Somalia - TFG Parliament Convenes in Djibouti</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-2.9796 206.5435)" 
+                id="09DJIBOUTI59" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI59.html">09DJIBOUTI59</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Somalia -  TFG Parliament Adds Seats for ARS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-169.2778 201.3451)" 
+                id="09DJIBOUTI60" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI60.html">09DJIBOUTI60</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Somalia -  TFG Parliament Adds Seats for ARS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-180.6230 -49.0612)" 
+                id="09DJIBOUTI61" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI61.html">09DJIBOUTI61</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Somalia -  TFG Parliament Adds Seats for ARs</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-253.6840 -151.4426)" 
+                id="09DJIBOUTI63" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI63.html">09DJIBOUTI63</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Somalia - Parliament Extends Deadline for Electing President by Five Days</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(106.8196 -6.2084)" 
+                id="09DJIBOUTI87" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI87.html">09DJIBOUTI87</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>Somalia - Stage Set for Unity Government Presidential Election</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(170.4475 -130.6178)" 
+                id="09DJIBOUTI88" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09DJIBOUTI88.html">09DJIBOUTI88</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOMALIA  CAMPAIGN SPEECHES IDENTIFY FRONTRUNNERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(285.7918 9.1694)" 
+                id="09DJIBOUTI97" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09DJIBOUTI97.html">09DJIBOUTI97</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>Somalia - TFG President Sheikh Sharif Considering PM Candidates</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-249.7858 127.9140)" 
+                id="09NAIROBI146" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09NAIROBI146.html">09NAIROBI146</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SOMALIA - BAIDOA FALLS TO ISLAMISTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(166.5163 -239.7637)" 
+                id="09NAIROBI172" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09NAIROBI172.html">09NAIROBI172</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOMALIA - Sheikh Sharif Elected President</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(44.6435 -290.0000)" 
+                id="09NAIROBI173" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09NAIROBI173.html">09NAIROBI173</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOMALIA - REACTION TO SHARIF'S ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

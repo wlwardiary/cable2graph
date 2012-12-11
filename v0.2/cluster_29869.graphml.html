@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA596">06ABUJA596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ABUJA596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/16/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Avian Flu in Nigeria: The Long Haul</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA656">06ABUJA656</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ABUJA656.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MARCH 23 NIGERIA AVIAN FLU UPDATE -- WHO CONCERNS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA658">06ABUJA658</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ABUJA658.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MARCH 23 NIGERIA AVIAN FLU UPDATE -- WORLD BANK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA659">06ABUJA659</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06ABUJA659.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MARCH 24 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA931">06ABUJA931</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06ABUJA931.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">APRIL 24 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1025">06ABUJA1025</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06ABUJA1025.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MAY 5 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1097">06ABUJA1097</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06ABUJA1097.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MAY 11 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1359">06ABUJA1359</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1359.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUNE 6 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1387">06ABUJA1387</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1387.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUNE 8 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1412">06ABUJA1412</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1412.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUNE 8 NIGERIA AVIAN FLU UPDATE -- GON LOSES FOCUS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1429">06ABUJA1429</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1429.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JUNE 9 NIGERIA AVIAN FLU UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1608">06ABUJA1608</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1608.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NIGERIA AVIAN FLU LABORATORY ASSESSMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ABUJA1680">06ABUJA1680</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ABUJA1680.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NIGERIA AVIAN FLU UPDATE FOR JUNE 30</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="386.7860" y1="-75.3138" 
+                  x2="306.7493" y2="-187.8429" class="btwns10"/>
+        
+            <line x1="386.7860" y1="-75.3138" 
+                  x2="389.7648" y2="51.2921" class="btwns9"/>
+        
+            <line x1="300.9532" y1="-195.9919" 
+                  x2="160.2463" y2="-268.9746" class="btwns10"/>
+        
+            <line x1="151.3694" y1="-273.5790" 
+                  x2="141.3694" y2="-273.5790" class="btwns0"/>
+        
+            <line x1="151.3694" y1="-273.5790" 
+                  x2="-18.4350" y2="-289.0903" class="btwns9"/>
+        
+            <line x1="-28.3936" y1="-290.0000" 
+                  x2="-38.3936" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="-28.3936" y1="-290.0000" 
+                  x2="-186.6687" y2="-243.6047" class="btwns8"/>
+        
+            <line x1="-196.2650" y1="-240.7917" 
+                  x2="-305.1549" y2="-145.4053" class="btwns7"/>
+        
+            <line x1="-312.6770" y1="-138.8161" 
+                  x2="-322.6770" y2="-138.8161" class="btwns0"/>
+        
+            <line x1="-312.6770" y1="-138.8161" 
+                  x2="-362.8027" y2="-22.3556" class="btwns5"/>
+        
+            <line x1="-366.7561" y1="-13.1702" 
+                  x2="-376.7561" y2="-13.1702" class="btwns0"/>
+        
+            <line x1="-366.7561" y1="-13.1702" 
+                  x2="-388.1317" y2="99.2298" class="btwns2"/>
+        
+            <line x1="-173.8873" y1="290.0000" 
+                  x2="-20.1271" y2="285.7811" class="btwns2"/>
+        
+            <line x1="-10.1309" y1="285.5068" 
+                  x2="151.5837" y2="260.3918" class="btwns5"/>
+        
+            <line x1="161.4652" y1="258.8571" 
+                  x2="299.3234" y2="186.9722" class="btwns7"/>
+        
+            <line x1="308.1904" y1="182.3487" 
+                  x2="384.4008" y2="69.5749" class="btwns8"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(386.7860 -75.3138)" 
+                class="vertice degree3 btwns9 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.9532 -195.9919)" 
+                class="vertice degree3 btwns10 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(151.3694 -273.5790)" 
+                class="vertice degree10 btwns9 authority10 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-28.3936 -290.0000)" 
+                class="vertice degree10 btwns8 authority9 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-196.2650 -240.7917)" 
+                class="vertice degree3 btwns7 authority9 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-312.6770 -138.8161)" 
+                class="vertice degree10 btwns5 authority9 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-366.7561 -13.1702)" 
+                class="vertice degree10 btwns3 authority9 ABUJA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 109.0538)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-173.8873 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ABUJA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-10.1309 285.5068)" 
+                class="vertice degree3 btwns3 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(161.4652 258.8571)" 
+                class="vertice degree3 btwns5 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(308.1904 182.3487)" 
+                class="vertice degree3 btwns7 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 61.2894)" 
+                class="vertice degree3 btwns8 authority8 ABUJA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(386.7860 -75.3138)" 
+                id="06ABUJA1025" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ABUJA1025.html">06ABUJA1025</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MAY 5 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.9532 -195.9919)" 
+                id="06ABUJA1097" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ABUJA1097.html">06ABUJA1097</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MAY 11 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(151.3694 -273.5790)" 
+                id="06ABUJA1359" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1359.html">06ABUJA1359</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JUNE 6 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-28.3936 -290.0000)" 
+                id="06ABUJA1387" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1387.html">06ABUJA1387</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JUNE 8 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-196.2650 -240.7917)" 
+                id="06ABUJA1412" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1412.html">06ABUJA1412</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>JUNE 8 NIGERIA AVIAN FLU UPDATE -- GON LOSES FOCUS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-312.6770 -138.8161)" 
+                id="06ABUJA1429" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1429.html">06ABUJA1429</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JUNE 9 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-366.7561 -13.1702)" 
+                id="06ABUJA1608" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1608.html">06ABUJA1608</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>NIGERIA AVIAN FLU LABORATORY ASSESSMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 109.0538)" 
+                id="06ABUJA1680" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ABUJA1680.html">06ABUJA1680</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NIGERIA AVIAN FLU UPDATE FOR JUNE 30</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-173.8873 290.0000)" 
+                id="06ABUJA596" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ABUJA596.html">06ABUJA596</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Avian Flu in Nigeria: The Long Haul</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.1309 285.5068)" 
+                id="06ABUJA656" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ABUJA656.html">06ABUJA656</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MARCH 23 NIGERIA AVIAN FLU UPDATE -- WHO CONCERNS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(161.4652 258.8571)" 
+                id="06ABUJA658" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ABUJA658.html">06ABUJA658</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MARCH 23 NIGERIA AVIAN FLU UPDATE -- WORLD BANK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(308.1904 182.3487)" 
+                id="06ABUJA659" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06ABUJA659.html">06ABUJA659</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MARCH 24 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 61.2894)" 
+                id="06ABUJA931" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06ABUJA931.html">06ABUJA931</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>APRIL 24 NIGERIA AVIAN FLU UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

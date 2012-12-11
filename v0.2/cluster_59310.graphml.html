@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07DOHA142">07DOHA142</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/11/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DOHA964">07DOHA964</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07DOHA964.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/03/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR WILLING TO CONSIDER SOVEREIGN WEALTH FUND GUIDELINES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08ASMARA70">08ASMARA70</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/07/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08ASMARA81">08ASMARA81</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/20/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08DOHA331">08DOHA331</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/23/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DOHA422">08DOHA422</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08DOHA422.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATARI OFFICIALS DISCUSS CURRENCY, SOVEREIGN WEALTH FUNDS, INVESTMENT, AND IRAN WITH SECRETARY PAULSON</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08DOHA518">08DOHA518</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08DOHA518.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR INVESTMENT AUTHORITY, PART ONE: HISTORY AND STRUCTURE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DOHA521">08DOHA521</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08DOHA521.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR INVESTMENT AUTHORITY, PART TWO: ASSETS AND INVESTMENT STRATEGY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08DOHA525">08DOHA525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08DOHA525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/27/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR INVESTMENT AUTHORITY, PART THREE: FUTURE PLANS AND VIEWS ON SWF GUIDELINES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08DOHA603">08DOHA603</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08DOHA603.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">QATAR INVESTMENT AUTHORITY PLANS INCREASED INVESTMENT IN U.S.</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08DOHA649">08DOHA649</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08DOHA649.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FINANCE MINISTER: QATAR TO GET AAA SOVEREIGN CREDIT RATING NEXT YEAR</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-257.5329" y1="277.4886" 
+                  x2="-151.8878" y2="103.2498" class="btwns8"/>
+        
+            <line x1="-302.4536" y1="-289.9574" 
+                  x2="-136.4849" y2="-151.5482" class="btwns8"/>
+        
+            <line x1="-390.0000" y1="82.2911" 
+                  x2="-156.6902" y2="94.1895" class="btwns8"/>
+        
+            <line x1="-10.9847" y1="290.0000" 
+                  x2="-140.9966" y2="102.9107" class="btwns8"/>
+        
+            <line x1="390.0000" y1="-78.1557" 
+                  x2="198.3770" y2="-129.6812" class="btwns8"/>
+        
+            <line x1="51.7999" y1="-290.0000" 
+                  x2="-121.0042" y2="-151.4003" class="btwns6"/>
+        
+            <line x1="51.7999" y1="-290.0000" 
+                  x2="182.1644" y2="-139.8293" class="btwns3"/>
+        
+            <line x1="47.2072" y1="13.6962" 
+                  x2="-137.4759" y2="90.8443" class="btwns6"/>
+        
+            <line x1="47.2072" y1="13.6962" 
+                  x2="-121.3811" y2="-138.4439" class="btwns2"/>
+        
+            <line x1="47.2072" y1="13.6962" 
+                  x2="-5.0441" y2="-62.0755" class="btwns0"/>
+        
+            <line x1="47.2072" y1="13.6962" 
+                  x2="181.7595" y2="-125.0979" class="btwns6"/>
+        
+            <line x1="-146.7032" y1="94.6988" 
+                  x2="-129.5492" y2="-135.1713" class="btwns10"/>
+        
+            <line x1="-146.7032" y1="94.6988" 
+                  x2="-17.0808" y2="-62.5908" class="btwns6"/>
+        
+            <line x1="-128.8050" y1="-145.1435" 
+                  x2="-19.1677" y2="-75.6609" class="btwns2"/>
+        
+            <line x1="-10.7211" y1="-70.3079" 
+                  x2="179.1703" y2="-129.3106" class="btwns6"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-257.5329 277.4886)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-302.4536 -289.9574)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 82.2911)" 
+                class="vertice degree0 btwns0 authority0 ASMARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-10.9847 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ASMARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -78.1557)" 
+                class="vertice degree0 btwns0 authority0 DOHA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(51.7999 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 DOHA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(47.2072 13.6962)" 
+                class="vertice degree6 btwns2 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-146.7032 94.6988)" 
+                class="vertice degree10 btwns10 authority10 DOHA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-128.8050 -145.1435)" 
+                class="vertice degree8 btwns5 authority8 DOHA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-10.7211 -70.3079)" 
+                class="vertice degree6 btwns2 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(188.7200 -132.2778)" 
+                class="vertice degree6 btwns4 authority6 DOHA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-257.5329 277.4886)" 
+                id="07DOHA142" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07DOHA142
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-302.4536 -289.9574)" 
+                id="07DOHA964" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07DOHA964.html">07DOHA964</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>QATAR WILLING TO CONSIDER SOVEREIGN WEALTH FUND GUIDELINES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 82.2911)" 
+                id="08ASMARA70" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08ASMARA70
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-10.9847 290.0000)" 
+                id="08ASMARA81" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08ASMARA81
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -78.1557)" 
+                id="08DOHA331" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08DOHA331
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(51.7999 -290.0000)" 
+                id="08DOHA422" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08DOHA422.html">08DOHA422</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>QATARI OFFICIALS DISCUSS CURRENCY, SOVEREIGN WEALTH FUNDS, INVESTMENT, AND IRAN WITH SECRETARY PAULSON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(47.2072 13.6962)" 
+                id="08DOHA518" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>07/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08DOHA518.html">08DOHA518</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>QATAR INVESTMENT AUTHORITY, PART ONE: HISTORY AND STRUCTURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-146.7032 94.6988)" 
+                id="08DOHA521" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08DOHA521.html">08DOHA521</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>QATAR INVESTMENT AUTHORITY, PART TWO: ASSETS AND INVESTMENT STRATEGY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-128.8050 -145.1435)" 
+                id="08DOHA525" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>07/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08DOHA525.html">08DOHA525</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>QATAR INVESTMENT AUTHORITY, PART THREE: FUTURE PLANS AND VIEWS ON SWF GUIDELINES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-10.7211 -70.3079)" 
+                id="08DOHA603" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08DOHA603.html">08DOHA603</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>QATAR INVESTMENT AUTHORITY PLANS INCREASED INVESTMENT IN U.S.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(188.7200 -132.2778)" 
+                id="08DOHA649" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/10/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08DOHA649.html">08DOHA649</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>FINANCE MINISTER: QATAR TO GET AAA SOVEREIGN CREDIT RATING NEXT YEAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

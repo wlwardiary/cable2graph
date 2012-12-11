@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SANTODOMINGO2366">07SANTODOMINGO2366</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07SANTODOMINGO2366.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENTIAL CAMPAIGN: CANDIDATES WARM UP FOR THE BIG GAME</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANTODOMINGO2568">07SANTODOMINGO2568</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07SANTODOMINGO2568.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BREAKFAST WITH VARGAS MALDONADO</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO39">08SANTODOMINGO39</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08SANTODOMINGO39.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/08/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENTIAL CAMPAIGN RHETORIC HEATS UP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO180">08SANTODOMINGO180</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08SANTODOMINGO180.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRESIDENTIAL CAMPAIGN: DIVERGING POLLS PROMPT DISCUSSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO225">08SANTODOMINGO225</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08SANTODOMINGO225.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRESIDENTIAL ELECTION ROUNDUP, FEBRUARY 15, 2008</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO418">08SANTODOMINGO418</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08SANTODOMINGO418.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONCERN GROWING OVER GOVERNMENT'S CAMPAIGN RULES VIOLATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO586">08SANTODOMINGO586</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08SANTODOMINGO586.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRESIDENTIAL ELECTION: LEFTIST PARTY HOPES TO BUILD INDEPENDENT GRASSROOT MOVEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO611">08SANTODOMINGO611</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08SANTODOMINGO611.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENTIAL ELECTION ROUNDUP, APRIL 25, 2008</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO668">08SANTODOMINGO668</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO668.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRD CLAIMS POSSIBLE ELECTION FRAUD; PLD SMELLS A RAT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO699">08SANTODOMINGO699</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO699.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OAS HITS THE RIGHT NOTES IN ELECTION REPORT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO751">08SANTODOMINGO751</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO751.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/15/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SCENESETTER FOR DOMINICAN PRESIDENTIAL ELECTION, MAY 16</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO760">08SANTODOMINGO760</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO760.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DOMINICAN ELECTION: FIRST RESULTS INDICATE FERNANDEZ VICTORY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08SANTODOMINGO768">08SANTODOMINGO768</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO768.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PROPOSED CONGRATULATORY LETTER FROM SECRETARY TO FERNANDEZ</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-136.5617" y1="91.6106" 
+                  x2="-239.1580" y2="221.7235" class="btwns4"/>
+        
+            <line x1="-136.5617" y1="91.6106" 
+                  x2="34.9587" y2="-83.4013" class="btwns8"/>
+        
+            <line x1="204.2161" y1="-245.8192" 
+                  x2="49.1830" y2="-97.4572" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="-109.0160" 
+                  x2="-221.0691" y2="-108.7854" class="btwns4"/>
+        
+            <line x1="-211.0691" y1="-108.7718" 
+                  x2="31.9840" y2="-91.2618" class="btwns8"/>
+        
+            <line x1="201.9466" y1="113.0970" 
+                  x2="380.1554" y2="144.8809" class="btwns4"/>
+        
+            <line x1="201.9466" y1="113.0970" 
+                  x2="187.2440" y2="280.0386" class="btwns4"/>
+        
+            <line x1="201.9466" y1="113.0970" 
+                  x2="86.3217" y2="67.2284" class="btwns0"/>
+        
+            <line x1="201.9466" y1="113.0970" 
+                  x2="48.1360" y2="-82.6798" class="btwns10"/>
+        
+            <line x1="273.5451" y1="-114.6903" 
+                  x2="51.9043" y2="-91.5803" class="btwns4"/>
+        
+            <line x1="77.0264" y1="63.5410" 
+                  x2="44.1773" y2="-80.7926" class="btwns3"/>
+        
+            <line x1="41.9582" y1="-90.5433" 
+                  x2="35.0491" y2="-280.0066" class="btwns3"/>
+        
+            <line x1="41.9582" y1="-90.5433" 
+                  x2="-74.2807" y2="-245.0177" class="btwns3"/>
+        
+            <line x1="34.6847" y1="-290.0000" 
+                  x2="-70.7739" y2="-256.0708" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-136.5617 91.6106)" 
+                class="vertice degree1 btwns1 authority1 SANTODOMINGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-245.3498 229.5760)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(204.2161 -245.8192)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -109.0160)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-211.0691 -108.7718)" 
+                class="vertice degree1 btwns1 authority1 SANTODOMINGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(201.9466 113.0970)" 
+                class="vertice degree4 btwns3 authority4 SANTODOMINGO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 146.6367)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(186.3667 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(273.5451 -114.6903)" 
+                class="vertice degree0 btwns0 authority0 SANTODOMINGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(77.0264 63.5410)" 
+                class="vertice degree1 btwns0 authority1 SANTODOMINGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(41.9582 -90.5433)" 
+                class="vertice degree10 btwns10 authority10 SANTODOMINGO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(34.6847 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 SANTODOMINGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-80.2934 -253.0081)" 
+                class="vertice degree1 btwns0 authority1 SANTODOMINGO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-136.5617 91.6106)" 
+                id="07SANTODOMINGO2366" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07SANTODOMINGO2366.html">07SANTODOMINGO2366</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL CAMPAIGN: CANDIDATES WARM UP FOR THE BIG GAME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-245.3498 229.5760)" 
+                id="07SANTODOMINGO2568" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07SANTODOMINGO2568.html">07SANTODOMINGO2568</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BREAKFAST WITH VARGAS MALDONADO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(204.2161 -245.8192)" 
+                id="08SANTODOMINGO180" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08SANTODOMINGO180.html">08SANTODOMINGO180</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL CAMPAIGN: DIVERGING POLLS PROMPT DISCUSSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -109.0160)" 
+                id="08SANTODOMINGO225" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08SANTODOMINGO225.html">08SANTODOMINGO225</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL ELECTION ROUNDUP, FEBRUARY 15, 2008</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-211.0691 -108.7718)" 
+                id="08SANTODOMINGO39" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08SANTODOMINGO39.html">08SANTODOMINGO39</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL CAMPAIGN RHETORIC HEATS UP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(201.9466 113.0970)" 
+                id="08SANTODOMINGO418" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08SANTODOMINGO418.html">08SANTODOMINGO418</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>CONCERN GROWING OVER GOVERNMENT'S CAMPAIGN RULES VIOLATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 146.6367)" 
+                id="08SANTODOMINGO586" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08SANTODOMINGO586.html">08SANTODOMINGO586</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL ELECTION: LEFTIST PARTY HOPES TO BUILD INDEPENDENT GRASSROOT MOVEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.3667 290.0000)" 
+                id="08SANTODOMINGO611" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08SANTODOMINGO611.html">08SANTODOMINGO611</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENTIAL ELECTION ROUNDUP, APRIL 25, 2008</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(273.5451 -114.6903)" 
+                id="08SANTODOMINGO668" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/02/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO668.html">08SANTODOMINGO668</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRD CLAIMS POSSIBLE ELECTION FRAUD; PLD SMELLS A RAT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(77.0264 63.5410)" 
+                id="08SANTODOMINGO699" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO699.html">08SANTODOMINGO699</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>OAS HITS THE RIGHT NOTES IN ELECTION REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(41.9582 -90.5433)" 
+                id="08SANTODOMINGO751" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/15/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO751.html">08SANTODOMINGO751</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SCENESETTER FOR DOMINICAN PRESIDENTIAL ELECTION, MAY 16</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(34.6847 -290.0000)" 
+                id="08SANTODOMINGO760" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO760.html">08SANTODOMINGO760</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DOMINICAN ELECTION: FIRST RESULTS INDICATE FERNANDEZ VICTORY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-80.2934 -253.0081)" 
+                id="08SANTODOMINGO768" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08SANTODOMINGO768.html">08SANTODOMINGO768</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PROPOSED CONGRATULATORY LETTER FROM SECRETARY TO FERNANDEZ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

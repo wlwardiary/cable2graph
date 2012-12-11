@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA676">06KINSHASA676</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06KINSHASA676.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DRC ELECTIONS: BALLOTS TO BE PRINTED IN SOUTH AFRICA; NEW ELECTORAL CALENDAR ANTICIPATED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA681">06KINSHASA681</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA681.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/01/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC ELECTIONS SET FOR JULY 30</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA706">06KINSHASA706</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA706.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ARCHBISHOP MONSENGWO CRITICIZES CEI FOR LACK OF "POLITICAL CONSENSUS" ON NEW ELECTORAL CALENDAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA721">06KINSHASA721</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA721.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELEVEN CANDIDATES CALL FOR ELECTORAL COMMISSION PRESIDENT'S RESIGNATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA763">06KINSHASA763</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA763.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC ELECTIONS UPDATE: VOTING MATERIAL ARRIVES AS BALLOTS SENT FOR PRINTING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA785">06KINSHASA785</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA785.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/18/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EASTERN DRC VOTERS REJECT MONSENGWO'S CALL FOR NEW "DIALOGUE"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA834">06KINSHASA834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06KINSHASA834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MONSENGWO CONTINUES TO PUSH POLITICAL "DIALOGUE"</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA938">06KINSHASA938</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06KINSHASA938.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FIRST SHIPMENT OF BALLOTS ARRIVES IN DRC</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA1351">07KINSHASA1351</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07KINSHASA1351.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VATICAN NAMES CONTROVERSIAL PRELATE TO HEAD ARCHDIOCESE OF KINSHASA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08KINSHASA112">08KINSHASA112</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08KINSHASA112.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/01/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Vatican names Ituri bishop as administrator of Kisangani archdiocese</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="45.5358" 
+                  x2="279.1463" y2="-82.0167" class="btwns8"/>
+        
+            <line x1="390.0000" y1="45.5358" 
+                  x2="320.1457" y2="181.9288" class="btwns4"/>
+        
+            <line x1="272.5866" y1="-89.5646" 
+                  x2="20.3108" y2="-144.5086" class="btwns10"/>
+        
+            <line x1="10.5399" y1="-146.6366" 
+                  x2="80.9002" y2="-281.1392" class="btwns0"/>
+        
+            <line x1="10.5399" y1="-146.6366" 
+                  x2="-114.7660" y2="-18.6099" class="btwns2"/>
+        
+            <line x1="10.5399" y1="-146.6366" 
+                  x2="-246.2993" y2="-140.4096" class="btwns2"/>
+        
+            <line x1="315.5872" y1="190.8294" 
+                  x2="167.5772" y2="284.6463" class="btwns0"/>
+        
+            <line x1="-121.7607" y1="-11.4633" 
+                  x2="-327.6573" y2="11.4893" class="btwns0"/>
+        
+            <line x1="-256.2963" y1="-140.1673" 
+                  x2="-332.8977" y2="3.7695" class="btwns0"/>
+        
+            <line x1="-337.5958" y1="12.5972" 
+                  x2="-386.6101" y2="148.6234" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 45.5358)" 
+                class="vertice degree3 btwns5 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(272.5866 -89.5646)" 
+                class="vertice degree3 btwns7 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(10.5399 -146.6366)" 
+                class="vertice degree10 btwns10 authority10 KINSHASA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(85.5354 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(315.5872 190.8294)" 
+                class="vertice degree3 btwns3 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-121.7607 -11.4633)" 
+                class="vertice degree3 btwns2 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-256.2963 -140.1673)" 
+                class="vertice degree3 btwns2 authority3 KINSHASA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(159.1310 290.0000)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-337.5958 12.5972)" 
+                class="vertice degree6 btwns3 authority6 KINSHASA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 158.0313)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 45.5358)" 
+                id="06KINSHASA676" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06KINSHASA676.html">06KINSHASA676</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>DRC ELECTIONS: BALLOTS TO BE PRINTED IN SOUTH AFRICA; NEW ELECTORAL CALENDAR ANTICIPATED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(272.5866 -89.5646)" 
+                id="06KINSHASA681" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA681.html">06KINSHASA681</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>DRC ELECTIONS SET FOR JULY 30</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(10.5399 -146.6366)" 
+                id="06KINSHASA706" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA706.html">06KINSHASA706</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ARCHBISHOP MONSENGWO CRITICIZES CEI FOR LACK OF "POLITICAL CONSENSUS" ON NEW ELECTORAL CALENDAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(85.5354 -290.0000)" 
+                id="06KINSHASA721" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA721.html">06KINSHASA721</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ELEVEN CANDIDATES CALL FOR ELECTORAL COMMISSION PRESIDENT'S RESIGNATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(315.5872 190.8294)" 
+                id="06KINSHASA763" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA763.html">06KINSHASA763</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>DRC ELECTIONS UPDATE: VOTING MATERIAL ARRIVES AS BALLOTS SENT FOR PRINTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-121.7607 -11.4633)" 
+                id="06KINSHASA785" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA785.html">06KINSHASA785</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>EASTERN DRC VOTERS REJECT MONSENGWO'S CALL FOR NEW "DIALOGUE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-256.2963 -140.1673)" 
+                id="06KINSHASA834" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06KINSHASA834.html">06KINSHASA834</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MONSENGWO CONTINUES TO PUSH POLITICAL "DIALOGUE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(159.1310 290.0000)" 
+                id="06KINSHASA938" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06KINSHASA938.html">06KINSHASA938</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FIRST SHIPMENT OF BALLOTS ARRIVES IN DRC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-337.5958 12.5972)" 
+                id="07KINSHASA1351" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>12/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07KINSHASA1351.html">07KINSHASA1351</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>VATICAN NAMES CONTROVERSIAL PRELATE TO HEAD ARCHDIOCESE OF KINSHASA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 158.0313)" 
+                id="08KINSHASA112" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08KINSHASA112.html">08KINSHASA112</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Vatican names Ituri bishop as administrator of Kisangani archdiocese</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

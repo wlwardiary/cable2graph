@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07CAIRO199">07CAIRO199</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/25/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BEIRUT655">07BEIRUT655</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BEIRUT655.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NABIH BERRI SEEKS USG HELP TO DERAIL LAHOUD-SYRIAN PLOT TO DESTROY PARLIAMENT (NO KIDDING)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BEIRUT769">07BEIRUT769</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BEIRUT769.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/31/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BERRI CLAIMS ONLY SINIORA'S RESIGNATION CAN SAVE PARLIAMENT; OTHERS LINK THREAT TO TRIBUNAL VOTE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BEIRUT784">07BEIRUT784</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07BEIRUT784.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">POST-TRIBUNAL POLITICAL INITIATIVES:  WHICH IS THE LEAST-BAD OPTION?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BEIRUT805">07BEIRUT805</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07BEIRUT805.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEBANON:  A/S SILVERBERG MEETS WITH PM SINIORA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BEIRUT818">07BEIRUT818</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07BEIRUT818.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LEBANON: UN ENVOY PEDERSEN ON UNIFIL RENEWAL AND 1701 REPORT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV1704">07TELAVIV1704</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07TELAVIV1704.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S SILVERBERG DISCUSSES UN AND IO ISSUES WITH DDG YA'AR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV1750">07TELAVIV1750</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07TELAVIV1750.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A/S SILVERBERG DISCUSSES LEBANON AND UNSCR 1701 ISSUES WITH ISRAELI MFA DDG YA'AR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TELAVIV2015">07TELAVIV2015</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/30/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV2052">07TELAVIV2052</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07TELAVIV2052.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/03/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ISRAEL AND EGYPT REPORTEDLY AGREE ON AFRICAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV2547">07TELAVIV2547</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07TELAVIV2547.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ISRAEL RETURNS FIRST AFRICANS UNDER OLMERT-MUBARAK UNDERSTANDING, FUTURE RETURNS UNCERTAIN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TELAVIV3525">07TELAVIV3525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07TELAVIV3525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">KETZIOT PRISON BECOMES HOME TO AFRICAN ASYLUM-SEEKERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV441">08TELAVIV441</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08TELAVIV441.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AFRICAN ASYLUM-SEEKERS LIVING IN DEPLORABLE CONDITIONS, BUT THEY KEEP COMING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV463">08TELAVIV463</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08TELAVIV463.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/28/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RAIDS OUTRAGE HUMANITARIAN COMMUNITY AS GOI CRACKS DOWN ON AFRICAN ASYLUM SEEKERS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-4.1534" 
+                  x2="-270.3959" y2="22.5215" class="btwns0"/>
+        
+            <line x1="-260.6357" y1="24.6982" 
+                  x2="-256.4900" y2="133.0038" class="btwns0"/>
+        
+            <line x1="-260.6357" y1="24.6982" 
+                  x2="-197.8880" y2="-84.1502" class="btwns5"/>
+        
+            <line x1="-101.2622" y1="-290.0000" 
+                  x2="-76.0567" y2="-190.7117" class="btwns0"/>
+        
+            <line x1="-192.8937" y1="-92.8137" 
+                  x2="-81.6369" y2="-175.0739" class="btwns7"/>
+        
+            <line x1="390.0000" y1="-36.5808" 
+                  x2="252.4232" y2="-67.9787" class="btwns0"/>
+        
+            <line x1="87.3913" y1="-141.7077" 
+                  x2="-63.8815" y2="-178.6469" class="btwns9"/>
+        
+            <line x1="87.3913" y1="-141.7077" 
+                  x2="233.5906" y2="-74.3863" class="btwns10"/>
+        
+            <line x1="290.6080" y1="-188.1773" 
+                  x2="246.4381" y2="-79.4682" class="btwns0"/>
+        
+            <line x1="242.6739" y1="-70.2037" 
+                  x2="239.0141" y2="60.9644" class="btwns7"/>
+        
+            <line x1="238.7352" y1="70.9605" 
+                  x2="210.6632" y2="179.7717" class="btwns5"/>
+        
+            <line x1="-37.2740" y1="290.0000" 
+                  x2="85.6224" y2="264.4349" class="btwns0"/>
+        
+            <line x1="95.4128" y1="262.3983" 
+                  x2="199.7689" y2="194.8864" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -4.1534)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-260.6357 24.6982)" 
+                class="vertice degree6 btwns4 authority6 BEIRUT">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-256.1075 142.9965)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-101.2622 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BEIRUT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-192.8937 -92.8137)" 
+                class="vertice degree3 btwns5 authority3 BEIRUT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -36.5808)" 
+                class="vertice degree0 btwns0 authority0 CAIRO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(87.3913 -141.7077)" 
+                class="vertice degree3 btwns8 authority3 TELAVIV">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-73.5961 -181.0191)" 
+                class="vertice degree6 btwns8 authority6 TELAVIV">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(290.6080 -188.1773)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(242.6739 -70.2037)" 
+                class="vertice degree10 btwns10 authority10 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(238.7352 70.9605)" 
+                class="vertice degree3 btwns5 authority3 TELAVIV">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-37.2740 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(95.4128 262.3983)" 
+                class="vertice degree3 btwns2 authority3 TELAVIV">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(208.1651 189.4547)" 
+                class="vertice degree3 btwns4 authority3 TELAVIV">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -4.1534)" 
+                id="07BEIRUT655" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BEIRUT655.html">07BEIRUT655</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NABIH BERRI SEEKS USG HELP TO DERAIL LAHOUD-SYRIAN PLOT TO DESTROY PARLIAMENT (NO KIDDING)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-260.6357 24.6982)" 
+                id="07BEIRUT769" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BEIRUT769.html">07BEIRUT769</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BERRI CLAIMS ONLY SINIORA'S RESIGNATION CAN SAVE PARLIAMENT; OTHERS LINK THREAT TO TRIBUNAL VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-256.1075 142.9965)" 
+                id="07BEIRUT784" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07BEIRUT784.html">07BEIRUT784</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POST-TRIBUNAL POLITICAL INITIATIVES:  WHICH IS THE LEAST-BAD OPTION?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-101.2622 -290.0000)" 
+                id="07BEIRUT805" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07BEIRUT805.html">07BEIRUT805</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LEBANON:  A/S SILVERBERG MEETS WITH PM SINIORA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-192.8937 -92.8137)" 
+                id="07BEIRUT818" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07BEIRUT818.html">07BEIRUT818</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>LEBANON: UN ENVOY PEDERSEN ON UNIFIL RENEWAL AND 1701 REPORT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -36.5808)" 
+                id="07CAIRO199" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07CAIRO199
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(87.3913 -141.7077)" 
+                id="07TELAVIV1704" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07TELAVIV1704.html">07TELAVIV1704</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>A/S SILVERBERG DISCUSSES UN AND IO ISSUES WITH DDG YA'AR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-73.5961 -181.0191)" 
+                id="07TELAVIV1750" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07TELAVIV1750.html">07TELAVIV1750</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>A/S SILVERBERG DISCUSSES LEBANON AND UNSCR 1701 ISSUES WITH ISRAELI MFA DDG YA'AR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(290.6080 -188.1773)" 
+                id="07TELAVIV2015" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TELAVIV2015
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(242.6739 -70.2037)" 
+                id="07TELAVIV2052" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07TELAVIV2052.html">07TELAVIV2052</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ISRAEL AND EGYPT REPORTEDLY AGREE ON AFRICAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.7352 70.9605)" 
+                id="07TELAVIV2547" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07TELAVIV2547.html">07TELAVIV2547</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ISRAEL RETURNS FIRST AFRICANS UNDER OLMERT-MUBARAK UNDERSTANDING, FUTURE RETURNS UNCERTAIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-37.2740 290.0000)" 
+                id="07TELAVIV3525" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TELAVIV3525.html">07TELAVIV3525</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KETZIOT PRISON BECOMES HOME TO AFRICAN ASYLUM-SEEKERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(95.4128 262.3983)" 
+                id="08TELAVIV441" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08TELAVIV441.html">08TELAVIV441</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>AFRICAN ASYLUM-SEEKERS LIVING IN DEPLORABLE CONDITIONS, BUT THEY KEEP COMING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(208.1651 189.4547)" 
+                id="08TELAVIV463" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08TELAVIV463.html">08TELAVIV463</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>RAIDS OUTRAGE HUMANITARIAN COMMUNITY AS GOI CRACKS DOWN ON AFRICAN ASYLUM SEEKERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

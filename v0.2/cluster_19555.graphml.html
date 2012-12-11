@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA854">05BRATISLAVA854</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05BRATISLAVA854.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HZDS: OLD DOG MECIAR CAN STILL LEARN NEW TRICKS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA401">06BRATISLAVA401</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BRATISLAVA401.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SLOVAKIA,S COMMUNISTS DON,T WANT TO BE IN GOVERNMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA414">06BRATISLAVA414</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BRATISLAVA414.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IRAQ UNLIKELY TO PLAY A ROLE IN SLOVAK ELECTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA417">06BRATISLAVA417</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BRATISLAVA417.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Slovak Election Scenescetter</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA423">06BRATISLAVA423</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06BRATISLAVA423.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/31/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SMER'S THINK-TANK ROOTED IN THE PAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA431">06BRATISLAVA431</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA431.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SLOGANS AND GIMMICKS: THE ELECTION CAMPAIGN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA434">06BRATISLAVA434</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA434.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SMER RELEASES CAMPAIGN STATEMENT QUESTIONING SLOVAK PRESENCE IN IRAQ</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA436">06BRATISLAVA436</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA436.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NATIONALIST PARTY SEEKS A SLOVAKIA FOR SLOVAKS IN UPCOMING ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA450">06BRATISLAVA450</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA450.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MODERATE MECIAR ATTEMPTING TO WIN SUPPORT IN SLOVAKIA AND ABROAD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA455">06BRATISLAVA455</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA455.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S BREAKFAST WITH KDH CHAIRMAN PAVOL HRUSOVSKY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA471">06BRATISLAVA471</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA471.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FOREIGN POLICY AFTER THE ELECTION: CONTINUITY, OR A CHANGE OF DIRECTION?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BRATISLAVA476">06BRATISLAVA476</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BRATISLAVA476.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAKIA'S JUNE 17 NATIONAL ELECTIONS: UNCERTAINTY IS A CERTAINTY</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="290.0000" 
+                  x2="225.4256" y2="244.9226" class="btwns4"/>
+        
+            <line x1="302.2533" y1="77.0897" 
+                  x2="62.4080" y2="113.9870" class="btwns4"/>
+        
+            <line x1="-330.8421" y1="-56.8499" 
+                  x2="-385.2579" y2="-157.8784" class="btwns4"/>
+        
+            <line x1="-330.8421" y1="-56.8499" 
+                  x2="-190.5687" y2="39.7566" class="btwns7"/>
+        
+            <line x1="273.2675" y1="-182.9966" 
+                  x2="263.2675" y2="-182.9966" class="btwns0"/>
+        
+            <line x1="273.2675" y1="-182.9966" 
+                  x2="195.4931" y2="-282.1323" class="btwns4"/>
+        
+            <line x1="273.2675" y1="-182.9966" 
+                  x2="174.8700" y2="-64.0092" class="btwns7"/>
+        
+            <line x1="-390.0000" y1="-166.6826" 
+                  x2="-400.0000" y2="-166.6826" class="btwns0"/>
+        
+            <line x1="-182.3329" y1="45.4286" 
+                  x2="-192.3329" y2="45.4286" class="btwns0"/>
+        
+            <line x1="-182.3329" y1="45.4286" 
+                  x2="-170.2417" y2="156.6774" class="btwns1"/>
+        
+            <line x1="-182.3329" y1="45.4286" 
+                  x2="42.9418" y2="112.6482" class="btwns8"/>
+        
+            <line x1="168.4972" y1="-56.3029" 
+                  x2="58.1190" y2="107.2190" class="btwns10"/>
+        
+            <line x1="215.7808" y1="242.2808" 
+                  x2="205.7808" y2="242.2808" class="btwns0"/>
+        
+            <line x1="215.7808" y1="242.2808" 
+                  x2="60.4226" y2="121.6408" class="btwns7"/>
+        
+            <line x1="-169.1612" y1="166.6188" 
+                  x2="42.7799" y2="117.7541" class="btwns2"/>
+        
+            <line x1="-169.1612" y1="166.6188" 
+                  x2="-87.9507" y2="251.6842" class="btwns0"/>
+        
+            <line x1="52.5243" y1="115.5075" 
+                  x2="-74.2299" y2="251.5996" class="btwns3"/>
+        
+            <line x1="-81.0455" y1="258.9173" 
+                  x2="-91.0455" y2="258.9173" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(302.2533 77.0897)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-330.8421 -56.8499)" 
+                class="vertice degree2 btwns2 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(273.2675 -182.9966)" 
+                class="vertice degree6 btwns2 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -166.6826)" 
+                class="vertice degree4 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(189.3206 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-182.3329 45.4286)" 
+                class="vertice degree8 btwns4 authority4 BRATISLAVA">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(168.4972 -56.3029)" 
+                class="vertice degree2 btwns4 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(215.7808 242.2808)" 
+                class="vertice degree6 btwns2 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-169.1612 166.6188)" 
+                class="vertice degree4 btwns0 authority4 BRATISLAVA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(52.5243 115.5075)" 
+                class="vertice degree10 btwns10 authority10 BRATISLAVA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-81.0455 258.9173)" 
+                class="vertice degree6 btwns0 authority2 BRATISLAVA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 290.0000)" 
+                id="05BRATISLAVA854" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05BRATISLAVA854.html">05BRATISLAVA854</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HZDS: OLD DOG MECIAR CAN STILL LEARN NEW TRICKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(302.2533 77.0897)" 
+                id="06BRATISLAVA401" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BRATISLAVA401.html">06BRATISLAVA401</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA,S COMMUNISTS DON,T WANT TO BE IN GOVERNMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-330.8421 -56.8499)" 
+                id="06BRATISLAVA414" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BRATISLAVA414.html">06BRATISLAVA414</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IRAQ UNLIKELY TO PLAY A ROLE IN SLOVAK ELECTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(273.2675 -182.9966)" 
+                id="06BRATISLAVA417" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BRATISLAVA417.html">06BRATISLAVA417</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Slovak Election Scenescetter</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -166.6826)" 
+                id="06BRATISLAVA423" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/31/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06BRATISLAVA423.html">06BRATISLAVA423</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SMER'S THINK-TANK ROOTED IN THE PAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(189.3206 -290.0000)" 
+                id="06BRATISLAVA431" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA431.html">06BRATISLAVA431</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SLOGANS AND GIMMICKS: THE ELECTION CAMPAIGN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-182.3329 45.4286)" 
+                id="06BRATISLAVA434" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>06/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA434.html">06BRATISLAVA434</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>SMER RELEASES CAMPAIGN STATEMENT QUESTIONING SLOVAK PRESENCE IN IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.4972 -56.3029)" 
+                id="06BRATISLAVA436" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA436.html">06BRATISLAVA436</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NATIONALIST PARTY SEEKS A SLOVAKIA FOR SLOVAKS IN UPCOMING ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(215.7808 242.2808)" 
+                id="06BRATISLAVA450" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA450.html">06BRATISLAVA450</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MODERATE MECIAR ATTEMPTING TO WIN SUPPORT IN SLOVAKIA AND ABROAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-169.1612 166.6188)" 
+                id="06BRATISLAVA455" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/09/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA455.html">06BRATISLAVA455</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S BREAKFAST WITH KDH CHAIRMAN PAVOL HRUSOVSKY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(52.5243 115.5075)" 
+                id="06BRATISLAVA471" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA471.html">06BRATISLAVA471</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>FOREIGN POLICY AFTER THE ELECTION: CONTINUITY, OR A CHANGE OF DIRECTION?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-81.0455 258.9173)" 
+                id="06BRATISLAVA476" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BRATISLAVA476.html">06BRATISLAVA476</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA'S JUNE 17 NATIONAL ELECTIONS: UNCERTAINTY IS A CERTAINTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

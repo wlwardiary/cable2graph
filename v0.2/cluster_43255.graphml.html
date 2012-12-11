@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06MEXICO6655">06MEXICO6655</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/29/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06MEXICO6750">06MEXICO6750</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/02/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MEXICO863">07MEXICO863</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07MEXICO863.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/21/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">STATE GOVERNOR ACCUSES FORMER PRESIDENT OF PRESSURING HIM TO MAKE FALSE ALLEGATIONS IN 2006 MINING ACCIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MEXICO1925">07MEXICO1925</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07MEXICO1925.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MEXICAN JUDICIAL AND EXECUTIVE AUTHORITIES REINSTATE DEPOSED LEADER OF NATIONAL MINERS, UNION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MEXICO5161">07MEXICO5161</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07MEXICO5161.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">FORMATION OF A SECOND MINERS UNION UNDERSCORES MANY OF THE PROBLEMS OF ORGANIZED LABOR IN MEXICO</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08MEXICO2834">08MEXICO2834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08MEXICO2834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MEXICO,S SUPREME COURT (SORT OF) RULES IN FAVOR OF SECRET BALLOT UNION ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08MEXICO3495">08MEXICO3495</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/25/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO131">09MEXICO131</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/01/09MEXICO131.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MEXICO CAUTIOUSLY OPTIMISTIC ABOUT MEETING BETWEEN CALDERON AND OBAMA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO288">09MEXICO288</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/02/09MEXICO288.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/04/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OBAMA-CALDERON MEETING RAISES EVENTUAL POSSIBILITY OF IMPROVING NAFTA SIDE AGREEMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO826">09MEXICO826</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09MEXICO826.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/20/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MEXICO VIEWS TIMING OF PRESIDENT OBAMA'S FIRST TRIP TO LATIN AMERICA AS OPPORTUNE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE27670">09STATE27670</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/23/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO1191">09MEXICO1191</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09MEXICO1191.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">UNITED STEETWORKERS UNION HIGHLIGHTS CONTINUING DISPUTE BETWEEN GOM, MINING INDUSTRY AND THE NATIONAL MINERS, UNION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09MEXICO1238">09MEXICO1238</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/06/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO1921">09MEXICO1921</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09MEXICO1921.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MEXICO - NOMINATION OF 2009 LABOR DIPLOMACY AWARD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09MEXICO2195">09MEXICO2195</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09MEXICO2195.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">INTERNATIONAL SOLIDARITY WITH MEXICO'S NATIONAL MINERS UNION</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-201.3750" y1="194.8600" 
+                  x2="-99.0699" y2="113.0582" class="btwns2"/>
+        
+            <line x1="-201.3750" y1="194.8600" 
+                  x2="-272.6859" y2="95.3320" class="btwns0"/>
+        
+            <line x1="-201.3750" y1="194.8600" 
+                  x2="-99.9106" y2="283.4241" class="btwns0"/>
+        
+            <line x1="18.0354" y1="227.4095" 
+                  x2="-84.5443" y2="114.2229" class="btwns2"/>
+        
+            <line x1="18.0354" y1="227.4095" 
+                  x2="-83.6774" y2="285.0685" class="btwns0"/>
+        
+            <line x1="-91.2597" y1="106.8132" 
+                  x2="-268.5645" y2="88.2447" class="btwns3"/>
+        
+            <line x1="-91.2597" y1="106.8132" 
+                  x2="48.0250" y2="16.3759" class="btwns8"/>
+        
+            <line x1="-91.2597" y1="106.8132" 
+                  x2="-86.1452" y2="-2.5553" class="btwns0"/>
+        
+            <line x1="-278.5102" y1="87.2032" 
+                  x2="-382.3995" y2="-1.6242" class="btwns1"/>
+        
+            <line x1="305.4995" y1="64.6927" 
+                  x2="230.9873" y2="-62.1849" class="btwns1"/>
+        
+            <line x1="56.4121" y1="10.9302" 
+                  x2="216.9158" y2="-66.4645" class="btwns10"/>
+        
+            <line x1="56.4121" y1="10.9302" 
+                  x2="-75.8119" y2="-10.9144" class="btwns0"/>
+        
+            <line x1="307.9500" y1="-180.8789" 
+                  x2="231.8987" y2="-78.8262" class="btwns1"/>
+        
+            <line x1="-37.7292" y1="-280.7756" 
+                  x2="95.2824" y2="-209.5819" class="btwns4"/>
+        
+            <line x1="-37.7292" y1="-280.7756" 
+                  x2="-175.0214" y2="-289.3749" class="btwns1"/>
+        
+            <line x1="225.9233" y1="-70.8078" 
+                  x2="110.8244" y2="-197.4623" class="btwns6"/>
+        
+            <line x1="225.9233" y1="-70.8078" 
+                  x2="380.1461" y2="-44.1495" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-201.3750 194.8600)" 
+                class="vertice degree5 btwns1 authority5 MEXICO">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(18.0354 227.4095)" 
+                class="vertice degree2 btwns0 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-91.2597 106.8132)" 
+                class="vertice degree10 btwns7 authority10 MEXICO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-278.5102 87.2032)" 
+                class="vertice degree5 btwns2 authority5 MEXICO">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-92.3768 290.0000)" 
+                class="vertice degree2 btwns0 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.1228)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(305.4995 64.6927)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(56.4121 10.9302)" 
+                class="vertice degree5 btwns8 authority5 MEXICO">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(307.9500 -180.8789)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-37.7292 -280.7756)" 
+                class="vertice degree2 btwns2 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(225.9233 -70.8078)" 
+                class="vertice degree10 btwns10 authority9 MEXICO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-85.6781 -12.5444)" 
+                class="vertice degree2 btwns0 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(104.0990 -204.8630)" 
+                class="vertice degree2 btwns4 authority2 MEXICO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-185.0018 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MEXICO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -42.4462)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-201.3750 194.8600)" 
+                id="06MEXICO6655" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    06MEXICO6655
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(18.0354 227.4095)" 
+                id="06MEXICO6750" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06MEXICO6750
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-91.2597 106.8132)" 
+                id="07MEXICO1925" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07MEXICO1925.html">07MEXICO1925</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MEXICAN JUDICIAL AND EXECUTIVE AUTHORITIES REINSTATE DEPOSED LEADER OF NATIONAL MINERS, UNION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-278.5102 87.2032)" 
+                id="07MEXICO5161" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07MEXICO5161.html">07MEXICO5161</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>FORMATION OF A SECOND MINERS UNION UNDERSCORES MANY OF THE PROBLEMS OF ORGANIZED LABOR IN MEXICO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-92.3768 290.0000)" 
+                id="07MEXICO863" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07MEXICO863.html">07MEXICO863</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>STATE GOVERNOR ACCUSES FORMER PRESIDENT OF PRESSURING HIM TO MAKE FALSE ALLEGATIONS IN 2006 MINING ACCIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.1228)" 
+                id="08MEXICO2834" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08MEXICO2834.html">08MEXICO2834</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MEXICO,S SUPREME COURT (SORT OF) RULES IN FAVOR OF SECRET BALLOT UNION ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(305.4995 64.6927)" 
+                id="08MEXICO3495" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08MEXICO3495
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(56.4121 10.9302)" 
+                id="09MEXICO1191" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09MEXICO1191.html">09MEXICO1191</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>UNITED STEETWORKERS UNION HIGHLIGHTS CONTINUING DISPUTE BETWEEN GOM, MINING INDUSTRY AND THE NATIONAL MINERS, UNION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(307.9500 -180.8789)" 
+                id="09MEXICO1238" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/06/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09MEXICO1238
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-37.7292 -280.7756)" 
+                id="09MEXICO131" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/01/09MEXICO131.html">09MEXICO131</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>MEXICO CAUTIOUSLY OPTIMISTIC ABOUT MEETING BETWEEN CALDERON AND OBAMA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(225.9233 -70.8078)" 
+                id="09MEXICO1921" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09MEXICO1921.html">09MEXICO1921</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MEXICO - NOMINATION OF 2009 LABOR DIPLOMACY AWARD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-85.6781 -12.5444)" 
+                id="09MEXICO2195" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09MEXICO2195.html">09MEXICO2195</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>INTERNATIONAL SOLIDARITY WITH MEXICO'S NATIONAL MINERS UNION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(104.0990 -204.8630)" 
+                id="09MEXICO288" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/04/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/02/09MEXICO288.html">09MEXICO288</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>OBAMA-CALDERON MEETING RAISES EVENTUAL POSSIBILITY OF IMPROVING NAFTA SIDE AGREEMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-185.0018 -290.0000)" 
+                id="09MEXICO826" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09MEXICO826.html">09MEXICO826</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MEXICO VIEWS TIMING OF PRESIDENT OBAMA'S FIRST TRIP TO LATIN AMERICA AS OPPORTUNE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -42.4462)" 
+                id="09STATE27670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE27670
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

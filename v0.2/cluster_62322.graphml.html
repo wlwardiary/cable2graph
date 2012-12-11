@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE18387">07STATE18387</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/14/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MANILA519">07MANILA519</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07MANILA519.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/14/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PHILIPPINES LAUDS SIX PARTY TALKS OUTCOME</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SEOUL471">07SEOUL471</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07SEOUL471.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ROKG SEEKS CLOSE COORDINATION ON NEXT STEPS WITH NORTH KOREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SANTIAGO263">07SANTIAGO263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07SANTIAGO263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHILE WANTS TO DEEPEN BUT BALANCE ASIAN TIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS599">07PARIS599</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07PARIS599.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/15/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FRENCH WELCOME SIX-PARTY TALKS AGREEMENT AS IMPORTANT FIRST STEP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ULAANBAATAR105">07ULAANBAATAR105</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR105.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Mongolia Welcomes Six Party Talks Agreement</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ULAANBAATAR106">07ULAANBAATAR106</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR106.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Mongolia Welcomes Six Party Talks Agreement</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ULAANBAATAR107">07ULAANBAATAR107</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR107.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Mongolia Welcomes Six Party Talks Agreement</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TOKYO696">07TOKYO696</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07TOKYO696.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JAPAN WELCOMES SIX-PARTY AGREEMENT, REMAINS UNEASY ABOUT ABDUCTION ISSUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINGSTON353">07KINGSTON353</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07KINGSTON353.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/13/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAMAICA: DELIVERY OF POINTS RE INITIAL ACTIONS AGREEMENT AT SIX-PARTY TALKS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-89.9098" 
+                  x2="19.5863" y2="-0.6796" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="-8.0864" 
+                  x2="-0.1326" y2="1.4186" class="btwns10"/>
+        
+            <line x1="198.3271" y1="261.3417" 
+                  x2="15.7381" y2="9.7555" class="btwns10"/>
+        
+            <line x1="-304.7803" y1="183.3011" 
+                  x2="1.2039" y2="6.6619" class="btwns10"/>
+        
+            <line x1="-46.5133" y1="-290.0000" 
+                  x2="7.9665" y2="-8.1559" class="btwns10"/>
+        
+            <line x1="9.8644" y1="1.6623" 
+                  x2="371.5907" y2="108.5866" class="btwns10"/>
+        
+            <line x1="9.8644" y1="1.6623" 
+                  x2="214.7491" y2="-240.7839" class="btwns10"/>
+        
+            <line x1="9.8644" y1="1.6623" 
+                  x2="-279.5527" y2="-189.5158" class="btwns10"/>
+        
+            <line x1="9.8644" y1="1.6623" 
+                  x2="-69.8478" y2="280.3855" class="btwns10"/>
+        
+            <line x1="381.1805" y1="111.4213" 
+                  x2="371.1805" y2="111.4213" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -89.9098)" 
+                class="vertice degree0 btwns0 authority0 KINGSTON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.0864)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(198.3271 261.3417)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-304.7803 183.3011)" 
+                class="vertice degree0 btwns0 authority0 SANTIAGO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-46.5133 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(9.8644 1.6623)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(381.1805 111.4213)" 
+                class="vertice degree2 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(221.2038 -248.4218)" 
+                class="vertice degree0 btwns0 authority0 ULAANBAATAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-287.8967 -195.0275)" 
+                class="vertice degree0 btwns0 authority0 ULAANBAATAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-72.5974 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ULAANBAATAR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -89.9098)" 
+                id="07KINGSTON353" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07KINGSTON353.html">07KINGSTON353</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAMAICA: DELIVERY OF POINTS RE INITIAL ACTIONS AGREEMENT AT SIX-PARTY TALKS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.0864)" 
+                id="07MANILA519" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07MANILA519.html">07MANILA519</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PHILIPPINES LAUDS SIX PARTY TALKS OUTCOME</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(198.3271 261.3417)" 
+                id="07PARIS599" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07PARIS599.html">07PARIS599</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FRENCH WELCOME SIX-PARTY TALKS AGREEMENT AS IMPORTANT FIRST STEP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-304.7803 183.3011)" 
+                id="07SANTIAGO263" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07SANTIAGO263.html">07SANTIAGO263</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHILE WANTS TO DEEPEN BUT BALANCE ASIAN TIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-46.5133 -290.0000)" 
+                id="07SEOUL471" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07SEOUL471.html">07SEOUL471</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG SEEKS CLOSE COORDINATION ON NEXT STEPS WITH NORTH KOREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(9.8644 1.6623)" 
+                id="07STATE18387" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07STATE18387
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(381.1805 111.4213)" 
+                id="07TOKYO696" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07TOKYO696.html">07TOKYO696</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JAPAN WELCOMES SIX-PARTY AGREEMENT, REMAINS UNEASY ABOUT ABDUCTION ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(221.2038 -248.4218)" 
+                id="07ULAANBAATAR105" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR105.html">07ULAANBAATAR105</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Mongolia Welcomes Six Party Talks Agreement</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-287.8967 -195.0275)" 
+                id="07ULAANBAATAR106" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR106.html">07ULAANBAATAR106</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Mongolia Welcomes Six Party Talks Agreement</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-72.5974 290.0000)" 
+                id="07ULAANBAATAR107" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ULAANBAATAR107.html">07ULAANBAATAR107</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Mongolia Welcomes Six Party Talks Agreement</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

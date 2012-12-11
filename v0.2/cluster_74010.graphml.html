@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI508">08TAIPEI508</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TAIPEI508.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/11/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TAIWAN'S NEXT PREMIER LIU CHAO-HSUAN:  A PROFILE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI552">08TAIPEI552</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TAIPEI552.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/21/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MA GOVERNMENT TAKES SHAPE:  FIRST TRANCHE OF CABINET AND PRESIDENTIAL APPOINTMENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI552">08AITTAIPEI552</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/21/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI582">08TAIPEI582</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TAIPEI582.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/28/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MA GOVERNMENT TAKES SHAPE: SECOND TRANCHE OF PRESIDENTIAL APPOINTMENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI582">08AITTAIPEI582</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/28/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI595">08TAIPEI595</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08TAIPEI595.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/29/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FUTURE MAC CHAIRPERSON LAI SHIN-YUAN: MA'S 'WILDCARD?'</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI620">08TAIPEI620</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08TAIPEI620.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/05/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PREMIER-DESIGNATE LIU CHAO-HSUAN ON HIGH EXPECTATIONS, CROSS-STRAIT RELATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI625">08TAIPEI625</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08TAIPEI625.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/06/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LY SPEAKER WANG JIN-PYNG (KMT) ON MA ADMINISTRATION, CROSS-STRAIT RELATIONS, PRESIDENT CHEN'S FUTURE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI636">08TAIPEI636</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08TAIPEI636.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/08/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">STRAITS EXCHANGE FOUNDATION CHAIRMAN-DESIGNATE P.K. CHIANG: FACING NEW CHALLENGES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI657">08AITTAIPEI657</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/12/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI657">08TAIPEI657</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08TAIPEI657.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRESIDENT MA YING-JEOU'S NEW CABINET:  DEMOGRAPHICS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI702">08AITTAIPEI702</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/18/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI702">08TAIPEI702</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08TAIPEI702.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/21/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TAIWAN NSC AND PRESIDENTIAL OFFICE APPOINTMENTS: MA'S KITCHEN CABINET</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="46.0098" y1="-78.1273" 
+                  x2="-31.5130" y2="-151.5358" class="btwns1"/>
+        
+            <line x1="46.0098" y1="-78.1273" 
+                  x2="177.1922" y2="-108.0284" class="btwns1"/>
+        
+            <line x1="74.9049" y1="-290.0000" 
+                  x2="-32.2367" y2="-165.9788" class="btwns1"/>
+        
+            <line x1="74.9049" y1="-290.0000" 
+                  x2="181.6526" y2="-118.7372" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-54.1314" 
+                  x2="331.8516" y2="50.9338" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-54.1314" 
+                  x2="196.5808" y2="-107.5869" class="btwns3"/>
+        
+            <line x1="307.6542" y1="-282.5295" 
+                  x2="192.6805" y2="-118.4404" class="btwns3"/>
+        
+            <line x1="-34.2736" y1="248.1006" 
+                  x2="20.3592" y2="64.6483" class="btwns10"/>
+        
+            <line x1="-34.2736" y1="248.1006" 
+                  x2="-194.9249" y2="287.6117" class="btwns7"/>
+        
+            <line x1="23.2134" y1="55.0643" 
+                  x2="-35.9855" y2="-148.8082" class="btwns5"/>
+        
+            <line x1="23.2134" y1="55.0643" 
+                  x2="179.9053" y2="-103.1456" class="btwns6"/>
+        
+            <line x1="-38.7741" y1="-158.4115" 
+                  x2="-225.5761" y2="-248.6873" class="btwns7"/>
+        
+            <line x1="-38.7741" y1="-158.4115" 
+                  x2="177.1623" y2="-112.3374" class="btwns3"/>
+        
+            <line x1="-234.5798" y1="-253.0386" 
+                  x2="-380.1622" y2="-279.5813" class="btwns3"/>
+        
+            <line x1="-204.6355" y1="290.0000" 
+                  x2="-343.2214" y2="213.3583" class="btwns3"/>
+        
+            <line x1="327.0093" y1="59.6832" 
+                  x2="193.3025" y2="-102.5341" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(46.0098 -78.1273)" 
+                class="vertice degree1 btwns0 authority1 AITTAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(74.9049 -290.0000)" 
+                class="vertice degree1 btwns0 authority1 AITTAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -54.1314)" 
+                class="vertice degree1 btwns0 authority1 AITTAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(307.6542 -282.5295)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-34.2736 248.1006)" 
+                class="vertice degree1 btwns5 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(23.2134 55.0643)" 
+                class="vertice degree3 btwns8 authority3 TAIPEI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-38.7741 -158.4115)" 
+                class="vertice degree6 btwns7 authority6 TAIPEI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-234.5798 -253.0386)" 
+                class="vertice degree1 btwns3 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-204.6355 290.0000)" 
+                class="vertice degree1 btwns3 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-351.9723 208.5188)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -281.3749)" 
+                class="vertice degree0 btwns0 authority0 TAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(327.0093 59.6832)" 
+                class="vertice degree1 btwns0 authority1 TAIPEI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(186.9422 -110.2507)" 
+                class="vertice degree10 btwns10 authority10 TAIPEI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(46.0098 -78.1273)" 
+                id="08AITTAIPEI552" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08AITTAIPEI552
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(74.9049 -290.0000)" 
+                id="08AITTAIPEI582" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08AITTAIPEI582
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -54.1314)" 
+                id="08AITTAIPEI657" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08AITTAIPEI657
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(307.6542 -282.5295)" 
+                id="08AITTAIPEI702" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08AITTAIPEI702
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-34.2736 248.1006)" 
+                id="08TAIPEI508" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TAIPEI508.html">08TAIPEI508</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TAIWAN'S NEXT PREMIER LIU CHAO-HSUAN:  A PROFILE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(23.2134 55.0643)" 
+                id="08TAIPEI552" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TAIPEI552.html">08TAIPEI552</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MA GOVERNMENT TAKES SHAPE:  FIRST TRANCHE OF CABINET AND PRESIDENTIAL APPOINTMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-38.7741 -158.4115)" 
+                id="08TAIPEI582" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/28/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TAIPEI582.html">08TAIPEI582</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MA GOVERNMENT TAKES SHAPE: SECOND TRANCHE OF PRESIDENTIAL APPOINTMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-234.5798 -253.0386)" 
+                id="08TAIPEI595" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08TAIPEI595.html">08TAIPEI595</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>FUTURE MAC CHAIRPERSON LAI SHIN-YUAN: MA'S 'WILDCARD?'</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-204.6355 290.0000)" 
+                id="08TAIPEI620" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08TAIPEI620.html">08TAIPEI620</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PREMIER-DESIGNATE LIU CHAO-HSUAN ON HIGH EXPECTATIONS, CROSS-STRAIT RELATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-351.9723 208.5188)" 
+                id="08TAIPEI625" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/06/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08TAIPEI625.html">08TAIPEI625</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LY SPEAKER WANG JIN-PYNG (KMT) ON MA ADMINISTRATION, CROSS-STRAIT RELATIONS, PRESIDENT CHEN'S FUTURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -281.3749)" 
+                id="08TAIPEI636" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/08/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08TAIPEI636.html">08TAIPEI636</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>STRAITS EXCHANGE FOUNDATION CHAIRMAN-DESIGNATE P.K. CHIANG: FACING NEW CHALLENGES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(327.0093 59.6832)" 
+                id="08TAIPEI657" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/13/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08TAIPEI657.html">08TAIPEI657</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>PRESIDENT MA YING-JEOU'S NEW CABINET:  DEMOGRAPHICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(186.9422 -110.2507)" 
+                id="08TAIPEI702" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08TAIPEI702.html">08TAIPEI702</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TAIWAN NSC AND PRESIDENTIAL OFFICE APPOINTMENTS: MA'S KITCHEN CABINET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

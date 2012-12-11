@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA462">05LIMA462</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/17/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA928">05LIMA928</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/26/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA1790">05LIMA1790</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/16/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA2004">05LIMA2004</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/27/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LIMA2074">05LIMA2074</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05LIMA2074.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/06/05</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">BOWEN DECISION CAUSES OUTRAGE, THREATENS PRESS FREEDOM IN PERU</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LIMA2132">05LIMA2132</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05LIMA2132.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FUROR CONTINUES IN SALLY BOWEN CASE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA2391">05LIMA2391</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/27/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA2865">05LIMA2865</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/01/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA2931">05LIMA2931</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/08/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LIMA3337">05LIMA3337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05LIMA3337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TOLEDO'S STATE OF THE NATION SPEECH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LIMA3474">05LIMA3474</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05LIMA3474.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/11/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Peru: Human Rights Update</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA3735">05LIMA3735</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/29/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LIMA4163">05LIMA4163</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05LIMA4163.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BENEFIT PACKAGE DEFUSES TALK OF POLICE STRIKE, BUT UNREST REMAINS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05LIMA4294">05LIMA4294</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05LIMA4294.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/04/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRESIDENT TOLEDO ANNOUNCES NATIONAL CITIZEN SECURITY PLAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05LIMA5365">05LIMA5365</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05LIMA5365.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/20/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TOLEDO MAKES ANOTHER CONTROVERSIAL PICK FOR ARMY CHIEF</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-48.1729" y1="-185.2839" 
+                  x2="126.8533" y2="-118.9961" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-144.4195" 
+                  x2="146.1406" y2="-116.5882" class="btwns0"/>
+        
+            <line x1="-184.9974" y1="-128.7701" 
+                  x2="-380.0877" y2="-154.7732" class="btwns0"/>
+        
+            <line x1="-184.9974" y1="-128.7701" 
+                  x2="126.2136" y2="-115.8685" class="btwns4"/>
+        
+            <line x1="310.2373" y1="-239.9267" 
+                  x2="144.3388" y2="-121.2717" class="btwns0"/>
+        
+            <line x1="298.0396" y1="52.2040" 
+                  x2="143.1501" y2="-108.2594" class="btwns0"/>
+        
+            <line x1="166.4140" y1="-290.0000" 
+                  x2="137.9104" y2="-125.3078" class="btwns0"/>
+        
+            <line x1="-42.4335" y1="48.1537" 
+                  x2="128.8306" y2="-108.7003" class="btwns10"/>
+        
+            <line x1="-42.4335" y1="48.1537" 
+                  x2="-134.1545" y2="179.6141" class="btwns7"/>
+        
+            <line x1="136.2051" y1="-115.4543" 
+                  x2="7.5694" y2="-279.5771" class="btwns0"/>
+        
+            <line x1="136.2051" y1="-115.4543" 
+                  x2="143.6469" y2="23.1722" class="btwns0"/>
+        
+            <line x1="136.2051" y1="-115.4543" 
+                  x2="373.9829" y2="-41.3980" class="btwns0"/>
+        
+            <line x1="-325.1786" y1="178.4649" 
+                  x2="-149.8638" y2="187.3112" class="btwns0"/>
+        
+            <line x1="-139.8765" y1="187.8152" 
+                  x2="-28.5457" y2="283.4826" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-48.1729 -185.2839)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -144.4195)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-184.9974 -128.7701)" 
+                class="vertice degree1 btwns1 authority1 LIMA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -156.0944)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(310.2373 -239.9267)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(298.0396 52.2040)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(166.4140 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-42.4335 48.1537)" 
+                class="vertice degree1 btwns3 authority1 LIMA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(136.2051 -115.4543)" 
+                class="vertice degree10 btwns10 authority10 LIMA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-325.1786 178.4649)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-139.8765 187.8152)" 
+                class="vertice degree2 btwns2 authority2 LIMA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-20.9613 290.0000)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(1.4006 -287.4477)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(144.1830 33.1578)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(383.5306 -38.4244)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-48.1729 -185.2839)" 
+                id="05LIMA1790" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/16/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA1790
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -144.4195)" 
+                id="05LIMA2004" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA2004
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-184.9974 -128.7701)" 
+                id="05LIMA2074" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>05/06/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05LIMA2074.html">05LIMA2074</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BOWEN DECISION CAUSES OUTRAGE, THREATENS PRESS FREEDOM IN PERU</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -156.0944)" 
+                id="05LIMA2132" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05LIMA2132.html">05LIMA2132</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FUROR CONTINUES IN SALLY BOWEN CASE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(310.2373 -239.9267)" 
+                id="05LIMA2391" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA2391
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(298.0396 52.2040)" 
+                id="05LIMA2865" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA2865
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(166.4140 -290.0000)" 
+                id="05LIMA2931" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA2931
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-42.4335 48.1537)" 
+                id="05LIMA3337" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05LIMA3337.html">05LIMA3337</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>TOLEDO'S STATE OF THE NATION SPEECH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.2051 -115.4543)" 
+                id="05LIMA3474" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05LIMA3474.html">05LIMA3474</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>Peru: Human Rights Update</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-325.1786 178.4649)" 
+                id="05LIMA3735" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA3735
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-139.8765 187.8152)" 
+                id="05LIMA4163" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05LIMA4163.html">05LIMA4163</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>BENEFIT PACKAGE DEFUSES TALK OF POLICE STRIKE, BUT UNREST REMAINS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.9613 290.0000)" 
+                id="05LIMA4294" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/04/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05LIMA4294.html">05LIMA4294</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRESIDENT TOLEDO ANNOUNCES NATIONAL CITIZEN SECURITY PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(1.4006 -287.4477)" 
+                id="05LIMA462" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA462
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(144.1830 33.1578)" 
+                id="05LIMA5365" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05LIMA5365.html">05LIMA5365</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TOLEDO MAKES ANOTHER CONTROVERSIAL PICK FOR ARMY CHIEF</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(383.5306 -38.4244)" 
+                id="05LIMA928" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/26/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA928
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

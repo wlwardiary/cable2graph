@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI941">03ABUDHABI941</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/02/03ABUDHABI941.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/26/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UAE DRAFTS LABOR UNION REGULATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1090">03ABUDHABI1090</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1090.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UAE LABOR UNIONS WILL BE "FOR THE BENEFIT OF ALL"</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1204">03ABUDHABI1204</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1204.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/12/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">WILDCAT STRIKE RESOLVED WITH THE ASSISTANCE OF THE LABOUR MINISTRY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1240">03ABUDHABI1240</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1240.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/15/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ANOTHER STRIKE MEDIATED AND RESOLVED BY THE LABOUR MINISTRY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1340">03ABUDHABI1340</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/03/03ABUDHABI1340.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">STRATEGIC DIALOGUE FOLLOW-UP: OPIC COVERAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1754">03ABUDHABI1754</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03ABUDHABI1754.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LABOR ATTACHES PAINT A RELATIVELY ROSY PICTURE OF LOCAL LABOR CONDITIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI1935">03ABUDHABI1935</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03ABUDHABI1935.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/22/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">UAE HOPES TO IMPLEMENT LABOR UNION LAW BY THE END OF THE YEAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI2083">03ABUDHABI2083</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/04/03ABUDHABI2083.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/30/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ANOTHER STRIKE MEDIATED AND RESOLVED BY THE LABOUR MINISTRY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI2323">03ABUDHABI2323</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/05/03ABUDHABI2323.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/12/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LABOR MINISTRY MEDIATES STRIKE IN DUBAI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03ABUDHABI2670">03ABUDHABI2670</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/06/03ABUDHABI2670.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">THREE MORE LABOR STRIKES RESOLVED</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="173.4945" y1="-224.1588" 
+                  x2="6.4778" y2="-286.0516" class="btwns0"/>
+        
+            <line x1="173.4945" y1="-224.1588" 
+                  x2="-73.2662" y2="-151.9997" class="btwns0"/>
+        
+            <line x1="173.4945" y1="-224.1588" 
+                  x2="380.3493" y2="-168.0020" class="btwns0"/>
+        
+            <line x1="173.4945" y1="-224.1588" 
+                  x2="158.7832" y2="-63.8645" class="btwns1"/>
+        
+            <line x1="-2.8990" y1="-289.5265" 
+                  x2="-244.9683" y2="-289.9812" class="btwns1"/>
+        
+            <line x1="-2.8990" y1="-289.5265" 
+                  x2="152.2330" y2="-62.1667" class="btwns3"/>
+        
+            <line x1="-82.8643" y1="-149.1929" 
+                  x2="-247.2286" y2="-283.6678" class="btwns1"/>
+        
+            <line x1="-82.8643" y1="-149.1929" 
+                  x2="148.5711" y2="-57.5867" class="btwns3"/>
+        
+            <line x1="390.0000" y1="-165.3821" 
+                  x2="166.8837" y2="-58.2354" class="btwns2"/>
+        
+            <line x1="383.4928" y1="110.1455" 
+                  x2="165.9572" y2="-48.0255" class="btwns3"/>
+        
+            <line x1="41.1935" y1="180.6072" 
+                  x2="-159.5784" y2="285.3738" class="btwns7"/>
+        
+            <line x1="41.1935" y1="180.6072" 
+                  x2="153.4149" y2="-44.9532" class="btwns10"/>
+        
+            <line x1="-168.4439" y1="290.0000" 
+                  x2="-380.2936" y2="237.5022" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(173.4945 -224.1588)" 
+                class="vertice degree6 btwns0 authority6 ABUDHABI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-2.8990 -289.5265)" 
+                class="vertice degree4 btwns1 authority4 ABUDHABI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-82.8643 -149.1929)" 
+                class="vertice degree4 btwns1 authority4 ABUDHABI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -165.3821)" 
+                class="vertice degree2 btwns0 authority2 ABUDHABI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(383.4928 110.1455)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(41.1935 180.6072)" 
+                class="vertice degree2 btwns5 authority2 ABUDHABI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-254.9683 -290.0000)" 
+                class="vertice degree2 btwns0 authority2 ABUDHABI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-168.4439 290.0000)" 
+                class="vertice degree2 btwns3 authority1 ABUDHABI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 235.0969)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(157.8692 -53.9064)" 
+                class="vertice degree10 btwns10 authority10 ABUDHABI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(173.4945 -224.1588)" 
+                id="03ABUDHABI1090" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/05/03</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1090.html">03ABUDHABI1090</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UAE LABOR UNIONS WILL BE "FOR THE BENEFIT OF ALL"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-2.8990 -289.5265)" 
+                id="03ABUDHABI1204" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/12/03</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1204.html">03ABUDHABI1204</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>WILDCAT STRIKE RESOLVED WITH THE ASSISTANCE OF THE LABOUR MINISTRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-82.8643 -149.1929)" 
+                id="03ABUDHABI1240" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>03/15/03</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1240.html">03ABUDHABI1240</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ANOTHER STRIKE MEDIATED AND RESOLVED BY THE LABOUR MINISTRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -165.3821)" 
+                id="03ABUDHABI1340" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/19/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/03/03ABUDHABI1340.html">03ABUDHABI1340</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>STRATEGIC DIALOGUE FOLLOW-UP: OPIC COVERAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(383.4928 110.1455)" 
+                id="03ABUDHABI1754" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/13/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03ABUDHABI1754.html">03ABUDHABI1754</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>LABOR ATTACHES PAINT A RELATIVELY ROSY PICTURE OF LOCAL LABOR CONDITIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(41.1935 180.6072)" 
+                id="03ABUDHABI1935" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/22/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03ABUDHABI1935.html">03ABUDHABI1935</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>UAE HOPES TO IMPLEMENT LABOR UNION LAW BY THE END OF THE YEAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-254.9683 -290.0000)" 
+                id="03ABUDHABI2083" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/30/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/04/03ABUDHABI2083.html">03ABUDHABI2083</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ANOTHER STRIKE MEDIATED AND RESOLVED BY THE LABOUR MINISTRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-168.4439 290.0000)" 
+                id="03ABUDHABI2323" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/12/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/05/03ABUDHABI2323.html">03ABUDHABI2323</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LABOR MINISTRY MEDIATES STRIKE IN DUBAI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 235.0969)" 
+                id="03ABUDHABI2670" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/07/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/06/03ABUDHABI2670.html">03ABUDHABI2670</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THREE MORE LABOR STRIKES RESOLVED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(157.8692 -53.9064)" 
+                id="03ABUDHABI941" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/26/03</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/02/03ABUDHABI941.html">03ABUDHABI941</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>UAE DRAFTS LABOR UNION REGULATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

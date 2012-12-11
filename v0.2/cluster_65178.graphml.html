@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07MOSCOW2582">07MOSCOW2582</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/01/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW3034">07MOSCOW3034</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07MOSCOW3034.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KREMLIN NON-AGGRESSION PACT WITH THE COMMUNIST PARTY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW4967">07MOSCOW4967</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07MOSCOW4967.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/12/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SPS CHAIRMAN STAYS OPTIMISTIC ON ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5355">07MOSCOW5355</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5355.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPOSITION LAMENT ON RULING PARTY TACTICS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5410">07MOSCOW5410</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5410.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MEDIA AND THE ELECTIONS:  THE DEBATES AND THE ADS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5417">07MOSCOW5417</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5417.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIA'S RADICAL LIBERALS - SPS PARTY SHIFTS INTO OPPOSITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5433">07MOSCOW5433</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5433.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE WEEK IN POLITICS:  PUTIN STUMPS FOR, STOMPS ON, UNITED RUSSIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5453">07MOSCOW5453</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5453.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/19/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ODIHR BOYCOTT CONTINUES TO RESONATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5506">07MOSCOW5506</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5506.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/23/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">"JUST RUSSIA" STRUGGLES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5516">07MOSCOW5516</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5516.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/26/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE WEEK IN POLITICS:  THE PUTIN NATIONAL CONVENTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07MOSCOW5600">07MOSCOW5600</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07MOSCOW5600.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CIVIC FORCE: A KREMLIN EXPERIMENT GONE NOWHERE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="375.6484" y1="-102.3611" 
+                  x2="348.5072" y2="-280.1146" class="btwns0"/>
+        
+            <line x1="375.6484" y1="-102.3611" 
+                  x2="271.4851" y2="95.9668" class="btwns4"/>
+        
+            <line x1="390.0000" y1="247.0296" 
+                  x2="273.3821" y2="112.3791" class="btwns0"/>
+        
+            <line x1="91.7196" y1="270.8860" 
+                  x2="259.5792" y2="111.7011" class="btwns10"/>
+        
+            <line x1="91.7196" y1="270.8860" 
+                  x2="-107.8076" y2="289.0914" class="btwns10"/>
+        
+            <line x1="-238.2016" y1="126.2184" 
+                  x2="-233.2529" y2="-84.7060" class="btwns7"/>
+        
+            <line x1="-238.2016" y1="126.2184" 
+                  x2="-123.6904" y2="281.9437" class="btwns9"/>
+        
+            <line x1="266.8353" y1="104.8200" 
+                  x2="163.5768" y2="-37.5344" class="btwns0"/>
+        
+            <line x1="-233.0184" y1="-94.7032" 
+                  x2="-380.5811" y2="-147.3304" class="btwns0"/>
+        
+            <line x1="-233.0184" y1="-94.7032" 
+                  x2="-152.1975" y2="-275.7325" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(375.6484 -102.3611)" 
+                class="vertice degree3 btwns3 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(346.9978 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 247.0296)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(91.7196 270.8860)" 
+                class="vertice degree3 btwns8 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-238.2016 126.2184)" 
+                class="vertice degree3 btwns7 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(266.8353 104.8200)" 
+                class="vertice degree10 btwns10 authority10 MOSCOW">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-233.0184 -94.7032)" 
+                class="vertice degree6 btwns5 authority6 MOSCOW">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -150.6896)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-117.7663 290.0000)" 
+                class="vertice degree3 btwns8 authority3 MOSCOW">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-148.1208 -284.8638)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(157.7052 -45.6291)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(375.6484 -102.3611)" 
+                id="07MOSCOW2582" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07MOSCOW2582
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(346.9978 -290.0000)" 
+                id="07MOSCOW3034" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07MOSCOW3034.html">07MOSCOW3034</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KREMLIN NON-AGGRESSION PACT WITH THE COMMUNIST PARTY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 247.0296)" 
+                id="07MOSCOW4967" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07MOSCOW4967.html">07MOSCOW4967</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SPS CHAIRMAN STAYS OPTIMISTIC ON ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(91.7196 270.8860)" 
+                id="07MOSCOW5355" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5355.html">07MOSCOW5355</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>OPPOSITION LAMENT ON RULING PARTY TACTICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-238.2016 126.2184)" 
+                id="07MOSCOW5410" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5410.html">07MOSCOW5410</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MEDIA AND THE ELECTIONS:  THE DEBATES AND THE ADS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(266.8353 104.8200)" 
+                id="07MOSCOW5417" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5417.html">07MOSCOW5417</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>RUSSIA'S RADICAL LIBERALS - SPS PARTY SHIFTS INTO OPPOSITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-233.0184 -94.7032)" 
+                id="07MOSCOW5433" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5433.html">07MOSCOW5433</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>THE WEEK IN POLITICS:  PUTIN STUMPS FOR, STOMPS ON, UNITED RUSSIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -150.6896)" 
+                id="07MOSCOW5453" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5453.html">07MOSCOW5453</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ODIHR BOYCOTT CONTINUES TO RESONATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-117.7663 290.0000)" 
+                id="07MOSCOW5506" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5506.html">07MOSCOW5506</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>"JUST RUSSIA" STRUGGLES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-148.1208 -284.8638)" 
+                id="07MOSCOW5516" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5516.html">07MOSCOW5516</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE WEEK IN POLITICS:  THE PUTIN NATIONAL CONVENTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(157.7052 -45.6291)" 
+                id="07MOSCOW5600" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07MOSCOW5600.html">07MOSCOW5600</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CIVIC FORCE: A KREMLIN EXPERIMENT GONE NOWHERE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

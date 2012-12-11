@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD3630">08BAGHDAD3630</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08BAGHDAD3630.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAQI GOVERNMENT REQUESTS AUSTRALIA, ROMANIA, EL SALVADOR AND ESTONIA PROVIDE "NON-COMBAT ASSISTANCE" BEYOND 31 DECEMBER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TALLINN402">08TALLINN402</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/11/08TALLINN402.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIAN COMMENTS AND QUESTIONS ON IRAQ INVITE LETTER FOR 1+4+1</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE126109">08STATE126109</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/29/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA1501">08OTTAWA1501</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08OTTAWA1501.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/01/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADA SEEKING TO KEEP EXCHANGE OFFICERS IN IRAQ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW3488">08MOSCOW3488</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08MOSCOW3488.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIA SATISFIED WITH U.S.-IRAQ AGREEMENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BAGHDAD3794">08BAGHDAD3794</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08BAGHDAD3794.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/03/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">STATUS OF COALITION PARTNERS IN IRAQ; RECOMMENDED DEMARCHE FOR AUSTRALIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE128040">08STATE128040</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08STATE128040.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">URGENT DEMARCHE TO GOA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA1231">08CANBERRA1231</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08CANBERRA1231.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/05/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GOA REPLY TO DEMARCHE ON WAY FORWARD WITH IRAQ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA1258">08CANBERRA1258</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08CANBERRA1258.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/11/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">SOFA UNLIKELY FOR AUSTRALIA THIS YEAR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA1271">08CANBERRA1271</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08CANBERRA1271.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/08</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">AUSTRALIAN REQUIRES IMMEDIATE HELP WITH IRAQ SOFA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA1576">08OTTAWA1576</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08OTTAWA1576.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">CANADA TO HALVE IRAQ EXCHANGE OFFICER CONTINGENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA1594">08OTTAWA1594</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08OTTAWA1594.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/08</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">CANADA WITHDRAWS ENTIRE IRAQI EXCHANGE CONTINGENT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="184.8291" y1="-274.9556" 
+                  x2="-30.5648" y2="-289.3339" class="btwns2"/>
+        
+            <line x1="184.8291" y1="-274.9556" 
+                  x2="8.2326" y2="-198.9081" class="btwns2"/>
+        
+            <line x1="184.8291" y1="-274.9556" 
+                  x2="380.2152" y2="-233.7544" class="btwns2"/>
+        
+            <line x1="-157.8985" y1="267.2211" 
+                  x2="-43.1447" y2="131.8206" class="btwns2"/>
+        
+            <line x1="-157.8985" y1="267.2211" 
+                  x2="16.3008" y2="288.7722" class="btwns0"/>
+        
+            <line x1="-36.6792" y1="124.1919" 
+                  x2="199.0126" y2="143.4659" class="btwns3"/>
+        
+            <line x1="-36.6792" y1="124.1919" 
+                  x2="-153.5793" y2="-86.2158" class="btwns10"/>
+        
+            <line x1="-36.6792" y1="124.1919" 
+                  x2="22.6780" y2="280.6502" class="btwns3"/>
+        
+            <line x1="208.9793" y1="144.2809" 
+                  x2="236.8401" y2="277.9824" class="btwns1"/>
+        
+            <line x1="238.8801" y1="287.7721" 
+                  x2="36.2246" y2="289.8952" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="-43.7507" 
+                  x2="-168.2001" y2="-92.7980" class="btwns2"/>
+        
+            <line x1="-40.5426" y1="-290.0000" 
+                  x2="-4.7972" y2="-204.1841" class="btwns0"/>
+        
+            <line x1="-40.5426" y1="-290.0000" 
+                  x2="-186.9999" y2="-253.8390" class="btwns0"/>
+        
+            <line x1="-40.5426" y1="-290.0000" 
+                  x2="-153.2630" y2="-103.5153" class="btwns3"/>
+        
+            <line x1="-0.9520" y1="-194.9529" 
+                  x2="-187.1003" y2="-248.6694" class="btwns0"/>
+        
+            <line x1="-0.9520" y1="-194.9529" 
+                  x2="-149.9940" y2="-100.3175" class="btwns3"/>
+        
+            <line x1="-196.7083" y1="-251.4420" 
+                  x2="-160.8117" y2="-104.6709" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(184.8291 -274.9556)" 
+                class="vertice degree5 btwns2 authority4 BAGHDAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-157.8985 267.2211)" 
+                class="vertice degree2 btwns0 authority2 BAGHDAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-36.6792 124.1919)" 
+                class="vertice degree7 btwns8 authority7 CANBERRA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(208.9793 144.2809)" 
+                class="vertice degree2 btwns1 authority2 CANBERRA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(238.8801 287.7721)" 
+                class="vertice degree2 btwns0 authority2 CANBERRA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -43.7507)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-40.5426 -290.0000)" 
+                class="vertice degree7 btwns2 authority7 OTTAWA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-0.9520 -194.9529)" 
+                class="vertice degree7 btwns2 authority7 OTTAWA">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-196.7083 -251.4420)" 
+                class="vertice degree5 btwns0 authority5 OTTAWA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-158.4359 -94.9572)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(26.2251 290.0000)" 
+                class="vertice degree5 btwns1 authority4 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -231.6911)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(184.8291 -274.9556)" 
+                id="08BAGHDAD3630" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08BAGHDAD3630.html">08BAGHDAD3630</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>IRAQI GOVERNMENT REQUESTS AUSTRALIA, ROMANIA, EL SALVADOR AND ESTONIA PROVIDE "NON-COMBAT ASSISTANCE" BEYOND 31 DECEMBER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-157.8985 267.2211)" 
+                id="08BAGHDAD3794" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08BAGHDAD3794.html">08BAGHDAD3794</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>STATUS OF COALITION PARTNERS IN IRAQ; RECOMMENDED DEMARCHE FOR AUSTRALIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-36.6792 124.1919)" 
+                id="08CANBERRA1231" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08CANBERRA1231.html">08CANBERRA1231</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>GOA REPLY TO DEMARCHE ON WAY FORWARD WITH IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(208.9793 144.2809)" 
+                id="08CANBERRA1258" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08CANBERRA1258.html">08CANBERRA1258</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SOFA UNLIKELY FOR AUSTRALIA THIS YEAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.8801 287.7721)" 
+                id="08CANBERRA1271" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>12/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08CANBERRA1271.html">08CANBERRA1271</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIAN REQUIRES IMMEDIATE HELP WITH IRAQ SOFA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -43.7507)" 
+                id="08MOSCOW3488" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/03/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08MOSCOW3488.html">08MOSCOW3488</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIA SATISFIED WITH U.S.-IRAQ AGREEMENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-40.5426 -290.0000)" 
+                id="08OTTAWA1501" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/01/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08OTTAWA1501.html">08OTTAWA1501</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>CANADA SEEKING TO KEEP EXCHANGE OFFICERS IN IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-0.9520 -194.9529)" 
+                id="08OTTAWA1576" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08OTTAWA1576.html">08OTTAWA1576</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>CANADA TO HALVE IRAQ EXCHANGE OFFICER CONTINGENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-196.7083 -251.4420)" 
+                id="08OTTAWA1594" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08OTTAWA1594.html">08OTTAWA1594</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CANADA WITHDRAWS ENTIRE IRAQI EXCHANGE CONTINGENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-158.4359 -94.9572)" 
+                id="08STATE126109" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    08STATE126109
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(26.2251 290.0000)" 
+                id="08STATE128040" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08STATE128040.html">08STATE128040</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>URGENT DEMARCHE TO GOA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -231.6911)" 
+                id="08TALLINN402" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/11/08TALLINN402.html">08TALLINN402</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIAN COMMENTS AND QUESTIONS ON IRAQ INVITE LETTER FOR 1+4+1</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

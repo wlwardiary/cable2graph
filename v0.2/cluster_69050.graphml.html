@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08TOKYO5551">08TOKYO5551</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE96719">07STATE96719</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/11/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TOKYO3499">07TOKYO3499</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/01/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07TOKYO3633">07TOKYO3633</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/08/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SINGAPORE1492">07SINGAPORE1492</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07SINGAPORE1492.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">RESULTS OF BLUE LANTERN CHECK ON APPLICATION 05-050052012</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE118433">07STATE118433</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/22/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TOKYO4831">07TOKYO4831</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/17/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07TOKYO4928">07TOKYO4928</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/22/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07TOKYO5551">07TOKYO5551</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/13/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TOKYO5599">07TOKYO5599</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07TOKYO5599.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEFENSE REFORM: PROBLEM UNDERSTOOD, SOLUTION NOT EASY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08TOKYO66">08TOKYO66</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/09/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE9478">08STATE9478</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/30/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO689">08TOKYO689</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO689.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/14/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GOJ RESPONSE ON BLUE LANTERN LEVEL 3: POST-SHIPMENT END-USE CHECK  ON LICENSES 050055671, 050040344, 050027799, 050046738</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO728">08TOKYO728</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO728.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOJ RESPONSE ON BLUE LANTERN LEVEL 3: POST-SHIPMENT END-USE CHECK  ON LICENSES 050055671, 050040344, 050027799</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO753">08TOKYO753</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO753.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/19/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MOD EXPRESSES DESIRE TO IMPROVE OVERSIGHT FOR BLUE LANTERN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO1594">08TOKYO1594</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/06/08TOKYO1594.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOD SUSPENDS TRADING COMPANIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2127">08TOKYO2127</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TOKYO2127.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/04/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LEM SUPPLY COMPANY PRESIDENT DETAILS ON-LINE SALES OF CONTROLLED ITEMS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2318">08TOKYO2318</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08TOKYO2318.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/22/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOD PUBLISHED BANNED COMPANIES ON THEIR WEBSITE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2462">08TOKYO2462</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TOKYO2462.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/09/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">New Controls on Non-Listed Military End-Use Items</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2816">08TOKYO2816</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08TOKYO2816.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/09/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">USML CONTROLLED ITEMS CONTINUE TO SELL IN JAPAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2930">08TOKYO2930</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08TOKYO2930.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/21/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RETIRED GSDF GENERAL GRIM ABOUT FUTURE ENFORCEMENT OF EXPORT CONTROLS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-47.6427" y1="-194.7811" 
+                  x2="-25.5997" y2="-280.3164" class="btwns0"/>
+        
+            <line x1="-47.6427" y1="-194.7811" 
+                  x2="-73.5415" y2="-76.4422" class="btwns2"/>
+        
+            <line x1="347.8064" y1="116.5649" 
+                  x2="269.5517" y2="41.4271" class="btwns0"/>
+        
+            <line x1="251.1180" y1="-31.9052" 
+                  x2="260.6724" y2="24.6409" class="btwns0"/>
+        
+            <line x1="-75.6794" y1="-66.6734" 
+                  x2="-98.7569" y2="88.2948" class="btwns4"/>
+        
+            <line x1="102.7218" y1="84.6549" 
+                  x2="252.7983" y2="37.4988" class="btwns8"/>
+        
+            <line x1="102.7218" y1="84.6549" 
+                  x2="-90.2520" y2="97.5205" class="btwns10"/>
+        
+            <line x1="-251.0272" y1="118.9610" 
+                  x2="-110.1362" y2="99.5505" class="btwns0"/>
+        
+            <line x1="-208.6412" y1="199.7515" 
+                  x2="-107.5275" y2="105.0226" class="btwns0"/>
+        
+            <line x1="-102.0679" y1="222.6978" 
+                  x2="-100.3774" y2="108.1846" class="btwns0"/>
+        
+            <line x1="-299.7614" y1="-124.8010" 
+                  x2="-293.1286" y2="-210.0146" class="btwns0"/>
+        
+            <line x1="-299.7614" y1="-124.8010" 
+                  x2="-260.8366" y2="-16.7243" class="btwns2"/>
+        
+            <line x1="114.0850" y1="290.0000" 
+                  x2="31.6780" y2="219.8973" class="btwns0"/>
+        
+            <line x1="262.3385" y1="34.5011" 
+                  x2="289.7054" y2="-97.4555" class="btwns4"/>
+        
+            <line x1="24.0612" y1="213.4177" 
+                  x2="-92.8966" y2="104.9845" class="btwns2"/>
+        
+            <line x1="238.5586" y1="-209.6367" 
+                  x2="287.1271" y2="-116.1216" class="btwns0"/>
+        
+            <line x1="291.7362" y1="-107.2471" 
+                  x2="380.7199" y2="-142.9712" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-2.4535" 
+                  x2="-267.4414" y2="-6.9493" class="btwns0"/>
+        
+            <line x1="-27.7817" y1="33.7716" 
+                  x2="-92.7565" y2="91.5412" class="btwns0"/>
+        
+            <line x1="-257.4481" y1="-7.3159" 
+                  x2="-108.5335" y2="92.6135" class="btwns6"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-47.6427 -194.7811)" 
+                class="vertice degree1 btwns1 authority1 SINGAPORE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(347.8064 116.5649)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-23.1042 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(251.1180 -31.9052)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-75.6794 -66.6734)" 
+                class="vertice degree1 btwns2 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(102.7218 84.6549)" 
+                class="vertice degree1 btwns5 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-251.0272 118.9610)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-208.6412 199.7515)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-102.0679 222.6978)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-299.7614 -124.8010)" 
+                class="vertice degree1 btwns1 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(114.0850 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(262.3385 34.5011)" 
+                class="vertice degree4 btwns5 authority4 TOKYO">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(24.0612 213.4177)" 
+                class="vertice degree1 btwns1 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(238.5586 -209.6367)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(291.7362 -107.2471)" 
+                class="vertice degree2 btwns2 authority2 TOKYO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -146.6969)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -2.4535)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-27.7817 33.7716)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-292.3526 -219.9844)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-257.4481 -7.3159)" 
+                class="vertice degree2 btwns3 authority2 TOKYO">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-100.2298 98.1857)" 
+                class="vertice degree10 btwns10 authority10 TOKYO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-47.6427 -194.7811)" 
+                id="07SINGAPORE1492" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07SINGAPORE1492.html">07SINGAPORE1492</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>RESULTS OF BLUE LANTERN CHECK ON APPLICATION 05-050052012</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(347.8064 116.5649)" 
+                id="07STATE118433" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE118433
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-23.1042 -290.0000)" 
+                id="07STATE96719" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE96719
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(251.1180 -31.9052)" 
+                id="07TOKYO3499" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TOKYO3499
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-75.6794 -66.6734)" 
+                id="07TOKYO3633" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07TOKYO3633
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(102.7218 84.6549)" 
+                id="07TOKYO4831" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07TOKYO4831
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-251.0272 118.9610)" 
+                id="07TOKYO4928" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TOKYO4928
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-208.6412 199.7515)" 
+                id="07TOKYO5551" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07TOKYO5551
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-102.0679 222.6978)" 
+                id="07TOKYO5599" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07TOKYO5599.html">07TOKYO5599</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEFENSE REFORM: PROBLEM UNDERSTOOD, SOLUTION NOT EASY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-299.7614 -124.8010)" 
+                id="08STATE9478" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    08STATE9478
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(114.0850 290.0000)" 
+                id="08TOKYO1594" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/06/08TOKYO1594.html">08TOKYO1594</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOD SUSPENDS TRADING COMPANIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(262.3385 34.5011)" 
+                id="08TOKYO2127" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TOKYO2127.html">08TOKYO2127</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>LEM SUPPLY COMPANY PRESIDENT DETAILS ON-LINE SALES OF CONTROLLED ITEMS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(24.0612 213.4177)" 
+                id="08TOKYO2318" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/22/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08TOKYO2318.html">08TOKYO2318</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>MOD PUBLISHED BANNED COMPANIES ON THEIR WEBSITE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(238.5586 -209.6367)" 
+                id="08TOKYO2462" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TOKYO2462.html">08TOKYO2462</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>New Controls on Non-Listed Military End-Use Items</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(291.7362 -107.2471)" 
+                id="08TOKYO2816" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08TOKYO2816.html">08TOKYO2816</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>USML CONTROLLED ITEMS CONTINUE TO SELL IN JAPAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -146.6969)" 
+                id="08TOKYO2930" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08TOKYO2930.html">08TOKYO2930</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RETIRED GSDF GENERAL GRIM ABOUT FUTURE ENFORCEMENT OF EXPORT CONTROLS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -2.4535)" 
+                id="08TOKYO5551" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08TOKYO5551
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-27.7817 33.7716)" 
+                id="08TOKYO66" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/09/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08TOKYO66
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-292.3526 -219.9844)" 
+                id="08TOKYO689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO689.html">08TOKYO689</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOJ RESPONSE ON BLUE LANTERN LEVEL 3: POST-SHIPMENT END-USE CHECK  ON LICENSES 050055671, 050040344, 050027799, 050046738</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-257.4481 -7.3159)" 
+                id="08TOKYO728" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO728.html">08TOKYO728</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GOJ RESPONSE ON BLUE LANTERN LEVEL 3: POST-SHIPMENT END-USE CHECK  ON LICENSES 050055671, 050040344, 050027799</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-100.2298 98.1857)" 
+                id="08TOKYO753" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO753.html">08TOKYO753</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MOD EXPRESSES DESIRE TO IMPROVE OVERSIGHT FOR BLUE LANTERN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

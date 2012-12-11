@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL498">09SEOUL498</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/03/09SEOUL498.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BIG NAMES IMPLICATED IN UNFOLDING BIPARTISAN BRIBERY SCANDAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL562">09SEOUL562</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09SEOUL562.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/08/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GRANTING OVERSEAS KOREANS VOTING RIGHTS RAISES RISK OF CORRUPTION, IN-FIGHTING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL596">09SEOUL596</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09SEOUL596.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/13/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROH MOO-HYUN'S WIFE AND SON QUESTIONED IN MONEY SCANDAL; ROH IS NEXT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL821">09SEOUL821</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09SEOUL821.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/23/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Former President Roh Commits Suicide</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL823">09SEOUL823</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09SEOUL823.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FUNERAL ARRANGEMENTS FOR FORMER PRESIDENT ROH AND REACTION TO HIS DEATH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL853">09SEOUL853</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09SEOUL853.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ANGER OVER ROH'S DEATH SPARKS CALL FOR PROTESTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL894">09SEOUL894</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09SEOUL894.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLITICAL FALLOUT OF ROH'S SUICIDE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL895">09SEOUL895</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09SEOUL895.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/05/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUICIDE IN KOREA: ROH'S DEATH IN CONTEXT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL1301">09SEOUL1301</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09SEOUL1301.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">VICE-PRESIDENT BIDEN, SECRETARY CLINTON, TOP PICKS FOR KDJ FUNERAL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL1319">09SEOUL1319</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09SEOUL1319.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FORMER PRESIDENT KIM DAE-JUNG'S OBITUARY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09SEOUL1327">09SEOUL1327</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09SEOUL1327.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SOMBER REACTION TO KIM DAE-JUNG'S DEATH</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="234.0369" y1="290.0000" 
+                  x2="343.7442" y2="170.1328" class="btwns2"/>
+        
+            <line x1="350.4957" y1="162.7560" 
+                  x2="359.6660" y2="-3.2599" class="btwns6"/>
+        
+            <line x1="360.2175" y1="-13.2447" 
+                  x2="388.1973" y2="-165.9110" class="btwns0"/>
+        
+            <line x1="360.2175" y1="-13.2447" 
+                  x2="204.0337" y2="-146.0811" class="btwns6"/>
+        
+            <line x1="-367.0529" y1="98.4456" 
+                  x2="-275.2293" y2="225.7724" class="btwns2"/>
+        
+            <line x1="-367.0529" y1="98.4456" 
+                  x2="-388.6197" y2="-56.3042" class="btwns6"/>
+        
+            <line x1="-390.0000" y1="-66.2085" 
+                  x2="-275.9063" y2="-204.3702" class="btwns8"/>
+        
+            <line x1="-18.3984" y1="-254.2569" 
+                  x2="201.3283" y2="-288.4618" class="btwns1"/>
+        
+            <line x1="-18.3984" y1="-254.2569" 
+                  x2="-259.6769" y2="-213.7371" class="btwns10"/>
+        
+            <line x1="-18.3984" y1="-254.2569" 
+                  x2="187.3779" y2="-156.8387" class="btwns7"/>
+        
+            <line x1="390.0000" y1="-175.7472" 
+                  x2="219.6357" y2="-284.6153" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-175.7472" 
+                  x2="206.3452" y2="-153.7491" class="btwns0"/>
+        
+            <line x1="211.2093" y1="-290.0000" 
+                  x2="197.4864" y2="-162.5024" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(234.0369 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(350.4957 162.7560)" 
+                class="vertice degree3 btwns3 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(360.2175 -13.2447)" 
+                class="vertice degree6 btwns6 authority6 SEOUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-367.0529 98.4456)" 
+                class="vertice degree3 btwns3 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-269.3800 233.8833)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -66.2085)" 
+                class="vertice degree3 btwns6 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-18.3984 -254.2569)" 
+                class="vertice degree6 btwns10 authority6 SEOUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -175.7472)" 
+                class="vertice degree6 btwns0 authority6 SEOUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(211.2093 -290.0000)" 
+                class="vertice degree6 btwns1 authority6 SEOUL">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-269.5388 -212.0809)" 
+                class="vertice degree3 btwns8 authority3 SEOUL">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(196.4162 -152.5598)" 
+                class="vertice degree10 btwns7 authority10 SEOUL">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(234.0369 290.0000)" 
+                id="09SEOUL1301" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/14/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09SEOUL1301.html">09SEOUL1301</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VICE-PRESIDENT BIDEN, SECRETARY CLINTON, TOP PICKS FOR KDJ FUNERAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(350.4957 162.7560)" 
+                id="09SEOUL1319" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>08/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09SEOUL1319.html">09SEOUL1319</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>FORMER PRESIDENT KIM DAE-JUNG'S OBITUARY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(360.2175 -13.2447)" 
+                id="09SEOUL1327" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>08/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09SEOUL1327.html">09SEOUL1327</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>SOMBER REACTION TO KIM DAE-JUNG'S DEATH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-367.0529 98.4456)" 
+                id="09SEOUL498" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/03/09SEOUL498.html">09SEOUL498</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>BIG NAMES IMPLICATED IN UNFOLDING BIPARTISAN BRIBERY SCANDAL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-269.3800 233.8833)" 
+                id="09SEOUL562" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/08/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09SEOUL562.html">09SEOUL562</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GRANTING OVERSEAS KOREANS VOTING RIGHTS RAISES RISK OF CORRUPTION, IN-FIGHTING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -66.2085)" 
+                id="09SEOUL596" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/13/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09SEOUL596.html">09SEOUL596</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ROH MOO-HYUN'S WIFE AND SON QUESTIONED IN MONEY SCANDAL; ROH IS NEXT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-18.3984 -254.2569)" 
+                id="09SEOUL821" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09SEOUL821.html">09SEOUL821</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Former President Roh Commits Suicide</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -175.7472)" 
+                id="09SEOUL823" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09SEOUL823.html">09SEOUL823</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>FUNERAL ARRANGEMENTS FOR FORMER PRESIDENT ROH AND REACTION TO HIS DEATH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(211.2093 -290.0000)" 
+                id="09SEOUL853" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09SEOUL853.html">09SEOUL853</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ANGER OVER ROH'S DEATH SPARKS CALL FOR PROTESTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-269.5388 -212.0809)" 
+                id="09SEOUL894" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09SEOUL894.html">09SEOUL894</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>POLITICAL FALLOUT OF ROH'S SUICIDE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(196.4162 -152.5598)" 
+                id="09SEOUL895" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/05/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09SEOUL895.html">09SEOUL895</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SUICIDE IN KOREA: ROH'S DEATH IN CONTEXT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

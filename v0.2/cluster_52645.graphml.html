@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI21">07AITTAIPEI21</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/04/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI2302">07AITTAIPEI2302</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/07/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI2302">07TAIPEI2302</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07TAIPEI2302.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/09/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">TYPHOON KROSA CAUSES WIDESPREAD DAMAGE TO TAIWAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07TAIPEI2360">07TAIPEI2360</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07TAIPEI2360.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ENVIRONMENTAL IMPACT ASSESSMENT IN TAIWAN--AT A CROSSROADS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07AITTAIPEI2360">07AITTAIPEI2360</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/18/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07BEIJING7110">07BEIJING7110</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/14/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07AITTAIPEI2494">07AITTAIPEI2494</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07AITTAIPEI2494.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ENVIRONMENTAL MINISTER WINSTON DANG ON TAIWAN'S ENVIRONMENT AND THE UPCOMING ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BEIJING37">08BEIJING37</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/04/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TAIPEI236">08TAIPEI236</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/02/08TAIPEI236.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TAIWAN REMAINS VULNERABLE TO ECONOMIC IMPACT OF NATURAL DISASTERS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08AITTAIPEI236">08AITTAIPEI236</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/21/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08CHENGDU210">08CHENGDU210</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08CHENGDU210.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHENGDU MANIPULATING AIR QUALITY DATA?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09CHENGDU95">09CHENGDU95</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09CHENGDU95.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOUTHWEST CHINA:  WHAT'S GOING ON WITH AIR QUALITY DATA?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING1945">09BEIJING1945</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09BEIJING1945.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/10/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EMBASSY AIR QUALITY TWEETS SAID TO "CONFUSE" CHINESE PUBLIC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09AITTAIPEI854">09AITTAIPEI854</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/15/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TAIPEI854">09TAIPEI854</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09TAIPEI854.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TAIWAN DISASTER REDUCTION CENTER EXPECTS MORE CROSS-STRAIT COOPERATION, WORRIES ABOUT CLIMATE CHANGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BEIJING3179">09BEIJING3179</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09BEIJING3179.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/27/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">HAZARDOUS AIR DAYS IN BEIJING</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-390.0000" y1="-121.2634" 
+                  x2="-256.1512" y2="-85.9356" class="btwns2"/>
+        
+            <line x1="-370.4035" y1="13.6316" 
+                  x2="-254.3563" y2="-77.2192" class="btwns2"/>
+        
+            <line x1="-16.4231" y1="290.0000" 
+                  x2="18.6631" y2="184.3259" class="btwns2"/>
+        
+            <line x1="21.8142" y1="174.8353" 
+                  x2="160.6628" y2="72.2434" class="btwns9"/>
+        
+            <line x1="21.8142" y1="174.8353" 
+                  x2="-134.3309" y2="167.2033" class="btwns10"/>
+        
+            <line x1="168.7055" y1="66.3008" 
+                  x2="247.0654" y2="-60.5843" class="btwns5"/>
+        
+            <line x1="168.7055" y1="66.3008" 
+                  x2="283.6315" y2="124.7508" class="btwns4"/>
+        
+            <line x1="-207.9221" y1="57.3401" 
+                  x2="-149.3459" y2="158.0704" class="btwns9"/>
+        
+            <line x1="-207.9221" y1="57.3401" 
+                  x2="-243.8396" y2="-73.7391" class="btwns9"/>
+        
+            <line x1="-229.3149" y1="-203.3137" 
+                  x2="-245.0653" y2="-93.2827" class="btwns1"/>
+        
+            <line x1="-229.3149" y1="-203.3137" 
+                  x2="-122.2013" y2="-197.2564" class="btwns0"/>
+        
+            <line x1="246.6065" y1="-191.4744" 
+                  x2="251.8535" y2="-79.0817" class="btwns2"/>
+        
+            <line x1="252.3198" y1="-69.0926" 
+                  x2="380.2675" y2="-99.2972" class="btwns2"/>
+        
+            <line x1="-246.4823" y1="-83.3836" 
+                  x2="-119.8595" y2="-190.2424" class="btwns3"/>
+        
+            <line x1="-8.4307" y1="-290.0000" 
+                  x2="-104.7807" y2="-203.3776" class="btwns2"/>
+        
+            <line x1="312.4159" y1="226.1497" 
+                  x2="294.5545" y2="139.0801" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-390.0000 -121.2634)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-370.4035 13.6316)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-16.4231 290.0000)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(21.8142 174.8353)" 
+                class="vertice degree5 btwns10 authority4 AITTAIPEI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(168.7055 66.3008)" 
+                class="vertice degree5 btwns9 authority4 BEIJING">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-207.9221 57.3401)" 
+                class="vertice degree2 btwns8 authority2 TAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-144.3189 166.7151)" 
+                class="vertice degree2 btwns9 authority2 TAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-229.3149 -203.3137)" 
+                class="vertice degree2 btwns0 authority2 AITTAIPEI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(246.6065 -191.4744)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(252.3198 -69.0926)" 
+                class="vertice degree5 btwns4 authority4 CHENGDU">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-246.4823 -83.3836)" 
+                class="vertice degree10 btwns9 authority10 TAIPEI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-8.4307 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 AITTAIPEI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(312.4159 226.1497)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(292.5450 129.2841)" 
+                class="vertice degree2 btwns2 authority2 BEIJING">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -101.5947)" 
+                class="vertice degree0 btwns0 authority0 CHENGDU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-112.2172 -196.6919)" 
+                class="vertice degree5 btwns2 authority5 TAIPEI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-390.0000 -121.2634)" 
+                id="07AITTAIPEI21" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07AITTAIPEI21
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-370.4035 13.6316)" 
+                id="07AITTAIPEI2302" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07AITTAIPEI2302
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-16.4231 290.0000)" 
+                id="07AITTAIPEI2360" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07AITTAIPEI2360
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(21.8142 174.8353)" 
+                id="07AITTAIPEI2494" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07AITTAIPEI2494.html">07AITTAIPEI2494</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ENVIRONMENTAL MINISTER WINSTON DANG ON TAIWAN'S ENVIRONMENT AND THE UPCOMING ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(168.7055 66.3008)" 
+                id="07BEIJING7110" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    07BEIJING7110
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-207.9221 57.3401)" 
+                id="07TAIPEI2302" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07TAIPEI2302.html">07TAIPEI2302</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>TYPHOON KROSA CAUSES WIDESPREAD DAMAGE TO TAIWAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-144.3189 166.7151)" 
+                id="07TAIPEI2360" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07TAIPEI2360.html">07TAIPEI2360</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ENVIRONMENTAL IMPACT ASSESSMENT IN TAIWAN--AT A CROSSROADS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-229.3149 -203.3137)" 
+                id="08AITTAIPEI236" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/21/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08AITTAIPEI236
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(246.6065 -191.4744)" 
+                id="08BEIJING37" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/04/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08BEIJING37
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(252.3198 -69.0926)" 
+                id="08CHENGDU210" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/29/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08CHENGDU210.html">08CHENGDU210</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CHENGDU MANIPULATING AIR QUALITY DATA?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-246.4823 -83.3836)" 
+                id="08TAIPEI236" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/20/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/02/08TAIPEI236.html">08TAIPEI236</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>TAIWAN REMAINS VULNERABLE TO ECONOMIC IMPACT OF NATURAL DISASTERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-8.4307 -290.0000)" 
+                id="09AITTAIPEI854" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09AITTAIPEI854
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(312.4159 226.1497)" 
+                id="09BEIJING1945" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/10/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09BEIJING1945.html">09BEIJING1945</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY AIR QUALITY TWEETS SAID TO "CONFUSE" CHINESE PUBLIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(292.5450 129.2841)" 
+                id="09BEIJING3179" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/27/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09BEIJING3179.html">09BEIJING3179</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>HAZARDOUS AIR DAYS IN BEIJING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -101.5947)" 
+                id="09CHENGDU95" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09CHENGDU95.html">09CHENGDU95</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTHWEST CHINA:  WHAT'S GOING ON WITH AIR QUALITY DATA?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.2172 -196.6919)" 
+                id="09TAIPEI854" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09TAIPEI854.html">09TAIPEI854</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>TAIWAN DISASTER REDUCTION CENTER EXPECTS MORE CROSS-STRAIT COOPERATION, WORRIES ABOUT CLIMATE CHANGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

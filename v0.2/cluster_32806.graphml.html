@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE188249">06STATE188249</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BEIJING23850">06BEIJING23850</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BEIJING23850.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PRC/IRAQ: CHINA TO SUPPORT MNF-I MANDATE EXTENSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06PARIS7445">06PARIS7445</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06PARIS7445.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED: DRAFT IRAQ UNSCR TEXT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE188677">06STATE188677</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/19/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO6618">06TOKYO6618</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TOKYO6618.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">JAPAN TO SUPPORT UNSCR TO EXTEND MNF-I</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SOFIA1579">06SOFIA1579</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06SOFIA1579.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BULGARIA: DRAFT UNSCR IRAQ RESOLUTION AND SECRETARY'S LETTER DELIVERED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ROME3130">06ROME3130</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ROME3130.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SHARING DRAFT UNSCR TEXT ON IRAQ WITH ITALY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN1635">06YEREVAN1635</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06YEREVAN1635.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHE DELIVERED: SHARING DRAFT IRAQ TEXT WITH UNSC AND MNF-I MEMBERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN1052">06TALLINN1052</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06TALLINN1052.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ESTONIA: SHARING DRAFT UNSCR TEXT ON IRAQ</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW2433">06WARSAW2433</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06WARSAW2433.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLAND OPTIMISTIC ON DRAFT UNSCR TEXT ON IRAQ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MOSCOW12592">06MOSCOW12592</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06MOSCOW12592.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIAN MFA ON DRAFT IRAQ UNSCR</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06SANSALVADOR2803">06SANSALVADOR2803</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06SANSALVADOR2803.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/22/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EL SALVADOR: AMBASSADOR DELIVERS MESSAGE ON IRAQ UNSCR TO PRESIDENT SACA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BAKU1730">06BAKU1730</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BAKU1730.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/28/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DRAFT IRAQ UNSCR SHARED WITH AZERBAIJANI MFA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW2478">06WARSAW2478</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06WARSAW2478.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLAND-IRAQ: GOP PREPARING TO CONFIRM TROOP PRESENCE THROUGH DECEMBER 31, 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WARSAW2479">06WARSAW2479</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06WARSAW2479.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLAND-IRAQ: GOP PREPARING TO CONFIRM TROOP PRESENCE THROUGH DECEMBER 31, 2007</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="198.3466" y1="290.0000" 
+                  x2="172.1732" y2="96.9540" class="btwns0"/>
+        
+            <line x1="-31.5634" y1="93.1513" 
+                  x2="160.8342" y2="87.3462" class="btwns0"/>
+        
+            <line x1="390.0000" y1="108.1555" 
+                  x2="180.7836" y2="88.0034" class="btwns0"/>
+        
+            <line x1="62.4301" y1="284.3558" 
+                  x2="166.0146" y2="95.8091" class="btwns0"/>
+        
+            <line x1="321.7535" y1="224.2001" 
+                  x2="178.2303" y2="93.7701" class="btwns0"/>
+        
+            <line x1="-50.3234" y1="216.7074" 
+                  x2="162.2031" y2="92.1025" class="btwns0"/>
+        
+            <line x1="6.3325" y1="-77.7528" 
+                  x2="163.7651" y2="79.9671" class="btwns10"/>
+        
+            <line x1="6.3325" y1="-77.7528" 
+                  x2="-124.8843" y2="-173.9913" class="btwns8"/>
+        
+            <line x1="170.8297" y1="87.0446" 
+                  x2="364.1371" y2="-10.9663" class="btwns0"/>
+        
+            <line x1="170.8297" y1="87.0446" 
+                  x2="292.3492" y2="-108.2400" class="btwns0"/>
+        
+            <line x1="170.8297" y1="87.0446" 
+                  x2="167.1536" y2="-107.0849" class="btwns0"/>
+        
+            <line x1="-132.9480" y1="-179.9055" 
+                  x2="-293.7415" y2="-147.2849" class="btwns6"/>
+        
+            <line x1="-303.5418" y1="-145.2967" 
+                  x2="-274.9728" y2="-280.2169" class="btwns0"/>
+        
+            <line x1="-303.5418" y1="-145.2967" 
+                  x2="-384.7509" y2="-13.6134" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(198.3466 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAKU">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-31.5634 93.1513)" 
+                class="vertice degree0 btwns0 authority0 BEIJING">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 108.1555)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(62.4301 284.3558)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(321.7535 224.2001)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-50.3234 216.7074)" 
+                class="vertice degree0 btwns0 authority0 SANSALVADOR">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(6.3325 -77.7528)" 
+                class="vertice degree1 btwns4 authority1 SOFIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(170.8297 87.0446)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-132.9480 -179.9055)" 
+                class="vertice degree1 btwns4 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(373.0562 -15.4884)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(297.6325 -116.7303)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-303.5418 -145.2967)" 
+                class="vertice degree2 btwns3 authority2 WARSAW">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-272.9013 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -5.1018)" 
+                class="vertice degree0 btwns0 authority0 WARSAW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(166.9643 -117.0831)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(198.3466 290.0000)" 
+                id="06BAKU1730" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/28/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BAKU1730.html">06BAKU1730</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DRAFT IRAQ UNSCR SHARED WITH AZERBAIJANI MFA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-31.5634 93.1513)" 
+                id="06BEIJING23850" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BEIJING23850.html">06BEIJING23850</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRC/IRAQ: CHINA TO SUPPORT MNF-I MANDATE EXTENSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 108.1555)" 
+                id="06MOSCOW12592" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06MOSCOW12592.html">06MOSCOW12592</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>RUSSIAN MFA ON DRAFT IRAQ UNSCR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(62.4301 284.3558)" 
+                id="06PARIS7445" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06PARIS7445.html">06PARIS7445</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: DRAFT IRAQ UNSCR TEXT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(321.7535 224.2001)" 
+                id="06ROME3130" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ROME3130.html">06ROME3130</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SHARING DRAFT UNSCR TEXT ON IRAQ WITH ITALY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-50.3234 216.7074)" 
+                id="06SANSALVADOR2803" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06SANSALVADOR2803.html">06SANSALVADOR2803</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EL SALVADOR: AMBASSADOR DELIVERS MESSAGE ON IRAQ UNSCR TO PRESIDENT SACA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(6.3325 -77.7528)" 
+                id="06SOFIA1579" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06SOFIA1579.html">06SOFIA1579</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>BULGARIA: DRAFT UNSCR IRAQ RESOLUTION AND SECRETARY'S LETTER DELIVERED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(170.8297 87.0446)" 
+                id="06STATE188249" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE188249
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-132.9480 -179.9055)" 
+                id="06STATE188677" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06STATE188677
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(373.0562 -15.4884)" 
+                id="06TALLINN1052" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TALLINN1052.html">06TALLINN1052</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ESTONIA: SHARING DRAFT UNSCR TEXT ON IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(297.6325 -116.7303)" 
+                id="06TOKYO6618" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06TOKYO6618.html">06TOKYO6618</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPAN TO SUPPORT UNSCR TO EXTEND MNF-I</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-303.5418 -145.2967)" 
+                id="06WARSAW2433" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06WARSAW2433.html">06WARSAW2433</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>POLAND OPTIMISTIC ON DRAFT UNSCR TEXT ON IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-272.9013 -290.0000)" 
+                id="06WARSAW2478" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06WARSAW2478.html">06WARSAW2478</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND-IRAQ: GOP PREPARING TO CONFIRM TROOP PRESENCE THROUGH DECEMBER 31, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -5.1018)" 
+                id="06WARSAW2479" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06WARSAW2479.html">06WARSAW2479</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLAND-IRAQ: GOP PREPARING TO CONFIRM TROOP PRESENCE THROUGH DECEMBER 31, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(166.9643 -117.0831)" 
+                id="06YEREVAN1635" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06YEREVAN1635.html">06YEREVAN1635</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED: SHARING DRAFT IRAQ TEXT WITH UNSC AND MNF-I MEMBERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BRATISLAVA352">05BRATISLAVA352</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/29/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BRATISLAVA458">05BRATISLAVA458</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/12/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05WARSAW2598">05WARSAW2598</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05WARSAW2598.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/17/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ENGAGING THE IRAQ COALITION: NO CHANGE IN POLISH PLANS - SMALL TROOP REDUCTION IN JULY, TRANSFORMATION OF STABILIZATION TO TRAINING MISSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05BRATISLAVA469">05BRATISLAVA469</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/19/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE111082">05STATE111082</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/20/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BUCHAREST1405">05BUCHAREST1405</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05BUCHAREST1405.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ: ROMANIA OPEN TO CHANGES IN ITS MISSION RESPONSE TO DEMARCHE ON ENGAGING THE IRAQ COALITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1105">05YEREVAN1105</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05YEREVAN1105.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/24/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ENGAGING ARMENIA IN ADVANCE OF THE IRAQ INTERNATIONAL CONFERENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA511">05BRATISLAVA511</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05BRATISLAVA511.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/01/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SLOVAKIA TO STAY THE COURSE IN IRAQ</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ALMATY2549">05ALMATY2549</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05ALMATY2549.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/08/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN - ENGAGING THE IRAQ COALITION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05WARSAW2786">05WARSAW2786</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/10/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA538">05BRATISLAVA538</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05BRATISLAVA538.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOD PROPOSES ADDING AFGHANISTAN TO JULY 22 AGENDA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05BRATISLAVA539">05BRATISLAVA539</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05BRATISLAVA539.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/11/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOD PROPOSES ADDING AFGHANISTAN TO JULY 22 AGENDA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05BAGHDAD2938">05BAGHDAD2938</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05BAGHDAD2938.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/13/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLISH AMBASSADOR TO IRAQ INDICATED DIMINISHED ROLE FOR POLISH FORCES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE131524">05STATE131524</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/29/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05WARSAW3044">05WARSAW3044</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05WARSAW3044.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/05/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAQ-POLAND: JONES-SMITH CONSULTATIONS WITH GOP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05VILNIUS930">05VILNIUS930</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/09/05VILNIUS930.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/07/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GOL DISINCLINED TO EMBED TROOPS IN IRAQI UNITS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-339.4856" y1="-155.0304" 
+                  x2="-86.2424" y2="-135.7256" class="btwns1"/>
+        
+            <line x1="121.4485" y1="290.0000" 
+                  x2="-42.1452" y2="266.1190" class="btwns1"/>
+        
+            <line x1="279.5579" y1="34.9560" 
+                  x2="194.0174" y2="-46.1874" class="btwns0"/>
+        
+            <line x1="279.5579" y1="34.9560" 
+                  x2="218.4283" y2="-100.4181" class="btwns0"/>
+        
+            <line x1="344.9280" y1="-161.9634" 
+                  x2="194.9990" y2="-58.7403" class="btwns0"/>
+        
+            <line x1="344.9280" y1="-161.9634" 
+                  x2="223.5930" y2="-113.2573" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-46.5618" 
+                  x2="196.7572" y2="-52.7495" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-46.5618" 
+                  x2="223.7264" y2="-106.1580" class="btwns0"/>
+        
+            <line x1="186.7623" y1="-53.0695" 
+                  x2="-66.7235" y2="-131.9928" class="btwns4"/>
+        
+            <line x1="-252.3653" y1="-243.1014" 
+                  x2="-84.7929" y2="-140.1984" class="btwns1"/>
+        
+            <line x1="214.3128" y1="-109.5320" 
+                  x2="-66.3095" y2="-134.0936" class="btwns4"/>
+        
+            <line x1="58.1247" y1="-260.7477" 
+                  x2="-68.9702" y2="-141.7987" class="btwns1"/>
+        
+            <line x1="-76.2714" y1="-134.9655" 
+                  x2="-101.0060" y2="-280.1421" class="btwns1"/>
+        
+            <line x1="-76.2714" y1="-134.9655" 
+                  x2="-147.6948" y2="29.6328" class="btwns10"/>
+        
+            <line x1="-76.2714" y1="-134.9655" 
+                  x2="-276.0330" y2="-64.5371" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="193.0197" 
+                  x2="-216.9055" y2="180.1630" class="btwns1"/>
+        
+            <line x1="-151.6755" y1="38.8064" 
+                  x2="-203.2755" y2="170.1151" class="btwns8"/>
+        
+            <line x1="-52.0403" y1="264.6745" 
+                  x2="-198.1722" y2="184.2441" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-339.4856 -155.0304)" 
+                class="vertice degree0 btwns0 authority0 ALMATY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(121.4485 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BAGHDAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(279.5579 34.9560)" 
+                class="vertice degree1 btwns0 authority1 BRATISLAVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(344.9280 -161.9634)" 
+                class="vertice degree1 btwns0 authority1 BRATISLAVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -46.5618)" 
+                class="vertice degree1 btwns0 authority1 BRATISLAVA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(186.7623 -53.0695)" 
+                class="vertice degree4 btwns2 authority4 BRATISLAVA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-252.3653 -243.1014)" 
+                class="vertice degree0 btwns0 authority0 BRATISLAVA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(214.3128 -109.5320)" 
+                class="vertice degree4 btwns2 authority4 BRATISLAVA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(58.1247 -260.7477)" 
+                class="vertice degree0 btwns0 authority0 BUCHAREST">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-76.2714 -134.9655)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 193.0197)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-102.6855 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 VILNIUS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-151.6755 38.8064)" 
+                class="vertice degree1 btwns5 authority1 WARSAW">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-52.0403 264.6745)" 
+                class="vertice degree1 btwns1 authority1 WARSAW">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-206.9329 179.4223)" 
+                class="vertice degree2 btwns4 authority2 WARSAW">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-285.4641 -61.2121)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-339.4856 -155.0304)" 
+                id="05ALMATY2549" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05ALMATY2549.html">05ALMATY2549</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN - ENGAGING THE IRAQ COALITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(121.4485 290.0000)" 
+                id="05BAGHDAD2938" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05BAGHDAD2938.html">05BAGHDAD2938</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>POLISH AMBASSADOR TO IRAQ INDICATED DIMINISHED ROLE FOR POLISH FORCES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(279.5579 34.9560)" 
+                id="05BRATISLAVA352" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05BRATISLAVA352
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(344.9280 -161.9634)" 
+                id="05BRATISLAVA458" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/12/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05BRATISLAVA458
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -46.5618)" 
+                id="05BRATISLAVA469" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05BRATISLAVA469
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(186.7623 -53.0695)" 
+                id="05BRATISLAVA511" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05BRATISLAVA511.html">05BRATISLAVA511</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SLOVAKIA TO STAY THE COURSE IN IRAQ</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-252.3653 -243.1014)" 
+                id="05BRATISLAVA538" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05BRATISLAVA538.html">05BRATISLAVA538</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MOD PROPOSES ADDING AFGHANISTAN TO JULY 22 AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(214.3128 -109.5320)" 
+                id="05BRATISLAVA539" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/11/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05BRATISLAVA539.html">05BRATISLAVA539</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>MOD PROPOSES ADDING AFGHANISTAN TO JULY 22 AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(58.1247 -260.7477)" 
+                id="05BUCHAREST1405" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05BUCHAREST1405.html">05BUCHAREST1405</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAQ: ROMANIA OPEN TO CHANGES IN ITS MISSION RESPONSE TO DEMARCHE ON ENGAGING THE IRAQ COALITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-76.2714 -134.9655)" 
+                id="05STATE111082" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05STATE111082
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 193.0197)" 
+                id="05STATE131524" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05STATE131524
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-102.6855 -290.0000)" 
+                id="05VILNIUS930" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/09/05VILNIUS930.html">05VILNIUS930</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOL DISINCLINED TO EMBED TROOPS IN IRAQI UNITS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-151.6755 38.8064)" 
+                id="05WARSAW2598" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05WARSAW2598.html">05WARSAW2598</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>ENGAGING THE IRAQ COALITION: NO CHANGE IN POLISH PLANS - SMALL TROOP REDUCTION IN JULY, TRANSFORMATION OF STABILIZATION TO TRAINING MISSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-52.0403 264.6745)" 
+                id="05WARSAW2786" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05WARSAW2786
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-206.9329 179.4223)" 
+                id="05WARSAW3044" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05WARSAW3044.html">05WARSAW3044</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IRAQ-POLAND: JONES-SMITH CONSULTATIONS WITH GOP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-285.4641 -61.2121)" 
+                id="05YEREVAN1105" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05YEREVAN1105.html">05YEREVAN1105</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ENGAGING ARMENIA IN ADVANCE OF THE IRAQ INTERNATIONAL CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09IRANRPODUBAI468">09IRANRPODUBAI468</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09DUBAI468">09DUBAI468</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/28/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09RPODUBAI468">09RPODUBAI468</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/10/09RPODUBAI468.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAN: AHMADINEJAD GETS HALF OF WHAT HE WANTS ON SUBSIDY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09RPODUBAI501">09RPODUBAI501</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09RPODUBAI501.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/19/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IRAN'S EXECUTIVE-LEGISLATIVE SUBSIDIES TUG OF WAR CONTINUES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09RPODUBAI503">09RPODUBAI503</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/11/09RPODUBAI503.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/19/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAN'S EXECUTIVE-LEGISLATIVE SUBSIDIES TUG OF WAR CONTINUES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#09DUBAI501">09DUBAI501</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/19/09</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09DUBAI503">09DUBAI503</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/19/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10RPODUBAI19">10RPODUBAI19</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10RPODUBAI19.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/27/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">Iran Finally Passes Targeted Subsidies Bill</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10ABUDHABI47">10ABUDHABI47</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10ABUDHABI47.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/31/10</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">HAMAS COMMANDER KILLED IN DUBAI HOTEL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10RPODUBAI29">10RPODUBAI29</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10RPODUBAI29.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAN: AHMADINEJAD FIRESIDE CHAT MENTIONS NUCLEAR ISSUE, US HIKERS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10DUBAI19">10DUBAI19</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10DUBAI19.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/10</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">UAE RELEASES DETAILS OF HAMAS ASSASSINATION SUSPECTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10ABUDHABI103">10ABUDHABI103</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10ABUDHABI103.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/10</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">UAE REQUEST FOR USG ASSISTANCE IN INVESTIGATION OF KILLING OF MAHMOUD AL-MABHOUH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10DUBAI29">10DUBAI29</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10DUBAI29.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/25/10</p>
+      <p class="classification">CONFIDENTIAL//NOFORN</p>
+      <p class="subject">U.S. Credit Cards linked to Mabhouh Assassination</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="220.1772" y1="33.4471" 
+                  x2="60.3451" y2="17.5201" class="btwns0"/>
+        
+            <line x1="220.1772" y1="33.4471" 
+                  x2="342.1266" y2="132.8114" class="btwns1"/>
+        
+            <line x1="220.1772" y1="33.4471" 
+                  x2="216.7085" y2="-121.3065" class="btwns1"/>
+        
+            <line x1="300.6018" y1="290.0000" 
+                  x2="346.7742" y2="148.6339" class="btwns1"/>
+        
+            <line x1="212.8619" y1="-290.0000" 
+                  x2="216.2562" y2="-141.3013" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-25.9558" 
+                  x2="352.2406" y2="129.4109" class="btwns0"/>
+        
+            <line x1="390.0000" y1="-25.9558" 
+                  x2="225.0323" y2="-126.1142" class="btwns2"/>
+        
+            <line x1="50.3944" y1="16.5286" 
+                  x2="-7.2650" y2="-109.5898" class="btwns1"/>
+        
+            <line x1="216.4844" y1="-131.3039" 
+                  x2="-1.4382" y2="-119.2372" class="btwns6"/>
+        
+            <line x1="-390.0000" y1="176.0468" 
+                  x2="-257.7370" y2="126.8366" class="btwns1"/>
+        
+            <line x1="-303.2249" y1="-195.2878" 
+                  x2="-224.2331" y2="-71.5394" class="btwns1"/>
+        
+            <line x1="-218.8526" y1="-63.1103" 
+                  x2="-246.8014" y2="113.4725" class="btwns6"/>
+        
+            <line x1="-218.8526" y1="-63.1103" 
+                  x2="-21.0822" y2="-116.0965" class="btwns10"/>
+        
+            <line x1="-248.3647" y1="123.3495" 
+                  x2="-177.3253" y2="267.6962" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(220.1772 33.4471)" 
+                class="vertice degree6 btwns3 authority6 DUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.6018 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(212.8619 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -25.9558)" 
+                class="vertice degree3 btwns1 authority3 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(50.3944 16.5286)" 
+                class="vertice degree3 btwns1 authority3 RPODUBAI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(349.8790 139.1281)" 
+                class="vertice degree6 btwns3 authority6 RPODUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(216.4844 -131.3039)" 
+                class="vertice degree10 btwns8 authority10 RPODUBAI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 176.0468)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-303.2249 -195.2878)" 
+                class="vertice degree0 btwns0 authority0 ABUDHABI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-218.8526 -63.1103)" 
+                class="vertice degree6 btwns9 authority6 DUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-248.3647 123.3495)" 
+                class="vertice degree6 btwns5 authority6 DUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-11.4229 -118.6844)" 
+                class="vertice degree6 btwns10 authority6 RPODUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-172.9096 276.6685)" 
+                class="vertice degree0 btwns0 authority0 RPODUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(220.1772 33.4471)" 
+                id="09DUBAI468" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>10/28/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    09DUBAI468
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(300.6018 290.0000)" 
+                id="09DUBAI501" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09DUBAI501
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(212.8619 -290.0000)" 
+                id="09DUBAI503" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09DUBAI503
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -25.9558)" 
+                id="09IRANRPODUBAI468" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    09IRANRPODUBAI468
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(50.3944 16.5286)" 
+                id="09RPODUBAI468" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/10/09RPODUBAI468.html">09RPODUBAI468</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>IRAN: AHMADINEJAD GETS HALF OF WHAT HE WANTS ON SUBSIDY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(349.8790 139.1281)" 
+                id="09RPODUBAI501" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09RPODUBAI501.html">09RPODUBAI501</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>IRAN'S EXECUTIVE-LEGISLATIVE SUBSIDIES TUG OF WAR CONTINUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(216.4844 -131.3039)" 
+                id="09RPODUBAI503" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/11/09RPODUBAI503.html">09RPODUBAI503</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>IRAN'S EXECUTIVE-LEGISLATIVE SUBSIDIES TUG OF WAR CONTINUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 176.0468)" 
+                id="10ABUDHABI103" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/24/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10ABUDHABI103.html">10ABUDHABI103</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UAE REQUEST FOR USG ASSISTANCE IN INVESTIGATION OF KILLING OF MAHMOUD AL-MABHOUH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-303.2249 -195.2878)" 
+                id="10ABUDHABI47" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/31/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10ABUDHABI47.html">10ABUDHABI47</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>HAMAS COMMANDER KILLED IN DUBAI HOTEL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-218.8526 -63.1103)" 
+                id="10DUBAI19" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/17/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10DUBAI19.html">10DUBAI19</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>UAE RELEASES DETAILS OF HAMAS ASSASSINATION SUSPECTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-248.3647 123.3495)" 
+                id="10DUBAI29" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>02/25/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10DUBAI29.html">10DUBAI29</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>U.S. Credit Cards linked to Mabhouh Assassination</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL-NOFORN">
+                        <tspan>CONFIDENTIAL//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-11.4229 -118.6844)" 
+                id="10RPODUBAI19" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/27/10</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10RPODUBAI19.html">10RPODUBAI19</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>Iran Finally Passes Targeted Subsidies Bill</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-172.9096 276.6685)" 
+                id="10RPODUBAI29" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10RPODUBAI29.html">10RPODUBAI29</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAN: AHMADINEJAD FIRESIDE CHAT MENTIONS NUCLEAR ISSUE, US HIKERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

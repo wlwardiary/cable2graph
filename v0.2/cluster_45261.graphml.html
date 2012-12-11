@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PARIS6848">06PARIS6848</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/18/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06PARIS6944">06PARIS6944</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/20/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PARIS7053">06PARIS7053</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/26/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06PARIS7734">06PARIS7734</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/10/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06PARIS7799">06PARIS7799</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06PARIS7864">06PARIS7864</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06PARIS7864.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/20/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OECD: COUNCIL DISCUSSES BUDGET, MAY MINISTERIAL AS WELL AS ENLARGEMENT AND ENHANCED ENGAGEMENT, WHERE SYG GURRIA PROPOSES A WAY AHEAD</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07PARIS160">07PARIS160</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/17/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS312">07PARIS312</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07PARIS312.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/26/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OECD: MISSION VIEWS ON ENLARGEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07PARIS371">07PARIS371</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/31/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07PARIS431">07PARIS431</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/04/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS525">07PARIS525</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07PARIS525.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/09/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OECD: MISSION VIEWS ON ENLARGEMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07PARIS827">07PARIS827</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/04/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07PARIS956">07PARIS956</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/11/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07PARIS1116">07PARIS1116</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07PARIS1116.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OECD:  MARCH 20 COUNCIL DISCUSSION OF ENLARGEMENT AND ENHANCED ENGAGEMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07PARIS1334">07PARIS1334</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07PARIS1334.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">OECD: State of Play on Enlargement and Enhanced Engagement - Approaching Time to Take Decisions</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="303.9395" y1="119.4132" 
+                  x2="180.8036" y2="5.4115" class="btwns0"/>
+        
+            <line x1="36.1491" y1="-104.5790" 
+                  x2="165.4715" y2="-7.3899" class="btwns0"/>
+        
+            <line x1="338.5983" y1="-94.4783" 
+                  x2="182.1767" y2="-6.2931" class="btwns0"/>
+        
+            <line x1="390.0000" y1="20.6841" 
+                  x2="183.4141" y2="-0.3683" class="btwns0"/>
+        
+            <line x1="77.2386" y1="-290.0000" 
+                  x2="155.9608" y2="-187.2338" class="btwns0"/>
+        
+            <line x1="162.0419" y1="-179.2953" 
+                  x2="172.8249" y2="-11.3616" class="btwns5"/>
+        
+            <line x1="-346.2480" y1="-16.2682" 
+                  x2="-209.7266" y2="88.7041" class="btwns5"/>
+        
+            <line x1="-346.2480" y1="-16.2682" 
+                  x2="-386.3710" y2="-119.2926" class="btwns0"/>
+        
+            <line x1="-201.7991" y1="94.7996" 
+                  x2="-49.9171" y2="31.5526" class="btwns2"/>
+        
+            <line x1="-201.7991" y1="94.7996" 
+                  x2="9.2745" y2="161.6451" class="btwns6"/>
+        
+            <line x1="-201.7991" y1="94.7996" 
+                  x2="-343.3848" y2="164.5049" class="btwns0"/>
+        
+            <line x1="-40.6855" y1="27.7084" 
+                  x2="163.5566" y2="-0.0361" class="btwns3"/>
+        
+            <line x1="173.4656" y1="-1.3821" 
+                  x2="25.6235" y2="157.3467" class="btwns10"/>
+        
+            <line x1="-65.9794" y1="290.0000" 
+                  x2="13.2047" y2="172.9470" class="btwns0"/>
+        
+            <line x1="135.8869" y1="280.3520" 
+                  x2="25.9210" y2="171.6929" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(303.9395 119.4132)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(36.1491 -104.5790)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(338.5983 -94.4783)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 20.6841)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(77.2386 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(162.0419 -179.2953)" 
+                class="vertice degree1 btwns2 authority1 PARIS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-346.2480 -16.2682)" 
+                class="vertice degree1 btwns2 authority1 PARIS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-201.7991 94.7996)" 
+                class="vertice degree5 btwns5 authority5 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-40.6855 27.7084)" 
+                class="vertice degree1 btwns2 authority1 PARIS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(173.4656 -1.3821)" 
+                class="vertice degree10 btwns10 authority10 PARIS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-65.9794 290.0000)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(135.8869 280.3520)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(18.8078 164.6642)" 
+                class="vertice degree5 btwns6 authority4 PARIS">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-352.3565 168.9218)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -128.6109)" 
+                class="vertice degree0 btwns0 authority0 PARIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(303.9395 119.4132)" 
+                id="06PARIS6848" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PARIS6848
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(36.1491 -104.5790)" 
+                id="06PARIS6944" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PARIS6944
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(338.5983 -94.4783)" 
+                id="06PARIS7053" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PARIS7053
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 20.6841)" 
+                id="06PARIS7734" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PARIS7734
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(77.2386 -290.0000)" 
+                id="06PARIS7799" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06PARIS7799
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(162.0419 -179.2953)" 
+                id="06PARIS7864" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>12/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06PARIS7864.html">06PARIS7864</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>OECD: COUNCIL DISCUSSES BUDGET, MAY MINISTERIAL AS WELL AS ENLARGEMENT AND ENHANCED ENGAGEMENT, WHERE SYG GURRIA PROPOSES A WAY AHEAD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-346.2480 -16.2682)" 
+                id="07PARIS1116" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07PARIS1116.html">07PARIS1116</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>OECD:  MARCH 20 COUNCIL DISCUSSION OF ENLARGEMENT AND ENHANCED ENGAGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-201.7991 94.7996)" 
+                id="07PARIS1334" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07PARIS1334.html">07PARIS1334</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>OECD: State of Play on Enlargement and Enhanced Engagement - Approaching Time to Take Decisions</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-40.6855 27.7084)" 
+                id="07PARIS160" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>01/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    07PARIS160
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(173.4656 -1.3821)" 
+                id="07PARIS312" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07PARIS312.html">07PARIS312</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>OECD: MISSION VIEWS ON ENLARGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-65.9794 290.0000)" 
+                id="07PARIS371" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07PARIS371
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(135.8869 280.3520)" 
+                id="07PARIS431" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07PARIS431
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(18.8078 164.6642)" 
+                id="07PARIS525" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>02/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07PARIS525.html">07PARIS525</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>OECD: MISSION VIEWS ON ENLARGEMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-352.3565 168.9218)" 
+                id="07PARIS827" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07PARIS827
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -128.6109)" 
+                id="07PARIS956" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07PARIS956
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

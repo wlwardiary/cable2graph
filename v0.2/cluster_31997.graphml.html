@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE165770">06SECSTATE165770</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE35756">07SECSTATE35756</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07SECSTATE41819">07SECSTATE41819</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06ATHENS2884">06ATHENS2884</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/11/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS110">07ATHENS110</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07ATHENS110.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TRUST BUT VERIFY: GREEK CHOD CONFIRMS CYPRUS ARMS PLAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS385">07ATHENS385</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07ATHENS385.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/22/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DRAFT GREEK LETTER ON CYPRUS ARMS PLAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE35756">07STATE35756</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/21/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE41819">07STATE41819</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/01/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS686">07ATHENS686</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ATHENS686.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREEKS STUDYING CYPRUS ARMS COUNTER-DRAFTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS772">07ATHENS772</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ATHENS772.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CYPRUS ARMS:  COMING TO CLOSURE ON EXCHANGE OF LETTERS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="307.3484" y1="229.6610" 
+                  x2="85.0911" y2="287.4823" class="btwns0"/>
+        
+            <line x1="307.3484" y1="229.6610" 
+                  x2="-5.5344" y2="102.5627" class="btwns3"/>
+        
+            <line x1="-196.3568" y1="269.9013" 
+                  x2="65.4405" y2="289.2625" class="btwns0"/>
+        
+            <line x1="-196.3568" y1="269.9013" 
+                  x2="-380.9661" y2="182.2696" class="btwns0"/>
+        
+            <line x1="-196.3568" y1="269.9013" 
+                  x2="-22.0767" y2="105.6576" class="btwns2"/>
+        
+            <line x1="75.4132" y1="290.0000" 
+                  x2="-10.5321" y2="107.8430" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="177.9814" 
+                  x2="-24.5837" y2="100.8641" class="btwns3"/>
+        
+            <line x1="-14.7992" y1="98.7991" 
+                  x2="45.3894" y2="-139.5115" class="btwns10"/>
+        
+            <line x1="-14.7992" y1="98.7991" 
+                  x2="-366.2251" y2="-13.6393" class="btwns3"/>
+        
+            <line x1="-14.7992" y1="98.7991" 
+                  x2="380.1035" y2="41.5269" class="btwns3"/>
+        
+            <line x1="47.8381" y1="-149.2070" 
+                  x2="-163.1395" y2="-284.5991" class="btwns3"/>
+        
+            <line x1="47.8381" y1="-149.2070" 
+                  x2="319.5602" y2="-249.4993" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(307.3484 229.6610)" 
+                class="vertice degree1 btwns0 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-196.3568 269.9013)" 
+                class="vertice degree3 btwns0 authority3 SECSTATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(75.4132 290.0000)" 
+                class="vertice degree3 btwns0 authority3 ATHENS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 177.9814)" 
+                class="vertice degree1 btwns0 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-14.7992 98.7991)" 
+                class="vertice degree10 btwns10 authority10 ATHENS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(47.8381 -149.2070)" 
+                class="vertice degree3 btwns5 authority3 ATHENS">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-375.7495 -16.6867)" 
+                class="vertice degree0 btwns0 authority0 SECSTATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 40.0916)" 
+                class="vertice degree0 btwns0 authority0 SECSTATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-171.5555 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(328.9415 -252.9619)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(307.3484 229.6610)" 
+                id="06ATHENS2884" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>10/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06ATHENS2884
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-196.3568 269.9013)" 
+                id="06SECSTATE165770" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06SECSTATE165770
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(75.4132 290.0000)" 
+                id="07ATHENS110" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07ATHENS110.html">07ATHENS110</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>TRUST BUT VERIFY: GREEK CHOD CONFIRMS CYPRUS ARMS PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 177.9814)" 
+                id="07ATHENS385" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>02/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07ATHENS385.html">07ATHENS385</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>DRAFT GREEK LETTER ON CYPRUS ARMS PLAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-14.7992 98.7991)" 
+                id="07ATHENS686" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ATHENS686.html">07ATHENS686</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GREEKS STUDYING CYPRUS ARMS COUNTER-DRAFTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(47.8381 -149.2070)" 
+                id="07ATHENS772" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ATHENS772.html">07ATHENS772</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CYPRUS ARMS:  COMING TO CLOSURE ON EXCHANGE OF LETTERS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-375.7495 -16.6867)" 
+                id="07SECSTATE35756" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SECSTATE35756
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 40.0916)" 
+                id="07SECSTATE41819" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07SECSTATE41819
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-171.5555 -290.0000)" 
+                id="07STATE35756" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE35756
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(328.9415 -252.9619)" 
+                id="07STATE41819" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/01/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07STATE41819
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

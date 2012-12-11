@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05QUITO634">05QUITO634</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/20/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1005">05QUITO1005</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05QUITO1005.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MAY LABOR UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1392">05QUITO1392</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05QUITO1392.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECUADOR: JUNE LABOR UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1666">05QUITO1666</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05QUITO1666.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOCIAL SECURITY REFORM IN PRESIDENT'S HANDS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05LIMA3224">05LIMA3224</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/21/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1734">05QUITO1734</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05QUITO1734.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/22/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MORE FINANCIAL PRESSURE ON ECUADOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1747">05QUITO1747</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05QUITO1747.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/25/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PALACIO ANNOUNCES POLITICAL REFORM, RAISING HACKLES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1787">05QUITO1787</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05QUITO1787.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/29/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PALACIO STUMBLES BUT RECOVERS AT 100 DAYS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05QUITO1788">05QUITO1788</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05QUITO1788.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/01/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECUADOR: JULY LABOR UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05QUITO2386">05QUITO2386</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/10/05QUITO2386.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/20/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECUADOR LABOR UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05QUITO2747">05QUITO2747</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05QUITO2747.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/02/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECUADOR LABOR UPDATE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="-155.0298" 
+                  x2="269.8026" y2="-267.8353" class="btwns0"/>
+        
+            <line x1="117.2610" y1="290.0000" 
+                  x2="-50.8095" y2="212.5183" class="btwns4"/>
+        
+            <line x1="117.2610" y1="290.0000" 
+                  x2="284.4520" y2="249.8984" class="btwns0"/>
+        
+            <line x1="-59.8909" y1="208.3317" 
+                  x2="-193.8732" y2="48.0245" class="btwns7"/>
+        
+            <line x1="-345.4423" y1="180.6232" 
+                  x2="-207.4772" y2="47.3006" class="btwns0"/>
+        
+            <line x1="-57.9065" y1="-138.7683" 
+                  x2="64.1118" y2="-282.3793" class="btwns7"/>
+        
+            <line x1="-57.9065" y1="-138.7683" 
+                  x2="-194.0637" y2="32.5234" class="btwns10"/>
+        
+            <line x1="70.5867" y1="-290.0000" 
+                  x2="252.5426" y2="-275.4743" class="btwns4"/>
+        
+            <line x1="-200.2862" y1="40.3516" 
+                  x2="-351.1650" y2="-94.2372" class="btwns4"/>
+        
+            <line x1="-358.6274" y1="-100.8940" 
+                  x2="-388.1287" y2="-255.7582" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 -155.0298)" 
+                class="vertice degree0 btwns0 authority0 LIMA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(117.2610 290.0000)" 
+                class="vertice degree3 btwns2 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-59.8909 208.3317)" 
+                class="vertice degree3 btwns4 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-345.4423 180.6232)" 
+                class="vertice degree0 btwns0 authority0 QUITO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-57.9065 -138.7683)" 
+                class="vertice degree3 btwns6 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(70.5867 -290.0000)" 
+                class="vertice degree3 btwns4 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(262.5109 -274.6786)" 
+                class="vertice degree3 btwns2 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-200.2862 40.3516)" 
+                class="vertice degree10 btwns10 authority10 QUITO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-358.6274 -100.8940)" 
+                class="vertice degree3 btwns2 authority3 QUITO">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -265.5815)" 
+                class="vertice degree0 btwns0 authority0 QUITO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(294.1762 247.5660)" 
+                class="vertice degree0 btwns0 authority0 QUITO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 -155.0298)" 
+                id="05LIMA3224" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05LIMA3224
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(117.2610 290.0000)" 
+                id="05QUITO1005" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05QUITO1005.html">05QUITO1005</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MAY LABOR UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-59.8909 208.3317)" 
+                id="05QUITO1392" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05QUITO1392.html">05QUITO1392</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ECUADOR: JUNE LABOR UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-345.4423 180.6232)" 
+                id="05QUITO1666" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05QUITO1666.html">05QUITO1666</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOCIAL SECURITY REFORM IN PRESIDENT'S HANDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-57.9065 -138.7683)" 
+                id="05QUITO1734" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/22/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05QUITO1734.html">05QUITO1734</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MORE FINANCIAL PRESSURE ON ECUADOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(70.5867 -290.0000)" 
+                id="05QUITO1747" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05QUITO1747.html">05QUITO1747</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PALACIO ANNOUNCES POLITICAL REFORM, RAISING HACKLES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(262.5109 -274.6786)" 
+                id="05QUITO1787" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/29/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05QUITO1787.html">05QUITO1787</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>PALACIO STUMBLES BUT RECOVERS AT 100 DAYS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-200.2862 40.3516)" 
+                id="05QUITO1788" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/01/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05QUITO1788.html">05QUITO1788</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ECUADOR: JULY LABOR UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-358.6274 -100.8940)" 
+                id="05QUITO2386" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/10/05QUITO2386.html">05QUITO2386</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ECUADOR LABOR UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -265.5815)" 
+                id="05QUITO2747" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/02/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05QUITO2747.html">05QUITO2747</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ECUADOR LABOR UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(294.1762 247.5660)" 
+                id="05QUITO634" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05QUITO634
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

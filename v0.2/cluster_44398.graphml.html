@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06NEWDELHI8344">06NEWDELHI8344</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07MUMBAI107">07MUMBAI107</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/16/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07NEWDELHI907">07NEWDELHI907</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/22/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KOLKATA68">07KOLKATA68</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/02/07KOLKATA68.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/23/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">LEFT PARTIES TO PUSH THEIR AGENDA AND CHALLENGE UPA DURING BUDGET SESSION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07CHENNAI289">07CHENNAI289</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07CHENNAI289.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/17/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BELLWETHER PROJECT:  TAMIL NADU'S MANUFACTURING BOOM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI1885">07NEWDELHI1885</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07NEWDELHI1885.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW DELHI WEEKLY ECON OFFICE HIGHLIGHTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI2036">07NEWDELHI2036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07NEWDELHI2036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NEW DELHI WEEKLY ECON OFFICE HIGHLIGHTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07CHENNAI317">07CHENNAI317</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07CHENNAI317.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/02/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">LABOR SHORTAGES EMERGE IN SOUTH INDIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07CHENNAI353">07CHENNAI353</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07CHENNAI353.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ECONOMIC GROWTH DRIVES THE STORY IN SOUTH INDIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07KOLKATA372">07KOLKATA372</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/07/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI5228">07NEWDELHI5228</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07NEWDELHI5228.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/07/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DELHI DIARY, DECEMBER 3-7</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08KOLKATA21">08KOLKATA21</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08KOLKATA21.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/18/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CPM SAYS THERE IS NO ALTERNATIVE TO CAPITALISM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW2119">08MOSCOW2119</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/07/08MOSCOW2119.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RUSSIA - INDIA NUCLEAR COOPERATION - DEPENDENT ON UPCOMING IAEA AND NSG DECISIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CHENNAI263">08CHENNAI263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08CHENNAI263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/07/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TAMIL NADU EXPERIENCES POWER SHORTAGES, INEVITABLE CONSEQUENCE OF UNDER-INVESTMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08MOSCOW2333">08MOSCOW2333</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/08/08MOSCOW2333.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/11/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROSATOM STATE CORPORATION - REORGANIZATION CONTINUES, NEW PLAYERS ON U.S. ACCOUNT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-278.5655" y1="232.0346" 
+                  x2="-347.7793" y2="156.1993" class="btwns2"/>
+        
+            <line x1="162.9111" y1="-17.8182" 
+                  x2="305.8189" y2="-36.9066" class="btwns4"/>
+        
+            <line x1="162.9111" y1="-17.8182" 
+                  x2="92.0666" y2="-118.3375" class="btwns9"/>
+        
+            <line x1="162.9111" y1="-17.8182" 
+                  x2="126.0738" y2="95.2974" class="btwns6"/>
+        
+            <line x1="315.7309" y1="-38.2305" 
+                  x2="383.3461" y2="37.6275" class="btwns2"/>
+        
+            <line x1="390.0000" y1="45.0925" 
+                  x2="380.0000" y2="45.0925" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="45.0759" 
+                  x2="-357.7566" y2="139.3512" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="45.0759" 
+                  x2="-340.3871" y2="-49.7347" class="btwns6"/>
+        
+            <line x1="-226.4239" y1="-155.0276" 
+                  x2="-60.4820" y2="-194.1578" class="btwns9"/>
+        
+            <line x1="-226.4239" y1="-155.0276" 
+                  x2="-319.6117" y2="-221.8300" class="btwns2"/>
+        
+            <line x1="-226.4239" y1="-155.0276" 
+                  x2="-328.2512" y2="-65.2099" class="btwns7"/>
+        
+            <line x1="-50.7489" y1="-196.4529" 
+                  x2="21.4255" y2="-282.3441" class="btwns2"/>
+        
+            <line x1="-50.7489" y1="-196.4529" 
+                  x2="77.3985" y2="-131.0569" class="btwns10"/>
+        
+            <line x1="122.9773" y1="104.8059" 
+                  x2="94.2137" y2="202.4782" class="btwns4"/>
+        
+            <line x1="91.3888" y1="212.0708" 
+                  x2="17.5987" y2="283.0667" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-278.5655 232.0346)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(162.9111 -17.8182)" 
+                class="vertice degree10 btwns9 authority9 CHENNAI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(315.7309 -38.2305)" 
+                class="vertice degree5 btwns2 authority5 CHENNAI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.0925)" 
+                class="vertice degree10 btwns0 authority0 CHENNAI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 45.0759)" 
+                class="vertice degree5 btwns4 authority4 KOLKATA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-226.4239 -155.0276)" 
+                class="vertice degree10 btwns8 authority9 KOLKATA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-50.7489 -196.4529)" 
+                class="vertice degree10 btwns10 authority10 MUMBAI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(27.8588 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(86.3057 -126.5114)" 
+                class="vertice degree5 btwns8 authority5 NEWDELHI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-354.5205 148.8131)" 
+                class="vertice degree5 btwns2 authority4 NEWDELHI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-327.7391 -227.6562)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(122.9773 104.8059)" 
+                class="vertice degree5 btwns4 authority4 CHENNAI">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-335.7506 -58.5950)" 
+                class="vertice degree5 btwns6 authority5 KOLKATA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(91.3888 212.0708)" 
+                class="vertice degree5 btwns2 authority4 MOSCOW">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(10.3926 290.0000)" 
+                class="vertice degree0 btwns0 authority0 MOSCOW">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-278.5655 232.0346)" 
+                id="06NEWDELHI8344" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06NEWDELHI8344
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(162.9111 -17.8182)" 
+                id="07CHENNAI289" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07CHENNAI289.html">07CHENNAI289</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>BELLWETHER PROJECT:  TAMIL NADU'S MANUFACTURING BOOM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(315.7309 -38.2305)" 
+                id="07CHENNAI317" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07CHENNAI317.html">07CHENNAI317</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>LABOR SHORTAGES EMERGE IN SOUTH INDIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 45.0925)" 
+                id="07CHENNAI353" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07CHENNAI353.html">07CHENNAI353</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ECONOMIC GROWTH DRIVES THE STORY IN SOUTH INDIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 45.0759)" 
+                id="07KOLKATA372" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    07KOLKATA372
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-226.4239 -155.0276)" 
+                id="07KOLKATA68" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/02/07KOLKATA68.html">07KOLKATA68</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>LEFT PARTIES TO PUSH THEIR AGENDA AND CHALLENGE UPA DURING BUDGET SESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-50.7489 -196.4529)" 
+                id="07MUMBAI107" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>02/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    07MUMBAI107
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(27.8588 -290.0000)" 
+                id="07NEWDELHI1885" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07NEWDELHI1885.html">07NEWDELHI1885</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW DELHI WEEKLY ECON OFFICE HIGHLIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(86.3057 -126.5114)" 
+                id="07NEWDELHI2036" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07NEWDELHI2036.html">07NEWDELHI2036</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>NEW DELHI WEEKLY ECON OFFICE HIGHLIGHTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-354.5205 148.8131)" 
+                id="07NEWDELHI5228" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07NEWDELHI5228.html">07NEWDELHI5228</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>DELHI DIARY, DECEMBER 3-7</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-327.7391 -227.6562)" 
+                id="07NEWDELHI907" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/22/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07NEWDELHI907
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(122.9773 104.8059)" 
+                id="08CHENNAI263" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/07/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08CHENNAI263.html">08CHENNAI263</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>TAMIL NADU EXPERIENCES POWER SHORTAGES, INEVITABLE CONSEQUENCE OF UNDER-INVESTMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-335.7506 -58.5950)" 
+                id="08KOLKATA21" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08KOLKATA21.html">08KOLKATA21</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CPM SAYS THERE IS NO ALTERNATIVE TO CAPITALISM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(91.3888 212.0708)" 
+                id="08MOSCOW2119" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/07/08MOSCOW2119.html">08MOSCOW2119</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>RUSSIA - INDIA NUCLEAR COOPERATION - DEPENDENT ON UPCOMING IAEA AND NSG DECISIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(10.3926 290.0000)" 
+                id="08MOSCOW2333" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/08/08MOSCOW2333.html">08MOSCOW2333</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROSATOM STATE CORPORATION - REORGANIZATION CONTINUES, NEW PLAYERS ON U.S. ACCOUNT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

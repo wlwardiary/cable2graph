@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#08OTTAWA968">08OTTAWA968</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/17/08</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08STATE97505">08STATE97505</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08STATE97505.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">RESPONSE TO CANADIAN REQUEST FOR ADVICE ON BLOCKING IRANIAN TRADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08STATE99000">08STATE99000</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08STATE99000.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/16/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">SOLICITING ALLIES, SUPPORT TO ENGAGE CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08CANBERRA926">08CANBERRA926</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08CANBERRA926.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/17/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">AUSTRALIA:INTERIM REPLY ON ENGAGING CHINA RE PROLIFERATION-RELATED IRAN TRADE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08OTTAWA1245">08OTTAWA1245</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08OTTAWA1245.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">CANADIANS CONSIDERING U.S. IDEAS, INITIATIVES ON IRAN NON-PROLIFERATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08SEOUL1882">08SEOUL1882</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08SEOUL1882.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/23/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ROKG'S INIITIAL RESPONSE ON ENGAGING CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO2624">08TOKYO2624</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TOKYO2624.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/23/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">JAPANESE ON ENGAGING CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TELAVIV2169">08TELAVIV2169</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08TELAVIV2169.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/24/08</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NON-PAPER ON CHINA TRANSMITTED TO GOI</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BERLIN1323">08BERLIN1323</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BERLIN1323.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">GERMANY'S INTERIM RESPONSE ON ENGAGING CHINA ON PROLIFERATION RELATED TRADE WITH IRAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08THEHAGUE801">08THEHAGUE801</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08THEHAGUE801.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/25/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NETHERLANDS: AGREEMENT ON NEED TO ADDRESS CHINA'S PROLIFERATION-RELATED TRADE WITH IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09OTTAWA268">09OTTAWA268</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/04/09OTTAWA268.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADA SEEKS U.S. ADVICE TO REINVIGORATE ITS COUNTER-PROLIFERATION FRAMEWORK</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE44713">09STATE44713</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09STATE44713.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/01/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">RESPONSE TO CANADA,S QUESTIONS ON COUNTERPROLIFERATION POLICY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09OTTAWA413">09OTTAWA413</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09OTTAWA413.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CANADA APPRECIATES COUNTER-PROLIFERATION FEEDBACK, PROMISES NEW POLICY IN THE FALL</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="253.1537" y1="-260.2449" 
+                  x2="127.7405" y2="-14.2999" class="btwns7"/>
+        
+            <line x1="373.5869" y1="-121.7811" 
+                  x2="132.2660" y2="-9.6065" class="btwns7"/>
+        
+            <line x1="-86.7860" y1="123.8228" 
+                  x2="-276.2529" y2="147.4743" class="btwns1"/>
+        
+            <line x1="-86.7860" y1="123.8228" 
+                  x2="114.6811" y2="-0.1505" class="btwns5"/>
+        
+            <line x1="-86.7860" y1="123.8228" 
+                  x2="-189.8585" y2="22.7207" class="btwns0"/>
+        
+            <line x1="-86.7860" y1="123.8228" 
+                  x2="-160.7220" y2="-52.2122" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="15.7254" 
+                  x2="-292.3297" y2="140.8306" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="15.7254" 
+                  x2="-206.9975" y2="15.7185" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="15.7254" 
+                  x2="-174.0555" y2="-58.1934" class="btwns2"/>
+        
+            <line x1="292.5508" y1="220.9334" 
+                  x2="129.1890" y2="2.6154" class="btwns7"/>
+        
+            <line x1="-286.1759" y1="148.7130" 
+                  x2="-202.5667" y2="24.0238" class="btwns1"/>
+        
+            <line x1="-286.1759" y1="148.7130" 
+                  x2="-169.6023" y2="-52.7762" class="btwns1"/>
+        
+            <line x1="123.1978" y1="-5.3912" 
+                  x2="118.2207" y2="280.0015" class="btwns7"/>
+        
+            <line x1="123.1978" y1="-5.3912" 
+                  x2="74.5312" y2="-280.1533" class="btwns7"/>
+        
+            <line x1="123.1978" y1="-5.3912" 
+                  x2="380.3139" y2="60.5990" class="btwns7"/>
+        
+            <line x1="123.1978" y1="-5.3912" 
+                  x2="-187.0191" y2="15.0603" class="btwns10"/>
+        
+            <line x1="123.1978" y1="-5.3912" 
+                  x2="-154.7788" y2="-59.5206" class="btwns10"/>
+        
+            <line x1="-196.9975" y1="15.7182" 
+                  x2="-287.0462" y2="-205.9863" class="btwns3"/>
+        
+            <line x1="-196.9975" y1="15.7182" 
+                  x2="-168.4667" y2="-52.2121" class="btwns0"/>
+        
+            <line x1="-290.8093" y1="-215.2512" 
+                  x2="-170.9377" y2="-69.1626" class="btwns3"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(253.1537 -260.2449)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(373.5869 -121.7811)" 
+                class="vertice degree0 btwns0 authority0 CANBERRA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-86.7860 123.8228)" 
+                class="vertice degree3 btwns0 authority4 OTTAWA">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 15.7254)" 
+                class="vertice degree2 btwns0 authority2 OTTAWA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(292.5508 220.9334)" 
+                class="vertice degree0 btwns0 authority0 SEOUL">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-286.1759 148.7130)" 
+                class="vertice degree3 btwns0 authority4 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(123.1978 -5.3912)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(118.0463 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(72.7871 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 63.0850)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-196.9975 15.7182)" 
+                class="vertice degree6 btwns2 authority6 OTTAWA">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-290.8093 -215.2512)" 
+                class="vertice degree1 btwns0 authority1 OTTAWA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-164.5944 -61.4320)" 
+                class="vertice degree6 btwns2 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(253.1537 -260.2449)" 
+                id="08BERLIN1323" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BERLIN1323.html">08BERLIN1323</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY'S INTERIM RESPONSE ON ENGAGING CHINA ON PROLIFERATION RELATED TRADE WITH IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(373.5869 -121.7811)" 
+                id="08CANBERRA926" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08CANBERRA926.html">08CANBERRA926</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRALIA:INTERIM REPLY ON ENGAGING CHINA RE PROLIFERATION-RELATED IRAN TRADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-86.7860 123.8228)" 
+                id="08OTTAWA1245" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/19/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08OTTAWA1245.html">08OTTAWA1245</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CANADIANS CONSIDERING U.S. IDEAS, INITIATIVES ON IRAN NON-PROLIFERATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 15.7254)" 
+                id="08OTTAWA968" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08OTTAWA968
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(292.5508 220.9334)" 
+                id="08SEOUL1882" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08SEOUL1882.html">08SEOUL1882</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ROKG'S INIITIAL RESPONSE ON ENGAGING CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-286.1759 148.7130)" 
+                id="08STATE97505" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>09/11/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08STATE97505.html">08STATE97505</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>RESPONSE TO CANADIAN REQUEST FOR ADVICE ON BLOCKING IRANIAN TRADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(123.1978 -5.3912)" 
+                id="08STATE99000" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/16/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08STATE99000.html">08STATE99000</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SOLICITING ALLIES, SUPPORT TO ENGAGE CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(118.0463 290.0000)" 
+                id="08TELAVIV2169" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/24/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TELAVIV2169.html">08TELAVIV2169</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NON-PAPER ON CHINA TRANSMITTED TO GOI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(72.7871 -290.0000)" 
+                id="08THEHAGUE801" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08THEHAGUE801.html">08THEHAGUE801</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS: AGREEMENT ON NEED TO ADDRESS CHINA'S PROLIFERATION-RELATED TRADE WITH IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 63.0850)" 
+                id="08TOKYO2624" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08TOKYO2624.html">08TOKYO2624</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>JAPANESE ON ENGAGING CHINA ON PROLIFERATION-RELATED TRADE WITH IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-196.9975 15.7182)" 
+                id="09OTTAWA268" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>04/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/04/09OTTAWA268.html">09OTTAWA268</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>CANADA SEEKS U.S. ADVICE TO REINVIGORATE ITS COUNTER-PROLIFERATION FRAMEWORK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-290.8093 -215.2512)" 
+                id="09OTTAWA413" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09OTTAWA413.html">09OTTAWA413</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>CANADA APPRECIATES COUNTER-PROLIFERATION FEEDBACK, PROMISES NEW POLICY IN THE FALL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-164.5944 -61.4320)" 
+                id="09STATE44713" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/01/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09STATE44713.html">09STATE44713</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>RESPONSE TO CANADA,S QUESTIONS ON COUNTERPROLIFERATION POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

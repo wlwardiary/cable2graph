@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ZAGREB1504">06ZAGREB1504</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06ZAGREB1504.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CROATIA VOTES TO ACTIVATE ADRIATIC FISHING ZONE IN 2008</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB862">07ZAGREB862</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ZAGREB862.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PRE-ELECTION TELECOM PRIVATIZATION CREATES STOCK MARKET FRENZY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB938">07ZAGREB938</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07ZAGREB938.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/15/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FROM THE MATTRESS TO THE MARKET: CROATS DISCOVER THE JOYS OF THE STOCK MARKET</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB950">07ZAGREB950</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07ZAGREB950.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SCENESETTER FOR CROATIA'S NOVEMBER 25 PARLIAMENTARY ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB981">07ZAGREB981</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB981.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/02/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ECONOMIC ISSUES IN THE CROATIAN ELECTIONS: IS 4X4 GREATER THAN 3X7?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1014">07ZAGREB1014</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1014.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ELECTIONS 2007 - THE HDZ AT A GLANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1021">07ZAGREB1021</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1021.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ELECTIONS 2007: PROFILE OF THE MAIN CHALLENGER -- THE OPPOSITION SDP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1024">07ZAGREB1024</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1024.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTIONS 2007 - THE DIASPORA VOTE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1025">07ZAGREB1025</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1025.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PRELIMINARY REPORT OF ODIHR LIMITED ELECTION OBSERVATION MISSION TO CROATIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1028">07ZAGREB1028</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1028.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ZAGREB WEEKLY ACTIVITY REPORT - NOVEMBER 21, 2007</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1029">07ZAGREB1029</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1029.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/23/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ELECTIONS 2007:  WHEN DOES A WIN BECOME A VICTORY?  THE POLITICS OF COALITION BUILDING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1036">07ZAGREB1036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/26/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INITIAL RESULTS OF CROATIA'S ELECTIONS:  RULING HDZ HAS THE EDGE, BUT SDP ALSO HAS A CHANCE TO FORM GOVERNING MAJORITY -- PEASANTS' PARTY HOLDS THE KEY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1047">07ZAGREB1047</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1047.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ZAGREB WEEKLY ACTIVITY REPORT - NOVEMBER 28, 2007</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1048">07ZAGREB1048</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1048.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/29/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">HDZ LOOKING MORE LIKELY TO FORM GOVERNING COALITION, BUT SDP NOT GIVING UP YET</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1054">07ZAGREB1054</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/11/07ZAGREB1054.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MILANOVIC REPLACES JURCIC AS SDP'S CANDIDATE FOR PRIME MINISTER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1065">07ZAGREB1065</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07ZAGREB1065.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CROATIA'S FISHING ZONE - A TRAIN WRECK IN THE MIDDLE OF THE ADRIATIC?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB1068">07ZAGREB1068</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/12/07ZAGREB1068.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PEASANT PARTY PERSPECTIVE ON COALITION NEGOTIATIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08ZAGREB84">08ZAGREB84</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/05/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB256">08ZAGREB256</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08ZAGREB256.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/18/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CROATIA DUMPS FISHING ZONE OVERBOARD IN HOPES OF ACCELERATING EU ACCESSION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08ZAGREB757">08ZAGREB757</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/10/08ZAGREB757.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/31/08</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GOC WORKS TO OPEN FISHERIES CHAPTER AS FISHERMEN FACE DROP IN EARNINGS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="16.6475" y1="-290.0000" 
+                  x2="56.3776" y2="-195.5900" class="btwns1"/>
+        
+            <line x1="161.2666" y1="272.0444" 
+                  x2="250.9850" y2="199.2281" class="btwns7"/>
+        
+            <line x1="161.2666" y1="272.0444" 
+                  x2="17.5588" y2="285.8953" class="btwns6"/>
+        
+            <line x1="258.7496" y1="192.9264" 
+                  x2="248.6910" y2="88.8409" class="btwns8"/>
+        
+            <line x1="247.7291" y1="78.8873" 
+                  x2="380.0166" y2="71.2557" class="btwns1"/>
+        
+            <line x1="247.7291" y1="78.8873" 
+                  x2="103.3960" y2="6.9245" class="btwns9"/>
+        
+            <line x1="-262.5371" y1="-238.4131" 
+                  x2="-202.8944" y2="-153.8231" class="btwns1"/>
+        
+            <line x1="94.4467" y1="2.4624" 
+                  x2="-53.1910" y2="-80.7111" class="btwns10"/>
+        
+            <line x1="-61.9035" y1="-85.6194" 
+                  x2="-187.9920" y2="-141.5930" class="btwns3"/>
+        
+            <line x1="-61.9035" y1="-85.6194" 
+                  x2="-232.6492" y2="-50.9041" class="btwns4"/>
+        
+            <line x1="-61.9035" y1="-85.6194" 
+                  x2="52.5418" y2="-180.0101" class="btwns7"/>
+        
+            <line x1="-197.1319" y1="-145.6504" 
+                  x2="-238.2066" y2="-57.9673" class="btwns0"/>
+        
+            <line x1="-242.4487" y1="-48.9117" 
+                  x2="-380.0302" y2="-59.6260" class="btwns1"/>
+        
+            <line x1="-242.4487" y1="-48.9117" 
+                  x2="-316.7616" y2="40.3241" class="btwns1"/>
+        
+            <line x1="60.2564" y1="-186.3729" 
+                  x2="50.2564" y2="-186.3729" class="btwns0"/>
+        
+            <line x1="60.2564" y1="-186.3729" 
+                  x2="217.6413" y2="-185.1412" class="btwns5"/>
+        
+            <line x1="-268.7545" y1="248.7849" 
+                  x2="-155.7998" y2="286.8096" class="btwns1"/>
+        
+            <line x1="-146.3224" y1="290.0000" 
+                  x2="-2.3930" y2="287.0590" class="btwns3"/>
+        
+            <line x1="-32.2955" y1="200.1329" 
+                  x2="3.4251" y2="277.7701" class="btwns1"/>
+        
+            <line x1="227.6410" y1="-185.0630" 
+                  x2="275.0014" y2="-259.9167" class="btwns1"/>
+        
+            <line x1="227.6410" y1="-185.0630" 
+                  x2="347.3114" y2="-137.9943" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(16.6475 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(161.2666 272.0444)" 
+                class="vertice degree2 btwns5 authority3 ZAGREB">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(258.7496 192.9264)" 
+                class="vertice degree2 btwns6 authority3 ZAGREB">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(247.7291 78.8873)" 
+                class="vertice degree5 btwns7 authority6 ZAGREB">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 70.6798)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-262.5371 -238.4131)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(94.4467 2.4624)" 
+                class="vertice degree2 btwns7 authority3 ZAGREB">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-61.9035 -85.6194)" 
+                class="vertice degree7 btwns10 authority10 ZAGREB">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-197.1319 -145.6504)" 
+                class="vertice degree5 btwns1 authority6 ZAGREB">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-242.4487 -48.9117)" 
+                class="vertice degree7 btwns3 authority9 ZAGREB">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -60.4024)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(60.2564 -186.3729)" 
+                class="vertice degree10 btwns5 authority7 ZAGREB">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-323.1609 48.0084)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-268.7545 248.7849)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-146.3224 290.0000)" 
+                class="vertice degree2 btwns1 authority3 ZAGREB">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-32.2955 200.1329)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(7.6049 286.8547)" 
+                class="vertice degree5 btwns4 authority6 ZAGREB">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(227.6410 -185.0630)" 
+                class="vertice degree5 btwns3 authority6 ZAGREB">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(280.3481 -268.3673)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(356.6174 -134.3340)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(16.6475 -290.0000)" 
+                id="06ZAGREB1504" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ZAGREB1504.html">06ZAGREB1504</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CROATIA VOTES TO ACTIVATE ADRIATIC FISHING ZONE IN 2008</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(161.2666 272.0444)" 
+                id="07ZAGREB1014" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1014.html">07ZAGREB1014</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ELECTIONS 2007 - THE HDZ AT A GLANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(258.7496 192.9264)" 
+                id="07ZAGREB1021" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1021.html">07ZAGREB1021</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ELECTIONS 2007: PROFILE OF THE MAIN CHALLENGER -- THE OPPOSITION SDP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(247.7291 78.8873)" 
+                id="07ZAGREB1024" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1024.html">07ZAGREB1024</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ELECTIONS 2007 - THE DIASPORA VOTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 70.6798)" 
+                id="07ZAGREB1025" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1025.html">07ZAGREB1025</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRELIMINARY REPORT OF ODIHR LIMITED ELECTION OBSERVATION MISSION TO CROATIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-262.5371 -238.4131)" 
+                id="07ZAGREB1028" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/21/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1028.html">07ZAGREB1028</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ZAGREB WEEKLY ACTIVITY REPORT - NOVEMBER 21, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(94.4467 2.4624)" 
+                id="07ZAGREB1029" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1029.html">07ZAGREB1029</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ELECTIONS 2007:  WHEN DOES A WIN BECOME A VICTORY?  THE POLITICS OF COALITION BUILDING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-61.9035 -85.6194)" 
+                id="07ZAGREB1036" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>11/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1036.html">07ZAGREB1036</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>INITIAL RESULTS OF CROATIA'S ELECTIONS:  RULING HDZ HAS THE EDGE, BUT SDP ALSO HAS A CHANCE TO FORM GOVERNING MAJORITY -- PEASANTS' PARTY HOLDS THE KEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-197.1319 -145.6504)" 
+                id="07ZAGREB1047" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1047.html">07ZAGREB1047</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ZAGREB WEEKLY ACTIVITY REPORT - NOVEMBER 28, 2007</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-242.4487 -48.9117)" 
+                id="07ZAGREB1048" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>11/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1048.html">07ZAGREB1048</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>HDZ LOOKING MORE LIKELY TO FORM GOVERNING COALITION, BUT SDP NOT GIVING UP YET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -60.4024)" 
+                id="07ZAGREB1054" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB1054.html">07ZAGREB1054</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>MILANOVIC REPLACES JURCIC AS SDP'S CANDIDATE FOR PRIME MINISTER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(60.2564 -186.3729)" 
+                id="07ZAGREB1065" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07ZAGREB1065.html">07ZAGREB1065</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>CROATIA'S FISHING ZONE - A TRAIN WRECK IN THE MIDDLE OF THE ADRIATIC?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-323.1609 48.0084)" 
+                id="07ZAGREB1068" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/12/07ZAGREB1068.html">07ZAGREB1068</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PEASANT PARTY PERSPECTIVE ON COALITION NEGOTIATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-268.7545 248.7849)" 
+                id="07ZAGREB862" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ZAGREB862.html">07ZAGREB862</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PRE-ELECTION TELECOM PRIVATIZATION CREATES STOCK MARKET FRENZY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-146.3224 290.0000)" 
+                id="07ZAGREB938" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07ZAGREB938.html">07ZAGREB938</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>FROM THE MATTRESS TO THE MARKET: CROATS DISCOVER THE JOYS OF THE STOCK MARKET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-32.2955 200.1329)" 
+                id="07ZAGREB950" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07ZAGREB950.html">07ZAGREB950</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SCENESETTER FOR CROATIA'S NOVEMBER 25 PARLIAMENTARY ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(7.6049 286.8547)" 
+                id="07ZAGREB981" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>11/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/11/07ZAGREB981.html">07ZAGREB981</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ECONOMIC ISSUES IN THE CROATIAN ELECTIONS: IS 4X4 GREATER THAN 3X7?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(227.6410 -185.0630)" 
+                id="08ZAGREB256" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08ZAGREB256.html">08ZAGREB256</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CROATIA DUMPS FISHING ZONE OVERBOARD IN HOPES OF ACCELERATING EU ACCESSION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(280.3481 -268.3673)" 
+                id="08ZAGREB757" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/31/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/10/08ZAGREB757.html">08ZAGREB757</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOC WORKS TO OPEN FISHERIES CHAPTER AS FISHERMEN FACE DROP IN EARNINGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(356.6174 -134.3340)" 
+                id="08ZAGREB84" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/05/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08ZAGREB84
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06DUBAI8">06DUBAI8</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06IRANRPODUBAI8">06IRANRPODUBAI8</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06RPODUBAI18">06RPODUBAI18</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06DUBAI18">06DUBAI18</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/03/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06DUBAI1217">06DUBAI1217</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06DUBAI1217.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/04/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRAN: ASSEMBLY OF EXPERTS ELECTION UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DUBAI2300">06DUBAI2300</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/04/06DUBAI2300.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/23/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">VIEWS FROM IRAN'S CULTURAL SECTOR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06IRANRPODUBAI11">06IRANRPODUBAI11</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06IRANRPODUBAI11.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/06/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ASSEMBLY OF EXPERTS ELECTION -- HARBINGER OF FUTURE CHANGES?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06IRANRPODUBAI18">06IRANRPODUBAI18</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI18.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONSERVATIVE RIVALRIES AND MUNICIPAL ELECTIONS IN IRAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06IRANRPODUBAI19">06IRANRPODUBAI19</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI19.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">REFORMISTS STRIKE DISSONANT CHORD</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06IRANRPODUBAI21">06IRANRPODUBAI21</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI21.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      <p class="classification">SECRET//NOFORN</p>
+      <p class="subject">ELECTIONS AND POWER ALIGNMENTS IN IRAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="163.1495" 
+                  x2="248.7942" y2="283.5129" class="btwns5"/>
+        
+            <line x1="390.0000" y1="163.1495" 
+                  x2="348.1689" y2="-6.6294" class="btwns10"/>
+        
+            <line x1="-274.7502" y1="-212.2459" 
+                  x2="11.4748" y2="-251.4999" class="btwns4"/>
+        
+            <line x1="-274.7502" y1="-212.2459" 
+                  x2="-251.6255" y2="-49.1844" class="btwns3"/>
+        
+            <line x1="66.4395" y1="-107.1074" 
+                  x2="336.2660" y2="-19.4294" class="btwns9"/>
+        
+            <line x1="66.4395" y1="-107.1074" 
+                  x2="203.8498" y2="-282.1344" class="btwns3"/>
+        
+            <line x1="66.4395" y1="-107.1074" 
+                  x2="24.3356" y2="-243.3048" class="btwns3"/>
+        
+            <line x1="66.4395" y1="-107.1074" 
+                  x2="-240.4431" y2="-41.3778" class="btwns8"/>
+        
+            <line x1="345.7765" y1="-16.3390" 
+                  x2="344.8030" y2="-185.2447" class="btwns4"/>
+        
+            <line x1="210.0249" y1="-290.0000" 
+                  x2="200.0249" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="210.0249" y1="-290.0000" 
+                  x2="31.1937" y2="-254.7904" class="btwns1"/>
+        
+            <line x1="210.0249" y1="-290.0000" 
+                  x2="336.5659" y2="-200.9975" class="btwns2"/>
+        
+            <line x1="21.3821" y1="-252.8587" 
+                  x2="11.3821" y2="-252.8587" class="btwns0"/>
+        
+            <line x1="21.3821" y1="-252.8587" 
+                  x2="334.9004" y2="-196.9986" class="btwns3"/>
+        
+            <line x1="-250.2214" y1="-39.2835" 
+                  x2="-383.1397" y2="101.6840" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 163.1495)" 
+                class="vertice degree2 btwns5 authority2 DUBAI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-274.7502 -212.2459)" 
+                class="vertice degree2 btwns0 authority3 DUBAI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(241.1838 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(66.4395 -107.1074)" 
+                class="vertice degree6 btwns10 authority9 DUBAI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="26" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(345.7765 -16.3390)" 
+                class="vertice degree4 btwns9 authority5 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(210.0249 -290.0000)" 
+                class="vertice degree8 btwns0 authority7 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(21.3821 -252.8587)" 
+                class="vertice degree10 btwns3 authority10 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-250.2214 -39.2835)" 
+                class="vertice degree4 btwns6 authority5 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(344.7454 -195.2445)" 
+                class="vertice degree4 btwns2 authority6 IRANRPODUBAI">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="24" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.9597)" 
+                class="vertice degree0 btwns0 authority0 RPODUBAI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 163.1495)" 
+                id="06DUBAI1217" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06DUBAI1217.html">06DUBAI1217</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>IRAN: ASSEMBLY OF EXPERTS ELECTION UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-274.7502 -212.2459)" 
+                id="06DUBAI18" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06DUBAI18
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(241.1838 290.0000)" 
+                id="06DUBAI2300" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/04/06DUBAI2300.html">06DUBAI2300</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VIEWS FROM IRAN'S CULTURAL SECTOR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(66.4395 -107.1074)" 
+                id="06DUBAI8" 
+                class="labels">
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                
+                    06DUBAI8
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(345.7765 -16.3390)" 
+                id="06IRANRPODUBAI11" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>11/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06IRANRPODUBAI11.html">06IRANRPODUBAI11</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ASSEMBLY OF EXPERTS ELECTION -- HARBINGER OF FUTURE CHANGES?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.0249 -290.0000)" 
+                id="06IRANRPODUBAI18" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>12/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI18.html">06IRANRPODUBAI18</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>CONSERVATIVE RIVALRIES AND MUNICIPAL ELECTIONS IN IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(21.3821 -252.8587)" 
+                id="06IRANRPODUBAI19" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI19.html">06IRANRPODUBAI19</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>REFORMISTS STRIKE DISSONANT CHORD</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-250.2214 -39.2835)" 
+                id="06IRANRPODUBAI21" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06IRANRPODUBAI21.html">06IRANRPODUBAI21</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ELECTIONS AND POWER ALIGNMENTS IN IRAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification SECRET-NOFORN">
+                        <tspan>SECRET//NOFORN</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(344.7454 -195.2445)" 
+                id="06IRANRPODUBAI8" 
+                class="labels">
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                
+                    06IRANRPODUBAI8
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 108.9597)" 
+                id="06RPODUBAI18" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06RPODUBAI18
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

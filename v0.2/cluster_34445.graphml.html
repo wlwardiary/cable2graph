@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN1651">06BERLIN1651</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BERLIN1651.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/16/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GERMANY'S 2007 EU PRESIDENCY:  THE ENERGY AGENDA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN1993">06BERLIN1993</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06BERLIN1993.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLITICAL GOALS OF THE GERMAN EU PRESIDENCY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN2782">06BERLIN2782</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BERLIN2782.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GERMANY'S EU PRESIDENCY - LOOKING AT THE ECONOMIC AGENDA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BERLIN2808">06BERLIN2808</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/23/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BERLIN2847">06BERLIN2847</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/27/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN2893">06BERLIN2893</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BERLIN2893.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/29/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SUCCESSFUL START TO ISLAMIC CONFERENCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN2948">06BERLIN2948</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BERLIN2948.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHANCELLOR MERKEL'S SPEECH ON GOALS FOR EU PRESIDENCY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3151">06BERLIN3151</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BERLIN3151.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EB/ESC DAS PAUL SIMONS MEETINGS WITH GERMAN OFFICIALS ON ENERGY AND GERMANY'S PRIORITIES FOR ITS G-8 AND EU PRESIDENCIES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3267">06BERLIN3267</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BERLIN3267.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/08/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OPPORTUNITIES TO ADVANCE U.S. OBJECTIVES DURING GERMANY'S EU PRESIDENCY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3399">06BERLIN3399</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BERLIN3399.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ENERGY AND GERMANY'S EU PRESIDENCY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07DUSSELDORF10">07DUSSELDORF10</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07DUSSELDORF10.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/29/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">MUSLIM COORDINATION COUNCIL EMERGING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN796">07BERLIN796</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07BERLIN796.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/19/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONTROVERSY SURROUNDS NEW MUSLIM COORDINATING COUNCIL</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN955">07BERLIN955</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BERLIN955.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GERMANY'S ISLAM CONFERENCE: WATCHING SAUSAGE BEING MADE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BERLIN1067">07BERLIN1067</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07BERLIN1067.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TURKEY AND TURKISH-GERMANS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="10.2346" y1="290.0000" 
+                  x2="-154.5413" y2="277.0770" class="btwns1"/>
+        
+            <line x1="10.2346" y1="290.0000" 
+                  x2="43.7966" y2="173.7912" class="btwns2"/>
+        
+            <line x1="-164.5107" y1="276.2951" 
+                  x2="-181.5019" y2="163.3154" class="btwns2"/>
+        
+            <line x1="-182.9891" y1="153.4266" 
+                  x2="36.5823" y2="163.7158" class="btwns7"/>
+        
+            <line x1="-182.9891" y1="153.4266" 
+                  x2="-331.4693" y2="63.3350" class="btwns6"/>
+        
+            <line x1="390.0000" y1="151.2375" 
+                  x2="248.3194" y2="68.7315" class="btwns2"/>
+        
+            <line x1="358.9132" y1="-64.6078" 
+                  x2="246.4852" y2="56.3739" class="btwns4"/>
+        
+            <line x1="358.9132" y1="-64.6078" 
+                  x2="277.1777" y2="-190.1441" class="btwns3"/>
+        
+            <line x1="239.6779" y1="63.6992" 
+                  x2="55.4422" y2="159.5678" class="btwns10"/>
+        
+            <line x1="239.6779" y1="63.6992" 
+                  x2="125.7018" y2="-48.1342" class="btwns4"/>
+        
+            <line x1="-356.6516" y1="-180.1285" 
+                  x2="-387.2068" y2="-75.0891" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-65.4871" 
+                  x2="-343.7667" y2="48.8766" class="btwns4"/>
+        
+            <line x1="142.9115" y1="-290.0000" 
+                  x2="132.9115" y2="-290.0000" class="btwns0"/>
+        
+            <line x1="142.9115" y1="-290.0000" 
+                  x2="101.6199" y2="-198.1742" class="btwns1"/>
+        
+            <line x1="142.9115" y1="-290.0000" 
+                  x2="263.5682" y2="-204.3144" class="btwns1"/>
+        
+            <line x1="97.5187" y1="-189.0539" 
+                  x2="261.7362" y2="-197.9815" class="btwns0"/>
+        
+            <line x1="97.5187" y1="-189.0539" 
+                  x2="117.0115" y2="-65.0166" class="btwns3"/>
+        
+            <line x1="271.7214" y1="-198.5244" 
+                  x2="261.7214" y2="-198.5244" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(10.2346 290.0000)" 
+                class="vertice degree2 btwns0 authority3 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-164.5107 276.2951)" 
+                class="vertice degree2 btwns0 authority3 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-182.9891 153.4266)" 
+                class="vertice degree5 btwns7 authority6 BERLIN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 151.2375)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(358.9132 -64.6078)" 
+                class="vertice degree2 btwns2 authority3 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(239.6779 63.6992)" 
+                class="vertice degree7 btwns10 authority10 BERLIN">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(46.5713 164.1838)" 
+                class="vertice degree5 btwns9 authority6 BERLIN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-356.6516 -180.1285)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -65.4871)" 
+                class="vertice degree2 btwns2 authority3 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-340.0187 58.1476)" 
+                class="vertice degree2 btwns4 authority3 BERLIN">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(142.9115 -290.0000)" 
+                class="vertice degree7 btwns0 authority4 BERLIN">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(97.5187 -189.0539)" 
+                class="vertice degree5 btwns1 authority6 BERLIN">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(271.7214 -198.5244)" 
+                class="vertice degree10 btwns1 authority7 BERLIN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(118.5640 -55.1379)" 
+                class="vertice degree2 btwns2 authority3 DUSSELDORF">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(10.2346 290.0000)" 
+                id="06BERLIN1651" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BERLIN1651.html">06BERLIN1651</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GERMANY'S 2007 EU PRESIDENCY:  THE ENERGY AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-164.5107 276.2951)" 
+                id="06BERLIN1993" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BERLIN1993.html">06BERLIN1993</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>POLITICAL GOALS OF THE GERMAN EU PRESIDENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-182.9891 153.4266)" 
+                id="06BERLIN2782" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>09/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BERLIN2782.html">06BERLIN2782</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>GERMANY'S EU PRESIDENCY - LOOKING AT THE ECONOMIC AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 151.2375)" 
+                id="06BERLIN2808" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/23/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BERLIN2808
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(358.9132 -64.6078)" 
+                id="06BERLIN2847" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    06BERLIN2847
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(239.6779 63.6992)" 
+                id="06BERLIN2893" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>09/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BERLIN2893.html">06BERLIN2893</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>SUCCESSFUL START TO ISLAMIC CONFERENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(46.5713 164.1838)" 
+                id="06BERLIN2948" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>10/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BERLIN2948.html">06BERLIN2948</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CHANCELLOR MERKEL'S SPEECH ON GOALS FOR EU PRESIDENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-356.6516 -180.1285)" 
+                id="06BERLIN3151" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BERLIN3151.html">06BERLIN3151</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EB/ESC DAS PAUL SIMONS MEETINGS WITH GERMAN OFFICIALS ON ENERGY AND GERMANY'S PRIORITIES FOR ITS G-8 AND EU PRESIDENCIES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -65.4871)" 
+                id="06BERLIN3267" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BERLIN3267.html">06BERLIN3267</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>OPPORTUNITIES TO ADVANCE U.S. OBJECTIVES DURING GERMANY'S EU PRESIDENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-340.0187 58.1476)" 
+                id="06BERLIN3399" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BERLIN3399.html">06BERLIN3399</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ENERGY AND GERMANY'S EU PRESIDENCY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(142.9115 -290.0000)" 
+                id="07BERLIN1067" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>05/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BERLIN1067.html">07BERLIN1067</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>TURKEY AND TURKISH-GERMANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(97.5187 -189.0539)" 
+                id="07BERLIN796" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07BERLIN796.html">07BERLIN796</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CONTROVERSY SURROUNDS NEW MUSLIM COORDINATING COUNCIL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(271.7214 -198.5244)" 
+                id="07BERLIN955" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07BERLIN955.html">07BERLIN955</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GERMANY'S ISLAM CONFERENCE: WATCHING SAUSAGE BEING MADE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(118.5640 -55.1379)" 
+                id="07DUSSELDORF10" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>03/29/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07DUSSELDORF10.html">07DUSSELDORF10</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>MUSLIM COORDINATION COUNCIL EMERGING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

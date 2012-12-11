@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA357">06KINSHASA357</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KINSHASA357.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/03/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC: AVIAN INFLUENZA UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA461">06KINSHASA461</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KINSHASA461.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC: AVIAN INFLUENZA UPDATE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA476">06KINSHASA476</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06KINSHASA476.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/22/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DRC: AVIAN INFLUENZA UPDATE: NO CONFIRMED CASES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1856">06KINSHASA1856</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1856.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNRESOLVED POLITICAL QUESTIONS, BEHIND-THE-SCENES NEGOTIATIONS MARK POST-INAUGURATION DRC'S FIRST WEEK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1871">06KINSHASA1871</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1871.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/18/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BEMBA FLIES TO EUROPE TO TREAT BROKEN LEG</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1890">06KINSHASA1890</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1890.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/21/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ELECTIONS UPDATE: MOMENTUM IN MOVING TOWARD FUNCTIONAL INSTITUTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1895">06KINSHASA1895</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1895.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/22/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTIONS UPDATE:  SUPREME COURT APPROVES NATIONAL ASSEMBLY RULES</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1928">06KINSHASA1928</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1928.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/27/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PARLIAMENTARY UPDATE: DRC NATIONAL ASSEMBLY DEBATES NEW LEADERSHIP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06KINSHASA1939">06KINSHASA1939</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06KINSHASA1939.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/29/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ELECTIONS UPDATE:  NATIONAL ASSEMBLY ELECTS LEADERS WITH KAMERHE AS PRESIDENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA60">07KINSHASA60</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07KINSHASA60.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VETERAN POLITICAL OPERATIVE TAKES CHARGE OF DRC NATIONAL ASSEMBLY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA61">07KINSHASA61</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07KINSHASA61.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/19/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">BEMBA MAKES THEATRICAL RETURN TO KINSHASA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07KINSHASA81">07KINSHASA81</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07KINSHASA81.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ASSEMBLY PRESIDENT KAMERHE PLANS AMBITIOUS AGENDA</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-305.7164" y1="-199.0685" 
+                  x2="-371.2644" y2="-73.3515" class="btwns5"/>
+        
+            <line x1="-305.7164" y1="-199.0685" 
+                  x2="-168.2091" y2="-284.7132" class="btwns7"/>
+        
+            <line x1="-375.8877" y1="-64.4844" 
+                  x2="-388.9354" y2="57.3803" class="btwns3"/>
+        
+            <line x1="-159.7209" y1="-290.0000" 
+                  x2="0.6349" y2="-251.2245" class="btwns8"/>
+        
+            <line x1="10.3548" y1="-248.8741" 
+                  x2="52.1232" y2="-106.0910" class="btwns9"/>
+        
+            <line x1="54.9309" y1="-96.4933" 
+                  x2="99.2403" y2="60.1689" class="btwns10"/>
+        
+            <line x1="101.9619" y1="69.7914" 
+                  x2="281.3897" y2="80.9323" class="btwns7"/>
+        
+            <line x1="101.9619" y1="69.7914" 
+                  x2="24.1627" y2="199.1430" class="btwns5"/>
+        
+            <line x1="291.3705" y1="81.5520" 
+                  x2="383.5650" y2="-28.1132" class="btwns5"/>
+        
+            <line x1="390.0000" y1="-35.7677" 
+                  x2="387.4779" y2="-160.7026" class="btwns3"/>
+        
+            <line x1="19.0086" y1="207.7124" 
+                  x2="-94.6802" y2="284.4075" class="btwns3"/>
+        
+            <line x1="-102.9702" y1="290.0000" 
+                  x2="-112.9702" y2="290.0000" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-305.7164 -199.0685)" 
+                class="vertice degree5 btwns5 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-375.8877 -64.4844)" 
+                class="vertice degree5 btwns2 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-159.7209 -290.0000)" 
+                class="vertice degree5 btwns6 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(10.3548 -248.8741)" 
+                class="vertice degree5 btwns7 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(54.9309 -96.4933)" 
+                class="vertice degree5 btwns8 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(101.9619 69.7914)" 
+                class="vertice degree10 btwns10 authority10 KINSHASA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(291.3705 81.5520)" 
+                class="vertice degree5 btwns5 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -35.7677)" 
+                class="vertice degree5 btwns2 authority4 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(387.2761 -170.7006)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(19.0086 207.7124)" 
+                class="vertice degree5 btwns2 authority5 KINSHASA">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 67.3235)" 
+                class="vertice degree0 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-102.9702 290.0000)" 
+                class="vertice degree10 btwns0 authority0 KINSHASA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-305.7164 -199.0685)" 
+                id="06KINSHASA1856" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1856.html">06KINSHASA1856</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>UNRESOLVED POLITICAL QUESTIONS, BEHIND-THE-SCENES NEGOTIATIONS MARK POST-INAUGURATION DRC'S FIRST WEEK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-375.8877 -64.4844)" 
+                id="06KINSHASA1871" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/18/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1871.html">06KINSHASA1871</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>BEMBA FLIES TO EUROPE TO TREAT BROKEN LEG</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-159.7209 -290.0000)" 
+                id="06KINSHASA1890" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1890.html">06KINSHASA1890</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ELECTIONS UPDATE: MOMENTUM IN MOVING TOWARD FUNCTIONAL INSTITUTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(10.3548 -248.8741)" 
+                id="06KINSHASA1895" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1895.html">06KINSHASA1895</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>ELECTIONS UPDATE:  SUPREME COURT APPROVES NATIONAL ASSEMBLY RULES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(54.9309 -96.4933)" 
+                id="06KINSHASA1928" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>12/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1928.html">06KINSHASA1928</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PARLIAMENTARY UPDATE: DRC NATIONAL ASSEMBLY DEBATES NEW LEADERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(101.9619 69.7914)" 
+                id="06KINSHASA1939" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06KINSHASA1939.html">06KINSHASA1939</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ELECTIONS UPDATE:  NATIONAL ASSEMBLY ELECTS LEADERS WITH KAMERHE AS PRESIDENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(291.3705 81.5520)" 
+                id="06KINSHASA357" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/03/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KINSHASA357.html">06KINSHASA357</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>DRC: AVIAN INFLUENZA UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -35.7677)" 
+                id="06KINSHASA461" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KINSHASA461.html">06KINSHASA461</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>DRC: AVIAN INFLUENZA UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(387.2761 -170.7006)" 
+                id="06KINSHASA476" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/22/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06KINSHASA476.html">06KINSHASA476</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DRC: AVIAN INFLUENZA UPDATE: NO CONFIRMED CASES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(19.0086 207.7124)" 
+                id="07KINSHASA60" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>01/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KINSHASA60.html">07KINSHASA60</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>VETERAN POLITICAL OPERATIVE TAKES CHARGE OF DRC NATIONAL ASSEMBLY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 67.3235)" 
+                id="07KINSHASA61" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KINSHASA61.html">07KINSHASA61</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BEMBA MAKES THEATRICAL RETURN TO KINSHASA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-102.9702 290.0000)" 
+                id="07KINSHASA81" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07KINSHASA81.html">07KINSHASA81</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ASSEMBLY PRESIDENT KAMERHE PLANS AMBITIOUS AGENDA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05BERLIN3138">05BERLIN3138</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN846">06BERLIN846</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06BERLIN846.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/27/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE MARCH 26 GERMAN STATE ELECTIONS: GOOD NEWS FOR BERLIN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN1614">06BERLIN1614</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BERLIN1614.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GERMANY'S GRAND COALITION: THE RETURN OF POLITICS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BERLIN1822">06BERLIN1822</a>
+        
+
+        
+      </h5> 
+      <p class="date">06/29/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN1893">06BERLIN1893</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/07/06BERLIN1893.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/06/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">HEALTH "REFORM" SPARKS COALITION CLASH</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN2769">06BERLIN2769</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/09/06BERLIN2769.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CDU/CSU AND SPD INTERNAL DISCONTENT: IMPACT ON MERKEL AND THE GRAND COALITION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3156">06BERLIN3156</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/10/06BERLIN3156.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/30/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">GERMAN HEALTH MINISTER SCHMIDT TRAVELING TO U.S.</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3333">06BERLIN3333</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BERLIN3333.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/17/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MERKEL FACES PARTY CONVENTION AFTER YEAR IN OFFICE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06FRANKFURT7910">06FRANKFURT7910</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06FRANKFURT7910.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Hesse/Roland Koch in Party Financing "Blackmail" Scandal</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3395">06BERLIN3395</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06BERLIN3395.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CONVENTION STRENGTHENS MERKEL IN PARTY, GOVERNMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06FRANKFURT8092">06FRANKFURT8092</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06FRANKFURT8092.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SPD Left-wing Prevails / Ypsilanti to Challenge Koch</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN3490">06BERLIN3490</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BERLIN3490.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/13/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">(C) MERKEL AFTER ONE YEAR</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07FRANKFURT3022">07FRANKFURT3022</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07FRANKFURT3022.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Hesse State Election Preview: SPD Gaining Ground?</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="316.2922" y1="-290.0000" 
+                  x2="384.5729" y2="-184.3273" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-38.6236" 
+                  x2="-305.1231" y2="-134.5565" class="btwns2"/>
+        
+            <line x1="-172.0274" y1="20.7843" 
+                  x2="-128.9754" y2="-115.3024" class="btwns2"/>
+        
+            <line x1="-125.9591" y1="-124.8367" 
+                  x2="44.2253" y2="-114.7499" class="btwns7"/>
+        
+            <line x1="-125.9591" y1="-124.8367" 
+                  x2="-38.4958" y2="-227.8502" class="btwns0"/>
+        
+            <line x1="-125.9591" y1="-124.8367" 
+                  x2="-288.5462" y2="-141.0535" class="btwns4"/>
+        
+            <line x1="54.2077" y1="-114.1583" 
+                  x2="-26.2299" y2="-227.3224" class="btwns1"/>
+        
+            <line x1="54.2077" y1="-114.1583" 
+                  x2="202.2850" y2="3.3495" class="btwns10"/>
+        
+            <line x1="210.1183" y1="9.5656" 
+                  x2="363.9307" y2="-40.2499" class="btwns6"/>
+        
+            <line x1="210.1183" y1="9.5656" 
+                  x2="219.0901" y2="150.7155" class="btwns6"/>
+        
+            <line x1="373.4442" y1="-43.3311" 
+                  x2="388.7610" y2="-166.0051" class="btwns4"/>
+        
+            <line x1="219.7244" y1="160.6954" 
+                  x2="120.8979" y2="255.1963" class="btwns4"/>
+        
+            <line x1="113.6704" y1="262.1074" 
+                  x2="-27.7221" y2="288.1862" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(316.2922 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -38.6236)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-172.0274 20.7843)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-125.9591 -124.8367)" 
+                class="vertice degree10 btwns6 authority10 BERLIN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(54.2077 -114.1583)" 
+                class="vertice degree6 btwns7 authority6 BERLIN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-32.0235 -235.4731)" 
+                class="vertice degree3 btwns0 authority3 BERLIN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(210.1183 9.5656)" 
+                class="vertice degree6 btwns10 authority6 BERLIN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(373.4442 -43.3311)" 
+                class="vertice degree3 btwns4 authority3 BERLIN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -175.9281)" 
+                class="vertice degree3 btwns2 authority3 BERLIN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-298.4968 -142.0460)" 
+                class="vertice degree3 btwns2 authority3 BERLIN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(219.7244 160.6954)" 
+                class="vertice degree3 btwns4 authority3 FRANKFURT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(113.6704 262.1074)" 
+                class="vertice degree3 btwns2 authority3 FRANKFURT">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-37.5563 290.0000)" 
+                class="vertice degree0 btwns0 authority0 FRANKFURT">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(316.2922 -290.0000)" 
+                id="05BERLIN3138" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05BERLIN3138
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -38.6236)" 
+                id="06BERLIN1614" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BERLIN1614.html">06BERLIN1614</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GERMANY'S GRAND COALITION: THE RETURN OF POLITICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-172.0274 20.7843)" 
+                id="06BERLIN1822" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/29/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BERLIN1822
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-125.9591 -124.8367)" 
+                id="06BERLIN1893" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/07/06BERLIN1893.html">06BERLIN1893</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>HEALTH "REFORM" SPARKS COALITION CLASH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(54.2077 -114.1583)" 
+                id="06BERLIN2769" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>09/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/09/06BERLIN2769.html">06BERLIN2769</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>CDU/CSU AND SPD INTERNAL DISCONTENT: IMPACT ON MERKEL AND THE GRAND COALITION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-32.0235 -235.4731)" 
+                id="06BERLIN3156" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>10/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/10/06BERLIN3156.html">06BERLIN3156</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>GERMAN HEALTH MINISTER SCHMIDT TRAVELING TO U.S.</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(210.1183 9.5656)" 
+                id="06BERLIN3333" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>11/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BERLIN3333.html">06BERLIN3333</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>MERKEL FACES PARTY CONVENTION AFTER YEAR IN OFFICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(373.4442 -43.3311)" 
+                id="06BERLIN3395" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06BERLIN3395.html">06BERLIN3395</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>CONVENTION STRENGTHENS MERKEL IN PARTY, GOVERNMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -175.9281)" 
+                id="06BERLIN3490" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BERLIN3490.html">06BERLIN3490</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>(C) MERKEL AFTER ONE YEAR</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-298.4968 -142.0460)" 
+                id="06BERLIN846" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>03/27/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06BERLIN846.html">06BERLIN846</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>THE MARCH 26 GERMAN STATE ELECTIONS: GOOD NEWS FOR BERLIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(219.7244 160.6954)" 
+                id="06FRANKFURT7910" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/21/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06FRANKFURT7910.html">06FRANKFURT7910</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Hesse/Roland Koch in Party Financing "Blackmail" Scandal</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(113.6704 262.1074)" 
+                id="06FRANKFURT8092" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06FRANKFURT8092.html">06FRANKFURT8092</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>SPD Left-wing Prevails / Ypsilanti to Challenge Koch</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-37.5563 290.0000)" 
+                id="07FRANKFURT3022" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07FRANKFURT3022.html">07FRANKFURT3022</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Hesse State Election Preview: SPD Gaining Ground?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

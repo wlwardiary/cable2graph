@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1456">07ISLAMABAD1456</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1456.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE UPDATE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1466">07ISLAMABAD1466</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1466.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CHIEF JUSTICE UPDATE: MINOR PROTESTS THROUGHOUT PAKISTAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1490">07ISLAMABAD1490</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1490.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE UPDATE:  THE COURTROOM AND THE STREET</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1516">07ISLAMABAD1516</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1516.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">OFFICIALS INDICTED FOR MANHANDLING CHIEF JUSTICE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1783">07ISLAMABAD1783</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1783.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE CONTROVERSY:  THE SUPREME COURT SET TO TAKE CENTER STAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1833">07ISLAMABAD1833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE CONTROVERSY CONTINUES: APRIL 24 PROTESTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1834">07ISLAMABAD1834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE CONTROVERSY CONTINUES: THE HEARINGS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD1842">07ISLAMABAD1842</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1842.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTAN'S UPCOMING ELECTIONS, PART 1: STABILITY PROVIDES AN OPPORTUNITY TO PREPARE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD2017">07ISLAMABAD2017</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2017.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE UPDATE-- MAY 4</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD2033">07ISLAMABAD2033</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2033.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/07/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUPREME COURT SUSPENDS SUPREME JUDICIAL COUNCIL PROCEEDINGS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD2207">07ISLAMABAD2207</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2207.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOVERNMENT, CHIEF JUSTICE'S ATTORNEY REFUSE TO COMPROMISE, CASE CONTINUES IN SUPREME COURT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD2699">07ISLAMABAD2699</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ISLAMABAD2699.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CHIEF JUSTICE CASE:  SUPREME COURT DEFERS RULING ON PROCEDURAL POINTS; OPENING STATEMENTS BEGIN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD2944">07ISLAMABAD2944</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD2944.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/06/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTAN'S ELECTIONS: SOLVING THE VOTER ROLL CONTROVERSY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3030">07ISLAMABAD3030</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3030.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/12/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">STRENGTHENING SUPPORT FOR PAKISTAN'S ELECTIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3154">07ISLAMABAD3154</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3154.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SUPREME COURT RULES THAT CHIEF JUSTICE MUST BE REINSTATED</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3199">07ISLAMABAD3199</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3199.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PAKISTAN POLITICAL LANDSCAPE, PART 1: POLITICAL PARTY PRIMER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3200">07ISLAMABAD3200</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3200.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTAN POLITICAL LANDSCAPE, PART 2: FRACTURED OPPOSITION PREPARES FOR ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3247">07ISLAMABAD3247</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3247.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/27/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SUPREME COURT TELLS ELECTION COMMISSION TO BEEF UP VOTER ROLLS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3374">07ISLAMABAD3374</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ISLAMABAD3374.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PAKISTAN'S POLITICAL PARTIES ENGAGE THE SUPREME COURT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD3761">07ISLAMABAD3761</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ISLAMABAD3761.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/28/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">USG SUPPORT FOR PAKISTAN'S ELECTORAL PROCESS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ISLAMABAD4336">07ISLAMABAD4336</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07ISLAMABAD4336.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">COURT ORDERS VOTER ROLLS POSTED ON THE ELECTION COMMISSION'S WEBSITE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#07NEWDELHI4622">07NEWDELHI4622</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/15/07</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07NEWDELHI4654">07NEWDELHI4654</a>
+        
+
+        
+      </h5> 
+      <p class="date">10/15/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI4690">07NEWDELHI4690</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07NEWDELHI4690.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/23/07</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DELHI DIARY, OCT 13-22</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07NEWDELHI4756">07NEWDELHI4756</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/10/07NEWDELHI4756.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/26/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW DELHI NERVOUSLY WATCHING DEVELOPMENTS IN PAKISTAN AS DIALOGUE PROCESS CONTINUES</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="266.5163" y1="133.8760" 
+                  x2="207.9314" y2="66.8046" class="btwns1"/>
+        
+            <line x1="201.3528" y1="59.2731" 
+                  x2="78.7682" y2="118.2896" class="btwns7"/>
+        
+            <line x1="201.3528" y1="59.2731" 
+                  x2="212.8408" y2="-35.6941" class="btwns2"/>
+        
+            <line x1="201.3528" y1="59.2731" 
+                  x2="310.4831" y2="32.3256" class="btwns2"/>
+        
+            <line x1="69.7580" y1="122.6274" 
+                  x2="115.0848" y2="193.9059" class="btwns1"/>
+        
+            <line x1="69.7580" y1="122.6274" 
+                  x2="-81.9535" y2="132.7309" class="btwns8"/>
+        
+            <line x1="-314.7347" y1="-212.0335" 
+                  x2="-381.9780" y2="-161.9860" class="btwns1"/>
+        
+            <line x1="-314.7347" y1="-212.0335" 
+                  x2="-226.1518" y2="-257.3611" class="btwns2"/>
+        
+            <line x1="-217.2495" y1="-261.9164" 
+                  x2="-109.2605" y2="-287.6794" class="btwns4"/>
+        
+            <line x1="-91.9314" y1="133.3954" 
+                  x2="-244.5245" y2="95.0312" class="btwns9"/>
+        
+            <line x1="-91.9314" y1="133.3954" 
+                  x2="-89.5172" y2="211.1854" class="btwns2"/>
+        
+            <line x1="-99.5335" y1="-290.0000" 
+                  x2="17.3735" y2="-277.3714" class="btwns5"/>
+        
+            <line x1="27.3157" y1="-276.2974" 
+                  x2="131.6917" y2="-284.0310" class="btwns1"/>
+        
+            <line x1="27.3157" y1="-276.2974" 
+                  x2="25.6064" y2="-204.1063" class="btwns7"/>
+        
+            <line x1="25.3696" y1="-194.1092" 
+                  x2="-40.1306" y2="-133.7555" class="btwns8"/>
+        
+            <line x1="-254.2227" y1="92.5929" 
+                  x2="-280.8770" y2="169.6953" class="btwns1"/>
+        
+            <line x1="-254.2227" y1="92.5929" 
+                  x2="-215.0301" y2="10.1345" class="btwns9"/>
+        
+            <line x1="-254.2227" y1="92.5929" 
+                  x2="-367.7662" y2="111.9204" class="btwns1"/>
+        
+            <line x1="-254.2227" y1="92.5929" 
+                  x2="-352.3636" y2="33.8272" class="btwns1"/>
+        
+            <line x1="-284.1442" y1="179.1465" 
+                  x2="-294.1442" y2="179.1465" class="btwns0"/>
+        
+            <line x1="-47.4847" y1="-126.9792" 
+                  x2="-131.0481" y2="-75.6791" class="btwns8"/>
+        
+            <line x1="-89.2070" y1="221.1806" 
+                  x2="-62.3283" y2="280.8815" class="btwns1"/>
+        
+            <line x1="-58.2230" y1="290.0000" 
+                  x2="-68.2230" y2="290.0000" class="btwns0"/>
+        
+            <line x1="-210.7373" y1="1.1027" 
+                  x2="-146.6224" y2="-63.3572" class="btwns9"/>
+        
+            <line x1="258.6240" y1="-127.9833" 
+                  x2="218.8021" y2="-54.4160" class="btwns1"/>
+        
+            <line x1="390.0000" y1="-28.2945" 
+                  x2="327.8711" y2="23.5233" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(266.5163 133.8760)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(201.3528 59.2731)" 
+                class="vertice degree7 btwns5 authority7 ISLAMABAD">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(69.7580 122.6274)" 
+                class="vertice degree5 btwns7 authority5 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(120.4508 202.3442)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-314.7347 -212.0335)" 
+                class="vertice degree2 btwns1 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -156.0154)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-217.2495 -261.9164)" 
+                class="vertice degree2 btwns2 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-91.9314 133.3954)" 
+                class="vertice degree5 btwns8 authority5 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-99.5335 -290.0000)" 
+                class="vertice degree2 btwns3 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(27.3157 -276.2974)" 
+                class="vertice degree5 btwns5 authority4 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(141.6643 -284.7699)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(25.3696 -194.1092)" 
+                class="vertice degree2 btwns6 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-254.2227 92.5929)" 
+                class="vertice degree10 btwns10 authority10 ISLAMABAD">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-284.1442 179.1465)" 
+                class="vertice degree5 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-47.4847 -126.9792)" 
+                class="vertice degree2 btwns6 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-89.2070 221.1806)" 
+                class="vertice degree2 btwns1 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-58.2230 290.0000)" 
+                class="vertice degree5 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-210.7373 1.1027)" 
+                class="vertice degree2 btwns7 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-139.5703 -70.4472)" 
+                class="vertice degree2 btwns7 authority2 ISLAMABAD">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-377.6244 113.5985)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-360.9431 28.6899)" 
+                class="vertice degree0 btwns0 authority0 ISLAMABAD">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(258.6240 -127.9833)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -28.2945)" 
+                class="vertice degree0 btwns0 authority0 NEWDELHI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(214.0418 -45.6217)" 
+                class="vertice degree2 btwns1 authority2 NEWDELHI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(320.1915 29.9283)" 
+                class="vertice degree2 btwns1 authority2 NEWDELHI">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(266.5163 133.8760)" 
+                id="07ISLAMABAD1456" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1456.html">07ISLAMABAD1456</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE UPDATE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(201.3528 59.2731)" 
+                id="07ISLAMABAD1466" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>04/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1466.html">07ISLAMABAD1466</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE UPDATE: MINOR PROTESTS THROUGHOUT PAKISTAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(69.7580 122.6274)" 
+                id="07ISLAMABAD1490" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1490.html">07ISLAMABAD1490</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE UPDATE:  THE COURTROOM AND THE STREET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(120.4508 202.3442)" 
+                id="07ISLAMABAD1516" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1516.html">07ISLAMABAD1516</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>OFFICIALS INDICTED FOR MANHANDLING CHIEF JUSTICE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-314.7347 -212.0335)" 
+                id="07ISLAMABAD1783" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1783.html">07ISLAMABAD1783</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE CONTROVERSY:  THE SUPREME COURT SET TO TAKE CENTER STAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -156.0154)" 
+                id="07ISLAMABAD1833" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1833.html">07ISLAMABAD1833</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE CONTROVERSY CONTINUES: APRIL 24 PROTESTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-217.2495 -261.9164)" 
+                id="07ISLAMABAD1834" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1834.html">07ISLAMABAD1834</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE CONTROVERSY CONTINUES: THE HEARINGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-91.9314 133.3954)" 
+                id="07ISLAMABAD1842" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07ISLAMABAD1842.html">07ISLAMABAD1842</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PAKISTAN'S UPCOMING ELECTIONS, PART 1: STABILITY PROVIDES AN OPPORTUNITY TO PREPARE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-99.5335 -290.0000)" 
+                id="07ISLAMABAD2017" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>05/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2017.html">07ISLAMABAD2017</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE UPDATE-- MAY 4</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(27.3157 -276.2974)" 
+                id="07ISLAMABAD2033" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>05/07/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2033.html">07ISLAMABAD2033</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>SUPREME COURT SUSPENDS SUPREME JUDICIAL COUNCIL PROCEEDINGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(141.6643 -284.7699)" 
+                id="07ISLAMABAD2207" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07ISLAMABAD2207.html">07ISLAMABAD2207</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GOVERNMENT, CHIEF JUSTICE'S ATTORNEY REFUSE TO COMPROMISE, CASE CONTINUES IN SUPREME COURT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(25.3696 -194.1092)" 
+                id="07ISLAMABAD2699" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ISLAMABAD2699.html">07ISLAMABAD2699</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>CHIEF JUSTICE CASE:  SUPREME COURT DEFERS RULING ON PROCEDURAL POINTS; OPENING STATEMENTS BEGIN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-254.2227 92.5929)" 
+                id="07ISLAMABAD2944" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD2944.html">07ISLAMABAD2944</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>PAKISTAN'S ELECTIONS: SOLVING THE VOTER ROLL CONTROVERSY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-284.1442 179.1465)" 
+                id="07ISLAMABAD3030" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3030.html">07ISLAMABAD3030</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>STRENGTHENING SUPPORT FOR PAKISTAN'S ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-47.4847 -126.9792)" 
+                id="07ISLAMABAD3154" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3154.html">07ISLAMABAD3154</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SUPREME COURT RULES THAT CHIEF JUSTICE MUST BE REINSTATED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-89.2070 221.1806)" 
+                id="07ISLAMABAD3199" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3199.html">07ISLAMABAD3199</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PAKISTAN POLITICAL LANDSCAPE, PART 1: POLITICAL PARTY PRIMER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-58.2230 290.0000)" 
+                id="07ISLAMABAD3200" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>07/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3200.html">07ISLAMABAD3200</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>PAKISTAN POLITICAL LANDSCAPE, PART 2: FRACTURED OPPOSITION PREPARES FOR ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-210.7373 1.1027)" 
+                id="07ISLAMABAD3247" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07ISLAMABAD3247.html">07ISLAMABAD3247</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SUPREME COURT TELLS ELECTION COMMISSION TO BEEF UP VOTER ROLLS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-139.5703 -70.4472)" 
+                id="07ISLAMABAD3374" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ISLAMABAD3374.html">07ISLAMABAD3374</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>PAKISTAN'S POLITICAL PARTIES ENGAGE THE SUPREME COURT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-377.6244 113.5985)" 
+                id="07ISLAMABAD3761" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ISLAMABAD3761.html">07ISLAMABAD3761</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>USG SUPPORT FOR PAKISTAN'S ELECTORAL PROCESS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-360.9431 28.6899)" 
+                id="07ISLAMABAD4336" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07ISLAMABAD4336.html">07ISLAMABAD4336</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>COURT ORDERS VOTER ROLLS POSTED ON THE ELECTION COMMISSION'S WEBSITE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(258.6240 -127.9833)" 
+                id="07NEWDELHI4622" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07NEWDELHI4622
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -28.2945)" 
+                id="07NEWDELHI4654" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/15/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07NEWDELHI4654
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(214.0418 -45.6217)" 
+                id="07NEWDELHI4690" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07NEWDELHI4690.html">07NEWDELHI4690</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>DELHI DIARY, OCT 13-22</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(320.1915 29.9283)" 
+                id="07NEWDELHI4756" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>10/26/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/10/07NEWDELHI4756.html">07NEWDELHI4756</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>NEW DELHI NERVOUSLY WATCHING DEVELOPMENTS IN PAKISTAN AS DIALOGUE PROCESS CONTINUES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

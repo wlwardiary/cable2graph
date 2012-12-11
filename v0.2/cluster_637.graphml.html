@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#01HANOI2967">01HANOI2967</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2001/11/01HANOI2967.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/14/01</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VIETNAM-NORTH KOREA:  RELATIONS CONTINUE TO THAW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#02HANOI932">02HANOI932</a>
+        
+
+        
+      </h5> 
+      <p class="date">04/26/02</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#02HANOI1181">02HANOI1181</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2002/05/02HANOI1181.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/13/02</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GVN PRESIDENTIAL VISIT TO NORTH KOREA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03HANOI2617">03HANOI2617</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/10/03HANOI2617.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/14/03</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DPRK REFUGEE INCIDENTS IN VIETNAM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#03HANOI2650">03HANOI2650</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/10/03HANOI2650.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/17/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLITICS AND MONEY: VIETNAM AND THE KOREAS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#03HANOI2790">03HANOI2790</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2003/10/03HANOI2790.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">10/31/03</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">VIETNAM TRYING TO CONVINCE PYONGYANG ON -            ECONOMIC DEVELOPMENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04HANOI2175">04HANOI2175</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/07/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HANOI136">05HANOI136</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/01/05HANOI136.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/18/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">(C) DETAILS ON NORTH KOREAN ASYLUM-SEEKERS' DEPARTURE FROM HANOI</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05HANOI204">05HANOI204</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/24/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HANOI286">05HANOI286</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05HANOI286.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/03/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">Vietnam Adoptions - Senate StaffDel Met With Department of International Adoptions, Ministry of Justice</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05HANOI1179">05HANOI1179</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05HANOI1179.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/19/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">VIETNAM-DPRK TIES:  OPPORTUNITIES FOR AND CONSTRAINTS ON POSITIVE ROLE FOR HANOI</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HANOI1373">05HANOI1373</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05HANOI1373.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/09/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Seven North Koreans Enter Thai Embassy in Hanoi</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05HANOI1400">05HANOI1400</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05HANOI1400.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DPRK Asylum-seekers in Hanoi:  Update</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05HANOI1666">05HANOI1666</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05HANOI1666.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">DPRK Asylum-seekers Depart Hanoi</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05HANOI3365">05HANOI3365</a>
+        
+
+        
+      </h5> 
+      <p class="date">12/28/05</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-385.7905" y1="-204.5003" 
+                  x2="-389.6627" y2="-89.7676" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-79.7733" 
+                  x2="-306.9360" y2="29.7021" class="btwns4"/>
+        
+            <line x1="-300.8915" y1="37.6685" 
+                  x2="-154.1472" y2="134.3187" class="btwns6"/>
+        
+            <line x1="-111.9922" y1="287.2072" 
+                  x2="-143.5604" y2="149.5660" class="btwns2"/>
+        
+            <line x1="-145.7958" y1="139.8191" 
+                  x2="-284.8353" y2="216.9884" class="btwns2"/>
+        
+            <line x1="-145.7958" y1="139.8191" 
+                  x2="57.7972" y2="52.1034" class="btwns10"/>
+        
+            <line x1="254.6194" y1="50.5088" 
+                  x2="76.9803" y2="48.2725" class="btwns2"/>
+        
+            <line x1="66.9811" y1="48.1466" 
+                  x2="69.1129" y2="-145.7932" class="btwns9"/>
+        
+            <line x1="66.9811" y1="48.1466" 
+                  x2="161.1861" y2="184.3045" class="btwns4"/>
+        
+            <line x1="69.2228" y1="-155.7926" 
+                  x2="122.0477" y2="-280.7888" class="btwns1"/>
+        
+            <line x1="69.2228" y1="-155.7926" 
+                  x2="226.1542" y2="-210.9624" class="btwns4"/>
+        
+            <line x1="69.2228" y1="-155.7926" 
+                  x2="-64.9326" y2="-255.8450" class="btwns2"/>
+        
+            <line x1="125.9405" y1="-290.0000" 
+                  x2="227.3596" y2="-219.9615" class="btwns0"/>
+        
+            <line x1="235.5882" y1="-214.2790" 
+                  x2="380.3284" y2="-176.2399" class="btwns2"/>
+        
+            <line x1="166.8758" y1="192.5281" 
+                  x2="256.2338" y2="282.8896" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-385.7905 -204.5003)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -79.7733)" 
+                class="vertice degree3 btwns2 authority3 HANOI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-300.8915 37.6685)" 
+                class="vertice degree3 btwns3 authority3 HANOI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-111.9922 287.2072)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-145.7958 139.8191)" 
+                class="vertice degree10 btwns8 authority9 HANOI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-293.5789 221.8412)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(254.6194 50.5088)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(66.9811 48.1466)" 
+                class="vertice degree10 btwns10 authority9 HANOI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(69.2228 -155.7926)" 
+                class="vertice degree10 btwns6 authority10 HANOI">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(125.9405 -290.0000)" 
+                class="vertice degree3 btwns0 authority3 HANOI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(235.5882 -214.2790)" 
+                class="vertice degree6 btwns2 authority6 HANOI">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -173.6981)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(166.8758 192.5281)" 
+                class="vertice degree3 btwns2 authority3 HANOI">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(263.2653 290.0000)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-72.9487 -261.8234)" 
+                class="vertice degree0 btwns0 authority0 HANOI">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-385.7905 -204.5003)" 
+                id="01HANOI2967" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/14/01</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2001/11/01HANOI2967.html">01HANOI2967</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VIETNAM-NORTH KOREA:  RELATIONS CONTINUE TO THAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -79.7733)" 
+                id="02HANOI1181" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>05/13/02</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2002/05/02HANOI1181.html">02HANOI1181</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>GVN PRESIDENTIAL VISIT TO NORTH KOREA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-300.8915 37.6685)" 
+                id="02HANOI932" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>04/26/02</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    02HANOI932
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-111.9922 287.2072)" 
+                id="03HANOI2617" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/14/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/10/03HANOI2617.html">03HANOI2617</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DPRK REFUGEE INCIDENTS IN VIETNAM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-145.7958 139.8191)" 
+                id="03HANOI2650" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>10/17/03</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/10/03HANOI2650.html">03HANOI2650</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POLITICS AND MONEY: VIETNAM AND THE KOREAS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-293.5789 221.8412)" 
+                id="03HANOI2790" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>10/31/03</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2003/10/03HANOI2790.html">03HANOI2790</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VIETNAM TRYING TO CONVINCE PYONGYANG ON -            ECONOMIC DEVELOPMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(254.6194 50.5088)" 
+                id="04HANOI2175" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/07/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04HANOI2175
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(66.9811 48.1466)" 
+                id="05HANOI1179" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/19/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05HANOI1179.html">05HANOI1179</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>VIETNAM-DPRK TIES:  OPPORTUNITIES FOR AND CONSTRAINTS ON POSITIVE ROLE FOR HANOI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(69.2228 -155.7926)" 
+                id="05HANOI136" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>01/18/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/01/05HANOI136.html">05HANOI136</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>(C) DETAILS ON NORTH KOREAN ASYLUM-SEEKERS' DEPARTURE FROM HANOI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(125.9405 -290.0000)" 
+                id="05HANOI1373" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>06/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05HANOI1373.html">05HANOI1373</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>Seven North Koreans Enter Thai Embassy in Hanoi</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(235.5882 -214.2790)" 
+                id="05HANOI1400" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05HANOI1400.html">05HANOI1400</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>DPRK Asylum-seekers in Hanoi:  Update</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -173.6981)" 
+                id="05HANOI1666" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05HANOI1666.html">05HANOI1666</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DPRK Asylum-seekers Depart Hanoi</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(166.8758 192.5281)" 
+                id="05HANOI204" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    05HANOI204
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(263.2653 290.0000)" 
+                id="05HANOI286" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/03/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05HANOI286.html">05HANOI286</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Vietnam Adoptions - Senate StaffDel Met With Department of International Adoptions, Ministry of Justice</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-72.9487 -261.8234)" 
+                id="05HANOI3365" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/28/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05HANOI3365
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

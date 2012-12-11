@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05TOKYO6357">05TOKYO6357</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06SECSTATE124127">06SECSTATE124127</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE204250">06STATE204250</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05STATE204250">05STATE204250</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/17/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05WELLINGTON900">05WELLINGTON900</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/11/05WELLINGTON900.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/21/05</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NEW ZEALAND RESPONSE ON DPRK FLAG OF CONVENIENCE ISSUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE22855">06STATE22855</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/08/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO800">06TOKYO800</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06TOKYO800.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/14/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">PREVENTING USE OF THE DPRK AS A FLAG OF CONVENIENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON176">06WELLINGTON176</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06WELLINGTON176.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NEW ZEALAND REPORTS ON DPRK FLAG OF CONVENIENCE ISSUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO1446">06TOKYO1446</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/03/06TOKYO1446.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">DPRK FLAGS OF CONVENIENCE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO4306">06TOKYO4306</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06TOKYO4306.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/01/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">JAPAN ASKED TO TAKE FURTHER MEASURES REGARDING MARITIME INSURANCE COMPANIES INSURING NORTH KOREAN SHIPS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE124127">06STATE124127</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/06/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TOKYO4559">06TOKYO4559</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/08/06TOKYO4559.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/14/06</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">JAPAN UNABLE TO ACT AGAINST MARITIME INSURER SEPIA</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06TOKYO6357">06TOKYO6357</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/02/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE183705">06STATE183705</a>
+        
+
+        
+      </h5> 
+      <p class="date">11/06/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06WELLINGTON900">06WELLINGTON900</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06WELLINGTON900.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/16/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW ZEALAND TERRORISM FINANCE: TRO</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="230.9704" y1="136.0228" 
+                  x2="381.1565" y2="56.7454" class="btwns4"/>
+        
+            <line x1="230.9704" y1="136.0228" 
+                  x2="5.8467" y2="101.8259" class="btwns8"/>
+        
+            <line x1="-67.7132" y1="290.0000" 
+                  x2="-7.2223" y2="109.8042" class="btwns5"/>
+        
+            <line x1="390.0000" y1="52.0772" 
+                  x2="371.9836" y2="-100.3007" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="188.7574" 
+                  x2="-237.4462" y2="175.1302" class="btwns5"/>
+        
+            <line x1="95.6607" y1="280.0303" 
+                  x2="0.8115" y2="109.0685" class="btwns5"/>
+        
+            <line x1="-321.4757" y1="-290.0000" 
+                  x2="-171.2148" y2="-233.5705" class="btwns5"/>
+        
+            <line x1="187.5885" y1="-169.3143" 
+                  x2="-24.1369" y2="-139.5512" class="btwns4"/>
+        
+            <line x1="187.5885" y1="-169.3143" 
+                  x2="38.6110" y2="-118.1106" class="btwns4"/>
+        
+            <line x1="187.5885" y1="-169.3143" 
+                  x2="361.2920" y2="-113.3006" class="btwns5"/>
+        
+            <line x1="-97.6346" y1="-18.4137" 
+                  x2="-38.7299" y2="-129.3274" class="btwns1"/>
+        
+            <line x1="-97.6346" y1="-18.4137" 
+                  x2="-10.2303" y2="92.4706" class="btwns2"/>
+        
+            <line x1="-97.6346" y1="-18.4137" 
+                  x2="21.1950" y2="-108.8059" class="btwns1"/>
+        
+            <line x1="-34.0395" y1="-138.1591" 
+                  x2="-5.2879" y2="90.4023" class="btwns7"/>
+        
+            <line x1="-34.0395" y1="-138.1591" 
+                  x2="28.0460" y2="-280.7141" class="btwns2"/>
+        
+            <line x1="-34.0395" y1="-138.1591" 
+                  x2="19.7714" y2="-118.3195" class="btwns0"/>
+        
+            <line x1="-34.0395" y1="-138.1591" 
+                  x2="-153.7339" y2="-224.2172" class="btwns4"/>
+        
+            <line x1="-227.4859" y1="174.2405" 
+                  x2="-13.5339" y2="103.4647" class="btwns10"/>
+        
+            <line x1="-4.0398" y1="100.3241" 
+                  x2="27.6295" y2="-104.9771" class="btwns7"/>
+        
+            <line x1="32.0389" y1="-289.8823" 
+                  x2="29.3188" y2="-124.8589" class="btwns2"/>
+        
+            <line x1="29.1540" y1="-114.8602" 
+                  x2="-153.2900" y2="-224.8904" class="btwns4"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(230.9704 136.0228)" 
+                class="vertice degree1 btwns1 authority1 STATE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-67.7132 290.0000)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 52.0772)" 
+                class="vertice degree1 btwns0 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 188.7574)" 
+                class="vertice degree0 btwns0 authority0 SECSTATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(95.6607 280.0303)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-321.4757 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(187.5885 -169.3143)" 
+                class="vertice degree3 btwns2 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-97.6346 -18.4137)" 
+                class="vertice degree3 btwns0 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-34.0395 -138.1591)" 
+                class="vertice degree8 btwns3 authority8 TOKYO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-227.4859 174.2405)" 
+                class="vertice degree1 btwns2 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-4.0398 100.3241)" 
+                class="vertice degree10 btwns10 authority10 TOKYO">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(32.0389 -289.8823)" 
+                class="vertice degree1 btwns0 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="21" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.1540 -114.8602)" 
+                class="vertice degree8 btwns3 authority8 TOKYO">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(370.8094 -110.2315)" 
+                class="vertice degree1 btwns0 authority1 WELLINGTON">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-161.8532 -230.0548)" 
+                class="vertice degree3 btwns2 authority3 WELLINGTON">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(230.9704 136.0228)" 
+                id="05STATE204250" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    05STATE204250
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-67.7132 290.0000)" 
+                id="05TOKYO6357" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    05TOKYO6357
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 52.0772)" 
+                id="05WELLINGTON900" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/11/05WELLINGTON900.html">05WELLINGTON900</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND RESPONSE ON DPRK FLAG OF CONVENIENCE ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 188.7574)" 
+                id="06SECSTATE124127" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06SECSTATE124127
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(95.6607 280.0303)" 
+                id="06STATE124127" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE124127
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-321.4757 -290.0000)" 
+                id="06STATE183705" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06STATE183705
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(187.5885 -169.3143)" 
+                id="06STATE204250" 
+                class="labels">
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06STATE204250
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-97.6346 -18.4137)" 
+                id="06STATE22855" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/08/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    06STATE22855
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-34.0395 -138.1591)" 
+                id="06TOKYO1446" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>03/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06TOKYO1446.html">06TOKYO1446</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>DPRK FLAGS OF CONVENIENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-227.4859 174.2405)" 
+                id="06TOKYO4306" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TOKYO4306.html">06TOKYO4306</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JAPAN ASKED TO TAKE FURTHER MEASURES REGARDING MARITIME INSURANCE COMPANIES INSURING NORTH KOREAN SHIPS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-4.0398 100.3241)" 
+                id="06TOKYO4559" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/08/06TOKYO4559.html">06TOKYO4559</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JAPAN UNABLE TO ACT AGAINST MARITIME INSURER SEPIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(32.0389 -289.8823)" 
+                id="06TOKYO6357" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>11/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                
+                    06TOKYO6357
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(29.1540 -114.8602)" 
+                id="06TOKYO800" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>02/14/06</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06TOKYO800.html">06TOKYO800</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>PREVENTING USE OF THE DPRK AS A FLAG OF CONVENIENCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(370.8094 -110.2315)" 
+                id="06WELLINGTON176" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/05/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/03/06WELLINGTON176.html">06WELLINGTON176</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND REPORTS ON DPRK FLAG OF CONVENIENCE ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-161.8532 -230.0548)" 
+                id="06WELLINGTON900" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>11/16/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06WELLINGTON900.html">06WELLINGTON900</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NEW ZEALAND TERRORISM FINANCE: TRO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

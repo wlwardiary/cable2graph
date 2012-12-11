@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1315">07ATHENS1315</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ATHENS1315.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">U/S BURNS' JUNE 10 MEETING WITH FM BAKOYANNIS FOCUSES ON KOSOVO, MACEDONIA, MIDDLE EAST</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1316">07ATHENS1316</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ATHENS1316.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/27/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">U/S BURNS' JUNE 11 MEETING WITH PM KARAMANLIS: KARAMANLIS FEELING THE HEAT OVER MACEDONIA'S NATO ENTRY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1594">07ATHENS1594</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ATHENS1594.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/08/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE IS PREPARED TO VETO MACEDONIA NATO MEMBERSHIP</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1618">07ATHENS1618</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ATHENS1618.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE/MACEDONIA: PM KARAMANLIS' MESSAGE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1639">07ATHENS1639</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ATHENS1639.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/16/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KARAMANLIS PREPARING FOR EARLY ELECTIONS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1659">07ATHENS1659</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ATHENS1659.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/20/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE/MACEDONIA:  ND INSIDER SAYS KARAMANLIS SERIOUS ABOUT BLOCKING MACEDONIA'S NATO MEMBERSHIP</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1682">07ATHENS1682</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/08/07ATHENS1682.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/24/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREEK ELECTIONS:  KARAANLIS'S SUMMER "SURPRISE"</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1785">07ATHENS1785</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1785.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/06/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GREEK ELECTIONS PART I: MECHANICS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1804">07ATHENS1804</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1804.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/10/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">GREEK ELECTIONS PART II: NEW DEMOCRACY STRUGGLING WITH POST-ELECTION SCENARIOS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1826">07ATHENS1826</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1826.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/11/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">PM KARAMANLIS RAISES THE MACEDONIA STAKES AS ELECTORAL PRESSURE MOUNTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1834">07ATHENS1834</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1834.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/12/07</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">C O R R E C T E D COPY - GREECE: IF ND WINS, WHO'S IN KARAMANLIS'S NEW CABINET?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1853">07ATHENS1853</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1853.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/14/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE: SLIGHT ND LEAD AS PRE-ELECTION CAMPAIGN ENDS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1861">07ATHENS1861</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1861.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/17/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREECE: GOVERNING ND'S NARROW VICTORY -- WHAT IT MEANS FOR U.S. INTERESTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ATHENS1886">07ATHENS1886</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07ATHENS1886.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/19/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GREEK PM NAMES NEW CABINET</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07ATHENS1952">07ATHENS1952</a>
+        
+
+        
+      </h5> 
+      <p class="date">09/28/07</p>
+      
+      
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-238.0014" y1="-144.1985" 
+                  x2="-239.8952" y2="15.6640" class="btwns2"/>
+        
+            <line x1="-390.0000" y1="-22.2160" 
+                  x2="-400.0000" y2="-22.2160" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="-22.2160" 
+                  x2="-249.5401" y2="22.6222" class="btwns2"/>
+        
+            <line x1="-240.0137" y1="25.6633" 
+                  x2="-239.8993" y2="167.4896" class="btwns0"/>
+        
+            <line x1="-240.0137" y1="25.6633" 
+                  x2="-88.1156" y2="139.3794" class="btwns5"/>
+        
+            <line x1="-239.8913" y1="177.4896" 
+                  x2="-180.6832" y2="281.3133" class="btwns0"/>
+        
+            <line x1="-239.8913" y1="177.4896" 
+                  x2="-89.9142" y2="147.3431" class="btwns1"/>
+        
+            <line x1="164.3315" y1="-290.0000" 
+                  x2="197.1699" y2="-148.2065" class="btwns2"/>
+        
+            <line x1="-175.7293" y1="290.0000" 
+                  x2="-85.6254" y2="153.7142" class="btwns2"/>
+        
+            <line x1="199.4261" y1="-138.4644" 
+                  x2="194.7377" y2="82.3409" class="btwns4"/>
+        
+            <line x1="256.1438" y1="267.5834" 
+                  x2="146.8332" y2="275.7216" class="btwns0"/>
+        
+            <line x1="256.1438" y1="267.5834" 
+                  x2="346.0849" y2="199.6375" class="btwns0"/>
+        
+            <line x1="256.1438" y1="267.5834" 
+                  x2="197.8425" y2="101.7724" class="btwns2"/>
+        
+            <line x1="136.8608" y1="276.4641" 
+                  x2="191.5368" y2="101.8816" class="btwns2"/>
+        
+            <line x1="-80.1103" y1="145.3724" 
+                  x2="184.7068" y2="94.2347" class="btwns10"/>
+        
+            <line x1="354.0639" y1="193.6097" 
+                  x2="386.9319" y2="91.6476" class="btwns0"/>
+        
+            <line x1="354.0639" y1="193.6097" 
+                  x2="202.9681" y2="97.6978" class="btwns2"/>
+        
+            <line x1="390.0000" y1="82.1299" 
+                  x2="360.3544" y2="-13.3130" class="btwns0"/>
+        
+            <line x1="390.0000" y1="82.1299" 
+                  x2="204.5118" y2="91.8171" class="btwns2"/>
+        
+            <line x1="357.3881" y1="-22.8629" 
+                  x2="202.6894" y2="86.5638" class="btwns2"/>
+        
+            <line x1="194.5254" y1="92.3386" 
+                  x2="86.9706" y2="-25.9110" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-238.0014 -144.1985)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -22.2160)" 
+                class="vertice degree2 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-240.0137 25.6633)" 
+                class="vertice degree4 btwns3 authority4 ATHENS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-239.8913 177.4896)" 
+                class="vertice degree2 btwns0 authority2 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(164.3315 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-175.7293 290.0000)" 
+                class="vertice degree1 btwns0 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(199.4261 -138.4644)" 
+                class="vertice degree1 btwns1 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(256.1438 267.5834)" 
+                class="vertice degree2 btwns0 authority2 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(136.8608 276.4641)" 
+                class="vertice degree1 btwns0 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-80.1103 145.3724)" 
+                class="vertice degree4 btwns6 authority4 ATHENS">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(354.0639 193.6097)" 
+                class="vertice degree2 btwns0 authority2 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 82.1299)" 
+                class="vertice degree2 btwns0 authority2 ATHENS">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(357.3881 -22.8629)" 
+                class="vertice degree1 btwns0 authority1 ATHENS">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(194.5254 92.3386)" 
+                class="vertice degree10 btwns10 authority10 ATHENS">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(80.2420 -33.3087)" 
+                class="vertice degree0 btwns0 authority0 ATHENS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-238.0014 -144.1985)" 
+                id="07ATHENS1315" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ATHENS1315.html">07ATHENS1315</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>U/S BURNS' JUNE 10 MEETING WITH FM BAKOYANNIS FOCUSES ON KOSOVO, MACEDONIA, MIDDLE EAST</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -22.2160)" 
+                id="07ATHENS1316" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ATHENS1316.html">07ATHENS1316</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>U/S BURNS' JUNE 11 MEETING WITH PM KARAMANLIS: KARAMANLIS FEELING THE HEAT OVER MACEDONIA'S NATO ENTRY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-240.0137 25.6633)" 
+                id="07ATHENS1594" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/08/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ATHENS1594.html">07ATHENS1594</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>GREECE IS PREPARED TO VETO MACEDONIA NATO MEMBERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-239.8913 177.4896)" 
+                id="07ATHENS1618" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ATHENS1618.html">07ATHENS1618</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GREECE/MACEDONIA: PM KARAMANLIS' MESSAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.3315 -290.0000)" 
+                id="07ATHENS1639" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/16/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ATHENS1639.html">07ATHENS1639</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KARAMANLIS PREPARING FOR EARLY ELECTIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-175.7293 290.0000)" 
+                id="07ATHENS1659" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/20/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ATHENS1659.html">07ATHENS1659</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GREECE/MACEDONIA:  ND INSIDER SAYS KARAMANLIS SERIOUS ABOUT BLOCKING MACEDONIA'S NATO MEMBERSHIP</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(199.4261 -138.4644)" 
+                id="07ATHENS1682" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/24/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/08/07ATHENS1682.html">07ATHENS1682</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GREEK ELECTIONS:  KARAANLIS'S SUMMER "SURPRISE"</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(256.1438 267.5834)" 
+                id="07ATHENS1785" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/06/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1785.html">07ATHENS1785</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GREEK ELECTIONS PART I: MECHANICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(136.8608 276.4641)" 
+                id="07ATHENS1804" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1804.html">07ATHENS1804</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GREEK ELECTIONS PART II: NEW DEMOCRACY STRUGGLING WITH POST-ELECTION SCENARIOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-80.1103 145.3724)" 
+                id="07ATHENS1826" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>09/11/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1826.html">07ATHENS1826</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>PM KARAMANLIS RAISES THE MACEDONIA STAKES AS ELECTORAL PRESSURE MOUNTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(354.0639 193.6097)" 
+                id="07ATHENS1834" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/12/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1834.html">07ATHENS1834</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>C O R R E C T E D COPY - GREECE: IF ND WINS, WHO'S IN KARAMANLIS'S NEW CABINET?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 82.1299)" 
+                id="07ATHENS1853" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/14/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1853.html">07ATHENS1853</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>GREECE: SLIGHT ND LEAD AS PRE-ELECTION CAMPAIGN ENDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(357.3881 -22.8629)" 
+                id="07ATHENS1861" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>09/17/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1861.html">07ATHENS1861</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>GREECE: GOVERNING ND'S NARROW VICTORY -- WHAT IT MEANS FOR U.S. INTERESTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(194.5254 92.3386)" 
+                id="07ATHENS1886" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>09/19/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07ATHENS1886.html">07ATHENS1886</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GREEK PM NAMES NEW CABINET</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(80.2420 -33.3087)" 
+                id="07ATHENS1952" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    07ATHENS1952
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

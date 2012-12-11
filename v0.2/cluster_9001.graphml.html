@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04REFTEL:ADANA67">04REFTEL:ADANA67</a>
+        
+
+        
+      </h5> 
+      
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ADANA22">04ADANA22</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/02/04ADANA22.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/20/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SE TURKEY'S INITIAL REACTIONS TO NEW ECONOMIC INCENTIVES' LAW</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA1423">04ANKARA1423</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/03/04ANKARA1423.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/10/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Prime Minister leads AK Party press to win two big Southeast mayoralties</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA1624">04ANKARA1624</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/03/04ANKARA1624.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/18/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CLASHES IN NORTHERN SYRIA CAUSE CONCERN IN SE TURKEY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#04ANKARA1646">04ANKARA1646</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/18/04</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA1717">04ANKARA1717</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/03/04ANKARA1717.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/23/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SOUTHEAST TURKEY SITUATION REPORT:  IMPROVING CONDITIONS ARE NOT SET IN A SOLID FOUNDATION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA2884">04ANKARA2884</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/05/04ANKARA2884.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/24/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">Land mine attacks, hostile contact in Southeast Turkey continue</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ADANA67">04ADANA67</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04ADANA67.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/10/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TENSION BUILDS IN SE TURKEY AS PDD/KONGRA GEL KEEPS UP PRESSURE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ADANA68">04ADANA68</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04ADANA68.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/14/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AHMET GUVENER: PROTESTANT CHURCH LEADER ACQUITTED, BUT LATER ZONING REVERSAL CLOUDS ISSUE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ADANA72">04ADANA72</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04ADANA72.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TENSION BUILDS IN SE TURKEY AS PKK/KONGRA GEL KEEPS UP PRESSURE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ADANA86">04ADANA86</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/06/04ADANA86.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">RELEASED DEP DEPUTIES TOUR SE TURKEY AS PKK TERROR EXPANDS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ANKARA3976">04ANKARA3976</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/07/04ANKARA3976.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/16/04</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">ARE SE TURKEY PROTESTS AGAINST PKK TERROR REAL?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#04ADANA105">04ADANA105</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/08/04ADANA105.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/20/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SYRIAC CHRISTIANS, SOME DEHAP MAYORS SKEPTICAL ABOUT REFORM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#04ADANA127">04ADANA127</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2004/09/04ADANA127.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/27/04</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JANDARMA EVICTS VILLAGE GUARDS FROM SYRIAC VILLAGE OF SARIKOY</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05ANKARA2388">05ANKARA2388</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05ANKARA2388.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/27/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">SE TURKEY:  SYRIACS CELEBRATES NEW YEAR, BUT LAMENT VILLAGE PROPERTY DISPUTE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="311.0362" y1="102.5566" 
+                  x2="383.1958" y2="180.2743" class="btwns2"/>
+        
+            <line x1="311.0362" y1="102.5566" 
+                  x2="251.2313" y2="-11.7419" class="btwns6"/>
+        
+            <line x1="311.0362" y1="102.5566" 
+                  x2="280.5791" y2="216.9395" class="btwns2"/>
+        
+            <line x1="390.0000" y1="187.6025" 
+                  x2="287.4498" y2="223.3141" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="148.4332" 
+                  x2="-221.4399" y2="141.1246" class="btwns2"/>
+        
+            <line x1="79.7962" y1="-82.5113" 
+                  x2="116.9025" y2="-195.1198" class="btwns4"/>
+        
+            <line x1="79.7962" y1="-82.5113" 
+                  x2="-109.5067" y2="-31.3167" class="btwns10"/>
+        
+            <line x1="79.7962" y1="-82.5113" 
+                  x2="237.2202" y2="-24.0820" class="btwns7"/>
+        
+            <line x1="-128.7361" y1="290.0000" 
+                  x2="-206.6034" y2="149.4389" class="btwns2"/>
+        
+            <line x1="-222.2403" y1="-144.5953" 
+                  x2="-125.8060" y2="-36.1780" class="btwns2"/>
+        
+            <line x1="120.0322" y1="-204.6174" 
+                  x2="42.3994" y2="-282.8995" class="btwns2"/>
+        
+            <line x1="-289.4647" y1="266.1716" 
+                  x2="-216.7293" y2="149.1838" class="btwns2"/>
+        
+            <line x1="-338.2364" y1="30.0983" 
+                  x2="-218.9852" y2="134.1180" class="btwns2"/>
+        
+            <line x1="-45.6875" y1="187.9083" 
+                  x2="-201.8319" y2="143.4309" class="btwns2"/>
+        
+            <line x1="-211.4493" y1="140.6914" 
+                  x2="-123.9441" y2="-19.9248" class="btwns9"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(311.0362 102.5566)" 
+                class="vertice degree4 btwns4 authority3 ADANA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 187.6025)" 
+                class="vertice degree2 btwns0 authority1 ADANA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.4332)" 
+                class="vertice degree0 btwns0 authority0 ADANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(79.7962 -82.5113)" 
+                class="vertice degree4 btwns10 authority4 ADANA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-128.7361 290.0000)" 
+                class="vertice degree0 btwns0 authority0 ADANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-222.2403 -144.5953)" 
+                class="vertice degree0 btwns0 authority0 ADANA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(120.0322 -204.6174)" 
+                class="vertice degree2 btwns2 authority1 ADANA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="27" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-289.4647 266.1716)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-338.2364 30.0983)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-45.6875 187.9083)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-211.4493 140.6914)" 
+                class="vertice degree10 btwns9 authority10 ANKARA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-119.1600 -28.7061)" 
+                class="vertice degree4 btwns9 authority3 ANKARA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(246.5952 -20.6023)" 
+                class="vertice degree2 btwns5 authority2 ANKARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(35.3578 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(278.0060 226.6028)" 
+                class="vertice degree2 btwns0 authority1 ANKARA">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(311.0362 102.5566)" 
+                id="04ADANA105" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/20/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/08/04ADANA105.html">04ADANA105</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>SYRIAC CHRISTIANS, SOME DEHAP MAYORS SKEPTICAL ABOUT REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 187.6025)" 
+                id="04ADANA127" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/27/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/09/04ADANA127.html">04ADANA127</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>JANDARMA EVICTS VILLAGE GUARDS FROM SYRIAC VILLAGE OF SARIKOY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 148.4332)" 
+                id="04ADANA22" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/20/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/02/04ADANA22.html">04ADANA22</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SE TURKEY'S INITIAL REACTIONS TO NEW ECONOMIC INCENTIVES' LAW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(79.7962 -82.5113)" 
+                id="04ADANA67" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/10/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04ADANA67.html">04ADANA67</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>TENSION BUILDS IN SE TURKEY AS PDD/KONGRA GEL KEEPS UP PRESSURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-128.7361 290.0000)" 
+                id="04ADANA68" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/14/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04ADANA68.html">04ADANA68</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AHMET GUVENER: PROTESTANT CHURCH LEADER ACQUITTED, BUT LATER ZONING REVERSAL CLOUDS ISSUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-222.2403 -144.5953)" 
+                id="04ADANA72" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04ADANA72.html">04ADANA72</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TENSION BUILDS IN SE TURKEY AS PKK/KONGRA GEL KEEPS UP PRESSURE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(120.0322 -204.6174)" 
+                id="04ADANA86" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>06/21/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/06/04ADANA86.html">04ADANA86</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>RELEASED DEP DEPUTIES TOUR SE TURKEY AS PKK TERROR EXPANDS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-289.4647 266.1716)" 
+                id="04ANKARA1423" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/10/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/03/04ANKARA1423.html">04ANKARA1423</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>Prime Minister leads AK Party press to win two big Southeast mayoralties</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-338.2364 30.0983)" 
+                id="04ANKARA1624" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/03/04ANKARA1624.html">04ANKARA1624</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CLASHES IN NORTHERN SYRIA CAUSE CONCERN IN SE TURKEY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-45.6875 187.9083)" 
+                id="04ANKARA1646" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/04</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04ANKARA1646
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-211.4493 140.6914)" 
+                id="04ANKARA1717" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/23/04</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/03/04ANKARA1717.html">04ANKARA1717</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>SOUTHEAST TURKEY SITUATION REPORT:  IMPROVING CONDITIONS ARE NOT SET IN A SOLID FOUNDATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-119.1600 -28.7061)" 
+                id="04ANKARA2884" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>05/24/04</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/05/04ANKARA2884.html">04ANKARA2884</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>Land mine attacks, hostile contact in Southeast Turkey continue</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(246.5952 -20.6023)" 
+                id="04ANKARA3976" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>07/16/04</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2004/07/04ANKARA3976.html">04ANKARA3976</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>ARE SE TURKEY PROTESTS AGAINST PKK TERROR REAL?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(35.3578 -290.0000)" 
+                id="04REFTEL:ADANA67" 
+                class="labels">
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    04REFTEL:ADANA67
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(278.0060 226.6028)" 
+                id="05ANKARA2388" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>04/27/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05ANKARA2388.html">05ANKARA2388</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>SE TURKEY:  SYRIACS CELEBRATES NEW YEAR, BUT LAMENT VILLAGE PROPERTY DISPUTE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

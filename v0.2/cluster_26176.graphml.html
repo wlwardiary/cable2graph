@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA816">05PRETORIA816</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/02/05PRETORIA816.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/24/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA: MINERALS AND ENERGY NEWSLETTER "THE ASSAY" - I</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA992">05PRETORIA992</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05PRETORIA992.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/09/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA RAISES FUEL PRICES</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1099">05PRETORIA1099</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/03/05PRETORIA1099.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/15/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA: MINERALS AND ENERGY NEWSLETTER "THE ASSAY" - ISSUE 2, FEBRUARY 2005</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1510">05PRETORIA1510</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05PRETORIA1510.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/15/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">South Africa: Minerals and Energy Newsletter "THE ASSAY" - Issue 3, March 2005</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1574">05PRETORIA1574</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05PRETORIA1574.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/20/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICAN FUEL PRICES REACH ALL-TIME HIGHS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1612">05PRETORIA1612</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/04/05PRETORIA1612.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/25/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">South Africa: Minerals and Energy Newsletter "THE ASSAY" - Issue 3, March 2005</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA1932">05PRETORIA1932</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/05/05PRETORIA1932.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/17/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA: FUEL PRICES AT NEW HIGHS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA2278">05PRETORIA2278</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05PRETORIA2278.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA: FUEL PRICE SPIRAL TAKES A BREATHER</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA2665">05PRETORIA2665</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05PRETORIA2665.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/07/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">South Africa: Fuel Prices at New Record Highs</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA2754">05PRETORIA2754</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05PRETORIA2754.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/13/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">South  Africa: Minerals and  Energy  Newsletter "THE ASSAY" - Issue 6, June 2005</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#05PRETORIA2998">05PRETORIA2998</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/28/05</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#05PRETORIA3049">05PRETORIA3049</a>
+        
+
+        
+      </h5> 
+      <p class="date">07/30/05</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA3190">05PRETORIA3190</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05PRETORIA3190.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/10/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH AFRICA: FUEL PRICES CONTINUE TO NEW RECORD HIGHS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05PRETORIA3298">05PRETORIA3298</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05PRETORIA3298.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/17/05</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">SOUTH  AFRICA: MINERALS AND  ENERGY  NEWSLETTER "THE ASSAY" - ISSUE 7, JULY 2005</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="6.2628" y1="188.4533" 
+                  x2="-107.5716" y2="-9.4150" class="btwns3"/>
+        
+            <line x1="6.2628" y1="188.4533" 
+                  x2="-205.8963" y2="269.8297" class="btwns0"/>
+        
+            <line x1="-165.9968" y1="140.8769" 
+                  x2="-115.7449" y2="-8.6042" class="btwns3"/>
+        
+            <line x1="-165.9968" y1="140.8769" 
+                  x2="-211.7506" y2="264.0369" class="btwns0"/>
+        
+            <line x1="-122.1362" y1="-290.0000" 
+                  x2="-112.9104" y2="-28.0768" class="btwns4"/>
+        
+            <line x1="-350.4436" y1="193.2330" 
+                  x2="-120.0346" y2="-11.4417" class="btwns3"/>
+        
+            <line x1="-350.4436" y1="193.2330" 
+                  x2="-223.8344" y2="268.3104" class="btwns0"/>
+        
+            <line x1="29.4250" y1="-233.5873" 
+                  x2="-107.0567" y2="-26.4335" class="btwns4"/>
+        
+            <line x1="-390.0000" y1="-121.1379" 
+                  x2="-121.9325" y2="-21.5650" class="btwns4"/>
+        
+            <line x1="188.7565" y1="-119.2592" 
+                  x2="-103.0785" y2="-21.2661" class="btwns10"/>
+        
+            <line x1="188.7565" y1="-119.2592" 
+                  x2="380.2457" y2="-162.5075" class="btwns4"/>
+        
+            <line x1="-335.3015" y1="76.2336" 
+                  x2="-121.7668" y2="-14.1838" class="btwns3"/>
+        
+            <line x1="-335.3015" y1="76.2336" 
+                  x2="-220.4340" y2="264.8699" class="btwns0"/>
+        
+            <line x1="-112.5583" y1="-18.0830" 
+                  x2="-57.6105" y2="280.1655" class="btwns3"/>
+        
+            <line x1="-112.5583" y1="-18.0830" 
+                  x2="-271.9024" y2="-232.7140" class="btwns4"/>
+        
+            <line x1="-112.5583" y1="-18.0830" 
+                  x2="154.6010" y2="63.1291" class="btwns4"/>
+        
+            <line x1="-215.2330" y1="273.4109" 
+                  x2="-65.7450" y2="288.9651" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(6.2628 188.4533)" 
+                class="vertice degree1 btwns0 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-165.9968 140.8769)" 
+                class="vertice degree1 btwns0 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-122.1362 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-350.4436 193.2330)" 
+                class="vertice degree1 btwns0 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(29.4250 -233.5873)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -121.1379)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(188.7565 -119.2592)" 
+                class="vertice degree1 btwns1 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-335.3015 76.2336)" 
+                class="vertice degree1 btwns0 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-112.5583 -18.0830)" 
+                class="vertice degree10 btwns10 authority10 PRETORIA">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-215.2330 273.4109)" 
+                class="vertice degree4 btwns0 authority4 PRETORIA">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="24" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -164.7106)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-55.7987 290.0000)" 
+                class="vertice degree1 btwns0 authority1 PRETORIA">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-277.8634 -240.7432)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(164.1687 66.0375)" 
+                class="vertice degree0 btwns0 authority0 PRETORIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(6.2628 188.4533)" 
+                id="05PRETORIA1099" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05PRETORIA1099.html">05PRETORIA1099</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA: MINERALS AND ENERGY NEWSLETTER "THE ASSAY" - ISSUE 2, FEBRUARY 2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-165.9968 140.8769)" 
+                id="05PRETORIA1510" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PRETORIA1510.html">05PRETORIA1510</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>South Africa: Minerals and Energy Newsletter "THE ASSAY" - Issue 3, March 2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-122.1362 -290.0000)" 
+                id="05PRETORIA1574" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>04/20/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PRETORIA1574.html">05PRETORIA1574</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICAN FUEL PRICES REACH ALL-TIME HIGHS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-350.4436 193.2330)" 
+                id="05PRETORIA1612" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>04/25/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/04/05PRETORIA1612.html">05PRETORIA1612</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>South Africa: Minerals and Energy Newsletter "THE ASSAY" - Issue 3, March 2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(29.4250 -233.5873)" 
+                id="05PRETORIA1932" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/05/05PRETORIA1932.html">05PRETORIA1932</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA: FUEL PRICES AT NEW HIGHS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -121.1379)" 
+                id="05PRETORIA2278" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05PRETORIA2278.html">05PRETORIA2278</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA: FUEL PRICE SPIRAL TAKES A BREATHER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(188.7565 -119.2592)" 
+                id="05PRETORIA2665" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/07/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05PRETORIA2665.html">05PRETORIA2665</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>South Africa: Fuel Prices at New Record Highs</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-335.3015 76.2336)" 
+                id="05PRETORIA2754" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>07/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05PRETORIA2754.html">05PRETORIA2754</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>South  Africa: Minerals and  Energy  Newsletter "THE ASSAY" - Issue 6, June 2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-112.5583 -18.0830)" 
+                id="05PRETORIA2998" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/28/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    05PRETORIA2998
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-215.2330 273.4109)" 
+                id="05PRETORIA3049" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>07/30/05</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                
+                    05PRETORIA3049
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -164.7106)" 
+                id="05PRETORIA3190" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/10/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05PRETORIA3190.html">05PRETORIA3190</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA: FUEL PRICES CONTINUE TO NEW RECORD HIGHS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-55.7987 290.0000)" 
+                id="05PRETORIA3298" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>08/17/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05PRETORIA3298.html">05PRETORIA3298</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>SOUTH  AFRICA: MINERALS AND  ENERGY  NEWSLETTER "THE ASSAY" - ISSUE 7, JULY 2005</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-277.8634 -240.7432)" 
+                id="05PRETORIA816" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/24/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/02/05PRETORIA816.html">05PRETORIA816</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA: MINERALS AND ENERGY NEWSLETTER "THE ASSAY" - I</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(164.1687 66.0375)" 
+                id="05PRETORIA992" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/09/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/03/05PRETORIA992.html">05PRETORIA992</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SOUTH AFRICA RAISES FUEL PRICES</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

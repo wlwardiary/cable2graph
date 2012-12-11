@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1337">09TELAVIV1337</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09TELAVIV1337.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">OPPOSITION LAWMAKERS BOYCOTT KNESSET TO PROTEST LEGISLATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1437">09TELAVIV1437</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09TELAVIV1437.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/02/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOFAZ CHALLENGING LIVNI WHILE NETANYAHU COURTS BOTH</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1579">09TELAVIV1579</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/07/09TELAVIV1579.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/17/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">POLICE REPORTEDLY CLOSE TO RECOMMENDING INDICTMENT OF FOREIGN MINISTER LIBERMAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1717">09TELAVIV1717</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09TELAVIV1717.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLICE FORMALLY RECOMMEND INDICTMENT OF FOREIGN MINISTER LIBERMAN</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1718">09TELAVIV1718</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09TELAVIV1718.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/03/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">POLICE FORMALLY RECOMMEND INDICTMENT OF FOREIGN MINISTER LIBERMAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1838">09TELAVIV1838</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/08/09TELAVIV1838.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/18/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">LIEBERMAN INDICTMENT SCENARIOS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV1918">09TELAVIV1918</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/09/09TELAVIV1918.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/02/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FORMER PRIME MINISTER INDICTED, FORMER MINISTERS SENT TO PRISON</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV2813">09TELAVIV2813</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09TELAVIV2813.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IS KADIMA ABOUT TO SPLIT?</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TELAVIV2846">09TELAVIV2846</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/12/09TELAVIV2846.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/30/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KADIMA NEGOTIATIONS CONTINUE ON WHETHER TO JOIN COALITION GOVERNMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TELAVIV137">10TELAVIV137</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/01/10TELAVIV137.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/22/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KADIMA'S INTERNAL SQUABBLES CONTINUE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#10TELAVIV310">10TELAVIV310</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TELAVIV310.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/10/10</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">FM LIEBERMAN INDICTMENT ON HOLD, FOR NOW</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#10TELAVIV338">10TELAVIV338</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2010/02/10TELAVIV338.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/16/10</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">MOFAZ AND LIVNI DO BATTLE AHEAD OF "DECISIVE" PARTY MEETING LATER THIS MONTH</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="326.6402" y1="265.1747" 
+                  x2="254.9710" y2="169.1341" class="btwns0"/>
+        
+            <line x1="326.6402" y1="265.1747" 
+                  x2="65.4176" y2="233.9229" class="btwns1"/>
+        
+            <line x1="326.6402" y1="265.1747" 
+                  x2="386.6770" y2="94.7719" class="btwns0"/>
+        
+            <line x1="326.6402" y1="265.1747" 
+                  x2="187.0783" y2="277.7954" class="btwns0"/>
+        
+            <line x1="146.6226" y1="57.6948" 
+                  x2="241.9557" y2="154.0124" class="btwns1"/>
+        
+            <line x1="146.6226" y1="57.6948" 
+                  x2="60.1065" y2="223.8652" class="btwns5"/>
+        
+            <line x1="146.6226" y1="57.6948" 
+                  x2="380.0639" y2="84.2115" class="btwns2"/>
+        
+            <line x1="146.6226" y1="57.6948" 
+                  x2="175.7520" y2="268.7899" class="btwns1"/>
+        
+            <line x1="146.6226" y1="57.6948" 
+                  x2="16.7990" y2="-154.4327" class="btwns10"/>
+        
+            <line x1="248.9903" y1="161.1197" 
+                  x2="64.8667" y2="229.2641" class="btwns0"/>
+        
+            <line x1="248.9903" y1="161.1197" 
+                  x2="381.1914" y2="90.0740" class="btwns0"/>
+        
+            <line x1="248.9903" y1="161.1197" 
+                  x2="182.3344" y2="270.1638" class="btwns0"/>
+        
+            <line x1="55.4884" y1="232.7350" 
+                  x2="-188.4483" y2="287.7981" class="btwns6"/>
+        
+            <line x1="55.4884" y1="232.7350" 
+                  x2="167.7645" y2="275.1612" class="btwns0"/>
+        
+            <line x1="-198.2029" y1="290.0000" 
+                  x2="-380.2313" y2="250.1515" class="btwns3"/>
+        
+            <line x1="11.5789" y1="-162.9621" 
+                  x2="174.9020" y2="-284.0445" class="btwns3"/>
+        
+            <line x1="11.5789" y1="-162.9621" 
+                  x2="-131.7732" y2="-277.7606" class="btwns2"/>
+        
+            <line x1="11.5789" y1="-162.9621" 
+                  x2="-210.5591" y2="-168.4353" class="btwns2"/>
+        
+            <line x1="-139.5788" y1="-284.0114" 
+                  x2="-214.8097" y2="-176.8657" class="btwns0"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(326.6402 265.1747)" 
+                class="vertice degree7 btwns0 authority7 TELAVIV">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(146.6226 57.6948)" 
+                class="vertice degree10 btwns10 authority9 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(248.9903 161.1197)" 
+                class="vertice degree10 btwns0 authority10 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(55.4884 232.7350)" 
+                class="vertice degree10 btwns6 authority9 TELAVIV">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 85.3402)" 
+                class="vertice degree5 btwns0 authority5 TELAVIV">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-198.2029 290.0000)" 
+                class="vertice degree2 btwns3 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(177.1189 278.6960)" 
+                class="vertice degree7 btwns0 authority7 TELAVIV">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="42" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(11.5789 -162.9621)" 
+                class="vertice degree7 btwns8 authority6 TELAVIV">
+                <circle cx="0" cy="0" r="22" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(182.9351 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-139.5788 -284.0114)" 
+                class="vertice degree2 btwns0 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 248.0130)" 
+                class="vertice degree0 btwns0 authority0 TELAVIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-220.5560 -168.6816)" 
+                class="vertice degree2 btwns0 authority2 TELAVIV">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(326.6402 265.1747)" 
+                id="09TELAVIV1337" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>06/19/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09TELAVIV1337.html">09TELAVIV1337</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>OPPOSITION LAWMAKERS BOYCOTT KNESSET TO PROTEST LEGISLATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(146.6226 57.6948)" 
+                id="09TELAVIV1437" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09TELAVIV1437.html">09TELAVIV1437</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>MOFAZ CHALLENGING LIVNI WHILE NETANYAHU COURTS BOTH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(248.9903 161.1197)" 
+                id="09TELAVIV1579" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>07/17/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/07/09TELAVIV1579.html">09TELAVIV1579</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POLICE REPORTEDLY CLOSE TO RECOMMENDING INDICTMENT OF FOREIGN MINISTER LIBERMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(55.4884 232.7350)" 
+                id="09TELAVIV1717" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>08/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09TELAVIV1717.html">09TELAVIV1717</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>POLICE FORMALLY RECOMMEND INDICTMENT OF FOREIGN MINISTER LIBERMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 85.3402)" 
+                id="09TELAVIV1718" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>08/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09TELAVIV1718.html">09TELAVIV1718</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>POLICE FORMALLY RECOMMEND INDICTMENT OF FOREIGN MINISTER LIBERMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-198.2029 290.0000)" 
+                id="09TELAVIV1838" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>08/18/09</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/08/09TELAVIV1838.html">09TELAVIV1838</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>LIEBERMAN INDICTMENT SCENARIOS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(177.1189 278.6960)" 
+                id="09TELAVIV1918" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>09/02/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/09/09TELAVIV1918.html">09TELAVIV1918</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>FORMER PRIME MINISTER INDICTED, FORMER MINISTERS SENT TO PRISON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(11.5789 -162.9621)" 
+                id="09TELAVIV2813" 
+                class="labels">
+                 
+                <text x="0" y="-11.5" class="date" z-index="1">
+                    <tspan>12/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09TELAVIV2813.html">09TELAVIV2813</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.5" z-index="10" class="subject">
+                        <tspan>IS KADIMA ABOUT TO SPLIT?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(182.9351 -290.0000)" 
+                id="09TELAVIV2846" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/12/09TELAVIV2846.html">09TELAVIV2846</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KADIMA NEGOTIATIONS CONTINUE ON WHETHER TO JOIN COALITION GOVERNMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-139.5788 -284.0114)" 
+                id="10TELAVIV137" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>01/22/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/01/10TELAVIV137.html">10TELAVIV137</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>KADIMA'S INTERNAL SQUABBLES CONTINUE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 248.0130)" 
+                id="10TELAVIV310" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>02/10/10</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TELAVIV310.html">10TELAVIV310</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>FM LIEBERMAN INDICTMENT ON HOLD, FOR NOW</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-220.5560 -168.6816)" 
+                id="10TELAVIV338" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/16/10</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2010/02/10TELAVIV338.html">10TELAVIV338</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>MOFAZ AND LIVNI DO BATTLE AHEAD OF "DECISIVE" PARTY MEETING LATER THIS MONTH</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

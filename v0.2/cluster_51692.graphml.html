@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ZAGREB1392">06ZAGREB1392</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ZAGREB1392.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/20/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CROATIAN PM SANADER SAYS HE CANNOT SUPPORT THE ORIGINAL BOSNIAN CONSTITUTIONAL REFORM PACKAGE</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ZAGREB1423">06ZAGREB1423</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/11/06ZAGREB1423.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">11/30/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GOC PRESENTS BOSNIAN CROAT PROPOSAL FOR BIH CONSTITUTIONAL REFORM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ZAGREB1439">06ZAGREB1439</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06ZAGREB1439.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/04/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">MORE ON BOSNIAN CROAT PROPOSALS FOR BIH CONSTITUTIONAL REFORM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO41">07SARAJEVO41</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07SARAJEVO41.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOSNIA - THE HIGHREP'S PROPOSAL FOR PHASE II CONSTITUTIONAL REFORM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO163">07SARAJEVO163</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07SARAJEVO163.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/23/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOSNIA - HIGHREP CONTEMPLATES ACTION AGAINST REPUBLIKA SRPSKA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO186">07SARAJEVO186</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/01/07SARAJEVO186.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOSNIA - DODIK RECEIVES CLEAR U.S. WARNING ON DESTABILIZING TALK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE22980">07STATE22980</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/25/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB218">07ZAGREB218</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07ZAGREB218.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/05/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">CROATIAN PM NOT OPTIMISTIC ABOUT USG HOPES FOR BOSNIAN CONSTITUTIONAL REFORM</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO995">07SARAJEVO995</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07SARAJEVO995.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/09/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOSNIA - CONSTITUTIONAL REFORM AND THE EUROPEANS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07SARAJEVO1191">07SARAJEVO1191</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/05/07SARAJEVO1191.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/31/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BOSNIA - HIGHREP SET TO BEGIN CONSTITUTIONAL REFORM CONSULTATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07ZAGREB540">07ZAGREB540</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/06/07ZAGREB540.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/04/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR BRIEFS PM ON BOSNIA MEETINGS IN WASHINGTON</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-241.0926" y1="-290.0000" 
+                  x2="-65.7697" y2="-203.0153" class="btwns2"/>
+        
+            <line x1="-56.8116" y1="-198.5709" 
+                  x2="169.9080" y2="-251.7338" class="btwns0"/>
+        
+            <line x1="-56.8116" y1="-198.5709" 
+                  x2="203.9463" y2="-138.6108" class="btwns6"/>
+        
+            <line x1="-56.8116" y1="-198.5709" 
+                  x2="-316.0657" y2="-138.6610" class="btwns2"/>
+        
+            <line x1="179.6440" y1="-254.0167" 
+                  x2="210.9120" y2="-145.9756" class="btwns1"/>
+        
+            <line x1="179.3919" y1="137.2073" 
+                  x2="-115.7782" y2="170.9269" class="btwns7"/>
+        
+            <line x1="179.3919" y1="137.2073" 
+                  x2="380.4725" y2="201.3189" class="btwns2"/>
+        
+            <line x1="179.3919" y1="137.2073" 
+                  x2="317.9375" y2="7.7007" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="130.1945" 
+                  x2="-135.5904" y2="170.4973" class="btwns2"/>
+        
+            <line x1="-205.5940" y1="290.0000" 
+                  x2="-131.3214" y2="180.3415" class="btwns2"/>
+        
+            <line x1="325.2428" y1="0.8720" 
+                  x2="219.9993" y2="-128.6098" class="btwns10"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-241.0926 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-56.8116 -198.5709)" 
+                class="vertice degree10 btwns6 authority10 ZAGREB">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.6440 -254.0167)" 
+                class="vertice degree3 btwns0 authority3 ZAGREB">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(179.3919 137.2073)" 
+                class="vertice degree6 btwns10 authority6 SARAJEVO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 130.1945)" 
+                class="vertice degree0 btwns0 authority0 SARAJEVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-205.5940 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SARAJEVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-125.7136 172.0619)" 
+                class="vertice degree6 btwns6 authority6 SARAJEVO">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="31" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 204.3566)" 
+                class="vertice degree0 btwns0 authority0 SARAJEVO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(325.2428 0.8720)" 
+                class="vertice degree3 btwns9 authority3 STATE">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="23" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(213.6920 -136.3698)" 
+                class="vertice degree6 btwns8 authority6 ZAGREB">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-325.8090 -136.4095)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-241.0926 -290.0000)" 
+                id="06ZAGREB1392" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>11/20/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ZAGREB1392.html">06ZAGREB1392</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CROATIAN PM SANADER SAYS HE CANNOT SUPPORT THE ORIGINAL BOSNIAN CONSTITUTIONAL REFORM PACKAGE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-56.8116 -198.5709)" 
+                id="06ZAGREB1423" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>11/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/11/06ZAGREB1423.html">06ZAGREB1423</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>GOC PRESENTS BOSNIAN CROAT PROPOSAL FOR BIH CONSTITUTIONAL REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.6440 -254.0167)" 
+                id="06ZAGREB1439" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>12/04/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06ZAGREB1439.html">06ZAGREB1439</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>MORE ON BOSNIAN CROAT PROPOSALS FOR BIH CONSTITUTIONAL REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(179.3919 137.2073)" 
+                id="07SARAJEVO1191" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/31/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07SARAJEVO1191.html">07SARAJEVO1191</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BOSNIA - HIGHREP SET TO BEGIN CONSTITUTIONAL REFORM CONSULTATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 130.1945)" 
+                id="07SARAJEVO163" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07SARAJEVO163.html">07SARAJEVO163</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOSNIA - HIGHREP CONTEMPLATES ACTION AGAINST REPUBLIKA SRPSKA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-205.5940 290.0000)" 
+                id="07SARAJEVO186" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07SARAJEVO186.html">07SARAJEVO186</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOSNIA - DODIK RECEIVES CLEAR U.S. WARNING ON DESTABILIZING TALK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-125.7136 172.0619)" 
+                id="07SARAJEVO41" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/10/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/01/07SARAJEVO41.html">07SARAJEVO41</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>BOSNIA - THE HIGHREP'S PROPOSAL FOR PHASE II CONSTITUTIONAL REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 204.3566)" 
+                id="07SARAJEVO995" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/09/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/05/07SARAJEVO995.html">07SARAJEVO995</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BOSNIA - CONSTITUTIONAL REFORM AND THE EUROPEANS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(325.2428 0.8720)" 
+                id="07STATE22980" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/25/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                
+                    07STATE22980
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(213.6920 -136.3698)" 
+                id="07ZAGREB218" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>03/05/07</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07ZAGREB218.html">07ZAGREB218</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>CROATIAN PM NOT OPTIMISTIC ABOUT USG HOPES FOR BOSNIAN CONSTITUTIONAL REFORM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-325.8090 -136.4095)" 
+                id="07ZAGREB540" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/04/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/06/07ZAGREB540.html">07ZAGREB540</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR BRIEFS PM ON BOSNIA MEETINGS IN WASHINGTON</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

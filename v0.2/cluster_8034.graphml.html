@@ -1,0 +1,1330 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#03STATE67064">03STATE67064</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/27/03</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO710">08TOKYO710</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO710.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/17/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">NEW IRANIAN AMBASSADOR IN TOKYO DISCUSSES NUCLEAR ISSUE, OTHER TOPICS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO721">08TOKYO721</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/03/08TOKYO721.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/18/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">NEW IRANIAN AMBASSADOR CALLS ON IRAQI COUNTERPART</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08TOKYO3379">08TOKYO3379</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/12/08TOKYO3379.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/12/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">THE OFFICIAL, PUBLIC IRANIAN LINE IN TOKYO</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#09STATE28285">09STATE28285</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/24/09</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE55537">09STATE55537</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/05/09STATE55537.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/29/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">4TH OF JULY REPRESENTATIONAL EVENTS -- POLICY ON INVITATIONS TO USG-HOSTED 2009 ACTIVITIES (S/ES 200909654)</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09TOKYO1241">09TOKYO1241</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09TOKYO1241.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/03/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">IRAN INVITE TO EMBASSY TOKYO NATIONAL DAY RECEPTION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09STATE60331">09STATE60331</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09STATE60331.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/11/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">ADDITIONAL GUIDANCE ON INVITING IRANIAN OFFICIALS TO JULY 4TH EVENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09KYIV1020">09KYIV1020</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09KYIV1020.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UKRAINE: INVITING IRANIAN OFFICIALS TO JULY 4TH EVENTS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09UNVIEVIENNA272">09UNVIEVIENNA272</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09UNVIEVIENNA272.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UNVIE IRAN INVITES FOR JULY 4</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ZAGREB355">09ZAGREB355</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ZAGREB355.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/09</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">IRANIAN OFFICIALS INVITED TO JULY 4TH EVENTS IN ZAGREB, CROATIA</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09ABUDHABI606">09ABUDHABI606</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ABUDHABI606.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">UAE: INVITING IRANIANS TO JULY 4 EVENTS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09EFTOHELSINKI235">09EFTOHELSINKI235</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09EFTOHELSINKI235.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IRANIANS DELIGHTED TO BE INVITED, BUT DON'T ATTEND INDEPENDENCE DAY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09SOFIA313">09SOFIA313</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09SOFIA313.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/22/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">BULGARIA:  DECISION NOT TO INVITE IRAN TO JULY 4 RECEPTION</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ABIDJAN386">09ABIDJAN386</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ABIDJAN386.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/23/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INVITING IRANIAN OFFICIALS TO JULY 4 EVENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09MONTEVIDEO360">09MONTEVIDEO360</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09MONTEVIDEO360.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/24/09</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">URUGUAY: IRANIAN ATTENDANCE AT JULY 4TH EVENT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09STATE65724">09STATE65724</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09STATE65724.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/25/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ACTION REQUEST: RESCIND JULY 4TH INVITATIONS TO IRANIAN OFFICIALS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09BERN269">09BERN269</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09BERN269.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/25/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">JULY 4TH RECEPTION INVITATION TO IRANIAN AMBASSADOR RESCINDED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09ROME748">09ROME748</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09ROME748.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/25/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">EMBASSY ROME HAS RESCINDED IRANIAN AMBASSADOR'S JULY 4 INVITATION</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#09VIENNA782">09VIENNA782</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09VIENNA782.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/26/09</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">US EMBASSY AUSTRIA RESCINDS JULY 4TH INVITATIONS TO IRANIAN OFFICIALS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#09PRAGUE374">09PRAGUE374</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2009/06/09PRAGUE374.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/30/09</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">REPONSE TO GUIDANCE ON INVITING IRANIAN OFFICIALS TO JULY 4TH EVENT</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-58.8989" y1="-35.3811" 
+                  x2="-91.4814" y2="63.6376" class="btwns0"/>
+        
+            <line x1="-58.8989" y1="-35.3811" 
+                  x2="5.6796" y2="15.8793" class="btwns0"/>
+        
+            <line x1="-58.8989" y1="-35.3811" 
+                  x2="-186.1211" y2="75.4903" class="btwns1"/>
+        
+            <line x1="-58.8989" y1="-35.3811" 
+                  x2="-75.5609" y2="-106.5697" class="btwns0"/>
+        
+            <line x1="390.0000" y1="161.6215" 
+                  x2="343.0056" y2="55.4254" class="btwns2"/>
+        
+            <line x1="338.9588" y1="46.2808" 
+                  x2="359.2516" y2="-76.4349" class="btwns2"/>
+        
+            <line x1="338.9588" y1="46.2808" 
+                  x2="207.2260" y2="99.6874" class="btwns7"/>
+        
+            <line x1="-343.0812" y1="214.1426" 
+                  x2="-201.1525" y2="88.6832" class="btwns2"/>
+        
+            <line x1="-94.6070" y1="73.1365" 
+                  x2="-22.6142" y2="106.1883" class="btwns1"/>
+        
+            <line x1="-94.6070" y1="73.1365" 
+                  x2="-183.7004" y2="81.1630" class="btwns0"/>
+        
+            <line x1="-151.7749" y1="-29.3305" 
+                  x2="-20.5605" y2="103.2529" class="btwns0"/>
+        
+            <line x1="-151.7749" y1="-29.3305" 
+                  x2="-190.1404" y2="72.7001" class="btwns0"/>
+        
+            <line x1="-151.7749" y1="-29.3305" 
+                  x2="-84.3166" y2="-108.6874" class="btwns0"/>
+        
+            <line x1="-53.6124" y1="237.3678" 
+                  x2="-16.5360" y2="119.8968" class="btwns0"/>
+        
+            <line x1="-53.6124" y1="237.3678" 
+                  x2="-186.9632" y2="89.4868" class="btwns1"/>
+        
+            <line x1="-390.0000" y1="113.4790" 
+                  x2="-203.5344" y2="83.6404" class="btwns2"/>
+        
+            <line x1="-315.5829" y1="-90.6420" 
+                  x2="-199.4274" y2="73.8909" class="btwns2"/>
+        
+            <line x1="13.5120" y1="22.0964" 
+                  x2="-10.5972" y2="100.7991" class="btwns1"/>
+        
+            <line x1="13.5120" y1="22.0964" 
+                  x2="-184.0543" y2="79.2800" class="btwns0"/>
+        
+            <line x1="27.7797" y1="-267.9193" 
+                  x2="-72.1237" y2="-124.5118" class="btwns2"/>
+        
+            <line x1="-252.2238" y1="290.0000" 
+                  x2="-196.3710" y2="91.6858" class="btwns2"/>
+        
+            <line x1="102.0349" y1="283.1739" 
+                  x2="-7.9675" y2="118.6732" class="btwns2"/>
+        
+            <line x1="-13.5262" y1="110.3605" 
+                  x2="-183.7812" y2="83.6123" class="btwns5"/>
+        
+            <line x1="-13.5262" y1="110.3605" 
+                  x2="-75.1102" y2="-106.6863" class="btwns3"/>
+        
+            <line x1="-13.5262" y1="110.3605" 
+                  x2="187.9640" y2="103.7714" class="btwns10"/>
+        
+            <line x1="-13.5262" y1="110.3605" 
+                  x2="-131.0641" y2="216.5428" class="btwns0"/>
+        
+            <line x1="-193.6600" y1="82.0603" 
+                  x2="-82.8820" y2="-107.6708" class="btwns3"/>
+        
+            <line x1="-193.6600" y1="82.0603" 
+                  x2="-142.1244" y2="213.9323" class="btwns1"/>
+        
+            <line x1="-193.6600" y1="82.0603" 
+                  x2="-372.2138" y2="7.3835" class="btwns2"/>
+        
+            <line x1="-77.8398" y1="-116.3066" 
+                  x2="-120.3029" y2="-280.3192" class="btwns2"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-58.8989 -35.3811)" 
+                class="vertice degree2 btwns0 authority2 STATE">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 161.6215)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(338.9588 46.2808)" 
+                class="vertice degree1 btwns3 authority1 TOKYO">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(360.8831 -86.3009)" 
+                class="vertice degree0 btwns0 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-343.0812 214.1426)" 
+                class="vertice degree0 btwns0 authority0 ABIDJAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-94.6070 73.1365)" 
+                class="vertice degree1 btwns0 authority1 ABUDHABI">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-151.7749 -29.3305)" 
+                class="vertice degree1 btwns0 authority1 BERN">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-53.6124 237.3678)" 
+                class="vertice degree0 btwns0 authority1 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 113.4790)" 
+                class="vertice degree0 btwns0 authority0 KYIV">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-315.5829 -90.6420)" 
+                class="vertice degree0 btwns0 authority0 MONTEVIDEO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(13.5120 22.0964)" 
+                class="vertice degree1 btwns0 authority1 PRAGUE">
+                <circle cx="0" cy="0" r="16" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(27.7797 -267.9193)" 
+                class="vertice degree0 btwns0 authority0 ROME">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-252.2238 290.0000)" 
+                class="vertice degree0 btwns0 authority0 SOFIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(102.0349 283.1739)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-13.5262 110.3605)" 
+                class="vertice degree6 btwns8 authority6 STATE">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-193.6600 82.0603)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-77.8398 -116.3066)" 
+                class="vertice degree4 btwns3 authority4 STATE">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(197.9586 103.4445)" 
+                class="vertice degree0 btwns5 authority0 TOKYO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+            </g>
+            
+            <g transform="translate(-138.4845 223.2463)" 
+                class="vertice degree0 btwns0 authority1 unknown">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="36" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-122.8093 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-381.4394 3.5251)" 
+                class="vertice degree0 btwns0 authority0 ZAGREB">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-58.8989 -35.3811)" 
+                id="03STATE67064" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/27/03</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    03STATE67064
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 161.6215)" 
+                id="08TOKYO3379" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/12/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/12/08TOKYO3379.html">08TOKYO3379</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>THE OFFICIAL, PUBLIC IRANIAN LINE IN TOKYO</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(338.9588 46.2808)" 
+                id="08TOKYO710" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>03/17/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO710.html">08TOKYO710</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>NEW IRANIAN AMBASSADOR IN TOKYO DISCUSSES NUCLEAR ISSUE, OTHER TOPICS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(360.8831 -86.3009)" 
+                id="08TOKYO721" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/03/08TOKYO721.html">08TOKYO721</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NEW IRANIAN AMBASSADOR CALLS ON IRAQI COUNTERPART</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-343.0812 214.1426)" 
+                id="09ABIDJAN386" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/23/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ABIDJAN386.html">09ABIDJAN386</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>INVITING IRANIAN OFFICIALS TO JULY 4 EVENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-94.6070 73.1365)" 
+                id="09ABUDHABI606" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ABUDHABI606.html">09ABUDHABI606</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>UAE: INVITING IRANIANS TO JULY 4 EVENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-151.7749 -29.3305)" 
+                id="09BERN269" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09BERN269.html">09BERN269</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>JULY 4TH RECEPTION INVITATION TO IRANIAN AMBASSADOR RESCINDED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-53.6124 237.3678)" 
+                id="09EFTOHELSINKI235" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09EFTOHELSINKI235.html">09EFTOHELSINKI235</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRANIANS DELIGHTED TO BE INVITED, BUT DON'T ATTEND INDEPENDENCE DAY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 113.4790)" 
+                id="09KYIV1020" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09KYIV1020.html">09KYIV1020</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UKRAINE: INVITING IRANIAN OFFICIALS TO JULY 4TH EVENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-315.5829 -90.6420)" 
+                id="09MONTEVIDEO360" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09MONTEVIDEO360.html">09MONTEVIDEO360</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>URUGUAY: IRANIAN ATTENDANCE AT JULY 4TH EVENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(13.5120 22.0964)" 
+                id="09PRAGUE374" 
+                class="labels">
+                 
+                <text x="0" y="-14.5" class="date" z-index="1">
+                    <tspan>06/30/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09PRAGUE374.html">09PRAGUE374</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.5" z-index="10" class="subject">
+                        <tspan>REPONSE TO GUIDANCE ON INVITING IRANIAN OFFICIALS TO JULY 4TH EVENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(27.7797 -267.9193)" 
+                id="09ROME748" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ROME748.html">09ROME748</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>EMBASSY ROME HAS RESCINDED IRANIAN AMBASSADOR'S JULY 4 INVITATION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-252.2238 290.0000)" 
+                id="09SOFIA313" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/22/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09SOFIA313.html">09SOFIA313</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BULGARIA:  DECISION NOT TO INVITE IRAN TO JULY 4 RECEPTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(102.0349 283.1739)" 
+                id="09STATE28285" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/24/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    09STATE28285
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-13.5262 110.3605)" 
+                id="09STATE55537" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>05/29/09</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/05/09STATE55537.html">09STATE55537</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>4TH OF JULY REPRESENTATIONAL EVENTS -- POLICY ON INVITATIONS TO USG-HOSTED 2009 ACTIVITIES (S/ES 200909654)</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-193.6600 82.0603)" 
+                id="09STATE60331" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/11/09</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09STATE60331.html">09STATE60331</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ADDITIONAL GUIDANCE ON INVITING IRANIAN OFFICIALS TO JULY 4TH EVENTS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-77.8398 -116.3066)" 
+                id="09STATE65724" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>06/25/09</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09STATE65724.html">09STATE65724</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.0" z-index="10" class="subject">
+                        <tspan>ACTION REQUEST: RESCIND JULY 4TH INVITATIONS TO IRANIAN OFFICIALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(197.9586 103.4445)" 
+                id="09TOKYO1241" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/03/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09TOKYO1241.html">09TOKYO1241</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRAN INVITE TO EMBASSY TOKYO NATIONAL DAY RECEPTION</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-138.4845 223.2463)" 
+                id="09UNVIEVIENNA272" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/12/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09UNVIEVIENNA272.html">09UNVIEVIENNA272</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>UNVIE IRAN INVITES FOR JULY 4</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-122.8093 -290.0000)" 
+                id="09VIENNA782" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/26/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09VIENNA782.html">09VIENNA782</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>US EMBASSY AUSTRIA RESCINDS JULY 4TH INVITATIONS TO IRANIAN OFFICIALS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-381.4394 3.5251)" 
+                id="09ZAGREB355" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/09</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2009/06/09ZAGREB355.html">09ZAGREB355</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRANIAN OFFICIALS INVITED TO JULY 4TH EVENTS IN ZAGREB, CROATIA</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

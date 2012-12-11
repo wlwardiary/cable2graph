@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06BISHKEK689">06BISHKEK689</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/11/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#06BISHKEK1261">06BISHKEK1261</a>
+        
+
+        
+      </h5> 
+      <p class="date">08/25/06</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06BISHKEK1775">06BISHKEK1775</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/12/06BISHKEK1775.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/19/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">A KYRGYZ LINK TO RUSSIAN BANKER'S DEATH?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07BISHKEK949">07BISHKEK949</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/07/07BISHKEK949.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/23/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">GAUGING INFLUENCE IN THE KYRGYZ CENTRAL BANK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07BISHKEK1155">07BISHKEK1155</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/09/07BISHKEK1155.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/18/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">"MAXIMIZING" BUSINESS IN THE KYRGYZ REPUBLIC</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08STATE4147">08STATE4147</a>
+        
+
+        
+      </h5> 
+      <p class="date">01/14/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK86">08BISHKEK86</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/01/08BISHKEK86.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/25/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">KYRGYZ BANK STRUCK BY GOVERNMENT CASH CALL</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc missing" href="#08BISHKEK194">08BISHKEK194</a>
+        
+
+        
+      </h5> 
+      <p class="date">02/27/08</p>
+      
+      
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK385">08BISHKEK385</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BISHKEK385.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">KYRGYZ BANKING CONSOLIDATION RAISES FLAGS</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK386">08BISHKEK386</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/04/08BISHKEK386.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/18/08</p>
+      <p class="classification">SECRET</p>
+      <p class="subject">EMBASSY CAUTIONS AGAINST OPIC ROLE IN KYRGYZ BANK</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK557">08BISHKEK557</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/05/08BISHKEK557.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EBRD FEEDBACK REFLECTS POLITICIZED KYRGYZ BANKING ENVIRONMENT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#08BISHKEK999">08BISHKEK999</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2008/09/08BISHKEK999.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">09/30/08</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">TROUBLE BREWING AT KYRGYZ MINISTRY OF FINANCE</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-188.1404" y1="86.0168" 
+                  x2="-380.0888" y2="60.2703" class="btwns6"/>
+        
+            <line x1="-188.1404" y1="86.0168" 
+                  x2="-30.6749" y2="-7.7321" class="btwns6"/>
+        
+            <line x1="-188.1404" y1="86.0168" 
+                  x2="34.9374" y2="142.7594" class="btwns5"/>
+        
+            <line x1="-57.7382" y1="290.0000" 
+                  x2="38.8555" y2="153.3896" class="btwns6"/>
+        
+            <line x1="-76.2386" y1="-122.5858" 
+                  x2="-26.5079" y2="-21.8152" class="btwns2"/>
+        
+            <line x1="-76.2386" y1="-122.5858" 
+                  x2="109.3035" y2="-12.8664" class="btwns2"/>
+        
+            <line x1="390.0000" y1="-159.8757" 
+                  x2="183.9875" y2="-143.4143" class="btwns6"/>
+        
+            <line x1="255.0739" y1="107.2534" 
+                  x2="54.4699" y2="143.4489" class="btwns2"/>
+        
+            <line x1="255.0739" y1="107.2534" 
+                  x2="125.5733" y2="-1.3505" class="btwns2"/>
+        
+            <line x1="-22.0824" y1="-12.8477" 
+                  x2="40.7406" y2="136.0114" class="btwns5"/>
+        
+            <line x1="-22.0824" y1="-12.8477" 
+                  x2="107.9177" y2="-8.1384" class="btwns0"/>
+        
+            <line x1="-22.0824" y1="-12.8477" 
+                  x2="165.6798" y2="-137.0992" class="btwns10"/>
+        
+            <line x1="44.6288" y1="145.2245" 
+                  x2="113.5914" y2="1.2425" class="btwns6"/>
+        
+            <line x1="44.6288" y1="145.2245" 
+                  x2="188.1549" y2="271.5315" class="btwns6"/>
+        
+            <line x1="117.9111" y1="-7.7763" 
+                  x2="170.1775" y2="-133.3852" class="btwns7"/>
+        
+            <line x1="174.0192" y1="-142.6178" 
+                  x2="132.9029" y2="-280.4175" class="btwns6"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-188.1404 86.0168)" 
+                class="vertice degree4 btwns4 authority4 BISHKEK">
+                <circle cx="0" cy="0" r="19" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="24" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="29" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="39" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 58.9409)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-57.7382 290.0000)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-76.2386 -122.5858)" 
+                class="vertice degree2 btwns0 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 -159.8757)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(255.0739 107.2534)" 
+                class="vertice degree2 btwns0 authority2 BISHKEK">
+                <circle cx="0" cy="0" r="17" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="22" z-index="1" class="missing" />
+                
+
+                
+                
+                <circle cx="0" cy="0" r="37" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-22.0824 -12.8477)" 
+                class="vertice degree8 btwns7 authority8 BISHKEK">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(44.6288 145.2245)" 
+                class="vertice degree10 btwns10 authority10 BISHKEK">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(117.9111 -7.7763)" 
+                class="vertice degree8 btwns5 authority8 BISHKEK">
+                <circle cx="0" cy="0" r="23" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="30" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="43" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(174.0192 -142.6178)" 
+                class="vertice degree6 btwns8 authority5 BISHKEK">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="33" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="40" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(130.0437 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 BISHKEK">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(195.6619 278.1379)" 
+                class="vertice degree0 btwns0 authority0 STATE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="20" z-index="1" class="missing" />
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-188.1404 86.0168)" 
+                id="06BISHKEK1261" 
+                class="labels">
+                 
+                <text x="0" y="-13.0" class="date" z-index="1">
+                    <tspan>08/25/06</tspan>
+                </text>
+                
+
+                <text x="0" y="7.0" class="label" z-index="1">
+                
+                    06BISHKEK1261
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 58.9409)" 
+                id="06BISHKEK1775" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/12/06BISHKEK1775.html">06BISHKEK1775</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>A KYRGYZ LINK TO RUSSIAN BANKER'S DEATH?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-57.7382 290.0000)" 
+                id="06BISHKEK689" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/11/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    06BISHKEK689
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-76.2386 -122.5858)" 
+                id="07BISHKEK1155" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>09/18/07</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/09/07BISHKEK1155.html">07BISHKEK1155</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.0" z-index="10" class="subject">
+                        <tspan>"MAXIMIZING" BUSINESS IN THE KYRGYZ REPUBLIC</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-29.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 -159.8757)" 
+                id="07BISHKEK949" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>07/23/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/07/07BISHKEK949.html">07BISHKEK949</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>GAUGING INFLUENCE IN THE KYRGYZ CENTRAL BANK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(255.0739 107.2534)" 
+                id="08BISHKEK194" 
+                class="labels">
+                 
+                <text x="0" y="-14.0" class="date" z-index="1">
+                    <tspan>02/27/08</tspan>
+                </text>
+                
+
+                <text x="0" y="6.0" class="label" z-index="1">
+                
+                    08BISHKEK194
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(-22.0824 -12.8477)" 
+                id="08BISHKEK385" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>04/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BISHKEK385.html">08BISHKEK385</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>KYRGYZ BANKING CONSOLIDATION RAISES FLAGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(44.6288 145.2245)" 
+                id="08BISHKEK386" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>04/18/08</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/04/08BISHKEK386.html">08BISHKEK386</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>EMBASSY CAUTIONS AGAINST OPIC ROLE IN KYRGYZ BANK</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification SECRET">
+                        <tspan>SECRET</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(117.9111 -7.7763)" 
+                id="08BISHKEK557" 
+                class="labels">
+                 
+                <text x="0" y="-11.0" class="date" z-index="1">
+                    <tspan>05/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="9.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/05/08BISHKEK557.html">08BISHKEK557</a>
+                
+                </text>
+                
+                    <text x="-200" y="29.0" z-index="10" class="subject">
+                        <tspan>EBRD FEEDBACK REFLECTS POLITICIZED KYRGYZ BANKING ENVIRONMENT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-26.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(174.0192 -142.6178)" 
+                id="08BISHKEK86" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>01/25/08</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/01/08BISHKEK86.html">08BISHKEK86</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>KYRGYZ BANK STRUCK BY GOVERNMENT CASH CALL</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(130.0437 -290.0000)" 
+                id="08BISHKEK999" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>09/30/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2008/09/08BISHKEK999.html">08BISHKEK999</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TROUBLE BREWING AT KYRGYZ MINISTRY OF FINANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(195.6619 278.1379)" 
+                id="08STATE4147" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>01/14/08</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                
+                    08STATE4147
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

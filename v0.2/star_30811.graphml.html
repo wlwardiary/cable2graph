@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#06STATE84640">06STATE84640</a>
+        
+
+        
+      </h5> 
+      <p class="date">05/24/06</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06ANKARA3096">06ANKARA3096</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06ANKARA3096.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">TURKEY'S ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06NICOSIA790">06NICOSIA790</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06NICOSIA790.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/26/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">CYPRIOT AMBASSADOR IN WARSAW TO REPRESENT GOC AT THE PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TUNIS1303">06TUNIS1303</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/05/06TUNIS1303.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">05/30/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">DEMARCHES DELIVERED: PSI HIGH-LEVEL POLITICAL MEETING AND APRIL OEG MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06MANILA2263">06MANILA2263</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06MANILA2263.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/01/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PHILIPPINE ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BERLIN1501">06BERLIN1501</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BERLIN1501.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/02/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">PSI:  GERMAN ATTENDANCE AT HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06ALMATY1996">06ALMATY1996</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06ALMATY1996.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">KAZAKHSTAN:  ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06THEHAGUE1265">06THEHAGUE1265</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06THEHAGUE1265.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/06/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NETHERLANDS/PSI: DUTCH ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06OSLO729">06OSLO729</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06OSLO729.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">NORWEGIANS WILL ATTEND HLPM</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06BELIZE499">06BELIZE499</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06BELIZE499.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/07/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">BELIZE: ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06COPENHAGEN833">06COPENHAGEN833</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06COPENHAGEN833.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/12/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06DUBLIN677">06DUBLIN677</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06DUBLIN677.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">IRELAND TO ATTEND PROLIFERATION SECURITY INITIATIVE MEETING</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06VIENNA1718">06VIENNA1718</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06VIENNA1718.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AUSTRIAN ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06TALLINN572">06TALLINN572</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06TALLINN572.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/06</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">DEMARCHE DELIVERED ON ESTONIAN PSI HLPM ATTENDANCE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06LISBON1189">06LISBON1189</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/06/06LISBON1189.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/19/06</p>
+      <p class="classification">UNCLASSIFIED</p>
+      <p class="subject">PORTUGAL NOT ATTENDING PSI</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-222.6332" y1="-248.2478" 
+                  x2="-10.1039" y2="1.2982" class="btwns5"/>
+        
+            <line x1="-67.9619" y1="-166.0880" 
+                  x2="-7.0710" y2="-0.4744" class="btwns5"/>
+        
+            <line x1="98.7079" y1="260.6520" 
+                  x2="0.1455" y2="18.1752" class="btwns5"/>
+        
+            <line x1="241.5052" y1="5.5300" 
+                  x2="6.3789" y2="8.7734" class="btwns5"/>
+        
+            <line x1="390.0000" y1="90.8606" 
+                  x2="6.1700" y2="10.9495" class="btwns5"/>
+        
+            <line x1="42.0843" y1="-290.0000" 
+                  x2="-2.1087" y2="-0.9738" class="btwns5"/>
+        
+            <line x1="-231.1542" y1="235.1489" 
+                  x2="-10.7114" y2="15.9621" class="btwns5"/>
+        
+            <line x1="-322.6630" y1="127.8104" 
+                  x2="-12.9906" y2="12.4034" class="btwns5"/>
+        
+            <line x1="-390.0000" y1="8.8375" 
+                  x2="-13.6201" y2="8.9094" class="btwns5"/>
+        
+            <line x1="-69.2228" y1="290.0000" 
+                  x2="-5.8929" y2="18.6496" class="btwns5"/>
+        
+            <line x1="-3.6201" y1="8.9113" 
+                  x2="215.6727" y2="-209.7915" class="btwns5"/>
+        
+            <line x1="-3.6201" y1="8.9113" 
+                  x2="-325.2393" y2="-116.0366" class="btwns5"/>
+        
+            <line x1="-3.6201" y1="8.9113" 
+                  x2="257.4713" y2="209.6075" class="btwns5"/>
+        
+            <line x1="-3.6201" y1="8.9113" 
+                  x2="359.2747" y2="-106.5716" class="btwns5"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-222.6332 -248.2478)" 
+                class="vertice degree0 btwns0 authority0 ALMATY">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-67.9619 -166.0880)" 
+                class="vertice degree0 btwns0 authority0 ANKARA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(98.7079 260.6520)" 
+                class="vertice degree0 btwns0 authority0 BELIZE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(241.5052 5.5300)" 
+                class="vertice degree0 btwns0 authority0 BERLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 90.8606)" 
+                class="vertice degree0 btwns0 authority0 COPENHAGEN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(42.0843 -290.0000)" 
+                class="vertice degree0 btwns0 authority0 DUBLIN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-231.1542 235.1489)" 
+                class="vertice degree0 btwns0 authority0 LISBON">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-322.6630 127.8104)" 
+                class="vertice degree0 btwns0 authority0 MANILA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 8.8375)" 
+                class="vertice degree0 btwns0 authority0 NICOSIA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-69.2228 290.0000)" 
+                class="vertice degree0 btwns0 authority0 OSLO">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-3.6201 8.9113)" 
+                class="vertice degree10 btwns10 authority10 STATE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="30" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(222.7533 -216.8530)" 
+                class="vertice degree0 btwns0 authority0 TALLINN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-334.5606 -119.6579)" 
+                class="vertice degree0 btwns0 authority0 THEHAGUE">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(265.3997 215.7019)" 
+                class="vertice degree0 btwns0 authority0 TUNIS">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(368.8039 -109.6040)" 
+                class="vertice degree0 btwns0 authority0 VIENNA">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+
+            
+            <g transform="translate(-222.6332 -248.2478)" 
+                id="06ALMATY1996" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06ALMATY1996.html">06ALMATY1996</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>KAZAKHSTAN:  ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-67.9619 -166.0880)" 
+                id="06ANKARA3096" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06ANKARA3096.html">06ANKARA3096</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>TURKEY'S ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(98.7079 260.6520)" 
+                id="06BELIZE499" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BELIZE499.html">06BELIZE499</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>BELIZE: ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(241.5052 5.5300)" 
+                id="06BERLIN1501" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/02/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06BERLIN1501.html">06BERLIN1501</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PSI:  GERMAN ATTENDANCE AT HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 90.8606)" 
+                id="06COPENHAGEN833" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/12/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06COPENHAGEN833.html">06COPENHAGEN833</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(42.0843 -290.0000)" 
+                id="06DUBLIN677" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06DUBLIN677.html">06DUBLIN677</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>IRELAND TO ATTEND PROLIFERATION SECURITY INITIATIVE MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-231.1542 235.1489)" 
+                id="06LISBON1189" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/19/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06LISBON1189.html">06LISBON1189</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PORTUGAL NOT ATTENDING PSI</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-322.6630 127.8104)" 
+                id="06MANILA2263" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/01/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06MANILA2263.html">06MANILA2263</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>PHILIPPINE ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 8.8375)" 
+                id="06NICOSIA790" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/26/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06NICOSIA790.html">06NICOSIA790</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>CYPRIOT AMBASSADOR IN WARSAW TO REPRESENT GOC AT THE PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-69.2228 290.0000)" 
+                id="06OSLO729" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/07/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06OSLO729.html">06OSLO729</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NORWEGIANS WILL ATTEND HLPM</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-3.6201 8.9113)" 
+                id="06STATE84640" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>05/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                
+                    06STATE84640
+                
+                </text>
+                
+                
+                
+            </g>
+            
+            <g transform="translate(222.7533 -216.8530)" 
+                id="06TALLINN572" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/15/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06TALLINN572.html">06TALLINN572</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHE DELIVERED ON ESTONIAN PSI HLPM ATTENDANCE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-334.5606 -119.6579)" 
+                id="06THEHAGUE1265" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/06/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06THEHAGUE1265.html">06THEHAGUE1265</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>NETHERLANDS/PSI: DUTCH ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(265.3997 215.7019)" 
+                id="06TUNIS1303" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>05/30/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/05/06TUNIS1303.html">06TUNIS1303</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>DEMARCHES DELIVERED: PSI HIGH-LEVEL POLITICAL MEETING AND APRIL OEG MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED">
+                        <tspan>UNCLASSIFIED</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(368.8039 -109.6040)" 
+                id="06VIENNA1718" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/06</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/06/06VIENNA1718.html">06VIENNA1718</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AUSTRIAN ATTENDANCE AT PSI HIGH-LEVEL POLITICAL MEETING</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>

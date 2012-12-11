@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1028">05YEREVAN1028</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05YEREVAN1028.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/13/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">VENICE COMMISSION'S HARSH WORDS ON CONSTITUTION SPARK REACTION -- BUT IS IT ENOUGH?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1036">05YEREVAN1036</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05YEREVAN1036.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/15/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIAN OMBUDSMAN UNDER FIRE</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1083">05YEREVAN1083</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/06/05YEREVAN1083.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">06/21/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">AMBASSADOR'S MEETING WITH ARMENIAN OMBUDSMAN</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1264">05YEREVAN1264</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/07/05YEREVAN1264.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">07/15/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIAN OMBUDSMAN REPORTS HUMAN RIGHTS VIOLATIONS</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN1420">05YEREVAN1420</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/08/05YEREVAN1420.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">08/05/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">"CENSORSHIP" AND THE HUMAN RIGHTS DEFENDER</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN2125">05YEREVAN2125</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05YEREVAN2125.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/08/05</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">AMMENDMENTS TO ARMENIAN CONSTITUTION CAME INTO FORCE DECEMBER 8</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#05YEREVAN2166">05YEREVAN2166</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2005/12/05YEREVAN2166.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">12/14/05</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">ARMENIA'S NEXT HUMAN RIGHTS DEFENDER?</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN33">06YEREVAN33</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06YEREVAN33.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/10/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">FORMER HUMAN RIGHTS DEFENDER GRANDSTANDING, POST VACANT</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN104">06YEREVAN104</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/01/06YEREVAN104.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">01/24/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">COALITION NOMINATES KOCHARIAN ADVISOR FOR OMBUDSMAN SLOT</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#06YEREVAN246">06YEREVAN246</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2006/02/06YEREVAN246.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">02/17/06</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">NA ELECTS HARUTYUNYAN OMBUDSMAN</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="-253.3114" y1="290.0000" 
+                  x2="-30.3809" y2="239.5229" class="btwns3"/>
+        
+            <line x1="-20.6278" y1="237.3145" 
+                  x2="115.5346" y2="99.0636" class="btwns5"/>
+        
+            <line x1="-20.6278" y1="237.3145" 
+                  x2="188.2477" y2="235.3740" class="btwns0"/>
+        
+            <line x1="122.5517" y1="91.9390" 
+                  x2="193.5776" y2="226.4384" class="btwns2"/>
+        
+            <line x1="122.5517" y1="91.9390" 
+                  x2="380.1831" y2="41.9452" class="btwns3"/>
+        
+            <line x1="122.5517" y1="91.9390" 
+                  x2="-101.5523" y2="-49.1909" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="-8.0453" 
+                  x2="-119.8792" y2="-52.8823" class="btwns3"/>
+        
+            <line x1="-110.0141" y1="-54.5198" 
+                  x2="-221.8483" y2="-193.9702" class="btwns3"/>
+        
+            <line x1="-110.0141" y1="-54.5198" 
+                  x2="74.4798" y2="-174.8208" class="btwns3"/>
+        
+            <line x1="-43.9294" y1="-290.0000" 
+                  x2="-219.0860" y2="-206.0918" class="btwns1"/>
+        
+            <line x1="-43.9294" y1="-290.0000" 
+                  x2="75.2946" y2="-186.8265" class="btwns1"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(-253.3114 290.0000)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-20.6278 237.3145)" 
+                class="vertice degree6 btwns3 authority6 YEREVAN">
+                <circle cx="0" cy="0" r="21" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="28" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="41" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(122.5517 91.9390)" 
+                class="vertice degree10 btwns9 authority10 YEREVAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="34" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(198.2473 235.2811)" 
+                class="vertice degree3 btwns0 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(390.0000 40.0402)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.0453)" 
+                class="vertice degree0 btwns0 authority0 YEREVAN">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-110.0141 -54.5198)" 
+                class="vertice degree10 btwns10 authority9 YEREVAN">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-43.9294 -290.0000)" 
+                class="vertice degree3 btwns0 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-228.1046 -201.7714)" 
+                class="vertice degree3 btwns1 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(82.8564 -180.2828)" 
+                class="vertice degree3 btwns1 authority3 YEREVAN">
+                <circle cx="0" cy="0" r="18" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="26" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="38" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(-253.3114 290.0000)" 
+                id="05YEREVAN1028" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>06/13/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05YEREVAN1028.html">05YEREVAN1028</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>VENICE COMMISSION'S HARSH WORDS ON CONSTITUTION SPARK REACTION -- BUT IS IT ENOUGH?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-20.6278 237.3145)" 
+                id="05YEREVAN1036" 
+                class="labels">
+                 
+                <text x="0" y="-12.0" class="date" z-index="1">
+                    <tspan>06/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="8.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05YEREVAN1036.html">05YEREVAN1036</a>
+                
+                </text>
+                
+                    <text x="-200" y="28.0" z-index="10" class="subject">
+                        <tspan>ARMENIAN OMBUDSMAN UNDER FIRE</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(122.5517 91.9390)" 
+                id="05YEREVAN1083" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>06/21/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/06/05YEREVAN1083.html">05YEREVAN1083</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>AMBASSADOR'S MEETING WITH ARMENIAN OMBUDSMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(198.2473 235.2811)" 
+                id="05YEREVAN1264" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>07/15/05</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/07/05YEREVAN1264.html">05YEREVAN1264</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>ARMENIAN OMBUDSMAN REPORTS HUMAN RIGHTS VIOLATIONS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(390.0000 40.0402)" 
+                id="05YEREVAN1420" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>08/05/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/08/05YEREVAN1420.html">05YEREVAN1420</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>"CENSORSHIP" AND THE HUMAN RIGHTS DEFENDER</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 -8.0453)" 
+                id="05YEREVAN2125" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>12/08/05</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05YEREVAN2125.html">05YEREVAN2125</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>AMMENDMENTS TO ARMENIAN CONSTITUTION CAME INTO FORCE DECEMBER 8</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-110.0141 -54.5198)" 
+                id="05YEREVAN2166" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>12/14/05</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2005/12/05YEREVAN2166.html">05YEREVAN2166</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>ARMENIA'S NEXT HUMAN RIGHTS DEFENDER?</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-43.9294 -290.0000)" 
+                id="06YEREVAN104" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/24/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06YEREVAN104.html">06YEREVAN104</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>COALITION NOMINATES KOCHARIAN ADVISOR FOR OMBUDSMAN SLOT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-228.1046 -201.7714)" 
+                id="06YEREVAN246" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>02/17/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/02/06YEREVAN246.html">06YEREVAN246</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>NA ELECTS HARUTYUNYAN OMBUDSMAN</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(82.8564 -180.2828)" 
+                id="06YEREVAN33" 
+                class="labels">
+                 
+                <text x="0" y="-13.5" class="date" z-index="1">
+                    <tspan>01/10/06</tspan>
+                </text>
+                
+
+                <text x="0" y="6.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2006/01/06YEREVAN33.html">06YEREVAN33</a>
+                
+                </text>
+                
+                    <text x="-200" y="26.5" z-index="10" class="subject">
+                        <tspan>FORMER HUMAN RIGHTS DEFENDER GRANDSTANDING, POST VACANT</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-28.5" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>
