@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="svg.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="svg.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = 600.0000;
+    var xh = 450.0000;
+    var width = 1200;
+    var height = 900;
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="sidebar">
+    <h1>WikiLeaks Cablegate</h1>
+    <p>Graph visualization of the cables.csv reference network.</p>
+    <p>Works best in Chrome or Safari (anything Webkit based).</p>
+    <p>Use the Zoom on the upper left!</p>
+    <h2>Graph Properties</h2>
+    <ul>
+    <li>Node size indicate degree.</li>
+    <li>Red ring indicates missing cables.</li>
+    <li>First ring shows betweenness of nodes.</li>
+    <li>Second ring shows authority of nodes.</li>
+    <li>Line color indicates edge betweenness.</li>
+    </ul>
+    <h2>Jump to <abbr title="Message Reference Number">MRN</abbr></h2>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc missing" href="#07STATE38986">07STATE38986</a>
+        
+
+        
+      </h5> 
+      <p class="date">03/27/07</p>
+      
+      
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07DARESSALAAM456">07DARESSALAAM456</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07DARESSALAAM456.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/28/07</p>
+      <p class="classification">UNCLASSIFIED//FOR OFFICIAL USE ONLY</p>
+      <p class="subject">SADC EXTRAORDINARY SUMMIT:  ZIMBABWE, DRC AND LESOTHO TO BE DISCUSSED</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07HARARE270">07HARARE270</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/03/07HARARE270.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">03/30/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">JONATHAN MOYO ON MUGABE SUCCESSION, U.S. POLICY</p>
+    </div>
+    
+    <div class="even">
+      <h5>
+        
+        <a class="desc" href="#07HARARE274">07HARARE274</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07HARARE274.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/02/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">INSIDE LOOK AT ZANU-PF CENTRAL COMMITTEEQ,S ENDORSEMENT OF MUGABE FOR 2008</p>
+    </div>
+    
+    <div class="odd">
+      <h5>
+        
+        <a class="desc" href="#07DARESSALAAM489">07DARESSALAAM489</a>
+        
+
+        
+        <a href="http://wikileaks.org/cable/2007/04/07DARESSALAAM489.html">&#8599;</a>
+        
+      </h5> 
+      <p class="date">04/03/07</p>
+      <p class="classification">CONFIDENTIAL</p>
+      <p class="subject">EXTRAORDINARY SADC HEADS OF STATE SUMMIT: TANZANIAN MINISTER OF FOREIGN AFFAIRS' BRIEFING ON MARCH 28-29 MEETINGS</p>
+    </div>
+    
+    <h2>About</h2>
+    <ul>
+        <li><a href="http://wlwardiary.github.com/cable2graph/">cable2graph</a></li>
+        <li><a href="https://github.com/wlwardiary/cable2graph/">code</a></li>
+        <li><a href="https://twitter.com/c2graph">contact</a></li>
+        <li><a href="https://wikileaks.org/">WikiLeaks</a></li>
+    </ul>
+    <p>&copy; 2011-2012 by anonymous</p>
+    <p>
+        This HTML/SVG file: creative commons 
+        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">BY-NC-SA</a>
+    </p>
+    <p>cable2graph <a href="http://gnu.org/">GPLv3</a></p>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="1200" 
+    height="900" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate(600.0000,450.0000) scale(1.0)" id="frame">
+        <g id="edges">
+        
+            <line x1="390.0000" y1="290.0000" 
+                  x2="302.5065" y2="-53.6869" class="btwns6"/>
+        
+            <line x1="63.0919" y1="-290.0000" 
+                  x2="-206.2503" y2="-199.4711" class="btwns10"/>
+        
+            <line x1="63.0919" y1="-290.0000" 
+                  x2="292.8126" y2="-70.2897" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="88.3460" 
+                  x2="-400.0000" y2="88.3460" class="btwns0"/>
+        
+            <line x1="-390.0000" y1="88.3460" 
+                  x2="-220.9509" y2="-187.7567" class="btwns6"/>
+        
+            <line x1="300.0394" y1="-63.3778" 
+                  x2="387.5330" y2="280.3091" class="btwns6"/>
+        
+            <line x1="-215.7292" y1="-196.2852" 
+                  x2="53.6130" y2="-286.8140" class="btwns10"/>
+        
+            <line x1="300.0394" y1="-63.3778" 
+                  x2="70.3187" y2="-283.0881" class="btwns10"/>
+        
+            <line x1="-390.0000" y1="88.3460" 
+                  x2="-400.0000" y2="88.3460" class="btwns0"/>
+        
+            <line x1="-215.7292" y1="-196.2852" 
+                  x2="-384.7783" y2="79.8176" class="btwns6"/>
+        
+        </g>
+        <g id="vertices">
+            
+            <g transform="translate(390.0000 290.0000)" 
+                class="vertice degree0 btwns0 authority0 DARESSALAAM">
+                <circle cx="0" cy="0" r="15" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(63.0919 -290.0000)" 
+                class="vertice degree5 btwns10 authority9 DARESSALAAM">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="35" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(-390.0000 88.3460)" 
+                class="vertice degree10 btwns0 authority0 HARARE">
+                <circle cx="0" cy="0" r="25" z-index="1" class="node" />
+
+                
+
+                
+                
+            </g>
+            
+            <g transform="translate(-215.7292 -196.2852)" 
+                class="vertice degree5 btwns7 authority10 HARARE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="45" class="authority" z-index="1" />
+                
+            </g>
+            
+            <g transform="translate(300.0394 -63.3778)" 
+                class="vertice degree5 btwns7 authority9 STATE">
+                <circle cx="0" cy="0" r="20" z-index="1" class="node" />
+
+                
+                <circle cx="0" cy="0" r="25" z-index="1" class="missing" />
+                
+
+                
+                <circle cx="0" cy="0" r="32" class="betweenness" z-index="1" />
+                
+                
+                <circle cx="0" cy="0" r="44" class="authority" z-index="1" />
+                
+            </g>
+            
+
+            
+            <g transform="translate(390.0000 290.0000)" 
+                id="07DARESSALAAM456" 
+                class="labels">
+                 
+                <text x="0" y="-15.0" class="date" z-index="1">
+                    <tspan>03/28/07</tspan>
+                </text>
+                
+
+                <text x="0" y="5.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07DARESSALAAM456.html">07DARESSALAAM456</a>
+                
+                </text>
+                
+                    <text x="-200" y="25.0" z-index="10" class="subject">
+                        <tspan>SADC EXTRAORDINARY SUMMIT:  ZIMBABWE, DRC AND LESOTHO TO BE DISCUSSED</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-30.0" 
+                          z-index="10" 
+                          class="classification UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY">
+                        <tspan>UNCLASSIFIED//FOR OFFICIAL USE ONLY</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(63.0919 -290.0000)" 
+                id="07DARESSALAAM489" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/03/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07DARESSALAAM489.html">07DARESSALAAM489</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>EXTRAORDINARY SADC HEADS OF STATE SUMMIT: TANZANIAN MINISTER OF FOREIGN AFFAIRS' BRIEFING ON MARCH 28-29 MEETINGS</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-390.0000 88.3460)" 
+                id="07HARARE270" 
+                class="labels">
+                 
+                <text x="0" y="-10.0" class="date" z-index="1">
+                    <tspan>03/30/07</tspan>
+                </text>
+                
+
+                <text x="0" y="10.0" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/03/07HARARE270.html">07HARARE270</a>
+                
+                </text>
+                
+                    <text x="-200" y="30.0" z-index="10" class="subject">
+                        <tspan>JONATHAN MOYO ON MUGABE SUCCESSION, U.S. POLICY</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-25.0" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(-215.7292 -196.2852)" 
+                id="07HARARE274" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>04/02/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                 
+                    <a xlink:href="http://wikileaks.org/cable/2007/04/07HARARE274.html">07HARARE274</a>
+                
+                </text>
+                
+                    <text x="-200" y="27.5" z-index="10" class="subject">
+                        <tspan>INSIDE LOOK AT ZANU-PF CENTRAL COMMITTEEQ,S ENDORSEMENT OF MUGABE FOR 2008</tspan>
+                    </text>
+                
+                
+                    <text x="0" y="-27.5" 
+                          z-index="10" 
+                          class="classification CONFIDENTIAL">
+                        <tspan>CONFIDENTIAL</tspan>
+                    </text>
+                
+                
+            </g>
+            
+            <g transform="translate(300.0394 -63.3778)" 
+                id="07STATE38986" 
+                class="labels">
+                 
+                <text x="0" y="-12.5" class="date" z-index="1">
+                    <tspan>03/27/07</tspan>
+                </text>
+                
+
+                <text x="0" y="7.5" class="label" z-index="1">
+                
+                    07STATE38986
+                
+                </text>
+                
+                
+                
+            </g>
+            
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>
