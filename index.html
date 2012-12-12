@@ -22,9 +22,13 @@
         }
         ul.mono { margin: 0; padding: 0; font-family: monospace; }
         ul.mono li { list-style-type: none; display: inline; } 
+        p.note { font-size: .8em; }
         a { color: white; }
         a:visited { color: gray; }
-        p.browse a { margin: 2em; font-size: 2em; }
+        .browse a { margin: 1em; font-size: 1.4em; text-decoration: none; } 
+        .browse a:hover { text-decoration: underline; } 
+        .browse ul { margin: 0; padding: 0; }
+        .browse ul li { list-style-type: none; display: inline; } 
     </style>
 </head>
 <body>
@@ -32,18 +36,65 @@
     <h2>Reference Network Visualization</h2>
     <p>A interactive visualization of the references between diplomatic cables released by WikiLeaks.</p>
     <div><img src="screen1.jpg" width="800" height="200" alt="Screenshot cable2graph" /></div>
-    <h3>How is it made?</h3>
-    <p>
-        The cables.csv contains a field for referencing related cables via <abbr title="Message Reference Number">MRN</abbr>. 
-        These 232319 references make a large network (or graph) with many groups of cables, also known as clusters.
-        The largest cluster (giant) contains 91896 cables with 130574 references between them.
-        Community detection can split the giant cluster into smaller communities.
+    <h3>Index</h3>
+    <ol>
+        <li><a href="#browse">Browse the visualizations!</a></li>
+        <li><a href="#structure">What is the structure of the network?</a></li>
+        <li><a href="#missing">What are missing cables?</a></li>
+        <li><a href="#usage">What can i do?</a></li>
+        <li><a href="#read">How do i read the graph?</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ol>
+    <h3><a name="browse">Browse the visualizations!</a></h3>
+    <div class="browse">
+        <ul>
+            <li><a>Communities (soon)</a></li>
+            <li><a href="v0.2/clusters.html">Clusters</a></li>
+            <li><a href="v0.2/stars.html">Stars</a></li>
+        </ul>
+    </div>
+    <p class="note">
+        Please use a recent Chrome or Safari. Firefox does display it correctly, but is missing the "jump" functionality.
     </p>
+    <h3><a name="how">How is it made?</a></h3>
+    <p>
+        The <a href="http://download.cabledrum.net/cablegate/cables.csv/">cables.csv</a> contains a field for referencing related 
+        cables via <abbr title="Message Reference Number">MRN</abbr>. In the cables this is often called "REFTEL" and the 
+        following notation is used in the cable body.
+    </p>
+    <p>Example:</p>
+    <pre>REF: TEHRAN 1091: TEHRAN 263: MOSCOW 1603</pre>
+    <pre>REF:  A) HARARE 17 B) HARARE 394 C) 87 HARARE 6985 D) HARARE 240</pre>
+    <p>
+        Around ~232300 of these references exist and they form a large network (or so called graph).
+    </p>
+    <h3><a name="structure">What is the structure of the network?</a></h3>
+    <p>
+        Not all cables belong to a single large network but rather form smaller groups of networks.
+        These smaller groups are also known as clusters or connected components. 
+    </p>
+    <p>
+        Some of these clusters form a star which can be a indication for a type of "action request" that was sent to 
+        multiple embassies.
+    </p>
+    <p>
+        The largest cluster (giant) contains ~100000 cables with ~143000 references.
+        A graph method called "community detection" can be used to split the giant cluster into smaller communities.
+    </p>
+    <p>
+        For every community, cluster or star a interactive visualization is generated.
+    </p>
+    <h3><a name="missing">What are missing cables?</a></h3>
     <p>
         From the total of 251287 cables ~56000 additional cables are referenced but not included in the cables.csv.
         These missing cables are also shown in the graph.
     </p>
-    <h3>What can i do?</h3>
+    <p>
+        For some of the missing cables it is possible to estimate the date it was created.
+        This estimated date is included.
+    </p>
+    <h3><a name="usage">What can i do?</a></h3>
     <ul>
         <li>Zoom in and out of the graph with the (+ / -) on the upper left.</li>
         <li>Show or hide labels and graph properties.</li>
@@ -51,36 +102,29 @@
         <li>Jump directly to any cable listed in the sidebar.</li>
         <li>Move over the cable id (<abbr title="Message Reference Number">MRN</abbr>) to see the subject of the cable.</li>
         <li>Click on any available cable id to read the full cable text on wikileaks.org.</li>
+        <li>The sidebar contains a list of all cables in the graph orderd by date.</li>
     </ul>
-    <h3>How do i read the graph?</h3>
+    <h3><a name="read">How do i read the graph?</a></h3>
     <p>
         The visualization contains some indicators of graph and cable properties.
     </p>
     <ul>
         <li>Cables with a red circle are not included in the cables.csv.</li>
         <li>Node color shows the origin of the cable.</li>
-        <li>Node size indicate node degree.</li>
+        <li>Node size indicates node degree.</li>
         <li>First ring shows betweenness of nodes.</li>
         <li>Second ring shows authority of nodes.</li>
         <li>Line color indicates edge betweenness.</li>
     </ul>
-    <h3>Browse the visualizations!</h3>
-    <p>
-        Please use a recent Chrome or Safari. Firefox does display it correctly, but is missing the "jump" functionality.
-    </p>
-    <p class="browse">
-        <a href="v0.2/clusters.html">Clusters</a>
-        <a href="v0.2/stars.html">Stars</a>
-    </p>
-    <h3>Code</h3>
-    <p>Made with python, igraph, svg, html5, css3 and a little bit of javascript. Please contribute!</p>
+    <h3><a name="code">Code</a></h3>
+    <p>Made with python, igraph, SVG, HTML5, CSS3 and a little bit of javascript.</p>
     <p><a href="https://github.com/wlwardiary/cable2graph/">cable2graph source code</a> (GPLv3).</p>
-    <h3>Contact</h3>
+    <h3><a name="contact">Contact</a></h3>
     <p>
         <a href="https://twitter.com/c2graph">can haz moar pr0n?</a>
     </p>
     <footer>
-        Last update: Thu Nov 15 15:00:00 UTC 2012 - anonymous
+        Last update: Thu Dec 12 17:00:00 UTC 2012 - anonymous
     </footer>
 </body>
 </html>
