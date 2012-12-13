@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WikiLeaks Cablegate Visualization</title>
+    <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+    <meta name="author" value="anonymous" />
+    <style type="text/css">
+        body {
+            margin: 2em 4em;
+            background-color: rgb(44,44,44);
+            color: white;
+            font-size: 1.2em;
+            font-family: sans-serif;
+        }
+        h1, h2 { text-shadow: black 3px 3px 10px; }
+        p { padding: 0; margin: .3em 0; }
+        ul.mono { margin: 0; padding: 0; font-family: monospace; }
+        ul.mono li { list-style-type: none; display: inline; } 
+        a { color: white; }
+        a:visited { color: gray; }
+        .index { margin: 1em 0; }
+    </style>
+</head>
+<body>
+<h1>WikiLeaks Cablegate</h1>
+<h2>Reference Network Visualization</h2>
+<p>Cluster and Community Index</p>
+{% for meta in index %}
+<div class="index">
+    <p><a href="{{ meta.filename }}">{{ meta.filename|truncate }}</a></p>
+    <p>
+        Nodes: {{ meta.nodes }} 
+        Edges: {{ meta.edges }} 
+        Diameter: {{ meta.diameter|int }} 
+        Radius: {{ meta.radius|int }}
+    </p>
+    {% if meta.tags|length > 0 %}
+    <ul class="mono">
+        <li>TAGS:</li>
+        {% for t in meta.tags|sort %}
+        <li>{{ t }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+{% endfor %}
+</body>
