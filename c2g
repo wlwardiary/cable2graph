@@ -4,10 +4,19 @@
 # 
 # Create full graph from data/* input files 
 #
+from sys import argv, exit, stderr
+from os import listdir, path
+
+if len(argv) < 2:
+    stderr.write("Usage: %s /path/to/full.graphml\n" % argv[0])
+    exit(1)
+
+destination = argv[1]
+if path.exists(destination):
+    stderr.write("Error: file %s exists.\n" % destination)
+    exit(1)
 
 import igraph
-from sys import argv, exit
-from os import listdir, path
 import re
 from hashlib import md5
 from collections import defaultdict
@@ -24,8 +33,6 @@ classifications = {}
 print "Loading graph data..."
 for i in open('data/embassy.list').readlines():
     embassy.add(i.strip().upper())
-
-place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 
 for i in open('data/all_ids.list').readlines():
     cable_ids.add(i.strip().upper())
@@ -52,10 +59,7 @@ for dml in open('data/dates_missing.list').readlines():
     tmp_mrn, tmp_ts = dml.split(' ')
     missing_timestamps.update({ tmp_mrn.strip(): tmp_ts.strip() })
 
-tags = defaultdict(list)
-
-for k,v in [ (l.split() ) for l in open('data/tags_edges.list').readlines() ]:
-    tags[k].append(v)
+print "Process graph data..."
 
 cable_ids = sorted(cable_ids)
 ref = sorted(ref)
@@ -66,6 +70,8 @@ timestamp = []
 missing_timestamp = []
 caption = []
 classification = []
+
+place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 
 for c in cable_ids:
     m = re.search(place_rgx,c)
@@ -100,7 +106,7 @@ for c in cable_ids:
 cl = dict( [ (v,i) for i,v in enumerate(cable_ids) ] )
 edges = [ (cl[f], cl[t]) for f, t in ref ]
 
-# cal time duration between two verticies
+# calc time duration between two verticies
 id_cable_map = dict( [ (i,v) for i,v in enumerate(cable_ids) ] )
 duration = []
 for a,b in edges:
@@ -124,7 +130,7 @@ for a,b in edges:
         dur = ts_b - ts_a
     duration.append(int(dur))
 
-print 'Loading graph...'
+print "Create graph..."
 g = igraph.Graph(edges, directed=False)
 g.vs['label'] = cable_ids
 g.es['duration'] = duration
@@ -139,4 +145,6 @@ g.vs['constraint'] = g.constraint()
 g.vs['pagerank'] = g.pagerank()
 g.vs['authority'] = g.authority_score()
 
-g.write('full.graphml')
+print "Save %s..." % destination
+g.write(destination)
+
