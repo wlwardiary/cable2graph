@@ -1,0 +1,261 @@
+#!/usr/bin/env python
+# 
+# split input graph into clusters and communities
+#
+# GPLv3 2012 by anonymous
+#
+import igraph
+from optparse import OptionParser
+from collections import defaultdict
+from hashlib import md5
+
+# function to detect a star graph
+def is_star(gstar):
+    if gstar.girth() != 0:
+        return False
+
+    if gstar.diameter() != 2:
+        return False
+    
+    if gstar.radius() != 1.0:
+        return False
+
+    # example [1, 1, 1, 1, 1, 1, 1, 11, 1, 1, 1, 1]
+    dgr = gstar.degree()
+
+    # all but one are 1
+    if dgr.count(1) != (len(dgr) - 1):
+        return False
+
+    # the largest only exists once
+    if dgr.count(max(dgr)) != 1:
+        return False
+
+    # value of the max is equal to amount of 1
+    if max(dgr) != dgr.count(1):
+        return False
+
+    # yep, pretty sure it's a star
+    return True
+
+# recursive walk
+def walk(sg, visited, node):
+    visited.append(node)
+    # find possible new nodes to visit next
+    next_nodes = []
+    for v in sg.vs[node].neighbors():
+        if v['betweenness'] > 0 and v.index not in visited:
+            next_nodes.append((v['betweenness'], v.index))
+
+    if len(next_nodes) > 0:
+        # take the node with the max betweenness
+        btwn, n = max(next_nodes)
+        print node, n, btwn, sg.vs[node]['label'], sg.vs[n]['label']
+        # play it again sam
+        walk(sg, visited, n)
+    else:
+        print "end."
+
+# traverse a graph along the highest betweenness
+def get_trail(sg):
+    # list of visited nodes
+    trail = []
+    # get the edge with the max betweenness
+    max_btwn = max(sg.es['betweenness'])
+    top_edge = sg.es.select(betweenness_eq=max_btwn)
+    for e in top_edge:
+        # make sure the first run dosn't go into the direction of the source
+        trail.append(e.source)
+        # walk along both sides of the edge
+        walk(sg, trail, e.target)
+        walk(sg, trail, e.source)
+    
+    return trail
+
+def get_tags(labels):
+    tmp_tags = set()
+    for label in labels:
+        if label in tags:
+            for tag in tags[label]:
+                tmp_tags.add(tag)
+
+    return tmp_tags
+
+def save(sg, prefix, destdir):
+    # create a uniq id for the graph
+    # concat all sorted(!) label names and hash it
+    idconcat = ''.join(sorted(sg.vs['label']))
+    digest = md5(idconcat).hexdigest()
+    di = int(sg.diameter())
+    de = sg.density()
+    ra = int(sg.radius())
+    pl = sg.average_path_length()
+    sg['diameter'] = di
+    sg['density'] = de
+    sg['radius'] = ra
+    sg['avg_path_length'] = pl
+    sg['tags'] = ','.join(get_tags(sg.vs['label']))
+    filename = '%s/%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (destdir,prefix,di,de,ra,pl,digest)
+    if options.verbose:
+        print prefix, di, de, ra, pl, len(sg.es), len(sg.vs)
+        print sg
+
+    print filename
+    with open(filename, 'w') as fh:
+        sg.write_graphml(fh)
+
+def save_cluster(g, minimum, destdir):
+    # use size of the largest cluster as limit
+    giant_size = g.clusters().giant().vcount()
+
+    # this is faster then calling len(cluster) in the for loop
+    cluster_sizes = g.clusters().sizes()
+
+    # also adds the cluster index
+    filterd_clusters = filter(
+        lambda c: c[1] >= minimum and c[1] < giant_size, 
+        enumerate(cluster_sizes))
+
+    print "matched %s clusters" % len(filterd_clusters)
+    for cluster_index, cluster_size in filterd_clusters:
+        # create the subgraph from the cluster index
+        sg = g.clusters().subgraph(cluster_index)
+        prefix = 'cluster_ci%s_cs%s' % (cluster_index, cluster_size)
+        if is_star(sg):
+            prefix = 'star'
+        elif 'betweenness' in sg.vs.attribute_names() \
+                and sg.density() < 0.01 \
+                and sg.average_path_length() > 5.0:
+            trail = get_trail(sg)
+            sg_trail = sg.vs.select(trail).subgraph()
+            save(sg_trail, 'trail_ci%s' % cluster_index, destdir)
+
+        save(sg, prefix, destdir)
+
+def save_community(g, prefix, destdir):
+    for sg in g.subgraphs():
+        if 'betweenness' in sg.vs.attribute_names() \
+                and sg.density() < 0.01\
+                and sg.average_path_length() > 5.0:
+            trail = get_trail(sg)
+            sg_trail = sg.vs.select(trail).subgraph()
+            save(sg_trail, prefix + '_trail', destdir)
+
+        save(sg, prefix, destdir)
+
+def main():
+    print "Loading Graph %s..." % options.source
+    g = igraph.load(options.source)
+
+    if options.clusters:
+        print "Find clusters..."
+        save_cluster(g, options.minimum, options.destination)
+    
+    giant = g.clusters().giant()
+    if options.multilevel:
+        print "Find multilevel communities..."
+        gcml = giant.community_multilevel()
+        giant.vs['multilevel'] = gcml.membership
+        giant.es['multilevelcrossing'] = gcml.crossing
+
+    if options.eigen:
+        print "Find leading eigenvector communities..."
+        gcle = giant.community_leading_eigenvector()
+        giant.vs['leadingeigenvector'] = gcle.membership
+        giant.es['leadingeigenvectorcrossing'] = gcle.crossing
+
+    if options.walktrap:
+        print "Find walktrap communities..."
+        gcwt = giant.community_walktrap()
+        giant.vs['walktrap'] = gcwt.as_clustering().membership
+        giant.es['walktrapcrossing'] = gcwt.as_clustering().crossing
+    
+    if options.fastgreedy:
+        print "Find fastgreedy communities..."
+        gcfg = giant.community_fastgreedy()
+        giant.vs['fastgreedy'] = gcfg.as_clustering().membership
+        giant.es['fastgreedycrossing'] = gcfg.as_clustering().crossing
+
+    if options.giant:
+        print "Saving giant as %s..." % options.giant
+        giant.write(options.giant)
+
+    if options.multilevel:
+        print "Save multilevel communities..."
+        save_community(gcml, 'community_multilevel', options.destination)
+
+    if options.eigen:
+        print "Save leading eigenvector communities..."
+        save_community(gcle, 'community_leadingeigenvector', options.destination)
+    
+    if options.walktrap:
+        print "Save walktrap communities..."
+        save_community(gcwt.as_clustering(), 'community_walktrap', options.destination)
+
+    if options.fastgreedy:
+        print "Save fastgreedy communities..."
+        save_community(gcfg.as_clustering(), 'community_fastgreedy', options.destination)
+
+if __name__ == "__main__":
+    parser = OptionParser()
+    parser.add_option("-s", "--source", dest="source",
+        default="full.graphml",
+        help="Load source graph from FILE. Default: full.graphml", 
+        metavar="FILE")
+
+    parser.add_option("-d", "--destination", dest="destination",
+        default=".",
+        help="Save clusters and communities into DIR. Default: current directory.",
+        metavar="DIR")
+
+    parser.add_option("-t", "--tags", dest="tags",
+        default="data/tags_edges.list",
+        help="Load TAGS from FILE. Default: data/tags_edges.list",
+        metavar="FILE")
+
+    parser.add_option("-g", "--giant", dest="giant",
+        help="Save the giant cluster as FILE",
+        metavar="FILE")
+
+    parser.add_option("-c", "--clusters", dest="clusters",
+        action="store_true",
+        help="Save all clusters (connected components).")
+
+    parser.add_option("-m", "--minimum", dest="minimum",
+        default="10",
+        type="int",
+        help="Minimum cluster size. Default: 10",
+        metavar="MIN")
+
+    parser.add_option("-l", "--multilevel", dest="multilevel",
+        action="store_true",
+        help="Find communities using multilevel.")
+
+    parser.add_option("-f", "--fastgreedy", dest="fastgreedy",
+        action="store_true",
+        help="Find communities using fastgreedy")
+
+    parser.add_option("-e", "--eigen", dest="eigen",
+        action="store_true",
+        help="Find communities using leading eigenvector.")
+
+    parser.add_option("-w", "--walktrap", dest="walktrap",
+        action="store_true",
+        help="Find communities using walktrap.")
+
+    parser.add_option("-v", "--verbose", dest="verbose",
+        action="store_true",
+        help="Be verbose")
+
+    (options, args) = parser.parse_args()
+
+    if not (options.clusters or options.multilevel or options.eigen \
+       or options.fastgreedy or options.walktrap):
+        parser.error("Please set at least one of -c, -l, -f, -e or -w")
+
+    print "Loading TAGS from %s..." % options.tags
+    tags = defaultdict(list)
+    for k,v in [ (l.split() ) for l in open(options.tags).readlines() ]:
+        tags[k].append(v)
+
+    main()
