@@ -10,50 +10,53 @@ install jinja2
 
 _[optional]_ extract features from the cables.csv into smaller plain text files
 
-    $ python extract.py cables.csv
+    $ ./extract cables.csv
 
-create the large graph and split into smaller .gml files:
+create the large graph `full.graphml`
     
-    $ python c2g.py
+    $ ./c2g full.graphml
 
-create html with inline svg from any .gml:
+split the large graph into smaller clusters and communities
 
-    $ pthon g2svg.py -g any.gml
+    $ ./splitgraph --source full.graphml --multilevel --clusters
+
+create HTML file with inline SVG from any .graphml:
+
+    $ ./g2svg -g any.graphml
 
 or:
 
-    $ ls *gml > list-of-gml-files
-    $ pthon g2svg.py -i list-of-gml-files
+    $ ls cluster*graphml > list-of-clusters
+    $ ./g2svg -i list-of-clusters
 
 # note
 
-* copy and customize the default svg.tmpl and run `g2svg.py` with `-t example.svg`.
+* copy and customize the default svg.tmpl and run `g2svg` with `-t example.svg`.
 * svg.tmpl referes to svg.js and svg.css
-* use [ReVerb](http://reverb.cs.washington.edu/) to extract sentences from the cables and use `g2svg.py -r example.reverb`. To generate input files for ReVerb: `python c2txt.py cables.csv MRN1 MRN2 ...`.
-* `python g2svg.py -h` for more options.
-* you _don't_ need to run `extract.py`, the code comes with all generated data/ files.
+* use [ReVerb](http://reverb.cs.washington.edu/) to extract sentences from the cables and use `g2svg.py -r example.reverb`. To generate input files for ReVerb: `./c2txt cables.csv MRN1 MRN2 ...`.
+* `./g2svg -h` for more options.
+* you _don't_ need to run `extract`, the code comes with all generated data/ files.
 
 # main tools
 
-* `extract.py`: feature extraction from cables.csv
-* `c2g.py`: create a graph from the reference data and split the graph into clusters and communities
-* `t2g.py`: create a graph from the TAGS data
-* `r2g.py`: create a graph with the "from -> to" routing data
-* `g2svg.py`: render graph layout and create svg
+* `extract`: feature extraction from cables.csv
+* `c2g`: create a graph from the reference data 
+* `splitgraph`: split a graph into clusters and communities
+* `g2svg`: render graph layout and create svg
 
 # misc tools
 
-* `c2txt.py`: extract body and header from cables.csv
-* `calcdates.py`: estimate date for missing MRNs
-* `gen_colors.py`: create a random color for every place (see svg.css)
+* `t2g`: create a graph from the TAGS data
+* `r2g`: create a graph with the "from -> to" routing data
+* `c2txt`: extract body and header from cables.csv
+* `calcdates`: estimate date for missing MRNs
+* `gen_colors`: create a random color for every place (see svg.css)
 
 # copyleft
 
 GPLv3
 
 # contact
-
-need help? ask!
 
 https://twitter.com/c2graph
 
