@@ -29,6 +29,7 @@ timestamp_map = {}
 missing_timestamps = {}
 captions = {}
 classifications = {}
+btwns = {}
 
 print "Loading graph data..."
 for i in open('data/embassy.list').readlines():
@@ -59,6 +60,10 @@ for dml in open('data/dates_missing.list').readlines():
     tmp_mrn, tmp_ts = dml.split(' ')
     missing_timestamps.update({ tmp_mrn.strip(): tmp_ts.strip() })
 
+for b in open('data/betweenness').readlines():
+    bmrn, bv = b.split(' ')
+    btwns.update({ bmrn.strip(): float(bv) })
+
 print "Process graph data..."
 
 cable_ids = sorted(cable_ids)
@@ -70,6 +75,7 @@ timestamp = []
 missing_timestamp = []
 caption = []
 classification = []
+betweenness = []
 
 place_rgx = re.compile(r'^[0-9]{2}(' + '|'.join(embassy) + ')[0-9]+')
 
@@ -101,6 +107,11 @@ for c in cable_ids:
         classification.append(classifications[c])
     else:
         classification.append('')
+
+    if c in btwns:
+        betweenness.append(btwns[c])
+    else:
+        betweenness.append(0)
 
 # create dictionary with ids for every cable
 cl = dict( [ (v,i) for i,v in enumerate(cable_ids) ] )
@@ -140,6 +151,7 @@ g.vs['timestamp'] = timestamp
 g.vs['caption'] = caption
 g.vs['classification'] = classification
 
+g.vs['betweenness'] = betweenness
 g.vs['degree'] = g.degree()
 g.vs['constraint'] = g.constraint()
 g.vs['pagerank'] = g.pagerank()
