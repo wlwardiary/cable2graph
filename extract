@@ -551,29 +551,32 @@ for row in content:
 # mrn exists in the header or
 # mrn is counted at least twice
 ref_ack = set()
+mrns_ack = set()
 captions = set()
 for src_mrn, txt_mrn, caption in ref_from_text:
     if txt_mrn in mrns or txt_mrn in ref_ids or ref_body_cnt[txt_mrn] > 1:
         ref_ack.add((src_mrn, txt_mrn))
+        mrns_ack.add(txt_mrn)
 
     if (txt_mrn in mrns or txt_mrn in ref_ids) and len(caption) > 0:
         captions.add((txt_mrn, caption))
 
-ref_body_new = ref_ack.difference(edges)
-
-all_mrns = mrns.union(ref_body_mrns.union(ref_ids))
-
 # merge ref from body
+ref_body_new = ref_ack.difference(edges)
 edges.update(ref_body_new)
-ref_ids.update(ref_body_mrns)
+ref_ids.update(mrns_ack)
 
 # missing
 missing_mrn = ref_ids.difference(mrns)
+
+# all known MRN's
+all_mrns = mrns.union(mrns_ack.union(ref_ids))
 
 print "Lines read        : %s" % count
 print "MRNs              : %s" % len(mrns)
 print "Referenced MRNs   : %s" % len(ref_ids)
 print "        from body : %s" % len(ref_body_mrns)
+print "     from body ok : %s" % len(mrns_ack)
 print "         together : %s" % len(all_mrns)
 print "     with caption : %s" % len(captions)
 print "          missing : %s" % len(missing_mrn)
