@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+#
+# GPLv3 2012 by anonymous
+#
+
+from itertools import chain
+from sys import argv, exit
+from hashlib import md5
+
+if len(argv) != 3:
+    print "Usage: %s full.graphml input-file" % argv[0]
+    exit(1)
+
+print "Loading graph %s..." % argv[1]
+import igraph
+g = igraph.load(argv[1])
+
+hfilename = argv[2]
+max_hood = 100
+hmrns = [ f.strip().upper() for f in open(hfilename).readlines() ]
+
+hashes = set()
+
+for mrn in hmrns:
+    horder = 1
+    hrootv = g.vs.select(label_eq=mrn)
+    if len(hrootv) == 0:
+        print "Did not found MRN %s" % mrn
+        continue
+
+    # find best order value
+    hsize = 0
+    last_hsize = None
+    while True:
+        hsize = g.neighborhood_size(hrootv, order=horder)
+        if hsize[0] > max_hood or hsize[0] == 1 or hsize[0] == last_hsize:
+            last_hsize = None
+            break;
+        else:
+            horder = horder + 1
+            last_hsize = hsize[0]
+
+    hsg = g.subgraph(chain(*g.neighborhood(hrootv, order=horder)))
+    hsg.to_directed()
+    hsg.vs['betweenness'] = hsg.betweenness(directed=hsg.is_directed())
+    hsg.es['betweenness'] = hsg.edge_betweenness(directed=hsg.is_directed())
+    if hsg.vcount() > 2:
+        idconcat = ''.join(sorted(hsg.vs['label']))
+        digest = md5(idconcat).hexdigest()
+        if digest in hashes:
+            print "Already created this graph. Skipped"
+            break
+        else:
+            hashes.add(digest)
+
+        filename = '%s.graphml' % hrootv[0]['label']
+        with open(filename, 'w') as fh:
+            hsg.write_graphml(fh)
+        fh.close()
+
+        print filename, hsg.vcount(), hsg.ecount()
+    else:
+        print "No graph for MRN %s" % mrn
+
+    del hsg
+

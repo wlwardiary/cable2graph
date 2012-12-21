@@ -42,6 +42,7 @@ or:
 * `extract`: feature extraction from cables.csv
 * `c2g`: create a graph from the reference data 
 * `splitgraph`: split a graph into clusters and communities
+* `nbh`: create a neighborhood graph for a list of MRN's
 * `g2svg`: render graph layout and create svg
 
 # misc tools
