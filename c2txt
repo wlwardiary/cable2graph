@@ -11,26 +11,43 @@ search_cables = sys.argv
 
 csv.field_size_limit(131072*2)
 
+re_p126 = re.compile(r'((?:^([0-9])\.\s+([\s\S]+?)(?:[\s\n]{4,8}))+)', re.M)
+re_p127 = re.compile(r'^([0-9])\.\s+(\((S|SBU|U|C)\))([\s\S]+?)(?:\n\s|\n\n)')
+re_headline = re.compile(r'([-]{10,}\s+)([A-Z0-9\s]+?)(?:-{10,})')
+
 try:
     content = csv.reader(open(source), delimiter=',', quotechar='"', escapechar='\\')
 except IOError:
     sys.stderr.write("Error: could not open source %s\n" % source)
     sys.exit(1)
 
-
 for row in content:
-    line_num, cabledate, cable, location, classification, referrer, header, body = row
+    line_num, cabledate, mrn, location, classification, referrer, header, body = row
 
-    if cable.strip() in search_cables:
-        search_cables.remove(cable.strip())
-        header_filename = 'header_%s.txt' % cable.strip()
-        body_filename = 'body_%s.txt' % cable.strip()
-        h = open(header_filename, 'w')
-        h.write(header)
-        h.close()
-        b = open(body_filename, 'w')
-        b.write(body)
-        b.close()
+    m = re.search(re_p126, body)
+    if m is not None:
+        remain = (len(body) - (m.end() - m.start()))
+        print mrn, m.span(), len(body), remain
+    else:
+        print mrn
+
+    mhl = re.finditer(re_headline, body)
+    if mhl is not None:
+        for m in mhl:
+            print m.groups()
+
+    if mrn.strip() in search_cables:
+        search_cables.remove(mrn.strip())
+        print body
+
+        #header_filename = 'header_%s.txt' % cable.strip()
+        #body_filename = 'body_%s.txt' % cable.strip()
+        #h = open(header_filename, 'w')
+        #h.write(header)
+        #h.close()
+        #b = open(body_filename, 'w')
+        #b.write(body)
+        #b.close()
 
     if len(search_cables) == 0:
         sys.exit()

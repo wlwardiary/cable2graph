@@ -5,11 +5,10 @@
 
 import igraph, math, csv, time
 from sys import argv, exit
-from os import listdir, path
+from os import listdir, path, environ, closerange
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
 from datetime import datetime
-from os import environ
 
 environ['TZ'] = 'UTC'
 time.tzset()
@@ -59,6 +58,7 @@ if options.gmllist:
     gfh = open(options.gmllist)
     for gf in gfh.readlines():
         graph_files.add(gf.strip())
+    gfh.close()
 
 if len(graph_files) < 1:
     print "No source .gml files"
@@ -76,7 +76,7 @@ svg_tmpl = env.get_template(options.template)
 # load index template
 if options.index:
     index_tmpl = env.get_template(options.index)
-    index = []
+    index = list()
 
 # load optional ReVerb sentences result .tsv
 # http://reverb.cs.washington.edu/
@@ -115,7 +115,7 @@ if options.uri:
     for l in f.readlines():
         k,v = l.strip().split()
         cmap[k.strip()] = v.strip()
-
+    f.close()
 
 # load optional subject map
 if options.subjects:
@@ -124,8 +124,15 @@ if options.subjects:
     for l in f.readlines():
         k,v = l.split(' ',1)
         smap[k.strip()] = v.strip()
+    f.close()
 
 for gml in graph_files:
+
+    destfile = "%s/%s.html" % (options.destdir, path.basename(gml))
+    if path.exists(destfile):
+        print "%s exists. skipping" % destfile
+        continue
+
     # load graph from file
     g = igraph.load(gml)
 
@@ -184,21 +191,14 @@ for gml in graph_files:
 
     if options.index:
         meta = {
-            'filename': "%s.html" % path.basename(gml), 
-            'tags': tags,
             'nodes': g.vcount(),
             'edges': g.ecount(),
+            'filename': "%s.html" % path.basename(gml), 
+            'tags': tags,
             'diameter': g.diameter(),
             'radius': g.radius()
         }
         index.append(meta)
-
-    # cancel late so index data is still set
-    destfile = "%s/%s.html" % (options.destdir, path.basename(gml))
-    if path.exists(destfile):
-        del g
-        print "%s exists. skipping" % destfile
-        continue
 
     # create x,y positions
     # layout = g.layout_fruchterman_reingold()
@@ -212,9 +212,14 @@ for gml in graph_files:
         layout = g.layout_reingold_tilford(root=rootvs.indices)
         width = g.vcount() * 60 
         height = g.vcount() * 20
+    elif options.layout:
+        layout = g.layout(layout = options.layout)
+        width = g.vcount() * 20
+        height = width
     else:
-        layout = g.layout_fruchterman_reingold()
-        # layout = g.layout_kamada_kawai()
+        #layout = g.layout_fruchterman_reingold()
+        #layout = layout_grid_fruchterman_reingold()
+        layout = g.layout_kamada_kawai()
         #first_timestamp = int(min([ts for ts in timestamps if ts > 0]))
         #rootvs = g.vs.select(timestamp_eq=first_timestamp)
         #layout = g.layout_lgl(root=rootvs[0])
@@ -344,7 +349,13 @@ for gml in graph_files:
 
         vertices.append(tmpd)
 
-    dfh = open(destfile,'w')
+    try:
+        dfh = open(destfile,'w')
+    except IOError:
+        # TODO tmp fix for too many open files 
+        closerange(100,255)
+        dfh = open(destfile,'w')
+
     dfh.write(svg_tmpl.render(
         height = h,
         width = w,
@@ -354,6 +365,7 @@ for gml in graph_files:
         edges = edges, 
         vertices = vertices))
     dfh.close()
+    del g
     print "%s -> %s" % (gml, destfile)
 
 
@@ -364,5 +376,5 @@ if options.index:
     else:
         print "Writing %s" % index_file
         ifh = open(index_file,'w')
-        ifh.write(index_tmpl.render(index=index))
+        ifh.write(index_tmpl.render(index=sorted(index, reverse=True)))
         ifh.close()
