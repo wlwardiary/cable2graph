@@ -53,6 +53,32 @@ or:
 * `calcdates`: estimate date for missing MRNs
 * `gen_colors`: create a random color for every place (see svg.css)
 
+# data
+
+* `data/all.map`: MRN to url mapping
+* `data/all_ids.list`: all known MRN's
+* `data/betweenness`: pre-calculated betweenness values form the giant
+* `data/cable_ids.list`: all MRN's that exist in the cables.csv
+* `data/captions.list`: cable captions mentioned in the REF: field
+* `data/classifications.list`: MRN to classifications mapping
+* `data/clique-big.list`: list of all clusters
+* `data/clique.list`: list of all bigger cluster
+* `data/dates.list`: all known dates for each MRN
+* `data/dates_missing.list`: estimated dates for missing MRN's
+* `data/diff_cnt.list`: how often is a missing MNR referenced
+* `data/edges.list`: reference network
+* `data/embassy.list`: embassy names from the MRN
+* `data/from_to.list`: sender and receiver network
+* `data/locations.list`: Locations name from the cvs header
+* `data/missing_mrn.list`: referenced but missing MRN's
+* `data/ref_ids.list`: referenced MRN's from cvs header
+* `data/ref_regex_ids.list`: referenced MRN's from cable body
+* `data/routing.codes`: telegram routing codes
+* `data/subjects.list`: full extracted subject for each MRN
+* `data/tags.program`: all program TAGS
+* `data/tags.subject`: all subject TAGS
+* `data/tags_edges.list`: TAGS network
+
 # copyleft
 
 GPLv3
