@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>WikiLeaks Cablegate Visualization</title>
+ <link rel="stylesheet" href="graph-timeline.css" type="text/css" />
+ <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+ <script src="graph-timeline.js" type="text/javascript"></script>
+ <script type="text/javascript">
+    var xw = {{ xw }};
+    var xh = {{ xh }};
+    var width = {{ width }};
+    var height = {{ height }};
+    var scale = 1.0;
+ </script>
+ <meta name="author" value="anonymous" />
+ <meta name="description" 
+  content="Graph visualization of the WikiLeaks cables.csv reference network." />
+</head>
+<body>
+<div id="page" class="level10">
+<div id="zoom">
+    <button id="zoom-in">+</button>
+    <button id="zoom-out">-</button>
+    <svg 
+        id="zoom-circle" 
+        width="100" 
+        height="100" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(50,50) scale(1.0)">
+            <circle x="0" y="0" r="35" />
+        </g>
+    </svg>
+</div>
+<div id="tools">
+    <h3>Labels</h3>
+    <button id="mrn-switch" class="active">MRN</button>
+    <button id="date-switch" class="">Date</button>
+    <button id="classification-switch" class="">Classification</button>
+    <h3>Properties</h3>
+    <button id="betweenness-switch" class="active">Betweenness</button>
+    <button id="authority-switch" class="active">Authority</button>
+    <button id="missing-switch" class="active">Missing</button>
+</div>
+<section id="timeline">
+    <svg id="foobarbaz"
+        width="{{ vertices|length * 30 }}" 
+        height="120" 
+        version="1.1" 
+        xmlns="http://www.w3.org/2000/svg" 
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+        {% set this_month = 0 %}
+        {% set this_year = 0 %}
+        <g id="timeline-label">
+            <text x="60" y="56" class="month">
+                <tspan>Month</tspan>
+            </text>
+            <line x1="20" 
+                  y1="60" 
+                  x2="{{ (vertices|length * 30) - 20 }}" 
+                  y2="60" />
+            <text x="60" y="74" class="year">
+                <tspan>Year</tspan>
+            </text>
+        </g>
+        {% for v in vertices|sort(attribute='timestamp') %}
+            {% if v.timestamp|int > 0 %}
+            {% if v.missing and v.missing|int == 1 %}
+            {% else %}
+            {% endif %}
+            <g transform="translate({{ ((loop.index - 1) * 30) }}, 2)" 
+               class="doc {{ v.place }}">
+                <text x="0", y="10">
+                    <tspan class="label">{{ v.label }}: </tspan>
+                    <tspan class="subject">{{ v.subject }}</tspan>
+                </text>
+                <a xlink:href="#{{v.label}}">
+                <path d="M 35,6 
+                         L 12,6 
+                         L 0,18 
+                         L 0,48
+                         L 35,48 
+                         L 35,6 z" 
+                      transform="scale(0.6) translate(0,20)" />
+                </a>
+            </g>
+
+            <g class="timeline-mark">
+                <line x1="{{ (loop.index - 1) * 30 }}" y1="45" 
+                      x2="{{ (loop.index - 1) * 30 }}" y2="70" 
+                      class="mark {{ loop.cycle('odd', 'even') }}" />
+
+                {% if v.timestamp|formatts('%m') != this_month %} 
+                    <text x="{{ (loop.index * 30) + 3 }}" y="55" class="month" >
+                        <tspan>{{ v.timestamp|formatts('%m') }}</tspan>
+                    </text>
+                {% endif %}
+                {% set this_month = v.timestamp|formatts('%m') %}
+                {% if v.timestamp|formatts('%Y') != this_year %} 
+                <line x1="{{ (loop.index - 1) * 30 }}" y1="70" 
+                      x2="{{ (loop.index - 1) * 30 }}" y2="60" 
+                      class="mark {{ loop.cycle('odd', 'even') }}" />
+                <g transform="translate({{ ((loop.index - 1) * 30) + 12 }}, 86)">
+                    <text x="0" 
+                          y="0" 
+                          transform="rotate(-45)"
+                          class="year">
+                        <tspan>{{ v.timestamp|formatts('%Y') }}</tspan>
+                    </text>
+                </g>
+                {% endif %}
+                {% set this_year = v.timestamp|formatts('%Y') %}
+            </g>
+            {% else %}
+            {% endif %}
+        {% endfor %}
+    </svg>
+</section>
+<section id="graph" class="level10 hide-date hide-classification">
+  <svg
+    id="svg" 
+    width="{{ width }}" 
+    height="{{ height }}" 
+    version="1.1" 
+    xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <g transform="translate({{ xw }},{{ xh }}) scale(1.0)" id="frame">
+        <g id="edges">
+        {% for e in edges %}
+            <line x1="{{e.x1}}" y1="{{e.y1}}" 
+                  x2="{{e.x2}}" y2="{{e.y2}}" class="btwns{{ e.betweenness|int }}"/>
+        {% endfor %}
+        </g>
+        <g id="vertices">
+            {% for v in vertices %}
+            <g transform="translate({{ v.x }} {{ v.y }})" 
+                class="vertice degree{{ v.degree|int }} btwns{{v.betweenness|int }} authority{{ v.authority|int }} {{ v.place }}">
+                <circle cx="0" cy="0" r="{{ 15 + v.degree|int }}" z-index="1" class="node" />
+
+                {% if v.missing and v.missing|int == 1 %}
+                <circle cx="0" cy="0" r="{{ 20 + v.degree|int }}" z-index="1" class="missing" />
+                {% endif %}
+
+                {% if v.betweenness|int > 0 %}
+                <circle cx="0" cy="0" r="{{ 25 + v.betweenness|int }}" class="betweenness" z-index="1" />
+                {% endif %}
+                {% if v.authority|int > 0 %}
+                <circle cx="0" cy="0" r="{{ 35 + v.authority|int }}" class="authority" z-index="1" />
+                {% endif %}
+            </g>
+            {% endfor %}
+
+            {% for v in vertices %}
+            <g transform="translate({{ v.x }} {{ v.y }})" 
+                id="{{ v.label }}" 
+                class="labels degree{{ v.degree|int }}">
+                {% if v.timestamp|int > 0 %} 
+                <text x="0" y="{{ -15 + (v.degree|int / 2) }}" class="date" z-index="1">
+                    <tspan>{{ v.timestamp|formatts('%x') }}</tspan>
+                </text>
+                {% endif %}
+
+                <text x="0" y="{{ 5 + (v.degree|int / 2) }}" class="label" z-index="1">
+                {% if v.uri %} 
+                    <a xlink:href="{{v.uri}}">{{ v.label }}</a>
+                {% else %}
+                    {{ v.label }}
+                {% endif %}
+                </text>
+                {% if v.subject|length > 0 %}
+                    <text x="-200" y="{{ 25 + (v.degree|int / 2) }}" z-index="10" class="subject">
+                        <tspan>{{ v.subject }}</tspan>
+                    </text>
+                {% endif %}
+                {% if v.classification|length > 0 %}
+                    <text x="0" y="{{ -30 + (v.degree|int / 2) }}" 
+                          z-index="10" 
+                          class="classification {{ v.classification|replace('//','-')|replace(' ','-') }}">
+                        <tspan>{{ v.classification }}</tspan>
+                    </text>
+                {% endif %}
+                {% if v.sentences %}
+                    {% for s in v.sentences %}
+                    <text x="-200" y="{{ 30 + loop.index * 20 }}" class="sentence">
+                        <tspan class="a1">{{ s.a1 }}</tspan>
+                        <tspan class="rel">{{ s.rel }}</tspan>
+                        <tspan class="a2">{{ s.a2 }}</tspan>
+                    </text>
+                    {% endfor %}
+                {% endif %}
+            </g>
+            {% endfor %}
+        </g>
+    </g>
+  </svg>
+</section>
+</div>
+</body>
