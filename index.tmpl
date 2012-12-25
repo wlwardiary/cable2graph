@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>WikiLeaks Cablegate Visualization</title>
-    <link rel="copyright" href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
+    <link rel="copyright" 
+          href="http://creativecommons.org/licenses/by-nc-sa/3.0/" />
     <meta name="author" value="anonymous" />
     <style type="text/css">
         body {
-            margin: 2em 4em;
+            margin: 2% 4%;
             background-color: rgb(44,44,44);
             color: white;
             font-size: 1.2em;
@@ -14,26 +15,78 @@
         }
         h1, h2 { text-shadow: black 3px 3px 10px; }
         p { padding: 0; margin: .3em 0; }
-        ul.mono { margin: 0; padding: 0; font-family: monospace; }
+        ul.mono { margin: 0; padding: 0; font-family: monospace; clear: both; }
         ul.mono li { list-style-type: none; display: inline; } 
         a { color: white; }
         a:visited { color: gray; }
-        .index { margin: 1em 0; }
+        .index { 
+            margin: 2em .8em 1em 0;
+            width: 22%; height: 250px;
+            min-width: 200px;
+            max-width: 600px;
+            float: left; 
+            overflow: hidden;
+        }
+
+        .bar { width: 100%; max-width: 900px; font-size: .8em; clear: both; }
+        .bar div { 
+            float: left; 
+            background-color: white; 
+            padding: 0; margin: 0;
+            color: black;
+            overflow: hidden;
+        }
+        .bar div span { display: block; padding: .1em .5em; }
+        .bar .SECRET-NOFORN { 
+            background-color: rgb(255,0,0); 
+        }
+        .bar .SECRET { 
+            background-color: rgb(200,0,0); 
+        }
+        .bar .CONFIDENTIAL-NOFORN  { 
+            background-color: rgb(255,255,0); 
+        }
+        .bar .CONFIDENTIAL { 
+            background-color: rgb(200,200,0); 
+        }
+        .bar .UNCLASSIFIED { 
+            background-color: rgb(0,200,0); 
+        }
+        .bar .UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY { 
+            background-color: rgb(0,255,0); 
+        }
+
+        .legend { clear: both; width: 800px;}
+
     </style>
 </head>
 <body>
 <h1>WikiLeaks Cablegate</h1>
-<h2>Reference Network Visualization</h2>
+<h2>
+    <a href="http://wlwardiary.github.com/cable2graph/">
+        Reference Network Visualization
+    </a>
+</h2>
 <p>Cluster and Community Index</p>
 {% for meta in index %}
 <div class="index">
-    <p><a href="{{ meta.filename }}">{{ meta.filename|truncate }}</a></p>
+    <p><a href="{{ meta.filename }}">Cluster #{{ loop.index }}</a></p>
     <p>
         Nodes: {{ meta.nodes }} 
         Edges: {{ meta.edges }} 
         Diameter: {{ meta.diameter|int }} 
         Radius: {{ meta.radius|int }}
     </p>
+    {%if meta.classification %}
+    <div class="bar" title="Distribution of classifications">
+        {% for clf, percent  in meta.classification %}
+        <div style="width: {{ percent|round(2) }}%;"
+             class="{{ clf|replace('//','-')|replace(' ','-')}}">
+            <span><!-- {{ percent|round(2) }}% -->&nbsp;</span >
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
     {% if meta.tags|length > 0 %}
     <ul class="mono">
         <li>TAGS:</li>
