@@ -22,13 +22,13 @@ hmrns = [ f.strip().upper() for f in open(hfilename).readlines() ]
 hashes = set()
 
 for mrn in hmrns:
-    horder = 1
     hrootv = g.vs.select(label_eq=mrn)
     if len(hrootv) == 0:
         print "Did not found MRN %s" % mrn
         continue
 
     # find best order value
+    horder = 1
     hsize = 0
     last_hsize = None
     while True:
