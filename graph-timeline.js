@@ -138,6 +138,10 @@ function main() {
         toggleClass(get('missing-switch'), 'active');
         toggleClass(get('graph'), 'hide-missing');
     });
+    addEvent(get('timeline-switch'), 'click', function(e) {
+        toggleClass(get('timeline-switch'), 'active');
+        toggleClass(get('timeline'), 'active');
+    });
 }
 
 document.addEventListener('DOMContentLoaded',main);
