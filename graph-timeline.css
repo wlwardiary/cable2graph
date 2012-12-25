@@ -85,6 +85,7 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     height: 22px;
     text-align: center;
     z-index: 2;
+    cursor: pointer;
 }
 
 #zoom-in {
@@ -171,6 +172,7 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     background-color: rgba(0,0,0,0.1);
     color: white;
     border: none;
+    cursor: pointer;
 }
 
 #tools button.active {
@@ -191,15 +193,19 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     position: fixed;
     padding: 0;
     margin: 0;
-    width: 100%;
-    left: 0%;
-    bottom: 2%;
-    height: 10%;
-    min-height: 140px;
-    background-color: rgba(33,33,33,0.8);
+    width: 98%;
+    left: 1%;
+    bottom: 3%;
+    background-color: rgba(33,33,33,0.95);
     color: white;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: auto;
+    visibility: hidden;
+    border-radius: .5em;
+}
+
+#timeline.active {
+    visibility: visible;
 }
 
 #timeline svg line.mark {
@@ -207,6 +213,7 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     stroke-width: 1px;
 }
 
+#timeline svg text.cable,
 #timeline svg text.month,
 #timeline svg text.year {
     fill: white;
@@ -232,12 +239,15 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 #timeline svg .doc path {
     fill: transparent;
     stroke: rgb(111,111,111);
-    stroke-width: 1px;
+    stroke-width: 2px;
 }
 #timeline svg .doc:hover path {
     stroke: white;
 }
 
+#timeline svg .doc.missing path {
+    stroke: red;
+}
 #timeline svg .doc text {
     visibility: hidden;
     fill: white;
