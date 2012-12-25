@@ -71,13 +71,19 @@ if len(graph_files) < 1:
     print "No source .gml files"
     exit(1)
 
-def format_timestamp(ts, format = '%Y-%m-%d'):
+def format_timestamp(ts, tsformat = '%Y-%m-%d'):
     d = datetime.fromtimestamp(float(ts))
-    return d.strftime(format)
+    return d.strftime(tsformat)
+
+# custom filter since it's not possible to filter AND count in the template
+# this filters and can be piped to |length
+def has_timestamp(values):
+    return [ v for v in values if v.has_key('timestamp') and float(v['timestamp']) > 0 ]
 
 CURDIR = path.dirname(path.abspath(__file__))
 env = Environment(loader=FileSystemLoader(CURDIR))
 env.filters['formatts'] = format_timestamp
+env.filters['has_timestamp'] = has_timestamp
 svg_tmpl = env.get_template(options.template)
 
 # load index template
