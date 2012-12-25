@@ -9,6 +9,11 @@ from os import listdir, path, environ, closerange
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
 from datetime import datetime
+try:
+    from collections import Counter
+except ImportError:
+    print "ERR: please use python >= 2.7"
+    exit(1)
 
 environ['TZ'] = 'UTC'
 time.tzset()
@@ -31,7 +36,8 @@ parser.add_option("-d", "--dest", dest="destdir",
     metavar="DIR")
 
 parser.add_option("-r", "--reverb", dest="reverb",
-    help="Load sentences from a ReVerb result tsv FILE (e.g. mycables.reverb)", metavar="FILE")
+    help="Load sentences from a ReVerb result tsv FILE (e.g. mycables.reverb)",
+    metavar="FILE")
 
 parser.add_option("-s", "--subjects", dest="subjects",
     default="data/subjects.list",
@@ -46,7 +52,8 @@ parser.add_option("-l", "--layout", dest="layout",
 
 parser.add_option("-x", "--index", dest="index",
     default="index.tmpl",
-    help="Create index using FILE as template. Default: index.tmpl", metavar="FILE")
+    help="Create index using FILE as template. Default: index.tmpl", 
+    metavar="FILE")
 
 (options, args) = parser.parse_args()
 
@@ -198,6 +205,28 @@ for gml in graph_files:
             'diameter': g.diameter(),
             'radius': g.radius()
         }
+
+        # count and manual sort of classifications
+        if classifications:
+            clf_sort = {
+                'UNCLASSIFIED': 0,
+                'UNCLASSIFIED//FOR OFFICIAL USE ONLY': 1,
+                'CONFIDENTIAL': 2,
+                'CONFIDENTIAL//NOFORN': 3,
+                'SECRET': 4,
+                'SECRET//NOFORN': 5,
+                '': 6
+            }
+            # count
+            ccnt = Counter(classifications).items()
+            # total
+            t = float(len(classifications))
+            # percent
+            clfp = [ (c, float(cnt) /(t / 100)) for c, cnt in ccnt ]
+            # manual sort
+            scc = sorted(clfp, key=lambda c: clf_sort[c[0]])
+            meta.update({'classification': scc})
+
         index.append(meta)
 
     # create x,y positions
@@ -302,12 +331,17 @@ for gml in graph_files:
         angle = math.atan2(y2-y1, x2-x1)
         x2 = x2 - vertex_size*math.cos(angle)
         y2 = y2 - vertex_size*math.sin(angle)
-        edges.append(
-            {'x1': '%.4f' % x1, 
-             'y1': '%.4f' % y1, 
-             'x2': '%.4f' % x2, 
-             'y2': '%.4f' % y2, 
-             'betweenness': ebetweenness[eidx]})
+        tmped = {
+            'x1': '%.4f' % x1, 
+            'y1': '%.4f' % y1, 
+            'x2': '%.4f' % x2, 
+            'y2': '%.4f' % y2
+        }
+
+        if 'betweenness' in g.es.attribute_names():
+             tmped.update({'betweenness': ebetweenness[eidx]})
+
+        edges.append(tmped)
 
     for vidx in range(g.vcount()):
         tmpd = {
@@ -363,6 +397,7 @@ for gml in graph_files:
         xw = xw,
         tags = tags,
         edges = edges, 
+        filename = path.basename(destfile),
         vertices = vertices))
     dfh.close()
     del g
@@ -378,3 +413,4 @@ if options.index:
         ifh = open(index_file,'w')
         ifh.write(index_tmpl.render(index=sorted(index, reverse=True)))
         ifh.close()
+
