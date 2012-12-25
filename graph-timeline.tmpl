@@ -41,40 +41,46 @@
     <button id="betweenness-switch" class="active">Betweenness</button>
     <button id="authority-switch" class="active">Authority</button>
     <button id="missing-switch" class="active">Missing</button>
+    <h3>Timeline</h3>
+    <button id="timeline-switch" class="active">Show</button>
 </div>
-<section id="timeline">
-    <svg id="foobarbaz"
-        width="{{ vertices|length * 30 }}" 
+
+<section id="timeline" class="active">
+    <svg 
+        width="{{ (vertices|length * 30) + 80 }}" 
         height="120" 
         version="1.1" 
         xmlns="http://www.w3.org/2000/svg" 
         xmlns:xlink="http://www.w3.org/1999/xlink">
-        {% set this_month = 0 %}
-        {% set this_year = 0 %}
         <g id="timeline-label">
-            <text x="60" y="56" class="month">
+            <text x="70" y="30" class="cable">
+                <tspan>Cable</tspan>
+            </text>
+            <text x="70" y="66" class="month">
                 <tspan>Month</tspan>
             </text>
             <line x1="20" 
-                  y1="60" 
-                  x2="{{ (vertices|length * 30) - 20 }}" 
-                  y2="60" />
-            <text x="60" y="74" class="year">
+                  y1="70" 
+                  x2="{{ (vertices|length * 30) + 80 - 10 }}" 
+                  y2="70" />
+            <text x="70" y="84" class="year">
                 <tspan>Year</tspan>
             </text>
         </g>
-        {% for v in vertices|sort(attribute='timestamp') %}
-            {% if v.timestamp|int > 0 %}
+        {% set this_month = 0 %}
+        {% set this_year = 0 %}
+        {% for v in vertices|sort(attribute='timestamp') if v.timestamp|int > 0 %}
+            <g transform="translate({{ (loop.index0 * 30) + 80 }}, 5)" 
             {% if v.missing and v.missing|int == 1 %}
+               class="doc missing {{ v.place }}">
             {% else %}
-            {% endif %}
-            <g transform="translate({{ ((loop.index - 1) * 30) }}, 2)" 
                class="doc {{ v.place }}">
+            {% endif %}
                 <text x="0", y="10">
                     <tspan class="label">{{ v.label }}: </tspan>
                     <tspan class="subject">{{ v.subject }}</tspan>
                 </text>
-                <a xlink:href="#{{v.label}}">
+                <a xlink:href="{{ filename }}#{{v.label}}">
                 <path d="M 35,6 
                          L 12,6 
                          L 0,18 
@@ -86,33 +92,29 @@
             </g>
 
             <g class="timeline-mark">
-                <line x1="{{ (loop.index - 1) * 30 }}" y1="45" 
-                      x2="{{ (loop.index - 1) * 30 }}" y2="70" 
+                <line x1="{{ (loop.index0 * 30) + 80 }}" y1="50" 
+                      x2="{{ (loop.index0 * 30) + 80 }}" y2="70" 
                       class="mark {{ loop.cycle('odd', 'even') }}" />
 
                 {% if v.timestamp|formatts('%m') != this_month %} 
-                    <text x="{{ (loop.index * 30) + 3 }}" y="55" class="month" >
-                        <tspan>{{ v.timestamp|formatts('%m') }}</tspan>
+                    <text x="{{ (loop.index0 * 30) + 80 + 2 }}" y="65" class="month" >
+                        <tspan>{{ v.timestamp|formatts('%b') }}</tspan>
                     </text>
                 {% endif %}
                 {% set this_month = v.timestamp|formatts('%m') %}
+
                 {% if v.timestamp|formatts('%Y') != this_year %} 
-                <line x1="{{ (loop.index - 1) * 30 }}" y1="70" 
-                      x2="{{ (loop.index - 1) * 30 }}" y2="60" 
-                      class="mark {{ loop.cycle('odd', 'even') }}" />
-                <g transform="translate({{ ((loop.index - 1) * 30) + 12 }}, 86)">
-                    <text x="0" 
-                          y="0" 
-                          transform="rotate(-45)"
-                          class="year">
-                        <tspan>{{ v.timestamp|formatts('%Y') }}</tspan>
-                    </text>
-                </g>
+                    <line x1="{{ (loop.index0 * 30) + 80 }}" y1="70" 
+                          x2="{{ (loop.index0 * 30) + 80 }}" y2="80" 
+                          class="mark" />
+                    <g transform="translate({{ (loop.index0 * 30) + 80 + 10 }}, 90)">
+                        <text x="0" y="0" transform="rotate(-45)" class="year">
+                            <tspan>{{ v.timestamp|formatts('%Y') }}</tspan>
+                        </text>
+                    </g>
                 {% endif %}
                 {% set this_year = v.timestamp|formatts('%Y') %}
             </g>
-            {% else %}
-            {% endif %}
         {% endfor %}
     </svg>
 </section>
