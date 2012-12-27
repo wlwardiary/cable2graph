@@ -50,11 +50,6 @@ parser.add_option("-u", "--uri", dest="uri",
 parser.add_option("-l", "--layout", dest="layout",
     help="Use layout NAME", metavar="NAME")
 
-parser.add_option("-x", "--index", dest="index",
-    default="index.tmpl",
-    help="Create index using FILE as template. Default: index.tmpl", 
-    metavar="FILE")
-
 (options, args) = parser.parse_args()
 
 graph_files = set()
@@ -85,11 +80,6 @@ env = Environment(loader=FileSystemLoader(CURDIR))
 env.filters['formatts'] = format_timestamp
 env.filters['has_timestamp'] = has_timestamp
 svg_tmpl = env.get_template(options.template)
-
-# load index template
-if options.index:
-    index_tmpl = env.get_template(options.index)
-    index = list()
 
 # load optional ReVerb sentences result .tsv
 # http://reverb.cs.washington.edu/
@@ -201,39 +191,6 @@ for gml in graph_files:
 
     if 'classification' in g.vs.attribute_names():
         classifications = g.vs['classification']
-
-    if options.index:
-        meta = {
-            'nodes': g.vcount(),
-            'edges': g.ecount(),
-            'filename': "%s.html" % path.basename(gml), 
-            'tags': tags,
-            'diameter': g.diameter(),
-            'radius': g.radius()
-        }
-
-        # count and manual sort of classifications
-        if classifications:
-            clf_sort = {
-                'UNCLASSIFIED': 0,
-                'UNCLASSIFIED//FOR OFFICIAL USE ONLY': 1,
-                'CONFIDENTIAL': 2,
-                'CONFIDENTIAL//NOFORN': 3,
-                'SECRET': 4,
-                'SECRET//NOFORN': 5,
-                '': 6
-            }
-            # count
-            ccnt = Counter(classifications).items()
-            # total
-            t = float(len(classifications))
-            # percent
-            clfp = [ (c, float(cnt) /(t / 100)) for c, cnt in ccnt ]
-            # manual sort
-            scc = sorted(clfp, key=lambda c: clf_sort[c[0]])
-            meta.update({'classification': scc})
-
-        index.append(meta)
 
     # create x,y positions
     # layout = g.layout_fruchterman_reingold()
@@ -412,15 +369,3 @@ for gml in graph_files:
     dfh.close()
     del g
     print "%s -> %s" % (gml, destfile)
-
-
-if options.index:
-    index_file = "%s/index.html" % (options.destdir)
-    if path.exists(index_file):
-        print "Index %s exists. skipping" % index_file
-    else:
-        print "Writing %s" % index_file
-        ifh = open(index_file,'w')
-        ifh.write(index_tmpl.render(index=sorted(index, reverse=True)))
-        ifh.close()
-
