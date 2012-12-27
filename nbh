@@ -17,22 +17,26 @@ g = igraph.load(argv[1])
 
 hfilename = argv[2]
 max_hood = 100
-hmrns = [ f.strip().upper() for f in open(hfilename).readlines() ]
+mrns = set([ f.strip().upper() for f in open(hfilename).readlines() ])
 
 hashes = set()
 
-for mrn in hmrns:
-    hrootv = g.vs.select(label_eq=mrn)
-    if len(hrootv) == 0:
-        print "Did not found MRN %s" % mrn
-        continue
+# select all MRNs
+vsg = g.vs.select(label_in=mrns).subgraph()
 
-    # find best order value
+# group if connected
+vclusters = vsg.clusters()
+
+for sg in vclusters.subgraphs():
+    # cluster and subgraph creates new indices
+    # translate them back to the indices from the full graph
+    vs = g.vs.select(label_in=sg.vs['label'])
     horder = 1
     hsize = 0
     last_hsize = None
+    # find best order value
     while True:
-        hsize = g.neighborhood_size(hrootv, order=horder)
+        hsize = g.neighborhood_size(vs, order=horder)
         if hsize[0] > max_hood or hsize[0] == 1 or hsize[0] == last_hsize:
             last_hsize = None
             break;
@@ -40,27 +44,26 @@ for mrn in hmrns:
             horder = horder + 1
             last_hsize = hsize[0]
 
-    hsg = g.subgraph(chain(*g.neighborhood(hrootv, order=horder)))
-    hsg.to_directed()
-    hsg.vs['betweenness'] = hsg.betweenness(directed=hsg.is_directed())
+    hsg = g.subgraph(chain(*g.neighborhood(vs, order=horder)))
+
     hsg.es['betweenness'] = hsg.edge_betweenness(directed=hsg.is_directed())
-    if hsg.vcount() > 2:
+    if hsg.vcount() > 5:
         idconcat = ''.join(sorted(hsg.vs['label']))
         digest = md5(idconcat).hexdigest()
         if digest in hashes:
-            print "Already created this graph. Skipped"
-            break
+            print "%s Already created this graph. Skipped" % digest
+            continue
         else:
             hashes.add(digest)
 
-        filename = '%s.graphml' % hrootv[0]['label']
+        filename = '%s.graphml' % digest
         with open(filename, 'w') as fh:
             hsg.write_graphml(fh)
         fh.close()
 
-        print filename, hsg.vcount(), hsg.ecount()
+        print filename, hsg.vcount(), hsg.ecount(), ' '.join(sg.vs['label'])
     else:
-        print "No graph for MRN %s" % mrn
+        print "No graph for MRN %s" % ' '.join(sg.vs['label'])
 
     del hsg
 
