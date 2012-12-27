@@ -251,6 +251,10 @@ for gml in graph_files:
         layout = g.layout(layout = options.layout)
         width = g.vcount() * 20
         height = width
+    elif 'x' in g.vs.attribute_names() and 'y' in g.vs.attribute_names():
+        layout = igraph.Layout(zip(g.vs['x'], g.vs['y']))
+        width = g.vcount() * 20
+        height = width
     else:
         #layout = g.layout_fruchterman_reingold()
         #layout = layout_grid_fruchterman_reingold()
