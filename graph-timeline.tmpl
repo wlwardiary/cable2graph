@@ -96,6 +96,13 @@
                          L 35,48 
                          L 35,6 z" 
                       transform="scale(0.6) translate(0,20)" />
+                {% if v.classification %}
+                <text x="18" y="38">
+                    <tspan class="classification {{ v.classification|replace('//','-')|replace(' ','-') }}">
+                        {{ v.classification|list|first }}
+                    </tspan>
+                </text>
+                {% endif %}
                 </a>
             </g>
 
