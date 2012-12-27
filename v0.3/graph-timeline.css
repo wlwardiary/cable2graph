@@ -13,8 +13,6 @@ body {
 }
 
 a { color: white; text-decoration: none; }
-#timeline a { color: black; }
-#timeline a:hover { text-decoration: underline; }
 a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 
 #graph {
@@ -30,6 +28,8 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 
 #graph svg { 
     background-color: rgb(44,44,44);
+    display: block;
+    margin: 0 auto;
 }
 
 #vertices circle.node { 
@@ -110,12 +110,12 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     fill: rgb(44,44,44);
     stroke: rgba(255,255,255,0.1);
     stroke-width: 10;
-    transition-property: stroke, stroke-dasharray;
-    transition-duration: .5s;
-    -webkit-transition-property: stroke, stroke-dasharray;
-    -webkit-transition-duration: .5s;
-    -moz-transition-property: stroke, stroke-dasharray;
-    -moz-transition-duration: .5s;
+    transition-property: stroke, stroke-width;
+    transition-duration: 1s;
+    -webkit-transition-property: stroke, stroke-width;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: stroke, stroke-width;
+    -moz-transition-duration: 1s;
 }
 
 #page.level1  #zoom circle { stroke-width: 1; }
@@ -197,7 +197,6 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     left: 1%;
     bottom: 3%;
     background-color: rgba(33,33,33,0.95);
-    color: white;
     overflow-x: auto;
     overflow-y: auto;
     visibility: hidden;
@@ -240,7 +239,14 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
     fill: transparent;
     stroke: rgb(111,111,111);
     stroke-width: 2px;
+    transition-property: stroke;
+    transition-duration: .4s;
+    -webkit-transition-property: stroke;
+    -webkit-transition-duration: .4s;
+    -moz-transition-property: stroke;
+    -moz-transition-duration: .4s;
 }
+
 #timeline svg .doc:hover path {
     stroke: white;
 }
@@ -248,13 +254,29 @@ a:visited { fill: rgb(200, 200, 200); color: rgb(200,200,200); }
 #timeline svg .doc.missing path {
     stroke: red;
 }
+
 #timeline svg .doc text {
-    visibility: hidden;
     fill: white;
-    font-size: .7em;
 }
 
-#timeline svg .doc:hover text {
+#timeline svg .doc text .classification {
+    fill: rgb(200,200,200);
+    font-size: .6em;
+    text-anchor: end;
+    opacity: 0.7;
+}
+#timeline svg .doc:hover text .classification {
+    opacity: 1.0;
+}
+
+#timeline svg .doc text .subject,
+#timeline svg .doc text .label {
+    visibility: hidden;
+    font-size: .8em;
+}
+
+#timeline svg .doc:hover text .subject,
+#timeline svg .doc:hover text .label {
     visibility: visible;
 }
 
@@ -1118,12 +1140,24 @@ TODO
 
 #vertices text.date { font-size: .8em; } 
 #vertices text.classification { font-size: .7em; }
+
+#timeline svg .doc text .classification.SECRET-NOFORN,
 #vertices text.classification.SECRET-NOFORN { fill: red; }
+
+#timeline svg .doc text .classification.SECRET,
 #vertices text.classification.SECRET { fill: red; }
-#vertices text.classification.CONFIDENTIAL-NOFORN  { fill: yellow; }
+
+#timeline svg .doc text .classification.CONFIDENTIAL-NOFORN,
+#vertices text.classification.CONFIDENTIAL-NOFORN { fill: yellow; }
+
+#timeline svg .doc text .classification.CONFIDENTIAL,
 #vertices text.classification.CONFIDENTIAL { fill: yellow; }
+
+#timeline svg .doc text .classification.UNCLASSIFIED,
 #vertices text.classification.UNCLASSIFIED { fill: rgb(0,255,0); }
-#vertices text.classification.UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY  { fill: rgb(0,255,0); }
+
+#timeline svg .doc text .classification.UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY,
+#vertices text.classification.UNCLASSIFIED-FOR-OFFICIAL-USE-ONLY { fill: rgb(0,255,0); }
 
 #vertices text.subject,
 #vertices text.sentence  { 
