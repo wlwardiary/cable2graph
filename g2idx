@@ -3,9 +3,9 @@
 # GPLv3 2011-2012 by anonymous
 # 
 
-import igraph, math, csv, time
+import time
 from sys import argv, exit
-from os import listdir, path, environ, closerange
+from os import path, environ
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
 from datetime import datetime
@@ -84,6 +84,8 @@ env.filters['formatts'] = format_timestamp
 # load index template
 index_tmpl = env.get_template(options.index)
 index = list()
+
+import igraph
 
 for gml in graph_files:
     # load graph from file
