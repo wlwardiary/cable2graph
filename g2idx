@@ -9,6 +9,8 @@ from os import listdir, path, environ, closerange
 from jinja2 import Template, Environment, FileSystemLoader
 from optparse import OptionParser
 from datetime import datetime
+from collections import defaultdict
+
 try:
     from collections import Counter
 except ImportError:
@@ -35,6 +37,11 @@ parser.add_option("-x", "--index", dest="index",
     help="Create index using FILE as template. Default: index.tmpl", 
     metavar="FILE")
 
+parser.add_option("-t", "--tags", dest="tags",
+    default="data/tags_edges.list",
+    help="Load TAGS from FILE. Default: data/tags_edges.list",
+    metavar="FILE")
+
 (options, args) = parser.parse_args()
 
 graph_files = set()
@@ -51,9 +58,24 @@ if len(graph_files) < 1:
     print "No source .gml files"
     exit(1)
 
+if options.tags:
+    print "Loading TAGS from %s..." % options.tags
+    tags = defaultdict(list)
+    for k,v in [ (l.split() ) for l in open(options.tags).readlines() ]:
+        tags[k].append(v)
+
 def format_timestamp(ts, tsformat = '%Y-%m-%d'):
     d = datetime.fromtimestamp(float(ts))
     return d.strftime(tsformat)
+
+def get_tags(labels):
+    tmp_tags = set()
+    for label in labels:
+        if label in tags:
+            for tag in tags[label]:
+                tmp_tags.add(tag)
+
+    return tmp_tags
 
 CURDIR = path.dirname(path.abspath(__file__))
 env = Environment(loader=FileSystemLoader(CURDIR))
@@ -66,11 +88,11 @@ index = list()
 for gml in graph_files:
     # load graph from file
     g = igraph.load(gml)
-    
-    if 'tags' in g.attributes(): 
-        tags = g['tags'].split(',')
+
+    if options.tags:
+        graph_tags = get_tags(g.vs['label'])
     else:
-        tags = []
+        graph_tags = []
 
     if 'classification' in g.vs.attribute_names():
         classifications = g.vs['classification']
@@ -80,7 +102,7 @@ for gml in graph_files:
             'nodes': g.vcount(),
             'edges': g.ecount(),
             'filename': "%s.html" % path.basename(gml), 
-            'tags': tags,
+            'tags': graph_tags,
             'diameter': g.diameter(),
             'radius': g.radius()
         }

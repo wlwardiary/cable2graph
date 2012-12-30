@@ -4,10 +4,12 @@
 #
 # GPLv3 2012 by anonymous
 #
-import igraph
 from optparse import OptionParser
 from collections import defaultdict
 from hashlib import md5
+
+# set with all MRN's from all communities and clusters
+coverage = set()
 
 # function to detect a star graph
 def is_star(gstar):
@@ -37,6 +39,16 @@ def is_star(gstar):
 
     # yep, pretty sure it's a star
     return True
+
+def contains_star(g):
+    if g.vcount() < 10:
+        return False
+
+    star = igraph.Graph.Star(10)
+    if g.subisomorphic_vf2(star):
+        return True
+    else:
+        return False
 
 # recursive walk
 def walk(sg, visited, node):
@@ -72,37 +84,33 @@ def get_trail(sg):
     
     return trail
 
-def get_tags(labels):
-    tmp_tags = set()
-    for label in labels:
-        if label in tags:
-            for tag in tags[label]:
-                tmp_tags.add(tag)
-
-    return tmp_tags
-
 def save(sg, prefix, destdir):
+
+    coverage.update(sg.vs['label'])
     # create a uniq id for the graph
     # concat all sorted(!) label names and hash it
     idconcat = ''.join(sorted(sg.vs['label']))
     digest = md5(idconcat).hexdigest()
-    di = int(sg.diameter())
-    de = sg.density()
-    ra = int(sg.radius())
-    pl = sg.average_path_length()
-    sg['diameter'] = di
-    sg['density'] = de
-    sg['radius'] = ra
-    sg['avg_path_length'] = pl
-    sg['tags'] = ','.join(get_tags(sg.vs['label']))
-    filename = '%s/%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (destdir,prefix,di,de,ra,pl,digest)
+
     if options.verbose:
+        di = int(sg.diameter())
+        de = sg.density()
+        ra = int(sg.radius())
+        pl = sg.average_path_length()
+        sg['diameter'] = di
+        sg['density'] = de
+        sg['radius'] = ra
+        sg['avg_path_length'] = pl
         print prefix, di, de, ra, pl, len(sg.es), len(sg.vs)
         print sg
+        filename = '%s/%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (destdir,prefix,di,de,ra,pl,digest)
+    else:
+        filename = '%s/%s_%s.graphml' % (destdir,prefix,digest)
 
     print filename
     with open(filename, 'w') as fh:
         sg.write_graphml(fh)
+    fh.close()
 
 def save_cluster(g, minimum, destdir):
     # use size of the largest cluster as limit
@@ -120,26 +128,36 @@ def save_cluster(g, minimum, destdir):
     for cluster_index, cluster_size in filterd_clusters:
         # create the subgraph from the cluster index
         sg = g.clusters().subgraph(cluster_index)
+        sg.es['betweenness'] = sg.es.edge_betweenness()
+        sg.vs['betweenness'] = sg.vs.betweenness()
         prefix = 'cluster_ci%s_cs%s' % (cluster_index, cluster_size)
         if is_star(sg):
             prefix = 'star'
-        elif 'betweenness' in sg.vs.attribute_names() \
-                and sg.density() < 0.01 \
-                and sg.average_path_length() > 5.0:
+        elif ('betweenness' in sg.es.attribute_names()
+                and sg.density() < 0.01
+                and sg.average_path_length() > 5.0):
             trail = get_trail(sg)
             sg_trail = sg.vs.select(trail).subgraph()
             save(sg_trail, 'trail_ci%s' % cluster_index, destdir)
 
         save(sg, prefix, destdir)
 
-def save_community(g, prefix, destdir):
+def save_community(g, oprefix, destdir):
+    print g.modularity
     for sg in g.subgraphs():
-        if 'betweenness' in sg.vs.attribute_names() \
-                and sg.density() < 0.01\
-                and sg.average_path_length() > 5.0:
+        sg.es['betweenness'] = sg.es.edge_betweenness()
+        if ('betweenness' in sg.es.attribute_names()
+                and sg.density() < 0.01
+                and sg.average_path_length() > 5.0):
             trail = get_trail(sg)
             sg_trail = sg.vs.select(trail).subgraph()
             save(sg_trail, prefix + '_trail', destdir)
+
+        # contains a star
+        if contains_star(sg):
+            prefix = oprefix + '_substar'
+        else:
+            prefix = oprefix
 
         save(sg, prefix, destdir)
 
@@ -196,6 +214,9 @@ def main():
         print "Save fastgreedy communities..."
         save_community(gcfg.as_clustering(), 'community_fastgreedy', options.destination)
 
+    if options.verbose:
+        print "Total MRN's covered: %s of %s" % (len(coverage), g.vcount())
+
 if __name__ == "__main__":
     parser = OptionParser()
     parser.add_option("-s", "--source", dest="source",
@@ -207,11 +228,6 @@ if __name__ == "__main__":
         default=".",
         help="Save clusters and communities into DIR. Default: current directory.",
         metavar="DIR")
-
-    parser.add_option("-t", "--tags", dest="tags",
-        default="data/tags_edges.list",
-        help="Load TAGS from FILE. Default: data/tags_edges.list",
-        metavar="FILE")
 
     parser.add_option("-g", "--giant", dest="giant",
         help="Save the giant cluster as FILE",
@@ -253,9 +269,5 @@ if __name__ == "__main__":
        or options.fastgreedy or options.walktrap):
         parser.error("Please set at least one of -c, -l, -f, -e or -w")
 
-    print "Loading TAGS from %s..." % options.tags
-    tags = defaultdict(list)
-    for k,v in [ (l.split() ) for l in open(options.tags).readlines() ]:
-        tags[k].append(v)
-
+    import igraph
     main()
