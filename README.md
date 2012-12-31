@@ -21,6 +21,8 @@ Three types of graphs are currently supported:
 
 3. Download and unpack the zip archive of the github repository
 
+https://github.com/wlwardiary/cable2graph/archive/master.zip
+
 ## USAGE
 
 The typical workflow is divided in four steps:
@@ -101,7 +103,7 @@ nodes without performance issues.
 ### NEIGHBORHOOD
 
 The `nbh` tool creates the neighborhood graph for a given node.
-If multiple labels are given directly related nodes are grouped together.
+For multiple labels the directly related nodes are grouped together.
 
     $ echo "10EXAMPLE1" > list
     $ echo "09EXAMPLE2" >> list
@@ -152,7 +154,7 @@ Step by step how-to: https://github.com/wlwardiary/cable2graph/wiki/gephi
 
 ### GRAPH INDEX
 
-The g2idx tool creates a index.html file for a list of given graphs
+The `g2idx` tool creates a index.html file for a list of given graphs
 showing classification, TAGS and graph properties.
 
     $ ls *graphml > index-list
