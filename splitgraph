@@ -62,11 +62,13 @@ def walk(sg, visited, node):
     if len(next_nodes) > 0:
         # take the node with the max betweenness
         btwn, n = max(next_nodes)
-        print node, n, btwn, sg.vs[node]['label'], sg.vs[n]['label']
+        if options.verbose:
+            print node, n, btwn, sg.vs[node]['label'], sg.vs[n]['label']
         # play it again sam
         walk(sg, visited, n)
     else:
-        print "end."
+        if options.verbose:
+            print "end."
 
 # traverse a graph along the highest betweenness
 def get_trail(sg):
@@ -105,7 +107,7 @@ def save(sg, prefix, destdir):
         print sg
         filename = '%s/%s_di%s_de%s_ra%s_pl%s_%s.graphml' % (destdir,prefix,di,de,ra,pl,digest)
     else:
-        filename = '%s/%s_%s.graphml' % (destdir,prefix,digest)
+        filename = '%s/%s.graphml' % (destdir,digest)
 
     print filename
     with open(filename, 'w') as fh:
@@ -151,7 +153,7 @@ def save_community(g, oprefix, destdir):
                 and sg.average_path_length() > 5.0):
             trail = get_trail(sg)
             sg_trail = sg.vs.select(trail).subgraph()
-            save(sg_trail, prefix + '_trail', destdir)
+            save(sg_trail, oprefix + '_trail', destdir)
 
         # contains a star
         if contains_star(sg):
