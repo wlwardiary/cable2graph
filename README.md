@@ -14,7 +14,7 @@ Three types of graphs are currently supported:
 
 ## INSTALL
 
-1. install igraph 0.6 python bindings
+1. install [igraph 0.6](http://igraph.sourceforge.net/download.html) C library and Python extension module
 2. install jinja2
 
     $ pip install jinja2
@@ -72,7 +72,7 @@ The graph contains the following node and edge values:
 * pagerank
 * authority
 * constraint
-* node betweenness
+* node [betweenness](https://en.wikipedia.org/wiki/Betweenness_centrality)
 
 Node betweenness is based on the giant component of the full graph. 
 Pre-calculated values are loaded from `data/betweenness`. Calculation of the 
