@@ -44,8 +44,8 @@ parser.add_option("-s", "--subjects", dest="subjects",
     help="Load map of label -> subject. Default: subjects.list", metavar="FILE")
 
 parser.add_option("-u", "--uri", dest="uri",
-    default="data/all.map",
-    help="Load map of label -> uri from FILE. Default: all.map", metavar="FILE")
+    default="data/wikileaks.org.map",
+    help="Load map of label -> uri from FILE. Default: wikileaks.org.map", metavar="FILE")
 
 parser.add_option("-l", "--layout", dest="layout",
     help="Use layout NAME", metavar="NAME")
@@ -155,8 +155,7 @@ for gml in graph_files:
         uri = []
         for l in g.vs.get_attribute_values('label'):
             if l in cmap:
-                # TODO move into uri file
-                uri.append('http://wikileaks.org/%s' % cmap[l])
+                uri.append(cmap[l])
             else:
                 uri.append('')
 
