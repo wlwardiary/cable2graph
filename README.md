@@ -178,7 +178,7 @@ showing classification, TAGS and graph properties.
 
 ## DATA
 
-* `data/all.map`: MRN to url mapping
+* `data/wikileaks.org.map`: MRN to url mapping
 * `data/all_ids.list`: all known MRN's
 * `data/betweenness`: pre-calculated betweenness values form the giant
 * `data/cable_ids.list`: all MRN's that exist in the cables.csv
