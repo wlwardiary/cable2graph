@@ -287,13 +287,30 @@ for gml in graph_files:
 
     edges = []
     vertices = []
-
     for eidx, edge in enumerate(g.es):
         vidxs = edge.tuple
-        x1 = layout[vidxs[0]][0]
-        y1 = layout[vidxs[0]][1]
-        x2 = layout[vidxs[1]][0]
-        y2 = layout[vidxs[1]][1]
+        # Fix bogus directionality in graphml:
+        # 1) If there are timestaps, the later cable refers to the earlier cable
+        # 2) Missing cables should be reference and not referrer
+        #    (regardless of the date we've guessed for them)
+        zero_refs_one = False
+        if 'timestamp' in g.vs.attribute_names() and g.vs['timestamp'][vidxs[0]]>g.vs['timestamp'][vidxs[1]]:
+            zero_refs_one = True
+        if 'missing' in g.vs.attribute_names():
+            if g.vs['missing'][vidxs[0]]:
+                zero_refs_one = False
+            elif  g.vs['missing'][vidxs[1]]:
+                zero_refs_one = True
+        if zero_refs_one:
+            reference_v = 1
+            referrer_v = 0
+        else:
+            reference_v = 0
+            referrer_v = 1
+        x1 = layout[vidxs[referrer_v]][0]
+        y1 = layout[vidxs[referrer_v]][1]
+        x2 = layout[vidxs[reference_v]][0]
+        y2 = layout[vidxs[reference_v]][1]
         angle = math.atan2(y2-y1, x2-x1)
         x2 = x2 - vertex_size*math.cos(angle)
         y2 = y2 - vertex_size*math.sin(angle)
